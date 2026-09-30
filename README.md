@@ -13,7 +13,7 @@ and check their [usage guidelines](https://www.17lands.com/usage_guidelines).
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/build_dataset.py MSH      # download + labels + features (~75s)
 .venv/bin/python scripts/train.py MSH              # baselines + LightGBM ablations
-.venv/bin/python scripts/train_nn.py MSH 8         # WheelNet transformer (MPS/CPU)
+.venv/bin/python scripts/train_nn.py MSH           # WheelNet transformer (MPS/CPU), 8 epochs
 ```
 
 Any set code with a 17Lands draft file works (`FDN`, `DFT`, `TDM`, `FIN`, `EOE`, `TLA`, `ECL`,
@@ -41,7 +41,7 @@ train only.
 | `lgbm_card_pack` | + what else is in the pack being passed (how many better cards protect it) |
 | `lgbm_card_signals` | + table signals: colours arriving late this round, earlier rounds' wheel surprises, own pool, rank |
 | `lgbm_all` | card + pack + signals |
-| `wheelnet` | transformer over the **raw** draft history (every pack seen + every pick), with no hand-built features |
+| `wheelnet` | transformer over the **raw** draft history (every pack seen, every pick, what the other 7 took from packs that came back), plus card colour/rarity/mana value; no hand-built features |
 
 ## Results (MSH PremierDraft, held-out last 15% of drafts)
 
@@ -55,14 +55,14 @@ train only.
 | `lgbm_card_pack` | 0.4397 | 0.1444 | 0.8502 | 0.0076 | +5.0% | 0.428 / 0.443 / 0.448 |
 | `lgbm_card_signals` | 0.4496 | 0.1474 | 0.8418 | 0.0057 | +2.9% | 0.446 / 0.454 / 0.449 |
 | `lgbm_all` | 0.4315 | 0.1414 | 0.8566 | 0.0052 | +6.8% | 0.428 / 0.435 / 0.432 |
-| `wheelnet` | 0.4316 | 0.1414 | 0.8566 | 0.0018 | +6.8% | 0.426 / 0.435 / 0.434 |
-| `ensemble` | 0.4293 | 0.1406 | 0.8585 | 0.0062 | +7.3% | 0.426 / 0.433 / 0.429 |
+| `wheelnet` | 0.4249 | 0.1390 | 0.8618 | 0.0024 | +8.2% | 0.424 / 0.427 / 0.424 |
+| `ensemble` | 0.4258 | 0.1393 | 0.8612 | 0.0054 | +8.0% | 0.425 / 0.428 / 0.424 |
 <!-- /results -->
 
 ### What we learned (first pass)
 
-1. **Wheel prediction beats ALSA.** The best model cuts log loss 7.3% relative to the ALSA/ATA
-   baseline, and AUC rises from 0.831 to 0.859. The per-card-by-pick lookup is only +0.6%, so
+1. **Wheel prediction beats ALSA.** The best model cuts log loss 8.2% relative to the ALSA/ATA
+   baseline, and AUC rises from 0.831 to 0.862. The per-card-by-pick lookup is only +0.6%, so
    card identity alone is nearly exhausted by ALSA.
 2. **Pack context is the biggest single lever (+5.0%).** The top features are how many cards in
    the passed pack are usually taken before this one (`n_better`) and the pack's total take
@@ -73,10 +73,16 @@ train only.
    table's colours: `resid_prior_card` (did this colour wheel more than expected earlier?) is the
    #4 feature by gain. This runs against the "models don't read signals" result from puder, though
    predicting other drafters' picks is a different task from picking for yourself.
-4. **Two independent routes land on the same number.** WheelNet learns only from the raw
-   pack/pick history and ties the hand-built GBM (0.4316 vs 0.4315), with better calibration. So
-   the feature set captures most of what's there. Averaging the two gives the best result, which
-   means they aren't making identical errors.
+4. **The raw-history transformer now beats the hand-built features.** The first WheelNet tied the
+   GBM (0.4316 vs 0.4315). Three changes took it to 0.4249 (val 0.4293 → 0.4226):
+   - Each passed card cross-attends to the history up to its pick, instead of reading one pooled
+     state vector (val 0.4293 → 0.4243, with the next change).
+   - Explicit "taken by the other 7" tokens: at picks 9–14, the passed pack minus the returning pack.
+   - Dropout 0.2 over 8 epochs, since it overfit after epoch 5 at 0.1 (→ 0.4235), and card
+     colour/rarity/mana value added to the learned embeddings (→ 0.4227).
+
+   More depth did not help: 6+4 layers scored 0.4228 and trained 35% slower. Averaging with
+   `lgbm_all` no longer helps either (0.4258), so the GBM's features appear to be subsumed.
 
 ### Next ideas
 
