@@ -1,0 +1,65 @@
+drafts 68609, with deck 98.8%, test scored 10068  [3s]
+pack tokens (68609, 42, 14)  [3s]
+training draftencoder_paper
+  paper: 0.50M params on mps
+  epoch  0 train 0.68401 val_final_pick 0.68976  [87s]
+  epoch  1 train 0.68166 val_final_pick 0.68652  [86s]
+  epoch  2 train 0.68083 val_final_pick 0.68613  [86s]
+  epoch  3 train 0.68044 val_final_pick 0.68538  [86s]
+  epoch  4 train 0.68011 val_final_pick 0.68461  [86s]
+  epoch  5 train 0.67981 val_final_pick 0.68419  [86s]
+  epoch  6 train 0.67951 val_final_pick 0.68582  [86s]
+  epoch  7 train 0.67916 val_final_pick 0.68439  [86s]
+  epoch  8 train 0.67901 val_final_pick 0.68477  [86s]
+  epoch  9 train 0.67878 val_final_pick 0.68547  [86s]
+  epoch 10 train 0.67867 val_final_pick 0.68499  [86s]
+  epoch 11 train 0.67853 val_final_pick 0.68508  [86s]
+  draftencoder_paper                 spearman 0.2361  nll 0.6821  ceiling 0.197
+training draftencoder_paper+deck
+  paper+deck: 0.59M params on mps
+  epoch  0 train 1.36885 val_final_pick 0.69022 val_deck 0.69105  [93s]
+  epoch  1 train 1.36213 val_final_pick 0.68580 val_deck 0.68387  [93s]
+  epoch  2 train 1.35966 val_final_pick 0.68591 val_deck 0.68406  [93s]
+  epoch  3 train 1.35835 val_final_pick 0.68464 val_deck 0.68354  [93s]
+  epoch  4 train 1.35772 val_final_pick 0.68463 val_deck 0.68297  [93s]
+  epoch  5 train 1.35692 val_final_pick 0.68429 val_deck 0.68311  [99s]
+  epoch  6 train 1.35598 val_final_pick 0.68590 val_deck 0.68356  [98s]
+  epoch  7 train 1.35541 val_final_pick 0.68423 val_deck 0.68299  [95s]
+  epoch  8 train 1.35478 val_final_pick 0.68447 val_deck 0.68296  [95s]
+  epoch  9 train 1.35414 val_final_pick 0.68512 val_deck 0.68334  [97s]
+  epoch 10 train 1.35372 val_final_pick 0.68477 val_deck 0.68335  [94s]
+  epoch 11 train 1.35348 val_final_pick 0.68490 val_deck 0.68346  [95s]
+  draftencoder_paper+deck:final_pick_head spearman 0.2244  nll 0.6825  ceiling 0.218
+  draftencoder_paper+deck            spearman 0.2575  nll 0.6807  ceiling 0.259
+training draftencoder_big
+  big: 2.88M params on mps
+  epoch  0 train 0.68423 val_final_pick 0.69091  [275s]
+  epoch  1 train 0.68163 val_final_pick 0.68601  [273s]
+  epoch  2 train 0.68083 val_final_pick 0.68607  [272s]
+  epoch  3 train 0.68039 val_final_pick 0.68530  [272s]
+  epoch  4 train 0.68007 val_final_pick 0.68427  [271s]
+  epoch  5 train 0.67969 val_final_pick 0.68406  [271s]
+  epoch  6 train 0.67918 val_final_pick 0.68605  [272s]
+  epoch  7 train 0.67885 val_final_pick 0.68479  [272s]
+  epoch  8 train 0.67828 val_final_pick 0.68456  [272s]
+  epoch  9 train 0.67788 val_final_pick 0.68555  [272s]
+  epoch 10 train 0.67751 val_final_pick 0.68536  [272s]
+  epoch 11 train 0.67727 val_final_pick 0.68563  [272s]
+  draftencoder_big                   spearman 0.2368  nll 0.6821  ceiling 0.202
+training draftencoder_big+deck
+  big+deck: 3.34M params on mps
+  epoch  0 train 1.36880 val_final_pick 0.68958 val_deck 0.69104  [286s]
+  epoch  1 train 1.36163 val_final_pick 0.68523 val_deck 0.68419  [285s]
+  epoch  2 train 1.35904 val_final_pick 0.68620 val_deck 0.68498  [286s]
+  epoch  3 train 1.35794 val_final_pick 0.68566 val_deck 0.68444  [287s]
+  epoch  4 train 1.35711 val_final_pick 0.68409 val_deck 0.68285  [286s]
+  epoch  5 train 1.35613 val_final_pick 0.68420 val_deck 0.68274  [287s]
+  epoch  6 train 1.35498 val_final_pick 0.68556 val_deck 0.68451  [287s]
+  epoch  7 train 1.35364 val_final_pick 0.68429 val_deck 0.68297  [304s]
+  epoch  8 train 1.35207 val_final_pick 0.68413 val_deck 0.68349  [303s]
+  epoch  9 train 1.35050 val_final_pick 0.68503 val_deck 0.68569  [300s]
+  epoch 10 train 1.34903 val_final_pick 0.68459 val_deck 0.68588  [290s]
+  epoch 11 train 1.34834 val_final_pick 0.68468 val_deck 0.68609  [290s]
+  draftencoder_big+deck:final_pick_head spearman 0.2351  nll 0.6825  ceiling 0.198
+  draftencoder_big+deck              spearman 0.2664  nll 0.6808  ceiling 0.257
+done in 8991s -> /Users/zblanton/Documents/repos/mtg-open-lane/results/MSH.PremierDraft/draftencoder

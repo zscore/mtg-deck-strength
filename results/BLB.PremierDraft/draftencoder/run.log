@@ -1,0 +1,34 @@
+drafts 154585, with deck 98.6%, test scored 22610  [10s]
+pack tokens (154585, 39, 13)  [46s]
+training draftencoder_paper
+  paper: 0.50M params on mps
+  epoch  0 train 0.68756 val_final_pick 0.68669  [185s]
+  epoch  1 train 0.68548 val_final_pick 0.68539  [184s]
+  epoch  2 train 0.68506 val_final_pick 0.68553  [187s]
+  epoch  3 train 0.68481 val_final_pick 0.68516  [185s]
+  epoch  4 train 0.68461 val_final_pick 0.68555  [190s]
+  epoch  5 train 0.68448 val_final_pick 0.68522  [186s]
+  epoch  6 train 0.68427 val_final_pick 0.68555  [182s]
+  epoch  7 train 0.68411 val_final_pick 0.68503  [183s]
+  epoch  8 train 0.68397 val_final_pick 0.68473  [182s]
+  epoch  9 train 0.68380 val_final_pick 0.68495  [183s]
+  epoch 10 train 0.68369 val_final_pick 0.68489  [183s]
+  epoch 11 train 0.68364 val_final_pick 0.68493  [182s]
+  draftencoder_paper                 spearman 0.2030  nll 0.6845  ceiling 0.258
+training draftencoder_paper+deck
+  paper+deck: 0.59M params on mps
+  epoch  0 train 1.37597 val_final_pick 0.68720 val_deck 0.68595  [192s]
+  epoch  1 train 1.36886 val_final_pick 0.68564 val_deck 0.68352  [193s]
+  epoch  2 train 1.36742 val_final_pick 0.68543 val_deck 0.68313  [192s]
+  epoch  3 train 1.36676 val_final_pick 0.68513 val_deck 0.68266  [193s]
+  epoch  4 train 1.36614 val_final_pick 0.68583 val_deck 0.68341  [193s]
+  epoch  5 train 1.36580 val_final_pick 0.68509 val_deck 0.68267  [192s]
+  epoch  6 train 1.36517 val_final_pick 0.68513 val_deck 0.68265  [193s]
+  epoch  7 train 1.36483 val_final_pick 0.68490 val_deck 0.68249  [193s]
+  epoch  8 train 1.36429 val_final_pick 0.68473 val_deck 0.68218  [193s]
+  epoch  9 train 1.36395 val_final_pick 0.68487 val_deck 0.68251  [193s]
+  epoch 10 train 1.36368 val_final_pick 0.68481 val_deck 0.68247  [193s]
+  epoch 11 train 1.36352 val_final_pick 0.68483 val_deck 0.68252  [194s]
+  draftencoder_paper+deck:final_pick_head spearman 0.2004  nll 0.6847  ceiling 0.251
+  draftencoder_paper+deck            spearman 0.2516  nll 0.6820  ceiling 0.287
+done in 4598s -> /Users/zblanton/Documents/repos/mtg-open-lane/results/BLB.PremierDraft/draftencoder

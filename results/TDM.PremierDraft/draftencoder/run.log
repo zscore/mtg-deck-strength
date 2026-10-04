@@ -1,0 +1,34 @@
+drafts 101323, with deck 98.8%, test scored 14889  [4s]
+pack tokens (101323, 42, 14)  [25s]
+training draftencoder_paper
+  paper: 0.50M params on mps
+  epoch  0 train 0.68809 val_final_pick 0.68904  [127s]
+  epoch  1 train 0.68606 val_final_pick 0.68614  [126s]
+  epoch  2 train 0.68539 val_final_pick 0.68627  [129s]
+  epoch  3 train 0.68508 val_final_pick 0.68688  [127s]
+  epoch  4 train 0.68480 val_final_pick 0.68493  [129s]
+  epoch  5 train 0.68462 val_final_pick 0.68460  [127s]
+  epoch  6 train 0.68434 val_final_pick 0.68489  [126s]
+  epoch  7 train 0.68415 val_final_pick 0.68560  [127s]
+  epoch  8 train 0.68397 val_final_pick 0.68481  [127s]
+  epoch  9 train 0.68376 val_final_pick 0.68490  [127s]
+  epoch 10 train 0.68356 val_final_pick 0.68521  [126s]
+  epoch 11 train 0.68351 val_final_pick 0.68509  [131s]
+  draftencoder_paper                 spearman 0.1864  nll 0.6850  ceiling 0.243
+training draftencoder_paper+deck
+  paper+deck: 0.59M params on mps
+  epoch  0 train 1.37782 val_final_pick 0.68879 val_deck 0.68833  [146s]
+  epoch  1 train 1.37220 val_final_pick 0.68613 val_deck 0.68464  [142s]
+  epoch  2 train 1.36942 val_final_pick 0.68580 val_deck 0.68537  [338s]
+  epoch  3 train 1.36813 val_final_pick 0.68617 val_deck 0.68451  [499s]
+  epoch  4 train 1.36740 val_final_pick 0.68512 val_deck 0.68311  [457s]
+  epoch  5 train 1.36672 val_final_pick 0.68449 val_deck 0.68281  [443s]
+  epoch  6 train 1.36618 val_final_pick 0.68462 val_deck 0.68319  [335s]
+  epoch  7 train 1.36567 val_final_pick 0.68513 val_deck 0.68333  [16531s]
+  epoch  8 train 1.36511 val_final_pick 0.68458 val_deck 0.68311  [22291s]
+  epoch  9 train 1.36478 val_final_pick 0.68453 val_deck 0.68306  [18472s]
+  epoch 10 train 1.36440 val_final_pick 0.68468 val_deck 0.68329  [15214s]
+  epoch 11 train 1.36420 val_final_pick 0.68464 val_deck 0.68324  [10784s]
+  draftencoder_paper+deck:final_pick_head spearman 0.1903  nll 0.6847  ceiling 0.218
+  draftencoder_paper+deck            spearman 0.2279  nll 0.6829  ceiling 0.251
+done in 87226s -> /Users/zblanton/Documents/repos/mtg-open-lane/results/TDM.PremierDraft/draftencoder

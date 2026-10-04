@@ -1,0 +1,89 @@
+=== BLB
+drafts 154585, with deck 98.6%, test scored 22610  [16s]
+  rank_only                          spearman 0.0444  nll 0.6885  ceiling 0.066
+  pool_top23:gih_wr                  spearman 0.1648  nll 0.6863  ceiling 0.182
+  deck_mean:gih_wr                   spearman 0.1476  nll 0.6869  ceiling 0.184
+  linear_pool                        spearman 0.1992  nll 0.6846  ceiling 0.235
+  linear_deck                        spearman 0.2404  nll 0.6826  ceiling 0.271
+  linear_pool+deck                   spearman 0.2399  nll 0.6826  ceiling 0.265
+=== DFT
+drafts 141166, with deck 98.8%, test scored 20692  [14s]
+  rank_only                          spearman 0.0750  nll 0.6888  ceiling 0.052
+  pool_top23:gih_wr                  spearman 0.1641  nll 0.6864  ceiling 0.180
+  deck_mean:gih_wr                   spearman 0.1526  nll 0.6869  ceiling 0.170
+  linear_pool                        spearman 0.1948  nll 0.6849  ceiling 0.217
+  linear_deck                        spearman 0.2266  nll 0.6835  ceiling 0.242
+  linear_pool+deck                   spearman 0.2253  nll 0.6836  ceiling 0.248
+=== DSK
+drafts 167672, with deck 98.7%, test scored 24539  [22s]
+  rank_only                          spearman 0.0553  nll 0.6892  ceiling 0.039
+  pool_top23:gih_wr                  spearman 0.2055  nll 0.6852  ceiling 0.208
+  deck_mean:gih_wr                   spearman 0.2018  nll 0.6854  ceiling 0.211
+  linear_pool                        spearman 0.2135  nll 0.6847  ceiling 0.232
+  linear_deck                        spearman 0.2445  nll 0.6831  ceiling 0.259
+  linear_pool+deck                   spearman 0.2403  nll 0.6833  ceiling 0.257
+=== FDN
+drafts 130935, with deck 98.8%, test scored 19264  [13s]
+  rank_only                          spearman 0.0573  nll 0.6873  ceiling 0.052
+  pool_top23:gih_wr                  spearman 0.1821  nll 0.6847  ceiling 0.196
+  deck_mean:gih_wr                   spearman 0.1778  nll 0.6847  ceiling 0.214
+  linear_pool                        spearman 0.2346  nll 0.6821  ceiling 0.253
+  linear_deck                        spearman 0.2686  nll 0.6804  ceiling 0.275
+  linear_pool+deck                   spearman 0.2643  nll 0.6806  ceiling 0.282
+=== FIN
+drafts 140237, with deck 98.8%, test scored 20564  [17s]
+  rank_only                          spearman 0.0696  nll 0.6877  ceiling 0.063
+  pool_top23:gih_wr                  spearman 0.2051  nll 0.6838  ceiling 0.208
+  deck_mean:gih_wr                   spearman 0.2217  nll 0.6831  ceiling 0.234
+  linear_pool                        spearman 0.2223  nll 0.6831  ceiling 0.239
+  linear_deck                        spearman 0.2548  nll 0.6813  ceiling 0.266
+  linear_pool+deck                   spearman 0.2527  nll 0.6814  ceiling 0.277
+=== LCI
+You might want to try:
+- increasing `infer_schema_length` (e.g. `infer_schema_length=10000`),
+- increasing `infer_schema_files` (e.g. `infer_schema_files=50`),
+- specifying correct dtype with the `schema_overrides` argument
+- setting `ignore_errors` to `True`,
+- adding `0.0` to the `null_values` list.
+
+Original error: ```invalid primitive value found during CSV parsing```
+=== MKM
+drafts 157553, with deck 98.7%, test scored 23042  [19s]
+  rank_only                          spearman 0.0729  nll 0.6877  ceiling 0.049
+  pool_top23:gih_wr                  spearman 0.1863  nll 0.6844  ceiling 0.210
+  deck_mean:gih_wr                   spearman 0.1702  nll 0.6850  ceiling 0.218
+  linear_pool                        spearman 0.2031  nll 0.6837  ceiling 0.228
+  linear_deck                        spearman 0.2308  nll 0.6823  ceiling 0.255
+  linear_pool+deck                   spearman 0.2304  nll 0.6823  ceiling 0.261
+=== OTJ
+drafts 195312, with deck 98.7%, test scored 28657  [30s]
+  rank_only                          spearman 0.0634  nll 0.6897  ceiling 0.039
+  pool_top23:gih_wr                  spearman 0.1645  nll 0.6872  ceiling 0.173
+  deck_mean:gih_wr                   spearman 0.1543  nll 0.6875  ceiling 0.167
+  linear_pool                        spearman 0.2006  nll 0.6857  ceiling 0.228
+  linear_deck                        spearman 0.2280  nll 0.6842  ceiling 0.255
+  linear_pool+deck                   spearman 0.2242  nll 0.6845  ceiling 0.258
+=== EOE
+drafts 104377, with deck 98.7%, test scored 15302  [11s]
+  rank_only                          spearman 0.0532  nll 0.6883  ceiling 0.055
+  pool_top23:gih_wr                  spearman 0.1864  nll 0.6851  ceiling 0.204
+  deck_mean:gih_wr                   spearman 0.1865  nll 0.6850  ceiling 0.200
+  linear_pool                        spearman 0.1989  nll 0.6844  ceiling 0.231
+  linear_deck                        spearman 0.2190  nll 0.6834  ceiling 0.242
+  linear_pool+deck                   spearman 0.2154  nll 0.6835  ceiling 0.254
+=== SOS
+drafts 107459, with deck 98.7%, test scored 15841  [12s]
+  rank_only                          spearman 0.0606  nll 0.6898  ceiling 0.056
+  pool_top23:gih_wr                  spearman 0.1738  nll 0.6869  ceiling 0.194
+  deck_mean:gih_wr                   spearman 0.1787  nll 0.6870  ceiling 0.192
+  linear_pool                        spearman 0.2013  nll 0.6854  ceiling 0.231
+  linear_deck                        spearman 0.2428  nll 0.6840  ceiling 0.267
+  linear_pool+deck                   spearman 0.2379  nll 0.6841  ceiling 0.265
+=== TDM
+drafts 101323, with deck 98.8%, test scored 14889  [9s]
+  rank_only                          spearman 0.0596  nll 0.6880  ceiling 0.060
+  pool_top23:gih_wr                  spearman 0.1474  nll 0.6861  ceiling 0.189
+  deck_mean:gih_wr                   spearman 0.1667  nll 0.6857  ceiling 0.198
+  linear_pool                        spearman 0.1944  nll 0.6843  ceiling 0.235
+  linear_deck                        spearman 0.2247  nll 0.6828  ceiling 0.251
+  linear_pool+deck                   spearman 0.2173  nll 0.6832  ceiling 0.257

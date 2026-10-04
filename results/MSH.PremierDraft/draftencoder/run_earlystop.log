@@ -1,0 +1,17 @@
+drafts 68609, with deck 98.8%, test scored 10068  [3s]
+pack tokens (68609, 42, 14)  [3s]
+training draftencoder_paper
+  paper: 0.50M params on mps
+  epoch  0 train 0.68468 val_final_pick 0.68865  [98s]
+  epoch  1 train 0.68213 val_final_pick 0.68662  [97s]
+  epoch  2 train 0.68108 val_final_pick 0.68606  [92s]
+  epoch  3 train 0.68065 val_final_pick 0.68601  [95s]
+  epoch  4 train 0.68035 val_final_pick 0.68495  [94s]
+  epoch  5 train 0.68005 val_final_pick 0.68429  [88s]
+  epoch  6 train 0.67986 val_final_pick 0.68716  [89s]
+  epoch  7 train 0.67963 val_final_pick 0.68461  [90s]
+  epoch  8 train 0.67943 val_final_pick 0.68480  [90s]
+  epoch  9 train 0.67927 val_final_pick 0.68651  [89s]
+  draftencoder_paper                 spearman 0.2379  nll 0.6825  ceiling 0.181
+training draftencoder_paper+deck
+  paper+deck: 0.59M params on mps
