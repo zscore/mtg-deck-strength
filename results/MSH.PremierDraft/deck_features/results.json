@@ -1,0 +1,82 @@
+[
+ {
+  "model": "transformer, basic card meta",
+  "config": "d=64, 2 layers (deck_synergy_multitask)",
+  "val logloss": null,
+  "fit seconds": null,
+  "test logloss": 0.6559945940971375,
+  "test auc": 0.637216949236884,
+  "vs linear": 0.00039949288475327194,
+  "vs linear \u00b195%": 0.00037242316928989117
+ },
+ {
+  "model": "linear",
+  "config": "card counts + context",
+  "val logloss": 0.6606868505477905,
+  "fit seconds": 4.684623956680298,
+  "test logloss": 0.6555951237678528,
+  "test auc": 0.6381592562375569,
+  "vs linear": 0.0,
+  "vs linear \u00b195%": 0.0
+ },
+ {
+  "model": "linear + deck features",
+  "config": "",
+  "val logloss": 0.6601485013961792,
+  "fit seconds": 3.8205182552337646,
+  "test logloss": 0.6551884412765503,
+  "test auc": 0.6390319041673627,
+  "vs linear": -0.0004065867105964571,
+  "vs linear \u00b195%": 0.00031392952857197206
+ },
+ {
+  "model": "fm4 l2_v=0.001 + deck features",
+  "config": "",
+  "val logloss": 0.6606225967407227,
+  "fit seconds": 5.7337729930877686,
+  "test logloss": 0.6561342477798462,
+  "test auc": 0.6368978893764736,
+  "vs linear": 0.0005391697050072253,
+  "vs linear \u00b195%": 0.00045015943700231487
+ },
+ {
+  "model": "fm4 l2_v=0.01 + deck features",
+  "config": "",
+  "val logloss": 0.6602796316146851,
+  "fit seconds": 7.854418992996216,
+  "test logloss": 0.6552925705909729,
+  "test auc": 0.6386448337976586,
+  "vs linear": -0.0003025301266461611,
+  "vs linear \u00b195%": 0.0003476091309344621
+ },
+ {
+  "model": "transformer, rich card meta",
+  "config": "d=64, 2 layers",
+  "val logloss": 0.6607218384742737,
+  "fit seconds": 439.30526208877563,
+  "test logloss": 0.6559392213821411,
+  "test auc": 0.6378209560990594,
+  "vs linear": 0.00034418993163853884,
+  "vs linear \u00b195%": 0.00030118934547678676
+ },
+ {
+  "model": "transformer, rich card meta + deck features",
+  "config": "d=64, 2 layers",
+  "val logloss": 0.6602545976638794,
+  "fit seconds": 504.16211795806885,
+  "test logloss": 0.6554673910140991,
+  "test auc": 0.6385691803300891,
+  "vs linear": -0.0001276664697797969,
+  "vs linear \u00b195%": 0.0003440294867619592
+ },
+ {
+  "model": "deep transformer, rich card meta + deck features",
+  "config": "d=128, 4 layers, 8 heads",
+  "val logloss": 0.6620105504989624,
+  "fit seconds": 2816.5542171001434,
+  "test logloss": 0.6569128036499023,
+  "test auc": 0.6355551773087137,
+  "vs linear": 0.0013177752261981368,
+  "vs linear \u00b195%": 0.0005599547331551093
+ }
+]

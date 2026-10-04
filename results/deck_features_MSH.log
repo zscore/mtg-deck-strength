@@ -1,0 +1,99 @@
+377376 games, 17 deck features, card meta 25 -> 81  [9s]
+== linear
+    k=0 l2_w=0.0001 l2_v=0: val logloss 0.66069
+  transformer, basic card meta                       ll 0.65599 auc 0.6372  vs linear +0.40 ± 0.37 (×1000)
+  linear                                             ll 0.65560 auc 0.6382  vs linear +0.00 ± 0.00 (×1000)
+== linear + deck features
+    k=0 l2_w=0.0001 l2_v=0: val logloss 0.66015
+  transformer, basic card meta                       ll 0.65599 auc 0.6372  vs linear +0.40 ± 0.37 (×1000)
+  linear                                             ll 0.65560 auc 0.6382  vs linear +0.00 ± 0.00 (×1000)
+  linear + deck features                             ll 0.65519 auc 0.6390  vs linear -0.41 ± 0.31 (×1000)
+== fm4 l2_v=0.001 + deck features
+    k=4 l2_w=1e-05 l2_v=0.001: val logloss 0.66062
+  transformer, basic card meta                       ll 0.65599 auc 0.6372  vs linear +0.40 ± 0.37 (×1000)
+  linear                                             ll 0.65560 auc 0.6382  vs linear +0.00 ± 0.00 (×1000)
+  linear + deck features                             ll 0.65519 auc 0.6390  vs linear -0.41 ± 0.31 (×1000)
+  fm4 l2_v=0.001 + deck features                     ll 0.65613 auc 0.6369  vs linear +0.54 ± 0.45 (×1000)
+== fm4 l2_v=0.01 + deck features
+    k=4 l2_w=1e-05 l2_v=0.01: val logloss 0.66028
+  transformer, basic card meta                       ll 0.65599 auc 0.6372  vs linear +0.40 ± 0.37 (×1000)
+  linear                                             ll 0.65560 auc 0.6382  vs linear +0.00 ± 0.00 (×1000)
+  linear + deck features                             ll 0.65519 auc 0.6390  vs linear -0.41 ± 0.31 (×1000)
+  fm4 l2_v=0.001 + deck features                     ll 0.65613 auc 0.6369  vs linear +0.54 ± 0.45 (×1000)
+  fm4 l2_v=0.01 + deck features                      ll 0.65529 auc 0.6386  vs linear -0.30 ± 0.35 (×1000)
+== transformer, rich card meta
+      epoch  0 val logloss 0.67230
+      epoch  1 val logloss 0.66684
+      epoch  2 val logloss 0.66486
+      epoch  3 val logloss 0.66360
+      epoch  4 val logloss 0.66337
+      epoch  5 val logloss 0.66251
+      epoch  6 val logloss 0.66175
+      epoch  7 val logloss 0.66109
+      epoch  8 val logloss 0.66100
+      epoch  9 val logloss 0.66072
+      epoch 10 val logloss 0.66090
+      epoch 11 val logloss 0.66096
+      epoch 12 val logloss 0.66074
+    transformer d=64 layers=2 dropout=0.1: val logloss 0.66072
+  transformer, basic card meta                       ll 0.65599 auc 0.6372  vs linear +0.40 ± 0.37 (×1000)
+  linear                                             ll 0.65560 auc 0.6382  vs linear +0.00 ± 0.00 (×1000)
+  linear + deck features                             ll 0.65519 auc 0.6390  vs linear -0.41 ± 0.31 (×1000)
+  fm4 l2_v=0.001 + deck features                     ll 0.65613 auc 0.6369  vs linear +0.54 ± 0.45 (×1000)
+  fm4 l2_v=0.01 + deck features                      ll 0.65529 auc 0.6386  vs linear -0.30 ± 0.35 (×1000)
+  transformer, rich card meta                        ll 0.65594 auc 0.6378  vs linear +0.34 ± 0.30 (×1000)
+== transformer, rich card meta + deck features
+      epoch  0 val logloss 0.67162
+      epoch  1 val logloss 0.66650
+      epoch  2 val logloss 0.66486
+      epoch  3 val logloss 0.66364
+      epoch  4 val logloss 0.66320
+      epoch  5 val logloss 0.66202
+      epoch  6 val logloss 0.66156
+      epoch  7 val logloss 0.66104
+      epoch  8 val logloss 0.66092
+      epoch  9 val logloss 0.66062
+      epoch 10 val logloss 0.66044
+      epoch 11 val logloss 0.66059
+      epoch 12 val logloss 0.66056
+      epoch 13 val logloss 0.66025
+      epoch 14 val logloss 0.66063
+      epoch 15 val logloss 0.66065
+      epoch 16 val logloss 0.66060
+    transformer d=64 layers=2 dropout=0.1: val logloss 0.66025
+  transformer, basic card meta                       ll 0.65599 auc 0.6372  vs linear +0.40 ± 0.37 (×1000)
+  linear                                             ll 0.65560 auc 0.6382  vs linear +0.00 ± 0.00 (×1000)
+  linear + deck features                             ll 0.65519 auc 0.6390  vs linear -0.41 ± 0.31 (×1000)
+  fm4 l2_v=0.001 + deck features                     ll 0.65613 auc 0.6369  vs linear +0.54 ± 0.45 (×1000)
+  fm4 l2_v=0.01 + deck features                      ll 0.65529 auc 0.6386  vs linear -0.30 ± 0.35 (×1000)
+  transformer, rich card meta                        ll 0.65594 auc 0.6378  vs linear +0.34 ± 0.30 (×1000)
+  transformer, rich card meta + deck features        ll 0.65547 auc 0.6386  vs linear -0.13 ± 0.34 (×1000)
+== deep transformer, rich card meta + deck features
+      epoch  0 val logloss 0.67561
+      epoch  1 val logloss 0.66995
+      epoch  2 val logloss 0.66776
+      epoch  3 val logloss 0.66638
+      epoch  4 val logloss 0.66605
+      epoch  5 val logloss 0.66507
+      epoch  6 val logloss 0.66414
+      epoch  7 val logloss 0.66356
+      epoch  8 val logloss 0.66316
+      epoch  9 val logloss 0.66249
+      epoch 10 val logloss 0.66227
+      epoch 11 val logloss 0.66256
+      epoch 12 val logloss 0.66211
+      epoch 13 val logloss 0.66224
+      epoch 14 val logloss 0.66201
+      epoch 15 val logloss 0.66241
+      epoch 16 val logloss 0.66273
+      epoch 17 val logloss 0.66201
+    transformer d=128 layers=4 dropout=0.1: val logloss 0.66201
+  transformer, basic card meta                       ll 0.65599 auc 0.6372  vs linear +0.40 ± 0.37 (×1000)
+  linear                                             ll 0.65560 auc 0.6382  vs linear +0.00 ± 0.00 (×1000)
+  linear + deck features                             ll 0.65519 auc 0.6390  vs linear -0.41 ± 0.31 (×1000)
+  fm4 l2_v=0.001 + deck features                     ll 0.65613 auc 0.6369  vs linear +0.54 ± 0.45 (×1000)
+  fm4 l2_v=0.01 + deck features                      ll 0.65529 auc 0.6386  vs linear -0.30 ± 0.35 (×1000)
+  transformer, rich card meta                        ll 0.65594 auc 0.6378  vs linear +0.34 ± 0.30 (×1000)
+  transformer, rich card meta + deck features        ll 0.65547 auc 0.6386  vs linear -0.13 ± 0.34 (×1000)
+  deep transformer, rich card meta + deck features   ll 0.65691 auc 0.6356  vs linear +1.32 ± 0.56 (×1000)
+done [3792s]
