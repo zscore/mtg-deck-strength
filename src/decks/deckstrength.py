@@ -91,6 +91,18 @@ def game_split(d: Drafts, draft_ids: pl.Series) -> np.ndarray:
     return np.array([m.get(x, -1) for x in draft_ids.to_list()], dtype=np.int8)
 
 
+def event_split(games: pl.DataFrame, frac=(0.70, 0.85)) -> np.ndarray:
+    """Train/val/test (0/1/2) for games without a draft table (e.g. Sealed): events (draft_id) are
+    ordered by draft_time and split like `load_drafts` does, and each game takes its event's split."""
+    ev = games.group_by("draft_id").agg(pl.col("draft_time").min()).sort("draft_time", "draft_id")
+    n = ev.height
+    s = np.zeros(n, dtype=np.int8)
+    s[int(frac[0] * n):] = 1
+    s[int(frac[1] * n):] = 2
+    m = dict(zip(ev["draft_id"].to_list(), s.tolist()))
+    return np.array([m[x] for x in games["draft_id"].to_list()], dtype=np.int8)
+
+
 def aligned(df: pl.DataFrame, prefix: str, names: list[str]) -> np.ndarray:
     """[rows, C] int8 matrix of `prefix + name` columns, zeros for names the file lacks."""
     out = np.zeros((df.height, len(names)), dtype=np.int8)
@@ -142,6 +154,41 @@ def covariates(games: pl.DataFrame) -> np.ndarray:
     return np.hstack([on_play[:, None] - 0.5, mull.fill_null(0).to_numpy()[:, None],
                       skill[:, None], skill_known[:, None],
                       ranks[rank_index(games["rank"])], ranks[rank_index(games["opp_rank"])]])
+
+
+N_GAMES_BUCKETS = ("1", "5", "10", "50", "100")
+MAX_WINS, MAX_LOSSES = 7, 3
+
+
+def experience(games: pl.DataFrame) -> np.ndarray:
+    """One-hot of user_n_games_bucket (how many games the user has logged), plus unknown."""
+    b = games["user_n_games_bucket"].cast(pl.Utf8).replace_strict(
+        {k: i + 1 for i, k in enumerate(N_GAMES_BUCKETS)}, default=0).to_numpy()
+    return np.eye(len(N_GAMES_BUCKETS) + 1, dtype=np.float32)[b]
+
+
+def record_before(games: pl.DataFrame) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Wins and losses among the earlier games of the same run that are in `games`, and whether that
+    history is complete (every earlier match number present; 17Lands is missing some games).
+
+    Games are ordered by match_number within draft_id. Returned in the input row order.
+    """
+    g = (games.select("draft_id", "match_number", "won").with_row_index("row")
+         .with_columns(pl.col("match_number").cast(pl.Int32), pl.Series("w", flag(games["won"]).astype(np.int32)))
+         .sort("draft_id", "match_number")
+         .with_columns(pl.int_range(pl.len()).over("draft_id").alias("k"))
+         .with_columns((pl.col("w").cum_sum().over("draft_id") - pl.col("w")).alias("wins"),
+                       (pl.col("match_number") == pl.col("k") + 1).alias("known"))
+         .sort("row"))
+    wins = g["wins"].to_numpy()
+    return wins, g["k"].to_numpy() - wins, g["known"].to_numpy()
+
+
+def record_onehot(wins: np.ndarray, losses: np.ndarray) -> np.ndarray:
+    """One column per record before the game, 0-0 to 6-2 (21 states); out-of-range values clipped."""
+    w = np.clip(wins, 0, MAX_WINS - 1)
+    l = np.clip(losses, 0, MAX_LOSSES - 1)
+    return np.eye(MAX_WINS * MAX_LOSSES, dtype=np.float32)[l * MAX_WINS + w]
 
 
 def design(U: np.ndarray, O: np.ndarray, cov: np.ndarray, symmetric: bool = True):

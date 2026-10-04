@@ -1,0 +1,130 @@
+PremierDraft: train/val/test games [266251, 56679, 54446], win rate 0.561
+Sealed: train/val/test games [36288, 8010, 8033], win rate 0.581
+339 cards, 45 context columns  [2s]
+[draft] linear l2_w=1e-05 l2_dw=0.001
+    k=0 l2_w=1e-05 l2_v=0: val logloss 0.66077
+[draft] linear l2_w=0.0001 l2_dw=0.001
+    k=0 l2_w=0.0001 l2_v=0: val logloss 0.66069
+[draft] fm k=4 l2_v=0.001 l2_dw=0.001
+    k=4 l2_w=1e-05 l2_v=0.001: val logloss 0.66123
+[draft] fm k=4 l2_v=0.01 l2_dw=0.001
+    k=4 l2_w=1e-05 l2_v=0.01: val logloss 0.66080
+[draft] fm k=16 l2_v=0.001 l2_dw=0.001
+    k=16 l2_w=1e-05 l2_v=0.001: val logloss 0.66149
+[draft] fm k=16 l2_v=0.01 l2_dw=0.001
+    k=16 l2_w=1e-05 l2_v=0.01: val logloss 0.66126
+[draft] transformer (l2_dw=0.001)
+      epoch  0 val logloss 0.67201
+      epoch  1 val logloss 0.66685
+      epoch  2 val logloss 0.66498
+      epoch  3 val logloss 0.66378
+      epoch  4 val logloss 0.66341
+      epoch  5 val logloss 0.66278
+      epoch  6 val logloss 0.66175
+      epoch  7 val logloss 0.66119
+      epoch  8 val logloss 0.66126
+      epoch  9 val logloss 0.66087
+      epoch 10 val logloss 0.66074
+      epoch 11 val logloss 0.66151
+      epoch 12 val logloss 0.66088
+      epoch 13 val logloss 0.66053
+      epoch 14 val logloss 0.66103
+      epoch 15 val logloss 0.66216
+      epoch 16 val logloss 0.66151
+    transformer d=64 layers=2 dropout=0.1: val logloss 0.66053
+  linear       draft  PremierDraft: ll 0.65560 auc 0.6382  Sealed: ll 0.62477 auc 0.6716
+  fm           draft  PremierDraft: ll 0.65571 auc 0.6378  Sealed: ll 0.62514 auc 0.6704
+  transformer  draft  PremierDraft: ll 0.65599 auc 0.6372  Sealed: ll 0.62598 auc 0.6702
+[sealed] linear l2_w=1e-05 l2_dw=0.001
+    k=0 l2_w=1e-05 l2_v=0: val logloss 0.65153
+[sealed] linear l2_w=0.0001 l2_dw=0.001
+    k=0 l2_w=0.0001 l2_v=0: val logloss 0.65126
+[sealed] fm k=4 l2_v=0.001 l2_dw=0.001
+    k=4 l2_w=1e-05 l2_v=0.001: val logloss 0.66268
+[sealed] fm k=4 l2_v=0.01 l2_dw=0.001
+    k=4 l2_w=1e-05 l2_v=0.01: val logloss 0.65188
+[sealed] fm k=16 l2_v=0.001 l2_dw=0.001
+    k=16 l2_w=1e-05 l2_v=0.001: val logloss 0.66686
+[sealed] fm k=16 l2_v=0.01 l2_dw=0.001
+    k=16 l2_w=1e-05 l2_v=0.01: val logloss 0.65110
+[sealed] transformer (l2_dw=0.001)
+      epoch  0 val logloss 0.67153
+      epoch  1 val logloss 0.66542
+      epoch  2 val logloss 0.66176
+      epoch  3 val logloss 0.65882
+      epoch  4 val logloss 0.65773
+      epoch  5 val logloss 0.65477
+      epoch  6 val logloss 0.65487
+      epoch  7 val logloss 0.65221
+      epoch  8 val logloss 0.65454
+      epoch  9 val logloss 0.65081
+      epoch 10 val logloss 0.65025
+      epoch 11 val logloss 0.64923
+      epoch 12 val logloss 0.64891
+      epoch 13 val logloss 0.65030
+      epoch 14 val logloss 0.64878
+      epoch 15 val logloss 0.64840
+      epoch 16 val logloss 0.65003
+      epoch 17 val logloss 0.64978
+      epoch 18 val logloss 0.64991
+    transformer d=64 layers=2 dropout=0.1: val logloss 0.64840
+  linear       sealed PremierDraft: ll 0.67794 auc 0.6024  Sealed: ll 0.64612 auc 0.6249
+  fm           sealed PremierDraft: ll 0.67912 auc 0.5996  Sealed: ll 0.64613 auc 0.6247
+  transformer  sealed PremierDraft: ll 0.67155 auc 0.6070  Sealed: ll 0.64376 auc 0.6322
+[multi] linear l2_w=1e-05 l2_dw=0.0001
+    k=0 l2_w=1e-05 l2_v=0: val logloss 0.64847
+[multi] linear l2_w=1e-05 l2_dw=0.001
+    k=0 l2_w=1e-05 l2_v=0: val logloss 0.64763
+[multi] linear l2_w=1e-05 l2_dw=0.01
+    k=0 l2_w=1e-05 l2_v=0: val logloss 0.64715
+[multi] linear l2_w=0.0001 l2_dw=0.0001
+    k=0 l2_w=0.0001 l2_v=0: val logloss 0.64833
+[multi] linear l2_w=0.0001 l2_dw=0.001
+    k=0 l2_w=0.0001 l2_v=0: val logloss 0.64745
+[multi] linear l2_w=0.0001 l2_dw=0.01
+    k=0 l2_w=0.0001 l2_v=0: val logloss 0.64698
+[multi] fm k=4 l2_v=0.001 l2_dw=0.0001
+    k=4 l2_w=1e-05 l2_v=0.001: val logloss 0.64881
+[multi] fm k=4 l2_v=0.001 l2_dw=0.001
+    k=4 l2_w=1e-05 l2_v=0.001: val logloss 0.64797
+[multi] fm k=4 l2_v=0.001 l2_dw=0.01
+    k=4 l2_w=1e-05 l2_v=0.001: val logloss 0.64632
+[multi] fm k=4 l2_v=0.01 l2_dw=0.0001
+    k=4 l2_w=1e-05 l2_v=0.01: val logloss 0.64847
+[multi] fm k=4 l2_v=0.01 l2_dw=0.001
+    k=4 l2_w=1e-05 l2_v=0.01: val logloss 0.64764
+[multi] fm k=4 l2_v=0.01 l2_dw=0.01
+    k=4 l2_w=1e-05 l2_v=0.01: val logloss 0.64726
+[multi] fm k=16 l2_v=0.001 l2_dw=0.0001
+    k=16 l2_w=1e-05 l2_v=0.001: val logloss 0.64872
+[multi] fm k=16 l2_v=0.001 l2_dw=0.001
+    k=16 l2_w=1e-05 l2_v=0.001: val logloss 0.64777
+[multi] fm k=16 l2_v=0.001 l2_dw=0.01
+    k=16 l2_w=1e-05 l2_v=0.001: val logloss 0.64720
+[multi] fm k=16 l2_v=0.01 l2_dw=0.0001
+    k=16 l2_w=1e-05 l2_v=0.01: val logloss 0.64843
+[multi] fm k=16 l2_v=0.01 l2_dw=0.001
+    k=16 l2_w=1e-05 l2_v=0.01: val logloss 0.64761
+[multi] fm k=16 l2_v=0.01 l2_dw=0.01
+    k=16 l2_w=1e-05 l2_v=0.01: val logloss 0.64717
+[multi] transformer (l2_dw=0.01)
+      epoch  0 val logloss 0.66357
+      epoch  1 val logloss 0.65673
+      epoch  2 val logloss 0.65495
+      epoch  3 val logloss 0.65241
+      epoch  4 val logloss 0.65102
+      epoch  5 val logloss 0.64905
+      epoch  6 val logloss 0.64898
+      epoch  7 val logloss 0.64766
+      epoch  8 val logloss 0.64732
+      epoch  9 val logloss 0.64659
+      epoch 10 val logloss 0.64739
+      epoch 11 val logloss 0.64621
+      epoch 12 val logloss 0.64801
+      epoch 13 val logloss 0.64790
+      epoch 14 val logloss 0.64785
+    transformer d=64 layers=2 dropout=0.1: val logloss 0.64621
+  linear       multi  PremierDraft: ll 0.65613 auc 0.6373  Sealed: ll 0.62469 auc 0.6698
+  fm           multi  PremierDraft: ll 0.65650 auc 0.6369  Sealed: ll 0.62342 auc 0.6717
+  transformer  multi  PremierDraft: ll 0.65598 auc 0.6377  Sealed: ll 0.62351 auc 0.6732
+done [1600s]

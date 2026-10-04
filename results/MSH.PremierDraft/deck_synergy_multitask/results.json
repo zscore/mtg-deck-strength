@@ -1,0 +1,101 @@
+[
+ {
+  "model": "linear",
+  "trained on": "draft",
+  "config": "l2_w=0.0001 l2_dw=0.001",
+  "val logloss": 0.6606868505477905,
+  "fit seconds": 3.5696499347686768,
+  "PremierDraft test logloss": 0.6555951237678528,
+  "PremierDraft test auc": 0.6381592562375569,
+  "Sealed test logloss": 0.6247719526290894,
+  "Sealed test auc": 0.6715849782144292
+ },
+ {
+  "model": "fm",
+  "trained on": "draft",
+  "config": "k=4 l2_v=0.01 l2_dw=0.001",
+  "val logloss": 0.6608006358146667,
+  "fit seconds": 7.95330810546875,
+  "PremierDraft test logloss": 0.6557133197784424,
+  "PremierDraft test auc": 0.6377813448469037,
+  "Sealed test logloss": 0.6251429915428162,
+  "Sealed test auc": 0.6703510748419281
+ },
+ {
+  "model": "transformer",
+  "trained on": "draft",
+  "config": "d=64 layers=2 l2_dw=0.001",
+  "val logloss": 0.6605299711227417,
+  "fit seconds": 541.7094378471375,
+  "PremierDraft test logloss": 0.6559945940971375,
+  "PremierDraft test auc": 0.637216949236884,
+  "Sealed test logloss": 0.6259813904762268,
+  "Sealed test auc": 0.6702475219091097
+ },
+ {
+  "model": "linear",
+  "trained on": "sealed",
+  "config": "l2_w=0.0001 l2_dw=0.001",
+  "val logloss": 0.6512590050697327,
+  "fit seconds": 0.6016621589660645,
+  "PremierDraft test logloss": 0.677936315536499,
+  "PremierDraft test auc": 0.602353620682357,
+  "Sealed test logloss": 0.6461218595504761,
+  "Sealed test auc": 0.6249218016890834
+ },
+ {
+  "model": "fm",
+  "trained on": "sealed",
+  "config": "k=16 l2_v=0.01 l2_dw=0.001",
+  "val logloss": 0.6511006951332092,
+  "fit seconds": 1.02933669090271,
+  "PremierDraft test logloss": 0.6791197061538696,
+  "PremierDraft test auc": 0.599560485969389,
+  "Sealed test logloss": 0.6461312174797058,
+  "Sealed test auc": 0.6246629193570379
+ },
+ {
+  "model": "transformer",
+  "trained on": "sealed",
+  "config": "d=64 layers=2 l2_dw=0.001",
+  "val logloss": 0.6484029293060303,
+  "fit seconds": 94.0103862285614,
+  "PremierDraft test logloss": 0.6715492606163025,
+  "PremierDraft test auc": 0.6069836519766467,
+  "Sealed test logloss": 0.6437569260597229,
+  "Sealed test auc": 0.6321861919246564
+ },
+ {
+  "model": "linear",
+  "trained on": "multi",
+  "config": "l2_w=0.0001 l2_dw=0.01",
+  "val logloss": 0.6469794809818268,
+  "fit seconds": 13.847053050994873,
+  "PremierDraft test logloss": 0.6561285853385925,
+  "PremierDraft test auc": 0.6373246502495322,
+  "Sealed test logloss": 0.6246941089630127,
+  "Sealed test auc": 0.6698014875401437
+ },
+ {
+  "model": "fm",
+  "trained on": "multi",
+  "config": "k=4 l2_v=0.001 l2_dw=0.01",
+  "val logloss": 0.646320253610611,
+  "fit seconds": 20.20974612236023,
+  "PremierDraft test logloss": 0.6565042734146118,
+  "PremierDraft test auc": 0.6368588718251084,
+  "Sealed test logloss": 0.6234163045883179,
+  "Sealed test auc": 0.67169774806975
+ },
+ {
+  "model": "transformer",
+  "trained on": "multi",
+  "config": "d=64 layers=2 l2_dw=0.01",
+  "val logloss": 0.6462132036685944,
+  "fit seconds": 644.9766070842743,
+  "PremierDraft test logloss": 0.655978798866272,
+  "PremierDraft test auc": 0.6377303432845334,
+  "Sealed test logloss": 0.6235097646713257,
+  "Sealed test auc": 0.6732235853349902
+ }
+]
