@@ -557,7 +557,7 @@ What we learned:
    hand-built deck features (−0.70) capture. What remains is set-specific, which is where affinity and the
    nonland FM come in.
 
-## Deck synergy, round 3
+## Deck synergy, round 3 (`notebooks/deck_synergy_v3.ipynb` covers rounds 3–7)
 
 `scripts/deck_synergy_v3.py` tries to get more out of the pick model's affinity than one mean-affinity column. For
 each nonland card in a deck, its *fit* is its mean affinity to the deck's other nonland cards. Same 12 sets, games,
@@ -718,7 +718,10 @@ is now chosen on only 3 sets, so the grid brackets the optimum. From these fits:
 - `results/<SET>/deck_synergy_v7/card_hubs.csv`: each card's own seen value and its *synergy dependence*, the
   co-occurrence-weighted mean Q over its partners, with its best and worst partner.
 
-The cards with the highest synergy dependence are payoffs that are weak on their own. They are BLB's Talents (Caretaker's
+Caveat on synergy dependence: a card's own value and its average pair effect trade off in this model (r = −0.55 to
+−0.69 across cards), so weak cards look synergy-dependent partly by construction. `notebooks/deck_synergy_v3.ipynb`
+ranks hubs by the *spread* of their pair values across partners instead, which is much less tied to own value; it
+picks out mostly the same cards. The cards with the highest synergy dependence are payoffs that are weak on their own. They are BLB's Talents (Caretaker's
 Talent with Carrot Cake, Q = +0.36; Scavenger's Talent with Heaped Harvest), MKM's Chalk Outline with Insidious
 Roots, DSK's Emerge from the Cocoon with Vile Mutilator and Shroudstomper, and SOS's Wisdom of Ages with Zealous
 Lorecaster. Cards that are good anywhere (SOS's Colorstorm Stallion, Practiced Offense) sit near zero.
