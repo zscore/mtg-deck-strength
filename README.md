@@ -4,6 +4,9 @@
 back to you 8 picks later, based on the pack contents and the signals you have seen so far. It is
 trained on 17Lands human draft data. See [project-plan.md](project-plan.md) for background.
 
+**[WRITEUP.md](WRITEUP.md) condenses every notebook into one summary**: findings, best model per question, dead ends.
+Superseded notebooks and dead-end scripts live in `notebooks/archive/` and `scripts/archive/`.
+
 Data: [17Lands public datasets](https://www.17lands.com/public_datasets). Please attribute 17Lands
 and check their [usage guidelines](https://www.17lands.com/usage_guidelines).
 
@@ -25,9 +28,9 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/train_picknet_multiset.py MSH 3 20000      # day-zero pick model (~45 min)
 .venv/bin/python scripts/deck_synergy_v2.py MSH    # deck features, nonland FM, draft affinity (~3-10 min/set)
 .venv/bin/python scripts/affinity_checks.py MSH     # draft affinity vs co-occurrence vs colour; skill check (~1 min)
-.venv/bin/python scripts/deck_multiset.py 200000   # deck transformer shared across 12 sets (~55 min)
+.venv/bin/python scripts/archive/deck_multiset.py 200000   # (archived) deck transformer shared across 12 sets (~55 min)
 .venv/bin/python scripts/deck_synergy_v3.py MSH    # retrained game-level models, affinity profile, card fit (~3 min/set)
-.venv/bin/python scripts/deck_synergy_v3_blend.py MSH  # blend with the draft-level LightGBM deck model (~1 min/set)
+.venv/bin/python scripts/archive/deck_synergy_v3_blend.py MSH  # (archived) blend with the draft-level LightGBM deck model (~1 min/set)
 .venv/bin/python scripts/deck_synergy_v4.py MSH    # pair-term variants, properly trained; cross-fitted draft scores (~4 min/set)
 .venv/bin/python scripts/deck_synergy_v4_draft.py MSH  # LightGBM with deck features / affinity, boosted from the game model
 .venv/bin/python scripts/deck_synergy_v5.py MSH    # pair synergy from cards seen together in a game (~3-5 min/set)
@@ -425,7 +428,7 @@ with a deck, Spearman:
 
 What we learned:
 1. **LightGBM on the registered deck is the best deck model:** +0.028 Spearman (+11%) over the
-   linear deck model, and better on every set. An ablation (`scripts/lgbm_ablation.py`) shows it
+   linear deck model, and better on every set. An ablation (`scripts/archive/lgbm_ablation.py`) shows it
    doesn't need the structure features: deck counts + rank alone score the same. Basic lands and
    colours are visible in the deck columns, so trees find land count, colour and curve effects on
    their own. Structure + rank alone reaches only about 0.10.
@@ -513,7 +516,7 @@ converge on the best archetype harder than a model that imitates one pick at a t
 
 ## Deck synergy, round 2 (`notebooks/deck_synergy_v2.ipynb`)
 
-`deck_synergy.ipynb` found that on MSH pair synergy didn't replicate, and that what synergy there was mostly
+`notebooks/archive/deck_synergy.ipynb` found that on MSH pair synergy didn't replicate, and that what synergy there was mostly
 learned the mana base. `scripts/deck_synergy_v2.py` runs its suggested next steps, plus two new ideas, on all 12
 sets with game data. Game-level models with the full context (play/draw, mulligans, both ranks, skill,
 experience, record before the game); test-game log loss vs the linear card-power model, ×1000, paired:
@@ -575,7 +578,7 @@ context and paired test metric as round 2. Test-game log loss ×1000, mean over 
 | FM nonland + deck features + aff + card fit | −1.46 | −0.07 (10/12, 4) | 0.268 |
 | FM nonland + deck features + aff, continued training (control for card fit) | −1.43 | −0.03 (8/12, 5) | 0.267 |
 
-Draft level, blended in logit space with the draft-trained LightGBM deck model (`scripts/deck_synergy_v3_blend.py`,
+Draft level, blended in logit space with the draft-trained LightGBM deck model (`scripts/archive/deck_synergy_v3_blend.py`,
 weight chosen on validation drafts; it lands at 0.35–0.55):
 
 | model | mean Spearman | mean NLL / game | better than LightGBM |
@@ -741,13 +744,14 @@ src/openlane/picknet.py   pick models: rating, pool-bilinear, PickNet
 src/openlane/evaluate.py  logloss / Brier / AUC / ECE
 scripts/                  build_dataset.py, train.py, train_nn.py, train_deckstrength.py,
                           train_draftencoder.py, deck_synergy.py, improve_deck.py,
-                          paper_baselines.py, lgbm_ablation.py, ensemble_de_lgbm.py,
+                          paper_baselines.py,
                           train_picknet.py, train_picknet_multiset.py, simulate_draft.py,
-                          card_text_embeddings.py, deck_synergy_v2.py, deck_multiset.py, deck_synergy_v3.py,
-                          deck_synergy_v3_blend.py, deck_synergy_v4.py, deck_synergy_v4_draft.py,
+                          card_text_embeddings.py, deck_synergy_v2.py, deck_synergy_v3.py,
+                          deck_synergy_v4.py, deck_synergy_v4_draft.py,
                           deck_synergy_v5.py, deck_synergy_v6.py, deck_synergy_v7.py,
                           train_wheelnet_multiset.py, wheel_breakdown.py, open_lane.py, force_vs_follow.py
 results/<SET>.<EVENT>/    results.json, predictions, models (gitignored)
+scripts/archive/, notebooks/archive/, results/archive/   dead ends and superseded work (see WRITEUP.md)
 ```
 
 ## Caveats
