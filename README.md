@@ -227,25 +227,26 @@ What we learned:
    doesn't separate the value of the decision from the luck of the seat. That needs a counterfactual, e.g. the
    PickNet table simulator with a signal-blind seat.
 
-**Counterfactual: follow or force?** (`scripts/force_vs_follow.py`, MSH). The observational payoff can't separate
+**Counterfactual: follow or force?** (`scripts/force_vs_follow.py`, MSH and FDN). The observational payoff can't separate
 the read from the luck of the seat, so this tests it in the PickNet table simulator: 2,000 tables of real opened
 packs, seats 1–7 always the human-like bot, seat 0 plays a strategy, with the same tables and random stream for every
 strategy. Pools are scored as decks: the best colour pair's top 23 cards by training-game GIH WR (missing slots get
 a 10th-percentile card).
 
-| seat 0 strategy | deck score (mean GIH WR of best-pair top 23) | vs following |
-|---|---|---|
-| follow: draft like a human (the bot reads signals as people do) | 57.36 | — |
-| force a random pair (sample from the same model, only cards that fit) | 57.39 | +0.02 ± 0.03 |
-| force the best pair (WU) | 58.67 | +1.30 |
-| read P1 picks 1–5 for the most open pair, then lock it | 56.94 | -0.42 ± 0.03 |
+| seat 0 strategy | MSH deck score | vs following | FDN deck score | vs following |
+|---|---|---|---|---|
+| follow: draft like a human (the bot reads signals as people do) | 57.36 | — | 55.78 | — |
+| force a random pair (sample from the same model, only cards that fit) | 57.39 | +0.02 ± 0.03 | 55.78 | -0.00 ± 0.02 |
+| force the best pair (MSH WU, FDN WB) | 58.67 | +1.30 | 56.26 | +0.48 |
+| read P1 picks 1–5 for the most open pair, then lock it | 56.94 | -0.42 ± 0.03 | 55.52 | -0.26 ± 0.02 |
 
-Forcing, by pair: WU 58.7 · WG 58.3 · UG 58.1 · WB 57.8 · UB 57.6 · BG 57.3 · WR 57.0 · UR 56.9 · RG 56.6 · BR 55.8.
+Deck score = mean GIH WR (%) of the best pair's top 23. Forcing, by pair, MSH: WU 58.7 · WG 58.3 · UG 58.1 · WB 57.8 · UB 57.6 · BG 57.3 · WR 57.0 · UR 56.9 · RG 56.6 · BR 55.8. FDN: WB 56.3 · WU 56.2 · UB 56.1 · BR 55.9 · WR 55.9 · WG 55.8 · BG 55.6 · UG 55.4 · UR 55.4 · RG 55.4.
 
-5. **In simulation, forcing a random pair costs nothing, and forcing the strongest pair wins.** Committing to a
-   random pair from P1P1 ties drafting like a human. Which pair matters much more than when you commit: 2.9
-   points separate forcing WU from forcing BR. Locking in whatever looks open after five picks, ignoring the
-   cards already taken, is worse than both (−0.4). Human-style drafting balances card quality, pool and
+5. **In simulation, forcing a random pair costs nothing, and forcing the strongest pair wins.** On both sets,
+   committing to a random pair from P1P1 ties drafting like a human (±0.03). Which pair matters much more than
+   when you commit: 2.9 points separate the best and worst pair to force on MSH, and 0.9 on FDN, a flatter
+   format. Locking in whatever looks open after five picks, ignoring the cards already taken, is worse than both
+   (−0.4 MSH, −0.3 FDN). Human-style drafting balances card quality, pool and
    signals, and pure signal-chasing loses that.
    Caveats: the bots under-draft WU (17% of bot decks vs 23% of real drafters), so a WU forcer faces less
    competition than at a real table; the deck score ignores curve and synergy; and every seat is an imitation of
