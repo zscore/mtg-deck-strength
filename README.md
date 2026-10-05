@@ -4,7 +4,7 @@
 back to you 8 picks later, based on the pack contents and the signals you have seen so far. It is
 trained on 17Lands human draft data. See [project-plan.md](project-plan.md) for background.
 
-**[WRITEUP.md](WRITEUP.md) condenses every notebook into one summary**: findings, best model per question, dead ends.
+**[WRITEUP.md](WRITEUP.md) is the one-page summary.** Notebooks: `wheel`, `drafting`, `decks`, `synergy`.
 Superseded notebooks and dead-end scripts live in `notebooks/archive/` and `scripts/archive/`.
 
 Data: [17Lands public datasets](https://www.17lands.com/public_datasets). Please attribute 17Lands
@@ -126,7 +126,7 @@ train only.
    More depth did not help: 6+4 layers scored 0.4228 and trained 35% slower. Averaging with
    `lgbm_all` no longer helps either (0.4258), so the GBM's features appear to be subsumed.
 
-### One wheel model for every set (`notebooks/wheelnet.ipynb` §7)
+### One wheel model for every set (`notebooks/wheel.ipynb` §7)
 
 The pick model's best result came from dropping per-card ids for card features shared across sets (colour,
 rarity, mana value, types, Scryfall rules features, a frozen rules-text embedding). The same WheelNet with that
@@ -154,7 +154,7 @@ features-only card table (`ids=False`), trained on 20k drafts from each of the 7
   right in P2, so P2's upstream drafters are the P1/P3 downstream ones.
 - A draft-overlay-style demo: given a live pack, show P(wheel) for each card.
 
-## Where wheel prediction matters: the cards you'd want back (`notebooks/wheelnet.ipynb` §8)
+## Where wheel prediction matters: the cards you'd want back (`notebooks/wheel.ipynb` §8)
 
 The useful product question is "will my *second-best* card come back?", not "will the chaff wheel?". Each passed
 card is ranked within its pack by train-set ATA (rank 1 = the best card you passed). Log-loss gain of the per-set
@@ -191,7 +191,7 @@ What we learned:
    is separating 1% from 25%: on MSH a third of rank-2 cards get < 2% (and wheel 1.1%), while the 9% it puts above
    20% wheel 26% of the time.
 
-## Does the open lane pay? (`notebooks/open_lane.ipynb`)
+## Does the open lane pay? (`notebooks/drafting.ipynb` part 2)
 
 The repo's namesake question, on all 15 sets. **Openness** of colour *j* in pack *k* is how many good cards of
 that colour reached the drafter later than they usually last: Σ over picks 1–7 of the pack's cards' colour share ×
@@ -453,7 +453,7 @@ Engineering notes:
 - LCI's game file writes card counts as `0.0`, so `games.py` now parses them as floats and casts
   to Int8.
 
-## Pick model: predicting and simulating human picks (`notebooks/picknet.ipynb`)
+## Pick model: predicting and simulating human picks (`notebooks/drafting.ipynb`)
 
 The wheel model predicts what the *other* seven drafters take. PickNet predicts the drafter's own pick: a
 softmax over exactly the cards in the pack (a conditional logit, as in DraftFM), conditioned on everything the
@@ -514,7 +514,7 @@ most popular pair: WU is 23% of real MSH drafters but 17% of PickNet bots and 11
 converge on the best archetype harder than a model that imitates one pick at a time. Sampling more sharply
 (temperature 0.7) doesn't fix it (WU 19%) and over-commits (0.828), so temperature 1 is the calibrated setting.
 
-## Deck synergy, round 2 (`notebooks/deck_synergy_v2.ipynb`)
+## Deck synergy, round 2 (`notebooks/synergy.ipynb`)
 
 `notebooks/archive/deck_synergy.ipynb` found that on MSH pair synergy didn't replicate, and that what synergy there was mostly
 learned the mana base. `scripts/deck_synergy_v2.py` runs its suggested next steps, plus two new ideas, on all 12
@@ -560,7 +560,7 @@ What we learned:
    hand-built deck features (−0.70) capture. What remains is set-specific, which is where affinity and the
    nonland FM come in.
 
-## Deck synergy, round 3 (`notebooks/deck_synergy_v3.ipynb` covers rounds 3–7)
+## Deck synergy, round 3 (`notebooks/synergy.ipynb` part 2 covers rounds 3–7)
 
 `scripts/deck_synergy_v3.py` tries to get more out of the pick model's affinity than one mean-affinity column. For
 each nonland card in a deck, its *fit* is its mean affinity to the deck's other nonland cards. Same 12 sets, games,
@@ -722,7 +722,7 @@ is now chosen on only 3 sets, so the grid brackets the optimum. From these fits:
   co-occurrence-weighted mean Q over its partners, with its best and worst partner.
 
 Caveat on synergy dependence: a card's own value and its average pair effect trade off in this model (r = −0.55 to
-−0.69 across cards), so weak cards look synergy-dependent partly by construction. `notebooks/deck_synergy_v3.ipynb`
+−0.69 across cards), so weak cards look synergy-dependent partly by construction. `notebooks/synergy.ipynb` part 2
 ranks hubs by the *spread* of their pair values across partners instead, which is much less tied to own value; it
 picks out mostly the same cards. The cards with the highest synergy dependence are payoffs that are weak on their own. They are BLB's Talents (Caretaker's
 Talent with Carrot Cake, Q = +0.36; Scavenger's Talent with Heaped Harvest), MKM's Chalk Outline with Insidious
