@@ -19,6 +19,13 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/deck_synergy.py MSH       # game-level card power + pair synergy (~1 min)
 .venv/bin/python scripts/improve_deck.py MSH       # deck-model improvements incl. LightGBM (~1 min/set)
 .venv/bin/python scripts/paper_baselines.py MSH    # the paper's order-dependent linear baseline
+.venv/bin/python scripts/train_picknet.py MSH picknet 6 batch=128   # pick model (~35 min; rating/pool ~1 min)
+.venv/bin/python scripts/simulate_draft.py MSH picknet 1000         # 8-bot tables vs real drafts (~4 min)
+.venv/bin/python scripts/card_text_embeddings.py MSH ...  # rules-text embeddings (needs sentence-transformers)
+.venv/bin/python scripts/train_picknet_multiset.py MSH 3 20000      # day-zero pick model (~45 min)
+.venv/bin/python scripts/deck_synergy_v2.py MSH    # deck features, nonland FM, draft affinity (~3-10 min/set)
+.venv/bin/python scripts/deck_multiset.py 200000   # deck transformer shared across 12 sets (~55 min)
+.venv/bin/python scripts/picknet_report.py         # markdown tables for the two sections above
 ```
 
 `scripts/download.py` fetches, converts and sanity-checks every set below (or pass set codes).
@@ -303,6 +310,104 @@ Engineering notes:
 - LCI's game file writes card counts as `0.0`, so `games.py` now parses them as floats and casts
   to Int8.
 
+## Pick model: predicting and simulating human picks (`notebooks/picknet.ipynb`)
+
+The wheel model predicts what the *other* seven drafters take. PickNet predicts the drafter's own pick: a
+softmax over exactly the cards in the pack (a conditional logit, as in DraftFM), conditioned on everything the
+drafter has seen. Same chronological split as everything else; MSH test = 10,292 drafts, 432k picks.
+
+| model | params | NLL / pick | top-1 | top-1, non-forced picks |
+|---|---|---|---|---|
+| `rating`: one number per card (a pick-order bot) | 340 | 1.324 | 0.497 | 0.459 |
+| `pool`: rating + rank-32 bilinear candidate × pool term | 26k | 0.954 | 0.644 | 0.617 |
+| `picknet_nohist`: candidates attend to each other; state = pool bag | 0.57M | 0.855 | 0.673 | 0.647 |
+| **`picknet`**: + causal transformer over the whole draft history | 1.3M | **0.826** | **0.682** | **0.658** |
+| `picknet_big`: d=192, 4 history + 3 pack layers | 3.9M | 0.815 | 0.686 | 0.662 |
+| `multiset_zeroshot`: features only (no card ids), trained on 7 other sets, never saw MSH | 1.4M | 1.411 | 0.508 | 0.470 |
+| *DraftFM, MSH zero-shot (paper; 29 training sets, 149M picks)* | 1.6M | 1.135 | 0.567 | 0.534 |
+| *statistical-drafting / puder (other sets, in-set)* | | | ~0.70–0.71 | |
+
+PickNet's history token at pick t is the bag of the pack shown, the card taken at t−1, the cards the other
+seven took from a pack that came back, the position, and the drafter's rank / skill / date. Causal
+self-attention means state t sees exactly what the drafter knew. Candidates (card embedding + copies + state)
+alternate self-attention within the pack with cross-attention to the history, then a logit per card.
+
+What we learned:
+1. **Context is worth 18 points of agreement over a pick order** (0.497 → 0.682). Most of it is the pool
+   (+15: stay in your colours), then **the pack** (+3: which cards compete with each other), then **the history**
+   (+1.0, −0.029 NLL; most in pack 3, 0.663 → 0.676). So signals do matter for predicting human picks, unlike
+   puder's +0.57% from pack contents. The gain over the rating bot is biggest in the middle of each pack.
+2. **Strong drafters are more predictable.** Agreement rises from 0.656 (Bronze) to 0.696 (Mythic), and from
+   0.66 to 0.70 across the 17Lands win-rate buckets. The rating bot barely moves (0.475 → 0.504): strong
+   players agree with each other about *context*, not about raw card quality.
+3. **Rating vs pool on 14 sets.** The bilinear pool model adds 15–22 points over a pick order on every set,
+   including the 13- and 15-card-pack sets and TLA (P1P1 missing). See `results/<SET>/picknet/`.
+4. **Day zero is much harder.** Without card ids, trained on 7 other sets (133k drafts), PickNet reaches 0.508 on
+   MSH against 0.686 on held-out drafts of its own training sets. The loss is mostly at P1P1-style picks, where
+   only card quality matters: card strength from rules text and features alone is the hard part. DraftFM gets
+   0.567 with 4× the sets and ~25× the picks.{WT_LINE}
+
+**Simulating whole tables** (`scripts/simulate_draft.py`). Eight copies of a model draft against each other from
+real opened packs (8 random test drafters' P1/P2/P3 packs, with their context), passing left-right-left, each
+bot *sampling* its pick from the softmax. 1,000 tables, scored with the same statistics as the real test drafts:
+
+| bots | ATA r | ATA MAE (picks) | per-card wheel r | wheel MAE | pack-3 picks in top-2 colours | colour-pair TV distance | P1P1 r |
+|---|---|---|---|---|---|---|---|
+| `rating` | 0.989 | 0.44 | 0.984 | 0.029 | 0.559 | 0.150 | 0.875 |
+| `pool` | 0.987 | 0.47 | 0.988 | 0.021 | 0.773 | 0.122 | 0.954 |
+| `picknet` | 0.979 | 0.53 | 0.954 | 0.050 | **0.802** | **0.066** | **0.973** |
+| real drafters | | | | | 0.815 | | |
+
+The rating bots match per-card ATA and wheel rates best: those are marginal statistics, and a per-card rating is
+fitted to exactly the marginal choices. But they don't draft like people: only 56% of their pack-3 picks are in
+their two main colours, against 81.5% for humans. PickNet bots commit like humans do (≈0.80, tracking the real
+curve through each pack) and pick P1P1 like humans (r = 0.97), at the cost of slightly worse per-card ATA:
+small errors compound when every seat is a model reacting to other models. Every kind of bot under-drafts the format's
+most popular pair: WU is 23% of real MSH drafters but 17% of PickNet bots and 11% of rating bots. Humans
+converge on the best archetype harder than a model that imitates one pick at a time.
+
+## Deck synergy, round 2 (`notebooks/deck_synergy_v2.ipynb`)
+
+`deck_synergy.ipynb` found that on MSH pair synergy didn't replicate, and that what synergy there was mostly
+learned the mana base. `scripts/deck_synergy_v2.py` runs its suggested next steps, plus two new ideas, on all 12
+sets with game data. Game-level models with the full context (play/draw, mulligans, both ranks, skill,
+experience, record before the game); test-game log loss vs the linear card-power model, ×1000, paired:
+
+| model | mean vs linear (×1000) | sets better | draft-level Spearman (mean) |
+|---|---|---|---|
+| linear (card power) | 0 | — | 0.230 |
+| + deck features (Scryfall: land count, curve shape, colours/splash, castability) | −0.70 | 12/12 | 0.249 |
+| FM, all cards + deck features | −0.87 | 12/12 | 0.252 |
+| FM, **nonland cards only** + deck features | −1.02 | 11/12 | 0.256 |
+| linear + deck features + **draft affinity (one column)** | −1.10 | 11/12 | **0.262** |
+| FM pairs as a learned map of the pick model's card vectors + deck features | −1.06 | 12/12 | 0.260 |
+| **FM nonland + deck features + draft affinity** | **−1.20** | 11/12 | 0.260 |
+| shared cross-set deck transformer on top of linear + deck features | −0.09 more | 9/12 | |
+
+What we learned:
+1. **Synergy is real once the mana base is taken out.** With deck features in the model and pair terms only
+   between nonland cards, the pair values now replicate across independent halves of the drafts on 11 of 12 sets
+   (r = 0.10–0.31, against 0.83–0.92 for card power), and none of MSH's (r = −0.01). MSH is the smallest set
+   (377k games) and the outlier on every synergy measure.
+2. **Human drafting is a free synergy prior.** The pick model's affinity S<sub>ij</sub> (how much card j in
+   your pool raises the odds you take card i) is learned from picks alone, never from a game result. Added as a
+   single column (the deck's mean pairwise affinity), it beats the whole nonland FM (−1.10 vs −1.02), and the FM's
+   learned pairs agree with it (r = 0.09–0.22 on the 11 sets where synergy replicates). Together they stack a little (−1.20).
+3. **Deck features: castability and colours.** Across sets the largest effects are coloured-source shortfall
+   (−0.065 log-odds per sd), splash (−0.04), 3+ main colours (−0.035), 16 lands beats 17 (+0.035) and a higher
+   average mana value among nonland cards (+0.04, with card power held fixed).
+4. **At the draft level** these game-level, skill-adjusted ratings close most of the gap to the draft-trained
+   LightGBM deck model (0.262 vs 0.271 mean Spearman over the same 12 sets, from 0.230 for linear). The draft-level
+   gain from affinity is larger than its game-level gain on MSH, so part of it may be that coherent builds mark
+   stronger drafters; the game-level comparison is the skill-adjusted one.
+5. **A deck transformer pooled over 12 sets learns little that per-set card power + deck features miss.** It
+   reads cards only through their features (rules-text embedding, Scryfall features), trained on 2.4M games to
+   predict what stage 1 misses: −0.09 ×1000, better on 9/12 sets, an order of magnitude smaller than the deck
+   features or affinity. Without the deck features in stage 1 (`shared_nodf`), the same network gains −0.64
+   ×1000 over plain linear on 12/12 sets: from card features alone it rediscovers about 90% of what the
+   hand-built deck features (−0.70) capture. What remains is set-specific, which is where affinity and the
+   nonland FM come in.
+
 ## Layout
 
 ```
@@ -313,10 +418,14 @@ src/openlane/games.py     17Lands game + replay data, cards cast per game
 src/openlane/deckstrength.py  deck-strength data, card values, metrics, pool transformer
 src/openlane/draftencoder.py  DraftEncoder (paper model) + deck stage
 src/openlane/synergy.py   game-level card power + pair synergy (factorization machine)
+src/openlane/cardinfo.py  Scryfall card facts (pips, mana produced, keywords, rules roles), deck features
+src/openlane/picknet.py   pick models: rating, pool-bilinear, PickNet
 src/openlane/evaluate.py  logloss / Brier / AUC / ECE
 scripts/                  build_dataset.py, train.py, train_nn.py, train_deckstrength.py,
                           train_draftencoder.py, deck_synergy.py, improve_deck.py,
-                          paper_baselines.py, lgbm_ablation.py, ensemble_de_lgbm.py
+                          paper_baselines.py, lgbm_ablation.py, ensemble_de_lgbm.py,
+                          train_picknet.py, train_picknet_multiset.py, simulate_draft.py,
+                          card_text_embeddings.py, deck_synergy_v2.py, deck_multiset.py
 results/<SET>.<EVENT>/    results.json, predictions, models (gitignored)
 ```
 
