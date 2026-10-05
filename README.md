@@ -324,6 +324,7 @@ drafter has seen. Same chronological split as everything else; MSH test = 10,292
 | **`picknet`**: + causal transformer over the whole draft history | 1.3M | **0.826** | **0.682** | **0.658** |
 | `picknet_big`: d=192, 4 history + 3 pack layers | 3.9M | 0.815 | 0.686 | 0.662 |
 | `multiset_zeroshot`: features only (no card ids), trained on 7 other sets, never saw MSH | 1.4M | 1.411 | 0.508 | 0.470 |
+| **`multiset_plus_target`**: the same features-only model, 7 other sets + MSH's training drafts | 1.4M | **0.810** | **0.686** | **0.661** |
 | *DraftFM, MSH zero-shot (paper; 29 training sets, 149M picks)* | 1.6M | 1.135 | 0.567 | 0.534 |
 | *statistical-drafting / puder (other sets, in-set)* | | | ~0.70–0.71 | |
 
@@ -345,7 +346,10 @@ What we learned:
 4. **Day zero is much harder.** Without card ids, trained on 7 other sets (133k drafts), PickNet reaches 0.508 on
    MSH against 0.686 on held-out drafts of its own training sets. The loss is mostly at P1P1-style picks, where
    only card quality matters: card strength from rules text and features alone is the hard part. DraftFM gets
-   0.567 with 4× the sets and ~25× the picks.{WT_LINE}
+   0.567 with 4× the sets and ~25× the picks. **But other sets are a strong pretraining
+   signal:** the same features-only model trained on the 7 sets *plus* MSH's own training drafts is the best pick
+   model here (NLL 0.810, top-1 0.686), better than PickNet with learned per-card ids (0.826) and matching the
+   3× bigger id model (0.815), in 3 epochs. Card features shared across sets beat memorising cards one set at a time.
 
 **Simulating whole tables** (`scripts/simulate_draft.py`). Eight copies of a model draft against each other from
 real opened packs (8 random test drafters' P1/P2/P3 packs, with their context), passing left-right-left, each
