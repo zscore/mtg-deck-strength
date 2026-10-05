@@ -116,9 +116,90 @@ train only.
 - Train across several sets (card-agnostic features plus per-set embeddings) and test on a held-out set.
 - Out-of-fold card target encoding. Also add the per-seat structure: packs pass left in P1/P3 and
   right in P2, so P2's upstream drafters are the P1/P3 downstream ones.
-- Break results down by card type: rares/bombs vs playables vs the chaff that always wheels.
-  The useful product question is "will my *second-best* card come back?"
 - A draft-overlay-style demo: given a live pack, show P(wheel) for each card.
+
+## Where wheel prediction matters: the cards you'd want back (`scripts/wheel_breakdown.py`)
+
+The useful product question is "will my *second-best* card come back?", not "will the chaff wheel?". Each passed
+card is ranked within its pack by train-set ATA (rank 1 = the best card you passed). Log-loss gain of the per-set
+WheelNet over the ALSA/ATA baseline, by rank, on the test drafts of all 14 sets with a WheelNet:
+
+| set | ALSA → WheelNet, all passed cards | best passed card (rank 1) | rank 2 | rank 3 | ECE rank 1–3, ALSA / WheelNet |
+|---|---|---|---|---|---|
+| BLB | +7.4% | +11.6% | +9.2% | +8.3% | 0.017 / 0.005 |
+| DFT | +8.0% | +13.7% | +10.6% | +10.0% | 0.019 / 0.005 |
+| DSK | +8.4% | +14.2% | +10.5% | +9.7% | 0.018 / 0.004 |
+| ECL | +8.2% | +12.8% | +9.7% | +8.9% | 0.018 / 0.003 |
+| FDN | +8.9% | +16.6% | +11.4% | +10.1% | 0.021 / 0.004 |
+| FIN | +8.3% | +14.4% | +10.5% | +9.6% | 0.025 / 0.007 |
+| LCI | +8.8% | +14.5% | +10.8% | +9.8% | 0.029 / 0.009 |
+| MKM | +6.8% | +12.8% | +9.5% | +8.2% | 0.021 / 0.004 |
+| MSH | +8.2% | +14.1% | +10.7% | +9.7% | 0.024 / 0.004 |
+| OTJ | +9.3% | +16.7% | +12.7% | +10.5% | 0.026 / 0.008 |
+| SOS | +11.5% | +14.8% | +11.8% | +11.4% | 0.021 / 0.003 |
+| TDM | +8.7% | +14.5% | +10.2% | +9.2% | 0.021 / 0.003 |
+| TLA | +8.3% | +13.4% | +10.4% | +10.3% | 0.021 / 0.002 |
+| TMT | +9.8% | +16.1% | +11.1% | +10.5% | 0.025 / 0.005 |
+
+What we learned:
+1. **The model earns most where it matters.** On every set the gain over ALSA is largest for the best passed card
+   (+12–17%, vs +7–12% over all cards) and falls with rank. The best passed cards are the ones whose fate depends on
+   the table, not the card.
+2. **ALSA is overconfident about your good cards.** It is calibrated on average but 3–6× worse calibrated on the
+   top three passed cards (ECE 0.017–0.029 vs WheelNet's 0.002–0.009). On MSH, when ALSA gives the 2nd-best passed
+   card a 30–50% chance to wheel it comes back 15% of the time; WheelNet's 30–50% bucket comes back 32% of the
+   time. ALSA is a per-card average over every pack the card appears in. Being the best card *you* pass usually means
+   the pack is thin, so there is little else to absorb the other seven picks, and the card's chance of lasting is
+   lower than its average.
+3. **"Will it wheel?" for a top-3 card is almost always "no".** WheelNet puts ≥ 50% on under 1% of them. Its value
+   is separating 1% from 25%: on MSH a third of rank-2 cards get < 2% (and wheel 1.1%), while the 9% it puts above
+   20% wheel 26% of the time.
+
+## Does the open lane pay? (`scripts/open_lane.py`)
+
+The repo's namesake question, on all 15 sets. **Openness** of colour *j* in pack *k* is how many good cards of
+that colour reached the drafter later than they usually last: Σ over picks 1–7 of the pack's cards' colour share ×
+max(0, pick − ALSA). Picks 8+ are excluded (those packs went round the whole table). It is z-scored per (pack,
+colour) within each draft week, so set-wide shifts in colour popularity cancel. The drafter's own picks never enter
+it. Main colours are the top two by playability-weighted picks. Payoff is a binomial logit on the event record
+(p^W (1−p)^L) with colour-pair fixed effects, rank and the 17Lands skill bucket; per sd of openness, averaged over
+the two main colours.
+
+| set | drafts | corr P1–P3 (same neighbour) | corr P1–P2 | follow slope (bronze → mythic) | payoff / sd, + skill | win rate, P1-openness quintile 1 → 5 | most-open P1 pair: in / not |
+|---|---|---|---|---|---|---|---|
+| BLB | 154,585 | 0.218 | 0.084 | 0.33 (0.30 → 0.36) | +0.056 ± 0.003 | 0.531 → 0.562 | 0.559 / 0.544 |
+| DFT | 141,166 | 0.246 | 0.102 | 0.37 (0.32 → 0.39) | +0.060 ± 0.003 | 0.532 → 0.566 | 0.563 / 0.548 |
+| DSK | 167,672 | 0.236 | 0.087 | 0.37 (0.36 → 0.39) | +0.057 ± 0.003 | 0.530 → 0.562 | 0.555 / 0.544 |
+| ECL | 99,289 | 0.234 | 0.114 | 0.35 (0.32 → 0.37) | +0.065 ± 0.004 | 0.527 → 0.565 | 0.562 / 0.543 |
+| EOE | 104,377 | 0.259 | 0.096 | 0.41 (0.37 → 0.44) | +0.056 ± 0.004 | 0.535 → 0.566 | 0.560 / 0.547 |
+| FDN | 130,935 | 0.238 | 0.088 | 0.37 (0.32 → 0.43) | +0.063 ± 0.003 | 0.529 → 0.565 | 0.560 / 0.544 |
+| FIN | 140,237 | 0.225 | 0.090 | 0.36 (0.31 → 0.40) | +0.059 ± 0.003 | 0.534 → 0.570 | 0.564 / 0.551 |
+| LCI | 134,970 | 0.177 | 0.062 | 0.33 (0.28 → 0.37) | +0.052 ± 0.003 | 0.541 → 0.570 | 0.566 / 0.552 |
+| MKM | 157,553 | 0.203 | 0.068 | 0.34 (0.29 → 0.38) | +0.049 ± 0.003 | 0.538 → 0.566 | 0.562 / 0.548 |
+| MSH | 68,609 | 0.234 | 0.106 | 0.36 (0.33 → 0.39) | +0.057 ± 0.005 | 0.540 → 0.573 | 0.572 / 0.554 |
+| OTJ | 195,312 | 0.179 | 0.056 | 0.33 (0.28 → 0.36) | +0.050 ± 0.003 | 0.527 → 0.556 | 0.551 / 0.540 |
+| SOS | 107,459 | 0.234 | 0.120 | 0.37 (0.32 → 0.40) | +0.057 ± 0.004 | 0.534 → 0.569 | 0.565 / 0.547 |
+| TDM | 101,323 | 0.183 | 0.065 | 0.35 (0.31 → 0.36) | +0.052 ± 0.004 | 0.533 → 0.564 | 0.559 / 0.544 |
+| TLA | 102,793 | 0.229 | 0.097 | 0.37 (0.33 → 0.39) | +0.049 ± 0.004 | 0.544 → 0.569 | 0.564 / 0.555 |
+| TMT | 32,151 | 0.236 | 0.100 | 0.35 (0.29 → 0.37) | +0.047 ± 0.007 | 0.557 → 0.585 | 0.579 / 0.561 |
+| **mean** | | 0.222 | 0.089 | 0.36 | +0.055 | +3.2 pts | |
+
+What we learned:
+1. **Signals are real and travel through your neighbour.** Packs pass left in P1 and P3 and right in P2, so P1 and
+   P3 share an upstream neighbour. A colour's P1 openness correlates 0.22 with its P3 openness and 0.09 with P2, on
+   every set. P1 tells you about P3, as the folk wisdom says.
+2. **Drafters follow signals, and better drafters follow more.** +1 sd of P1 openness raises the log-odds that a
+   colour ends up in the deck by 0.36. The slope rises with rank (bronze 0.30 → mythic 0.39, mean over sets) and with the
+   17Lands win-rate bucket (0.32 → 0.39, on every set). Still, only 17% end in the most open P1 pair (10% by chance).
+3. **Being in the open lane wins games.** +1 sd of openness in your colours is worth +0.055 log-odds per game with
+   skill controlled (±0.003–0.007 per set, 15/15 sets); bottom to top quintile is +3.2 points of game win rate
+   (e.g. MSH 54.0% → 57.3%). Drafters who ended in the most open P1 pair win 1–2 points more.
+4. **But the payoff is supply, not the read itself.** Openness in P2, which you cannot read before committing,
+   pays as much as P1 openness (+0.055 vs +0.040; P3 +0.061, all three fitted together). And holding your colours'
+   openness fixed, openness in the colours you *didn't* take has no effect (mean −0.002, negative on only 9/15
+   sets). So more good cards in your colours win games. That is what reading signals is for, but this data
+   doesn't separate the value of the decision from the luck of the seat. That needs a counterfactual, e.g. the
+   PickNet table simulator with a signal-blind seat.
 
 ## Deck strength (MSH PremierDraft)
 
