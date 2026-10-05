@@ -1,0 +1,70 @@
+{
+ "set": "TDM",
+ "column correlations": {
+  "pick affinity ~ deck PMI": 0.8379398925565106,
+  "pick affinity ~ colour overlap": 0.5838109848902172,
+  "deck PMI ~ colour overlap": 0.6181959496726548
+ },
+ "models": [
+  {
+   "model": "deck features",
+   "val logloss": 0.6594852805137634,
+   "test logloss": 0.6579114198684692,
+   "vs deck features x1000": 0.0,
+   "\u00b195% x1000": 0.0,
+   "column weights": {},
+   "draft spearman (rank)": 0.23014984600001512,
+   "draft spearman (rank + skill)": 0.3551500025084894
+  },
+  {
+   "model": "+ pick affinity",
+   "val logloss": 0.6590031981468201,
+   "test logloss": 0.6571522951126099,
+   "vs deck features x1000": -0.7591728568077087,
+   "\u00b195% x1000": 0.2823178299201924,
+   "column weights": {
+    "pick affinity": 0.16169999539852142
+   },
+   "draft spearman (rank)": 0.24937033895933977,
+   "draft spearman (rank + skill)": 0.3616410966875613
+  },
+  {
+   "model": "+ deck PMI",
+   "val logloss": 0.6592029929161072,
+   "test logloss": 0.6573562622070312,
+   "vs deck features x1000": -0.5551643371582031,
+   "\u00b195% x1000": 0.262516841172288,
+   "column weights": {
+    "deck PMI": 0.125
+   },
+   "draft spearman (rank)": 0.24579318446014883,
+   "draft spearman (rank + skill)": 0.3601610293686281
+  },
+  {
+   "model": "+ colour overlap",
+   "val logloss": 0.6592949032783508,
+   "test logloss": 0.6576108336448669,
+   "vs deck features x1000": -0.3005676567554474,
+   "\u00b195% x1000": 0.15342448844192072,
+   "column weights": {
+    "colour overlap": 0.11729999631643295
+   },
+   "draft spearman (rank)": 0.2396409904474423,
+   "draft spearman (rank + skill)": 0.3582381436429918
+  },
+  {
+   "model": "+ all three",
+   "val logloss": 0.6589927673339844,
+   "test logloss": 0.6571561098098755,
+   "vs deck features x1000": -0.7553566694259644,
+   "\u00b195% x1000": 0.2662691971231304,
+   "column weights": {
+    "pick affinity": 0.17960000038146973,
+    "deck PMI": -0.0284000001847744,
+    "colour overlap": 0.007799999788403511
+   },
+   "draft spearman (rank)": 0.24947747603675335,
+   "draft spearman (rank + skill)": 0.36153519157375147
+  }
+ ]
+}

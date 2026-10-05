@@ -1,0 +1,70 @@
+{
+ "set": "FDN",
+ "column correlations": {
+  "pick affinity ~ deck PMI": 0.7521345064725683,
+  "pick affinity ~ colour overlap": 0.7716864186464921,
+  "deck PMI ~ colour overlap": 0.765596451044284
+ },
+ "models": [
+  {
+   "model": "deck features",
+   "val logloss": 0.6610757112503052,
+   "test logloss": 0.6583539843559265,
+   "vs deck features x1000": 0.0,
+   "\u00b195% x1000": 0.0,
+   "column weights": {},
+   "draft spearman (rank)": 0.2678770850492195,
+   "draft spearman (rank + skill)": 0.3724351855864527
+  },
+  {
+   "model": "+ pick affinity",
+   "val logloss": 0.6608484387397766,
+   "test logloss": 0.6581506133079529,
+   "vs deck features x1000": -0.20331548154354095,
+   "\u00b195% x1000": 0.14593647652727632,
+   "column weights": {
+    "pick affinity": 0.1225999966263771
+   },
+   "draft spearman (rank)": 0.2726491584274413,
+   "draft spearman (rank + skill)": 0.37519249460809023
+  },
+  {
+   "model": "+ deck PMI",
+   "val logloss": 0.660935640335083,
+   "test logloss": 0.6582014560699463,
+   "vs deck features x1000": -0.1524912565946579,
+   "\u00b195% x1000": 0.13744568628412993,
+   "column weights": {
+    "deck PMI": 0.09719999879598618
+   },
+   "draft spearman (rank)": 0.27202812910482926,
+   "draft spearman (rank + skill)": 0.3745347194329269
+  },
+  {
+   "model": "+ colour overlap",
+   "val logloss": 0.6610262989997864,
+   "test logloss": 0.6583380699157715,
+   "vs deck features x1000": -0.01597122848033905,
+   "\u00b195% x1000": 0.04059877930447621,
+   "column weights": {
+    "colour overlap": 0.03759999945759773
+   },
+   "draft spearman (rank)": 0.2686079701393495,
+   "draft spearman (rank + skill)": 0.3727806302668648
+  },
+  {
+   "model": "+ all three",
+   "val logloss": 0.6608388423919678,
+   "test logloss": 0.6580541133880615,
+   "vs deck features x1000": -0.29982200264930725,
+   "\u00b195% x1000": 0.16935556773382296,
+   "column weights": {
+    "pick affinity": 0.18230000138282776,
+    "deck PMI": 0.001500000013038516,
+    "colour overlap": -0.09239999949932098
+   },
+   "draft spearman (rank)": 0.2733928114541106,
+   "draft spearman (rank + skill)": 0.37583334664220386
+  }
+ ]
+}

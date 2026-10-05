@@ -24,6 +24,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/card_text_embeddings.py MSH ...  # rules-text embeddings (needs sentence-transformers)
 .venv/bin/python scripts/train_picknet_multiset.py MSH 3 20000      # day-zero pick model (~45 min)
 .venv/bin/python scripts/deck_synergy_v2.py MSH    # deck features, nonland FM, draft affinity (~3-10 min/set)
+.venv/bin/python scripts/affinity_checks.py MSH     # draft affinity vs co-occurrence vs colour; skill check (~1 min)
 .venv/bin/python scripts/deck_multiset.py 200000   # deck transformer shared across 12 sets (~55 min)
 .venv/bin/python scripts/picknet_report.py         # markdown tables for the two sections above
 ```
@@ -368,7 +369,8 @@ their two main colours, against 81.5% for humans. PickNet bots commit like human
 curve through each pack) and pick P1P1 like humans (r = 0.97), at the cost of slightly worse per-card ATA:
 small errors compound when every seat is a model reacting to other models. Every kind of bot under-drafts the format's
 most popular pair: WU is 23% of real MSH drafters but 17% of PickNet bots and 11% of rating bots. Humans
-converge on the best archetype harder than a model that imitates one pick at a time.
+converge on the best archetype harder than a model that imitates one pick at a time. Sampling more sharply
+(temperature 0.7) doesn't fix it (WU 19%) and over-commits (0.828), so temperature 1 is the calibrated setting.
 
 ## Deck synergy, round 2 (`notebooks/deck_synergy_v2.ipynb`)
 
@@ -396,14 +398,18 @@ What we learned:
 2. **Human drafting is a free synergy prior.** The pick model's affinity S<sub>ij</sub> (how much card j in
    your pool raises the odds you take card i) is learned from picks alone, never from a game result. Added as a
    single column (the deck's mean pairwise affinity), it beats the whole nonland FM (−1.10 vs −1.02), and the FM's
-   learned pairs agree with it (r = 0.09–0.22 on the 11 sets where synergy replicates). Together they stack a little (−1.20).
+   learned pairs agree with it (r = 0.09–0.22 on the 11 sets where synergy replicates). Together they stack a little (−1.20). It is
+   not just co-occurrence or colour (`scripts/affinity_checks.py`): plain deck co-occurrence (PMI) as the same
+   single column gains less (−0.26 vs −0.40 on top of deck features), colour overlap almost nothing (−0.04), and
+   fitted together, pick affinity takes all the weight.
 3. **Deck features: castability and colours.** Across sets the largest effects are coloured-source shortfall
    (−0.065 log-odds per sd), splash (−0.04), 3+ main colours (−0.035), 16 lands beats 17 (+0.035) and a higher
    average mana value among nonland cards (+0.04, with card power held fixed).
 4. **At the draft level** these game-level, skill-adjusted ratings close most of the gap to the draft-trained
    LightGBM deck model (0.262 vs 0.271 mean Spearman over the same 12 sets, from 0.230 for linear). The draft-level
    gain from affinity is larger than its game-level gain on MSH, so part of it may be that coherent builds mark
-   stronger drafters; the game-level comparison is the skill-adjusted one.
+   stronger drafters: with the skill bucket in the draft-level calibration, affinity's gain shrinks from +0.012 to
+   +0.005 Spearman. The game-level comparison is the skill-adjusted one.
 5. **A deck transformer pooled over 12 sets learns little that per-set card power + deck features miss.** It
    reads cards only through their features (rules-text embedding, Scryfall features), trained on 2.4M games to
    predict what stage 1 misses: −0.09 ×1000, better on 9/12 sets, an order of magnitude smaller than the deck
