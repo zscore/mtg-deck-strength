@@ -1,0 +1,205 @@
+{
+ "set": "TDM",
+ "games": 552428,
+ "test games": 80333,
+ "fit scale": 1.0226295117780864,
+ "off-plan threshold": 0.6072452664375305,
+ "models": [
+  {
+   "model": "linear",
+   "val logloss": 0.6597933769226074,
+   "setting": [
+    0.0001,
+    0
+   ],
+   "fit seconds": 10.305864095687866,
+   "test logloss": 0.6582289338111877,
+   "test auc": 0.6338248405435731,
+   "vs linear": 0.0,
+   "vs linear \u00b195%": 0.0,
+   "vs v2 best": 0.0015916466945782304,
+   "vs v2 best \u00b195%": 0.00041652851831470224,
+   "draft spearman": 0.21555142199373678,
+   "draft nll": 0.6831860254447276,
+   "draft ceiling": 0.256157465165457,
+   "draft n": 14375.0
+  },
+  {
+   "model": "linear + deck features",
+   "val logloss": 0.6591177582740784,
+   "setting": [
+    0.0001,
+    0
+   ],
+   "fit seconds": 14.381234169006348,
+   "test logloss": 0.6575798988342285,
+   "test auc": 0.6356551598267416,
+   "vs linear": -0.0006490243249572814,
+   "vs linear \u00b195%": 0.0002544950877686445,
+   "vs v2 best": 0.0009426223114132881,
+   "vs v2 best \u00b195%": 0.00032722155292233464,
+   "draft spearman": 0.22989648169655277,
+   "draft nll": 0.6823354811495469,
+   "draft ceiling": 0.2666023107532595,
+   "draft n": 14375.0
+  },
+  {
+   "model": "linear + deck features + aff",
+   "val logloss": 0.6586304903030396,
+   "setting": [
+    0.0001,
+    0
+   ],
+   "fit seconds": 14.85862398147583,
+   "affinity weights (log-odds per sd)": {
+    "aff mean": 0.16050000488758087
+   },
+   "test logloss": 0.656846284866333,
+   "test auc": 0.63752959877223,
+   "vs linear": -0.0013826244976371527,
+   "vs linear \u00b195%": 0.0003815943196821471,
+   "vs v2 best": 0.00020902215328533202,
+   "vs v2 best \u00b195%": 0.00016788080480501777,
+   "draft spearman": 0.2497135189149262,
+   "draft nll": 0.6812324759593704,
+   "draft ceiling": 0.28611986522499244,
+   "draft n": 14375.0
+  },
+  {
+   "model": "fm4 nonland + deck features",
+   "val logloss": 0.6588042974472046,
+   "setting": [
+    1e-05,
+    0.001
+   ],
+   "fit seconds": 15.329230070114136,
+   "test logloss": 0.6570615768432617,
+   "test auc": 0.6372947896025485,
+   "vs linear": -0.0011673729168251157,
+   "vs linear \u00b195%": 0.0003956867696326093,
+   "vs v2 best": 0.0004242738359607756,
+   "vs v2 best \u00b195%": 0.00024655511361725544,
+   "draft spearman": 0.2489638829536613,
+   "draft nll": 0.6814623794283186,
+   "draft ceiling": 0.3008345449904965,
+   "draft n": 14375.0
+  },
+  {
+   "model": "fm4 nonland + deck features + aff",
+   "val logloss": 0.6584125757217407,
+   "setting": [
+    1e-05,
+    0.001
+   ],
+   "fit seconds": 15.333544969558716,
+   "affinity weights (log-odds per sd)": {
+    "aff mean": 0.15399999916553497
+   },
+   "test logloss": 0.6566372513771057,
+   "test auc": 0.6380145439908826,
+   "vs linear": -0.0015916466945782304,
+   "vs linear \u00b195%": 0.00041652851831470224,
+   "vs v2 best": 0.0,
+   "vs v2 best \u00b195%": 0.0,
+   "draft spearman": 0.253775961040768,
+   "draft nll": 0.6810841145266124,
+   "draft ceiling": 0.30301199175621085,
+   "draft n": 14375.0
+  },
+  {
+   "model": "linear + deck features + affinity profile",
+   "val logloss": 0.6587128639221191,
+   "setting": [
+    0.0001,
+    0
+   ],
+   "fit seconds": 13.494820833206177,
+   "affinity weights (log-odds per sd)": {
+    "aff mean": 0.18320000171661377,
+    "aff worst card": 0.003000000026077032,
+    "aff sd": 0.03099999949336052,
+    "aff off-plan cards": 0.02290000021457672
+   },
+   "test logloss": 0.6570159196853638,
+   "test auc": 0.6373029900549254,
+   "vs linear": -0.0012129818787798285,
+   "vs linear \u00b195%": 0.00040663212473256995,
+   "vs v2 best": 0.00037866469938308,
+   "vs v2 best \u00b195%": 0.00021330506549701662,
+   "draft spearman": 0.24863088818970272,
+   "draft nll": 0.6813264988100783,
+   "draft ceiling": 0.28486985985660873,
+   "draft n": 14375.0
+  },
+  {
+   "model": "linear + deck features + aff + card fit",
+   "val logloss": 0.6585267782211304,
+   "setting": [
+    0.0001,
+    0,
+    0.01
+   ],
+   "fit seconds": 12.62032699584961,
+   "affinity weights (log-odds per sd)": {
+    "aff mean": 0.16189999878406525
+   },
+   "test logloss": 0.6566362380981445,
+   "test auc": 0.638098053466586,
+   "vs linear": -0.0015926545020192862,
+   "vs linear \u00b195%": 0.0004016909071737358,
+   "vs v2 best": -1.0078039167638053e-06,
+   "vs v2 best \u00b195%": 0.00017555201936944115,
+   "draft spearman": 0.2537523836913446,
+   "draft nll": 0.6810673917752467,
+   "draft ceiling": 0.294610244410125,
+   "draft n": 14375.0
+  },
+  {
+   "model": "fm4 nonland + deck features + aff + card fit",
+   "val logloss": 0.6583809852600098,
+   "setting": [
+    1e-05,
+    0.001,
+    0.1
+   ],
+   "fit seconds": 13.82035493850708,
+   "affinity weights (log-odds per sd)": {
+    "aff mean": 0.1551000028848648
+   },
+   "test logloss": 0.6567193269729614,
+   "test auc": 0.637771877542995,
+   "vs linear": -0.0015095769194886088,
+   "vs linear \u00b195%": 0.0004289797314877583,
+   "vs v2 best": 8.206961501855403e-05,
+   "vs v2 best \u00b195%": 9.699355135433382e-05,
+   "draft spearman": 0.25247096371623223,
+   "draft nll": 0.6811921708459445,
+   "draft ceiling": 0.3033053346479111,
+   "draft n": 14375.0
+  },
+  {
+   "model": "fm4 nonland + deck features + aff, continued (control)",
+   "val logloss": 0.6584061980247498,
+   "setting": [
+    1e-05,
+    0.001,
+    0
+   ],
+   "fit seconds": 4.45277214050293,
+   "affinity weights (log-odds per sd)": {
+    "aff mean": 0.15379999577999115
+   },
+   "test logloss": 0.6567553877830505,
+   "test auc": 0.6376413353420336,
+   "vs linear": -0.0014735168078914285,
+   "vs linear \u00b195%": 0.0004170133580860241,
+   "vs v2 best": 0.00011812988668680191,
+   "vs v2 best \u00b195%": 8.710825093981692e-05,
+   "draft spearman": 0.2513863817149947,
+   "draft nll": 0.6812445473650788,
+   "draft ceiling": 0.30408180898165016,
+   "draft n": 14375.0
+  }
+ ],
+ "seconds": 128.57719683647156
+}

@@ -1,0 +1,29 @@
+DFT: 824163 games (train 582703, test 118590) [14s]
+  linear                                                     val 0.66219 (0.0001, 0) [14s]
+  linear + deck features                                     val 0.66125 (0.0001, 0) [22s]
+  linear + deck features + aff                               val 0.66059 (0.0001, 0) [23s]
+  fm4 nonland + deck features                                val 0.66073 (1e-05, 0.001) [24s]
+  fm4 nonland + deck features + aff                          val 0.66064 (1e-05, 0.001) [23s]
+  linear + deck features + affinity profile                  val 0.66059 (0.0001, 0) [23s]
+  linear + deck features + aff + card fit                    val 0.66054 (0.0001, 0, 0.1) [17s]
+  fm4 nonland + deck features + aff + card fit               val 0.66047 (1e-05, 0.001, 0.1) [22s]
+  fm4 nonland + deck features + aff, continued (control)     val 0.66044 (1e-05, 0.001, 0) [7s]
+  linear                                                     vs linear +0.00 ± 0.00  vs v2 best +1.573 ± 0.354 (x1000)
+  linear + deck features                                     vs linear -0.67 ± 0.28  vs v2 best +0.900 ± 0.251 (x1000)
+  linear + deck features + aff                               vs linear -1.35 ± 0.34  vs v2 best +0.222 ± 0.144 (x1000)
+  fm4 nonland + deck features                                vs linear -1.46 ± 0.33  vs v2 best +0.118 ± 0.156 (x1000)
+  fm4 nonland + deck features + aff                          vs linear -1.57 ± 0.35  vs v2 best +0.000 ± 0.000 (x1000)
+  linear + deck features + affinity profile                  vs linear -1.37 ± 0.35  vs v2 best +0.202 ± 0.152 (x1000)
+  linear + deck features + aff + card fit                    vs linear -1.52 ± 0.32  vs v2 best +0.055 ± 0.138 (x1000)
+  fm4 nonland + deck features + aff + card fit               vs linear -1.60 ± 0.34  vs v2 best -0.025 ± 0.096 (x1000)
+  fm4 nonland + deck features + aff, continued (control)     vs linear -1.60 ± 0.35  vs v2 best -0.029 ± 0.087 (x1000)
+  linear                                                     draft spearman 0.2161 nll 0.6840
+  linear + deck features                                     draft spearman 0.2339 nll 0.6828
+  linear + deck features + aff                               draft spearman 0.2472 nll 0.6819
+  fm4 nonland + deck features                                draft spearman 0.2509 nll 0.6818
+  fm4 nonland + deck features + aff                          draft spearman 0.2536 nll 0.6816
+  linear + deck features + affinity profile                  draft spearman 0.2473 nll 0.6819
+  linear + deck features + aff + card fit                    draft spearman 0.2512 nll 0.6818
+  fm4 nonland + deck features + aff + card fit               draft spearman 0.2541 nll 0.6816
+  fm4 nonland + deck features + aff, continued (control)     draft spearman 0.2528 nll 0.6816
+DFT done [195s]

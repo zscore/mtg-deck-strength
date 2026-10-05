@@ -26,6 +26,8 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/deck_synergy_v2.py MSH    # deck features, nonland FM, draft affinity (~3-10 min/set)
 .venv/bin/python scripts/affinity_checks.py MSH     # draft affinity vs co-occurrence vs colour; skill check (~1 min)
 .venv/bin/python scripts/deck_multiset.py 200000   # deck transformer shared across 12 sets (~55 min)
+.venv/bin/python scripts/deck_synergy_v3.py MSH    # retrained game-level models, affinity profile, card fit (~3 min/set)
+.venv/bin/python scripts/deck_synergy_v3_blend.py MSH  # blend with the draft-level LightGBM deck model (~1 min/set)
 .venv/bin/python scripts/picknet_report.py         # markdown tables for the two sections above
 .venv/bin/python scripts/train_wheelnet_multiset.py MSH 4 20000 with_target=1  # wheel model on 8 sets (~50 min)
 .venv/bin/python scripts/wheel_breakdown.py MSH     # wheel accuracy by the card's rank in the pack (~1 min)
@@ -550,6 +552,58 @@ What we learned:
    hand-built deck features (−0.70) capture. What remains is set-specific, which is where affinity and the
    nonland FM come in.
 
+## Deck synergy, round 3
+
+`scripts/deck_synergy_v3.py` tries to get more out of the pick model's affinity than one mean-affinity column. For
+each nonland card in a deck, its *fit* is its mean affinity to the deck's other nonland cards. Same 12 sets, games,
+context and paired test metric as round 2. Test-game log loss ×1000, mean over sets:
+
+| model | vs linear | vs FM + aff (sets better, significant) | draft Spearman |
+|---|---|---|---|
+| linear (card power) | 0 | +1.40 | 0.233 |
+| + deck features | −0.74 | +0.66 | 0.252 |
+| + deck features + affinity column | −1.22 | +0.18 | 0.265 |
+| FM nonland + deck features | −1.24 | +0.16 | 0.263 |
+| **FM nonland + deck features + affinity column** | **−1.40** | 0 | **0.268** |
+| linear + deck features + **affinity profile** (worst card's fit, sd of fit, off-plan cards) | −1.22 | +0.17 | 0.265 |
+| linear + deck features + aff + **card fit** (per-card synergy sensitivity) | −1.40 | −0.01 (5/12, 2) | 0.266 |
+| FM nonland + deck features + aff + card fit | −1.46 | −0.07 (10/12, 4) | 0.268 |
+| FM nonland + deck features + aff, continued training (control for card fit) | −1.43 | −0.03 (8/12, 5) | 0.267 |
+
+Draft level, blended in logit space with the draft-trained LightGBM deck model (`scripts/deck_synergy_v3_blend.py`,
+weight chosen on validation drafts; it lands at 0.35–0.55):
+
+| model | mean Spearman | mean NLL / game | better than LightGBM |
+|---|---|---|---|
+| LightGBM, deck counts + structure + rank | 0.271 | 0.68057 | — |
+| FM nonland + deck features + aff (game level, skill-adjusted) | 0.268 | 0.68079 | 2/12 |
+| **LightGBM + FM nonland + deck features + aff** | **0.278** | **0.68016** | **12/12** |
+| LightGBM + linear + deck features + aff | 0.277 | 0.68023 | 12/12 |
+
+What we learned:
+1. **Round 2's models were under-trained.** They stopped at the first validation plateau at learning rate 3e-3. A
+   warm-started continuation at a lower rate was the first thing to "help" here, and a control showed the gain was
+   all extra training. `synergy._train` now takes `lr_drops` (on a plateau, return to the best state and divide
+   the rate by 3). With two drops the nonland FM + affinity goes from −1.20 to −1.40 against linear, which is
+   retrained the same way. The ranking of the round 2 models doesn't change. `lr_drops` defaults to 0, so earlier
+   scripts still reproduce their numbers.
+2. **The mean is all of the affinity signal.** The worst card's fit, the spread of fit and the count of off-plan cards
+   add nothing once the mean is in (−1.22 either way). Fitted together, the mean takes the weight: +0.13 log-odds
+   per sd, positive on 12/12. The others average +0.01 to +0.03.
+3. **Per-card synergy sensitivity is real but tiny.** Card fit gives each card its own weight on how well it fits the
+   rest of the deck. Against the continued-training control it gains −0.04 ×1000, and it is worth more only on MKM
+   (−0.21) and OTJ (−0.08). The cards it picks out make sense. In MKM the most fit-sensitive cards are gold
+   build-arounds (Trostani, Three Whispers; Izoni, Center of the Web; Doppelgang). The least are cheap
+   investigate/disguise cards that are fine anywhere (`results/<SET>/deck_synergy_v3/card_fit.csv`). It isn't worth
+   the extra parameters as a model.
+4. **The skill-adjusted game model and LightGBM are complementary at the draft level.** Neither beats the other on its
+   own (0.268 vs 0.271), but their logit average is the best deck model so far: 0.278 mean Spearman, better than
+   LightGBM on all 12 sets. LightGBM finds build effects from draft records; the game model contributes card values
+   and synergy freed of the skill confound. Plain linear + deck features + affinity blends almost as well (0.277),
+   so the FM pairs add little here.
+5. **Dropped:** per-card play/draw offsets, a multitask model with "on the play" as the task. They overfit, losing
+   +0.3 to +0.6 ×1000 against the FM on SOS and BLB.
+
 ## Layout
 
 ```
@@ -567,7 +621,8 @@ scripts/                  build_dataset.py, train.py, train_nn.py, train_deckstr
                           train_draftencoder.py, deck_synergy.py, improve_deck.py,
                           paper_baselines.py, lgbm_ablation.py, ensemble_de_lgbm.py,
                           train_picknet.py, train_picknet_multiset.py, simulate_draft.py,
-                          card_text_embeddings.py, deck_synergy_v2.py, deck_multiset.py,
+                          card_text_embeddings.py, deck_synergy_v2.py, deck_multiset.py, deck_synergy_v3.py,
+                          deck_synergy_v3_blend.py,
                           train_wheelnet_multiset.py, wheel_breakdown.py, open_lane.py, force_vs_follow.py
 results/<SET>.<EVENT>/    results.json, predictions, models (gitignored)
 ```

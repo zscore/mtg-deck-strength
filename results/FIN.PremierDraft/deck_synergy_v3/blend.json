@@ -1,0 +1,65 @@
+{
+ "lgbm deck+structure": {
+  "spearman": 0.2827271090475459,
+  "nll": 0.6796681551559121,
+  "ceiling": 0.3029236265770134,
+  "n": 19950
+ },
+ "linear + deck features + aff": {
+  "spearman": 0.27697080860302004,
+  "nll": 0.6799640277489696,
+  "ceiling": 0.3002075134064628,
+  "n": 19950
+ },
+ "lgbm + linear + deck features + aff (weight 0.45)": {
+  "spearman": 0.28840465889599026,
+  "nll": 0.6792981416261946,
+  "ceiling": 0.2944642919837031,
+  "n": 19950,
+  "weight": 0.45
+ },
+ "lgbm + linear + deck features + aff (50/50)": {
+  "spearman": 0.2882062758120578,
+  "nll": 0.6793078737346725,
+  "ceiling": 0.29436063714662436,
+  "n": 19950
+ },
+ "fm4 nonland + deck features + aff": {
+  "spearman": 0.27888931389646304,
+  "nll": 0.6798185085809275,
+  "ceiling": 0.30653411163132976,
+  "n": 19950
+ },
+ "lgbm + fm4 nonland + deck features + aff (weight 0.50)": {
+  "spearman": 0.2889837599433529,
+  "nll": 0.6792345507839495,
+  "ceiling": 0.2984323245376939,
+  "n": 19950,
+  "weight": 0.5
+ },
+ "lgbm + fm4 nonland + deck features + aff (50/50)": {
+  "spearman": 0.2889837599433529,
+  "nll": 0.6792345507839495,
+  "ceiling": 0.2984323245376939,
+  "n": 19950
+ },
+ "fm4 nonland + deck features + aff + card fit": {
+  "spearman": 0.27887582826295687,
+  "nll": 0.6798503344627885,
+  "ceiling": 0.3093792475615584,
+  "n": 19950
+ },
+ "lgbm + fm4 nonland + deck features + aff + card fit (weight 0.50)": {
+  "spearman": 0.288857918410917,
+  "nll": 0.679235478879559,
+  "ceiling": 0.29903782907905163,
+  "n": 19950,
+  "weight": 0.5
+ },
+ "lgbm + fm4 nonland + deck features + aff + card fit (50/50)": {
+  "spearman": 0.288857918410917,
+  "nll": 0.679235478879559,
+  "ceiling": 0.29903782907905163,
+  "n": 19950
+ }
+}

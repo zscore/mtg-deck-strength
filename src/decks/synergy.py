@@ -113,14 +113,15 @@ def _task_cov(z, task):
 
 
 def fit(X, cov, y, split, k, l2_w, l2_v, task=None, l2_dw=1e-3, epochs=40, batch=4096, lr=3e-3, patience=3,
-        log=print, vmask=None):
+        log=print, vmask=None, lr_drops=0):
     """Linear (k = 0) or FM. Rows with split 0 train, 1 validate (early stopping); others are ignored.
-    `task` ([N] ints) turns on the multitask model; validation is then the mean of per-task log loss."""
+    `task` ([N] ints) turns on the multitask model; validation is then the mean of per-task log loss.
+    `lr_drops` > 0: on a plateau, go back to the best state and divide the learning rate by 3, that many times."""
     torch.manual_seed(0)
     m = DeckFM(X.shape[1], cov.shape[1], k, _n_tasks(task), vmask=vmask)
     opt = torch.optim.Adam(m.parameters(), lr=lr)
     m, best, predict = _train(m, opt, X, cov, y, split, task, lambda: m.penalty(l2_w, l2_v, l2_dw),
-                              epochs, batch, patience, "cpu")
+                              epochs, batch, patience, "cpu", lr_drops=lr_drops)
     log(f"    k={k} l2_w={l2_w:g} l2_v={l2_v:g}: val logloss {best:.5f}")
     return m, best, predict
 
@@ -148,7 +149,8 @@ def _n_tasks(task):
     return 1 if task is None else int(task.max()) + 1
 
 
-def _train(m, opt, X, cov, y, split, task, penalty, epochs, batch, patience, device, log=lambda s: None):
+def _train(m, opt, X, cov, y, split, task, penalty, epochs, batch, patience, device, log=lambda s: None,
+           lr_drops=0):
     Xt, Ct, Yt = torch.from_numpy(X), torch.from_numpy(cov), torch.from_numpy(y.astype(np.float32))
     Tt = None if task is None else torch.from_numpy(task.astype(np.int64))
     tr, va = np.flatnonzero(split == 0), np.flatnonzero(split == 1)
@@ -185,7 +187,12 @@ def _train(m, opt, X, cov, y, split, task, penalty, epochs, batch, patience, dev
         else:
             bad += 1
             if bad >= patience:
-                break
+                if lr_drops <= 0:
+                    break
+                lr_drops, bad = lr_drops - 1, 0
+                m.load_state_dict(state)
+                for group in opt.param_groups:
+                    group["lr"] /= 3
     m.load_state_dict(state)
     m.eval()
     return m, best, predict
