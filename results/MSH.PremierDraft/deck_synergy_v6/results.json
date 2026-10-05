@@ -1,0 +1,50 @@
+{
+ "set": "MSH",
+ "games": 377376,
+ "test games": 54446,
+ "pairs": 6251,
+ "models": [
+  {
+   "model": "seen, no pairs",
+   "val logloss": 0.6296747922897339,
+   "test logloss": 0.6255949139595032
+  },
+  {
+   "model": "seen, pairs k=4",
+   "val logloss": 0.6283850073814392,
+   "l2_v": 0.0003,
+   "test logloss": 0.6249095797538757,
+   "vs no pairs": -0.0006853020749986172,
+   "vs no pairs \u00b195%": 0.0004197692934872391,
+   "pair sd": 0.014124628156423569,
+   "split-half pair r": 0.3053552588808328,
+   "vs affinity r": 0.04624398316839022
+  },
+  {
+   "model": "seen, pairs k=8",
+   "val logloss": 0.6282002925872803,
+   "l2_v": 0.0003,
+   "test logloss": 0.624785840511322,
+   "vs no pairs": -0.0008090375340543687,
+   "vs no pairs \u00b195%": 0.00046766123942172,
+   "pair sd": 0.016730843111872673
+  },
+  {
+   "model": "placebo (unseen), no pairs",
+   "val logloss": 0.629603922367096,
+   "test logloss": 0.6254210472106934
+  },
+  {
+   "model": "placebo (unseen), pairs k=4",
+   "val logloss": 0.6296271681785583,
+   "l2_v": 0.001,
+   "test logloss": 0.6254395842552185,
+   "vs no pairs": 1.8516233467380516e-05,
+   "vs no pairs \u00b195%": 1.0657761929782974e-05,
+   "pair sd": 1.3544587318392587e-06,
+   "split-half pair r": -0.021304619214419618,
+   "vs affinity r": 0.00057963759038152
+  }
+ ],
+ "seconds": 157.51652908325195
+}

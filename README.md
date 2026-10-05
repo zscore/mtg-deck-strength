@@ -31,6 +31,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/deck_synergy_v4.py MSH    # pair-term variants, properly trained; cross-fitted draft scores (~4 min/set)
 .venv/bin/python scripts/deck_synergy_v4_draft.py MSH  # LightGBM with deck features / affinity, boosted from the game model
 .venv/bin/python scripts/deck_synergy_v5.py MSH    # pair synergy from cards seen together in a game (~3-5 min/set)
+.venv/bin/python scripts/deck_synergy_v6.py MSH    # seen-together synergy: held-out test and unseen-card placebo (~5 min/set)
 .venv/bin/python scripts/picknet_report.py         # markdown tables for the two sections above
 .venv/bin/python scripts/train_wheelnet_multiset.py MSH 4 20000 with_target=1  # wheel model on 8 sets (~50 min)
 .venv/bin/python scripts/wheel_breakdown.py MSH     # wheel accuracy by the card's rank in the pack (~1 min)
@@ -684,6 +685,30 @@ What we learned:
 3. **So the deck model is limited by Bo1 noise, not by its synergy estimates.** For card evaluation (which pairs
    are real), the seen FM is the one to trust. For deck strength, round 4's models stand.
 
+## Deck synergy, round 6: is seen-together synergy real?
+
+Round 5's seen-together pairs replicated well but were never scored on held-out games, and repeatability alone could
+come from deck composition. `scripts/deck_synergy_v6.py` adds both checks. The inputs are as in round 5, with a finer
+pair penalty grid; round 5's grid had collapsed to no pairs on OTJ and EOE. Each pair model is scored on test games
+against the same model without pairs (log loss ×1000, mean over 12 sets):
+
+| pair terms between | vs no pairs | sets better (significant) | split-half pair r |
+|---|---|---|---|
+| **nonland cards both seen this game, rank 4** | **−2.42** | **12/12 (12)** | 0.27–0.61 (mean 0.47) |
+| the same, rank 8 | −2.37 | 12/12 (12) | |
+| *placebo:* nonland cards in the deck but both *unseen* this game, rank 4 | −0.08 | 9/12 (6) | −0.02–0.22 (mean 0.06) |
+
+What we learned:
+1. **In-game synergy is real.** Pairs of cards seen together improve held-out prediction on every set, by −2.4 ×1000 on
+   average (−0.7 on MSH, up to −4.0 on DFT). That is 13× the deck-level FM's pair gain (−0.18) and more than the deck
+   features and affinity give together. The same pair terms on cards that sat unseen in the library gain 30× less
+   and don't replicate. So the effect comes from cards meeting on the battlefield, not from what decks they're in.
+2. **Rank 4 is enough** (rank 8: −2.37). Validation picked the lowest pair penalty on 11 of 12 sets, so a weaker
+   penalty may gain a little more. The split-half r is lower than round 5's 0.66 because the pairs are less shrunk.
+3. **Why this doesn't help deck strength (round 5):** a deck only gets a pair's effect in the games where both cards
+   show up. Averaged over the deck, that is already mostly in the deck-level FM and affinity. The seen-together pair
+   values (`results/<SET>/deck_synergy_v5/seen_pairs.csv`) are the synergy numbers to use for rating card pairs.
+
 ## Layout
 
 ```
@@ -703,7 +728,7 @@ scripts/                  build_dataset.py, train.py, train_nn.py, train_deckstr
                           train_picknet.py, train_picknet_multiset.py, simulate_draft.py,
                           card_text_embeddings.py, deck_synergy_v2.py, deck_multiset.py, deck_synergy_v3.py,
                           deck_synergy_v3_blend.py, deck_synergy_v4.py, deck_synergy_v4_draft.py,
-                          deck_synergy_v5.py,
+                          deck_synergy_v5.py, deck_synergy_v6.py,
                           train_wheelnet_multiset.py, wheel_breakdown.py, open_lane.py, force_vs_follow.py
 results/<SET>.<EVENT>/    results.json, predictions, models (gitignored)
 ```
