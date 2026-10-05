@@ -1,0 +1,15 @@
+TDM: 552428 games (train 389670, test 80333), 17 deck features, pick affinity yes  [13s]
+  linear                                        val 0.66016 {'l2w': 0.0001} [9s]
+  linear + deck features                        val 0.65949 {'l2w': 0.0001} [8s]
+  fm4 nonland + deck features                   val 0.65910 {'l2v': 0.001} [12s]
+  fm4 all cards + deck features                 val 0.65921 {'l2v': 0.001} [13s]
+  linear + deck features + draft affinity       val 0.65900 {'l2w': 0.0001} [8s]
+  affinity pairs (k=8) + deck features          val 0.65947 {'l2v': 0.0001} [11s]
+  linear                                        test 0.65857 auc 0.6330 vs linear +0.00 ± 0.00 (x1000)
+  linear + deck features                        test 0.65791 auc 0.6348 vs linear -0.66 ± 0.26 (x1000)
+  fm4 nonland + deck features                   test 0.65777 auc 0.6356 vs linear -0.80 ± 0.39 (x1000)
+  fm4 all cards + deck features                 test 0.65797 auc 0.6352 vs linear -0.61 ± 0.42 (x1000)
+  linear + deck features + draft affinity       test 0.65715 auc 0.6368 vs linear -1.42 ± 0.38 (x1000)
+  affinity pairs (k=8) + deck features          test 0.65783 auc 0.6359 vs linear -0.74 ± 0.47 (x1000)
+  split-half: {'l2_v': 0.001, 'pairs': 10275, 'pair r': 0.19415410814160777, 'power r': 0.867896142620012, 'pair vs draft affinity r': 0.21592206463254673, 'top50 overlap': 5}
+TDM done [291s]

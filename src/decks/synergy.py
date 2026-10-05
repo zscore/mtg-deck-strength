@@ -15,12 +15,21 @@ from sklearn.metrics import log_loss
 
 
 class DeckFM(nn.Module):
-    def __init__(self, n_cards: int, n_cov: int, k: int, n_tasks: int = 1):
+    """`vmask` ([C] 0/1) limits the pair terms to some cards (e.g. nonland cards only, so synergy can't
+    be the mana base); masked cards keep their power w."""
+
+    def __init__(self, n_cards: int, n_cov: int, k: int, n_tasks: int = 1, vmask=None):
         super().__init__()
         self.w = nn.Parameter(torch.zeros(n_cards))
         self.dw = nn.Parameter(torch.zeros(n_tasks, n_cards)) if n_tasks > 1 else None
-        self.v = nn.Parameter(0.01 * torch.randn(n_cards, k)) if k else None
+        self.v_ = nn.Parameter(0.01 * torch.randn(n_cards, k)) if k else None
+        vm = torch.ones(n_cards) if vmask is None else torch.as_tensor(vmask, dtype=torch.float32)
+        self.register_buffer("vmask", vm[:, None])
         self.cov = nn.Linear(n_cov, n_tasks)
+
+    @property
+    def v(self):
+        return None if self.v_ is None else self.v_ * self.vmask
 
     def deck_score(self, x, task=None):
         s = x @ self.w
@@ -104,11 +113,11 @@ def _task_cov(z, task):
 
 
 def fit(X, cov, y, split, k, l2_w, l2_v, task=None, l2_dw=1e-3, epochs=40, batch=4096, lr=3e-3, patience=3,
-        log=print):
+        log=print, vmask=None):
     """Linear (k = 0) or FM. Rows with split 0 train, 1 validate (early stopping); others are ignored.
     `task` ([N] ints) turns on the multitask model; validation is then the mean of per-task log loss."""
     torch.manual_seed(0)
-    m = DeckFM(X.shape[1], cov.shape[1], k, _n_tasks(task))
+    m = DeckFM(X.shape[1], cov.shape[1], k, _n_tasks(task), vmask=vmask)
     opt = torch.optim.Adam(m.parameters(), lr=lr)
     m, best, predict = _train(m, opt, X, cov, y, split, task, lambda: m.penalty(l2_w, l2_v, l2_dw),
                               epochs, batch, patience, "cpu")
@@ -116,13 +125,14 @@ def fit(X, cov, y, split, k, l2_w, l2_v, task=None, l2_dw=1e-3, epochs=40, batch
     return m, best, predict
 
 
-def fit_transformer(X, cov, y, split, meta, task=None, d=64, layers=2, dropout=0.1, l2_w=1e-5, l2_dw=1e-3,
+def fit_transformer(X, cov, y, split, meta, task=None, d=64, layers=2, heads=4, dropout=0.1, l2_w=1e-5, l2_dw=1e-3,
                     weight_decay=0.01, epochs=30, batch=512, lr=1e-3, patience=3, device=None, log=print):
     """DeckTransformer with the same interface as `fit`. AdamW decays the attention weights; the card
     power terms get the same explicit L2 as the linear model."""
     torch.manual_seed(0)
     device = device or ("mps" if torch.backends.mps.is_available() else "cpu")
-    m = DeckTransformer(X.shape[1], cov.shape[1], meta, _n_tasks(task), d=d, layers=layers, dropout=dropout)
+    m = DeckTransformer(X.shape[1], cov.shape[1], meta, _n_tasks(task), d=d, heads=heads, layers=layers,
+                        dropout=dropout)
     m.to(device)
     linear = [m.w] + ([m.dw] if m.dw is not None else [])
     rest = [p for p in m.parameters() if all(p is not q for q in linear)]

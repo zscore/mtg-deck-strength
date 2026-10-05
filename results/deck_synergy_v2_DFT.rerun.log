@@ -1,0 +1,23 @@
+DFT: 824163 games (train 582703, test 118590), 17 deck features, pick affinity yes  [16s]
+  linear                                        val 0.66252 {'l2w': 0.0001} [10s]
+  linear + deck features                        val 0.66169 {'l2w': 0.0001} [10s]
+  fm4 nonland + deck features                   val 0.66133 {'l2v': 0.001} [16s]
+  fm4 all cards + deck features                 val 0.66133 {'l2v': 0.001} [15s]
+  linear + deck features + draft affinity       val 0.66105 {'l2w': 0.0001} [10s]
+  fm4 nonland + deck features + draft affinity  val 0.66106 {'l2v': 0.001} [15s]
+  affinity pairs (k=8) + deck features          val 0.66098 {'l2v': 0.001} [15s]
+  linear                                        test 0.66065 auc 0.6324 vs linear +0.00 ± 0.00 (x1000)
+  linear + deck features                        test 0.65965 auc 0.6349 vs linear -1.00 ± 0.36 (x1000)
+  fm4 nonland + deck features                   test 0.65922 auc 0.6358 vs linear -1.43 ± 0.41 (x1000)
+  fm4 all cards + deck features                 test 0.65971 auc 0.6349 vs linear -0.94 ± 0.33 (x1000)
+  linear + deck features + draft affinity       test 0.65939 auc 0.6356 vs linear -1.25 ± 0.34 (x1000)
+  fm4 nonland + deck features + draft affinity  test 0.65939 auc 0.6356 vs linear -1.26 ± 0.34 (x1000)
+  affinity pairs (k=8) + deck features          test 0.65967 auc 0.6358 vs linear -0.98 ± 0.43 (x1000)
+  linear                                        draft spearman 0.2005 nll 0.6847
+  linear + deck features                        draft spearman 0.2318 nll 0.6831
+  fm4 nonland + deck features                   draft spearman 0.2407 nll 0.6825
+  fm4 all cards + deck features                 draft spearman 0.2281 nll 0.6831
+  linear + deck features + draft affinity       draft spearman 0.2343 nll 0.6826
+  fm4 nonland + deck features + draft affinity  draft spearman 0.2347 nll 0.6826
+  affinity pairs (k=8) + deck features          draft spearman 0.2446 nll 0.6823
+DFT done [113s]

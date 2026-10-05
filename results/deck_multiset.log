@@ -1,0 +1,35 @@
+  MSH: 339 cards, train 200000 val 40000 test 54446, stage-1 val 0.66015 [12s]
+  BLB: 276 cards, train 200000 val 40000 test 129524, stage-1 val 0.65892 [30s]
+  DFT: 286 cards, train 200000 val 40000 test 118590, stage-1 val 0.66169 [48s]
+  DSK: 286 cards, train 200000 val 40000 test 140215, stage-1 val 0.66258 [69s]
+  FDN: 286 cards, train 200000 val 40000 test 112919, stage-1 val 0.66108 [85s]
+  FIN: 363 cards, train 200000 val 40000 test 110879, stage-1 val 0.65662 [104s]
+  LCI: 291 cards, train 200000 val 40000 test 116121, stage-1 val 0.65636 [122s]
+  MKM: 326 cards, train 200000 val 40000 test 133037, stage-1 val 0.66009 [144s]
+  OTJ: 381 cards, train 200000 val 40000 test 164444, stage-1 val 0.66313 [174s]
+  EOE: 321 cards, train 200000 val 40000 test 80574, stage-1 val 0.65923 [187s]
+  SOS: 346 cards, train 200000 val 40000 test 85495, stage-1 val 0.65720 [203s]
+  TDM: 286 cards, train 200000 val 40000 test 80333, stage-1 val 0.65949 [216s]
+shared_df: 2400000 train games over 12 sets, params 169,497 cfg={} deck_feats=1 [216s]
+  stage-1 val (mean over sets) 0.66002; start 0.66002
+  epoch 0: val 0.66006 (+0.00004 vs stage 1) [341s]
+  epoch 1: val 0.66025 (+0.00023 vs stage 1) [349s]
+  epoch 2: val 0.66001 (-0.00001 vs stage 1) [349s]
+  epoch 3: val 0.66010 (+0.00008 vs stage 1) [352s]
+  epoch 4: val 0.66018 (+0.00016 vs stage 1) [351s]
+  epoch 5: val 0.66008 (+0.00006 vs stage 1) [355s]
+  epoch 6: val 0.66010 (+0.00008 vs stage 1) [359s]
+  epoch 7: val 0.66012 (+0.00010 vs stage 1) [354s]
+  MSH: stage1 0.65519 shared 0.65524 diff +0.05 ± 0.04 (x1000)
+  BLB: stage1 0.65721 shared 0.65711 diff -0.10 ± 0.09 (x1000)
+  DFT: stage1 0.65965 shared 0.65953 diff -0.12 ± 0.06 (x1000)
+  DSK: stage1 0.66228 shared 0.66239 diff +0.11 ± 0.08 (x1000)
+  FDN: stage1 0.65835 shared 0.65827 diff -0.08 ± 0.12 (x1000)
+  FIN: stage1 0.65885 shared 0.65873 diff -0.11 ± 0.08 (x1000)
+  LCI: stage1 0.65667 shared 0.65596 diff -0.71 ± 0.14 (x1000)
+  MKM: stage1 0.66130 shared 0.66129 diff -0.01 ± 0.04 (x1000)
+  OTJ: stage1 0.66376 shared 0.66398 diff +0.22 ± 0.09 (x1000)
+  EOE: stage1 0.65911 shared 0.65890 diff -0.21 ± 0.14 (x1000)
+  SOS: stage1 0.65940 shared 0.65931 diff -0.09 ± 0.04 (x1000)
+  TDM: stage1 0.65791 shared 0.65785 diff -0.06 ± 0.08 (x1000)
+shared_df: mean diff -0.093 x1000, better on 9/12 [3083s]

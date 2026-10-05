@@ -1,0 +1,148 @@
+{
+ "set": "OTJ",
+ "games": 1132415,
+ "test games": 164444,
+ "models": [
+  {
+   "model": "linear",
+   "val logloss": 0.6641444563865662,
+   "setting": {
+    "l2w": 1e-05
+   },
+   "fit seconds": 16.99099111557007,
+   "test logloss": 0.6647840142250061,
+   "test auc": 0.6251395272479559,
+   "vs linear": 0.0,
+   "vs linear \u00b195%": 0.0,
+   "draft spearman": 0.20707160720757845,
+   "draft nll": 0.6852694807304767,
+   "draft ceiling": 0.24358007826999853,
+   "draft n": 27615.0
+  },
+  {
+   "model": "linear + deck features",
+   "val logloss": 0.6631059646606445,
+   "setting": {
+    "l2w": 1e-05
+   },
+   "fit seconds": 12.304529190063477,
+   "deck feature weights (per sd)": {
+    "lands_le15": 0.007300000172108412,
+    "lands_16": 0.032499998807907104,
+    "lands_18": -0.014600000344216824,
+    "lands_ge19": 0.005400000140070915,
+    "n_colours_1": 0.0032999999821186066,
+    "n_colours_3plus": -0.05000000074505806,
+    "splash": -0.027699999511241913,
+    "curve_sq": -0.012900000438094139,
+    "mv_mean": 0.06509999930858612,
+    "mv_mean_sq": 0.010700000450015068,
+    "creatures_sq": -0.018400000408291817,
+    "removal_sq": 9.999999747378752e-05,
+    "two_drops_short": -0.0008999999845400453,
+    "source_shortfall": -0.07490000128746033,
+    "worst_colour_gap": -0.01119999960064888,
+    "pip_source_mismatch": 0.002300000051036477,
+    "unused_sources": 0.008200000040233135
+   },
+   "test logloss": 0.6637915968894958,
+   "test auc": 0.6276829316748158,
+   "vs linear": -0.0009923679754137993,
+   "vs linear \u00b195%": 0.00030210808128719674,
+   "draft spearman": 0.238564750697715,
+   "draft nll": 0.6837360835073576,
+   "draft ceiling": 0.2639365390963657,
+   "draft n": 27615.0
+  },
+  {
+   "model": "fm4 nonland + deck features",
+   "val logloss": 0.6629130840301514,
+   "setting": {
+    "l2v": 0.001
+   },
+   "fit seconds": 21.88441014289856,
+   "test logloss": 0.6636254191398621,
+   "test auc": 0.6281232573627533,
+   "vs linear": -0.0011585995089262724,
+   "vs linear \u00b195%": 0.00031549683035671683,
+   "draft spearman": 0.23995526352192278,
+   "draft nll": 0.683627062453396,
+   "draft ceiling": 0.2674296806539002,
+   "draft n": 27615.0
+  },
+  {
+   "model": "fm4 all cards + deck features",
+   "val logloss": 0.6628429889678955,
+   "setting": {
+    "l2v": 0.001
+   },
+   "fit seconds": 26.58215594291687,
+   "test logloss": 0.6637360453605652,
+   "test auc": 0.6281214112070737,
+   "vs linear": -0.0010479670017957687,
+   "vs linear \u00b195%": 0.000321139559446653,
+   "draft spearman": 0.24106466148693692,
+   "draft nll": 0.6835307578518284,
+   "draft ceiling": 0.27125404389370933,
+   "draft n": 27615.0
+  },
+  {
+   "model": "linear + deck features + draft affinity",
+   "val logloss": 0.6626931428909302,
+   "setting": {
+    "l2w": 1e-05
+   },
+   "fit seconds": 16.179313898086548,
+   "affinity weight (log-odds per sd)": 0.12243030220270157,
+   "test logloss": 0.663546085357666,
+   "test auc": 0.6284255352605908,
+   "vs linear": -0.001237912685610354,
+   "vs linear \u00b195%": 0.0003222403987151885,
+   "draft spearman": 0.2460419023467955,
+   "draft nll": 0.6833616868074084,
+   "draft ceiling": 0.27200226296009183,
+   "draft n": 27615.0
+  },
+  {
+   "model": "fm4 nonland + deck features + draft affinity",
+   "val logloss": 0.6626389026641846,
+   "setting": {
+    "l2v": 0.001
+   },
+   "fit seconds": 26.9107928276062,
+   "test logloss": 0.6634919047355652,
+   "test auc": 0.6285637936020158,
+   "vs linear": -0.0012920582666993141,
+   "vs linear \u00b195%": 0.0003233604194410367,
+   "draft spearman": 0.24597662162843764,
+   "draft nll": 0.6833566479227624,
+   "draft ceiling": 0.27303143714521727,
+   "draft n": 27615.0
+  },
+  {
+   "model": "affinity pairs (k=8) + deck features",
+   "val logloss": 0.6628607511520386,
+   "setting": {
+    "l2v": 0.001
+   },
+   "fit seconds": 46.18148493766785,
+   "test logloss": 0.6634948253631592,
+   "test auc": 0.6283225528964407,
+   "vs linear": -0.0012891868827864528,
+   "vs linear \u00b195%": 0.00030435859537363295,
+   "draft spearman": 0.24708295881103942,
+   "draft nll": 0.6832699254559278,
+   "draft ceiling": 0.26746642408171295,
+   "draft n": 27615.0
+  }
+ ],
+ "split_half": {
+  "l2_v": 0.001,
+  "pairs": 17269,
+  "pair r": 0.22721431215560972,
+  "power r": 0.853681678825014,
+  "pair vs draft affinity r": 0.1361197111736132,
+  "top50 overlap": 1
+ },
+ "seconds": 327.74402379989624
+}
