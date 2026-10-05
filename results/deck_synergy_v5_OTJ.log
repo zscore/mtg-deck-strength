@@ -1,0 +1,20 @@
+OTJ: 1132415 games (train 799767, test 164444), mean cards seen 12.3 [48s]
+  seen FM val 0.63012 l2_v=0.01 [101s]
+  linear + deck features + aff                  val 0.66236 (1e-05, 0) [20s]
+  fm4 nonland + deck features + aff             val 0.66224 (1e-05, 0.001) [35s]
+  linear + deck features + aff + seen Q         val 0.66236 (1e-05, 0) [19s]
+  fm4 nonland + deck features + aff + seen Q    val 0.66224 (1e-05, 0.001) [34s]
+  linear + deck features + aff                  vs ref +0.000 ± 0.000 (x1000)  draft spearman 0.2505
+  fm4 nonland + deck features + aff             vs ref -0.118 ± 0.054 (x1000)  draft spearman 0.2524
+  linear + deck features + aff + seen Q         vs ref +0.000 ± 0.000 (x1000)  draft spearman 0.2505
+  fm4 nonland + deck features + aff + seen Q    vs ref -0.119 ± 0.055 (x1000)  draft spearman 0.2525
+/Users/zblanton/Documents/repos/mtg-open-lane/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Users/zblanton/Documents/repos/mtg-open-lane/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+/Users/zblanton/Documents/repos/mtg-open-lane/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Users/zblanton/Documents/repos/mtg-open-lane/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  replication: {'pairs': 17269, 'seen pair r': nan, 'seen vs affinity r': nan, 'deck pair r': 0.2171589663574013, 'deck vs affinity r': 0.10138748639623071, 'seen vs deck pairs r (full fits)': nan}
+OTJ done [279s]

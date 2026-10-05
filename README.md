@@ -30,6 +30,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/deck_synergy_v3_blend.py MSH  # blend with the draft-level LightGBM deck model (~1 min/set)
 .venv/bin/python scripts/deck_synergy_v4.py MSH    # pair-term variants, properly trained; cross-fitted draft scores (~4 min/set)
 .venv/bin/python scripts/deck_synergy_v4_draft.py MSH  # LightGBM with deck features / affinity, boosted from the game model
+.venv/bin/python scripts/deck_synergy_v5.py MSH    # pair synergy from cards seen together in a game (~3-5 min/set)
 .venv/bin/python scripts/picknet_report.py         # markdown tables for the two sections above
 .venv/bin/python scripts/train_wheelnet_multiset.py MSH 4 20000 with_target=1  # wheel model on 8 sets (~50 min)
 .venv/bin/python scripts/wheel_breakdown.py MSH     # wheel accuracy by the card's rank in the pack (~1 min)
@@ -650,6 +651,39 @@ What we learned:
    Spearman by 0.001 or less. Further gains need new information: what the opponent cast (replay data), which cards
    actually got drawn, or pooling synergy across sets through card features.
 
+## Deck synergy, round 5: synergy from cards seen together
+
+A deck-level FM only knows that two cards shared a deck, and in most games at most one of them shows up.
+`scripts/deck_synergy_v5.py` fits the pair terms on the nonland cards each game actually *saw* (opening hand or
+drawn): a "seen FM" with deck power, seen-card power, game-length buckets, and the number of lands and of spells seen
+(so the low-rank pair term can't just count spells drawn, i.e. flood / screw). It uses in-game information, so it
+only *estimates* pair values Q. Those become one deck-level column (the deck's mean pairwise Q), like the affinity
+column, and the deck-only models are scored as before.
+
+| | mean over sets |
+|---|---|
+| split-half pair r, **seen FM** (nonland pairs in ≥ 2,000 training decks; the 10 sets where it fits pairs) | **0.66** (0.44–0.76) |
+| split-half pair r, deck FM, same pairs | 0.13 |
+| seen pairs vs deck pairs, r | 0.24 |
+| deck level: linear + deck features + aff **+ seen Q**, vs without (×1000) | −0.03 (10/12 better, 2 significant) |
+| deck level: FM nonland + deck features + aff + seen Q, vs without | +0.01 |
+
+On OTJ and EOE validation picked the strong pair penalty and the seen FM learned almost no pairs.
+
+What we learned:
+1. **In-game synergy is measurable and very repeatable.** Pair values from cards seen together replicate at r ≈ 0.66
+   between independent halves of the drafts, against 0.13 for the deck FM. The top pairs are payoff × enabler hubs:
+   SOS's Potioner's Trove with instants and sorceries (Divergent Equation, Wisdom of Ages, Zealous Lorecaster), BLB's
+   Heaped Harvest with Food makers (Cache Grab, Wick's Patrol), and MKM's Topiary Panther with green commons. They are
+   mostly *not* what the pick model's affinity finds (r ≈ 0.07): drafters group cards by archetype, while these pairs
+   are about what happens in the same game. See `results/<SET>/deck_synergy_v5/seen_pairs.csv`.
+2. **It barely moves deck-level prediction.** The seen-Q column has a positive weight on all 12 sets, but gains only
+   −0.03 ×1000, and nothing once the nonland FM is in. A pair only matters in the ~10% of games where both cards
+   show up, and its deck-level average is already mostly captured by the FM and the affinity column. Good synergy
+   estimates don't make better deck predictions here.
+3. **So the deck model is limited by Bo1 noise, not by its synergy estimates.** For card evaluation (which pairs
+   are real), the seen FM is the one to trust. For deck strength, round 4's models stand.
+
 ## Layout
 
 ```
@@ -669,6 +703,7 @@ scripts/                  build_dataset.py, train.py, train_nn.py, train_deckstr
                           train_picknet.py, train_picknet_multiset.py, simulate_draft.py,
                           card_text_embeddings.py, deck_synergy_v2.py, deck_multiset.py, deck_synergy_v3.py,
                           deck_synergy_v3_blend.py, deck_synergy_v4.py, deck_synergy_v4_draft.py,
+                          deck_synergy_v5.py,
                           train_wheelnet_multiset.py, wheel_breakdown.py, open_lane.py, force_vs_follow.py
 results/<SET>.<EVENT>/    results.json, predictions, models (gitignored)
 ```

@@ -1,0 +1,12 @@
+EOE: 563418 games (train 398343, test 80574), mean cards seen 11.6 [16s]
+  seen FM val 0.63086 l2_v=0.01 [47s]
+  linear + deck features + aff                  val 0.65843 (0.0001, 0) [13s]
+  fm4 nonland + deck features + aff             val 0.65823 (1e-05, 0.001) [22s]
+  linear + deck features + aff + seen Q         val 0.65843 (0.0001, 0) [12s]
+  fm4 nonland + deck features + aff + seen Q    val 0.65822 (1e-05, 0.001) [20s]
+  linear + deck features + aff                  vs ref +0.000 ± 0.000 (x1000)  draft spearman 0.2398
+  fm4 nonland + deck features + aff             vs ref -0.173 ± 0.139 (x1000)  draft spearman 0.2446
+  linear + deck features + aff + seen Q         vs ref -0.001 ± 0.001 (x1000)  draft spearman 0.2397
+  fm4 nonland + deck features + aff + seen Q    vs ref -0.170 ± 0.140 (x1000)  draft spearman 0.2446
+  replication: {'pairs': 9589, 'seen pair r': 0.037509352896250306, 'seen vs affinity r': 0.0009737467892746775, 'deck pair r': 0.05276040146457766, 'deck vs affinity r': 0.04098721041126463, 'seen vs deck pairs r (full fits)': -0.008483326736679364}
+EOE done [143s]

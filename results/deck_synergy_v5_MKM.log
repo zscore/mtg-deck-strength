@@ -1,0 +1,12 @@
+MKM: 919942 games (train 649467, test 133037), mean cards seen 11.6 [35s]
+  seen FM val 0.63668 l2_v=0.001 [76s]
+  linear + deck features + aff                  val 0.65884 (0.0001, 0) [13s]
+  fm4 nonland + deck features + aff             val 0.65859 (1e-05, 0.001) [23s]
+  linear + deck features + aff + seen Q         val 0.65875 (0.0001, 0) [12s]
+  fm4 nonland + deck features + aff + seen Q    val 0.65861 (1e-05, 0.001) [22s]
+  linear + deck features + aff                  vs ref +0.000 ± 0.000 (x1000)  draft spearman 0.2497
+  fm4 nonland + deck features + aff             vs ref -0.186 ± 0.081 (x1000)  draft spearman 0.2544
+  linear + deck features + aff + seen Q         vs ref -0.033 ± 0.074 (x1000)  draft spearman 0.2516
+  fm4 nonland + deck features + aff + seen Q    vs ref -0.141 ± 0.091 (x1000)  draft spearman 0.2535
+  replication: {'pairs': 12712, 'seen pair r': 0.7581915011748086, 'seen vs affinity r': 0.08129340199438571, 'deck pair r': 0.14245985924180732, 'deck vs affinity r': 0.09723095148192706, 'seen vs deck pairs r (full fits)': 0.3103825054176839}
+MKM done [192s]

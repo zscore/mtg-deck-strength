@@ -1,0 +1,86 @@
+{
+ "set": "LCI",
+ "games": 793671,
+ "test games": 116121,
+ "seen FM val logloss": 0.6269784569740295,
+ "seen FM l2_v": 0.001,
+ "models": [
+  {
+   "model": "linear + deck features + aff",
+   "val logloss": 0.6556369066238403,
+   "setting": [
+    0.0001,
+    0
+   ],
+   "test logloss": 0.655715823173523,
+   "test auc": 0.6416808585886657,
+   "vs ref": 0.0,
+   "vs ref \u00b195%": 0.0,
+   "draft spearman": 0.28814721039655405,
+   "draft nll": 0.6780738324859957,
+   "draft ceiling": 0.3138008647615733,
+   "draft n": 19069.0
+  },
+  {
+   "model": "fm4 nonland + deck features + aff",
+   "val logloss": 0.6554681658744812,
+   "setting": [
+    1e-05,
+    0.001
+   ],
+   "test logloss": 0.6553115248680115,
+   "test auc": 0.6422518921326829,
+   "vs ref": -0.00040428308420814574,
+   "vs ref \u00b195%": 0.00011558341855399782,
+   "draft spearman": 0.2913074905302784,
+   "draft nll": 0.677849447268135,
+   "draft ceiling": 0.3184508791991069,
+   "draft n": 19069.0
+  },
+  {
+   "model": "linear + deck features + aff + seen Q",
+   "val logloss": 0.6556177139282227,
+   "setting": [
+    0.0001,
+    0
+   ],
+   "seen Q weight (log-odds per sd)": 0.05304567515850067,
+   "aff weight (log-odds per sd)": 0.14550460875034332,
+   "test logloss": 0.6556934714317322,
+   "test auc": 0.6416829753813074,
+   "vs ref": -2.2376161723514087e-05,
+   "vs ref \u00b195%": 5.8738885310055584e-05,
+   "draft spearman": 0.2885119224665596,
+   "draft nll": 0.678039617969286,
+   "draft ceiling": 0.3123165304395088,
+   "draft n": 19069.0
+  },
+  {
+   "model": "fm4 nonland + deck features + aff + seen Q",
+   "val logloss": 0.6554698944091797,
+   "setting": [
+    1e-05,
+    0.001
+   ],
+   "seen Q weight (log-odds per sd)": 0.056403934955596924,
+   "aff weight (log-odds per sd)": 0.13026897609233856,
+   "test logloss": 0.6553109288215637,
+   "test auc": 0.6422479929436293,
+   "vs ref": -0.0004049122508149594,
+   "vs ref \u00b195%": 0.00012555858154922518,
+   "draft spearman": 0.2914895573712107,
+   "draft nll": 0.6778595396389774,
+   "draft ceiling": 0.31945926231265964,
+   "draft n": 19069.0
+  }
+ ],
+ "replication": {
+  "pairs": 11352,
+  "seen pair r": 0.691776510533051,
+  "seen vs affinity r": 0.0011853027361516176,
+  "deck pair r": 0.14046378971797846,
+  "deck vs affinity r": 0.07084476602120438,
+  "seen vs deck pairs r (full fits)": 0.2671199017642077
+ },
+ "seconds": 160.2263469696045
+}
