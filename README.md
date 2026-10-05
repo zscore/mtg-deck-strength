@@ -280,8 +280,8 @@ Card values come from three sources, all fit on training games only:
 | model | Spearman | NLL / game |
 |---|---|---|
 | rank only | 0.057 | 0.6871 |
-| top-23 pool cards, mean GP WR | 0.166 | 0.6850 |
-| top-23 pool cards, mean GIH WR (paper's heuristic) | 0.213 | 0.6834 |
+| top-23 pool cards, mean GP WR (the paper's heuristic: in-deck WR) | 0.166 | 0.6850 |
+| top-23 pool cards, mean GIH WR | 0.213 | 0.6834 |
 | top-23 pool cards, mean `cast_bt` (t=8, best cutoff) | 0.142 | 0.6856 |
 | actual deck, mean `cast_bt` (t=30) | 0.151 | 0.6853 |
 | **linear bag-of-pool** (binomial logistic regression) | **0.244** | **0.6816** |

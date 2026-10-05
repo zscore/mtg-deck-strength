@@ -62,7 +62,7 @@ def load_drafts(set_code: str, event: str = "PremierDraft", frac=(0.70, 0.85)) -
     cols = lf.collect_schema().names()
     names = [c[len("pack_card_"):] for c in cols if c.startswith("pack_card_")]
     n = lf.group_by("draft_id").len()
-    full = n.filter(pl.col("len") == pl.col("len").max())
+    full = n.filter(pl.col("len") == pl.col("len").mode().first())  # max would let a few malformed drafts win (WOE)
     last = (lf.join(full, on="draft_id")
             .filter((pl.col("pack_number") == pl.col("pack_number").max())
                     & (pl.col("pick_number") == pl.col("pick_number").max()))

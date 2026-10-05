@@ -39,30 +39,37 @@ SIZES = {
 
 # ---------------------------------------------------------------- data
 
-def pack_tokens(set_code: str, event: str, draft_ids: np.ndarray, chunk: int = 4096):
-    """Card indices of every pack seen ([D, T, P], padded with C) and the pick's slot ([D, T])."""
+def pack_tokens(set_code: str, event: str, draft_ids: np.ndarray, chunk: int = 4096, strict: bool = True):
+    """Card indices of every pack seen ([D, T, P], padded with C) and the pick's slot ([D, T]).
+
+    strict=False also returns a [D] mask of drafts whose every pick is in its pack (a few files
+    have drafts where it isn't) instead of asserting."""
     t = load_tensors(set_code, event)
     assert not t.p1p1_missing, "sets without P1P1 need a masked first pick; not handled yet"
     # load_tensors and load_drafts sort drafts differently; line them up by draft_id
     row = {x: i for i, x in enumerate(t.draft_id.tolist())}
-    order = np.array([row[x] for x in draft_ids.tolist()])
+    missing = np.array([x not in row for x in draft_ids.tolist()])
+    assert not strict or not missing.any(), "drafts missing from load_tensors"
+    order = np.array([row.get(x, 0) for x in draft_ids.tolist()])
     _, K, N, C = t.pack.shape
     D, T = len(order), K * N
-    pack = t.pack[order].reshape(D, T, C)
     pick = t.pick[order].reshape(D, T).astype(np.int64)
-    P = int(pack[:, 0].sum(1).max())
-    del t
+    P = max(int(t.pack[order[a:a + chunk], 0, 0].sum(1).max()) for a in range(0, D, chunk))
     tokens = np.full((D, T, P), C, dtype=np.int16)
-    max_copies = int(pack.max())
-    for a in range(0, D, chunk):
-        blk = pack[a:a + chunk].reshape(-1, C)
+    max_copies = int(t.pack.max())
+    for a in range(0, D, chunk):  # index a chunk at a time: a full copy of the pack tensor can be 3GB+
+        blk = t.pack[order[a:a + chunk]].reshape(-1, C)
         # one column per (copy k, card c); stable sort brings present cards first, by card index
         present = np.concatenate([blk >= k for k in range(1, max_copies + 1)], axis=1)
-        order = np.argsort(~present, axis=1, kind="stable")[:, :P]
-        ok = np.take_along_axis(present, order, 1)
-        tokens[a:a + chunk] = np.where(ok, order % C, C).reshape(-1, T, P)
+        srt = np.argsort(~present, axis=1, kind="stable")[:, :P]
+        ok = np.take_along_axis(present, srt, 1)
+        tokens[a:a + chunk] = np.where(ok, srt % C, C).reshape(-1, T, P)
+    del t
     pick_pos = (tokens == pick[..., None]).argmax(-1)
-    assert (np.take_along_axis(tokens, pick_pos[..., None], -1)[..., 0] == pick).all()
+    ok = (np.take_along_axis(tokens, pick_pos[..., None], -1)[..., 0] == pick).all(1) & ~missing
+    if not strict:
+        return tokens, pick_pos, ok
+    assert ok.all()
     return tokens, pick_pos
 
 
