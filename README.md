@@ -116,7 +116,7 @@ train only.
    More depth did not help: 6+4 layers scored 0.4228 and trained 35% slower. Averaging with
    `lgbm_all` no longer helps either (0.4258), so the GBM's features appear to be subsumed.
 
-### One wheel model for every set (`scripts/train_wheelnet_multiset.py`)
+### One wheel model for every set (`notebooks/wheelnet.ipynb` §7)
 
 The pick model's best result came from dropping per-card ids for card features shared across sets (colour,
 rarity, mana value, types, Scryfall rules features, a frozen rules-text embedding). The same WheelNet with that
@@ -144,7 +144,7 @@ features-only card table (`ids=False`), trained on 20k drafts from each of the 7
   right in P2, so P2's upstream drafters are the P1/P3 downstream ones.
 - A draft-overlay-style demo: given a live pack, show P(wheel) for each card.
 
-## Where wheel prediction matters: the cards you'd want back (`scripts/wheel_breakdown.py`)
+## Where wheel prediction matters: the cards you'd want back (`notebooks/wheelnet.ipynb` §8)
 
 The useful product question is "will my *second-best* card come back?", not "will the chaff wheel?". Each passed
 card is ranked within its pack by train-set ATA (rank 1 = the best card you passed). Log-loss gain of the per-set
@@ -181,7 +181,7 @@ What we learned:
    is separating 1% from 25%: on MSH a third of rank-2 cards get < 2% (and wheel 1.1%), while the 9% it puts above
    20% wheel 26% of the time.
 
-## Does the open lane pay? (`scripts/open_lane.py`)
+## Does the open lane pay? (`notebooks/open_lane.ipynb`)
 
 The repo's namesake question, on all 15 sets. **Openness** of colour *j* in pack *k* is how many good cards of
 that colour reached the drafter later than they usually last: Σ over picks 1–7 of the pack's cards' colour share ×
