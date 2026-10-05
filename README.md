@@ -27,6 +27,11 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/affinity_checks.py MSH     # draft affinity vs co-occurrence vs colour; skill check (~1 min)
 .venv/bin/python scripts/deck_multiset.py 200000   # deck transformer shared across 12 sets (~55 min)
 .venv/bin/python scripts/picknet_report.py         # markdown tables for the two sections above
+.venv/bin/python scripts/train_wheelnet_multiset.py MSH 4 20000 with_target=1  # wheel model on 8 sets (~50 min)
+.venv/bin/python scripts/wheel_breakdown.py MSH     # wheel accuracy by the card's rank in the pack (~1 min)
+.venv/bin/python scripts/open_lane.py MSH           # lane openness: persistence, following, payoff (~1 min)
+.venv/bin/python scripts/force_vs_follow.py MSH 2000  # follow vs force in the table simulator (~10 min)
+.venv/bin/python scripts/open_lane_report.py        # markdown tables for the open-lane / breakdown sections
 ```
 
 `scripts/download.py` fetches, converts and sanity-checks every set below (or pass set codes).
@@ -111,9 +116,30 @@ train only.
    More depth did not help: 6+4 layers scored 0.4228 and trained 35% slower. Averaging with
    `lgbm_all` no longer helps either (0.4258), so the GBM's features appear to be subsumed.
 
+### One wheel model for every set (`scripts/train_wheelnet_multiset.py`)
+
+The pick model's best result came from dropping per-card ids for card features shared across sets (colour,
+rarity, mana value, types, Scryfall rules features, a frozen rules-text embedding). The same WheelNet with that
+features-only card table (`ids=False`), trained on 20k drafts from each of the 7 other 14-card sets, MSH test:
+
+| model | logloss | AUC | ECE | vs ALSA baseline |
+|---|---|---|---|---|
+| `prior_by_pick` (no card knowledge) | 0.6067 | 0.639 | 0.000 | −31.1% |
+| **day zero**: 7 other sets, never saw MSH | 0.5245 | 0.776 | 0.048 | −13.3% |
+| `alsa_ata_logreg` (needs the set's own data) | 0.4629 | 0.831 | 0.007 | 0 |
+| per-set WheelNet (learned card ids), all inputs / best inputs (`wheelnet_time`) | 0.4249 / 0.4218 | 0.862 / 0.864 | 0.002 / 0.007 | +8.2% / +8.9% |
+| **7 other sets + MSH's training drafts** (4.1M params, 4 epochs) | **0.4188** | **0.866** | **0.003** | **+9.5%** |
+
+1. **Pretraining on other sets gives the best wheel model**, better than per-set WheelNet in every slice of the
+   breakdown below (best passed card: 0.1306 vs 0.1341). It is the same result as the pick model: card features
+   shared across sets beat memorising one set's cards.
+2. **Day zero is far behind ALSA.** With no MSH drafts, the model knows how tables behave but not how good each new
+   card is. It closes 57% of the gap from the pick prior to the baseline, but ALSA after a few days of
+   data is much better, and the zero-shot model is miscalibrated (ECE 0.048). A few days of the set's own data is
+   the practical starting point.
+
 ### Next ideas
 
-- Train across several sets (card-agnostic features plus per-set embeddings) and test on a held-out set.
 - Out-of-fold card target encoding. Also add the per-seat structure: packs pass left in P1/P3 and
   right in P2, so P2's upstream drafters are the P1/P3 downstream ones.
 - A draft-overlay-style demo: given a live pack, show P(wheel) for each card.
@@ -200,6 +226,30 @@ What we learned:
    sets). So more good cards in your colours win games. That is what reading signals is for, but this data
    doesn't separate the value of the decision from the luck of the seat. That needs a counterfactual, e.g. the
    PickNet table simulator with a signal-blind seat.
+
+**Counterfactual: follow or force?** (`scripts/force_vs_follow.py`, MSH). The observational payoff can't separate
+the read from the luck of the seat, so this tests it in the PickNet table simulator: 2,000 tables of real opened
+packs, seats 1–7 always the human-like bot, seat 0 plays a strategy, with the same tables and random stream for every
+strategy. Pools are scored as decks: the best colour pair's top 23 cards by training-game GIH WR (missing slots get
+a 10th-percentile card).
+
+| seat 0 strategy | deck score (mean GIH WR of best-pair top 23) | vs following |
+|---|---|---|
+| follow: draft like a human (the bot reads signals as people do) | 57.36 | — |
+| force a random pair (sample from the same model, only cards that fit) | 57.39 | +0.02 ± 0.03 |
+| force the best pair (WU) | 58.67 | +1.30 |
+| read P1 picks 1–5 for the most open pair, then lock it | 56.94 | -0.42 ± 0.03 |
+
+Forcing, by pair: WU 58.7 · WG 58.3 · UG 58.1 · WB 57.8 · UB 57.6 · BG 57.3 · WR 57.0 · UR 56.9 · RG 56.6 · BR 55.8.
+
+5. **In simulation, forcing a random pair costs nothing, and forcing the strongest pair wins.** Committing to a
+   random pair from P1P1 ties drafting like a human. Which pair matters much more than when you commit: 2.9
+   points separate forcing WU from forcing BR. Locking in whatever looks open after five picks, ignoring the
+   cards already taken, is worse than both (−0.4). Human-style drafting balances card quality, pool and
+   signals, and pure signal-chasing loses that.
+   Caveats: the bots under-draft WU (17% of bot decks vs 23% of real drafters), so a WU forcer faces less
+   competition than at a real table; the deck score ignores curve and synergy; and every seat is an imitation of
+   17Lands users, not a strong drafter.
 
 ## Deck strength (MSH PremierDraft)
 
@@ -516,7 +566,8 @@ scripts/                  build_dataset.py, train.py, train_nn.py, train_deckstr
                           train_draftencoder.py, deck_synergy.py, improve_deck.py,
                           paper_baselines.py, lgbm_ablation.py, ensemble_de_lgbm.py,
                           train_picknet.py, train_picknet_multiset.py, simulate_draft.py,
-                          card_text_embeddings.py, deck_synergy_v2.py, deck_multiset.py
+                          card_text_embeddings.py, deck_synergy_v2.py, deck_multiset.py,
+                          train_wheelnet_multiset.py, wheel_breakdown.py, open_lane.py, force_vs_follow.py
 results/<SET>.<EVENT>/    results.json, predictions, models (gitignored)
 ```
 
