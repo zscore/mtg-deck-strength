@@ -1,0 +1,41 @@
+{
+ "set": "OTJ",
+ "games": 1132415,
+ "test games": 164444,
+ "pairs": 17269,
+ "models": [
+  {
+   "model": "seen, no pairs",
+   "val logloss": 0.6301186680793762,
+   "test logloss": 0.6316933035850525
+  },
+  {
+   "model": "seen, pairs k=4",
+   "val logloss": 0.6278377175331116,
+   "l2_v": 3e-05,
+   "test logloss": 0.62960284948349,
+   "vs no pairs": -0.002090411027893424,
+   "vs no pairs \u00b195%": 0.00037840216239128956,
+   "pair sd": 0.023900823667645454,
+   "split-half pair r": 0.5077242722366676,
+   "vs affinity r": 0.02151441136611446
+  },
+  {
+   "model": "placebo (unseen), no pairs",
+   "val logloss": 0.6298615336418152,
+   "test logloss": 0.631513237953186
+  },
+  {
+   "model": "placebo (unseen), pairs k=4",
+   "val logloss": 0.6298669576644897,
+   "l2_v": 0.0003,
+   "test logloss": 0.6314845085144043,
+   "vs no pairs": -2.869462150556501e-05,
+   "vs no pairs \u00b195%": 4.6316958795764004e-05,
+   "pair sd": 0.0014084092108532786,
+   "split-half pair r": 0.06095509408412945,
+   "vs affinity r": 0.10618394901162606
+  }
+ ],
+ "seconds": 295.00063276290894
+}

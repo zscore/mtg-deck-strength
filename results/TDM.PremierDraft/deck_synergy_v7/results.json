@@ -1,0 +1,41 @@
+{
+ "set": "TDM",
+ "games": 552428,
+ "test games": 80333,
+ "pairs": 10275,
+ "models": [
+  {
+   "model": "seen, no pairs",
+   "val logloss": 0.6267672777175903,
+   "test logloss": 0.6269402503967285
+  },
+  {
+   "model": "seen, pairs k=4",
+   "val logloss": 0.6244786977767944,
+   "l2_v": 0.0001,
+   "test logloss": 0.6244003772735596,
+   "vs no pairs": -0.0025398600846529007,
+   "vs no pairs \u00b195%": 0.0005617188927971009,
+   "pair sd": 0.022398825734853745,
+   "split-half pair r": 0.3965701524849622,
+   "vs affinity r": 0.04600809254755037
+  },
+  {
+   "model": "placebo (unseen), no pairs",
+   "val logloss": 0.6270986795425415,
+   "test logloss": 0.6277692317962646
+  },
+  {
+   "model": "placebo (unseen), pairs k=4",
+   "val logloss": 0.6269561052322388,
+   "l2_v": 0.0003,
+   "test logloss": 0.6278114318847656,
+   "vs no pairs": 4.2156654671998695e-05,
+   "vs no pairs \u00b195%": 0.0001546433305183138,
+   "pair sd": 0.0056355721317231655,
+   "split-half pair r": 0.03278462808047262,
+   "vs affinity r": 0.04238436888544399
+  }
+ ],
+ "seconds": 132.66343522071838
+}

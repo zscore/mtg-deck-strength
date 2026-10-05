@@ -1,0 +1,41 @@
+{
+ "set": "FDN",
+ "games": 765317,
+ "test games": 112919,
+ "pairs": 11157,
+ "models": [
+  {
+   "model": "seen, no pairs",
+   "val logloss": 0.6339728236198425,
+   "test logloss": 0.630959153175354
+  },
+  {
+   "model": "seen, pairs k=4",
+   "val logloss": 0.6312621831893921,
+   "l2_v": 0.0001,
+   "test logloss": 0.6284452080726624,
+   "vs no pairs": -0.0025139404460787773,
+   "vs no pairs \u00b195%": 0.0004182276284910704,
+   "pair sd": 0.022447817027568817,
+   "split-half pair r": 0.5215780671901695,
+   "vs affinity r": 0.03986846115310798
+  },
+  {
+   "model": "placebo (unseen), no pairs",
+   "val logloss": 0.6341596245765686,
+   "test logloss": 0.6307417154312134
+  },
+  {
+   "model": "placebo (unseen), pairs k=4",
+   "val logloss": 0.6341062784194946,
+   "l2_v": 0.0003,
+   "test logloss": 0.6306676268577576,
+   "vs no pairs": -7.41286639822647e-05,
+   "vs no pairs \u00b195%": 8.663481435319344e-05,
+   "pair sd": 0.002807755721732974,
+   "split-half pair r": 0.058520359767452824,
+   "vs affinity r": 0.11777637959537518
+  }
+ ],
+ "seconds": 157.55167484283447
+}

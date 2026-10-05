@@ -32,6 +32,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/deck_synergy_v4_draft.py MSH  # LightGBM with deck features / affinity, boosted from the game model
 .venv/bin/python scripts/deck_synergy_v5.py MSH    # pair synergy from cards seen together in a game (~3-5 min/set)
 .venv/bin/python scripts/deck_synergy_v6.py MSH    # seen-together synergy: held-out test and unseen-card placebo (~5 min/set)
+.venv/bin/python scripts/deck_synergy_v7.py MSH    # final seen-together pair tables and per-card synergy hubs (~4 min/set)
 .venv/bin/python scripts/picknet_report.py         # markdown tables for the two sections above
 .venv/bin/python scripts/train_wheelnet_multiset.py MSH 4 20000 with_target=1  # wheel model on 8 sets (~50 min)
 .venv/bin/python scripts/wheel_breakdown.py MSH     # wheel accuracy by the card's rank in the pack (~1 min)
@@ -707,7 +708,20 @@ What we learned:
    penalty may gain a little more. The split-half r is lower than round 5's 0.66 because the pairs are less shrunk.
 3. **Why this doesn't help deck strength (round 5):** a deck only gets a pair's effect in the games where both cards
    show up. Averaged over the deck, that is already mostly in the deck-level FM and affinity. The seen-together pair
-   values (`results/<SET>/deck_synergy_v5/seen_pairs.csv`) are the synergy numbers to use for rating card pairs.
+   values are the synergy numbers to use for rating card pairs; see round 7 for the final tables.
+
+**Round 7: final tables** (`scripts/deck_synergy_v7.py`). The same model with the pair penalty grid extended down to
+3e-5. The held-out gain is unchanged (−2.43 vs −2.42 ×1000, 12/12 significant; placebo −0.05). The weakest penalty
+is now chosen on only 3 sets, so the grid brackets the optimum. From these fits:
+- `results/<SET>/deck_synergy_v7/seen_pairs.csv`: every nonland pair in ≥ 2,000 training decks, with Q (extra
+  log-odds when both are seen) and the pick-model affinity.
+- `results/<SET>/deck_synergy_v7/card_hubs.csv`: each card's own seen value and its *synergy dependence*, the
+  co-occurrence-weighted mean Q over its partners, with its best and worst partner.
+
+The cards with the highest synergy dependence are payoffs that are weak on their own. They are BLB's Talents (Caretaker's
+Talent with Carrot Cake, Q = +0.36; Scavenger's Talent with Heaped Harvest), MKM's Chalk Outline with Insidious
+Roots, DSK's Emerge from the Cocoon with Vile Mutilator and Shroudstomper, and SOS's Wisdom of Ages with Zealous
+Lorecaster. Cards that are good anywhere (SOS's Colorstorm Stallion, Practiced Offense) sit near zero.
 
 ## Layout
 
@@ -728,7 +742,7 @@ scripts/                  build_dataset.py, train.py, train_nn.py, train_deckstr
                           train_picknet.py, train_picknet_multiset.py, simulate_draft.py,
                           card_text_embeddings.py, deck_synergy_v2.py, deck_multiset.py, deck_synergy_v3.py,
                           deck_synergy_v3_blend.py, deck_synergy_v4.py, deck_synergy_v4_draft.py,
-                          deck_synergy_v5.py, deck_synergy_v6.py,
+                          deck_synergy_v5.py, deck_synergy_v6.py, deck_synergy_v7.py,
                           train_wheelnet_multiset.py, wheel_breakdown.py, open_lane.py, force_vs_follow.py
 results/<SET>.<EVENT>/    results.json, predictions, models (gitignored)
 ```

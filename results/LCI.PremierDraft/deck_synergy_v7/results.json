@@ -1,0 +1,41 @@
+{
+ "set": "LCI",
+ "games": 793671,
+ "test games": 116121,
+ "pairs": 11352,
+ "models": [
+  {
+   "model": "seen, no pairs",
+   "val logloss": 0.6270518898963928,
+   "test logloss": 0.6255903244018555
+  },
+  {
+   "model": "seen, pairs k=4",
+   "val logloss": 0.6239810585975647,
+   "l2_v": 3e-05,
+   "test logloss": 0.6228223443031311,
+   "vs no pairs": -0.002768047619611025,
+   "vs no pairs \u00b195%": 0.00048513595209037874,
+   "pair sd": 0.027947574853897095,
+   "split-half pair r": 0.48227498894224347,
+   "vs affinity r": 0.02715263858658526
+  },
+  {
+   "model": "placebo (unseen), no pairs",
+   "val logloss": 0.6273150444030762,
+   "test logloss": 0.6262646913528442
+  },
+  {
+   "model": "placebo (unseen), pairs k=4",
+   "val logloss": 0.6271879076957703,
+   "l2_v": 0.0003,
+   "test logloss": 0.6262022852897644,
+   "vs no pairs": -6.247603596420959e-05,
+   "vs no pairs \u00b195%": 6.535568742128343e-05,
+   "pair sd": 0.0021641855128109455,
+   "split-half pair r": 0.03603118799178435,
+   "vs affinity r": 0.12913037884303497
+  }
+ ],
+ "seconds": 161.386962890625
+}

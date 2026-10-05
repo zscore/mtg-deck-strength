@@ -1,0 +1,41 @@
+{
+ "set": "DFT",
+ "games": 824163,
+ "test games": 118590,
+ "pairs": 12703,
+ "models": [
+  {
+   "model": "seen, no pairs",
+   "val logloss": 0.6368893980979919,
+   "test logloss": 0.6341665387153625
+  },
+  {
+   "model": "seen, pairs k=4",
+   "val logloss": 0.6341125965118408,
+   "l2_v": 3e-05,
+   "test logloss": 0.6301119923591614,
+   "vs no pairs": -0.00405456405133009,
+   "vs no pairs \u00b195%": 0.0005024851007511442,
+   "pair sd": 0.024831486865878105,
+   "split-half pair r": 0.47290830648982946,
+   "vs affinity r": 0.03803287601415832
+  },
+  {
+   "model": "placebo (unseen), no pairs",
+   "val logloss": 0.6369670629501343,
+   "test logloss": 0.6339714527130127
+  },
+  {
+   "model": "placebo (unseen), pairs k=4",
+   "val logloss": 0.6368467807769775,
+   "l2_v": 0.0003,
+   "test logloss": 0.6338350772857666,
+   "vs no pairs": -0.00013634026981890202,
+   "vs no pairs \u00b195%": 9.138308801832695e-05,
+   "pair sd": 0.0028579712379723787,
+   "split-half pair r": 0.06813526346919285,
+   "vs affinity r": 0.14262116791455517
+  }
+ ],
+ "seconds": 175.01111388206482
+}
