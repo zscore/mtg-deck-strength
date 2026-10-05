@@ -1,0 +1,17 @@
+BLB: 898354 games (train 635246, test 129524) [23s]
+  linear + deck features + aff             val 0.65759 (1e-05, 0) [13s]
+  fm4 nonland                              val 0.65728 (1e-05, 0.001) [25s]
+  fm8 nonland                              val 0.65729 (1e-05, 0.001) [27s]
+  fm16 nonland                             val 0.65730 (1e-05, 0.001) [27s]
+  fm4 all cards                            val 0.65729 (1e-05, 0.001) [26s]
+  affinity pairs (k=8)                     val 0.65743 (1e-05, 0.0001) [26s]
+  affinity pairs (k=8) + fm4 nonland       val 0.65733 (1e-05, 0.0001) [25s]
+  linear + deck features + aff             vs ref +0.000 ± 0.000 (x1000)  draft spearman 0.2714
+  fm4 nonland                              vs ref -0.283 ± 0.121 (x1000)  draft spearman 0.2717
+  fm8 nonland                              vs ref -0.274 ± 0.121 (x1000)  draft spearman 0.2716
+  fm16 nonland                             vs ref -0.274 ± 0.117 (x1000)  draft spearman 0.2718
+  fm4 all cards                            vs ref -0.234 ± 0.152 (x1000)  draft spearman 0.2717
+  affinity pairs (k=8)                     vs ref -0.091 ± 0.136 (x1000)  draft spearman 0.2723
+  affinity pairs (k=8) + fm4 nonland       vs ref -0.182 ± 0.148 (x1000)  draft spearman 0.2729
+  cross-fit train-draft score r with in-sample: 0.980
+BLB done [222s]

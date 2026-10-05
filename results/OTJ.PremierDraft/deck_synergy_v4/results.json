@@ -1,0 +1,132 @@
+{
+ "set": "OTJ",
+ "games": 1132415,
+ "test games": 164444,
+ "models": [
+  {
+   "model": "linear + deck features + aff",
+   "val logloss": 0.6623619794845581,
+   "setting": [
+    1e-05,
+    0
+   ],
+   "fit seconds": 19.818474531173706,
+   "test logloss": 0.6633419394493103,
+   "test auc": 0.6292714101047893,
+   "vs ref": 0.0,
+   "vs ref \u00b195%": 0.0,
+   "draft spearman": 0.2504652525769369,
+   "draft nll": 0.6831704096998044,
+   "draft ceiling": 0.2751836901935611,
+   "draft n": 27615.0
+  },
+  {
+   "model": "fm4 nonland",
+   "val logloss": 0.6622441411018372,
+   "setting": [
+    1e-05,
+    0.001
+   ],
+   "fit seconds": 31.846492052078247,
+   "test logloss": 0.6632243990898132,
+   "test auc": 0.6295565161656942,
+   "vs ref": -0.00011756235471693799,
+   "vs ref \u00b195%": 5.434662181940378e-05,
+   "draft spearman": 0.25244932412981524,
+   "draft nll": 0.683048386966206,
+   "draft ceiling": 0.27912095520374525,
+   "draft n": 27615.0
+  },
+  {
+   "model": "fm8 nonland",
+   "val logloss": 0.6622270941734314,
+   "setting": [
+    1e-05,
+    0.001
+   ],
+   "fit seconds": 33.53976011276245,
+   "test logloss": 0.6632188558578491,
+   "test auc": 0.6295641118605358,
+   "vs ref": -0.0001231016794918105,
+   "vs ref \u00b195%": 5.25763699010009e-05,
+   "draft spearman": 0.25236570547999954,
+   "draft nll": 0.6830538210384559,
+   "draft ceiling": 0.2791036033541769,
+   "draft n": 27615.0
+  },
+  {
+   "model": "fm16 nonland",
+   "val logloss": 0.6622487306594849,
+   "setting": [
+    1e-05,
+    0.001
+   ],
+   "fit seconds": 34.037753105163574,
+   "test logloss": 0.6632377505302429,
+   "test auc": 0.6295168240417813,
+   "vs ref": -0.0001042498552124016,
+   "vs ref \u00b195%": 5.1768185654310464e-05,
+   "draft spearman": 0.25246069164141954,
+   "draft nll": 0.6830527773691787,
+   "draft ceiling": 0.2796338293199884,
+   "draft n": 27615.0
+  },
+  {
+   "model": "fm4 all cards",
+   "val logloss": 0.6622241735458374,
+   "setting": [
+    1e-05,
+    0.001
+   ],
+   "fit seconds": 31.822202920913696,
+   "test logloss": 0.6631868481636047,
+   "test auc": 0.6296540151186288,
+   "vs ref": -0.00015511138190049678,
+   "vs ref \u00b195%": 9.600222926556066e-05,
+   "draft spearman": 0.2532145489733025,
+   "draft nll": 0.6830121022443557,
+   "draft ceiling": 0.2828950342973539,
+   "draft n": 27615.0
+  },
+  {
+   "model": "affinity pairs (k=8)",
+   "val logloss": 0.6622125506401062,
+   "setting": [
+    1e-05,
+    0.0001
+   ],
+   "fit seconds": 29.93376398086548,
+   "test logloss": 0.6631999611854553,
+   "test auc": 0.6295519951153926,
+   "vs ref": -0.00014206250489223748,
+   "vs ref \u00b195%": 0.00010207307782635233,
+   "draft spearman": 0.25433084899063185,
+   "draft nll": 0.6829629591541669,
+   "draft ceiling": 0.28065268217452566,
+   "draft n": 27615.0
+  },
+  {
+   "model": "affinity pairs (k=8) + fm4 nonland",
+   "val logloss": 0.6621936559677124,
+   "setting": [
+    1e-05,
+    0.0001
+   ],
+   "fit seconds": 33.09952998161316,
+   "test logloss": 0.66318678855896,
+   "test auc": 0.6295925634452957,
+   "vs ref": -0.0001552302564959973,
+   "vs ref \u00b195%": 0.00010400931181885811,
+   "draft spearman": 0.25429659185213527,
+   "draft nll": 0.6829550690344602,
+   "draft ceiling": 0.2811929700966713,
+   "draft n": 27615.0
+  }
+ ],
+ "crossfit model": "fm4 nonland",
+ "crossfit setting": [
+  1e-05,
+  0.001
+ ],
+ "seconds": 295.9691278934479
+}

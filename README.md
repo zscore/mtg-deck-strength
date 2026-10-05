@@ -28,6 +28,8 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/deck_multiset.py 200000   # deck transformer shared across 12 sets (~55 min)
 .venv/bin/python scripts/deck_synergy_v3.py MSH    # retrained game-level models, affinity profile, card fit (~3 min/set)
 .venv/bin/python scripts/deck_synergy_v3_blend.py MSH  # blend with the draft-level LightGBM deck model (~1 min/set)
+.venv/bin/python scripts/deck_synergy_v4.py MSH    # pair-term variants, properly trained; cross-fitted draft scores (~4 min/set)
+.venv/bin/python scripts/deck_synergy_v4_draft.py MSH  # LightGBM with deck features / affinity, boosted from the game model
 .venv/bin/python scripts/picknet_report.py         # markdown tables for the two sections above
 .venv/bin/python scripts/train_wheelnet_multiset.py MSH 4 20000 with_target=1  # wheel model on 8 sets (~50 min)
 .venv/bin/python scripts/wheel_breakdown.py MSH     # wheel accuracy by the card's rank in the pack (~1 min)
@@ -604,6 +606,50 @@ What we learned:
 5. **Dropped:** per-card play/draw offsets, a multitask model with "on the play" as the task. They overfit, losing
    +0.3 to +0.6 ×1000 against the FM on SOS and BLB.
 
+## Deck synergy, round 4
+
+Round 2 compared its pair-term variants on under-trained models. `scripts/deck_synergy_v4.py` reruns them with
+learning-rate drops. Every model has the deck features and the affinity column. Test-game log loss ×1000 is paired
+against `linear + deck features + aff`, averaged over the 12 sets:
+
+| pair terms | vs linear + deck features + aff | sets better (significant) | draft Spearman |
+|---|---|---|---|
+| none | 0 | — | 0.265 |
+| **FM rank 4, nonland cards** | **−0.18** | **12/12 (9)** | 0.268 |
+| FM rank 8, nonland | −0.18 | 12/12 (8) | 0.267 |
+| FM rank 16, nonland | −0.17 | 11/12 (7) | 0.267 |
+| FM rank 4, all cards | −0.14 | 10/12 (7) | 0.267 |
+| learned map of the pick model's card vectors (k=8) | −0.17 | 11/12 (5) | 0.268 |
+| pick-model map + free rank-4 nonland pairs | −0.16 | 10/12 (5) | 0.269 |
+
+At the draft level, `scripts/deck_synergy_v4_draft.py` scores the game model *cross-fitted*: each training draft is
+scored by a model fit on the other half of the training drafts. That lets LightGBM start from the game model's
+logit (init_score) without learning to trust an in-sample score. Mean Spearman on the test drafts with a deck:
+
+| model | mean Spearman | mean NLL / game | better than round 3's blend |
+|---|---|---|---|
+| LightGBM, deck counts + structure + rank | 0.271 | 0.68057 | 0/12 |
+| LightGBM + deck features + affinity column as inputs | 0.275 | 0.68031 | 4/12 |
+| LightGBM + game FM, logit average (round 3) | 0.278 | 0.68022 | — |
+| LightGBM + deck features + aff, averaged with the game FM | **0.279** | **0.68015** | 7/12 |
+| LightGBM boosted from the game FM's logit | 0.278 | 0.68017 | 7/12 |
+
+What we learned:
+1. **Pair terms are saturated.** Properly trained, every pair-term variant beats the affinity column alone by about the
+   same amount: −0.14 to −0.18 ×1000, and the nonland FM is significant on 9 of 12 sets. Higher rank doesn't help,
+   lands in the pairs slightly hurt, and building pairs from the pick model's card vectors ties free pairs. The
+   synergy this data can detect is low-rank and small: about a seventh of what the deck features and the affinity
+   column give (−1.22 against linear).
+2. **LightGBM can use the deck features and affinity** (0.271 → 0.275, 11/12). Trees on raw counts can't compute
+   castability or pairwise fit for themselves.
+3. **Boosting from the game model is no better than averaging with it** (0.278 vs 0.278). The best draft-level model
+   is LightGBM with deck features + affinity, averaged with the game FM: 0.279. That is 0.001 above round 3's blend,
+   which is within noise.
+4. **Where this leaves the deck model.** With registered decks, records and the pick model's affinity as inputs, the
+   game-level and draft-level models have converged. Better pair terms, ranks, profiles and stacking each move test
+   Spearman by 0.001 or less. Further gains need new information: what the opponent cast (replay data), which cards
+   actually got drawn, or pooling synergy across sets through card features.
+
 ## Layout
 
 ```
@@ -622,7 +668,7 @@ scripts/                  build_dataset.py, train.py, train_nn.py, train_deckstr
                           paper_baselines.py, lgbm_ablation.py, ensemble_de_lgbm.py,
                           train_picknet.py, train_picknet_multiset.py, simulate_draft.py,
                           card_text_embeddings.py, deck_synergy_v2.py, deck_multiset.py, deck_synergy_v3.py,
-                          deck_synergy_v3_blend.py,
+                          deck_synergy_v3_blend.py, deck_synergy_v4.py, deck_synergy_v4_draft.py,
                           train_wheelnet_multiset.py, wheel_breakdown.py, open_lane.py, force_vs_follow.py
 results/<SET>.<EVENT>/    results.json, predictions, models (gitignored)
 ```

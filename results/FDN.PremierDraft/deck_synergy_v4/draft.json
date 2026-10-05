@@ -1,0 +1,72 @@
+{
+ "lgbm": {
+  "spearman": 0.28322779005508875,
+  "nll": 0.6793779348471373,
+  "ceiling": 0.3096504036979733,
+  "n": 18593,
+  "info": 1496
+ },
+ "lgbm + deck feat + aff": {
+  "spearman": 0.28378351892632697,
+  "nll": 0.6793261792936282,
+  "ceiling": 0.3125968452329097,
+  "n": 18593,
+  "info": 1148
+ },
+ "game model (fm4 nonland, cross-fitted)": {
+  "spearman": 0.27673439696625307,
+  "nll": 0.6796991570749498,
+  "ceiling": 0.27779274532090553,
+  "n": 18593,
+  "info": null
+ },
+ "game model (linear + deck feat + aff, cross-fitted)": {
+  "spearman": 0.2767701697288595,
+  "nll": 0.6797122644225891,
+  "ceiling": 0.2859751534701419,
+  "n": 18593,
+  "info": null
+ },
+ "lgbm + game model, averaged": {
+  "spearman": 0.2875759791129897,
+  "nll": 0.6791037677949407,
+  "ceiling": 0.2894488377037412,
+  "n": 18593,
+  "info": 0.45
+ },
+ "lgbm + deck feat + aff + game model, averaged": {
+  "spearman": 0.2864800269063981,
+  "nll": 0.6791352894596961,
+  "ceiling": 0.2914338672091572,
+  "n": 18593,
+  "info": 0.4
+ },
+ "lgbm, boosted from game model (fm4 nonland)": {
+  "spearman": 0.28798344958164845,
+  "nll": 0.6791207265258965,
+  "ceiling": 0.3048031487082754,
+  "n": 18593,
+  "info": 401
+ },
+ "lgbm, boosted from game model (linear + deck feat + aff)": {
+  "spearman": 0.2883871947327074,
+  "nll": 0.6791152683918414,
+  "ceiling": 0.30502154845077,
+  "n": 18593,
+  "info": 401
+ },
+ "lgbm + deck feat + aff, boosted from game model (fm4 nonland)": {
+  "spearman": 0.2856857261251838,
+  "nll": 0.6791692413109108,
+  "ceiling": 0.3058486063320459,
+  "n": 18593,
+  "info": 418
+ },
+ "lgbm + deck feat + aff, boosted from game model (linear + deck feat + aff)": {
+  "spearman": 0.2868290090099157,
+  "nll": 0.6791428533898578,
+  "ceiling": 0.30600461946144725,
+  "n": 18593,
+  "info": 416
+ }
+}
