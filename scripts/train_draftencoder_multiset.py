@@ -89,7 +89,7 @@ def build_model(kind, F, n_ids, cfg):
 def main(mode, *args):
     models = [a for a in args if "=" not in a] or ["heuristic", "lr", "lr+meta", "bag", "bag+meta", "de", "de+meta"]
     cfg = {"d": 64, "set_layers": 10, "draft_layers": 5, "dropout": 0.3, "epochs": 15, "lin_epochs": 15,
-           "ft_epochs": 10, "batch": 256, "lr": 1e-4, "lin_lr": 3e-3, "lr_lr": 1e-4, "wd": 0.05, "seed": 0, "max_minutes": 0,
+           "ft_epochs": 10, "batch": 256, "lr": 1e-4, "lin_lr": 3e-3, "lr_lr": 1e-4, "wd": 0.05, "seed": 0, "max_minutes": 0, "lin_grid": "", "scratch_epochs": 0,
            "per_set": 0, "tag": ""}
     for a in args:
         if "=" in a:
@@ -159,11 +159,24 @@ def main(mode, *args):
         # the per-slot LR has 45x45x768 weights and diverges at the bag models' learning rate
         lin_lr = cfg["lr_lr"] if kind == "lr" else cfg["lin_lr"]
         log(f"training {m}{tag}: {n_par / 1e6:.2f}M params, {sum(len(t.idx) for t in tr)} train drafts")
-        model, hist = fit(model, tr, va, epochs=cfg["epochs"] if is_de else cfg["lin_epochs"], batch=cfg["batch"],
-                          lr=cfg["lr"] if is_de else lin_lr, wd=cfg["wd"] if is_de else 0.0,
-                          seed=cfg["seed"], device=device, log=log,
-                          max_minutes=cfg["max_minutes"] or None)
-        extra = {"params": n_par, "history": hist, "train_s": round(time.time() - t1), "cfg": cfg}
+        # linear models: optional learning-rate grid, chosen by validation loss
+        grid = [float(x) for x in cfg["lin_grid"].split(",")] if cfg["lin_grid"] and not is_de else [None]
+        best = None
+        for g in grid:
+            lin_lr = g or lin_lr
+            if g is not None:
+                log(f"  lr {g}")
+                model = build_model(kind, F, int(offsets[-1]), cfg)
+            model, hist = fit(model, tr, va, epochs=cfg["epochs"] if is_de else cfg["lin_epochs"],
+                              batch=cfg["batch"], lr=cfg["lr"] if is_de else lin_lr,
+                              wd=cfg["wd"] if is_de else 0.0, seed=cfg["seed"], device=device, log=log,
+                              max_minutes=cfg["max_minutes"] or None)
+            v = min(h["val"] for h in hist)
+            if best is None or v < best[0]:
+                best = (v, model, hist, lin_lr)
+        _, model, hist, lin_lr = best
+        extra = {"params": n_par, "history": hist, "train_s": round(time.time() - t1), "cfg": cfg,
+                 "chosen_lr": cfg["lr"] if is_de else lin_lr}
         evaluate(f"{m}{tag}", model, te, device, results, mode, extra)
         (OUT / "models").mkdir(parents=True, exist_ok=True)
         torch.save(model.state_dict(), OUT / "models" / f"{mode}_{m}{tag}.pt")
@@ -177,7 +190,7 @@ def main(mode, *args):
             # the same model trained on the 4 days alone, to see what the other sets contribute
             scratch = build_model(kind, F, int(offsets[-1]), cfg)
             log(f"from scratch {m}{tag} on FDN first 4 days")
-            scratch, hist = fit(scratch, ft_tr, ft_va, epochs=cfg["ft_epochs"] * 2, batch=cfg["batch"],
+            scratch, hist = fit(scratch, ft_tr, ft_va, epochs=cfg["scratch_epochs"] or cfg["ft_epochs"] * 2, batch=cfg["batch"],
                                 lr=cfg["lr"] if is_de else lin_lr, wd=cfg["wd"] if is_de else 0.0,
                                 seed=cfg["seed"], device=device, log=log)
             evaluate(f"{m}{tag}:scratch4d", scratch, te, device, results, mode, {"history": hist})

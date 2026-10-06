@@ -195,7 +195,9 @@ class LinearMS(nn.Module):
             if self.kind == "lr":
                 z = torch.einsum("btf,itf->bi", X, self.W[:T, :T] * self.tri[:T, :T, None])
             else:
-                z = torch.einsum("bif,if->bi", X.cumsum(1), self.W[:T])
+                # mean, not sum, of the picks so far: the same model per head (fixed count), better conditioned
+                n = torch.arange(1, T + 1, device=X.device, dtype=X.dtype)[None, :, None]
+                z = torch.einsum("bif,if->bi", X.cumsum(1) / n, self.W[:T])
         return z + self.bias[:T, rank].T
 
 

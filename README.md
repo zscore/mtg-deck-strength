@@ -42,6 +42,11 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/open_lane.py MSH           # lane openness: persistence, following, payoff (~1 min)
 .venv/bin/python scripts/force_vs_follow.py MSH 2000  # follow vs force in the table simulator (~10 min)
 .venv/bin/python scripts/open_lane_report.py        # markdown tables for the open-lane / breakdown sections
+scripts/card_text_embeddings_paper.py MOM WOE ...   # (sentence-transformers env) DraftEncoder's card strings, EmbeddingGemma
+.venv/bin/python scripts/train_draftencoder_multiset.py sameset   # DraftEncoder paper replication, same set (~3h)
+.venv/bin/python scripts/train_draftencoder_multiset.py newset per_set=12000  # ... unseen set + 4-day fine-tune (~2.5h)
+.venv/bin/python scripts/de_multiset_bootstrap.py   # paired bootstrap of the sameset models
+.venv/bin/python scripts/de_multiset_report.py      # markdown tables for the replication section
 ```
 
 `scripts/download.py` fetches, converts and sanity-checks every set below (or pass set codes).
@@ -453,7 +458,78 @@ Engineering notes:
 - LCI's game file writes card counts as `0.0`, so `games.py` now parses them as floats and casts
   to Int8.
 
-## Pick model: predicting and simulating human picks (`notebooks/drafting.ipynb`)
+## Full DraftEncoder replication: card text, pooled sets, unseen set
+
+The sections above port DraftEncoder with learned per-set card embeddings. This one replicates the
+paper's actual setup: cards are read only through their text, one model is trained on several sets,
+and it is tested on a set it never saw.
+
+**Setup**
+- **Data:** the paper's 12 sets (MOM and WOE added). Card counts match the paper's Table I exactly.
+- **Card text:** each card becomes the paper's tagged string (`[NAME] … [MC] … [EFFECTS] …`). That
+  string is embedded with EmbeddingGemma-300M using the task prompt from the paper's code
+  (`scripts/card_text_embeddings_paper.py`).
+- **META:** opening-hand, drawn, in-deck, GIH and deck-not-seen win rates, plus play rate. Our game
+  files have no sideboard or tutored columns.
+- **Model:** d=64, 10 set layers and 5 draft layers, dropout 0.3, batch 256, AdamW.
+- **Windows:** taken from the paper's code (`akulen/MtGDraftEncoder`, `data.py`): 14-day blocks
+  counted back from each set's last draft, finished runs only (7 wins or 3 losses).
+- Code: `src/openlane/de_multiset.py` and `scripts/train_draftencoder_multiset.py`.
+
+**Baselines**
+- The paper's LR: one head per pick number, with a separate weight for every pick slot.
+- **bag:** the same text features summed over the picks so far, so order doesn't matter.
+- **bag_id:** one weight per card per set. It is a same-set reference only, since it can't transfer.
+
+Linear learning rates were chosen on validation loss.
+
+**Where we differ from the paper**
+- **META without the leak:** our META comes from each set's training-window games only. The paper's
+  code computes it from the whole game file, test weeks included.
+- **Training length:** DraftEncoder trains for 12 epochs at lr 3e-4 (one-cycle), not 100 epochs at
+  1e-4. At 1e-4, 12 epochs is clearly too short.
+- **Seeds:** one seed, not three. The paired bootstrap below covers test-set noise, not seed-to-seed
+  variance.
+- **Cross-set sample:** 12k training drafts per source set, about 132k in total (the paper used about
+  400k).
+
+**Same set** (one model on BLB, FDN and TDM; train days 42–28 before each set's end, val 28–14, test
+the last 14; 119k training drafts, as in the paper). Spearman at the last pick, plus the mean over the
+three sets at the end of each pack:
+
+| model | BLB | FDN | TDM | **mean** | P1P1 | end P1 | end P2 |
+|---|---|---|---|---|---|---|---|
+| HEURISTIC (top-23 mean in-deck WR) | 0.109 | 0.099 | 0.123 | 0.111 | 0.066 | 0.098 | 0.110 |
+| LR (the paper's, order-dependent) | 0.098 | 0.115 | 0.097 | 0.103 | 0.048 | 0.074 | 0.084 |
+| LR + META | 0.137 | 0.145 | 0.128 | 0.136 | 0.064 | 0.104 | 0.121 |
+| **bag** of text features (order-free linear) | 0.200 | 0.225 | 0.196 | **0.207** | 0.078 | 0.135 | 0.170 |
+| **bag + META** | 0.215 | 0.230 | 0.204 | **0.216** | 0.079 | 0.149 | 0.186 |
+| bag of card ids (per set) | 0.216 | 0.232 | 0.205 | 0.218 | 0.081 | 0.146 | 0.186 |
+| DraftEncoder (text) | 0.188 | 0.215 | 0.177 | 0.193 | 0.082 | 0.140 | 0.171 |
+| DraftEncoder + META | 0.211 | 0.233 | 0.194 | 0.213 | 0.086 | 0.151 | 0.188 |
+
+Paired bootstrap over test drafts (`scripts/de_multiset_bootstrap.py`, 1000 resamples; differences in
+mean Spearman):
+
+| comparison | difference | 95% CI |
+|---|---|---|
+| DraftEncoder − bag | −0.014 | [−0.018, −0.010] |
+| DraftEncoder + META − bag + META | −0.004 | [−0.007, −0.001] |
+| bag − the paper's LR | +0.104 | [+0.097, +0.113] |
+
+<!-- newset -->
+
+What we learned:
+1. **We reproduce the paper's numbers.** DraftEncoder reaches 0.19 from text and 0.21 with META,
+   against the paper's roughly 0.20–0.21. The paper's LR reaches 0.10, against its roughly 0.10–0.11.
+2. **The "2× over the linear baseline" comes from the baseline.** The same text features, summed
+   instead of laid out by pick slot, score 0.207 at the last pick. That is above DraftEncoder (0.193)
+   and twice the paper's LR. With META the two tie: 0.216 vs 0.213, with the bag ahead by a small
+   margin that does hold up in the bootstrap. A per-set card-id bag (0.218) is as good as anything.
+   Text features lose almost nothing against card identity within a set.
+3. **The transformer's only edge is early in the draft.** It is slightly ahead at P1P1 and at the
+   end of pack 1 (0.151 vs 0.149 with META), then falls behind by the end. Whatever it reads from
+   packs and signals is worth less than a clean sum over the final pool.
 
 The wheel model predicts what the *other* seven drafters take. PickNet predicts the drafter's own pick: a
 softmax over exactly the cards in the pack (a conditional logit, as in DraftFM), conditioned on everything the

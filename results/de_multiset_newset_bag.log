@@ -1,0 +1,18 @@
+MOM: train 20000, val 20559
+WOE: train 20000, val 32085
+LCI: train 20000, val 12874
+MKM: train 20000, val 23494
+OTJ: train 20000, val 30602
+BLB: train 20000, val 24870
+DSK: train 20000, val 32495
+FDN: test 22563, ft_train 25103, ft_val 6243
+DFT: train 20000, val 20438
+TDM: train 20000, val 17372
+FIN: train 20000, val 32578
+EOE: train 20000, val 18444
+data ready [51s]  cfg {'d': 64, 'set_layers': 10, 'draft_layers': 5, 'dropout': 0.3, 'epochs': 15, 'lin_epochs': 10, 'ft_epochs': 8, 'batch': 256, 'lr': 0.0001, 'lin_lr': 0.003, 'lr_lr': 0.0001, 'wd': 0.05, 'seed': 0, 'max_minutes': 0, 'per_set': 20000, 'tag': ''}
+training bag: 0.03M params, 220000 train drafts
+    epoch  0 train 0.69690 val 0.69874 val_spearman 0.1077 [127s]
+    epoch  1 train 0.69524 val 0.69327 val_spearman 0.1301 [161s]
+    epoch  2 train 0.69524 val 0.69951 val_spearman 0.1244 [144s]
+    epoch  3 train 0.69400 val 0.69139 val_spearman 0.1346 [120s]

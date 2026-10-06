@@ -1,0 +1,34 @@
+BLB: train 48810, val 41907, test 24870
+FDN: train 38458, val 43234, test 22563
+TDM: train 31966, val 28039, test 17372
+data ready [10s]  cfg {'d': 64, 'set_layers': 10, 'draft_layers': 5, 'dropout': 0.3, 'epochs': 12, 'lin_epochs': 15, 'ft_epochs': 10, 'batch': 256, 'lr': 0.0003, 'lin_lr': 0.003, 'lr_lr': 0.0001, 'wd': 0.05, 'seed': 0, 'max_minutes': 0, 'per_set': 0, 'tag': ''}
+training de: 0.76M params, 119234 train drafts
+    epoch  0 train 0.69048 val 0.69142 val_spearman 0.0421 [2108s]
+    epoch  1 train 0.69000 val 0.69136 val_spearman 0.0456 [376s]
+    epoch  2 train 0.68990 val 0.69257 val_spearman 0.0880 [376s]
+    epoch  3 train 0.68873 val 0.68977 val_spearman 0.1586 [375s]
+    epoch  4 train 0.68745 val 0.68908 val_spearman 0.1826 [344s]
+    epoch  5 train 0.68695 val 0.68976 val_spearman 0.1926 [314s]
+    epoch  6 train 0.68661 val 0.68868 val_spearman 0.1975 [374s]
+    epoch  7 train 0.68643 val 0.68907 val_spearman 0.2045 [488s]
+    epoch  8 train 0.68619 val 0.68876 val_spearman 0.2063 [492s]
+    epoch  9 train 0.68605 val 0.68907 val_spearman 0.2067 [452s]
+    epoch 10 train 0.68600 val 0.68875 val_spearman 0.2076 [455s]
+    epoch 11 train 0.68593 val 0.68871 val_spearman 0.2073 [455s]
+  == de: spearman mean 0.1933 BLB 0.1881 FDN 0.2149 TDM 0.1768 pooled 0.1942
+  [6647s, total 6657s]
+training de+meta: 0.77M params, 119234 train drafts
+    epoch  0 train 0.69021 val 0.69135 val_spearman 0.0360 [448s]
+    epoch  1 train 0.68895 val 0.68958 val_spearman 0.1675 [401s]
+    epoch  2 train 0.68728 val 0.68987 val_spearman 0.1973 [323s]
+    epoch  3 train 0.68676 val 0.68861 val_spearman 0.2032 [323s]
+    epoch  4 train 0.68646 val 0.68840 val_spearman 0.2065 [311s]
+    epoch  5 train 0.68621 val 0.68908 val_spearman 0.2102 [311s]
+    epoch  6 train 0.68605 val 0.68834 val_spearman 0.2118 [307s]
+    epoch  7 train 0.68590 val 0.68884 val_spearman 0.2169 [312s]
+    epoch  8 train 0.68573 val 0.68822 val_spearman 0.2170 [323s]
+    epoch  9 train 0.68558 val 0.68858 val_spearman 0.2179 [301s]
+    epoch 10 train 0.68553 val 0.68836 val_spearman 0.2186 [297s]
+    epoch 11 train 0.68552 val 0.68828 val_spearman 0.2183 [297s]
+  == de+meta: spearman mean 0.2126 BLB 0.2106 FDN 0.2330 TDM 0.1941 pooled 0.2150
+  [3978s, total 10636s]

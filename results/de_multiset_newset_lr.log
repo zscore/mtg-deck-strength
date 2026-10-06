@@ -1,0 +1,29 @@
+MOM: train 20000, val 20559
+WOE: train 20000, val 32085
+LCI: train 20000, val 12874
+MKM: train 20000, val 23494
+OTJ: train 20000, val 30602
+BLB: train 20000, val 24870
+DSK: train 20000, val 32495
+FDN: test 22563, ft_train 25103, ft_val 6243
+DFT: train 20000, val 20438
+TDM: train 20000, val 17372
+FIN: train 20000, val 32578
+EOE: train 20000, val 18444
+data ready [21s]  cfg {'d': 64, 'set_layers': 10, 'draft_layers': 5, 'dropout': 0.3, 'epochs': 15, 'lin_epochs': 10, 'ft_epochs': 8, 'batch': 256, 'lr': 0.0001, 'lin_lr': 0.003, 'lr_lr': 0.0001, 'wd': 0.05, 'seed': 0, 'max_minutes': 0, 'lin_grid': '3e-5,1e-4,3e-4', 'per_set': 20000, 'tag': ''}
+training lr: 1.56M params, 220000 train drafts
+  lr 3e-05
+    epoch  0 train 0.69176 val 0.69188 val_spearman 0.0738 [28s]
+    epoch  1 train 0.69004 val 0.69237 val_spearman 0.0815 [27s]
+    epoch  2 train 0.68873 val 0.69248 val_spearman 0.0857 [28s]
+    epoch  3 train 0.68765 val 0.69259 val_spearman 0.0858 [28s]
+    epoch  4 train 0.68677 val 0.69258 val_spearman 0.0873 [28s]
+    epoch  5 train 0.68600 val 0.69252 val_spearman 0.0897 [28s]
+    epoch  6 train 0.68530 val 0.69251 val_spearman 0.0902 [28s]
+    epoch  7 train 0.68471 val 0.69252 val_spearman 0.0908 [27s]
+    epoch  8 train 0.68426 val 0.69253 val_spearman 0.0909 [28s]
+    epoch  9 train 0.68401 val 0.69254 val_spearman 0.0909 [28s]
+  lr 0.0001
+    epoch  0 train 0.69771 val 0.69818 val_spearman 0.0592 [28s]
+    epoch  1 train 0.69624 val 0.69778 val_spearman 0.0669 [27s]
+    epoch  2 train 0.69378 val 0.69841 val_spearman 0.0711 [28s]
