@@ -1,0 +1,89 @@
+{
+ "set": "MSH",
+ "games": 377376,
+ "test games": 54446,
+ "pairs": 6251,
+ "models": [
+  {
+   "input": "hand",
+   "model": "no pairs",
+   "val logloss": 0.654053270816803,
+   "l2_v": 0,
+   "test logloss": 0.6497008204460144
+  },
+  {
+   "input": "hand",
+   "model": "slope",
+   "val logloss": 0.6540459990501404,
+   "l2_v": 0,
+   "test logloss": 0.6496903300285339,
+   "vs no pairs": -1.0417866178613622e-05,
+   "vs no pairs \u00b195%": 0.00038677942409209485
+  },
+  {
+   "input": "hand",
+   "model": "pairs k=4",
+   "val logloss": 0.6540207266807556,
+   "l2_v": 0.0003,
+   "test logloss": 0.6497286558151245,
+   "vs no pairs": 2.7875035812030546e-05,
+   "vs no pairs \u00b195%": 0.00010623926466161891,
+   "split-half pair r": 0.08874799264744229,
+   "vs affinity r": 0.14630456931897093
+  },
+  {
+   "input": "hand",
+   "model": "slope + pairs k=4",
+   "val logloss": 0.6540912985801697,
+   "l2_v": 0.0003,
+   "test logloss": 0.6497250199317932,
+   "vs no pairs": 2.4363920601899736e-05,
+   "vs no pairs \u00b195%": 0.000384551434298589,
+   "vs slope": 3.4781791327986866e-05,
+   "vs slope \u00b195%": 1.3751362446329291e-05,
+   "split-half pair r": 0.0849894158029518,
+   "vs affinity r": 0.14251200676937897
+  },
+  {
+   "input": "seen",
+   "model": "no pairs",
+   "val logloss": 0.6296733617782593,
+   "l2_v": 0,
+   "test logloss": 0.6255940794944763
+  },
+  {
+   "input": "seen",
+   "model": "slope",
+   "val logloss": 0.6273761987686157,
+   "l2_v": 0,
+   "test logloss": 0.6231809854507446,
+   "vs no pairs": -0.0024130370002239943,
+   "vs no pairs \u00b195%": 0.0008098083213124263
+  },
+  {
+   "input": "seen",
+   "model": "pairs k=4",
+   "val logloss": 0.6283800601959229,
+   "l2_v": 0.0003,
+   "test logloss": 0.6248986721038818,
+   "vs no pairs": -0.0006953708361834288,
+   "vs no pairs \u00b195%": 0.0004220231790002263,
+   "split-half pair r": 0.322984579120414,
+   "vs affinity r": 0.04470082724395769
+  },
+  {
+   "input": "seen",
+   "model": "slope + pairs k=4",
+   "val logloss": 0.6267383098602295,
+   "l2_v": 0.0003,
+   "test logloss": 0.6229122281074524,
+   "vs no pairs": -0.002681843237951398,
+   "vs no pairs \u00b195%": 0.0008891420132593935,
+   "vs slope": -0.00026880609220825136,
+   "vs slope \u00b195%": 0.00037382450768801644,
+   "split-half pair r": 0.13648975228039723,
+   "vs affinity r": 0.24840928385383912
+  }
+ ],
+ "seconds": 314.30020689964294
+}

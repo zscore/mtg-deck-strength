@@ -36,6 +36,8 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/deck_synergy_v5.py MSH    # pair synergy from cards seen together in a game (~3-5 min/set)
 .venv/bin/python scripts/deck_synergy_v6.py MSH    # seen-together synergy: held-out test and unseen-card placebo (~5 min/set)
 .venv/bin/python scripts/deck_synergy_v7.py MSH    # final seen-together pair tables and per-card synergy hubs (~4 min/set)
+.venv/bin/python scripts/deck_synergy_v8.py MSH    # opening hand vs seen cards, per-card slopes: is the synergy causal? (~8 min/set)
+.venv/bin/python scripts/deck_synergy_v9.py        # opening-hand synergy from card features, shared across 12 sets (~15 min)
 .venv/bin/python scripts/picknet_report.py         # markdown tables for the two sections above
 .venv/bin/python scripts/train_wheelnet_multiset.py MSH 4 20000 with_target=1  # wheel model on 8 sets (~50 min)
 .venv/bin/python scripts/wheel_breakdown.py MSH     # wheel accuracy by the card's rank in the pack (~1 min)
@@ -767,6 +769,11 @@ What we learned:
 
 ## Deck synergy, round 6: is seen-together synergy real?
 
+> **Correction (round 8):** most of this effect is card draw, not synergy. "Seen" includes cards drawn by other cards'
+> effects, so a draw spell that resolves both shows you more cards and wins games; the placebo can't catch that. On
+> the opening hand, which is dealt before play, partner-specific synergy is −0.27 ×1000, about the size of
+> deck-level pairs. The "13×" comparison below and round 7's hub tables overstate synergy.
+
 Round 5's seen-together pairs replicated well but were never scored on held-out games, and repeatability alone could
 come from deck composition. `scripts/deck_synergy_v6.py` adds both checks. The inputs are as in round 5, with a finer
 pair penalty grid; round 5's grid had collapsed to no pairs on OTJ and EOE. Each pair model is scored on test games
@@ -789,7 +796,7 @@ What we learned:
    show up. Averaged over the deck, that is already mostly in the deck-level FM and affinity. The seen-together pair
    values are the synergy numbers to use for rating card pairs; see round 7 for the final tables.
 
-**Round 7: final tables** (`scripts/deck_synergy_v7.py`). The same model with the pair penalty grid extended down to
+**Round 7: final tables** (`scripts/deck_synergy_v7.py`; superseded by round 8, which shows most of this effect is card draw). The same model with the pair penalty grid extended down to
 3e-5. The held-out gain is unchanged (−2.43 vs −2.42 ×1000, 12/12 significant; placebo −0.05). The weakest penalty
 is now chosen on only 3 sets, so the grid brackets the optimum. From these fits:
 - `results/<SET>/deck_synergy_v7/seen_pairs.csv`: every nonland pair in ≥ 2,000 training decks, with Q (extra
@@ -804,6 +811,56 @@ picks out mostly the same cards. The cards with the highest synergy dependence a
 Talent with Carrot Cake, Q = +0.36; Scavenger's Talent with Heaped Harvest), MKM's Chalk Outline with Insidious
 Roots, DSK's Emerge from the Cocoon with Vile Mutilator and Shroudstomper, and SOS's Wisdom of Ages with Zealous
 Lorecaster. Cards that are good anywhere (SOS's Colorstorm Stallion, Practiced Offense) sit near zero.
+
+## Deck synergy, round 8: opening hand vs cards seen, and per-card slopes
+
+`scripts/deck_synergy_v8.py`. Two problems with rounds 5–7's seen-together model:
+- **Most of its "pair" effect wasn't partner-specific.** Pushing each card's mean pair value over its usual partners
+  to zero removed ~70% of the gain on SOS (−1.62 → −0.49). The explicit version is a per-card *slope* on how many other
+  nonland cards were seen this game.
+- **"Seen" is partly an outcome of play.** It includes cards drawn by other cards' effects. On seen cards the top
+  slopes are draw and recursion spells (SOS: Glimpse of Nature, Wisdom of Ages, Decorum Dissertation).
+
+The opening hand is dealt before anything happens (mulligans are in the context), so it is the clean input. Both
+inputs, the same models, test-game log loss ×1000, mean over 12 sets:
+
+| model | opening hand | seen this game |
+|---|---|---|
+| per-card slope on other spells in hand / seen, vs no pairs | −0.13 (2/12 significant) | −4.53 (12/12) |
+| free pairs (rank 4), vs no pairs | −0.30 (8/12) | −2.44 (12/12) |
+| **slope + pairs, vs slope** (partner-specific synergy) | **−0.27** (better on 11/12, 8 significant) | −0.59 (10/12) |
+| split-half pair r | 0.13 | 0.46 free / 0.21 on top of slope |
+
+What we learned:
+1. **Round 6's big in-game effect was mostly card draw.** A per-card slope on spells seen takes −4.5 of the gain,
+   and its top cards draw or recur cards. The unseen-card placebo couldn't catch this, since unseen cards by
+   definition weren't drawn.
+2. **Clean synergy is real but small.** Partner-specific opening-hand pairs still help on 11 of 12 sets (−0.27), about
+   the size of the deck-level FM's pair gain (−0.18), and replicate about as well (r 0.13). The top clean pairs: SOS's
+   Potioner's Trove with Snarl Song and Together as One; Garrison Excavator with Rubble Rouser. Tables:
+   `results/<SET>/deck_synergy_v8/hand_pairs.csv`, `hand_hubs.csv`.
+
+## Deck synergy, round 9: opening-hand synergy from card features, across sets
+
+`scripts/deck_synergy_v9.py`. Opening-hand pairs are rare in one set's games, so round 9 pools all 12 sets: stage 1
+is each set's opening-hand model without pairs (a fixed offset), and stage 2 is one pair model shared by every set,
+reading cards only through their features (rules-text embedding, 17Lands metadata, Scryfall facts):
+Q<sub>ij</sub> = ⟨f(z<sub>i</sub>), f(z<sub>j</sub>)⟩ × a per-set scale. Test-game log loss ×1000 vs no pairs:
+
+| pair model | mean | sets better (significant) |
+|---|---|---|
+| per-set free pairs (round 8) | −0.30 | 11/12 (8) |
+| **shared, from card features** | −0.20 | 11/12 (6) |
+| shared, set held out (day zero): DFT / BLB / LCI | +0.75 / +0.26 / −0.24 | 1/3 |
+
+1. **Card features carry part of the synergy, not most.** The shared pairs correlate 0.1–0.45 with each set's own pairs
+   and gain less than per-set pairs.
+2. **Day-zero synergy fails.** On a set it never trained on, the shared model's pairs barely match that set's real
+   pairs (r 0.03–0.09). It hurts DFT and BLB, and helps only LCI. (The held-out set's scale is set to the trained
+   sets' mean; the first run left it at 1.0 for all 12 sets, kept in `results/deck_synergy_v9/holdout_scale1/`.)
+3. **Where synergy stands.** Clean card synergy is real but small (about −0.3 ×1000 per set), comparable to deck-level
+   pairs, and has to be learned within each set. Going further needs replay data for more sets (which cards were
+   cast together, and when); only MSH has it here.
 
 ## Layout
 
@@ -825,6 +882,7 @@ scripts/                  build_dataset.py, train.py, train_nn.py, train_deckstr
                           card_text_embeddings.py, deck_synergy_v2.py, deck_synergy_v3.py,
                           deck_synergy_v4.py, deck_synergy_v4_draft.py,
                           deck_synergy_v5.py, deck_synergy_v6.py, deck_synergy_v7.py,
+                          deck_synergy_v8.py, deck_synergy_v9.py,
                           train_wheelnet_multiset.py, wheel_breakdown.py, open_lane.py, force_vs_follow.py
 results/<SET>.<EVENT>/    results.json, predictions, models (gitignored)
 scripts/archive/, notebooks/archive/, results/archive/   dead ends and superseded work (see WRITEUP.md)
