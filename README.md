@@ -36,6 +36,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/deck_synergy_v5.py MSH    # pair synergy from cards seen together in a game (~3-5 min/set)
 .venv/bin/python scripts/deck_synergy_v6.py MSH    # seen-together synergy: held-out test and unseen-card placebo (~5 min/set)
 .venv/bin/python scripts/deck_synergy_v7.py MSH    # final seen-together pair tables and per-card synergy hubs (~4 min/set)
+.venv/bin/python scripts/deck_synergy_v8.py MSH    # card-flow slope vs partner synergy; opening hand vs seen (~6-10 min/set)
 .venv/bin/python scripts/picknet_report.py         # markdown tables for the two sections above
 .venv/bin/python scripts/train_wheelnet_multiset.py MSH 4 20000 with_target=1  # wheel model on 8 sets (~50 min)
 .venv/bin/python scripts/wheel_breakdown.py MSH     # wheel accuracy by the card's rank in the pack (~1 min)
@@ -848,6 +849,48 @@ picks out mostly the same cards. The cards with the highest synergy dependence a
 Talent with Carrot Cake, Q = +0.36; Scavenger's Talent with Heaped Harvest), MKM's Chalk Outline with Insidious
 Roots, DSK's Emerge from the Cocoon with Vile Mutilator and Shroudstomper, and SOS's Wisdom of Ages with Zealous
 Lorecaster. Cards that are good anywhere (SOS's Colorstorm Stallion, Practiced Offense) sit near zero.
+
+## Deck synergy, round 8: is seen-together synergy just card draw?
+
+Rounds 5–7's seen-together pairs have two problems. First, most of their gain isn't specific to any
+partner: on SOS, centring each card's pair values removed about 70% of it. Second, a card counts as
+"seen" when it is drawn, so card draw counts too. A draw spell that resolves both shows you more cards
+and wins games. `scripts/deck_synergy_v8.py` separates the two:
+- **slope:** a per-card slope on how many other nonland cards were seen this game. This is "this card
+  is better when you see more cards", with no particular partner.
+- **pairs on top of the slope:** what is left is synergy with specific partners.
+
+It also refits everything on the **opening hand** only. The hand is dealt before anything happens
+(mulligans are in the context), so card draw can't drive it. Each model is scored on held-out games:
+log loss ×1000, mean over 12 sets, and "significant" means the 95% interval excludes 0.
+
+| input | model | vs | change | sets better (significant) | split-half pair r |
+|---|---|---|---|---|---|
+| seen this game | slope | no pairs | **−4.53** | 12/12 (12) | |
+| seen this game | pairs k=4 (rounds 5–7) | no pairs | −2.44 | 12/12 (12) | 0.27–0.62 (mean 0.46) |
+| seen this game | slope + pairs | slope | **−0.59** | 12/12 (10) | 0.09–0.39 (mean 0.21) |
+| opening hand | slope | no pairs | −0.13 | 10/12 (2) | |
+| opening hand | pairs k=4 | no pairs | −0.30 | 11/12 (8) | 0.06–0.25 (mean 0.13) |
+| opening hand | slope + pairs | slope | **−0.27** | 11/12 (8) | 0.06–0.24 (mean 0.13) |
+
+What we learned:
+1. **The big seen-together effect is mostly card flow, not synergy.** A per-card slope on how many
+   cards you saw beats rounds 5–7's pair model by itself (−4.5 vs −2.4). The top slopes are draw,
+   selection and recursion cards; on SOS: Glimpse of Nature, Wisdom of Ages, Cauldron of Essence, Vampiric Tutor.
+   Specific partners add only −0.6 on top, a quarter of what the pair model alone appeared to find.
+2. **Synergy with specific partners is real but small.** On the opening hand, where card draw can't be
+   the explanation, pairs still improve held-out games on 11 of 12 sets (significantly on 8). The
+   gain is −0.27 ×1000, about a tenth of the seen-together number. MSH and EOE are flat. The hand
+   pairs replicate only weakly across split halves (r ≈ 0.13), so individual pair values are noisy.
+   The top ones are recognisable archetype glue: FDN's Ajani's Pridemate + Healer's Hawk, BLB's
+   Caretaker's Talent + Carrot Cake and Heartfire Hero + Manifold Mouse, DSK's Optimistic Scavenger
+   with enchantments.
+3. **So for deck strength, deck-level synergy (small) is the honest answer,** as round 5 found from
+   the draft side. Rounds 5–7's seen-together pair tables mix real synergy with card flow. Use them
+   as "these cards like to be drawn together", not as synergy values.
+
+Per set: `results/<SET>/deck_synergy_v8/{results.json, hand_pairs.csv, seen_pairs.csv, *_hubs.csv,
+*_slopes.csv}` and `results/deck_synergy_v8_<SET>.log`. Pairs and hubs come from the slope + pairs fit.
 
 ## Layout
 
