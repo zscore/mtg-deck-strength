@@ -507,6 +507,8 @@ three sets at the end of each pack:
 | bag of card ids (per set) | 0.216 | 0.232 | 0.205 | 0.218 | 0.081 | 0.146 | 0.186 |
 | DraftEncoder (text) | 0.188 | 0.215 | 0.177 | 0.193 | 0.082 | 0.140 | 0.171 |
 | DraftEncoder + META | 0.211 | 0.233 | 0.194 | 0.213 | 0.086 | 0.151 | 0.188 |
+| *second seed:* bag + META | 0.215 | 0.230 | 0.204 | 0.216 | | | |
+| *second seed:* DraftEncoder + META | 0.213 | 0.235 | 0.200 | 0.216 | | | |
 
 Paired bootstrap over test drafts (`scripts/de_multiset_bootstrap.py`, 1000 resamples; differences in
 mean Spearman):
@@ -545,8 +547,10 @@ What we learned:
    against the paper's roughly 0.20–0.21. The paper's LR reaches 0.10, against its roughly 0.10–0.11.
 2. **The "2× over the linear baseline" comes from the baseline.** The same text features, summed
    instead of laid out by pick slot, score 0.207 at the last pick. That is above DraftEncoder (0.193)
-   and twice the paper's LR. With META the two tie: 0.216 vs 0.213, with the bag ahead by a small
-   margin that does hold up in the bootstrap. A per-set card-id bag (0.218) is as good as anything.
+   and twice the paper's LR. With META the two tie. The bag led 0.216 vs 0.213 with seed 0, a gap
+   the bootstrap says holds up against test noise. With a second seed it is 0.216 vs 0.216: the
+   transformer's seed-to-seed spread (0.003) is as large as the gap, and the linear model's is 0.0001.
+   A per-set card-id bag (0.218) is as good as anything.
    Text features lose almost nothing against card identity within a set.
 3. **The transformer's only edge is early in the draft.** It is slightly ahead at P1P1 and at the
    end of pack 1 (0.151 vs 0.149 with META), then falls behind by the end. Whatever it reads from
