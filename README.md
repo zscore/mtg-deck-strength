@@ -517,7 +517,28 @@ mean Spearman):
 | DraftEncoder + META − bag + META | −0.004 | [−0.007, −0.001] |
 | bag − the paper's LR | +0.104 | [+0.097, +0.113] |
 
-<!-- newset -->
+**Unseen set.** The model is trained on days 28–14 before the end of 11 sets and validated on their
+last 14 days. It is then tested on FDN's last 14 days and fine-tuned on FDN's first 4 days (3 to train,
+1 to validate, as the paper's code splits it). "4 days only" is the same model trained on those FDN
+days alone. The DraftEncoder rows and the "12k" rows use 12k training drafts per source set. The other
+linear rows use 20k. The paper's numbers are from its Table II.
+
+| model | no fine-tuning | + FDN first 4 days | FDN 4 days only | paper: none / 4 days |
+|---|---|---|---|---|
+| HEURISTIC (top-23 mean in-deck WR) | 0.117 | — | — | 0.139 / — |
+| HEURISTIC, META incl. test weeks (paper's code) | 0.147 | — | — | |
+| LR (the paper's) | 0.049 | 0.109 | 0.093 | 0.069 / 0.069 |
+| LR + META | 0.118 | 0.141 | 0.111 | 0.089 / 0.090 |
+| bag, 12k per set | 0.094 | 0.223 | 0.221 | — |
+| bag + META, 12k per set | 0.175 | 0.224 | 0.223 | — |
+| bag + META, 12k per set, META incl. test weeks | 0.190 | 0.225 | 0.224 | — |
+| bag + META, 20k per set | 0.184 | 0.219 | 0.218 | — |
+| DraftEncoder (text) | 0.075 | 0.213 | 0.204 | 0.088 / 0.164 |
+| **DraftEncoder + META** | **0.187** | **0.228** | 0.209 | 0.153 / 0.181 |
+
+A single set's 22k test drafts give each Spearman a standard error of about 0.007. Differences
+between two models on the same drafts are less noisy (about ±0.003–0.004 in the same-set
+bootstrap), so gaps under about 0.01 here are not reliable.
 
 What we learned:
 1. **We reproduce the paper's numbers.** DraftEncoder reaches 0.19 from text and 0.21 with META,
@@ -530,6 +551,25 @@ What we learned:
 3. **The transformer's only edge is early in the draft.** It is slightly ahead at P1P1 and at the
    end of pack 1 (0.151 vs 0.149 with META), then falls behind by the end. Whatever it reads from
    packs and signals is worth less than a clean sum over the final pool.
+4. **On an unseen set, DraftEncoder + META is the one clear transformer win.** It scores 0.187 with no
+   target-set data, against 0.175 for the linear bag + META on the same 12k-per-set sample. From text
+   alone, transfer is weak for every model: 0.075–0.094, as in the paper (0.088). Rules text by
+   itself doesn't tell a model which cards win.
+5. **Four days of the new set beat everything else.** Once FDN's first 3 days are available, every
+   model lands at 0.21–0.23. A linear bag trained on those days *alone* (0.221–0.223) is as good as
+   any model pretrained on 11 sets and fine-tuned. Pretraining helps the transformer (+0.009 to +0.019
+   over its own scratch run) but not the linear model. Our fine-tuned numbers sit well above the
+   paper's (0.164–0.181). We gave fine-tuning 8 epochs at lr 3e-4; the paper's code uses a fixed
+   schedule.
+6. **The paper's META leaks, and the leak is worth about +0.015–0.03.** Computing META from the
+   whole game file, test weeks included as the paper's code does, lifts the heuristic from 0.117 to
+   0.147 (the paper reports 0.139). It lifts bag + META's zero-shot score from 0.175 to 0.190. Our
+   DraftEncoder + META beats the paper's (0.187 vs 0.153) *without* the leak, probably because of the
+   training schedule and our extra META columns (play rate, deck-not-seen WR).
+7. **Practical takeaway, consistent with the deck-model sections above:** for deck strength, learn
+   per-card values linearly from whatever target-set data exists. Text and META help only before
+   that data arrives. The transformer adds at most about 0.01 (zero-shot with META) and otherwise
+   ties or loses.
 
 The wheel model predicts what the *other* seven drafters take. PickNet predicts the drafter's own pick: a
 softmax over exactly the cards in the pack (a conditional logit, as in DraftFM), conditioned on everything the

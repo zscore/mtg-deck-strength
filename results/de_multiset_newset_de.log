@@ -12,3 +12,64 @@ FIN: train 12000, val 32578
 EOE: train 12000, val 18444
 data ready [13s]  cfg {'d': 64, 'set_layers': 10, 'draft_layers': 5, 'dropout': 0.3, 'epochs': 6, 'lin_epochs': 15, 'ft_epochs': 8, 'batch': 256, 'lr': 0.0003, 'lin_lr': 0.003, 'lr_lr': 0.0001, 'wd': 0.05, 'seed': 0, 'max_minutes': 0, 'lin_grid': '', 'scratch_epochs': 10, 'per_set': 12000, 'tag': ''}
 training de: 0.76M params, 132000 train drafts
+    epoch  0 train 0.69174 val 0.69124 val_spearman 0.0489 [445s]
+    epoch  1 train 0.69112 val 0.69104 val_spearman 0.0501 [396s]
+    epoch  2 train 0.69109 val 0.69104 val_spearman 0.0447 [394s]
+    epoch  3 train 0.69101 val 0.69106 val_spearman 0.0507 [393s]
+    epoch  4 train 0.69091 val 0.69093 val_spearman 0.0642 [394s]
+    epoch  5 train 0.69077 val 0.69086 val_spearman 0.0733 [394s]
+  == de: spearman mean 0.0750 FDN 0.0750
+fine-tuning de on FDN first 4 days: 25103 train, 6243 val
+    epoch  0 train 0.68900 val 0.68892 val_spearman 0.1406 [59s]
+    epoch  1 train 0.68766 val 0.68782 val_spearman 0.1820 [58s]
+    epoch  2 train 0.68692 val 0.68777 val_spearman 0.2036 [58s]
+    epoch  3 train 0.68630 val 0.68656 val_spearman 0.2247 [58s]
+    epoch  4 train 0.68569 val 0.68666 val_spearman 0.2298 [58s]
+    epoch  5 train 0.68532 val 0.68674 val_spearman 0.2315 [58s]
+    epoch  6 train 0.68512 val 0.68648 val_spearman 0.2352 [58s]
+    epoch  7 train 0.68504 val 0.68645 val_spearman 0.2351 [58s]
+  == de:finetune4d: spearman mean 0.2131 FDN 0.2131
+from scratch de on FDN first 4 days
+    epoch  0 train 0.69002 val 0.69019 val_spearman 0.0093 [58s]
+    epoch  1 train 0.68962 val 0.68992 val_spearman 0.0658 [58s]
+    epoch  2 train 0.68874 val 0.68821 val_spearman 0.1705 [58s]
+    epoch  3 train 0.68724 val 0.68712 val_spearman 0.2149 [58s]
+    epoch  4 train 0.68631 val 0.68718 val_spearman 0.2287 [58s]
+    epoch  5 train 0.68579 val 0.68674 val_spearman 0.2333 [58s]
+    epoch  6 train 0.68537 val 0.68638 val_spearman 0.2424 [58s]
+    epoch  7 train 0.68513 val 0.68626 val_spearman 0.2421 [58s]
+    epoch  8 train 0.68493 val 0.68635 val_spearman 0.2430 [58s]
+    epoch  9 train 0.68491 val 0.68637 val_spearman 0.2432 [58s]
+  == de:scratch4d: spearman mean 0.2040 FDN 0.2040
+  [3487s, total 3500s]
+training de+meta: 0.77M params, 132000 train drafts
+    epoch  0 train 0.69127 val 0.69111 val_spearman 0.0514 [395s]
+    epoch  1 train 0.69085 val 0.69010 val_spearman 0.1382 [395s]
+    epoch  2 train 0.68898 val 0.68892 val_spearman 0.1824 [394s]
+    epoch  3 train 0.68787 val 0.68870 val_spearman 0.1986 [394s]
+    epoch  4 train 0.68734 val 0.68844 val_spearman 0.2018 [394s]
+    epoch  5 train 0.68710 val 0.68845 val_spearman 0.2024 [394s]
+  == de+meta: spearman mean 0.1868 FDN 0.1868
+fine-tuning de+meta on FDN first 4 days: 25103 train, 6243 val
+    epoch  0 train 0.68587 val 0.68623 val_spearman 0.2476 [59s]
+    epoch  1 train 0.68539 val 0.68586 val_spearman 0.2519 [58s]
+    epoch  2 train 0.68517 val 0.68587 val_spearman 0.2505 [58s]
+    epoch  3 train 0.68498 val 0.68538 val_spearman 0.2579 [58s]
+    epoch  4 train 0.68469 val 0.68564 val_spearman 0.2574 [58s]
+    epoch  5 train 0.68447 val 0.68579 val_spearman 0.2549 [58s]
+    epoch  6 train 0.68420 val 0.68567 val_spearman 0.2571 [58s]
+    epoch  7 train 0.68430 val 0.68567 val_spearman 0.2570 [58s]
+  == de+meta:finetune4d: spearman mean 0.2285 FDN 0.2285
+from scratch de+meta on FDN first 4 days
+    epoch  0 train 0.68997 val 0.69005 val_spearman 0.0382 [58s]
+    epoch  1 train 0.68965 val 0.69023 val_spearman 0.0399 [58s]
+    epoch  2 train 0.68932 val 0.68825 val_spearman 0.1507 [58s]
+    epoch  3 train 0.68766 val 0.68701 val_spearman 0.2084 [58s]
+    epoch  4 train 0.68642 val 0.68658 val_spearman 0.2297 [58s]
+    epoch  5 train 0.68583 val 0.68630 val_spearman 0.2353 [58s]
+    epoch  6 train 0.68540 val 0.68604 val_spearman 0.2451 [58s]
+    epoch  7 train 0.68532 val 0.68581 val_spearman 0.2458 [58s]
+    epoch  8 train 0.68505 val 0.68587 val_spearman 0.2467 [58s]
+    epoch  9 train 0.68488 val 0.68593 val_spearman 0.2471 [58s]
+  == de+meta:scratch4d: spearman mean 0.2089 FDN 0.2089
+  [3438s, total 6937s]

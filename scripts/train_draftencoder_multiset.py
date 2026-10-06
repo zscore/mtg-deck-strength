@@ -89,7 +89,7 @@ def build_model(kind, F, n_ids, cfg):
 def main(mode, *args):
     models = [a for a in args if "=" not in a] or ["heuristic", "lr", "lr+meta", "bag", "bag+meta", "de", "de+meta"]
     cfg = {"d": 64, "set_layers": 10, "draft_layers": 5, "dropout": 0.3, "epochs": 15, "lin_epochs": 15,
-           "ft_epochs": 10, "batch": 256, "lr": 1e-4, "lin_lr": 3e-3, "lr_lr": 1e-4, "wd": 0.05, "seed": 0, "max_minutes": 0, "lin_grid": "", "scratch_epochs": 0,
+           "ft_epochs": 10, "batch": 256, "lr": 1e-4, "lin_lr": 3e-3, "lr_lr": 1e-4, "wd": 0.05, "seed": 0, "max_minutes": 0, "lin_grid": "", "scratch_epochs": 0, "meta_all": 0, "lr_grid": "",
            "per_set": 0, "tag": ""}
     for a in args:
         if "=" in a:
@@ -128,7 +128,9 @@ def main(mode, *args):
         log(f"{name}: " + ", ".join(f"{k} {len(v)}" for k, v in win[name].items() if k != "meta_from"))
     meta, meta_raw = {}, {}
     for name, s in sets.items():
-        meta[name], meta_raw[name] = card_meta(s, win[name]["meta_from"])
+        # meta_all=1 reproduces the paper's code: META from every game of the set, test weeks included
+        src = np.arange(len(s.draft_id)) if cfg["meta_all"] else win[name]["meta_from"]
+        meta[name], meta_raw[name] = card_meta(s, src)
     log(f"data ready [{time.time() - t0:.0f}s]  cfg {cfg}")
 
     offsets = np.cumsum([0] + [sets[s].C for s in sets])
@@ -145,7 +147,7 @@ def main(mode, *args):
         t1 = time.time()
         if kind == "heuristic":  # mean in-deck (GP) win rate of the best 23 picks, as in the paper's code
             te = tasks(test_sets, "test", False)
-            evaluate("heuristic", [heuristic(t.s, t.idx, meta_raw[t.s.set][:, 2]) for t in te], te, device,
+            evaluate(f"heuristic{tag}", [heuristic(t.s, t.idx, meta_raw[t.s.set][:, 2]) for t in te], te, device,
                      results, mode)
             continue
         if kind == "bag_id" and mode != "sameset":
@@ -160,7 +162,9 @@ def main(mode, *args):
         lin_lr = cfg["lr_lr"] if kind == "lr" else cfg["lin_lr"]
         log(f"training {m}{tag}: {n_par / 1e6:.2f}M params, {sum(len(t.idx) for t in tr)} train drafts")
         # linear models: optional learning-rate grid, chosen by validation loss
-        grid = [float(x) for x in cfg["lin_grid"].split(",")] if cfg["lin_grid"] and not is_de else [None]
+        # the per-slot LR has its own grid (lr_grid): the bag models' rates make it diverge
+        g_str = cfg["lr_grid"] if kind == "lr" else cfg["lin_grid"]
+        grid = [float(x) for x in g_str.split(",")] if g_str and not is_de else [None]
         best = None
         for g in grid:
             lin_lr = g or lin_lr

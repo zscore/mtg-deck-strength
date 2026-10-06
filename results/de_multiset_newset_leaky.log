@@ -1,0 +1,118 @@
+MOM: train 12000, val 20559
+WOE: train 12000, val 32085
+LCI: train 12000, val 12874
+MKM: train 12000, val 23494
+OTJ: train 12000, val 30602
+BLB: train 12000, val 24870
+DSK: train 12000, val 32495
+FDN: test 22563, ft_train 25103, ft_val 6243
+DFT: train 12000, val 20438
+TDM: train 12000, val 17372
+FIN: train 12000, val 32578
+EOE: train 12000, val 18444
+data ready [95s]  cfg {'d': 64, 'set_layers': 10, 'draft_layers': 5, 'dropout': 0.3, 'epochs': 15, 'lin_epochs': 10, 'ft_epochs': 8, 'batch': 256, 'lr': 0.0001, 'lin_lr': 0.003, 'lr_lr': 0.0001, 'wd': 0.05, 'seed': 0, 'max_minutes': 0, 'lin_grid': '1e-3,3e-3,1e-2,3e-2', 'scratch_epochs': 10, 'meta_all': 1, 'lr_grid': '', 'per_set': 12000, 'tag': '_leakymeta'}
+  == heuristic_leakymeta: spearman mean 0.1465 FDN 0.1465
+training lr+meta_leakymeta: 1.57M params, 132000 train drafts
+    epoch  0 train 0.69772 val 0.69813 val_spearman 0.0901 [16s]
+    epoch  1 train 0.69434 val 0.69555 val_spearman 0.1017 [14s]
+    epoch  2 train 0.69004 val 0.70012 val_spearman 0.0977 [14s]
+    epoch  3 train 0.68823 val 0.69545 val_spearman 0.1052 [14s]
+    epoch  4 train 0.68431 val 0.69571 val_spearman 0.1110 [14s]
+    epoch  5 train 0.68265 val 0.69514 val_spearman 0.1124 [14s]
+    epoch  6 train 0.68086 val 0.69458 val_spearman 0.1135 [14s]
+    epoch  7 train 0.67938 val 0.69456 val_spearman 0.1137 [14s]
+    epoch  8 train 0.67825 val 0.69455 val_spearman 0.1139 [14s]
+    epoch  9 train 0.67754 val 0.69457 val_spearman 0.1140 [14s]
+  == lr+meta_leakymeta: spearman mean 0.1101 FDN 0.1101
+fine-tuning lr+meta_leakymeta on FDN first 4 days: 25103 train, 6243 val
+    epoch  0 train 0.69165 val 0.69384 val_spearman 0.1321 [2s]
+    epoch  1 train 0.68573 val 0.69416 val_spearman 0.1502 [2s]
+    epoch  2 train 0.68192 val 0.69478 val_spearman 0.1446 [2s]
+    epoch  3 train 0.67897 val 0.69513 val_spearman 0.1399 [2s]
+    epoch  4 train 0.67638 val 0.69540 val_spearman 0.1406 [2s]
+    epoch  5 train 0.67416 val 0.69544 val_spearman 0.1408 [2s]
+    epoch  6 train 0.67259 val 0.69531 val_spearman 0.1431 [2s]
+    epoch  7 train 0.67185 val 0.69534 val_spearman 0.1424 [2s]
+  == lr+meta_leakymeta:finetune4d: spearman mean 0.1374 FDN 0.1374
+from scratch lr+meta_leakymeta on FDN first 4 days
+    epoch  0 train 0.68992 val 0.69260 val_spearman 0.1183 [2s]
+    epoch  1 train 0.68555 val 0.69322 val_spearman 0.1435 [2s]
+    epoch  2 train 0.68222 val 0.69450 val_spearman 0.1379 [2s]
+    epoch  3 train 0.67975 val 0.69523 val_spearman 0.1335 [2s]
+    epoch  4 train 0.67750 val 0.69587 val_spearman 0.1349 [2s]
+    epoch  5 train 0.67544 val 0.69571 val_spearman 0.1377 [2s]
+    epoch  6 train 0.67369 val 0.69599 val_spearman 0.1367 [2s]
+    epoch  7 train 0.67235 val 0.69604 val_spearman 0.1347 [2s]
+    epoch  8 train 0.67135 val 0.69600 val_spearman 0.1346 [2s]
+    epoch  9 train 0.67084 val 0.69599 val_spearman 0.1354 [2s]
+  == lr+meta_leakymeta:scratch4d: spearman mean 0.1157 FDN 0.1157
+  [178s, total 273s]
+training bag+meta_leakymeta: 0.04M params, 132000 train drafts
+  lr 0.001
+    epoch  0 train 0.69071 val 0.68901 val_spearman 0.1783 [11s]
+    epoch  1 train 0.68859 val 0.68870 val_spearman 0.1866 [11s]
+    epoch  2 train 0.68858 val 0.68869 val_spearman 0.1956 [11s]
+    epoch  3 train 0.68808 val 0.68840 val_spearman 0.1990 [11s]
+    epoch  4 train 0.68756 val 0.68846 val_spearman 0.1997 [11s]
+    epoch  5 train 0.68749 val 0.68846 val_spearman 0.2010 [11s]
+    epoch  6 train 0.68725 val 0.68808 val_spearman 0.2026 [11s]
+    epoch  7 train 0.68711 val 0.68803 val_spearman 0.2031 [11s]
+    epoch  8 train 0.68702 val 0.68802 val_spearman 0.2036 [11s]
+    epoch  9 train 0.68696 val 0.68801 val_spearman 0.2037 [11s]
+  lr 0.003
+    epoch  0 train 0.69697 val 0.69066 val_spearman 0.1837 [11s]
+    epoch  1 train 0.69373 val 0.68986 val_spearman 0.1811 [11s]
+    epoch  2 train 0.69364 val 0.68986 val_spearman 0.1885 [11s]
+    epoch  3 train 0.69023 val 0.68882 val_spearman 0.1979 [11s]
+    epoch  4 train 0.68834 val 0.68984 val_spearman 0.2002 [11s]
+    epoch  5 train 0.68788 val 0.68854 val_spearman 0.2027 [11s]
+    epoch  6 train 0.68746 val 0.68817 val_spearman 0.2038 [11s]
+    epoch  7 train 0.68717 val 0.68811 val_spearman 0.2053 [11s]
+    epoch  8 train 0.68699 val 0.68802 val_spearman 0.2058 [11s]
+    epoch  9 train 0.68685 val 0.68798 val_spearman 0.2062 [11s]
+  lr 0.01
+    epoch  0 train 0.76525 val 0.74152 val_spearman 0.1156 [11s]
+    epoch  1 train 0.75846 val 0.70221 val_spearman 0.1648 [11s]
+    epoch  2 train 0.72914 val 0.71657 val_spearman 0.1538 [11s]
+    epoch  3 train 0.71405 val 0.69725 val_spearman 0.1863 [11s]
+    epoch  4 train 0.70264 val 0.69614 val_spearman 0.1904 [11s]
+    epoch  5 train 0.69020 val 0.68910 val_spearman 0.2011 [11s]
+    epoch  6 train 0.68799 val 0.68843 val_spearman 0.2016 [11s]
+    epoch  7 train 0.68742 val 0.68831 val_spearman 0.2052 [11s]
+    epoch  8 train 0.68709 val 0.68806 val_spearman 0.2064 [11s]
+    epoch  9 train 0.68683 val 0.68798 val_spearman 0.2069 [11s]
+  lr 0.03
+    epoch  0 train 1.13591 val 1.28753 val_spearman 0.0681 [11s]
+    epoch  1 train 1.12905 val 0.88991 val_spearman 0.1161 [11s]
+    epoch  2 train 1.02813 val 1.03697 val_spearman 0.0448 [11s]
+    epoch  3 train 0.93601 val 0.89675 val_spearman 0.1281 [11s]
+    epoch  4 train 0.85212 val 0.77108 val_spearman 0.1712 [10s]
+    epoch  5 train 0.72529 val 0.70933 val_spearman 0.1876 [10s]
+    epoch  6 train 0.69854 val 0.68902 val_spearman 0.1975 [10s]
+    epoch  7 train 0.68790 val 0.68863 val_spearman 0.2034 [10s]
+    epoch  8 train 0.68733 val 0.68816 val_spearman 0.2049 [10s]
+    epoch  9 train 0.68683 val 0.68805 val_spearman 0.2057 [10s]
+  == bag+meta_leakymeta: spearman mean 0.1897 FDN 0.1897
+fine-tuning bag+meta_leakymeta on FDN first 4 days: 25103 train, 6243 val
+    epoch  0 train 0.68629 val 0.68783 val_spearman 0.2395 [1s]
+    epoch  1 train 0.68611 val 0.68664 val_spearman 0.2434 [1s]
+    epoch  2 train 0.68568 val 0.68581 val_spearman 0.2535 [1s]
+    epoch  3 train 0.68519 val 0.68559 val_spearman 0.2580 [1s]
+    epoch  4 train 0.68472 val 0.68579 val_spearman 0.2528 [1s]
+    epoch  5 train 0.68418 val 0.68564 val_spearman 0.2575 [1s]
+    epoch  6 train 0.68389 val 0.68542 val_spearman 0.2599 [1s]
+    epoch  7 train 0.68373 val 0.68547 val_spearman 0.2577 [1s]
+  == bag+meta_leakymeta:finetune4d: spearman mean 0.2252 FDN 0.2252
+from scratch bag+meta_leakymeta on FDN first 4 days
+    epoch  0 train 0.68819 val 0.68872 val_spearman 0.2182 [1s]
+    epoch  1 train 0.68634 val 0.68701 val_spearman 0.2328 [1s]
+    epoch  2 train 0.68593 val 0.68564 val_spearman 0.2535 [1s]
+    epoch  3 train 0.68539 val 0.68575 val_spearman 0.2563 [1s]
+    epoch  4 train 0.68508 val 0.68604 val_spearman 0.2489 [1s]
+    epoch  5 train 0.68457 val 0.68562 val_spearman 0.2557 [1s]
+    epoch  6 train 0.68431 val 0.68588 val_spearman 0.2501 [1s]
+    epoch  7 train 0.68406 val 0.68546 val_spearman 0.2577 [1s]
+    epoch  8 train 0.68383 val 0.68547 val_spearman 0.2571 [1s]
+    epoch  9 train 0.68369 val 0.68542 val_spearman 0.2586 [1s]
+  == bag+meta_leakymeta:scratch4d: spearman mean 0.2238 FDN 0.2238
+  [442s, total 716s]
