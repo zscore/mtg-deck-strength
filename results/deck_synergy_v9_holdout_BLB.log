@@ -1,0 +1,42 @@
+  BLB: stage 1 done, 898354 games [0s]
+  DFT: stage 1 done, 824163 games [0s]
+  DSK: stage 1 done, 977322 games [0s]
+  EOE: stage 1 done, 563418 games [0s]
+  FDN: stage 1 done, 765317 games [0s]
+  FIN: stage 1 done, 769659 games [0s]
+  LCI: stage 1 done, 793671 games [0s]
+  MKM: stage 1 done, 919942 games [0s]
+  MSH: stage 1 done, 377376 games [0s]
+  OTJ: stage 1 done, 1132415 games [0s]
+  SOS: stage 1 done, 582712 games [0s]
+  TDM: stage 1 done, 552428 games [0s]
+  stage 2: 5827724 training games, 3787 cards, val start 0.65169
+    epoch 0 val 0.65172 [9s]
+    epoch 1 val 0.65167 [17s]
+    epoch 2 val 0.65168 [23s]
+    epoch 3 val 0.65167 [30s]
+    epoch 4 val 0.65165 [37s]
+    epoch 5 val 0.65168 [44s]
+    epoch 6 val 0.65166 [51s]
+    epoch 7 val 0.65166 [58s]
+    epoch 8 val 0.65161 [65s]
+    epoch 9 val 0.65162 [72s]
+    epoch 10 val 0.65165 [79s]
+    epoch 11 val 0.65164 [86s]
+    epoch 12 val 0.65167 [94s]
+/Users/zblanton/Documents/repos/mtg-open-lane/scripts/deck_synergy_v9.py:213: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:821.)
+  "vs stage 1 ±95%": float(1.96 * dl.std() / np.sqrt(len(dl))), "set scale": float(model.scale[i])}
+  BLB (held out): vs stage 1 +0.260 ± 0.201 x1000  (round 8 per-set -0.385)  r with round 8 pairs 0.093
+  DFT: vs stage 1 -0.317 ± 0.184 x1000  (round 8 per-set -0.906)  r with round 8 pairs 0.442
+  DSK: vs stage 1 -0.215 ± 0.159 x1000  (round 8 per-set -0.303)  r with round 8 pairs 0.421
+  EOE: vs stage 1 +0.018 ± 0.192 x1000  (round 8 per-set -0.019)  r with round 8 pairs 0.218
+  FDN: vs stage 1 -0.187 ± 0.192 x1000  (round 8 per-set -0.466)  r with round 8 pairs 0.360
+  FIN: vs stage 1 -0.112 ± 0.204 x1000  (round 8 per-set -0.312)  r with round 8 pairs 0.450
+  LCI: vs stage 1 -0.596 ± 0.214 x1000  (round 8 per-set -0.464)  r with round 8 pairs 0.484
+  MKM: vs stage 1 -0.277 ± 0.194 x1000  (round 8 per-set -0.272)  r with round 8 pairs 0.469
+  MSH: vs stage 1 +0.012 ± 0.213 x1000  (round 8 per-set +0.028)  r with round 8 pairs 0.081
+  OTJ: vs stage 1 -0.242 ± 0.132 x1000  (round 8 per-set -0.265)  r with round 8 pairs 0.433
+  SOS: vs stage 1 -0.050 ± 0.182 x1000  (round 8 per-set -0.111)  r with round 8 pairs 0.359
+  TDM: vs stage 1 -0.284 ± 0.269 x1000  (round 8 per-set -0.152)  r with round 8 pairs 0.376
+done [94s]
