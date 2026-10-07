@@ -892,6 +892,48 @@ What we learned:
 Per set: `results/<SET>/deck_synergy_v8/{results.json, hand_pairs.csv, seen_pairs.csv, *_hubs.csv,
 *_slopes.csv}` and `results/deck_synergy_v8_<SET>.log`. Pairs and hubs come from the slope + pairs fit.
 
+## Bombs and deck card strength: GIH WR vs IWD (`notebooks/bombs.ipynb`, `notebooks/bombs_packs.ipynb`)
+
+Each card is rated two ways on Premier Draft games, both shrunk toward their rarity's average (empirical Bayes):
+- **GIH WR:** the card's GIH WR minus the set's average win rate, in pp.
+- **IWD:** GIH WR minus GNS WR (games where the card was in the deck but not seen).
+
+A deck's score is the average rating of its nonbasic cards. Scores are cross-fitted: drafts are split into two halves,
+and each half is scored with ratings from the other. The analysis covers 19 sets and about 14M games. A "drafter" here
+is one draft_id. Per-set tables are in `results/bombs/*_{gih,iwd}.csv` and `wins_correlation.csv`.
+
+| | GIH WR | IWD |
+|---|---|---|
+| r, drafter deck score vs total games won (median over sets) | **0.21** | 0.13 |
+| r, all sets pooled (score standardized within set) | **0.21** | 0.12 |
+| share of true drafter win-rate variance explained (median) | **0.33** | 0.13 |
+| game win rate per +1 pp of deck score (median) | 5.4 pp | 3.4 pp |
+| bombs per set (above the Tukey upper fence, median) | 3 | 9 |
+
+What we learned:
+1. **GIH WR is the better card rating for deck strength.** Its correlation with total wins is higher on all 19
+   sets, and every difference is significant (paired bootstrap over drafts; IWD is 0.02 to 0.17 lower). The gap is
+   smallest on NEO, DFT, ECL and MSH, and largest on SOS (0.024 vs 0.196), TMT, WOE and LCI. Decks 2.5 SD above
+   their set's average win 4.75 games on average by GIH WR versus 4.25 by IWD, and IWD separates the weak decks
+   especially poorly.
+2. **The two ratings agree on cards but not on decks.** Card by card they correlate at r ≈ 0.88–0.90. Averaged
+   over a deck, that drops to a median of 0.58 (0.04 to 0.88 by set). IWD measures whether drawing a card beats
+   not drawing it in the same deck, which isn't the same as whether decks with the card win. The bomb lists differ
+   a lot too: 77 cards are bombs under both, 13 only under GIH WR, and 99 only under IWD.
+3. **By GIH WR, deck card strength explains about a third of the real spread in drafters' win rates.** The sets
+   really do differ: share explained runs 0.20–0.47, with bootstrap SEs of about 0.01–0.02, Cochran's Q = 799 on
+   18 df and I² = 0.98. It drifts up across releases, from 0.25 to 0.37 fitted (+0.66 pp per set, p = 0.02).
+   Ratings are held fixed in the bootstrap, so the true intervals are somewhat wider.
+4. **Card strength in opened packs is close to symmetric, with fat tails on both sides.** In `bombs_packs.ipynb`,
+   every card in every pick-1 pack counts once (17 sets with draft logs). Median skew is 0.03 and median excess
+   kurtosis 1.3. About 1.0% of pack cards are above the upper Tukey fence and 0.9% below the lower one, against
+   0.35% for a normal. Pooled across sets, the right tail is only about 1.2× the left. That works out to about
+   0.14 above-fence cards per pack. Sets vary a lot: ECL (2.5% above the fence), TLA, DSK and LCI have real right
+   tails, while FDN (0.1%), EOE, TMT, FIN and MSH have almost none.
+
+Filters: a card needs at least 200 games both in hand and not seen, and a draft is kept only if every game has at
+least 90% of its nonbasic deck rated. These leave the GIH WR results unchanged (median share explained is still 0.33).
+
 ## Layout
 
 ```
