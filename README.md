@@ -942,6 +942,14 @@ What we learned:
    Depth correlates +0.49 with the rare share (five of six pauper sets are shallow), and weakly with `sd C/U` (−0.22)
    and bomb count (+0.27). Results in `results/bombs/{depth_index,deep_shallow}.csv`.
 
+6. **Bomb-heavy sets don't reduce the impact of skill** (`scripts/bomb_luck.py`). One row per draft (≥ 3 games,
+   users with ≥ 100 lifetime games so the 17Lands win-rate bucket is mostly other games). Share of the true spread in
+   draft win rate explained by the skill bucket (cubic): median 0.37 (0.32 to 0.58). By bombs in the deck (0 / 1 / 2+,
+   ≥ 2.5 pp cards): median 0.033. A bomb in the deck is worth +4.0 pp of draft win rate holding skill fixed. Across
+   sets, bomb count vs skill share r = −0.21 (p = 0.40), +0.08 after detrending by release order (skill share climbs
+   with release, r = 0.86, likely partly how the bucket is computed). Bomb × skill interaction is mixed in sign and
+   near 0. Results in `results/bombs/bomb_luck.{csv,png}`.
+
 Filters: a card needs at least 200 games both in hand and not seen, and a draft is kept only if every game has at
 least 90% of its nonbasic deck rated. These leave the GIH WR results unchanged (median share explained is still 0.33).
 
