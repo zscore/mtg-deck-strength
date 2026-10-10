@@ -901,6 +901,8 @@ Each card is rated two ways on Premier Draft games, both shrunk toward their rar
 A deck's score is the average rating of its nonbasic cards. Scores are cross-fitted: drafts are split into two halves,
 and each half is scored with ratings from the other. The analysis covers 19 sets and about 14M games. A "drafter" here
 is one draft_id. Per-set tables are in `results/bombs/*_{gih,iwd}.csv` and `wins_correlation.csv`.
+The GIH WR vs IWD comparison below was removed from `bombs.ipynb` once GIH WR was chosen. It's in the notebook as of
+commit 23abce9.
 
 | | GIH WR | IWD |
 |---|---|---|
@@ -930,6 +932,15 @@ What we learned:
    0.35% for a normal. Pooled across sets, the right tail is only about 1.2× the left. That works out to about
    0.14 above-fence cards per pack. Sets vary a lot: ECL (2.5% above the fence), TLA, DSK and LCI have real right
    tails, while FDN (0.1%), EOE, TMT, FIN and MSH have almost none.
+
+5. **Deep vs shallow is its own axis, but pauper formats lean shallow** (`bombs.ipynb` section 6,
+   `scripts/depth_index.py`). Two measures in `impact` units: the gap between a deck's average card and its 3
+   weakest, scaled by the set's spread of played-card values; and `cuts`, on-color pool cards left on the bench that
+   are at least as good as the deck's 3rd-weakest card (pools capped at 13 picks per pack). They agree only loosely
+   (r = −0.34), and every set leaves spare playables on the bench in 98%+ of decks, so the sets differ in how good the
+   last cards are, not in running out. Deep: ECL, TMT, TLA, WOE, LCI, TDM. Shallow: FIN, FDN, ONE, OTJ, SOS, BLB.
+   Depth correlates +0.49 with the rare share (five of six pauper sets are shallow), and weakly with `sd C/U` (−0.22)
+   and bomb count (+0.27). Results in `results/bombs/{depth_index,deep_shallow}.csv`.
 
 Filters: a card needs at least 200 games both in hand and not seen, and a draft is kept only if every game has at
 least 90% of its nonbasic deck rated. These leave the GIH WR results unchanged (median share explained is still 0.33).
