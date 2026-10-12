@@ -37,6 +37,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/deck_synergy_v6.py MSH    # seen-together synergy: held-out test and unseen-card placebo (~5 min/set)
 .venv/bin/python scripts/deck_synergy_v7.py MSH    # final seen-together pair tables and per-card synergy hubs (~4 min/set)
 .venv/bin/python scripts/deck_synergy_v8.py MSH    # card-flow slope vs partner synergy; opening hand vs seen (~6-10 min/set)
+.venv/bin/python scripts/deck_synergy_v9.py        # opening-hand synergy from card features, shared across 12 sets (~15 min)
 .venv/bin/python scripts/picknet_report.py         # markdown tables for the two sections above
 .venv/bin/python scripts/train_wheelnet_multiset.py MSH 4 20000 with_target=1  # wheel model on 8 sets (~50 min)
 .venv/bin/python scripts/wheel_breakdown.py MSH     # wheel accuracy by the card's rank in the pack (~1 min)
@@ -812,6 +813,11 @@ What we learned:
 
 ## Deck synergy, round 6: is seen-together synergy real?
 
+> **Correction (round 8):** most of this effect is card draw, not synergy. "Seen" includes cards drawn by other cards'
+> effects, so a draw spell that resolves both shows you more cards and wins games; the placebo can't catch that. On
+> the opening hand, which is dealt before play, partner-specific synergy is −0.27 ×1000, about the size of
+> deck-level pairs. The "13×" comparison below and round 7's hub tables overstate synergy.
+
 Round 5's seen-together pairs replicated well but were never scored on held-out games, and repeatability alone could
 come from deck composition. `scripts/deck_synergy_v6.py` adds both checks. The inputs are as in round 5, with a finer
 pair penalty grid; round 5's grid had collapsed to no pairs on OTJ and EOE. Each pair model is scored on test games
@@ -834,7 +840,7 @@ What we learned:
    show up. Averaged over the deck, that is already mostly in the deck-level FM and affinity. The seen-together pair
    values are the synergy numbers to use for rating card pairs; see round 7 for the final tables.
 
-**Round 7: final tables** (`scripts/deck_synergy_v7.py`). The same model with the pair penalty grid extended down to
+**Round 7: final tables** (`scripts/deck_synergy_v7.py`; superseded by round 8, which shows most of this effect is card draw). The same model with the pair penalty grid extended down to
 3e-5. The held-out gain is unchanged (−2.43 vs −2.42 ×1000, 12/12 significant; placebo −0.05). The weakest penalty
 is now chosen on only 3 sets, so the grid brackets the optimum. From these fits:
 - `results/<SET>/deck_synergy_v7/seen_pairs.csv`: every nonland pair in ≥ 2,000 training decks, with Q (extra
@@ -892,66 +898,27 @@ What we learned:
 Per set: `results/<SET>/deck_synergy_v8/{results.json, hand_pairs.csv, seen_pairs.csv, *_hubs.csv,
 *_slopes.csv}` and `results/deck_synergy_v8_<SET>.log`. Pairs and hubs come from the slope + pairs fit.
 
-## Bombs and deck card strength: GIH WR vs IWD (`notebooks/bombs.ipynb`, `notebooks/bombs_packs.ipynb`)
+## Deck synergy, round 9: opening-hand synergy from card features, across sets
 
-Each card is rated two ways on Premier Draft games, both shrunk toward their rarity's average (empirical Bayes):
-- **GIH WR:** the card's GIH WR minus the set's average win rate, in pp.
-- **IWD:** GIH WR minus GNS WR (games where the card was in the deck but not seen).
+`scripts/deck_synergy_v9.py`. Opening-hand pairs are rare in one set's games, so round 9 pools all 12 sets: stage 1
+is each set's opening-hand model without pairs (a fixed offset), and stage 2 is one pair model shared by every set,
+reading cards only through their features (rules-text embedding, 17Lands metadata, Scryfall facts):
+Q<sub>ij</sub> = ⟨f(z<sub>i</sub>), f(z<sub>j</sub>)⟩ × a per-set scale. Test-game log loss ×1000 vs no pairs:
 
-A deck's score is the average rating of its nonbasic cards. Scores are cross-fitted: drafts are split into two halves,
-and each half is scored with ratings from the other. The analysis covers 19 sets and about 14M games. A "drafter" here
-is one draft_id. Per-set tables are in `results/bombs/*_{gih,iwd}.csv` and `wins_correlation.csv`.
-The GIH WR vs IWD comparison below was removed from `bombs.ipynb` once GIH WR was chosen. It's in the notebook as of
-commit 23abce9.
-
-| | GIH WR | IWD |
+| pair model | mean | sets better (significant) |
 |---|---|---|
-| r, drafter deck score vs total games won (median over sets) | **0.21** | 0.13 |
-| r, all sets pooled (score standardized within set) | **0.21** | 0.12 |
-| share of true drafter win-rate variance explained (median) | **0.33** | 0.13 |
-| game win rate per +1 pp of deck score (median) | 5.4 pp | 3.4 pp |
-| bombs per set (above the Tukey upper fence, median) | 3 | 9 |
+| per-set free pairs (round 8) | −0.30 | 11/12 (8) |
+| **shared, from card features** | −0.20 | 11/12 (6) |
+| shared, set held out (day zero): DFT / BLB / LCI | +0.75 / +0.26 / −0.24 | 1/3 |
 
-What we learned:
-1. **GIH WR is the better card rating for deck strength.** Its correlation with total wins is higher on all 19
-   sets, and every difference is significant (paired bootstrap over drafts; IWD is 0.02 to 0.17 lower). The gap is
-   smallest on NEO, DFT, ECL and MSH, and largest on SOS (0.024 vs 0.196), TMT, WOE and LCI. Decks 2.5 SD above
-   their set's average win 4.75 games on average by GIH WR versus 4.25 by IWD, and IWD separates the weak decks
-   especially poorly.
-2. **The two ratings agree on cards but not on decks.** Card by card they correlate at r ≈ 0.88–0.90. Averaged
-   over a deck, that drops to a median of 0.58 (0.04 to 0.88 by set). IWD measures whether drawing a card beats
-   not drawing it in the same deck, which isn't the same as whether decks with the card win. The bomb lists differ
-   a lot too: 77 cards are bombs under both, 13 only under GIH WR, and 99 only under IWD.
-3. **By GIH WR, deck card strength explains about a third of the real spread in drafters' win rates.** The sets
-   really do differ: share explained runs 0.20–0.47, with bootstrap SEs of about 0.01–0.02, Cochran's Q = 799 on
-   18 df and I² = 0.98. It drifts up across releases, from 0.25 to 0.37 fitted (+0.66 pp per set, p = 0.02).
-   Ratings are held fixed in the bootstrap, so the true intervals are somewhat wider.
-4. **Card strength in opened packs is close to symmetric, with fat tails on both sides.** In `bombs_packs.ipynb`,
-   every card in every pick-1 pack counts once (17 sets with draft logs). Median skew is 0.03 and median excess
-   kurtosis 1.3. About 1.0% of pack cards are above the upper Tukey fence and 0.9% below the lower one, against
-   0.35% for a normal. Pooled across sets, the right tail is only about 1.2× the left. That works out to about
-   0.14 above-fence cards per pack. Sets vary a lot: ECL (2.5% above the fence), TLA, DSK and LCI have real right
-   tails, while FDN (0.1%), EOE, TMT, FIN and MSH have almost none.
-
-5. **Deep vs shallow is its own axis, but pauper formats lean shallow** (`bombs.ipynb` section 6,
-   `scripts/depth_index.py`). Two measures in `impact` units: the gap between a deck's average card and its 3
-   weakest, scaled by the set's spread of played-card values; and `cuts`, on-color pool cards left on the bench that
-   are at least as good as the deck's 3rd-weakest card (pools capped at 13 picks per pack). They agree only loosely
-   (r = −0.34), and every set leaves spare playables on the bench in 98%+ of decks, so the sets differ in how good the
-   last cards are, not in running out. Deep: ECL, TMT, TLA, WOE, LCI, TDM. Shallow: FIN, FDN, ONE, OTJ, SOS, BLB.
-   Depth correlates +0.49 with the rare share (five of six pauper sets are shallow), and weakly with `sd C/U` (−0.22)
-   and bomb count (+0.27). Results in `results/bombs/{depth_index,deep_shallow}.csv`.
-
-6. **Bomb-heavy sets don't reduce the impact of skill** (`scripts/bomb_luck.py`). One row per draft (≥ 3 games,
-   users with ≥ 100 lifetime games so the 17Lands win-rate bucket is mostly other games). Share of the true spread in
-   draft win rate explained by the skill bucket (cubic): median 0.37 (0.32 to 0.58). By bombs in the deck (0 / 1 / 2+,
-   ≥ 2.5 pp cards): median 0.033. A bomb in the deck is worth +4.0 pp of draft win rate holding skill fixed. Across
-   sets, bomb count vs skill share r = −0.21 (p = 0.40), +0.08 after detrending by release order (skill share climbs
-   with release, r = 0.86, likely partly how the bucket is computed). Bomb × skill interaction is mixed in sign and
-   near 0. Results in `results/bombs/bomb_luck.{csv,png}`.
-
-Filters: a card needs at least 200 games both in hand and not seen, and a draft is kept only if every game has at
-least 90% of its nonbasic deck rated. These leave the GIH WR results unchanged (median share explained is still 0.33).
+1. **Card features carry part of the synergy, not most.** The shared pairs correlate 0.1–0.45 with each set's own pairs
+   and gain less than per-set pairs.
+2. **Day-zero synergy fails.** On a set it never trained on, the shared model's pairs barely match that set's real
+   pairs (r 0.03–0.09). It hurts DFT and BLB, and helps only LCI. (The held-out set's scale is set to the trained
+   sets' mean; the first run left it at 1.0 for all 12 sets, kept in `results/deck_synergy_v9/holdout_scale1/`.)
+3. **Where synergy stands.** Clean card synergy is real but small (about −0.3 ×1000 per set), comparable to deck-level
+   pairs, and has to be learned within each set. Going further needs replay data for more sets (which cards were
+   cast together, and when); only MSH has it here.
 
 ## Layout
 
@@ -973,6 +940,7 @@ scripts/                  build_dataset.py, train.py, train_nn.py, train_deckstr
                           card_text_embeddings.py, deck_synergy_v2.py, deck_synergy_v3.py,
                           deck_synergy_v4.py, deck_synergy_v4_draft.py,
                           deck_synergy_v5.py, deck_synergy_v6.py, deck_synergy_v7.py,
+                          deck_synergy_v8.py, deck_synergy_v9.py,
                           train_wheelnet_multiset.py, wheel_breakdown.py, open_lane.py, force_vs_follow.py
 results/<SET>.<EVENT>/    results.json, predictions, models (gitignored)
 scripts/archive/, notebooks/archive/, results/archive/   dead ends and superseded work (see WRITEUP.md)
