@@ -34,11 +34,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from deck_synergy_v2 import mean_pair, nll, pick_affinity  # noqa: E402
 from deck_synergy_v5 import SeenFM, pair_matrix, train  # noqa: E402
-from openlane.cardinfo import card_info, deck_features  # noqa: E402
-from openlane.data import ROOT  # noqa: E402
-from openlane.deckstrength import (aligned, covariates, experience, flag, game_split, load_drafts,  # noqa: E402
-                                   record_before, record_onehot)
-from openlane.games import game_path  # noqa: E402
+from mtgdata.cardinfo import card_info, deck_features  # noqa: E402
+from mtgdata.games import aligned, flag, game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import (covariates, experience, game_split, load_drafts, record_before, record_onehot)  # noqa: E402
 
 MIN_CO = 2000
 L2V = (3e-5, 1e-4, 3e-4)

@@ -28,12 +28,13 @@ from scipy.stats import spearmanr
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from deck_synergy_v2 import mean_pair, nll, pick_affinity  # noqa: E402
-from openlane.cardinfo import card_info, deck_features  # noqa: E402
-from openlane.data import COLORS, ROOT  # noqa: E402
-from openlane.deckstrength import (N_RANKS, aligned, binomial_logreg, covariates, experience, flag,  # noqa: E402
-                                   game_split, load_drafts, most_played_deck, record_before, record_onehot)
-from openlane.games import game_path  # noqa: E402
-from openlane.synergy import fit  # noqa: E402
+from mtgdata.cardinfo import card_info, deck_features  # noqa: E402
+from mtgdata.data import COLORS  # noqa: E402
+from mtgdata.games import aligned, flag, game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import (N_RANKS, binomial_logreg, covariates, experience, game_split, load_drafts,  # noqa: E402
+                                most_played_deck, record_before, record_onehot)
+from decks.synergy import fit  # noqa: E402
 
 
 def pmi(X, nonland, sp):

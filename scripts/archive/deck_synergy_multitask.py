@@ -23,12 +23,13 @@ import torch
 from sklearn.metrics import log_loss, roc_auc_score
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
-from openlane.data import ROOT, card_metadata  # noqa: E402
-from openlane.deckstrength import (aligned, covariates, event_split, experience, flag, game_split,  # noqa: E402
-                                   load_drafts, record_before, record_onehot)
-from openlane.games import game_path  # noqa: E402
-from openlane.nn import card_features  # noqa: E402
-from openlane.synergy import fit, fit_transformer  # noqa: E402
+from mtgdata.data import card_metadata  # noqa: E402
+from mtgdata.encode import card_features  # noqa: E402
+from mtgdata.games import aligned, flag, game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import (covariates, event_split, experience, game_split, load_drafts, record_before,  # noqa: E402
+                                record_onehot)
+from decks.synergy import fit, fit_transformer  # noqa: E402
 
 EVENTS = ("PremierDraft", "Sealed")
 

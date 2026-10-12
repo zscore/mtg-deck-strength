@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from openlane.data import ROOT  # noqa: E402
+from decks import ROOT  # noqa: E402
 
 OUT = ROOT / "results" / "draftencoder_multiset"
 LABEL = {"heuristic": "HEURISTIC (top-23 mean in-deck WR)", "lr": "LR (paper's, order-dependent)",

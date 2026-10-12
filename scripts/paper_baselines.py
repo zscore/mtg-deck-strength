@@ -15,10 +15,10 @@ import polars as pl
 from scipy import sparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from openlane.data import ROOT, download  # noqa: E402
-from openlane.deckstrength import (N_RANKS, binomial_logreg, deck_metrics, load_drafts,  # noqa: E402
-                                   most_played_deck)
-from openlane.games import game_path  # noqa: E402
+from mtgdata.data import download  # noqa: E402
+from mtgdata.games import game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import N_RANKS, binomial_logreg, deck_metrics, load_drafts, most_played_deck  # noqa: E402
 
 C_GRID = (0.0003, 0.001, 0.003, 0.01)
 

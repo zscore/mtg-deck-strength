@@ -33,12 +33,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from deck_synergy_v2 import mean_pair, nll, pick_affinity  # noqa: E402
 from deck_synergy_v8 import SlopeSeenFM  # noqa: E402
 from deck_synergy_v5 import train  # noqa: E402
-from openlane.cardinfo import card_info, card_matrix, deck_features  # noqa: E402
-from openlane.data import ROOT, card_metadata  # noqa: E402
-from openlane.deckstrength import (aligned, covariates, experience, flag, game_split, load_drafts,  # noqa: E402
-                                   record_before, record_onehot)
-from openlane.games import game_path  # noqa: E402
-from openlane.nn import card_features  # noqa: E402
+from mtgdata.cardinfo import card_info, card_matrix, deck_features  # noqa: E402
+from mtgdata.data import FEATURES, card_metadata  # noqa: E402
+from mtgdata.encode import card_features  # noqa: E402
+from mtgdata.games import aligned, flag, game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import (covariates, experience, game_split, load_drafts, record_before, record_onehot)  # noqa: E402
 
 SETS = ["BLB", "DFT", "DSK", "EOE", "FDN", "FIN", "LCI", "MKM", "MSH", "OTJ", "SOS", "TDM"]
 HAND = 7
@@ -98,7 +98,7 @@ def stage1(s):
     keep = pos < HAND
     tok[r[keep], pos[keep]] = c[keep]
     feats = np.hstack([card_features(card_metadata(names, s)), card_matrix(info),
-                       np.load(ROOT / "data" / "features" / f"{s}.PremierDraft" / "text_emb.npy")]).astype(np.float32)
+                       np.load(FEATURES / f"{s}.PremierDraft" / "text_emb.npy")]).astype(np.float32)
     Pd = (X[tr] * nonland > 0).astype(np.float32)
     co = Pd.T @ Pd
     return dict(tok=tok, off=off, y=y, sp=sp, feats=feats, names=names, nonland=nonland, co=co)

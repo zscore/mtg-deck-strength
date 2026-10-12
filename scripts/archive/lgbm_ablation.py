@@ -12,9 +12,9 @@ import polars as pl
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from improve_deck import fit_lgbm, structure_features  # noqa: E402
-from openlane.data import ROOT  # noqa: E402
-from openlane.deckstrength import deck_metrics, load_drafts, most_played_deck  # noqa: E402
-from openlane.games import game_path  # noqa: E402
+from mtgdata.games import game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import deck_metrics, load_drafts, most_played_deck  # noqa: E402
 
 for s in sys.argv[1:]:
     d = load_drafts(s)

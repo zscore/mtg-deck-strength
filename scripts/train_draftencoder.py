@@ -15,12 +15,12 @@ import polars as pl
 from scipy import sparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from openlane.data import COLORS, RARITIES, ROOT, card_metadata  # noqa: E402
-from openlane.deckstrength import (N_RANKS, binomial_logreg, calibrate, deck_metrics,  # noqa: E402
-                                   game_split, game_win_rates, load_drafts, most_played_deck,
-                                   top_k_mean)
-from openlane.draftencoder import pack_tokens, train  # noqa: E402
-from openlane.games import game_path  # noqa: E402
+from mtgdata.data import COLORS, FEATURES, RARITIES, card_metadata  # noqa: E402
+from mtgdata.games import game_win_rates, game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import (N_RANKS, binomial_logreg, calibrate, deck_metrics, game_split, load_drafts,  # noqa: E402
+                                most_played_deck, top_k_mean)
+from decks.draftencoder import pack_tokens, train  # noqa: E402
 
 C_GRID = (0.003, 0.01, 0.03, 0.1)
 
@@ -74,7 +74,7 @@ def main(set_code: str, *runs: str, event: str = "PremierDraft"):
     nn_runs = [x for x in runs if x != "linear"]
     if not nn_runs:
         return
-    cache = ROOT / "data" / "features" / f"{set_code}.{event}" / "draftencoder_tokens.npz"
+    cache = FEATURES / f"{set_code}.{event}" / "draftencoder_tokens.npz"
     if cache.exists():
         z = np.load(cache)
         packs, pick_pos = z["packs"], z["pick_pos"]

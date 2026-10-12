@@ -13,9 +13,9 @@ from scipy.special import expit, logit
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from improve_deck import fit_draft_model, fit_lgbm, structure_features  # noqa: E402
-from openlane.data import ROOT  # noqa: E402
-from openlane.deckstrength import N_RANKS, deck_metrics, load_drafts, most_played_deck  # noqa: E402
-from openlane.games import game_path  # noqa: E402
+from mtgdata.games import game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import N_RANKS, deck_metrics, load_drafts, most_played_deck  # noqa: E402
 
 for s in sys.argv[1:]:
     out_dir = ROOT / "results" / f"{s}.PremierDraft" / "draftencoder"

@@ -30,12 +30,12 @@ import torch.nn as nn
 import torch.nn.functional as F
 from scipy.stats import spearmanr
 
-from .data import ROOT
-from .deckstrength import N_RANKS, aligned, flag, load_drafts, shrunk_rate
-from .draftencoder import DraftBlock, pack_tokens
-from .games import game_path
+from mtgdata.data import FEATURES as FEAT
+from mtgdata.games import aligned, flag, game_path, shrunk_rate
 
-FEAT = ROOT / "data" / "features"
+from .deckstrength import N_RANKS, load_drafts
+from .draftencoder import DraftBlock, pack_tokens
+
 META_COLS = ("oh_wr", "gd_wr", "gp_wr", "gih_wr", "gns_wr", "log_play")
 
 

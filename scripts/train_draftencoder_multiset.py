@@ -23,10 +23,10 @@ import numpy as np
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from openlane.data import ROOT  # noqa: E402
-from openlane.de_multiset import (DraftEncoderMS, LinearMS, SetData, Task, card_meta, fit,  # noqa: E402
-                                  heuristic, predict, spearman, weighted_nll)
-from openlane.deckstrength import binomial_nll  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.de_multiset import (DraftEncoderMS, LinearMS, SetData, Task, card_meta, fit, heuristic, predict,  # noqa: E402
+                               spearman, weighted_nll)
+from decks.deckstrength import binomial_nll  # noqa: E402
 
 ALL12 = ["MOM", "WOE", "LCI", "MKM", "OTJ", "BLB", "DSK", "FDN", "DFT", "TDM", "FIN", "EOE"]
 SAMESET = ["BLB", "FDN", "TDM"]

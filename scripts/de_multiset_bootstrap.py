@@ -17,7 +17,7 @@ from scipy.stats import rankdata
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from openlane.de_multiset import SetData, Task, card_meta, predict  # noqa: E402
+from decks.de_multiset import SetData, Task, card_meta, predict  # noqa: E402
 from train_draftencoder_multiset import OUT, SAMESET, build_model, feats, finished, text_norm  # noqa: E402
 
 MODELS = ["lr", "lr+meta", "bag", "bag+meta", "bag_id", "de", "de+meta"]

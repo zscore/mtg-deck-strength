@@ -16,8 +16,9 @@ import numpy as np
 import polars as pl
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from openlane.cardinfo import _scryfall  # noqa: E402
-from openlane.data import PARQUET, ROOT, card_metadata  # noqa: E402
+from mtgdata.cardinfo import _scryfall  # noqa: E402
+from mtgdata.data import FEATURES, PARQUET, card_metadata  # noqa: E402
+from decks import ROOT  # noqa: E402
 
 # google/embeddinggemma-300m is gated on the Hub; the mirrors carry the same weights
 MODELS = ("google/embeddinggemma-300m", "unsloth/embeddinggemma-300m")
@@ -83,7 +84,7 @@ def main(*sets):
         texts = [card_string(sc[n], rarity[n]) if n in sc else f"[NAME] {n} [RARITY] {rarity[n]}" for n in names]
         emb = model.encode([PROMPT + t for t in texts], batch_size=16, normalize_embeddings=True,
                            show_progress_bar=False)
-        d = ROOT / "data" / "features" / f"{s}.PremierDraft"
+        d = FEATURES / f"{s}.PremierDraft"
         d.mkdir(parents=True, exist_ok=True)
         np.save(d / "text_emb_gemma.npy", emb.astype(np.float32))
         (d / "card_strings.txt").write_text("\n".join(texts))

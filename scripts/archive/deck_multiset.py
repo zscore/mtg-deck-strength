@@ -29,13 +29,13 @@ import torch.nn.functional as F
 from sklearn.metrics import log_loss
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
-from openlane.cardinfo import card_info, card_matrix, deck_features  # noqa: E402
-from openlane.data import ROOT, card_metadata  # noqa: E402
-from openlane.deckstrength import (aligned, covariates, experience, flag, game_split, load_drafts,  # noqa: E402
-                                   record_before, record_onehot)
-from openlane.games import game_path  # noqa: E402
-from openlane.nn import card_features  # noqa: E402
-from openlane.synergy import fit  # noqa: E402
+from mtgdata.cardinfo import card_info, card_matrix, deck_features  # noqa: E402
+from mtgdata.data import FEATURES, card_metadata  # noqa: E402
+from mtgdata.encode import card_features  # noqa: E402
+from mtgdata.games import aligned, flag, game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import (covariates, experience, game_split, load_drafts, record_before, record_onehot)  # noqa: E402
+from decks.synergy import fit  # noqa: E402
 
 SETS = ["MSH", "BLB", "DFT", "DSK", "FDN", "FIN", "LCI", "MKM", "OTJ", "EOE", "SOS", "TDM"]
 DEV = "mps" if torch.backends.mps.is_available() else "cpu"
@@ -74,7 +74,7 @@ def load_set(s, deck_feats, per_set, rng):
     with torch.no_grad():
         off = (m(torch.from_numpy(X), torch.from_numpy(ctx))).numpy()
     feats = np.hstack([card_features(card_metadata(names, s)), card_matrix(info),
-                       np.load(ROOT / "data" / "features" / f"{s}.PremierDraft" / "text_emb.npy")]).astype(np.float32)
+                       np.load(FEATURES / f"{s}.PremierDraft" / "text_emb.npy")]).astype(np.float32)
     keep = {0: np.flatnonzero(sp == 0), 1: np.flatnonzero(sp == 1), 2: np.flatnonzero(sp == 2)}
     if per_set and len(keep[0]) > per_set:
         keep[0] = np.sort(rng.choice(keep[0], per_set, replace=False))

@@ -35,12 +35,13 @@ import torch.nn as nn
 from sklearn.metrics import log_loss, roc_auc_score
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from openlane.cardinfo import card_info, deck_features  # noqa: E402
-from openlane.data import PARQUET, ROOT  # noqa: E402
-from openlane.deckstrength import (aligned, calibrate, covariates, deck_metrics, experience, flag,  # noqa: E402
-                                   game_split, load_drafts, most_played_deck, record_before, record_onehot)
-from openlane.games import game_path  # noqa: E402
-from openlane.synergy import DeckFM, _train, fit  # noqa: E402
+from mtgdata.cardinfo import card_info, deck_features  # noqa: E402
+from mtgdata.data import PARQUET  # noqa: E402
+from mtgdata.games import aligned, flag, game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import (calibrate, covariates, deck_metrics, experience, game_split, load_drafts,  # noqa: E402
+                                most_played_deck, record_before, record_onehot)
+from decks.synergy import DeckFM, _train, fit  # noqa: E402
 
 
 def nll(y, p):
@@ -54,7 +55,7 @@ def pick_affinity(set_code: str, names: list[str]):
     path = ROOT / "results" / f"{set_code}.PremierDraft" / "picknet" / "models" / "pool_d32.pt"
     if not path.exists():
         return None
-    from openlane.picknet import load_model
+    from picknet.model import load_model
     cols = pl.scan_parquet(PARQUET / f"{set_code}.PremierDraft.parquet").collect_schema().names()
     pick_names = [c[len("pack_card_"):] for c in cols if c.startswith("pack_card_")]
     m, _ = load_model(path)

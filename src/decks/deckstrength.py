@@ -23,15 +23,11 @@ from scipy import sparse
 from scipy.stats import spearmanr
 from sklearn.linear_model import LogisticRegression
 
-from .data import RANK_ORDER, download
+from mtgdata.data import RANK_ORDER, download
+from mtgdata.games import aligned, flag
 
 SPLITS = ("train", "val", "test")
 N_RANKS = len(RANK_ORDER) + 1  # + unknown
-
-
-def flag(s: pl.Series) -> np.ndarray:
-    """"True"/"False" strings (as stored in game/replay files) or booleans -> bool array."""
-    return (s.cast(pl.Utf8) == "True").to_numpy() if s.dtype != pl.Boolean else s.to_numpy()
 
 
 def rank_index(s: pl.Series) -> np.ndarray:
@@ -103,16 +99,6 @@ def event_split(games: pl.DataFrame, frac=(0.70, 0.85)) -> np.ndarray:
     return np.array([m[x] for x in games["draft_id"].to_list()], dtype=np.int8)
 
 
-def aligned(df: pl.DataFrame, prefix: str, names: list[str]) -> np.ndarray:
-    """[rows, C] int8 matrix of `prefix + name` columns, zeros for names the file lacks."""
-    out = np.zeros((df.height, len(names)), dtype=np.int8)
-    for j, n in enumerate(names):
-        c = prefix + n
-        if c in df.columns:
-            out[:, j] = df[c].fill_null(0).to_numpy()
-    return out
-
-
 def most_played_deck(d: Drafts, games: pl.DataFrame) -> tuple[np.ndarray, np.ndarray]:
     """[D, C] deck counts (lands included) of each draft's most-played build, and a has-deck mask."""
     builds = (games.with_row_index("i")
@@ -128,20 +114,6 @@ def most_played_deck(d: Drafts, games: pl.DataFrame) -> tuple[np.ndarray, np.nda
 
 
 # ---------------------------------------------------------------- card values
-
-def shrunk_rate(wins: np.ndarray, n: np.ndarray, prior: float, m: float = 200.0) -> np.ndarray:
-    return (wins + m * prior) / (n + m)
-
-
-def game_win_rates(games: pl.DataFrame, names: list[str]) -> dict[str, np.ndarray]:
-    """GP WR (card in deck) and GIH WR (card in opening hand or drawn), shrunk to the mean."""
-    won = flag(games["won"]).astype(np.float64)
-    deck = aligned(games, "deck_", names) > 0
-    hand = (aligned(games, "opening_hand_", names) + aligned(games, "drawn_", names)) > 0
-    base = won.mean()
-    return {"gp_wr": shrunk_rate(won @ deck, deck.sum(0), base),
-            "gih_wr": shrunk_rate(won @ hand, hand.sum(0), base)}
-
 
 def covariates(games: pl.DataFrame) -> np.ndarray:
     """Game context, not deck: play/draw, mulligans, user skill bucket, user and opponent rank."""

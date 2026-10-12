@@ -25,9 +25,9 @@ from scipy.special import expit, logit
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from improve_deck import LGB_PARAMS, structure_features  # noqa: E402
-from openlane.data import ROOT  # noqa: E402
-from openlane.deckstrength import binomial_nll, calibrate, deck_metrics, load_drafts, most_played_deck  # noqa: E402
-from openlane.games import game_path  # noqa: E402
+from mtgdata.games import game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import binomial_nll, calibrate, deck_metrics, load_drafts, most_played_deck  # noqa: E402
 
 
 def lgbm(X, d, tr, va, init=None):

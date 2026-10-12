@@ -18,11 +18,10 @@ import torch
 from sklearn.metrics import log_loss, roc_auc_score
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from openlane.data import ROOT  # noqa: E402
-from openlane.deckstrength import (aligned, calibrate, covariates, deck_metrics, flag,  # noqa: E402
-                                   game_split, load_drafts, most_played_deck)
-from openlane.games import game_path  # noqa: E402
-from openlane.synergy import fit  # noqa: E402
+from mtgdata.games import aligned, flag, game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import (calibrate, covariates, deck_metrics, game_split, load_drafts, most_played_deck)  # noqa: E402
+from decks.synergy import fit  # noqa: E402
 
 
 def main(set_code: str, event: str = "PremierDraft"):

@@ -28,11 +28,11 @@ from scipy import sparse
 from scipy.special import expit, logit
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from openlane.data import COLORS, ROOT, card_metadata, download_cards  # noqa: E402
-from openlane.deckstrength import (N_RANKS, aligned, binomial_logreg, calibrate, covariates,  # noqa: E402
-                                   deck_metrics, flag, game_split, game_win_rates, load_drafts,
-                                   most_played_deck)
-from openlane.games import game_path  # noqa: E402
+from mtgdata.data import COLORS, card_metadata, download_cards  # noqa: E402
+from mtgdata.games import aligned, flag, game_win_rates, game_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import (N_RANKS, binomial_logreg, calibrate, covariates, deck_metrics, game_split,  # noqa: E402
+                                load_drafts, most_played_deck)
 
 C_GRID = (0.003, 0.01, 0.03, 0.1)
 LGB_PARAMS = dict(objective="binary", learning_rate=0.03, num_leaves=15, min_data_in_leaf=300,
@@ -101,7 +101,7 @@ def game_fm_scores(set_code: str, event: str) -> np.ndarray:
     """
     import torch
 
-    from openlane.synergy import fit
+    from decks.synergy import fit
     torch.set_num_threads(4)
     d = load_drafts(set_code, event)
     games = pl.read_parquet(game_path(set_code, event))

@@ -27,7 +27,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from .data import load_tensors
+from mtgdata.data import load_tensors
 from .deckstrength import N_RANKS, Drafts, binomial_nll
 
 SIZES = {

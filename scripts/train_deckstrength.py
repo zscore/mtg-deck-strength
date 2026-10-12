@@ -17,11 +17,12 @@ from scipy import sparse
 from sklearn.metrics import log_loss, roc_auc_score
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from openlane.data import COLORS, RARITIES, ROOT, card_metadata  # noqa: E402
-from openlane.deckstrength import (N_RANKS, aligned, flag, binomial_logreg, calibrate, covariates,  # noqa: E402
-                                   deck_metrics, design, fit_logreg, game_split, game_win_rates,
-                                   load_drafts, most_played_deck, top_k_mean, train_pool_encoder)
-from openlane.games import cast_matrix, game_path, replay_path  # noqa: E402
+from mtgdata.data import COLORS, RARITIES, card_metadata  # noqa: E402
+from mtgdata.games import aligned, flag, game_win_rates, cast_matrix, game_path, replay_path  # noqa: E402
+from decks import ROOT  # noqa: E402
+from decks.deckstrength import (N_RANKS, binomial_logreg, calibrate, covariates, deck_metrics, design,  # noqa: E402
+                                fit_logreg, game_split, load_drafts, most_played_deck, top_k_mean,
+                                train_pool_encoder)
 
 CUTOFFS = (3, 5, 8, 30)
 C_GRID = (0.01, 0.03, 0.1, 0.3, 1.0)
