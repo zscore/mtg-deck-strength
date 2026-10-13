@@ -72,6 +72,9 @@ td.num{text-align:right;white-space:nowrap}
 .tip{position:fixed;pointer-events:none;z-index:20;background:var(--surface);color:var(--ink);border:1px solid var(--rule);
   border-radius:6px;padding:8px 10px;font-size:13px;line-height:1.45;box-shadow:0 4px 16px rgba(0,0,0,.16);max-width:300px}
 .tip b{font-weight:600}
+.art{border-radius:4px;background-color:var(--grid);background-repeat:no-repeat;margin-bottom:6px}
+.arts{display:flex;gap:6px}
+.artist{font-size:11px;color:var(--ink-3);margin:-3px 0 4px}
 .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--ink-2);align-items:center}
 .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
 .sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
@@ -228,13 +231,16 @@ footer p{font-size:13px}
       replicate it at r ≈ 0.78. Pairs: <code>deck_synergy_v8/hand_pairs.csv</code>, a rank-4 pair model on opening
       hands fitted on top of a per-card slope, so card draw can't drive it. Axes:
       <code>deck_synergy_v8/hand_axes.csv</code>. Pair log-odds are shown as win-rate points at a 50% baseline (Q × 25).
-      Built by <code>scripts/build_card_atlas.py</code>.</p>
+      Built by <code>scripts/build_card_atlas.py</code>. Card art © Wizards of the Coast, via Scryfall; each tooltip
+      names the artist.</p>
   </footer>
 </div>
 <div class="tip" id="tip" hidden></div>
 
 <script>
 const D=/*__DATA__*/null;
+const ART=/*__ART__*/null;
+const ART_CDN=/*__CDN__*/false;  // standalone site: Scryfall's CDN; Artifact: bundled sprite sheets
 const SETS=Object.keys(D);
 const NS="http://www.w3.org/2000/svg";
 const RAR={C:"Common",U:"Uncommon",R:"Rare",M:"Mythic",S:"Special","?":"Unknown"};
@@ -266,7 +272,16 @@ document.querySelectorAll("[data-tip]").forEach(b=>{
   b.addEventListener("click",e=>{e.stopPropagation();tip.hidden?show():hideTip()});
 });
 addEventListener("scroll",hideTip,{passive:true});
-function cardTip(c){return `<b>${esc(c.name)}</b><br>${RAR[c.rarity]||c.rarity} · ${colorName(c.colors)}<br>Opening-hand value <b>${fmt(c.hv)} pp</b> ± ${(1.96*c.se).toFixed(1)}<br>GIH WR ${c.gih??"–"}%<br>${c.games.toLocaleString()} opening hands`}
+function cardTip(c,set=cur){return art(c.name,set)+`<b>${esc(c.name)}</b><br>${RAR[c.rarity]||c.rarity} · ${colorName(c.colors)}<br>Opening-hand value <b>${fmt(c.hv)} pp</b> ± ${(1.96*c.se).toFixed(1)}<br>GIH WR ${c.gih??"–"}%<br>${c.games.toLocaleString()} opening hands`}
+function art(name,set=cur,scale=1){
+  const m=ART&&ART.sets[set]&&ART.sets[set][name];if(!m)return"";
+  const[tw,th]=ART.tile,k=m[0],w=tw*scale,h=th*scale;
+  const credit=scale===1&&m[1]?`<div class="artist">Art: ${esc(m[1])}</div>`:"";
+  if(ART_CDN)return `<img class="art" src="${esc(m[2])}" alt="Art for ${esc(name)}" width="${w}" height="${h}" style="object-fit:cover;display:block">`+credit;
+  return `<div class="art" role="img" aria-label="Art for ${esc(name)}" style="width:${w}px;height:${h}px;background-image:url(art/${set}.jpg);background-size:${ART.cols*w}px auto;background-position:-${(k%ART.cols)*w}px -${Math.floor(k/ART.cols)*h}px"></div>`+credit;
+}
+function preloadArt(set){if(ART&&ART.sets[set]&&!ART_CDN){const i=new Image();i.src=`art/${set}.jpg`}}
+function bindHtmlTip(node,fn){node.addEventListener("mousemove",e=>showTip(e,fn()));node.addEventListener("mouseleave",hideTip)}
 const colorName=c=>c?c.split("").map(x=>CNAME[x]||x).join("-"):"Colourless";
 
 // a card dot: mono fill, black as ring, two colours split, 3+ grey
@@ -287,7 +302,7 @@ function pips(g,x,y,colors){const cs=colors?colors.split(""):[""];cs.forEach((c,
 // set chips
 const chips=document.getElementById("chips");
 SETS.forEach(s=>{const b=document.createElement("button");b.className="chip";b.textContent=s;b.id="chip-"+s;b.type="button";b.onclick=()=>select(s);chips.appendChild(b)});
-function select(s){cur=s;pinned=null;try{localStorage.setItem("atlas-set",s)}catch(e){}history.replaceState(null,"","#"+s);render()}
+function select(s){cur=s;pinned=null;preloadArt(s);try{localStorage.setItem("atlas-set",s)}catch(e){}history.replaceState(null,"","#"+s);render()}
 addEventListener("hashchange",()=>{const h=fromHash();if(h&&h!==cur)select(h)});
 
 // ---------- card power ----------
@@ -308,7 +323,7 @@ function drawOverview(){
     txt(row,8,y+4,s,{class:on?"strong":""}).style.fontFamily="var(--display)";
     D[s].cards.forEach((c,j)=>{const jit=((j*7919)%13-6)*1.3;
       const d=el("circle",{cx:x(c.hv),cy:y+jit,r:on?3.2:2.6,fill:on?"var(--sel)":"var(--dot)","fill-opacity":on?.75:.6},row);
-      bindTip(d,()=>`<b>${s}</b> · `+cardTip(c))});
+      bindTip(d,()=>cardTip(c,s).replace("<b>",`<b>${s}</b> · <b>`))});
     const top=D[s].cards[0];
     el("circle",{cx:x(top.hv),cy:y,r:4.5,fill:"none",stroke:"var(--ink)","stroke-width":1.5},row);
     txt(row,W-R+14,y+4,`${trunc(top.name,22)} ${fmt(top.hv,0)}`,{class:on?"strong":""});
@@ -395,12 +410,13 @@ function drawPairs(){
     const v=pp(r.q),x0=x(0),x1=x(v),col=r.k==="pos"?"var(--pos)":"var(--neg)";
     el("rect",{x:Math.min(x0,x1),y:y-7,width:Math.max(1,Math.abs(x1-x0)),height:14,rx:3,fill:col},row);
     txt(row,W-4,y+4,fmt(v),{"text-anchor":"end",class:"strong"});
-    bindTip(row,()=>`<b>${esc(r.a)}</b> + <b>${esc(r.b)}</b><br>Q = ${fmt(r.q,3)} log-odds (≈ ${fmt(v)} pp)<br>${r.decks.toLocaleString()} training decks with both`);
+    bindTip(row,()=>`<div class="arts">${art(r.a,cur,.62)}${art(r.b,cur,.62)}</div><b>${esc(r.a)}</b> + <b>${esc(r.b)}</b><br>Q = ${fmt(r.q,3)} log-odds (≈ ${fmt(v)} pp)<br>${r.decks.toLocaleString()} training decks with both`);
   });
 }
 function drawHubs(){
   document.getElementById("hubs").innerHTML=`<thead><tr><th>Card</th><th class="num">Spread</th><th>Best partner</th><th class="num">pp</th><th>Worst partner</th><th class="num">pp</th></tr></thead><tbody>`+
-    D[cur].hubs.map(h=>`<tr><td><b>${esc(h.card)}</b></td><td class="num">${(h.spread*25).toFixed(1)}</td><td>${esc(h.best)}</td><td class="num" style="color:var(--pos)">${fmt(h.bestQ*25)}</td><td>${esc(h.worst)}</td><td class="num" style="color:var(--neg)">${fmt(h.worstQ*25)}</td></tr>`).join("")+"</tbody>";
+    D[cur].hubs.map(h=>`<tr><td><b data-card="${esc(h.card)}">${esc(h.card)}</b></td><td class="num">${(h.spread*25).toFixed(1)}</td><td data-card="${esc(h.best)}">${esc(h.best)}</td><td class="num" style="color:var(--pos)">${fmt(h.bestQ*25)}</td><td data-card="${esc(h.worst)}">${esc(h.worst)}</td><td class="num" style="color:var(--neg)">${fmt(h.worstQ*25)}</td></tr>`).join("")+"</tbody>";
+  document.querySelectorAll("#hubs [data-card]").forEach(n=>{n.style.cursor="default";bindHtmlTip(n,()=>art(n.dataset.card)+`<b>${esc(n.dataset.card)}</b>`)});
 }
 
 // ---------- synergy space ----------
@@ -410,7 +426,7 @@ const poleTag=(k,s)=>{const p=A.poles[k][s];return p.colors||"mixed"};
 function partners(i){const ps=adj[i].map(j=>({j,q:dotQ(i,j)})).sort((a,b)=>b.q-a.q);return{best:ps.slice(0,6).filter(p=>p.q>0),worst:ps.slice(-3).reverse().filter(p=>p.q<0)}}
 function keep(c){return !colFilter||(c.colors||"").includes(colFilter)}
 function spaceTip(i){const c=A.cards[i],p=partners(i),b=p.best[0];
-  return `<b>${esc(c.name)}</b><br>${RAR[c.rarity]||c.rarity} · ${colorName(c.colors)}${c.hv!=null?`<br>Opening-hand value ${fmt(c.hv)} pp`:""}<br>Axes ${c.v.map(v=>fmt(v,2)).join(" · ")}${b?`<br>Best partner: ${esc(A.cards[b.j].name)} (${fmt(b.q*25)} pp)`:""}`}
+  return art(c.name)+`<b>${esc(c.name)}</b><br>${RAR[c.rarity]||c.rarity} · ${colorName(c.colors)}${c.hv!=null?`<br>Opening-hand value ${fmt(c.hv)} pp`:""}<br>Axes ${c.v.map(v=>fmt(v,2)).join(" · ")}${b?`<br>Best partner: ${esc(A.cards[b.j].name)} (${fmt(b.q*25)} pp)`:""}`}
 
 function colChips(){
   const box=document.getElementById("colchips");clear(box);
@@ -510,7 +526,8 @@ function pin(i,keepNull){
     <div><div class="eyebrow" style="margin-bottom:6px">Best partners</div><div class="plist">${li(p.best,"var(--pos)")}</div></div>
     <div><div class="eyebrow" style="margin-bottom:6px">Worst partners</div><div class="plist">${li(p.worst,"var(--neg)")}</div></div>
     <p class="note">Partners are limited to cards in at least 2,000 training decks with this one. Click a partner to jump to it.</p>`;
-  box.querySelectorAll("[data-j]").forEach(d=>d.onclick=()=>pin(+d.dataset.j));
+  box.querySelectorAll("[data-j]").forEach(d=>{d.onclick=()=>pin(+d.dataset.j);bindHtmlTip(d,()=>spaceTip(+d.dataset.j))});
+  const h=box.querySelector("h3");if(h)h.insertAdjacentHTML("beforebegin",art(c.name));
 }
 document.getElementById("xax").onchange=e=>{xAx=+e.target.value;if(xAx===yAx)yAx=(xAx+1)%4;drawSpace()};
 document.getElementById("yax").onchange=e=>{yAx=+e.target.value;if(xAx===yAx)xAx=(yAx+3)%4;drawSpace()};
@@ -526,6 +543,7 @@ function render(){
   const lo=Math.floor(Math.min(0,...ext)/5)*5,hi=Math.ceil(Math.max(0,...ext)/5)*5;
   drawOverview();drawList("top",top,lo,hi);drawList("bottom",bot,lo,hi);drawScatter();drawPairs();drawHubs();drawSpace();
 }
+preloadArt(cur);
 let rt,lastW=innerWidth;addEventListener("resize",()=>{if(innerWidth===lastW)return;lastW=innerWidth;clearTimeout(rt);rt=setTimeout(render,150)});
 render();
 </script>

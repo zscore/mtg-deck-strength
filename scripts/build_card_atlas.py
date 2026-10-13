@@ -4,7 +4,7 @@ Card power is the opening-hand value (hand_value_v2/card_values.csv): the change
 card in the opening 7, against an average card, skill-free by construction. Synergy is round 8's opening-hand pairs
 (deck_synergy_v8/hand_pairs.csv, slope + pairs fit), so card draw can't drive it; individual pairs are noisy
 (split-half r ~0.13). The synergy axes are that model's 4-d card vectors (scripts/synergy_axes.py, run it first): a
-pair's Q is the dot product of its two cards' vectors. Card colour and rarity come from mtg-data's cards.csv.
+pair's Q is the dot product of its two cards' vectors. Card colour and rarity come from mtg-data's cards.csv; card art from scripts/fetch_card_art.py.
 Writes reports/card_atlas.html (Artifact page) and site/index.html (standalone page) from
 reports/card_atlas_template.html.
 """
@@ -107,13 +107,16 @@ def main():
         data[s] = one_set(s, card_meta(s))
         print(s, len(data[s]["cards"]), "cards", data[s]["nPairs"], "pairs")
     tpl = (ROOT / "reports" / "card_atlas_template.html").read_text()
-    page = tpl.replace("/*__DATA__*/null", json.dumps(data, separators=(",", ":")))
+    art_index = ROOT / "reports" / "art" / "index.json"   # from fetch_card_art.py; without it tooltips show no art
+    page = tpl.replace("/*__DATA__*/null", json.dumps(data, separators=(",", ":"))) \
+        .replace("/*__ART__*/null", art_index.read_text() if art_index.exists() else "null")
     head, body = page.split("<!--BODY-->")
+    site_body = body.replace("/*__CDN__*/false", "true")
     site = ROOT / "site" / "index.html"
     site.parent.mkdir(exist_ok=True)
     site.write_text('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
                     '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
-                    f'{head}</head>\n<body>{body}</body>\n</html>\n')
+                    f'{head}</head>\n<body>{site_body}</body>\n</html>\n')
     art = ROOT / "reports" / "card_atlas.html"
     art.write_text(head + body)
     for out in (art, site):
