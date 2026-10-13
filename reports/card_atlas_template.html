@@ -3,40 +3,42 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap">
 <style>
 :root{
-  --bg:#f6f7f8; --surface:#ffffff; --ink:#15181c; --ink-2:#4b5159; --ink-3:#7a818a;
-  --rule:#dfe2e6; --grid:#eceef1; --accent:#2a78d6; --accent-soft:#cde2fb;
+  --bg:#f6f7f8; --surface:#ffffff; --ink:#15181c; --ink-2:#4b5159; --ink-3:#737a83;
+  --rule:#dfe2e6; --grid:#eceef1; --accent:#2a78d6; --accent-soft:#dcebfc;
   --pos:#2a78d6; --neg:#e34948; --dot:#9aa3ad; --sel:#2a78d6;
-  --pip-W:#efe6c4; --pip-U:#4f8fd9; --pip-B:#4a4540; --pip-R:#dc5a4a; --pip-G:#3f8f4f; --pip-C:#b9bec4;
-  --pip-ink:#15181c; --pip-ink-dark:#ffffff;
+  --c-W:#d9a400; --c-U:#2a78d6; --c-B:#4a3aa7; --c-R:#e34948; --c-G:#008300; --c-M:#8a8f96; --c-C:#b9bec4;
   --display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
   --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
-  --bg:#121417; --surface:#1a1d21; --ink:#eef0f2; --ink-2:#b4bac1; --ink-3:#848b94;
-  --rule:#2e3338; --grid:#252a2f; --accent:#3987e5; --accent-soft:#1c3a5e;
-  --pos:#3987e5; --neg:#e66767; --dot:#5d656e; --sel:#5598e7;}}
+  --bg:#121417; --surface:#1a1d21; --ink:#eef0f2; --ink-2:#b4bac1; --ink-3:#8a919a;
+  --rule:#2e3338; --grid:#252a2f; --accent:#3987e5; --accent-soft:#1c3352;
+  --pos:#3987e5; --neg:#e66767; --dot:#5d656e; --sel:#5598e7;
+  --c-W:#c98500; --c-U:#3987e5; --c-B:#a99ff0; --c-R:#e66767; --c-G:#2a9a3a; --c-M:#8a8f96; --c-C:#5d656e;}}
 :root[data-theme="dark"]{color-scheme:dark;
-  --bg:#121417; --surface:#1a1d21; --ink:#eef0f2; --ink-2:#b4bac1; --ink-3:#848b94;
-  --rule:#2e3338; --grid:#252a2f; --accent:#3987e5; --accent-soft:#1c3a5e;
-  --pos:#3987e5; --neg:#e66767; --dot:#5d656e; --sel:#5598e7;}
+  --bg:#121417; --surface:#1a1d21; --ink:#eef0f2; --ink-2:#b4bac1; --ink-3:#8a919a;
+  --rule:#2e3338; --grid:#252a2f; --accent:#3987e5; --accent-soft:#1c3352;
+  --pos:#3987e5; --neg:#e66767; --dot:#5d656e; --sel:#5598e7;
+  --c-W:#c98500; --c-U:#3987e5; --c-B:#a99ff0; --c-R:#e66767; --c-G:#2a9a3a; --c-M:#8a8f96; --c-C:#5d656e;}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);font-variant-numeric:tabular-nums}
-.wrap{max-width:1080px;margin:0 auto;padding-inline:20px;padding-block:28px 64px;display:grid;gap:36px}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);font-variant-numeric:tabular-nums;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:28px 64px;display:grid;gap:40px}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:.005em}
 h1{font-size:clamp(30px,5vw,42px);font-weight:700;line-height:1.05}
-h2{font-size:24px;font-weight:600}
-h3{font-size:17px;font-weight:600}
-p{margin:0;max-width:68ch;color:var(--ink-2)}
+h2{font-size:24px;font-weight:600;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+h3{font-size:17px;font-weight:600;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+p{margin:0;max-width:70ch;color:var(--ink-2)}
+code{font-size:.9em}
 .eyebrow{font:600 12px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
 header{display:grid;gap:12px}
 .picker{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;
   border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .picker .lab{font:600 12px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-right:6px}
 .chip{font:600 14px var(--display);letter-spacing:.06em;padding:5px 10px;border-radius:4px;border:1px solid var(--rule);
-  background:var(--surface);color:var(--ink-2);cursor:pointer}
+  background:var(--surface);color:var(--ink-2);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .chip:hover{border-color:var(--accent);color:var(--ink)}
 .chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
-.chip:focus-visible,.row:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button:focus-visible,select:focus-visible,input:focus-visible,.row:focus-visible,.mini:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 section{display:grid;gap:14px}
 .panel{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:18px}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:20px}
@@ -46,45 +48,92 @@ svg text{fill:var(--ink-2);font-size:12px}
 svg .muted{fill:var(--ink-3)}
 svg .strong{fill:var(--ink);font-weight:600}
 .grid line{stroke:var(--grid);stroke-width:1}
-.axis line{stroke:var(--rule)}
 .zero{stroke:var(--ink-3);stroke-width:1}
 .note{font-size:13px;color:var(--ink-3)}
-.stats{display:flex;flex-wrap:wrap;gap:10px 28px}
+.stats{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center}
 .stat{display:grid;gap:2px}
 .stat b{font:600 22px var(--display)}
-.stat span{font-size:13px;color:var(--ink-3)}
+.stat span{font-size:13px;color:var(--ink-3);display:flex;align-items:center;gap:4px}
 .pill{display:inline-flex;align-items:center;gap:6px;font:600 13px var(--display);letter-spacing:.04em;padding:3px 10px;
   border-radius:99px;border:1px solid var(--rule)}
 .pill.ok{color:var(--pos);border-color:var(--pos)}
 .pill.flat{color:var(--ink-3)}
+.src{font:600 11px var(--display);letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:3px;
+  border:1px solid var(--rule);color:var(--ink-3);white-space:nowrap}
+.src.model{color:var(--accent);border-color:var(--accent)}
+.info{width:18px;height:18px;border-radius:50%;border:1px solid var(--ink-3);background:transparent;color:var(--ink-3);
+  font:600 11px/1 var(--body);cursor:help;display:inline-grid;place-items:center;padding:0;flex:none;vertical-align:1px}
+.info:hover{border-color:var(--accent);color:var(--accent)}
 table{border-collapse:collapse;width:100%;font-size:14px}
 th{font:600 12px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);text-align:left;
   padding:6px 8px;border-bottom:1px solid var(--rule)}
 td{padding:6px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
 td.num{text-align:right;white-space:nowrap}
 .tip{position:fixed;pointer-events:none;z-index:20;background:var(--surface);color:var(--ink);border:1px solid var(--rule);
-  border-radius:6px;padding:8px 10px;font-size:13px;line-height:1.4;box-shadow:0 4px 16px rgba(0,0,0,.14);max-width:280px}
+  border-radius:6px;padding:8px 10px;font-size:13px;line-height:1.45;box-shadow:0 4px 16px rgba(0,0,0,.16);max-width:300px}
 .tip b{font-weight:600}
-.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--ink-2)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--ink-2);align-items:center}
 .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
+.sources > div{display:grid;gap:6px;align-content:start}
+.sources h3{font-size:16px}
+/* synergy space */
+.controls{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.controls label{font:600 12px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:flex;gap:6px;align-items:center}
+select,input[type=search]{font:14px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:5px 8px}
+input[type=search]{width:min(100%,260px)}
+.dotkey{display:inline-block;width:11px;height:11px;border-radius:50%}
+.space{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:820px){.space{grid-template-columns:1fr}}
+.splom{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.mini{border:1px solid var(--rule);border-radius:4px;cursor:pointer;background:var(--surface);padding:0}
+.mini[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.insp{display:grid;gap:12px}
+.insp .empty{color:var(--ink-3);font-size:14px}
+.plist{display:grid;gap:3px;font-size:14px}
+.plist div{display:flex;justify-content:space-between;gap:10px;cursor:pointer;padding:2px 4px;border-radius:3px}
+.plist div:hover{background:var(--accent-soft)}
+.cardpt{cursor:pointer}
+.cardpt.dim{opacity:.1}
+.cardpt.hl > *{stroke:var(--ink);stroke-width:2.5}
+.cardpt.pp > *{stroke:var(--pos);stroke-width:2.5}
+.cardpt.pn > *{stroke:var(--neg);stroke-width:2.5}
 footer p{font-size:13px}
 @media (prefers-reduced-motion:no-preference){.chip{transition:background .15s,border-color .15s}}
 </style>
-
+<!--BODY-->
 <div class="wrap">
   <header>
     <div class="eyebrow">17Lands Premier Draft · 12 sets · skill-adjusted</div>
     <h1>Opening-Hand Card Atlas</h1>
-    <p>How much each card moves your game win rate when it is in your opening seven, and which pairs of cards do
-      better together than apart. The opening hand is dealt at random given the deck, so these numbers aren't
-      inflated by who drafts the card, the way 17Lands' GIH WR is.</p>
+    <p>How much each card moves your game win rate when it is in your opening seven, which pairs of cards do better
+      together than apart, and the four directions of synergy the pair model finds in each set. Hover anything with a
+      dotted outline or an <span class="info" aria-hidden="true">i</span> for details.</p>
   </header>
+
+  <section class="panel" aria-labelledby="src-h">
+    <h2 id="src-h">Where the numbers come from</h2>
+    <div class="sources">
+      <div><h3><span class="src model">Model estimate</span> Opening-hand value</h3>
+        <p>A per-card effect estimated from games: win rate when the card was in the opening seven, compared with games
+          where the same deck had it in the library, after adjusting for the rest of the deck, mulligans and land count.
+          The hand is dealt at random given the deck, so who drafted the card doesn't leak in. Fitted by
+          <code>scripts/hand_value_v2.py</code>.</p></div>
+      <div><h3><span class="src model">Model weights</span> Pair synergy and the four axes</h3>
+        <p>Learned weights of a game-level pair model on opening hands. Each card gets a vector of four numbers, and a
+          pair's synergy Q is the dot product of the two vectors. Fitted by <code>scripts/deck_synergy_v8.py</code>; the
+          vectors are recovered exactly from its pair table by <code>scripts/synergy_axes.py</code>.</p></div>
+      <div><h3><span class="src">17Lands stat</span> GIH WR</h3>
+        <p>17Lands' "games in hand win rate", computed from the same game files. Shown only for comparison. It is raw:
+          it mixes card strength with the skill of the players who choose the card.</p></div>
+    </div>
+  </section>
 
   <div class="picker" role="group" aria-label="Choose a set"><span class="lab">Set</span><span id="chips" style="display:contents"></span></div>
 
   <section>
     <div class="eyebrow">All sets</div>
-    <h2>Where the power sits in each set</h2>
+    <h2>Where the power sits in each set <span class="src model">Model estimate</span></h2>
     <p>Each dot is one nonland card's opening-hand value. Wide rows have a few cards far above the rest; tight rows are
       flatter formats. Click a row to open that set.</p>
     <div class="panel scroll"><svg id="overview" role="img" aria-label="Card power spread per set"></svg></div>
@@ -93,24 +142,26 @@ footer p{font-size:13px}
   <section>
     <div class="eyebrow" id="set-eyebrow"></div>
     <h2 id="power-title">Strongest and weakest cards</h2>
-    <p>Percentage points of game win rate from having the card in the opening hand, against an average card. Bars are
-      95% intervals. Only cards seen in at least 2,000 opening hands are shown.</p>
+    <p>Percentage points of game win rate from having the card in the opening hand, against an average card
+      <button class="info" data-tip="pp = percentage points. +10 means a game you'd win 55% of the time becomes about 65% when this card is in your opening seven, compared with an average nonland card from the set.">i</button>.
+      Bars are 95% intervals. Only cards seen in at least 2,000 opening hands are shown.</p>
     <div class="cols">
-      <div class="panel"><h3>Top 20</h3><div class="scroll"><svg id="top"></svg></div></div>
-      <div class="panel"><h3>Bottom 12</h3><div class="scroll"><svg id="bottom"></svg></div></div>
+      <div class="panel"><h3>Top 20 <span class="src model">Model estimate</span></h3><div class="scroll"><svg id="top"></svg></div></div>
+      <div class="panel"><h3>Bottom 12 <span class="src model">Model estimate</span></h3><div class="scroll"><svg id="bottom"></svg></div></div>
     </div>
   </section>
 
   <section>
-    <h2>Opening-hand value against GIH WR</h2>
+    <h2>Opening-hand value against GIH WR <span class="src model">Model</span><span class="src">vs 17Lands</span></h2>
     <p>GIH WR mixes card power with who plays the card: strong drafters pick some cards more, and a card looks good
-      because its owners are good. Labelled cards sit furthest from the trend line. Above the line, GIH WR undersells the
-      card; below it, GIH WR oversells it.</p>
+      because its owners are good. Labelled cards sit furthest from the trend line
+      <button class="info" data-tip="The trend line is a weighted least-squares fit of opening-hand value on GIH WR, each card weighted by its precision. Labels mark the five cards furthest above and below it, measured in standard errors.">i</button>.
+      Above the line, GIH WR undersells the card; below it, GIH WR oversells it.</p>
     <div class="panel scroll"><svg id="scatter" role="img" aria-label="Hand value against GIH WR"></svg></div>
   </section>
 
   <section>
-    <h2>Card pairs</h2>
+    <h2>Card pairs <span class="src model">Model weights</span></h2>
     <p>Extra win rate when both cards are in the opening hand, beyond what each is worth alone. Pairs in at least 2,000
       training decks. Treat single pairs as suggestive: in one set they replicate weakly across random halves of the
       data, though the set of pairs as a whole improves held-out predictions.</p>
@@ -121,19 +172,63 @@ footer p{font-size:13px}
       <div class="scroll"><svg id="pairs"></svg></div>
     </div>
     <div class="panel">
-      <h3>Build-arounds: cards whose value depends most on the partner</h3>
+      <h3>Build-arounds: cards whose value depends most on the partner
+        <button class="info" data-tip="Spread is the standard deviation of a card's pair values across all its partners (in pp). A high spread means the card is much better with some partners than with others.">i</button></h3>
       <p class="note" style="margin-block:4px 10px">Ranked by how spread out a card's pair values are across its partners.</p>
       <div class="scroll"><table id="hubs"></table></div>
     </div>
   </section>
 
+  <section id="space-sec">
+    <div class="eyebrow">Synergy space</div>
+    <h2>The four axes of synergy <span class="src model">Model weights</span></h2>
+    <p>The pair model places every card at a point in four dimensions. Two cards pointing the same way synergise,
+      opposite ways clash, and at right angles they don't interact. Cards far from the centre are the most
+      synergy-dependent. Axis 1 carries the most synergy, axis 4 the least
+      <button class="info" data-tip="The model itself only defines pair values, so the axes can be rotated freely without changing any prediction. Here they are rotated to principal axes: axis 1 is the direction along which pair values vary most. The colours at each end are the colour identities of its 15 most extreme cards.">i</button>.
+      Click a card to pin it and see its partners.</p>
+    <div id="space-empty" class="panel" hidden><p>The pair model found no detectable opening-hand synergy in this set
+      and shrank every pair to zero, so there are no axes to show. Pick another set.</p></div>
+    <div id="space-body" style="display:grid;gap:16px">
+      <div class="panel controls">
+        <label>Colour</label><span id="colchips" style="display:contents"></span>
+        <button class="info" data-tip="Dots are coloured by colour identity. Black cards are hollow rings; two-colour cards are split dots; three or more colours are grey. Pick a colour to fade every card without it.">i</button>
+      </div>
+      <div class="panel"><h3>One axis at a time
+        <button class="info" data-tip="Each row places every card on one axis. The colour tags and card names at each end show what the axis separates. The bar and percentage on the right are that axis's share of the total synergy variance.">i</button></h3>
+        <div class="scroll"><svg id="strips" role="img" aria-label="Cards along each synergy axis"></svg></div></div>
+      <div class="space">
+        <div class="panel" style="display:grid;gap:10px">
+          <div class="controls">
+            <label for="xax">Across</label><select id="xax"></select>
+            <label for="yax">Up</label><select id="yax"></select>
+            <button class="info" data-tip="Both axes use the same scale, so distances and angles are true to the model. When a card is pinned, blue lines run to its best partners and red lines to its worst.">i</button>
+          </div>
+          <svg id="big" role="img" aria-label="Cards in two synergy axes"></svg>
+        </div>
+        <div class="panel insp" id="insp">
+          <label for="find" class="eyebrow">Find a card</label>
+          <input type="search" id="find" list="names" placeholder="Type a card name" autocomplete="off">
+          <datalist id="names"></datalist>
+          <div id="insp-body"></div>
+        </div>
+      </div>
+      <div class="panel" style="display:grid;gap:10px">
+        <h3>Every pair of axes
+          <button class="info" data-tip="A scatter matrix: each small panel is one of the six two-axis views. Click one to open it above. A pinned card stays highlighted in every panel.">i</button></h3>
+        <div class="splom" id="splom"></div>
+      </div>
+    </div>
+  </section>
+
   <footer style="display:grid;gap:8px">
     <div class="eyebrow">Method</div>
-    <p>Card values: <code>results/&lt;SET&gt;/hand_value_v2/card_values.csv</code>. A residual-on-propensity estimate
+    <p>Card values: <code>results/&lt;SET&gt;/hand_value_v2/card_values.csv</code>, a residual-on-propensity estimate
       of the effect of a card being in the opening seven, given the deck, mulligans and land count; held-out games
       replicate it at r ≈ 0.78. Pairs: <code>deck_synergy_v8/hand_pairs.csv</code>, a rank-4 pair model on opening
-      hands fitted on top of a per-card slope, so card draw can't drive it. Pair log-odds are shown as win-rate points
-      at a 50% baseline (Q × 25). Built by <code>scripts/build_card_atlas.py</code>.</p>
+      hands fitted on top of a per-card slope, so card draw can't drive it. Axes:
+      <code>deck_synergy_v8/hand_axes.csv</code>. Pair log-odds are shown as win-rate points at a 50% baseline (Q × 25).
+      Built by <code>scripts/build_card_atlas.py</code>.</p>
   </footer>
 </div>
 <div class="tip" id="tip" hidden></div>
@@ -142,43 +237,70 @@ footer p{font-size:13px}
 const D=/*__DATA__*/null;
 const SETS=Object.keys(D);
 const NS="http://www.w3.org/2000/svg";
-let cur=(()=>{try{const s=localStorage.getItem("atlas-set");if(SETS.includes(s))return s}catch(e){}return location.hash.slice(1)&&SETS.includes(location.hash.slice(1))?location.hash.slice(1):"BLB"})();
 const RAR={C:"Common",U:"Uncommon",R:"Rare",M:"Mythic",S:"Special","?":"Unknown"};
+const CNAME={W:"White",U:"Blue",B:"Black",R:"Red",G:"Green"};
 const fmt=(v,d=1)=>(v>0?"+":v<0?"−":"")+Math.abs(v).toFixed(d);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fromHash=()=>{const h=location.hash.slice(1);return SETS.includes(h)?h:null};
+let cur=fromHash()||(()=>{try{const s=localStorage.getItem("atlas-set");if(SETS.includes(s))return s}catch(e){}return"BLB"})();
+let colFilter=null,xAx=0,yAx=1,pinned=null;
 
 function el(tag,attrs={},parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
 function txt(parent,x,y,s,attrs={}){const t=el("text",{x,y,...attrs},parent);t.textContent=s;return t}
-function clear(svg){while(svg.firstChild)svg.firstChild.remove()}
-function width(svg){return Math.max(320,svg.parentElement.clientWidth)}
+function clear(n){while(n.firstChild)n.firstChild.remove()}
+function width(svg){return Math.max(300,svg.parentElement.clientWidth)}
 function niceTicks(lo,hi,n=6){const step=Math.pow(10,Math.floor(Math.log10((hi-lo)/n)));const m=[1,2,5,10].find(m=>(hi-lo)/(step*m)<=n)*step;const t=[];for(let v=Math.ceil(lo/m)*m;v<=hi+1e-9;v+=m)t.push(+v.toFixed(6));return t}
+const trunc=(s,n)=>s.length>n?s.slice(0,n-1)+"…":s;
 
-// tooltip
+// tooltip: data marks call bindTip; any [data-tip] element gets hover, focus and tap
 const tip=document.getElementById("tip");
-function showTip(ev,html){tip.innerHTML=html;tip.hidden=false;const r=tip.getBoundingClientRect();let x=ev.clientX+14,y=ev.clientY+14;if(x+r.width>innerWidth-8)x=ev.clientX-r.width-14;if(y+r.height>innerHeight-8)y=ev.clientY-r.height-14;tip.style.left=x+"px";tip.style.top=y+"px"}
+function place(x,y){const r=tip.getBoundingClientRect();let a=x+14,b=y+14;if(a+r.width>innerWidth-8)a=Math.max(8,x-r.width-14);if(b+r.height>innerHeight-8)b=Math.max(8,y-r.height-14);tip.style.left=a+"px";tip.style.top=b+"px"}
+function showTip(ev,html){tip.innerHTML=html;tip.hidden=false;place(ev.clientX,ev.clientY)}
 function hideTip(){tip.hidden=true}
 function bindTip(node,fn){node.addEventListener("mousemove",e=>showTip(e,fn()));node.addEventListener("mouseleave",hideTip)}
-function cardTip(c){return `<b>${esc(c.name)}</b><br>${RAR[c.rarity]||c.rarity}${c.colors?" · "+c.colors:" · colourless"}<br>Opening-hand value <b>${fmt(c.hv)} pp</b> ± ${(1.96*c.se).toFixed(1)}<br>GIH WR ${c.gih??"–"}%<br>${c.games.toLocaleString()} opening hands`}
+document.querySelectorAll("[data-tip]").forEach(b=>{
+  b.setAttribute("aria-label",b.dataset.tip);b.type="button";
+  const show=()=>{const r=b.getBoundingClientRect();tip.textContent=b.dataset.tip;tip.hidden=false;place(r.right,r.bottom)};
+  b.addEventListener("mouseenter",show);b.addEventListener("focus",show);
+  b.addEventListener("mouseleave",hideTip);b.addEventListener("blur",hideTip);
+  b.addEventListener("click",e=>{e.stopPropagation();tip.hidden?show():hideTip()});
+});
+addEventListener("scroll",hideTip,{passive:true});
+function cardTip(c){return `<b>${esc(c.name)}</b><br>${RAR[c.rarity]||c.rarity} · ${colorName(c.colors)}<br>Opening-hand value <b>${fmt(c.hv)} pp</b> ± ${(1.96*c.se).toFixed(1)}<br>GIH WR ${c.gih??"–"}%<br>${c.games.toLocaleString()} opening hands`}
+const colorName=c=>c?c.split("").map(x=>CNAME[x]||x).join("-"):"Colourless";
 
-function pips(g,x,y,colors){const cs=colors?colors.split(""):["C"];cs.forEach((c,i)=>{el("circle",{cx:x+i*11,cy:y,r:4.5,fill:`var(--pip-${c})`,stroke:"var(--rule)","stroke-width":1},g)});return cs.length*11}
+// a card dot: mono fill, black as ring, two colours split, 3+ grey
+function dot(g,cx,cy,r,colors){
+  const cs=(colors||"").split("").filter(Boolean);
+  if(cs.length===2){
+    el("path",{d:`M${cx},${cy-r}A${r},${r} 0 0 0 ${cx},${cy+r}Z`,fill:`var(--c-${cs[0]})`,stroke:"var(--surface)","stroke-width":1},g);
+    el("path",{d:`M${cx},${cy-r}A${r},${r} 0 0 1 ${cx},${cy+r}Z`,fill:`var(--c-${cs[1]})`,stroke:"var(--surface)","stroke-width":1},g);
+  }else if(cs.length===1&&cs[0]==="B"){
+    el("circle",{cx,cy,r:Math.max(1.5,r-1),fill:"var(--surface)",stroke:"var(--c-B)","stroke-width":2.2},g);
+  }else{
+    const f=cs.length===1?`var(--c-${cs[0]})`:cs.length>2?"var(--c-M)":"var(--c-C)";
+    el("circle",{cx,cy,r,fill:f,stroke:"var(--surface)","stroke-width":1},g);
+  }
+}
+function pips(g,x,y,colors){const cs=colors?colors.split(""):[""];cs.forEach((c,i)=>dot(g,x+i*11,y,4.5,c));return cs.length*11}
 
 // set chips
 const chips=document.getElementById("chips");
-SETS.forEach(s=>{const b=document.createElement("button");b.className="chip";b.textContent=s;b.id="chip-"+s;b.onclick=()=>select(s);chips.appendChild(b)});
+SETS.forEach(s=>{const b=document.createElement("button");b.className="chip";b.textContent=s;b.id="chip-"+s;b.type="button";b.onclick=()=>select(s);chips.appendChild(b)});
+function select(s){cur=s;pinned=null;try{localStorage.setItem("atlas-set",s)}catch(e){}history.replaceState(null,"","#"+s);render()}
+addEventListener("hashchange",()=>{const h=fromHash();if(h&&h!==cur)select(h)});
 
-function select(s){cur=s;try{localStorage.setItem("atlas-set",s)}catch(e){}history.replaceState(null,"","#"+s);render()}
-
-// overview strip plot
+// ---------- card power ----------
 function drawOverview(){
   const svg=document.getElementById("overview");clear(svg);
-  const W=Math.max(width(svg),640),rowH=34,L=52,R=170,T=26,H=T+rowH*SETS.length+8;
+  const W=Math.max(width(svg),640),rowH=34,L=52,R=180,T=26,H=T+rowH*SETS.length+8;
   svg.setAttribute("viewBox",`0 0 ${W} ${H}`);svg.setAttribute("width",W);svg.setAttribute("height",H);
   const all=SETS.flatMap(s=>D[s].cards.map(c=>c.hv));const lo=Math.floor(Math.min(...all)/5)*5,hi=Math.ceil(Math.max(...all)/5)*5;
   const x=v=>L+(v-lo)/(hi-lo)*(W-L-R);
   const g=el("g",{class:"grid"},svg);
   niceTicks(lo,hi,8).forEach(t=>{el("line",{x1:x(t),x2:x(t),y1:T-6,y2:H-8},g);txt(svg,x(t),T-12,fmt(t,0),{"text-anchor":"middle",class:"muted"})});
   el("line",{x1:x(0),x2:x(0),y1:T-6,y2:H-8,class:"zero"},svg);
-  txt(svg,W-R+12,T-12,"Strongest card",{class:"muted"});
+  txt(svg,W-R+14,T-12,"Strongest card (pp)",{class:"muted"});
   SETS.forEach((s,i)=>{
     const y=T+i*rowH+rowH/2,row=el("g",{class:"row",tabindex:0,role:"button","aria-label":"Open "+s,style:"cursor:pointer"},svg);
     const on=s===cur;
@@ -187,16 +309,14 @@ function drawOverview(){
     D[s].cards.forEach((c,j)=>{const jit=((j*7919)%13-6)*1.3;
       const d=el("circle",{cx:x(c.hv),cy:y+jit,r:on?3.2:2.6,fill:on?"var(--sel)":"var(--dot)","fill-opacity":on?.75:.6},row);
       bindTip(d,()=>`<b>${s}</b> · `+cardTip(c))});
-    const top=D[s].cards.reduce((a,b)=>b.hv>a.hv?b:a);
+    const top=D[s].cards[0];
     el("circle",{cx:x(top.hv),cy:y,r:4.5,fill:"none",stroke:"var(--ink)","stroke-width":1.5},row);
-    const nm=top.name.length>22?top.name.slice(0,21)+"…":top.name;
-    txt(row,W-R+12,y+4,`${nm} ${fmt(top.hv,0)}`,{class:on?"strong":""});
+    txt(row,W-R+14,y+4,`${trunc(top.name,22)} ${fmt(top.hv,0)}`,{class:on?"strong":""});
     row.addEventListener("click",()=>select(s));
     row.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();select(s)}});
   });
 }
 
-// top / bottom dot + interval list
 function drawList(id,cards,lo,hi){
   const svg=document.getElementById(id);clear(svg);
   const W=width(svg),rowH=24,T=22,nameW=Math.min(230,W*0.48),L=nameW+40,R=48,H=T+rowH*cards.length+4;
@@ -208,8 +328,7 @@ function drawList(id,cards,lo,hi){
     el("rect",{x:0,y:y-rowH/2,width:W,height:rowH,fill:"transparent"},row);
     const w=pips(row,6,y,c.colors);
     txt(row,6+w+4,y+4,c.rarity,{class:"muted","font-size":11,"font-weight":600});
-    let nm=c.name;const maxCh=Math.floor((nameW-w-14)/6.6);if(nm.length>maxCh)nm=nm.slice(0,maxCh-1)+"…";
-    txt(row,6+w+18,y+4,nm);
+    txt(row,6+w+18,y+4,trunc(c.name,Math.floor((nameW-w-14)/6.6)));
     const ci=1.96*c.se,col=c.hv>=0?"var(--pos)":"var(--neg)";
     el("line",{x1:x(Math.max(lo,c.hv-ci)),x2:x(Math.min(hi,c.hv+ci)),y1:y,y2:y,stroke:col,"stroke-width":2,"stroke-linecap":"round","stroke-opacity":.45},row);
     el("circle",{cx:x(c.hv),cy:y,r:4.5,fill:col,stroke:"var(--surface)","stroke-width":2},row);
@@ -218,7 +337,6 @@ function drawList(id,cards,lo,hi){
   });
 }
 
-// scatter: GIH WR vs HV
 function drawScatter(){
   const svg=document.getElementById("scatter");clear(svg);
   const cards=D[cur].cards.filter(c=>c.gih!=null);
@@ -231,69 +349,183 @@ function drawScatter(){
   niceTicks(x0,x1,7).forEach(t=>{el("line",{x1:x(t),x2:x(t),y1:T,y2:H-B},g);txt(svg,x(t),H-B+16,t+"%",{"text-anchor":"middle",class:"muted"})});
   niceTicks(y0,y1,6).forEach(t=>{el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t)},g);txt(svg,L-8,y(t)+4,fmt(t,0),{"text-anchor":"end",class:"muted"})});
   el("line",{x1:L,x2:W-R,y1:y(0),y2:y(0),class:"zero"},svg);
-  txt(svg,(L+W-R)/2,H-8,"17Lands GIH WR",{"text-anchor":"middle"});
-  txt(svg,14,(T+H-B)/2,"Opening-hand value (pp)",{"text-anchor":"middle",transform:`rotate(-90 14 ${(T+H-B)/2})`});
-  // weighted least squares trend (weights = 1/se^2)
+  txt(svg,(L+W-R)/2,H-8,"17Lands GIH WR (raw stat)",{"text-anchor":"middle"});
+  txt(svg,14,(T+H-B)/2,"Opening-hand value, pp (model)",{"text-anchor":"middle",transform:`rotate(-90 14 ${(T+H-B)/2})`});
   let sw=0,sx=0,sy=0,sxx=0,sxy=0;cards.forEach(c=>{const w=1/(c.se*c.se);sw+=w;sx+=w*c.gih;sy+=w*c.hv;sxx+=w*c.gih*c.gih;sxy+=w*c.gih*c.hv});
   const b=(sw*sxy-sx*sy)/(sw*sxx-sx*sx),a=(sy-b*sx)/sw;
   el("line",{x1:x(x0),y1:y(a+b*x0),x2:x(x1),y2:y(a+b*x1),stroke:"var(--ink-3)","stroke-width":1.5},svg);
   const res=cards.map(c=>({c,r:(c.hv-(a+b*c.gih))/Math.max(c.se,0.5)})).sort((p,q)=>q.r-p.r);
   const lab=new Set([...res.slice(0,5),...res.slice(-5)].map(p=>p.c.name));
-  cards.forEach(c=>{const L_=lab.has(c.name);
-    const d=el("circle",{cx:x(c.gih),cy:y(c.hv),r:L_?5:3.6,fill:L_?(c.hv>a+b*c.gih?"var(--pos)":"var(--neg)"):"var(--dot)",
-      "fill-opacity":L_?1:.7,stroke:"var(--surface)","stroke-width":L_?2:1},svg);
+  cards.forEach(c=>{const on=lab.has(c.name);
+    const d=el("circle",{cx:x(c.gih),cy:y(c.hv),r:on?5:3.6,fill:on?(c.hv>a+b*c.gih?"var(--pos)":"var(--neg)"):"var(--dot)",
+      "fill-opacity":on?1:.7,stroke:"var(--surface)","stroke-width":on?2:1},svg);
     bindTip(d,()=>cardTip(c)+`<br>vs trend <b>${fmt(c.hv-(a+b*c.gih))} pp</b>`)});
-  // labels, nudged apart vertically
   const placed=[];
   res.filter(p=>lab.has(p.c.name)).forEach(p=>{const c=p.c;let ly=y(c.hv)+4,lx=x(c.gih)+8,anchor="start";
     if(lx>W-R-150){lx=x(c.gih)-8;anchor="end"}
     for(let k=0;k<12&&placed.some(q=>Math.abs(q.y-ly)<13&&Math.abs(q.x-lx)<150);k++)ly+=p.r>0?-13:13;
-    placed.push({x:lx,y:ly});const nm=c.name.length>24?c.name.slice(0,23)+"…":c.name;txt(svg,lx,ly,nm,{"text-anchor":anchor,class:"strong","font-size":11.5})});
+    placed.push({x:lx,y:ly});txt(svg,lx,ly,trunc(c.name,24),{"text-anchor":anchor,class:"strong","font-size":11.5})});
 }
 
-// synergy pairs, diverging bars in win-rate points (Q x 25)
+// ---------- pairs ----------
 function drawPairs(){
   const S=D[cur],svg=document.getElementById("pairs");clear(svg);
   const sig=S.pairGain-S.pairGainCI>0;
   document.getElementById("syn-stats").innerHTML=
     `<span class="pill ${sig?"ok":"flat"}">${sig?"✓ Synergy detected":"– No detectable synergy"}</span>`+
-    `<div class="stat"><b>${S.pairGain.toFixed(2)} ± ${S.pairGainCI.toFixed(2)}</b><span>held-out log loss saved ×1000</span></div>`+
-    `<div class="stat"><b>${S.splitHalfR.toFixed(2)}</b><span>split-half pair correlation</span></div>`+
+    `<div class="stat"><b>${S.pairGain.toFixed(2)} ± ${S.pairGainCI.toFixed(2)}</b><span>held-out log loss saved ×1000 <button class="info" data-tip2="gain">i</button></span></div>`+
+    `<div class="stat"><b>${S.splitHalfR.toFixed(2)}</b><span>split-half pair correlation <button class="info" data-tip2="r">i</button></span></div>`+
     `<div class="stat"><b>${S.nPairs.toLocaleString()}</b><span>pairs fitted</span></div>`;
+  const T2={gain:"How much better the model with pair terms predicts games it never saw, against the same model without them. Positive with an interval that excludes zero means the pairs, taken together, are real.",
+            r:"Fit the pair model on two random halves of the drafts and correlate the pair values. Low values mean any single pair is noisy even when the pairs as a group help."};
+  document.querySelectorAll("#syn-stats [data-tip2]").forEach(b=>{b.type="button";const t=T2[b.dataset.tip2];b.setAttribute("aria-label",t);
+    const show=()=>{const r=b.getBoundingClientRect();tip.textContent=t;tip.hidden=false;place(r.right,r.bottom)};
+    b.onmouseenter=show;b.onfocus=show;b.onmouseleave=hideTip;b.onblur=hideTip;b.onclick=e=>{e.stopPropagation();tip.hidden?show():hideTip()}});
   const rows=[...S.pairs.map(p=>({...p,k:"pos"})),{gap:true},...S.anti.map(p=>({...p,k:"neg"}))];
   const W=Math.max(width(svg),360),rowH=24,T=22,nameW=Math.min(440,W*0.62),L=nameW+12,R=52,H=T+rowH*rows.length;
   svg.setAttribute("viewBox",`0 0 ${W} ${H}`);svg.setAttribute("width",W);svg.setAttribute("height",H);
-  const pp=q=>q*25,m=Math.max(1,...rows.filter(r=>!r.gap).map(r=>Math.abs(pp(r.q))));const lim=Math.ceil(m);
+  const pp=q=>q*25,lim=Math.ceil(Math.max(1,...rows.filter(r=>!r.gap).map(r=>Math.abs(pp(r.q)))));
   const x=v=>L+(v+lim)/(2*lim)*(W-L-R);const g=el("g",{class:"grid"},svg);
   niceTicks(-lim,lim,6).forEach(t=>{el("line",{x1:x(t),x2:x(t),y1:T-4,y2:H},g);txt(svg,x(t),T-10,fmt(t,0)+" pp",{"text-anchor":"middle",class:"muted"})});
   el("line",{x1:x(0),x2:x(0),y1:T-4,y2:H,class:"zero"},svg);
   rows.forEach((r,i)=>{const y=T+i*rowH+rowH/2;
     if(r.gap){txt(svg,6,y+4,"Worst pairs",{class:"muted","font-size":11,"font-weight":600});return}
     const row=el("g",{},svg);el("rect",{x:0,y:y-rowH/2,width:W,height:rowH,fill:"transparent"},row);
-    let nm=`${r.a} + ${r.b}`;const maxCh=Math.floor(nameW/6.5);if(nm.length>maxCh)nm=nm.slice(0,maxCh-1)+"…";
-    txt(row,6,y+4,nm);
+    txt(row,6,y+4,trunc(`${r.a} + ${r.b}`,Math.floor(nameW/6.5)));
     const v=pp(r.q),x0=x(0),x1=x(v),col=r.k==="pos"?"var(--pos)":"var(--neg)";
     el("rect",{x:Math.min(x0,x1),y:y-7,width:Math.max(1,Math.abs(x1-x0)),height:14,rx:3,fill:col},row);
     txt(row,W-4,y+4,fmt(v),{"text-anchor":"end",class:"strong"});
     bindTip(row,()=>`<b>${esc(r.a)}</b> + <b>${esc(r.b)}</b><br>Q = ${fmt(r.q,3)} log-odds (≈ ${fmt(v)} pp)<br>${r.decks.toLocaleString()} training decks with both`);
   });
 }
-
 function drawHubs(){
-  const t=document.getElementById("hubs");
-  t.innerHTML=`<thead><tr><th>Card</th><th class="num">Spread</th><th>Best partner</th><th class="num">pp</th><th>Worst partner</th><th class="num">pp</th></tr></thead><tbody>`+
+  document.getElementById("hubs").innerHTML=`<thead><tr><th>Card</th><th class="num">Spread</th><th>Best partner</th><th class="num">pp</th><th>Worst partner</th><th class="num">pp</th></tr></thead><tbody>`+
     D[cur].hubs.map(h=>`<tr><td><b>${esc(h.card)}</b></td><td class="num">${(h.spread*25).toFixed(1)}</td><td>${esc(h.best)}</td><td class="num" style="color:var(--pos)">${fmt(h.bestQ*25)}</td><td>${esc(h.worst)}</td><td class="num" style="color:var(--neg)">${fmt(h.worstQ*25)}</td></tr>`).join("")+"</tbody>";
 }
+
+// ---------- synergy space ----------
+let A=null,adj=null,nodes=[],lineLayer=null,bigScale=null;
+const dotQ=(i,j)=>A.cards[i].v.reduce((s,x,k)=>s+x*A.cards[j].v[k],0);
+const poleTag=(k,s)=>{const p=A.poles[k][s];return p.colors||"mixed"};
+function partners(i){const ps=adj[i].map(j=>({j,q:dotQ(i,j)})).sort((a,b)=>b.q-a.q);return{best:ps.slice(0,6).filter(p=>p.q>0),worst:ps.slice(-3).reverse().filter(p=>p.q<0)}}
+function keep(c){return !colFilter||(c.colors||"").includes(colFilter)}
+function spaceTip(i){const c=A.cards[i],p=partners(i),b=p.best[0];
+  return `<b>${esc(c.name)}</b><br>${RAR[c.rarity]||c.rarity} · ${colorName(c.colors)}${c.hv!=null?`<br>Opening-hand value ${fmt(c.hv)} pp`:""}<br>Axes ${c.v.map(v=>fmt(v,2)).join(" · ")}${b?`<br>Best partner: ${esc(A.cards[b.j].name)} (${fmt(b.q*25)} pp)`:""}`}
+
+function colChips(){
+  const box=document.getElementById("colchips");clear(box);
+  [null,"W","U","B","R","G"].forEach(c=>{const b=document.createElement("button");b.type="button";b.className="chip";b.id="col-"+(c||"all");
+    b.setAttribute("aria-pressed",colFilter===c);
+    if(c){const s=document.createElementNS(NS,"svg");s.setAttribute("width",12);s.setAttribute("height",12);dot(s,6,6,4.5,c);b.appendChild(s)}
+    b.append(c?CNAME[c]:"All");b.onclick=()=>{colFilter=c;drawSpace()};box.appendChild(b)});
+}
+function addNode(i,g){(nodes[i]=nodes[i]||[]).push(g)}
+function cardPoint(parent,i,cx,cy,r,withTip=true){
+  const c=A.cards[i],g=el("g",{class:"cardpt"+(keep(c)?"":" dim")},parent);dot(g,cx,cy,r,c.colors);addNode(i,g);
+  if(withTip)bindTip(g,()=>spaceTip(i));
+  g.addEventListener("click",e=>{e.stopPropagation();pin(i)});return g;
+}
+function radius(i,big){const n=Math.hypot(...A.cards[i].v),mx=A.maxNorm;return (big?2.5:1.6)+(big?4.5:2.4)*Math.sqrt(n/mx)}
+
+function drawStrips(){
+  const svg=document.getElementById("strips");clear(svg);
+  const W=Math.max(width(svg),560),rowH=74,L=58,R=70,T=8,H=T+rowH*4;
+  svg.setAttribute("viewBox",`0 0 ${W} ${H}`);svg.setAttribute("width",W);svg.setAttribute("height",H);
+  const m=Math.max(...A.cards.flatMap(c=>c.v.map(Math.abs)));const x=v=>L+(v+m)/(2*m)*(W-L-R);
+  for(let k=0;k<4;k++){const y=T+k*rowH+24;
+    txt(svg,4,y+4,"Axis "+(k+1),{class:"strong"}).style.fontFamily="var(--display)";
+    el("line",{x1:L,x2:W-R,y1:y,y2:y,stroke:"var(--grid)"},svg);el("line",{x1:x(0),x2:x(0),y1:y-14,y2:y+14,class:"zero"},svg);
+    const order=A.cards.map((c,i)=>i).sort((a,b)=>Math.hypot(...A.cards[a].v)-Math.hypot(...A.cards[b].v));
+    order.forEach(i=>{const jit=((i*7919)%11-5)*1.7;cardPoint(svg,i,x(A.cards[i].v[k]),y+jit,radius(i,false)+0.6)});
+    const sh=A.share[k];el("rect",{x:W-R+14,y:y-5,width:Math.max(2,(R-24)*sh/Math.max(...A.share)),height:10,rx:2,fill:"var(--accent)"},svg);
+    txt(svg,W-R+14,y+22,Math.round(sh*100)+"%",{class:"muted","font-size":11});
+    const neg=A.poles[k]["-"],pos=A.poles[k]["+"],nch=Math.floor((W-L-R)/2/6.4)-6;
+    txt(svg,L,y+34,trunc(`← ${neg.colors||"mixed"} · ${neg.cards.slice(0,3).join(", ")}`,nch),{class:"muted","font-size":11.5});
+    txt(svg,W-R,y+34,trunc(`${pos.cards.slice(0,3).join(", ")} · ${pos.colors||"mixed"} →`,nch),{class:"muted","font-size":11.5,"text-anchor":"end"});
+  }
+}
+function projPanel(svg,size,kx,ky,big){
+  clear(svg);const pad=big?34:8;svg.setAttribute("viewBox",`0 0 ${size} ${size}`);svg.setAttribute("width",size);svg.setAttribute("height",size);
+  const m=1.06*Math.max(...A.cards.map(c=>Math.max(Math.abs(c.v[kx]),Math.abs(c.v[ky]))));
+  const sx=v=>pad+(v+m)/(2*m)*(size-2*pad),sy=v=>size-pad-(v+m)/(2*m)*(size-2*pad);
+  el("line",{x1:sx(-m),x2:sx(m),y1:sy(0),y2:sy(0),stroke:"var(--rule)"},svg);el("line",{x1:sx(0),x2:sx(0),y1:sy(-m),y2:sy(m),stroke:"var(--rule)"},svg);
+  if(big){
+    txt(svg,size-pad,sy(0)-6,`${poleTag(kx,"+")} →`,{"text-anchor":"end",class:"muted","font-size":11});
+    txt(svg,pad,sy(0)-6,`← ${poleTag(kx,"-")}`,{class:"muted","font-size":11});
+    txt(svg,sx(0)+6,pad-12,`↑ ${poleTag(ky,"+")}`,{class:"muted","font-size":11});
+    txt(svg,sx(0)+6,size-pad+20,`↓ ${poleTag(ky,"-")}`,{class:"muted","font-size":11});
+    txt(svg,size-pad,sy(0)+16,"Axis "+(kx+1),{"text-anchor":"end",class:"strong","font-size":11});
+    txt(svg,sx(0)-6,pad-12,"Axis "+(ky+1),{"text-anchor":"end",class:"strong","font-size":11});
+    lineLayer=el("g",{},svg);bigScale={sx,sy,kx,ky};
+  }
+  const order=A.cards.map((c,i)=>i).sort((a,b)=>Math.hypot(A.cards[a].v[kx],A.cards[a].v[ky])-Math.hypot(A.cards[b].v[kx],A.cards[b].v[ky]));
+  order.forEach(i=>cardPoint(svg,i,sx(A.cards[i].v[kx]),sy(A.cards[i].v[ky]),radius(i,big),big));
+  if(big){const placed=[];
+    order.slice(-9).reverse().forEach(i=>{const c=A.cards[i];if(!keep(c))return;let lx=sx(c.v[kx])+9,ly=sy(c.v[ky])+4,an="start";
+      if(lx>size-150){lx=sx(c.v[kx])-9;an="end"}
+      for(let k=0;k<10&&placed.some(q=>Math.abs(q.y-ly)<13&&Math.abs(q.x-lx)<140);k++)ly+=13;
+      placed.push({x:lx,y:ly});txt(svg,lx,ly,trunc(c.name,22),{"text-anchor":an,class:"strong","font-size":11.5,"pointer-events":"none"})});
+  }
+}
+function drawSpace(){
+  const S=D[cur];A=S.axes;
+  document.getElementById("space-empty").hidden=!!A;document.getElementById("space-body").hidden=!A;
+  if(!A)return;
+  A.maxNorm=Math.max(...A.cards.map(c=>Math.hypot(...c.v)));
+  adj=A.cards.map(()=>[]);A.pairs.forEach(([i,j])=>{adj[i].push(j);adj[j].push(i)});
+  nodes=[];colChips();
+  ["xax","yax"].forEach((id,w)=>{const s=document.getElementById(id);s.innerHTML=[0,1,2,3].map(k=>`<option value="${k}">Axis ${k+1} (${poleTag(k,"-")} ↔ ${poleTag(k,"+")})</option>`).join("");s.value=w?yAx:xAx});
+  drawStrips();
+  const big=document.getElementById("big");projPanel(big,Math.min(600,Math.max(300,big.parentElement.clientWidth-36)),xAx,yAx,true);
+  const sp=document.getElementById("splom");clear(sp);
+  [[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]].forEach(([a,b])=>{
+    const btn=document.createElement("button");btn.type="button";btn.className="mini";btn.setAttribute("aria-pressed",a===xAx&&b===yAx);
+    btn.setAttribute("aria-label",`Open axis ${a+1} against axis ${b+1}`);
+    const cap=document.createElement("div");cap.className="note";cap.style.padding="4px 8px 0";cap.textContent=`Axis ${a+1} × Axis ${b+1}`;
+    const s=document.createElementNS(NS,"svg");btn.append(cap,s);sp.appendChild(btn);
+    projPanel(s,Math.max(140,Math.min(200,(sp.clientWidth-50)/6)),a,b,false);s.style.width="100%";s.style.height="auto";
+    btn.onclick=()=>{xAx=a;yAx=b;drawSpace()};
+  });
+  document.getElementById("names").innerHTML=A.cards.map(c=>`<option value="${esc(c.name)}">`).join("");
+  pin(pinned,true);
+}
+function pin(i,keepNull){
+  if(!keepNull&&i===pinned)i=null;pinned=i;
+  nodes.flat().forEach(g=>g.classList.remove("hl","pp","pn"));clear(lineLayer);
+  const box=document.getElementById("insp-body");
+  if(i==null){box.innerHTML=`<p class="empty">Click any dot, or search above, to see a card's position on the four axes and its best and worst partners.</p>`;return}
+  const c=A.cards[i],p=partners(i),{sx,sy,kx,ky}=bigScale;
+  p.best.forEach(q=>{el("line",{x1:sx(c.v[kx]),y1:sy(c.v[ky]),x2:sx(A.cards[q.j].v[kx]),y2:sy(A.cards[q.j].v[ky]),stroke:"var(--pos)","stroke-width":1.5,"stroke-opacity":.7},lineLayer);(nodes[q.j]||[]).forEach(g=>g.classList.add("pp"))});
+  p.worst.forEach(q=>{el("line",{x1:sx(c.v[kx]),y1:sy(c.v[ky]),x2:sx(A.cards[q.j].v[kx]),y2:sy(A.cards[q.j].v[ky]),stroke:"var(--neg)","stroke-width":1.5,"stroke-opacity":.7},lineLayer);(nodes[q.j]||[]).forEach(g=>g.classList.add("pn"))});
+  (nodes[i]||[]).forEach(g=>{g.classList.add("hl");g.parentNode.appendChild(g)});
+  const m=Math.max(...A.cards.flatMap(d=>d.v.map(Math.abs)));
+  const bars=c.v.map((v,k)=>{const w=Math.abs(v)/m*50;return `<div style="display:grid;grid-template-columns:52px 1fr 52px;gap:8px;align-items:center;font-size:13px">
+    <span class="note">Axis ${k+1}</span><span style="position:relative;height:12px;background:var(--grid);border-radius:2px">
+    <span style="position:absolute;top:0;bottom:0;${v>=0?"left:50%":"right:50%"};width:${w}%;background:var(--accent);border-radius:2px"></span>
+    <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--ink-3)"></span></span>
+    <span style="text-align:right">${fmt(v,2)}</span></div>`}).join("");
+  const li=(arr,col)=>arr.map(q=>`<div data-j="${q.j}"><span>${esc(A.cards[q.j].name)}</span><b style="color:${col}">${fmt(q.q*25)} pp</b></div>`).join("")||`<p class="note">None among pairs played together often enough.</p>`;
+  box.innerHTML=`<div><h3>${esc(c.name)}</h3><p class="note">${RAR[c.rarity]||c.rarity} · ${colorName(c.colors)}${c.hv!=null?` · opening-hand value ${fmt(c.hv)} pp`:""}</p></div>
+    <div style="display:grid;gap:5px">${bars}</div>
+    <div><div class="eyebrow" style="margin-bottom:6px">Best partners</div><div class="plist">${li(p.best,"var(--pos)")}</div></div>
+    <div><div class="eyebrow" style="margin-bottom:6px">Worst partners</div><div class="plist">${li(p.worst,"var(--neg)")}</div></div>
+    <p class="note">Partners are limited to cards in at least 2,000 training decks with this one. Click a partner to jump to it.</p>`;
+  box.querySelectorAll("[data-j]").forEach(d=>d.onclick=()=>pin(+d.dataset.j));
+}
+document.getElementById("xax").onchange=e=>{xAx=+e.target.value;if(xAx===yAx)yAx=(xAx+1)%4;drawSpace()};
+document.getElementById("yax").onchange=e=>{yAx=+e.target.value;if(xAx===yAx)xAx=(yAx+3)%4;drawSpace()};
+document.getElementById("find").addEventListener("change",e=>{const k=A&&A.cards.findIndex(c=>c.name.toLowerCase()===e.target.value.trim().toLowerCase());if(k>=0){pin(k,true);e.target.value=""}});
+document.getElementById("big").addEventListener("click",()=>{if(pinned!=null)pin(pinned)});
 
 function render(){
   SETS.forEach(s=>document.getElementById("chip-"+s).setAttribute("aria-pressed",s===cur));
   const S=D[cur];document.getElementById("set-eyebrow").textContent=cur+" · "+S.cards.length+" nonland cards";
-  document.getElementById("power-title").textContent=`Strongest and weakest cards in ${cur}`;
+  document.getElementById("power-title").innerHTML=`Strongest and weakest cards in ${cur}`;
   const top=S.cards.slice(0,20),bot=S.cards.slice(-12).reverse();
   const ext=[...top,...bot].flatMap(c=>[c.hv-1.96*c.se,c.hv+1.96*c.se]);
   const lo=Math.floor(Math.min(0,...ext)/5)*5,hi=Math.ceil(Math.max(0,...ext)/5)*5;
-  drawOverview();drawList("top",top,lo,hi);drawList("bottom",bot,lo,hi);drawScatter();drawPairs();drawHubs();
+  drawOverview();drawList("top",top,lo,hi);drawList("bottom",bot,lo,hi);drawScatter();drawPairs();drawHubs();drawSpace();
 }
-let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(render,120)});
+let rt,lastW=innerWidth;addEventListener("resize",()=>{if(innerWidth===lastW)return;lastW=innerWidth;clearTimeout(rt);rt=setTimeout(render,150)});
 render();
 </script>

@@ -3,7 +3,9 @@
 Card power is the opening-hand value (hand_value_v2/card_values.csv): the change in game win rate from having the
 card in the opening 7, against an average card, skill-free by construction. Synergy is round 8's opening-hand pairs
 (deck_synergy_v8/hand_pairs.csv, slope + pairs fit), so card draw can't drive it; individual pairs are noisy
-(split-half r ~0.13). Card colour and rarity come from mtg-data's cards.csv. Writes reports/card_atlas.html from
+(split-half r ~0.13). The synergy axes are that model's 4-d card vectors (scripts/synergy_axes.py, run it first): a
+pair's Q is the dot product of its two cards' vectors. Card colour and rarity come from mtg-data's cards.csv.
+Writes reports/card_atlas.html (Artifact page) and site/index.html (standalone page) from
 reports/card_atlas_template.html.
 """
 import json
@@ -63,7 +65,40 @@ def one_set(set_code, meta):
     return {"cards": cards, "pairs": rows(pairs.head(N_PAIRS)), "anti": rows(pairs.tail(N_ANTI).reverse()),
             "hubs": hub_rows, "nPairs": pairs.height,
             "pairGain": round(-1000 * fit["vs slope"], 2), "pairGainCI": round(1000 * fit["vs slope ±95%"], 2),
-            "splitHalfR": round(fit["split-half pair r"], 2)}
+            "splitHalfR": round(fit["split-half pair r"], 2), "axes": axes(syn, pairs, meta, cards)}
+
+
+def axes(syn, pairs, meta, cards):
+    """4-d synergy vectors, the observed pairs (indices into the card list), and each axis pole's colours/cards."""
+    st = json.loads((syn / "hand_axes.json").read_text())
+    if st["fit r"] < 0.99:          # the pair model shrank to ~0 (MSH): nothing to show
+        return None
+    ax = pl.read_csv(syn / "hand_axes.csv")
+    hv = {c["name"]: c["hv"] for c in cards}
+    names = ax["card"].to_list()
+    ix = {c: t for t, c in enumerate(names)}
+    V = ax.select("a1", "a2", "a3", "a4").to_numpy()
+    out = []
+    for t, c in enumerate(names):
+        rar, col = meta.get(c, ("?", ""))
+        out.append({"name": c, "v": [round(float(x), 4) for x in V[t]], "colors": col, "rarity": rar,
+                    "hv": hv.get(c)})
+    poles = []
+    for k in range(4):
+        order = V[:, k].argsort()
+        ends = {}
+        for sign, idx in (("+", order[::-1][:15]), ("-", order[:15])):
+            w = {}
+            for t in idx:
+                for ch in meta.get(names[t], ("?", ""))[1] or "C":
+                    w[ch] = w.get(ch, 0) + abs(V[t, k])
+            tot = sum(w.values())
+            ends[sign] = {"colors": "".join(ch for ch, x in sorted(w.items(), key=lambda z: -z[1])
+                                            if x / tot >= 0.2 and ch != "C")[:2],
+                          "cards": [names[t] for t in idx[:4]]}
+        poles.append(ends)
+    pr = [[ix[a], ix[b]] for a, b in zip(pairs["card a"], pairs["card b"])]
+    return {"cards": out, "pairs": pr, "share": st["axis share"], "poles": poles}
 
 
 def main():
@@ -72,9 +107,17 @@ def main():
         data[s] = one_set(s, card_meta(s))
         print(s, len(data[s]["cards"]), "cards", data[s]["nPairs"], "pairs")
     tpl = (ROOT / "reports" / "card_atlas_template.html").read_text()
-    out = ROOT / "reports" / "card_atlas.html"
-    out.write_text(tpl.replace("/*__DATA__*/null", json.dumps(data, separators=(",", ":"))))
-    print("wrote", out, f"{out.stat().st_size / 1e3:.0f} kB")
+    page = tpl.replace("/*__DATA__*/null", json.dumps(data, separators=(",", ":")))
+    head, body = page.split("<!--BODY-->")
+    site = ROOT / "site" / "index.html"
+    site.parent.mkdir(exist_ok=True)
+    site.write_text('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+                    '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+                    f'{head}</head>\n<body>{body}</body>\n</html>\n')
+    art = ROOT / "reports" / "card_atlas.html"
+    art.write_text(head + body)
+    for out in (art, site):
+        print("wrote", out, f"{out.stat().st_size / 1e3:.0f} kB")
 
 
 if __name__ == "__main__":
