@@ -128,7 +128,7 @@ def covariates(games: pl.DataFrame) -> np.ndarray:
                       ranks[rank_index(games["rank"])], ranks[rank_index(games["opp_rank"])]])
 
 
-N_GAMES_BUCKETS = ("1", "5", "10", "50", "100")
+N_GAMES_BUCKETS = ("1", "5", "10", "50", "100", "500", "1000")  # 500 and 1000 were missing (fell into "unknown")
 MAX_WINS, MAX_LOSSES = 7, 3
 
 
