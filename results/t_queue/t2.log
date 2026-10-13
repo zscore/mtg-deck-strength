@@ -1,0 +1,1032 @@
+=== MSH: 68609 drafts, 377376 games, 83430 builds, 339 cards, 18 deck columns (affinity in) [11s]
+  champion               val 0.66011 (1e-05, 0.01) epochs [40, 40] [23s]
+  split mull             val 0.66026 (1e-05, 0.01) epochs [40, 40] [22s]
+  - own mull             val 0.66407 (1e-05, 0.01) epochs [40, 40] [22s]
+  refit                  val nan (1e-05, 0.01) epochs [40, 40] [16s]
+  contexts: raw test 0.65985  dl test 0.66799  pre test 0.67332
+  all raw                champion -655.185  split mull -655.164  - own mull -655.230  refit -655.098  cached game FM -655.146
+      split mull - champion: +0.0206 ± 0.0307
+      - own mull - champion: -0.0452 ± 0.0231
+      refit - champion: +0.0873 ± 0.0419
+      - own mull - split mull: -0.0658 ± 0.0309
+      champion - cached game FM: -0.0387 ± 0.0941
+  experienced raw        champion -660.490  split mull -660.460  - own mull -660.533  refit -660.372  cached game FM -660.459
+      split mull - champion: +0.0303 ± 0.0276
+      - own mull - champion: -0.0430 ± 0.0212
+      refit - champion: +0.1174 ± 0.0322
+      - own mull - split mull: -0.0733 ± 0.0316
+      champion - cached game FM: -0.0306 ± 0.0901
+  match 1 raw            champion -654.501  split mull -654.543  - own mull -654.685  refit -654.443  cached game FM -654.526
+      split mull - champion: -0.0416 ± 0.0469
+      - own mull - champion: -0.1832 ± 0.0643
+      refit - champion: +0.0581 ± 0.1997
+      - own mull - split mull: -0.1416 ± 0.0561
+      champion - cached game FM: +0.0250 ± 0.1817
+  main build raw         champion -653.410  split mull -653.391  - own mull -653.474  refit -653.319  cached game FM -653.383
+      split mull - champion: +0.0187 ± 0.0343
+      - own mull - champion: -0.0643 ± 0.0237
+      refit - champion: +0.0908 ± 0.0450
+      - own mull - split mull: -0.0830 ± 0.0277
+      champion - cached game FM: -0.0268 ± 0.0930
+  all dl                 champion -662.478  split mull -662.404  - own mull -662.442  refit -662.429  cached game FM -662.366
+      split mull - champion: +0.0739 ± 0.0229
+      - own mull - champion: +0.0361 ± 0.0427
+      refit - champion: +0.0495 ± 0.0569
+      - own mull - split mull: -0.0379 ± 0.0436
+      champion - cached game FM: -0.1121 ± 0.1081
+  experienced dl         champion -663.141  split mull -663.081  - own mull -663.137  refit -663.069  cached game FM -663.062
+      split mull - champion: +0.0599 ± 0.0211
+      - own mull - champion: +0.0038 ± 0.0330
+      refit - champion: +0.0719 ± 0.0468
+      - own mull - split mull: -0.0562 ± 0.0344
+      champion - cached game FM: -0.0790 ± 0.0963
+  match 1 dl             champion -660.866  split mull -660.841  - own mull -660.967  refit -660.846  cached game FM -660.802
+      split mull - champion: +0.0249 ± 0.0703
+      - own mull - champion: -0.1008 ± 0.0803
+      refit - champion: +0.0202 ± 0.2285
+      - own mull - split mull: -0.1258 ± 0.0594
+      champion - cached game FM: -0.0643 ± 0.2181
+  main build dl          champion -660.794  split mull -660.720  - own mull -660.779  refit -660.736  cached game FM -660.694
+      split mull - champion: +0.0739 ± 0.0248
+      - own mull - champion: +0.0153 ± 0.0413
+      refit - champion: +0.0581 ± 0.0611
+      - own mull - split mull: -0.0585 ± 0.0434
+      champion - cached game FM: -0.1004 ± 0.1061
+  all pre                champion -667.851  split mull -667.771  - own mull -667.764  refit -667.806  cached game FM -667.738
+      split mull - champion: +0.0796 ± 0.0228
+      - own mull - champion: +0.0864 ± 0.0452
+      refit - champion: +0.0447 ± 0.0614
+      - own mull - split mull: +0.0067 ± 0.0438
+      champion - cached game FM: -0.1121 ± 0.1098
+  experienced pre        champion -668.414  split mull -668.347  - own mull -668.360  refit -668.335  cached game FM -668.330
+      split mull - champion: +0.0665 ± 0.0205
+      - own mull - champion: +0.0540 ± 0.0361
+      refit - champion: +0.0792 ± 0.0465
+      - own mull - split mull: -0.0125 ± 0.0352
+      champion - cached game FM: -0.0840 ± 0.1002
+  match 1 pre            champion -665.969  split mull -665.931  - own mull -666.017  refit -665.945  cached game FM -665.920
+      split mull - champion: +0.0378 ± 0.0694
+      - own mull - champion: -0.0479 ± 0.0859
+      refit - champion: +0.0241 ± 0.2402
+      - own mull - split mull: -0.0857 ± 0.0625
+      champion - cached game FM: -0.0488 ± 0.2183
+  main build pre         champion -665.970  split mull -665.891  - own mull -665.904  refit -665.914  cached game FM -665.870
+      split mull - champion: +0.0794 ± 0.0237
+      - own mull - champion: +0.0663 ± 0.0433
+      refit - champion: +0.0564 ± 0.0639
+      - own mull - split mull: -0.0131 ± 0.0436
+      champion - cached game FM: -0.1005 ± 0.1072
+  champion               draft spearman 0.2647 raw +0.0000 strat +0.0000 sd 0.238
+  split mull             draft spearman 0.2683 raw +0.0031 strat +0.0013 sd 0.243
+  - own mull             draft spearman 0.2686 raw +0.0033 strat -0.0003 sd 0.241
+  refit                  draft spearman 0.2609 raw -0.0037 strat -0.0013 sd 0.231
+  cached game FM         draft spearman 0.2730 raw +0.0070 strat +0.0025 sd 0.251
+  card marginal champion: r(total, w) 0.954, sd total/w 1.12 [1s]
+  card marginal - own mull: r(total, w) 0.954, sd total/w 1.11 [1s]
+MSH done [106s, peak RSS 4.7 GB]
+=== EOE: 104377 drafts, 563418 games, 130002 builds, 321 cards, 18 deck columns (affinity in) [14s]
+  champion               val 0.65823 (1e-05, 0.001) epochs [39, 34] [30s]
+  split mull             val 0.65819 (1e-05, 0.001) epochs [39, 34] [27s]
+  - own mull             val 0.66373 (1e-05, 0.001) epochs [39, 34] [29s]
+  refit                  val nan (1e-05, 0.001) epochs [39, 34] [21s]
+  contexts: raw test 0.66260  dl test 0.66944  pre test 0.67480
+  all raw                champion -658.570  split mull -658.579  - own mull -658.581  refit -658.561  cached game FM -658.569
+      split mull - champion: -0.0089 ± 0.0096
+      - own mull - champion: -0.0110 ± 0.0181
+      refit - champion: +0.0087 ± 0.1173
+      - own mull - split mull: -0.0021 ± 0.0214
+      champion - cached game FM: -0.0015 ± 0.0141
+  experienced raw        champion -661.742  split mull -661.754  - own mull -661.744  refit -661.727  cached game FM -661.741
+      split mull - champion: -0.0121 ± 0.0118
+      - own mull - champion: -0.0022 ± 0.0238
+      refit - champion: +0.0146 ± 0.1324
+      - own mull - split mull: +0.0099 ± 0.0308
+      champion - cached game FM: -0.0007 ± 0.0181
+  match 1 raw            champion -656.064  split mull -656.088  - own mull -656.127  refit -656.247  cached game FM -656.034
+      split mull - champion: -0.0242 ± 0.0303
+      - own mull - champion: -0.0632 ± 0.0613
+      refit - champion: -0.1827 ± 0.0998
+      - own mull - split mull: -0.0389 ± 0.0524
+      champion - cached game FM: -0.0301 ± 0.0731
+  main build raw         champion -656.288  split mull -656.295  - own mull -656.303  refit -656.291  cached game FM -656.284
+      split mull - champion: -0.0068 ± 0.0109
+      - own mull - champion: -0.0146 ± 0.0197
+      refit - champion: -0.0032 ± 0.1102
+      - own mull - split mull: -0.0078 ± 0.0226
+      champion - cached game FM: -0.0038 ± 0.0162
+  all dl                 champion -664.498  split mull -664.501  - own mull -664.486  refit -664.484  cached game FM -664.464
+      split mull - champion: -0.0025 ± 0.0122
+      - own mull - champion: +0.0118 ± 0.0173
+      refit - champion: +0.0143 ± 0.1227
+      - own mull - split mull: +0.0144 ± 0.0208
+      champion - cached game FM: -0.0340 ± 0.0365
+  experienced dl         champion -663.995  split mull -664.005  - own mull -663.971  refit -663.991  cached game FM -663.968
+      split mull - champion: -0.0099 ± 0.0139
+      - own mull - champion: +0.0234 ± 0.0248
+      refit - champion: +0.0034 ± 0.1318
+      - own mull - split mull: +0.0334 ± 0.0327
+      champion - cached game FM: -0.0261 ± 0.0362
+  match 1 dl             champion -660.503  split mull -660.526  - own mull -660.525  refit -660.721  cached game FM -660.436
+      split mull - champion: -0.0224 ± 0.0367
+      - own mull - champion: -0.0218 ± 0.0690
+      refit - champion: -0.2175 ± 0.1276
+      - own mull - split mull: +0.0006 ± 0.0576
+      champion - cached game FM: -0.0667 ± 0.1234
+  main build dl          champion -662.420  split mull -662.419  - own mull -662.412  refit -662.417  cached game FM -662.382
+      split mull - champion: +0.0002 ± 0.0132
+      - own mull - champion: +0.0078 ± 0.0206
+      refit - champion: +0.0030 ± 0.1139
+      - own mull - split mull: +0.0075 ± 0.0225
+      champion - cached game FM: -0.0375 ± 0.0378
+  all pre                champion -669.888  split mull -669.890  - own mull -669.803  refit -669.892  cached game FM -669.863
+      split mull - champion: -0.0020 ± 0.0125
+      - own mull - champion: +0.0851 ± 0.0183
+      refit - champion: -0.0036 ± 0.1441
+      - own mull - split mull: +0.0872 ± 0.0224
+      champion - cached game FM: -0.0253 ± 0.0276
+  experienced pre        champion -669.357  split mull -669.366  - own mull -669.263  refit -669.373  cached game FM -669.341
+      split mull - champion: -0.0096 ± 0.0145
+      - own mull - champion: +0.0941 ± 0.0240
+      refit - champion: -0.0165 ± 0.1540
+      - own mull - split mull: +0.1038 ± 0.0329
+      champion - cached game FM: -0.0162 ± 0.0274
+  match 1 pre            champion -666.337  split mull -666.358  - own mull -666.262  refit -666.569  cached game FM -666.282
+      split mull - champion: -0.0209 ± 0.0375
+      - own mull - champion: +0.0752 ± 0.0633
+      refit - champion: -0.2326 ± 0.1420
+      - own mull - split mull: +0.0961 ± 0.0537
+      champion - cached game FM: -0.0553 ± 0.1123
+  main build pre         champion -667.739  split mull -667.738  - own mull -667.663  refit -667.756  cached game FM -667.709
+      split mull - champion: +0.0010 ± 0.0138
+      - own mull - champion: +0.0760 ± 0.0212
+      refit - champion: -0.0172 ± 0.1361
+      - own mull - split mull: +0.0750 ± 0.0247
+      champion - cached game FM: -0.0296 ± 0.0297
+  champion               draft spearman 0.2434 raw +0.0000 strat +0.0000 sd 0.221
+  split mull             draft spearman 0.2431 raw -0.0003 strat -0.0004 sd 0.221
+  - own mull             draft spearman 0.2456 raw +0.0022 strat +0.0009 sd 0.220
+  refit                  draft spearman 0.2414 raw -0.0007 strat -0.0033 sd 0.219
+  cached game FM         draft spearman 0.2454 raw +0.0014 strat -0.0002 sd 0.223
+  card marginal champion: r(total, w) 0.885, sd total/w 1.12 [1s]
+  card marginal - own mull: r(total, w) 0.910, sd total/w 1.10 [1s]
+EOE done [137s, peak RSS 6.4 GB]
+=== SOS: 107459 drafts, 582712 games, 132857 builds, 346 cards, 18 deck columns (affinity in) [18s]
+  champion               val 0.65596 (1e-05, 0.001) epochs [40, 39] [35s]
+  split mull             val 0.65596 (1e-05, 0.001) epochs [40, 39] [34s]
+  - own mull             val 0.66129 (1e-05, 0.001) epochs [40, 40] [34s]
+  refit                  val nan (1e-05, 0.001) epochs [40, 39] [24s]
+  contexts: raw test 0.66482  dl test 0.67026  pre test 0.67574
+  all raw                champion -658.285  split mull -658.290  - own mull -658.402  refit -658.350  cached game FM -658.273
+      split mull - champion: -0.0047 ± 0.0045
+      - own mull - champion: -0.1172 ± 0.0322
+      refit - champion: -0.0649 ± 0.1848
+      - own mull - split mull: -0.1125 ± 0.0299
+      champion - cached game FM: -0.0116 ± 0.0205
+  experienced raw        champion -661.031  split mull -661.036  - own mull -661.133  refit -661.123  cached game FM -661.027
+      split mull - champion: -0.0053 ± 0.0043
+      - own mull - champion: -0.1017 ± 0.0370
+      refit - champion: -0.0924 ± 0.2051
+      - own mull - split mull: -0.0964 ± 0.0357
+      champion - cached game FM: -0.0040 ± 0.0256
+  match 1 raw            champion -652.740  split mull -652.753  - own mull -652.945  refit -652.847  cached game FM -652.728
+      split mull - champion: -0.0124 ± 0.0179
+      - own mull - champion: -0.2047 ± 0.0618
+      refit - champion: -0.1067 ± 0.1715
+      - own mull - split mull: -0.1923 ± 0.0635
+      champion - cached game FM: -0.0122 ± 0.0574
+  main build raw         champion -656.594  split mull -656.598  - own mull -656.724  refit -656.625  cached game FM -656.580
+      split mull - champion: -0.0039 ± 0.0041
+      - own mull - champion: -0.1297 ± 0.0317
+      refit - champion: -0.0306 ± 0.1685
+      - own mull - split mull: -0.1258 ± 0.0295
+      champion - cached game FM: -0.0144 ± 0.0240
+  all dl                 champion -662.810  split mull -662.814  - own mull -662.892  refit -662.933  cached game FM -662.832
+      split mull - champion: -0.0039 ± 0.0029
+      - own mull - champion: -0.0816 ± 0.0392
+      refit - champion: -0.1230 ± 0.1924
+      - own mull - split mull: -0.0777 ± 0.0377
+      champion - cached game FM: +0.0213 ± 0.0232
+  experienced dl         champion -662.244  split mull -662.249  - own mull -662.328  refit -662.382  cached game FM -662.265
+      split mull - champion: -0.0056 ± 0.0030
+      - own mull - champion: -0.0844 ± 0.0386
+      refit - champion: -0.1386 ± 0.2189
+      - own mull - split mull: -0.0788 ± 0.0370
+      champion - cached game FM: +0.0213 ± 0.0296
+  match 1 dl             champion -658.071  split mull -658.085  - own mull -658.238  refit -658.264  cached game FM -658.101
+      split mull - champion: -0.0134 ± 0.0162
+      - own mull - champion: -0.1668 ± 0.0740
+      refit - champion: -0.1928 ± 0.1808
+      - own mull - split mull: -0.1535 ± 0.0741
+      champion - cached game FM: +0.0293 ± 0.0611
+  main build dl          champion -661.349  split mull -661.352  - own mull -661.445  refit -661.437  cached game FM -661.367
+      split mull - champion: -0.0030 ± 0.0026
+      - own mull - champion: -0.0957 ± 0.0397
+      refit - champion: -0.0873 ± 0.1760
+      - own mull - split mull: -0.0927 ± 0.0389
+      champion - cached game FM: +0.0174 ± 0.0265
+  all pre                champion -668.411  split mull -668.411  - own mull -668.387  refit -668.554  cached game FM -668.467
+      split mull - champion: -0.0002 ± 0.0031
+      - own mull - champion: +0.0244 ± 0.0394
+      refit - champion: -0.1429 ± 0.1827
+      - own mull - split mull: +0.0246 ± 0.0378
+      champion - cached game FM: +0.0558 ± 0.0245
+  experienced pre        champion -667.672  split mull -667.674  - own mull -667.651  refit -667.837  cached game FM -667.730
+      split mull - champion: -0.0021 ± 0.0031
+      - own mull - champion: +0.0206 ± 0.0397
+      refit - champion: -0.1655 ± 0.2107
+      - own mull - split mull: +0.0227 ± 0.0380
+      champion - cached game FM: +0.0588 ± 0.0321
+  match 1 pre            champion -662.312  split mull -662.323  - own mull -662.362  refit -662.510  cached game FM -662.381
+      split mull - champion: -0.0112 ± 0.0170
+      - own mull - champion: -0.0507 ± 0.0738
+      refit - champion: -0.1984 ± 0.1730
+      - own mull - split mull: -0.0396 ± 0.0748
+      champion - cached game FM: +0.0691 ± 0.0623
+  main build pre         champion -666.893  split mull -666.892  - own mull -666.888  refit -666.999  cached game FM -666.943
+      split mull - champion: +0.0006 ± 0.0028
+      - own mull - champion: +0.0052 ± 0.0406
+      refit - champion: -0.1059 ± 0.1667
+      - own mull - split mull: +0.0046 ± 0.0397
+      champion - cached game FM: +0.0501 ± 0.0261
+  champion               draft spearman 0.2879 raw +0.0000 strat +0.0000 sd 0.261
+  split mull             draft spearman 0.2879 raw -0.0000 strat -0.0002 sd 0.261
+  - own mull             draft spearman 0.2902 raw +0.0017 strat -0.0009 sd 0.259
+  refit                  draft spearman 0.2867 raw -0.0010 strat -0.0004 sd 0.258
+  cached game FM         draft spearman 0.2862 raw -0.0018 strat -0.0015 sd 0.261
+  card marginal champion: r(total, w) 0.893, sd total/w 1.14 [1s]
+  card marginal - own mull: r(total, w) 0.902, sd total/w 1.12 [1s]
+SOS done [163s, peak RSS 6.4 GB]
+=== TDM: 101323 drafts, 552428 games, 126902 builds, 286 cards, 18 deck columns (affinity in) [15s]
+  champion               val 0.65852 (1e-05, 0.001) epochs [35, 34] [24s]
+  split mull             val 0.65846 (1e-05, 0.001) epochs [40, 34] [25s]
+  - own mull             val 0.66393 (1e-05, 0.001) epochs [37, 34] [25s]
+  refit                  val nan (1e-05, 0.001) epochs [35, 34] [18s]
+  contexts: raw test 0.66237  dl test 0.66768  pre test 0.67391
+  all raw                champion -657.001  split mull -657.062  - own mull -657.090  refit -656.918  cached game FM -657.005
+      split mull - champion: -0.0612 ± 0.0493
+      - own mull - champion: -0.0895 ± 0.0291
+      refit - champion: +0.0832 ± 0.0423
+      - own mull - split mull: -0.0283 ± 0.0446
+      champion - cached game FM: +0.0045 ± 0.0117
+  experienced raw        champion -659.083  split mull -659.154  - own mull -659.172  refit -658.982  cached game FM -659.093
+      split mull - champion: -0.0710 ± 0.0592
+      - own mull - champion: -0.0893 ± 0.0310
+      refit - champion: +0.1001 ± 0.0530
+      - own mull - split mull: -0.0183 ± 0.0574
+      champion - cached game FM: +0.0105 ± 0.0118
+  match 1 raw            champion -660.513  split mull -660.533  - own mull -660.668  refit -660.268  cached game FM -660.542
+      split mull - champion: -0.0200 ± 0.0413
+      - own mull - champion: -0.1557 ± 0.0939
+      refit - champion: +0.2447 ± 0.1273
+      - own mull - split mull: -0.1356 ± 0.0934
+      champion - cached game FM: +0.0294 ± 0.0466
+  main build raw         champion -655.020  split mull -655.072  - own mull -655.118  refit -654.901  cached game FM -655.029
+      split mull - champion: -0.0520 ± 0.0427
+      - own mull - champion: -0.0978 ± 0.0274
+      refit - champion: +0.1191 ± 0.0494
+      - own mull - split mull: -0.0458 ± 0.0506
+      champion - cached game FM: +0.0088 ± 0.0118
+  all dl                 champion -661.669  split mull -661.750  - own mull -661.717  refit -661.621  cached game FM -661.687
+      split mull - champion: -0.0812 ± 0.0640
+      - own mull - champion: -0.0486 ± 0.0433
+      refit - champion: +0.0479 ± 0.0411
+      - own mull - split mull: +0.0326 ± 0.0397
+      champion - cached game FM: +0.0189 ± 0.0184
+  experienced dl         champion -660.251  split mull -660.337  - own mull -660.311  refit -660.188  cached game FM -660.270
+      split mull - champion: -0.0859 ± 0.0741
+      - own mull - champion: -0.0604 ± 0.0408
+      refit - champion: +0.0629 ± 0.0437
+      - own mull - split mull: +0.0255 ± 0.0569
+      champion - cached game FM: +0.0193 ± 0.0192
+  match 1 dl             champion -663.687  split mull -663.730  - own mull -663.796  refit -663.457  cached game FM -663.737
+      split mull - champion: -0.0432 ± 0.0444
+      - own mull - champion: -0.1096 ± 0.1104
+      refit - champion: +0.2297 ± 0.1365
+      - own mull - split mull: -0.0664 ± 0.1083
+      champion - cached game FM: +0.0505 ± 0.0453
+  main build dl          champion -659.815  split mull -659.888  - own mull -659.873  refit -659.730  cached game FM -659.840
+      split mull - champion: -0.0724 ± 0.0561
+      - own mull - champion: -0.0580 ± 0.0362
+      refit - champion: +0.0852 ± 0.0485
+      - own mull - split mull: +0.0143 ± 0.0454
+      champion - cached game FM: +0.0245 ± 0.0165
+  all pre                champion -667.929  split mull -668.014  - own mull -667.897  refit -667.929  cached game FM -667.938
+      split mull - champion: -0.0846 ± 0.0743
+      - own mull - champion: +0.0322 ± 0.0838
+      refit - champion: +0.0004 ± 0.0628
+      - own mull - split mull: +0.1169 ± 0.0280
+      champion - cached game FM: +0.0084 ± 0.0336
+  experienced pre        champion -666.434  split mull -666.523  - own mull -666.416  refit -666.419  cached game FM -666.443
+      split mull - champion: -0.0891 ± 0.0840
+      - own mull - champion: +0.0183 ± 0.0790
+      refit - champion: +0.0154 ± 0.0517
+      - own mull - split mull: +0.1074 ± 0.0358
+      champion - cached game FM: +0.0090 ± 0.0329
+  match 1 pre            champion -667.745  split mull -667.787  - own mull -667.760  refit -667.564  cached game FM -667.781
+      split mull - champion: -0.0419 ± 0.0470
+      - own mull - champion: -0.0147 ± 0.1391
+      refit - champion: +0.1803 ± 0.1359
+      - own mull - split mull: +0.0272 ± 0.1351
+      champion - cached game FM: +0.0362 ± 0.0413
+  main build pre         champion -665.997  split mull -666.072  - own mull -665.976  refit -665.959  cached game FM -666.010
+      split mull - champion: -0.0752 ± 0.0660
+      - own mull - champion: +0.0214 ± 0.0734
+      refit - champion: +0.0381 ± 0.0624
+      - own mull - split mull: +0.0966 ± 0.0308
+      champion - cached game FM: +0.0130 ± 0.0286
+  champion               draft spearman 0.2546 raw +0.0000 strat +0.0000 sd 0.255
+  split mull             draft spearman 0.2528 raw -0.0016 strat -0.0012 sd 0.255
+  - own mull             draft spearman 0.2576 raw +0.0027 strat +0.0008 sd 0.256
+  refit                  draft spearman 0.2521 raw -0.0020 strat -0.0000 sd 0.251
+  cached game FM         draft spearman 0.2540 raw -0.0007 strat -0.0003 sd 0.253
+  card marginal champion: r(total, w) 0.868, sd total/w 1.27 [1s]
+  card marginal - own mull: r(total, w) 0.889, sd total/w 1.23 [1s]
+TDM done [123s, peak RSS 5.9 GB]
+=== FDN: 130935 drafts, 765317 games, 161556 builds, 286 cards, 18 deck columns (affinity in) [20s]
+  champion               val 0.66070 (1e-05, 0.001) epochs [29, 26] [28s]
+  split mull             val 0.66067 (1e-05, 0.001) epochs [29, 26] [28s]
+  - own mull             val 0.66574 (1e-05, 0.001) epochs [29, 26] [28s]
+  refit                  val nan (1e-05, 0.001) epochs [29, 26] [20s]
+  contexts: raw test 0.66373  dl test 0.66974  pre test 0.67576
+  all raw                champion -658.383  split mull -658.392  - own mull -658.439  refit -658.369  cached game FM -658.383
+      split mull - champion: -0.0091 ± 0.0119
+      - own mull - champion: -0.0559 ± 0.0189
+      refit - champion: +0.0142 ± 0.0666
+      - own mull - split mull: -0.0469 ± 0.0187
+      champion - cached game FM: -0.0001 ± 0.0245
+  experienced raw        champion -660.889  split mull -660.899  - own mull -660.947  refit -660.899  cached game FM -660.888
+      split mull - champion: -0.0104 ± 0.0130
+      - own mull - champion: -0.0583 ± 0.0256
+      refit - champion: -0.0102 ± 0.0412
+      - own mull - split mull: -0.0479 ± 0.0239
+      champion - cached game FM: -0.0007 ± 0.0297
+  match 1 raw            champion -653.737  split mull -653.751  - own mull -653.763  refit -653.543  cached game FM -653.684
+      split mull - champion: -0.0135 ± 0.0219
+      - own mull - champion: -0.0260 ± 0.0686
+      refit - champion: +0.1942 ± 0.4267
+      - own mull - split mull: -0.0125 ± 0.0672
+      champion - cached game FM: -0.0529 ± 0.0631
+  main build raw         champion -656.808  split mull -656.818  - own mull -656.877  refit -656.791  cached game FM -656.812
+      split mull - champion: -0.0097 ± 0.0120
+      - own mull - champion: -0.0687 ± 0.0206
+      refit - champion: +0.0170 ± 0.0619
+      - own mull - split mull: -0.0589 ± 0.0208
+      champion - cached game FM: +0.0037 ± 0.0270
+  all dl                 champion -663.349  split mull -663.353  - own mull -663.380  refit -663.391  cached game FM -663.363
+      split mull - champion: -0.0046 ± 0.0042
+      - own mull - champion: -0.0316 ± 0.0199
+      refit - champion: -0.0424 ± 0.0665
+      - own mull - split mull: -0.0270 ± 0.0220
+      champion - cached game FM: +0.0141 ± 0.0281
+  experienced dl         champion -661.904  split mull -661.913  - own mull -661.943  refit -661.951  cached game FM -661.915
+      split mull - champion: -0.0092 ± 0.0073
+      - own mull - champion: -0.0397 ± 0.0248
+      refit - champion: -0.0477 ± 0.0391
+      - own mull - split mull: -0.0305 ± 0.0236
+      champion - cached game FM: +0.0114 ± 0.0297
+  match 1 dl             champion -658.738  split mull -658.747  - own mull -658.728  refit -658.591  cached game FM -658.691
+      split mull - champion: -0.0089 ± 0.0158
+      - own mull - champion: +0.0100 ± 0.0741
+      refit - champion: +0.1463 ± 0.4757
+      - own mull - split mull: +0.0189 ± 0.0746
+      champion - cached game FM: -0.0464 ± 0.0616
+  main build dl          champion -661.974  split mull -661.980  - own mull -662.019  refit -662.016  cached game FM -661.993
+      split mull - champion: -0.0055 ± 0.0051
+      - own mull - champion: -0.0453 ± 0.0225
+      refit - champion: -0.0416 ± 0.0602
+      - own mull - split mull: -0.0398 ± 0.0251
+      champion - cached game FM: +0.0188 ± 0.0330
+  all pre                champion -669.402  split mull -669.403  - own mull -669.359  refit -669.460  cached game FM -669.417
+      split mull - champion: -0.0007 ± 0.0052
+      - own mull - champion: +0.0430 ± 0.0197
+      refit - champion: -0.0578 ± 0.0441
+      - own mull - split mull: +0.0437 ± 0.0222
+      champion - cached game FM: +0.0151 ± 0.0288
+  experienced pre        champion -668.004  split mull -668.010  - own mull -667.969  refit -668.069  cached game FM -668.017
+      split mull - champion: -0.0057 ± 0.0064
+      - own mull - champion: +0.0349 ± 0.0243
+      refit - champion: -0.0647 ± 0.0469
+      - own mull - split mull: +0.0406 ± 0.0237
+      champion - cached game FM: +0.0125 ± 0.0306
+  match 1 pre            champion -665.411  split mull -665.416  - own mull -665.321  refit -665.276  cached game FM -665.361
+      split mull - champion: -0.0042 ± 0.0144
+      - own mull - champion: +0.0899 ± 0.0754
+      refit - champion: +0.1359 ± 0.4293
+      - own mull - split mull: +0.0942 ± 0.0766
+      champion - cached game FM: -0.0507 ± 0.0643
+  main build pre         champion -667.925  split mull -667.927  - own mull -667.900  refit -667.980  cached game FM -667.945
+      split mull - champion: -0.0016 ± 0.0059
+      - own mull - champion: +0.0255 ± 0.0223
+      refit - champion: -0.0545 ± 0.0459
+      - own mull - split mull: +0.0271 ± 0.0252
+      champion - cached game FM: +0.0202 ± 0.0341
+  champion               draft spearman 0.2768 raw +0.0000 strat +0.0000 sd 0.256
+  split mull             draft spearman 0.2769 raw +0.0001 strat +0.0001 sd 0.256
+  - own mull             draft spearman 0.2791 raw +0.0020 strat +0.0010 sd 0.256
+  refit                  draft spearman 0.2758 raw -0.0010 strat -0.0004 sd 0.249
+  cached game FM         draft spearman 0.2767 raw -0.0002 strat +0.0000 sd 0.254
+  card marginal champion: r(total, w) 0.926, sd total/w 1.17 [1s]
+  card marginal - own mull: r(total, w) 0.933, sd total/w 1.16 [1s]
+FDN done [144s, peak RSS 6.2 GB]
+=== DFT: 141166 drafts, 824163 games, 177392 builds, 286 cards, 18 deck columns (affinity in) [22s]
+  champion               val 0.66062 (1e-05, 0.001) epochs [35, 27] [36s]
+  split mull             val 0.66052 (1e-05, 0.001) epochs [31, 27] [29s]
+  - own mull             val 0.66482 (1e-05, 0.001) epochs [37, 27] [37s]
+  refit                  val nan (1e-05, 0.001) epochs [35, 27] [24s]
+  contexts: raw test 0.66413  dl test 0.67056  pre test 0.67627
+  all raw                champion -658.729  split mull -658.751  - own mull -658.861  refit -658.600  cached game FM -658.736
+      split mull - champion: -0.0229 ± 0.0313
+      - own mull - champion: -0.1322 ± 0.0817
+      refit - champion: +0.1288 ± 0.0961
+      - own mull - split mull: -0.1092 ± 0.0625
+      champion - cached game FM: +0.0074 ± 0.0205
+  experienced raw        champion -660.942  split mull -660.967  - own mull -661.085  refit -660.825  cached game FM -660.950
+      split mull - champion: -0.0251 ± 0.0346
+      - own mull - champion: -0.1427 ± 0.0904
+      refit - champion: +0.1172 ± 0.1118
+      - own mull - split mull: -0.1176 ± 0.0667
+      champion - cached game FM: +0.0081 ± 0.0211
+  match 1 raw            champion -654.832  split mull -654.894  - own mull -655.080  refit -654.782  cached game FM -654.826
+      split mull - champion: -0.0621 ± 0.0759
+      - own mull - champion: -0.2481 ± 0.1935
+      refit - champion: +0.0499 ± 0.1153
+      - own mull - split mull: -0.1860 ± 0.1412
+      champion - cached game FM: -0.0064 ± 0.0502
+  main build raw         champion -657.153  split mull -657.179  - own mull -657.295  refit -657.006  cached game FM -657.163
+      split mull - champion: -0.0253 ± 0.0340
+      - own mull - champion: -0.1415 ± 0.0774
+      refit - champion: +0.1471 ± 0.0842
+      - own mull - split mull: -0.1162 ± 0.0567
+      champion - cached game FM: +0.0101 ± 0.0197
+  all dl                 champion -664.306  split mull -664.322  - own mull -664.380  refit -664.186  cached game FM -664.313
+      split mull - champion: -0.0165 ± 0.0376
+      - own mull - champion: -0.0743 ± 0.0999
+      refit - champion: +0.1200 ± 0.1041
+      - own mull - split mull: -0.0578 ± 0.0748
+      champion - cached game FM: +0.0071 ± 0.0203
+  experienced dl         champion -662.892  split mull -662.909  - own mull -662.979  refit -662.787  cached game FM -662.896
+      split mull - champion: -0.0174 ± 0.0352
+      - own mull - champion: -0.0878 ± 0.0976
+      refit - champion: +0.1045 ± 0.1159
+      - own mull - split mull: -0.0704 ± 0.0714
+      champion - cached game FM: +0.0044 ± 0.0206
+  match 1 dl             champion -660.797  split mull -660.860  - own mull -660.995  refit -660.778  cached game FM -660.791
+      split mull - champion: -0.0626 ± 0.0898
+      - own mull - champion: -0.1970 ± 0.2315
+      refit - champion: +0.0198 ± 0.1475
+      - own mull - split mull: -0.1344 ± 0.1637
+      champion - cached game FM: -0.0062 ± 0.0568
+  main build dl          champion -662.732  split mull -662.751  - own mull -662.820  refit -662.594  cached game FM -662.742
+      split mull - champion: -0.0187 ± 0.0392
+      - own mull - champion: -0.0881 ± 0.0963
+      refit - champion: +0.1381 ± 0.0928
+      - own mull - split mull: -0.0694 ± 0.0697
+      champion - cached game FM: +0.0099 ± 0.0194
+  all pre                champion -670.097  split mull -670.106  - own mull -670.088  refit -669.984  cached game FM -670.103
+      split mull - champion: -0.0088 ± 0.0347
+      - own mull - champion: +0.0089 ± 0.0980
+      refit - champion: +0.1127 ± 0.1024
+      - own mull - split mull: +0.0177 ± 0.0744
+      champion - cached game FM: +0.0062 ± 0.0186
+  experienced pre        champion -668.710  split mull -668.718  - own mull -668.714  refit -668.610  cached game FM -668.713
+      split mull - champion: -0.0083 ± 0.0308
+      - own mull - champion: -0.0036 ± 0.0951
+      refit - champion: +0.1003 ± 0.1127
+      - own mull - split mull: +0.0047 ± 0.0716
+      champion - cached game FM: +0.0032 ± 0.0194
+  match 1 pre            champion -667.439  split mull -667.494  - own mull -667.552  refit -667.436  cached game FM -667.439
+      split mull - champion: -0.0546 ± 0.0859
+      - own mull - champion: -0.1123 ± 0.2273
+      refit - champion: +0.0035 ± 0.1486
+      - own mull - split mull: -0.0577 ± 0.1649
+      champion - cached game FM: -0.0004 ± 0.0536
+  main build pre         champion -668.527  split mull -668.538  - own mull -668.533  refit -668.398  cached game FM -668.537
+      split mull - champion: -0.0109 ± 0.0364
+      - own mull - champion: -0.0059 ± 0.0934
+      refit - champion: +0.1291 ± 0.0920
+      - own mull - split mull: +0.0051 ± 0.0680
+      champion - cached game FM: +0.0097 ± 0.0177
+  champion               draft spearman 0.2545 raw +0.0000 strat +0.0000 sd 0.249
+  split mull             draft spearman 0.2544 raw -0.0002 strat -0.0005 sd 0.249
+  - own mull             draft spearman 0.2564 raw +0.0014 strat -0.0006 sd 0.248
+  refit                  draft spearman 0.2529 raw -0.0011 strat +0.0000 sd 0.242
+  cached game FM         draft spearman 0.2542 raw -0.0007 strat -0.0007 sd 0.248
+  card marginal champion: r(total, w) 0.911, sd total/w 1.22 [1s]
+  card marginal - own mull: r(total, w) 0.918, sd total/w 1.21 [1s]
+DFT done [170s, peak RSS 5.9 GB]
+=== LCI: 134970 drafts, 793671 games, 170681 builds, 291 cards, 18 deck columns (affinity in) [19s]
+  champion               val 0.65547 (1e-05, 0.001) epochs [31, 31] [32s]
+  split mull             val 0.65547 (1e-05, 0.001) epochs [31, 31] [32s]
+  - own mull             val 0.66094 (1e-05, 0.001) epochs [31, 31] [32s]
+  refit                  val nan (1e-05, 0.001) epochs [31, 31] [24s]
+  contexts: raw test 0.66242  dl test 0.66858  pre test 0.67424
+  all raw                champion -655.978  split mull -655.975  - own mull -656.005  refit -655.684  cached game FM -655.986
+      split mull - champion: +0.0030 ± 0.0023
+      - own mull - champion: -0.0276 ± 0.0245
+      refit - champion: +0.2936 ± 0.1206
+      - own mull - split mull: -0.0306 ± 0.0250
+      champion - cached game FM: +0.0087 ± 0.0205
+  experienced raw        champion -657.810  split mull -657.806  - own mull -657.823  refit -657.565  cached game FM -657.823
+      split mull - champion: +0.0047 ± 0.0026
+      - own mull - champion: -0.0125 ± 0.0277
+      refit - champion: +0.2449 ± 0.1273
+      - own mull - split mull: -0.0172 ± 0.0277
+      champion - cached game FM: +0.0129 ± 0.0271
+  match 1 raw            champion -654.051  split mull -654.046  - own mull -654.042  refit -653.698  cached game FM -654.069
+      split mull - champion: +0.0046 ± 0.0079
+      - own mull - champion: +0.0088 ± 0.0648
+      refit - champion: +0.3527 ± 0.1357
+      - own mull - split mull: +0.0042 ± 0.0646
+      champion - cached game FM: +0.0185 ± 0.0393
+  main build raw         champion -653.979  split mull -653.977  - own mull -654.010  refit -653.664  cached game FM -653.986
+      split mull - champion: +0.0021 ± 0.0027
+      - own mull - champion: -0.0308 ± 0.0292
+      refit - champion: +0.3153 ± 0.1263
+      - own mull - split mull: -0.0329 ± 0.0298
+      champion - cached game FM: +0.0063 ± 0.0192
+  all dl                 champion -660.977  split mull -660.974  - own mull -660.987  refit -660.747  cached game FM -660.995
+      split mull - champion: +0.0028 ± 0.0023
+      - own mull - champion: -0.0102 ± 0.0260
+      refit - champion: +0.2293 ± 0.1226
+      - own mull - split mull: -0.0130 ± 0.0263
+      champion - cached game FM: +0.0182 ± 0.0256
+  experienced dl         champion -659.986  split mull -659.980  - own mull -659.985  refit -659.805  cached game FM -660.003
+      split mull - champion: +0.0057 ± 0.0029
+      - own mull - champion: +0.0004 ± 0.0294
+      refit - champion: +0.1807 ± 0.1180
+      - own mull - split mull: -0.0053 ± 0.0293
+      champion - cached game FM: +0.0177 ± 0.0296
+  match 1 dl             champion -657.747  split mull -657.742  - own mull -657.708  refit -657.428  cached game FM -657.781
+      split mull - champion: +0.0051 ± 0.0081
+      - own mull - champion: +0.0391 ± 0.0706
+      refit - champion: +0.3188 ± 0.1545
+      - own mull - split mull: +0.0339 ± 0.0701
+      champion - cached game FM: +0.0337 ± 0.0484
+  main build dl          champion -658.984  split mull -658.982  - own mull -658.996  refit -658.727  cached game FM -658.999
+      split mull - champion: +0.0017 ± 0.0026
+      - own mull - champion: -0.0126 ± 0.0320
+      refit - champion: +0.2564 ± 0.1293
+      - own mull - split mull: -0.0143 ± 0.0325
+      champion - cached game FM: +0.0158 ± 0.0239
+  all pre                champion -666.816  split mull -666.813  - own mull -666.742  refit -666.589  cached game FM -666.841
+      split mull - champion: +0.0032 ± 0.0022
+      - own mull - champion: +0.0743 ± 0.0264
+      refit - champion: +0.2270 ± 0.1272
+      - own mull - split mull: +0.0711 ± 0.0269
+      champion - cached game FM: +0.0250 ± 0.0296
+  experienced pre        champion -665.564  split mull -665.558  - own mull -665.479  refit -665.384  cached game FM -665.588
+      split mull - champion: +0.0060 ± 0.0028
+      - own mull - champion: +0.0848 ± 0.0296
+      refit - champion: +0.1795 ± 0.1226
+      - own mull - split mull: +0.0788 ± 0.0295
+      champion - cached game FM: +0.0241 ± 0.0333
+  match 1 pre            champion -662.777  split mull -662.771  - own mull -662.643  refit -662.479  cached game FM -662.815
+      split mull - champion: +0.0056 ± 0.0086
+      - own mull - champion: +0.1344 ± 0.0661
+      refit - champion: +0.2985 ± 0.1558
+      - own mull - split mull: +0.1287 ± 0.0659
+      champion - cached game FM: +0.0382 ± 0.0486
+  main build pre         champion -664.636  split mull -664.634  - own mull -664.566  refit -664.383  cached game FM -664.659
+      split mull - champion: +0.0019 ± 0.0028
+      - own mull - champion: +0.0706 ± 0.0329
+      refit - champion: +0.2538 ± 0.1333
+      - own mull - split mull: +0.0687 ± 0.0334
+      champion - cached game FM: +0.0231 ± 0.0284
+  champion               draft spearman 0.2921 raw +0.0000 strat +0.0000 sd 0.286
+  split mull             draft spearman 0.2923 raw +0.0002 strat +0.0001 sd 0.286
+  - own mull             draft spearman 0.2950 raw +0.0028 strat +0.0023 sd 0.283
+  refit                  draft spearman 0.2916 raw -0.0002 strat -0.0003 sd 0.282
+  cached game FM         draft spearman 0.2917 raw -0.0010 strat -0.0008 sd 0.286
+  card marginal champion: r(total, w) 0.933, sd total/w 1.19 [1s]
+  card marginal - own mull: r(total, w) 0.941, sd total/w 1.17 [1s]
+LCI done [161s, peak RSS 6.4 GB]
+=== FIN: 140237 drafts, 769659 games, 173242 builds, 363 cards, 18 deck columns (affinity in) [26s]
+  champion               val 0.65550 (1e-05, 0.001) epochs [28, 26] [33s]
+  split mull             val 0.65547 (1e-05, 0.001) epochs [28, 26] [32s]
+  - own mull             val 0.66012 (1e-05, 0.001) epochs [31, 26] [33s]
+  refit                  val nan (1e-05, 0.001) epochs [28, 26] [23s]
+  contexts: raw test 0.66402  dl test 0.66773  pre test 0.67311
+  all raw                champion -657.971  split mull -657.971  - own mull -658.054  refit -657.913  cached game FM -657.935
+      split mull - champion: +0.0002 ± 0.0046
+      - own mull - champion: -0.0826 ± 0.0370
+      refit - champion: +0.0587 ± 0.0309
+      - own mull - split mull: -0.0828 ± 0.0359
+      champion - cached game FM: -0.0363 ± 0.0331
+  experienced raw        champion -660.604  split mull -660.602  - own mull -660.670  refit -660.525  cached game FM -660.559
+      split mull - champion: +0.0022 ± 0.0054
+      - own mull - champion: -0.0664 ± 0.0420
+      refit - champion: +0.0795 ± 0.0342
+      - own mull - split mull: -0.0686 ± 0.0413
+      champion - cached game FM: -0.0454 ± 0.0381
+  match 1 raw            champion -655.588  split mull -655.600  - own mull -655.647  refit -655.647  cached game FM -655.575
+      split mull - champion: -0.0118 ± 0.0098
+      - own mull - champion: -0.0590 ± 0.0726
+      refit - champion: -0.0584 ± 0.1545
+      - own mull - split mull: -0.0472 ± 0.0769
+      champion - cached game FM: -0.0137 ± 0.0296
+  main build raw         champion -656.292  split mull -656.292  - own mull -656.378  refit -656.223  cached game FM -656.259
+      split mull - champion: +0.0002 ± 0.0049
+      - own mull - champion: -0.0867 ± 0.0374
+      refit - champion: +0.0684 ± 0.0337
+      - own mull - split mull: -0.0868 ± 0.0365
+      champion - cached game FM: -0.0325 ± 0.0302
+  all dl                 champion -660.805  split mull -660.804  - own mull -660.856  refit -660.759  cached game FM -660.778
+      split mull - champion: +0.0012 ± 0.0053
+      - own mull - champion: -0.0502 ± 0.0397
+      refit - champion: +0.0463 ± 0.0567
+      - own mull - split mull: -0.0514 ± 0.0399
+      champion - cached game FM: -0.0274 ± 0.0286
+  experienced dl         champion -660.102  split mull -660.099  - own mull -660.153  refit -660.058  cached game FM -660.060
+      split mull - champion: +0.0029 ± 0.0056
+      - own mull - champion: -0.0514 ± 0.0419
+      refit - champion: +0.0443 ± 0.0377
+      - own mull - split mull: -0.0543 ± 0.0423
+      champion - cached game FM: -0.0417 ± 0.0340
+  match 1 dl             champion -659.376  split mull -659.387  - own mull -659.402  refit -659.461  cached game FM -659.370
+      split mull - champion: -0.0117 ± 0.0114
+      - own mull - champion: -0.0258 ± 0.0789
+      refit - champion: -0.0848 ± 0.1539
+      - own mull - split mull: -0.0141 ± 0.0833
+      champion - cached game FM: -0.0053 ± 0.0302
+  main build dl          champion -659.114  split mull -659.113  - own mull -659.170  refit -659.062  cached game FM -659.091
+      split mull - champion: +0.0008 ± 0.0052
+      - own mull - champion: -0.0561 ± 0.0406
+      refit - champion: +0.0519 ± 0.0527
+      - own mull - split mull: -0.0568 ± 0.0411
+      champion - cached game FM: -0.0229 ± 0.0267
+  all pre                champion -666.349  split mull -666.347  - own mull -666.316  refit -666.286  cached game FM -666.305
+      split mull - champion: +0.0027 ± 0.0063
+      - own mull - champion: +0.0338 ± 0.0410
+      refit - champion: +0.0638 ± 0.0577
+      - own mull - split mull: +0.0311 ± 0.0408
+      champion - cached game FM: -0.0440 ± 0.0393
+  experienced pre        champion -665.574  split mull -665.569  - own mull -665.542  refit -665.510  cached game FM -665.516
+      split mull - champion: +0.0044 ± 0.0065
+      - own mull - champion: +0.0312 ± 0.0439
+      refit - champion: +0.0641 ± 0.0397
+      - own mull - split mull: +0.0268 ± 0.0434
+      champion - cached game FM: -0.0577 ± 0.0461
+  match 1 pre            champion -664.135  split mull -664.145  - own mull -664.079  refit -664.218  cached game FM -664.118
+      split mull - champion: -0.0093 ± 0.0102
+      - own mull - champion: +0.0566 ± 0.0753
+      refit - champion: -0.0824 ± 0.1453
+      - own mull - split mull: +0.0660 ± 0.0799
+      champion - cached game FM: -0.0175 ± 0.0352
+  main build pre         champion -664.622  split mull -664.620  - own mull -664.597  refit -664.556  cached game FM -664.584
+      split mull - champion: +0.0021 ± 0.0060
+      - own mull - champion: +0.0254 ± 0.0405
+      refit - champion: +0.0663 ± 0.0544
+      - own mull - split mull: +0.0233 ± 0.0410
+      champion - cached game FM: -0.0387 ± 0.0345
+  champion               draft spearman 0.2781 raw +0.0000 strat +0.0000 sd 0.261
+  split mull             draft spearman 0.2783 raw +0.0001 strat +0.0001 sd 0.261
+  - own mull             draft spearman 0.2796 raw +0.0015 strat +0.0004 sd 0.260
+  refit                  draft spearman 0.2775 raw -0.0006 strat +0.0015 sd 0.254
+  cached game FM         draft spearman 0.2792 raw +0.0009 strat +0.0011 sd 0.255
+  card marginal champion: r(total, w) 0.918, sd total/w 1.19 [2s]
+  card marginal - own mull: r(total, w) 0.925, sd total/w 1.17 [2s]
+FIN done [171s, peak RSS 6.3 GB]
+=== MKM: 157553 drafts, 919942 games, 194890 builds, 326 cards, 18 deck columns (affinity in) [29s]
+  champion               val 0.65860 (1e-05, 0.001) epochs [24, 25] [33s]
+  split mull             val 0.65860 (1e-05, 0.001) epochs [24, 25] [33s]
+  - own mull             val 0.66328 (1e-05, 0.001) epochs [24, 25] [33s]
+  refit                  val nan (1e-05, 0.001) epochs [24, 25] [24s]
+  contexts: raw test 0.66514  dl test 0.67103  pre test 0.67513
+  all raw                champion -660.285  split mull -660.288  - own mull -660.311  refit -660.210  cached game FM -660.221
+      split mull - champion: -0.0025 ± 0.0065
+      - own mull - champion: -0.0252 ± 0.0329
+      refit - champion: +0.0760 ± 0.0459
+      - own mull - split mull: -0.0227 ± 0.0378
+      champion - cached game FM: -0.0644 ± 0.0639
+  experienced raw        champion -662.500  split mull -662.505  - own mull -662.531  refit -662.450  cached game FM -662.429
+      split mull - champion: -0.0048 ± 0.0073
+      - own mull - champion: -0.0305 ± 0.0349
+      refit - champion: +0.0504 ± 0.0528
+      - own mull - split mull: -0.0257 ± 0.0405
+      champion - cached game FM: -0.0715 ± 0.0691
+  match 1 raw            champion -657.552  split mull -657.563  - own mull -657.581  refit -657.389  cached game FM -657.453
+      split mull - champion: -0.0114 ± 0.0085
+      - own mull - champion: -0.0290 ± 0.0439
+      refit - champion: +0.1627 ± 0.1572
+      - own mull - split mull: -0.0176 ± 0.0420
+      champion - cached game FM: -0.0988 ± 0.1313
+  main build raw         champion -658.954  split mull -658.956  - own mull -658.982  refit -658.901  cached game FM -658.889
+      split mull - champion: -0.0019 ± 0.0071
+      - own mull - champion: -0.0279 ± 0.0318
+      refit - champion: +0.0531 ± 0.0547
+      - own mull - split mull: -0.0260 ± 0.0369
+      champion - cached game FM: -0.0659 ± 0.0641
+  all dl                 champion -665.499  split mull -665.502  - own mull -665.487  refit -665.364  cached game FM -665.417
+      split mull - champion: -0.0037 ± 0.0088
+      - own mull - champion: +0.0122 ± 0.0418
+      refit - champion: +0.1347 ± 0.0493
+      - own mull - split mull: +0.0159 ± 0.0490
+      champion - cached game FM: -0.0819 ± 0.0825
+  experienced dl         champion -664.820  split mull -664.826  - own mull -664.814  refit -664.764  cached game FM -664.724
+      split mull - champion: -0.0061 ± 0.0078
+      - own mull - champion: +0.0060 ± 0.0405
+      refit - champion: +0.0552 ± 0.0611
+      - own mull - split mull: +0.0121 ± 0.0466
+      champion - cached game FM: -0.0954 ± 0.0930
+  match 1 dl             champion -662.124  split mull -662.139  - own mull -662.095  refit -661.900  cached game FM -661.987
+      split mull - champion: -0.0146 ± 0.0095
+      - own mull - champion: +0.0287 ± 0.0546
+      refit - champion: +0.2237 ± 0.1648
+      - own mull - split mull: +0.0433 ± 0.0541
+      champion - cached game FM: -0.1366 ± 0.1641
+  main build dl          champion -664.108  split mull -664.111  - own mull -664.098  refit -664.002  cached game FM -664.022
+      split mull - champion: -0.0028 ± 0.0093
+      - own mull - champion: +0.0104 ± 0.0402
+      refit - champion: +0.1059 ± 0.0637
+      - own mull - split mull: +0.0132 ± 0.0478
+      champion - cached game FM: -0.0861 ± 0.0850
+  all pre                champion -669.707  split mull -669.710  - own mull -669.643  refit -669.579  cached game FM -669.601
+      split mull - champion: -0.0031 ± 0.0084
+      - own mull - champion: +0.0637 ± 0.0419
+      refit - champion: +0.1272 ± 0.0793
+      - own mull - split mull: +0.0668 ± 0.0491
+      champion - cached game FM: -0.1055 ± 0.1035
+  experienced pre        champion -668.890  split mull -668.895  - own mull -668.836  refit -668.846  cached game FM -668.773
+      split mull - champion: -0.0049 ± 0.0074
+      - own mull - champion: +0.0545 ± 0.0407
+      refit - champion: +0.0448 ± 0.0904
+      - own mull - split mull: +0.0594 ± 0.0466
+      champion - cached game FM: -0.1174 ± 0.1132
+  match 1 pre            champion -666.179  split mull -666.195  - own mull -666.098  refit -665.962  cached game FM -666.019
+      split mull - champion: -0.0156 ± 0.0088
+      - own mull - champion: +0.0815 ± 0.0529
+      refit - champion: +0.2174 ± 0.1495
+      - own mull - split mull: +0.0970 ± 0.0527
+      champion - cached game FM: -0.1601 ± 0.1796
+  main build pre         champion -668.301  split mull -668.303  - own mull -668.241  refit -668.201  cached game FM -668.192
+      split mull - champion: -0.0021 ± 0.0090
+      - own mull - champion: +0.0607 ± 0.0402
+      refit - champion: +0.0999 ± 0.0959
+      - own mull - split mull: +0.0628 ± 0.0478
+      champion - cached game FM: -0.1098 ± 0.1061
+  champion               draft spearman 0.2512 raw +0.0000 strat +0.0000 sd 0.243
+  split mull             draft spearman 0.2510 raw -0.0002 strat -0.0001 sd 0.243
+  - own mull             draft spearman 0.2539 raw +0.0022 strat +0.0014 sd 0.241
+  refit                  draft spearman 0.2519 raw +0.0005 strat -0.0001 sd 0.235
+  cached game FM         draft spearman 0.2552 raw +0.0029 strat +0.0027 sd 0.242
+  card marginal champion: r(total, w) 0.930, sd total/w 1.25 [1s]
+  card marginal - own mull: r(total, w) 0.929, sd total/w 1.25 [1s]
+MKM done [175s, peak RSS 6.4 GB]
+=== BLB: 154585 drafts, 898354 games, 187018 builds, 276 cards, 18 deck columns (affinity in) [24s]
+  champion               val 0.65730 (1e-05, 0.001) epochs [38, 33] [40s]
+  split mull             val 0.65730 (1e-05, 0.001) epochs [38, 33] [40s]
+  - own mull             val 0.66227 (1e-05, 0.001) epochs [32, 33] [38s]
+  refit                  val nan (1e-05, 0.001) epochs [38, 33] [30s]
+  contexts: raw test 0.66214  dl test 0.66965  pre test 0.67551
+  all raw                champion -655.974  split mull -655.977  - own mull -656.041  refit -655.944  cached game FM -655.966
+      split mull - champion: -0.0027 ± 0.0031
+      - own mull - champion: -0.0667 ± 0.0204
+      refit - champion: +0.0302 ± 0.0314
+      - own mull - split mull: -0.0639 ± 0.0206
+      champion - cached game FM: -0.0076 ± 0.0121
+  experienced raw        champion -659.318  split mull -659.320  - own mull -659.368  refit -659.284  cached game FM -659.318
+      split mull - champion: -0.0018 ± 0.0037
+      - own mull - champion: -0.0500 ± 0.0253
+      refit - champion: +0.0346 ± 0.0373
+      - own mull - split mull: -0.0483 ± 0.0255
+      champion - cached game FM: -0.0007 ± 0.0148
+  match 1 raw            champion -653.492  split mull -653.489  - own mull -653.620  refit -653.412  cached game FM -653.504
+      split mull - champion: +0.0029 ± 0.0096
+      - own mull - champion: -0.1286 ± 0.0420
+      refit - champion: +0.0799 ± 0.0623
+      - own mull - split mull: -0.1315 ± 0.0389
+      champion - cached game FM: +0.0123 ± 0.0319
+  main build raw         champion -654.391  split mull -654.395  - own mull -654.450  refit -654.369  cached game FM -654.387
+      split mull - champion: -0.0043 ± 0.0028
+      - own mull - champion: -0.0596 ± 0.0199
+      refit - champion: +0.0219 ± 0.0317
+      - own mull - split mull: -0.0552 ± 0.0207
+      champion - cached game FM: -0.0040 ± 0.0111
+  all dl                 champion -662.478  split mull -662.480  - own mull -662.498  refit -662.452  cached game FM -662.483
+      split mull - champion: -0.0021 ± 0.0041
+      - own mull - champion: -0.0203 ± 0.0217
+      refit - champion: +0.0264 ± 0.0335
+      - own mull - split mull: -0.0182 ± 0.0228
+      champion - cached game FM: +0.0049 ± 0.0131
+  experienced dl         champion -662.201  split mull -662.201  - own mull -662.214  refit -662.172  cached game FM -662.207
+      split mull - champion: -0.0006 ± 0.0039
+      - own mull - champion: -0.0129 ± 0.0269
+      refit - champion: +0.0291 ± 0.0367
+      - own mull - split mull: -0.0123 ± 0.0271
+      champion - cached game FM: +0.0057 ± 0.0163
+  match 1 dl             champion -660.405  split mull -660.401  - own mull -660.476  refit -660.329  cached game FM -660.436
+      split mull - champion: +0.0043 ± 0.0084
+      - own mull - champion: -0.0702 ± 0.0493
+      refit - champion: +0.0763 ± 0.0645
+      - own mull - split mull: -0.0745 ± 0.0470
+      champion - cached game FM: +0.0309 ± 0.0482
+  main build dl          champion -661.033  split mull -661.036  - own mull -661.049  refit -661.014  cached game FM -661.041
+      split mull - champion: -0.0037 ± 0.0051
+      - own mull - champion: -0.0162 ± 0.0220
+      refit - champion: +0.0190 ± 0.0343
+      - own mull - split mull: -0.0126 ± 0.0232
+      champion - cached game FM: +0.0082 ± 0.0145
+  all pre                champion -668.412  split mull -668.413  - own mull -668.338  refit -668.389  cached game FM -668.411
+      split mull - champion: -0.0016 ± 0.0042
+      - own mull - champion: +0.0739 ± 0.0215
+      refit - champion: +0.0225 ± 0.0347
+      - own mull - split mull: +0.0755 ± 0.0228
+      champion - cached game FM: -0.0006 ± 0.0107
+  experienced pre        champion -668.015  split mull -668.015  - own mull -667.937  refit -667.990  cached game FM -668.017
+      split mull - champion: -0.0003 ± 0.0036
+      - own mull - champion: +0.0782 ± 0.0275
+      refit - champion: +0.0250 ± 0.0363
+      - own mull - split mull: +0.0785 ± 0.0280
+      champion - cached game FM: +0.0015 ± 0.0148
+  match 1 pre            champion -666.263  split mull -666.258  - own mull -666.232  refit -666.184  cached game FM -666.289
+      split mull - champion: +0.0046 ± 0.0088
+      - own mull - champion: +0.0314 ± 0.0489
+      refit - champion: +0.0792 ± 0.0628
+      - own mull - split mull: +0.0268 ± 0.0461
+      champion - cached game FM: +0.0264 ± 0.0417
+  main build pre         champion -667.008  split mull -667.011  - own mull -666.931  refit -666.994  cached game FM -667.011
+      split mull - champion: -0.0034 ± 0.0054
+      - own mull - champion: +0.0770 ± 0.0210
+      refit - champion: +0.0137 ± 0.0352
+      - own mull - split mull: +0.0804 ± 0.0225
+      champion - cached game FM: +0.0033 ± 0.0116
+  champion               draft spearman 0.2720 raw +0.0000 strat +0.0000 sd 0.254
+  split mull             draft spearman 0.2719 raw -0.0001 strat -0.0002 sd 0.254
+  - own mull             draft spearman 0.2741 raw +0.0018 strat +0.0001 sd 0.252
+  refit                  draft spearman 0.2721 raw +0.0003 strat -0.0004 sd 0.252
+  cached game FM         draft spearman 0.2719 raw -0.0002 strat -0.0000 sd 0.252
+  card marginal champion: r(total, w) 0.928, sd total/w 1.22 [1s]
+  card marginal - own mull: r(total, w) 0.931, sd total/w 1.22 [1s]
+BLB done [195s, peak RSS 6.0 GB]
+=== DSK: 167672 drafts, 977322 games, 207049 builds, 286 cards, 18 deck columns (affinity in) [26s]
+  champion               val 0.66132 (1e-05, 0.001) epochs [32, 35] [42s]
+  split mull             val 0.66132 (1e-05, 0.001) epochs [32, 35] [43s]
+  - own mull             val 0.66620 (1e-05, 0.001) epochs [32, 35] [43s]
+  refit                  val nan (1e-05, 0.001) epochs [32, 35] [31s]
+  contexts: raw test 0.66809  dl test 0.67342  pre test 0.67859
+  all raw                champion -661.493  split mull -661.491  - own mull -661.569  refit -661.469  cached game FM -661.498
+      split mull - champion: +0.0019 ± 0.0029
+      - own mull - champion: -0.0762 ± 0.0231
+      refit - champion: +0.0239 ± 0.0370
+      - own mull - split mull: -0.0781 ± 0.0236
+      champion - cached game FM: +0.0044 ± 0.0106
+  experienced raw        champion -664.232  split mull -664.229  - own mull -664.307  refit -664.196  cached game FM -664.235
+      split mull - champion: +0.0035 ± 0.0036
+      - own mull - champion: -0.0744 ± 0.0248
+      refit - champion: +0.0363 ± 0.0416
+      - own mull - split mull: -0.0780 ± 0.0252
+      champion - cached game FM: +0.0025 ± 0.0113
+  match 1 raw            champion -659.853  split mull -659.847  - own mull -659.940  refit -659.816  cached game FM -659.844
+      split mull - champion: +0.0060 ± 0.0106
+      - own mull - champion: -0.0871 ± 0.0521
+      refit - champion: +0.0370 ± 0.0711
+      - own mull - split mull: -0.0931 ± 0.0535
+      champion - cached game FM: -0.0098 ± 0.0135
+  main build raw         champion -660.151  split mull -660.149  - own mull -660.236  refit -660.124  cached game FM -660.155
+      split mull - champion: +0.0013 ± 0.0027
+      - own mull - champion: -0.0852 ± 0.0202
+      refit - champion: +0.0272 ± 0.0461
+      - own mull - split mull: -0.0865 ± 0.0199
+      champion - cached game FM: +0.0045 ± 0.0110
+  all dl                 champion -666.226  split mull -666.223  - own mull -666.250  refit -666.201  cached game FM -666.225
+      split mull - champion: +0.0037 ± 0.0021
+      - own mull - champion: -0.0236 ± 0.0203
+      refit - champion: +0.0250 ± 0.0436
+      - own mull - split mull: -0.0273 ± 0.0210
+      champion - cached game FM: -0.0016 ± 0.0077
+  experienced dl         champion -665.492  split mull -665.488  - own mull -665.519  refit -665.458  cached game FM -665.491
+      split mull - champion: +0.0043 ± 0.0030
+      - own mull - champion: -0.0267 ± 0.0222
+      refit - champion: +0.0346 ± 0.0473
+      - own mull - split mull: -0.0310 ± 0.0225
+      champion - cached game FM: -0.0017 ± 0.0102
+  match 1 dl             champion -664.158  split mull -664.150  - own mull -664.189  refit -664.112  cached game FM -664.142
+      split mull - champion: +0.0083 ± 0.0102
+      - own mull - champion: -0.0304 ± 0.0516
+      refit - champion: +0.0465 ± 0.0816
+      - own mull - split mull: -0.0387 ± 0.0536
+      champion - cached game FM: -0.0162 ± 0.0144
+  main build dl          champion -664.948  split mull -664.945  - own mull -664.982  refit -664.919  cached game FM -664.947
+      split mull - champion: +0.0029 ± 0.0020
+      - own mull - champion: -0.0341 ± 0.0184
+      refit - champion: +0.0290 ± 0.0523
+      - own mull - split mull: -0.0370 ± 0.0182
+      champion - cached game FM: -0.0009 ± 0.0084
+  all pre                champion -671.444  split mull -671.438  - own mull -671.387  refit -671.416  cached game FM -671.436
+      split mull - champion: +0.0057 ± 0.0017
+      - own mull - champion: +0.0565 ± 0.0179
+      refit - champion: +0.0281 ± 0.0510
+      - own mull - split mull: +0.0508 ± 0.0183
+      champion - cached game FM: -0.0073 ± 0.0092
+  experienced pre        champion -670.785  split mull -670.778  - own mull -670.735  refit -670.749  cached game FM -670.778
+      split mull - champion: +0.0065 ± 0.0028
+      - own mull - champion: +0.0502 ± 0.0202
+      refit - champion: +0.0360 ± 0.0552
+      - own mull - split mull: +0.0438 ± 0.0201
+      champion - cached game FM: -0.0069 ± 0.0115
+  match 1 pre            champion -668.921  split mull -668.912  - own mull -668.882  refit -668.868  cached game FM -668.899
+      split mull - champion: +0.0090 ± 0.0099
+      - own mull - champion: +0.0389 ± 0.0511
+      refit - champion: +0.0536 ± 0.0948
+      - own mull - split mull: +0.0299 ± 0.0528
+      champion - cached game FM: -0.0219 ± 0.0177
+  main build pre         champion -670.028  split mull -670.023  - own mull -669.983  refit -669.995  cached game FM -670.022
+      split mull - champion: +0.0050 ± 0.0019
+      - own mull - champion: +0.0449 ± 0.0164
+      refit - champion: +0.0332 ± 0.0595
+      - own mull - split mull: +0.0399 ± 0.0160
+      champion - cached game FM: -0.0065 ± 0.0096
+  champion               draft spearman 0.2754 raw +0.0000 strat +0.0000 sd 0.258
+  split mull             draft spearman 0.2756 raw +0.0002 strat +0.0002 sd 0.258
+  - own mull             draft spearman 0.2779 raw +0.0020 strat +0.0005 sd 0.255
+  refit                  draft spearman 0.2767 raw +0.0011 strat +0.0007 sd 0.256
+  cached game FM         draft spearman 0.2763 raw +0.0003 strat +0.0000 sd 0.256
+  card marginal champion: r(total, w) 0.944, sd total/w 1.26 [1s]
+  card marginal - own mull: r(total, w) 0.948, sd total/w 1.23 [1s]
+DSK done [209s, peak RSS 6.3 GB]
+=== OTJ: 195312 drafts, 1132415 games, 240717 builds, 381 cards, 18 deck columns (affinity in) [47s]
+  champion               val 0.66224 (1e-05, 0.001) epochs [27, 29] [50s]
+  split mull             val 0.66219 (1e-05, 0.001) epochs [27, 29] [50s]
+  - own mull             val 0.66665 (1e-05, 0.001) epochs [27, 29] [49s]
+  refit                  val nan (1e-05, 0.001) epochs [27, 29] [36s]
+  contexts: raw test 0.66870  dl test 0.67335  pre test 0.67828
+  all raw                champion -663.502  split mull -663.496  - own mull -663.551  refit -663.448  cached game FM -663.499
+      split mull - champion: +0.0060 ± 0.0042
+      - own mull - champion: -0.0487 ± 0.0118
+      refit - champion: +0.0543 ± 0.0401
+      - own mull - split mull: -0.0548 ± 0.0103
+      champion - cached game FM: -0.0035 ± 0.0119
+  experienced raw        champion -665.670  split mull -665.664  - own mull -665.719  refit -665.610  cached game FM -665.666
+      split mull - champion: +0.0054 ± 0.0040
+      - own mull - champion: -0.0496 ± 0.0154
+      refit - champion: +0.0598 ± 0.0439
+      - own mull - split mull: -0.0550 ± 0.0142
+      champion - cached game FM: -0.0042 ± 0.0123
+  match 1 raw            champion -664.130  split mull -664.128  - own mull -664.244  refit -664.043  cached game FM -664.125
+      split mull - champion: +0.0022 ± 0.0082
+      - own mull - champion: -0.1140 ± 0.0457
+      refit - champion: +0.0869 ± 0.0885
+      - own mull - split mull: -0.1161 ± 0.0409
+      champion - cached game FM: -0.0054 ± 0.0291
+  main build raw         champion -662.212  split mull -662.206  - own mull -662.268  refit -662.160  cached game FM -662.206
+      split mull - champion: +0.0060 ± 0.0039
+      - own mull - champion: -0.0561 ± 0.0116
+      refit - champion: +0.0525 ± 0.0369
+      - own mull - split mull: -0.0620 ± 0.0096
+      champion - cached game FM: -0.0057 ± 0.0117
+  all dl                 champion -667.695  split mull -667.688  - own mull -667.709  refit -667.648  cached game FM -667.697
+      split mull - champion: +0.0063 ± 0.0056
+      - own mull - champion: -0.0143 ± 0.0119
+      refit - champion: +0.0460 ± 0.0399
+      - own mull - split mull: -0.0206 ± 0.0090
+      champion - cached game FM: +0.0022 ± 0.0159
+  experienced dl         champion -666.862  split mull -666.857  - own mull -666.883  refit -666.809  cached game FM -666.862
+      split mull - champion: +0.0052 ± 0.0040
+      - own mull - champion: -0.0209 ± 0.0115
+      refit - champion: +0.0526 ± 0.0444
+      - own mull - split mull: -0.0261 ± 0.0101
+      champion - cached game FM: +0.0001 ± 0.0142
+  match 1 dl             champion -668.605  split mull -668.603  - own mull -668.683  refit -668.524  cached game FM -668.605
+      split mull - champion: +0.0025 ± 0.0083
+      - own mull - champion: -0.0776 ± 0.0499
+      refit - champion: +0.0812 ± 0.0903
+      - own mull - split mull: -0.0802 ± 0.0453
+      champion - cached game FM: -0.0008 ± 0.0313
+  main build dl          champion -666.471  split mull -666.464  - own mull -666.492  refit -666.426  cached game FM -666.471
+      split mull - champion: +0.0064 ± 0.0053
+      - own mull - champion: -0.0213 ± 0.0122
+      refit - champion: +0.0447 ± 0.0358
+      - own mull - split mull: -0.0277 ± 0.0087
+      champion - cached game FM: -0.0002 ± 0.0151
+  all pre                champion -672.614  split mull -672.606  - own mull -672.570  refit -672.575  cached game FM -672.621
+      split mull - champion: +0.0081 ± 0.0060
+      - own mull - champion: +0.0438 ± 0.0126
+      refit - champion: +0.0395 ± 0.0391
+      - own mull - split mull: +0.0358 ± 0.0097
+      champion - cached game FM: +0.0067 ± 0.0199
+  experienced pre        champion -671.648  split mull -671.641  - own mull -671.612  refit -671.605  cached game FM -671.652
+      split mull - champion: +0.0072 ± 0.0045
+      - own mull - champion: +0.0362 ± 0.0119
+      refit - champion: +0.0428 ± 0.0424
+      - own mull - split mull: +0.0289 ± 0.0101
+      champion - cached game FM: +0.0041 ± 0.0174
+  match 1 pre            champion -672.820  split mull -672.816  - own mull -672.849  refit -672.750  cached game FM -672.824
+      split mull - champion: +0.0041 ± 0.0080
+      - own mull - champion: -0.0295 ± 0.0498
+      refit - champion: +0.0697 ± 0.0876
+      - own mull - split mull: -0.0336 ± 0.0452
+      champion - cached game FM: +0.0044 ± 0.0329
+  main build pre         champion -671.386  split mull -671.378  - own mull -671.350  refit -671.349  cached game FM -671.390
+      split mull - champion: +0.0081 ± 0.0057
+      - own mull - champion: +0.0358 ± 0.0128
+      refit - champion: +0.0372 ± 0.0358
+      - own mull - split mull: +0.0277 ± 0.0092
+      champion - cached game FM: +0.0042 ± 0.0187
+  champion               draft spearman 0.2529 raw +0.0000 strat +0.0000 sd 0.234
+  split mull             draft spearman 0.2530 raw +0.0001 strat +0.0002 sd 0.234
+  - own mull             draft spearman 0.2543 raw +0.0014 strat +0.0002 sd 0.235
+  refit                  draft spearman 0.2529 raw +0.0005 strat +0.0010 sd 0.235
+  cached game FM         draft spearman 0.2533 raw -0.0003 strat -0.0002 sd 0.232
+  card marginal champion: r(total, w) 0.910, sd total/w 1.20 [2s]
+  card marginal - own mull: r(total, w) 0.922, sd total/w 1.18 [2s]
+OTJ done [261s, peak RSS 6.2 GB]

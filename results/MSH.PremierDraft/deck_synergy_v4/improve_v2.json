@@ -1,0 +1,334 @@
+{
+ "round 4: lgbm": {
+  "spearman": 0.28157917620352974,
+  "nll": 0.6792284100921272,
+  "ceiling": 0.2714160825066003,
+  "n": 9770,
+  "vs round 4 blend": -0.006593211494372031,
+  "vs round 4 blend sd": 0.0019408901614602655,
+  "info": {
+   "trees": 720,
+   "val_nll": 0.6813777289665409
+  }
+ },
+ "recency": {
+  "spearman": 0.28433740865377644,
+  "nll": 0.6790808811844675,
+  "ceiling": 0.28230894152863434,
+  "n": 9770,
+  "vs round 4 blend": -0.0038349790441253306,
+  "vs round 4 blend sd": 0.0023497616827610267,
+  "info": {
+   "tau": 2.0,
+   "trees": 867,
+   "val_nll": {
+    "None": 0.6813777289665409,
+    "2.0": 0.6813135006409673,
+    "1.0": 0.6813675158675913,
+    "0.5": 0.6815922647868052,
+    "0.25": 0.6819832227603514
+   }
+  }
+ },
+ "recency + tuned": {
+  "spearman": 0.2814542254903979,
+  "nll": 0.6791929019471922,
+  "ceiling": 0.27607602398987385,
+  "n": 9770,
+  "vs round 4 blend": -0.006718162207503875,
+  "vs round 4 blend sd": 0.002346289273342722,
+  "info": {
+   "params": {
+    "num_leaves": 15,
+    "min_data_in_leaf": 300,
+    "feature_fraction": 0.6,
+    "lambda_l2": 10
+   },
+   "tau": 2.0,
+   "trees": 719,
+   "val_nll": 0.6813158047368281,
+   "grid": [
+    [
+     {
+      "num_leaves": 7,
+      "min_data_in_leaf": 100,
+      "feature_fraction": 0.3,
+      "lambda_l2": 10
+     },
+     0.6814502519609849,
+     1383
+    ],
+    [
+     {
+      "num_leaves": 7,
+      "min_data_in_leaf": 100,
+      "feature_fraction": 0.6,
+      "lambda_l2": 10
+     },
+     0.6814151223420015,
+     1302
+    ],
+    [
+     {
+      "num_leaves": 7,
+      "min_data_in_leaf": 300,
+      "feature_fraction": 0.3,
+      "lambda_l2": 10
+     },
+     0.6814242596773417,
+     1362
+    ],
+    [
+     {
+      "num_leaves": 7,
+      "min_data_in_leaf": 300,
+      "feature_fraction": 0.6,
+      "lambda_l2": 10
+     },
+     0.6813293934381163,
+     1281
+    ],
+    [
+     {
+      "num_leaves": 7,
+      "min_data_in_leaf": 1000,
+      "feature_fraction": 0.3,
+      "lambda_l2": 10
+     },
+     0.6814734069515033,
+     1119
+    ],
+    [
+     {
+      "num_leaves": 7,
+      "min_data_in_leaf": 1000,
+      "feature_fraction": 0.6,
+      "lambda_l2": 10
+     },
+     0.681359945395617,
+     1325
+    ],
+    [
+     {
+      "num_leaves": 15,
+      "min_data_in_leaf": 100,
+      "feature_fraction": 0.3,
+      "lambda_l2": 10
+     },
+     0.681396701996517,
+     947
+    ],
+    [
+     {
+      "num_leaves": 15,
+      "min_data_in_leaf": 100,
+      "feature_fraction": 0.6,
+      "lambda_l2": 10
+     },
+     0.6813786688743599,
+     754
+    ],
+    [
+     {
+      "num_leaves": 15,
+      "min_data_in_leaf": 300,
+      "feature_fraction": 0.3,
+      "lambda_l2": 10
+     },
+     0.6814512082501997,
+     692
+    ],
+    [
+     {
+      "num_leaves": 15,
+      "min_data_in_leaf": 300,
+      "feature_fraction": 0.6,
+      "lambda_l2": 10
+     },
+     0.6813158047368281,
+     719
+    ],
+    [
+     {
+      "num_leaves": 15,
+      "min_data_in_leaf": 1000,
+      "feature_fraction": 0.3,
+      "lambda_l2": 10
+     },
+     0.6813468118296636,
+     891
+    ],
+    [
+     {
+      "num_leaves": 15,
+      "min_data_in_leaf": 1000,
+      "feature_fraction": 0.6,
+      "lambda_l2": 10
+     },
+     0.6814417484639133,
+     678
+    ],
+    [
+     {
+      "num_leaves": 31,
+      "min_data_in_leaf": 100,
+      "feature_fraction": 0.3,
+      "lambda_l2": 10
+     },
+     0.6814101461454275,
+     676
+    ],
+    [
+     {
+      "num_leaves": 31,
+      "min_data_in_leaf": 100,
+      "feature_fraction": 0.6,
+      "lambda_l2": 10
+     },
+     0.6814795985760623,
+     557
+    ],
+    [
+     {
+      "num_leaves": 31,
+      "min_data_in_leaf": 300,
+      "feature_fraction": 0.3,
+      "lambda_l2": 10
+     },
+     0.6814053208819406,
+     695
+    ],
+    [
+     {
+      "num_leaves": 31,
+      "min_data_in_leaf": 300,
+      "feature_fraction": 0.6,
+      "lambda_l2": 10
+     },
+     0.6815439626984142,
+     427
+    ],
+    [
+     {
+      "num_leaves": 31,
+      "min_data_in_leaf": 1000,
+      "feature_fraction": 0.3,
+      "lambda_l2": 10
+     },
+     0.6814124565481938,
+     678
+    ],
+    [
+     {
+      "num_leaves": 31,
+      "min_data_in_leaf": 1000,
+      "feature_fraction": 0.6,
+      "lambda_l2": 10
+     },
+     0.6814535581780489,
+     522
+    ]
+   ]
+  }
+ },
+ "recency + tuned, refit on train+val": {
+  "spearman": 0.28814795526617293,
+  "nll": 0.6788656902397677,
+  "ceiling": 0.2679583919605792,
+  "n": 9770,
+  "vs round 4 blend": -2.4432431728838022e-05,
+  "vs round 4 blend sd": 0.0027815126781783567,
+  "info": null
+ },
+ "recency + tuned, refit, 5 seeds": {
+  "spearman": 0.2893277782411204,
+  "nll": 0.6788019918501769,
+  "ceiling": 0.2693094504472131,
+  "n": 9770,
+  "vs round 4 blend": 0.0011553905432186151,
+  "vs round 4 blend sd": 0.002562360762132504,
+  "info": null
+ },
+ "round 4: lgbm, refit on train+val": {
+  "spearman": 0.2874237187471578,
+  "nll": 0.6788572636336739,
+  "ceiling": 0.27252816443373207,
+  "n": 9770,
+  "vs round 4 blend": -0.0007486689507439914,
+  "vs round 4 blend sd": 0.0027924729228094667,
+  "info": null
+ },
+ "game FM": {
+  "spearman": 0.2729942944105509,
+  "nll": 0.6799485700572945,
+  "ceiling": 0.2298451062705984,
+  "n": 9770,
+  "vs round 4 blend": -0.015178093287350869,
+  "vs round 4 blend sd": 0.0033340612364885416,
+  "info": null
+ },
+ "game FM, calibrated on train+val": {
+  "spearman": 0.27373342513002374,
+  "nll": 0.6799220157952046,
+  "ceiling": 0.23161356084277848,
+  "n": 9770,
+  "vs round 4 blend": -0.014438962567878022,
+  "vs round 4 blend sd": 0.0033610437591902165,
+  "info": null
+ },
+ "round 4: lgbm + game FM": {
+  "spearman": 0.28817238769790177,
+  "nll": 0.6790322736384784,
+  "ceiling": 0.24453083702375836,
+  "n": 9770,
+  "vs round 4 blend": 0.0,
+  "vs round 4 blend sd": 0.0,
+  "info": {
+   "alpha": 0.4
+  }
+ },
+ "recency + tuned + game FM": {
+  "spearman": 0.2878769303551746,
+  "nll": 0.6789843333343903,
+  "ceiling": 0.2516409662917728,
+  "n": 9770,
+  "vs round 4 blend": -0.00029545734272717894,
+  "vs round 4 blend sd": 0.0012097154838474071,
+  "info": {
+   "alpha": 0.35000000000000003
+  }
+ },
+ "round 4: lgbm, refit on train+val + game FM": {
+  "spearman": 0.2923227135185799,
+  "nll": 0.6787798294665417,
+  "ceiling": 0.24896752992392848,
+  "n": 9770,
+  "vs round 4 blend": 0.004150325820678147,
+  "vs round 4 blend sd": 0.0015951984781405264,
+  "info": {
+   "alpha": 0.4
+  }
+ },
+ "recency + tuned, refit on train+val + game FM": {
+  "spearman": 0.2928500261104002,
+  "nll": 0.6787539089922937,
+  "ceiling": 0.2486961107635963,
+  "n": 9770,
+  "vs round 4 blend": 0.004677638412498408,
+  "vs round 4 blend sd": 0.0017526842151153056,
+  "info": {
+   "alpha": 0.35000000000000003
+  }
+ },
+ "recency + tuned, refit, 5 seeds + game FM": {
+  "spearman": 0.29340938368444075,
+  "nll": 0.6787355441676591,
+  "ceiling": 0.24736995389713373,
+  "n": 9770,
+  "vs round 4 blend": 0.005236995986538984,
+  "vs round 4 blend sd": 0.0015844935047089604,
+  "info": {
+   "alpha": 0.35000000000000003
+  }
+ }
+}

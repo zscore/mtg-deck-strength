@@ -1,0 +1,226 @@
+{
+ "set": "TMT",
+ "settings": {
+  "tau": 2.0,
+  "params": {},
+  "seeds": 5,
+  "test drafts": 4734,
+  "test drafts where the targets agree": 2526
+ },
+ "training": {
+  "draft": {
+   "round 4 trees": 459,
+   "twin trees": 381,
+   "refit trees": 463,
+   "alpha round 4": 0.25,
+   "alpha round 10": 0.25,
+   "val nll round 4": 0.6751049026345363,
+   "seconds": 21.117600202560425
+  },
+  "game": {
+   "round 4 trees": 413,
+   "twin trees": 403,
+   "refit trees": 489,
+   "alpha round 4": 0.2,
+   "alpha round 10": 0.2,
+   "val nll round 4": 0.674994131970498,
+   "seconds": 22.924357891082764
+  }
+ },
+ "spearman": {
+  "round 4: lgbm | train draft | eval draft": 0.2902053129261974,
+  "round 4: lgbm | train draft | eval game": 0.28818645895179273,
+  "game FM | train draft | eval draft": 0.2760067306076811,
+  "game FM | train draft | eval game": 0.2837824879769854,
+  "round 4 blend | train draft | eval draft": 0.29434891916616046,
+  "round 4 blend | train draft | eval game": 0.2949849131224647,
+  "refit, 5 seeds | train draft | eval draft": 0.2988021991008107,
+  "refit, 5 seeds | train draft | eval game": 0.2968829088161947,
+  "round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft": 0.30098753492924657,
+  "round 10 best (refit, 5 seeds, + game FM) | train draft | eval game": 0.30166666988971397,
+  "round 4: lgbm | train game | eval draft": 0.2961434998281296,
+  "round 4: lgbm | train game | eval game": 0.2990737348106942,
+  "game FM | train game | eval draft": 0.2765389764328366,
+  "game FM | train game | eval game": 0.2838558665939648,
+  "round 4 blend | train game | eval draft": 0.29901691142196346,
+  "round 4 blend | train game | eval game": 0.3031727661069104,
+  "refit, 5 seeds | train game | eval draft": 0.3009184642322132,
+  "refit, 5 seeds | train game | eval game": 0.30476225167979143,
+  "round 10 best (refit, 5 seeds, + game FM) | train game | eval draft": 0.3029387130389486,
+  "round 10 best (refit, 5 seeds, + game FM) | train game | eval game": 0.30776230314455694
+ },
+ "nll": {
+  "round 4: lgbm | train draft | eval draft": 0.6748275265751764,
+  "round 4: lgbm | train draft | eval game": 0.6740203584703265,
+  "game FM | train draft | eval draft": 0.6756795845335822,
+  "game FM | train draft | eval game": 0.6745906545564807,
+  "round 4 blend | train draft | eval draft": 0.6746153936315042,
+  "round 4 blend | train draft | eval game": 0.6736511324114616,
+  "refit, 5 seeds | train draft | eval draft": 0.674426762720779,
+  "refit, 5 seeds | train draft | eval game": 0.6735985052872617,
+  "round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft": 0.6743218890083678,
+  "round 10 best (refit, 5 seeds, + game FM) | train draft | eval game": 0.6733488340459626,
+  "round 4: lgbm | train game | eval draft": 0.6747329007691504,
+  "round 4: lgbm | train game | eval game": 0.6736915636544032,
+  "game FM | train game | eval draft": 0.6757207691018037,
+  "game FM | train game | eval game": 0.674624352283033,
+  "round 4 blend | train game | eval draft": 0.6745928530429125,
+  "round 4 blend | train game | eval game": 0.673537866631333,
+  "refit, 5 seeds | train game | eval draft": 0.6744488428127361,
+  "refit, 5 seeds | train game | eval game": 0.673248086229814,
+  "round 10 best (refit, 5 seeds, + game FM) | train game | eval draft": 0.674345876914649,
+  "round 10 best (refit, 5 seeds, + game FM) | train game | eval game": 0.6731620870455578
+ },
+ "spearman, targets agree": {
+  "round 4: lgbm | train draft | eval draft": 0.2885027779628905,
+  "round 4: lgbm | train draft | eval game": 0.2885027779628905,
+  "game FM | train draft | eval draft": 0.2832774791646395,
+  "game FM | train draft | eval game": 0.2832774791646395,
+  "round 4 blend | train draft | eval draft": 0.29429523832786686,
+  "round 4 blend | train draft | eval game": 0.29429523832786686,
+  "refit, 5 seeds | train draft | eval draft": 0.2937193399783337,
+  "refit, 5 seeds | train draft | eval game": 0.2937193399783337,
+  "round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft": 0.29808687976345744,
+  "round 10 best (refit, 5 seeds, + game FM) | train draft | eval game": 0.29808687976345744,
+  "round 4: lgbm | train game | eval draft": 0.2963331874586983,
+  "round 4: lgbm | train game | eval game": 0.2963331874586983,
+  "game FM | train game | eval draft": 0.28364710570365514,
+  "game FM | train game | eval game": 0.28364710570365514,
+  "round 4 blend | train game | eval draft": 0.30043374514727406,
+  "round 4 blend | train game | eval game": 0.30043374514727406,
+  "refit, 5 seeds | train game | eval draft": 0.2964957851094006,
+  "refit, 5 seeds | train game | eval game": 0.2964957851094006,
+  "round 10 best (refit, 5 seeds, + game FM) | train game | eval draft": 0.3004072031552576,
+  "round 10 best (refit, 5 seeds, + game FM) | train game | eval game": 0.3004072031552576
+ },
+ "paired": {
+  "round 10 - round 4 | train draft | eval draft": {
+   "name": "round 10 - round 4 | train draft | eval draft",
+   "delta": 0.006638615763086109,
+   "se": 0.0017934204287686298,
+   "se_boot": 0.0017934204287686298,
+   "se_seed": 0.0,
+   "n_units": 4734,
+   "n_seeds": 1
+  },
+  "round 10 - round 4 | train game | eval draft": {
+   "name": "round 10 - round 4 | train game | eval draft",
+   "delta": 0.003921801616985132,
+   "se": 0.002962860129269785,
+   "se_boot": 0.002962860129269785,
+   "se_seed": 0.0,
+   "n_units": 4734,
+   "n_seeds": 1
+  },
+  "train game - train draft | round 4 blend | eval draft": {
+   "name": "train game - train draft | round 4 blend | eval draft",
+   "delta": 0.004667992255803,
+   "se": 0.0032287393493148873,
+   "se_boot": 0.0032287393493148873,
+   "se_seed": 0.0,
+   "n_units": 4734,
+   "n_seeds": 1
+  },
+  "train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft": {
+   "name": "train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft",
+   "delta": 0.001951178109702023,
+   "se": 0.0019249629386245853,
+   "se_boot": 0.0019249629386245853,
+   "se_seed": 0.0,
+   "n_units": 4734,
+   "n_seeds": 1
+  },
+  "train game - train draft | round 4: lgbm | eval draft": {
+   "name": "train game - train draft | round 4: lgbm | eval draft",
+   "delta": 0.0059381869019322076,
+   "se": 0.0037764504721848552,
+   "se_boot": 0.0037764504721848552,
+   "se_seed": 0.0,
+   "n_units": 4734,
+   "n_seeds": 1
+  },
+  "round 10 - round 4 | train draft | eval game": {
+   "name": "round 10 - round 4 | train draft | eval game",
+   "delta": 0.006681756767249247,
+   "se": 0.0024699200974971297,
+   "se_boot": 0.0024699200974971297,
+   "se_seed": 0.0,
+   "n_units": 4734,
+   "n_seeds": 1
+  },
+  "round 10 - round 4 | train game | eval game": {
+   "name": "round 10 - round 4 | train game | eval game",
+   "delta": 0.004589537037646529,
+   "se": 0.0026616079844138767,
+   "se_boot": 0.0026616079844138767,
+   "se_seed": 0.0,
+   "n_units": 4734,
+   "n_seeds": 1
+  },
+  "train game - train draft | round 4 blend | eval game": {
+   "name": "train game - train draft | round 4 blend | eval game",
+   "delta": 0.008187852984445687,
+   "se": 0.004330417111192954,
+   "se_boot": 0.004330417111192954,
+   "se_seed": 0.0,
+   "n_units": 4734,
+   "n_seeds": 1
+  },
+  "train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game": {
+   "name": "train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game",
+   "delta": 0.006095633254842969,
+   "se": 0.001837876666399623,
+   "se_boot": 0.001837876666399623,
+   "se_seed": 0.0,
+   "n_units": 4734,
+   "n_seeds": 1
+  },
+  "train game - train draft | round 4: lgbm | eval game": {
+   "name": "train game - train draft | round 4: lgbm | eval game",
+   "delta": 0.01088727585890148,
+   "se": 0.005048308041348981,
+   "se_boot": 0.005048308041348981,
+   "se_seed": 0.0,
+   "n_units": 4734,
+   "n_seeds": 1
+  }
+ },
+ "comparison": {
+  "train": {
+   "drafts": 22259,
+   "no games": 246,
+   "agree": 0.5315153421088099,
+   "stale (game file has more games)": 0.20800575048295072,
+   "draft record is a prefix of the game record": 0.20499573206343502,
+   "missing (game file has fewer games)": 0.25715440945235635,
+   "same games, different W/L": 0.0033244979558830134,
+   "game history complete": 0.7433846983242733,
+   "mean games: draft file": 5.232400417327881,
+   "mean games: game file": 5.6818365604923855
+  },
+  "val": {
+   "drafts": 4771,
+   "no games": 52,
+   "agree": 0.47977363236218823,
+   "stale (game file has more games)": 0.25005239991616013,
+   "draft record is a prefix of the game record": 0.2462796059526305,
+   "missing (game file has fewer games)": 0.266401173758122,
+   "same games, different W/L": 0.0037727939635296584,
+   "game history complete": 0.7130580591071054,
+   "mean games: draft file": 5.079648017883301,
+   "mean games: game file": 5.709285265143576
+  },
+  "test": {
+   "drafts": 4734,
+   "no games": 89,
+   "agree": 0.5335868187579215,
+   "stale (game file has more games)": 0.21820870299957754,
+   "draft record is a prefix of the game record": 0.21440642163075624,
+   "missing (game file has fewer games)": 0.24376848331220954,
+   "same games, different W/L": 0.004435994930291508,
+   "game history complete": 0.7600337980566118,
+   "mean games: draft file": 5.0984368324279785,
+   "mean games: game file": 5.596324461343473
+  }
+ }
+}

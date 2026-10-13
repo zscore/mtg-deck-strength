@@ -1,0 +1,2004 @@
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+MSH: loaded [5s]; T2 FM card power found
+  377376 games, 1.0000 valid [0s]
+  hand values on train games [10s]
+  hand values on test games [15s]
+  deck model (no FM score) lambda 0.003 (interior) val 0.66047 [62s]
+    GP WR                            r +0.283  rho +0.274  skill tilt +0.872  (n=250)
+    OH WR                            r +0.511  rho +0.485  skill tilt +0.752  (n=250)
+    GD WR                            r +0.268  rho +0.214  skill tilt +0.751  (n=250)
+    GIH WR                           r +0.399  rho +0.357  skill tilt +0.797  (n=250)
+    IWD                              r +0.449  rho +0.407  skill tilt +0.463  (n=250)
+    deck model w (clean)             r +0.454  rho +0.399  skill tilt +0.418  (n=250)
+    HV train                         r +0.607  rho +0.587  skill tilt +0.333  (n=250)
+    HV train shrunk                  r +0.619  rho +0.601  skill tilt +0.318  (n=250)
+    FM w (T2 champion)               r +0.409  rho +0.354  skill tilt +0.394  (n=250)
+    FM full marginal (T2 champion)   r +0.457  rho +0.403  skill tilt +0.445  (n=250)
+  deck vs hand [clean deck model w]: slope 0.186 (EIV 0.215), implied lambda 0.12
+  deck vs hand [FM w (T2 champion)]: slope 0.227 (EIV 0.263), implied lambda 0.26
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.277 (EIV 0.321), implied lambda 0.40
+    prior arm ridge              lam 0.003 kappa +0.000 test 0.65548  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.003 kappa +0.303 test 0.65531  vs ridge -0.163 ± 0.111
+    prior arm kappa*HV only      lam 0 kappa +0.265 test 0.65782  vs ridge +2.344 ± 0.560
+  all dl                 GP WR sum -666.485  OH WR sum -665.561  GD WR sum -665.591  GIH WR sum -665.435  IWD sum -665.190  deck model w (clean) sum -663.786  HV train sum -665.700  HV train shrunk sum -665.725  FM w (T2 champion) sum -664.118  FM full marginal (T2 champion) sum -663.661
+      HV train shrunk sum - GP WR sum: +0.7604 ± 0.2445
+      HV train shrunk sum - OH WR sum: -0.1637 ± 0.1756
+      HV train shrunk sum - GD WR sum: -0.1341 ± 0.2869
+      HV train shrunk sum - GIH WR sum: -0.2895 ± 0.2384
+      HV train shrunk sum - IWD sum: -0.5346 ± 0.2487
+      HV train shrunk sum - deck model w (clean) sum: -1.9389 ± 0.2489
+      HV train shrunk sum - HV train sum: -0.0245 ± 0.0408
+      HV train shrunk sum - FM w (T2 champion) sum: -1.6067 ± 0.2603
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -2.0635 ± 0.2597
+      GP WR sum - GIH WR sum: -1.0500 ± 0.1134
+      OH WR sum - GIH WR sum: -0.1258 ± 0.0734
+      GD WR sum - GIH WR sum: -0.1555 ± 0.0692
+      IWD sum - GIH WR sum: +0.2451 ± 0.1846
+      deck model w (clean) sum - GIH WR sum: +1.6494 ± 0.1557
+      HV train sum - GIH WR sum: -0.2651 ± 0.2644
+      FM w (T2 champion) sum - GIH WR sum: +1.3172 ± 0.1722
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7739 ± 0.1698
+  experienced dl         GP WR sum -666.972  OH WR sum -666.159  GD WR sum -666.139  GIH WR sum -666.017  IWD sum -665.766  deck model w (clean) sum -664.338  HV train sum -666.332  HV train shrunk sum -666.323  FM w (T2 champion) sum -664.753  FM full marginal (T2 champion) sum -664.251
+      HV train shrunk sum - GP WR sum: +0.6485 ± 0.2076
+      HV train shrunk sum - OH WR sum: -0.1642 ± 0.1287
+      HV train shrunk sum - GD WR sum: -0.1848 ± 0.2288
+      HV train shrunk sum - GIH WR sum: -0.3064 ± 0.1859
+      HV train shrunk sum - IWD sum: -0.5572 ± 0.1862
+      HV train shrunk sum - deck model w (clean) sum: -1.9851 ± 0.2649
+      HV train shrunk sum - HV train sum: +0.0090 ± 0.0476
+      HV train shrunk sum - FM w (T2 champion) sum: -1.5707 ± 0.2365
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -2.0721 ± 0.2824
+      GP WR sum - GIH WR sum: -0.9549 ± 0.1142
+      OH WR sum - GIH WR sum: -0.1422 ± 0.0626
+      GD WR sum - GIH WR sum: -0.1216 ± 0.0552
+      IWD sum - GIH WR sum: +0.2508 ± 0.1271
+      deck model w (clean) sum - GIH WR sum: +1.6787 ± 0.1682
+      HV train sum - GIH WR sum: -0.3154 ± 0.2177
+      FM w (T2 champion) sum - GIH WR sum: +1.2643 ± 0.1584
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7657 ± 0.1976
+  match 1 dl             GP WR sum -666.521  OH WR sum -665.281  GD WR sum -665.628  GIH WR sum -665.305  IWD sum -664.848  deck model w (clean) sum -663.347  HV train sum -664.757  HV train shrunk sum -664.871  FM w (T2 champion) sum -663.804  FM full marginal (T2 champion) sum -663.411
+      HV train shrunk sum - GP WR sum: +1.6501 ± 0.6361
+      HV train shrunk sum - OH WR sum: +0.4095 ± 0.5658
+      HV train shrunk sum - GD WR sum: +0.7566 ± 0.7419
+      HV train shrunk sum - GIH WR sum: +0.4338 ± 0.6724
+      HV train shrunk sum - IWD sum: -0.0234 ± 0.6750
+      HV train shrunk sum - deck model w (clean) sum: -1.5236 ± 0.6782
+      HV train shrunk sum - HV train sum: -0.1142 ± 0.1368
+      HV train shrunk sum - FM w (T2 champion) sum: -1.0671 ± 0.6375
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.4597 ± 0.6743
+      GP WR sum - GIH WR sum: -1.2163 ± 0.2219
+      OH WR sum - GIH WR sum: +0.0243 ± 0.1585
+      GD WR sum - GIH WR sum: -0.3228 ± 0.1312
+      IWD sum - GIH WR sum: +0.4572 ± 0.5812
+      deck model w (clean) sum - GIH WR sum: +1.9574 ± 0.6817
+      HV train sum - GIH WR sum: +0.5479 ± 0.6288
+      FM w (T2 champion) sum - GIH WR sum: +1.5008 ± 0.5460
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.8935 ± 0.6043
+  main build dl          GP WR sum -664.848  OH WR sum -663.939  GD WR sum -663.970  GIH WR sum -663.818  IWD sum -663.558  deck model w (clean) sum -662.117  HV train sum -664.056  HV train shrunk sum -664.083  FM w (T2 champion) sum -662.401  FM full marginal (T2 champion) sum -661.982
+      HV train shrunk sum - GP WR sum: +0.7654 ± 0.2718
+      HV train shrunk sum - OH WR sum: -0.1436 ± 0.1936
+      HV train shrunk sum - GD WR sum: -0.1127 ± 0.3095
+      HV train shrunk sum - GIH WR sum: -0.2647 ± 0.2584
+      HV train shrunk sum - IWD sum: -0.5254 ± 0.2384
+      HV train shrunk sum - deck model w (clean) sum: -1.9660 ± 0.2139
+      HV train shrunk sum - HV train sum: -0.0276 ± 0.0367
+      HV train shrunk sum - FM w (T2 champion) sum: -1.6822 ± 0.2416
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -2.1010 ± 0.2326
+      GP WR sum - GIH WR sum: -1.0301 ± 0.1044
+      OH WR sum - GIH WR sum: -0.1211 ± 0.0730
+      GD WR sum - GIH WR sum: -0.1521 ± 0.0686
+      IWD sum - GIH WR sum: +0.2607 ± 0.1758
+      deck model w (clean) sum - GIH WR sum: +1.7012 ± 0.1503
+      HV train sum - GIH WR sum: -0.2371 ± 0.2799
+      FM w (T2 champion) sum - GIH WR sum: +1.4175 ± 0.1569
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.8363 ± 0.1601
+  all raw                GP WR sum -658.821  OH WR sum -658.113  GD WR sum -658.152  GIH WR sum -658.028  IWD sum -657.745  deck model w (clean) sum -656.272  HV train sum -658.075  HV train shrunk sum -658.066  FM w (T2 champion) sum -656.592  FM full marginal (T2 champion) sum -656.226
+      HV train shrunk sum - GP WR sum: +0.7548 ± 0.2221
+      HV train shrunk sum - OH WR sum: +0.0462 ± 0.1473
+      HV train shrunk sum - GD WR sum: +0.0859 ± 0.2430
+      HV train shrunk sum - GIH WR sum: -0.0382 ± 0.1997
+      HV train shrunk sum - IWD sum: -0.3211 ± 0.2029
+      HV train shrunk sum - deck model w (clean) sum: -1.7948 ± 0.2061
+      HV train shrunk sum - HV train sum: +0.0083 ± 0.0379
+      HV train shrunk sum - FM w (T2 champion) sum: -1.4740 ± 0.1970
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.8404 ± 0.2059
+      GP WR sum - GIH WR sum: -0.7930 ± 0.0995
+      OH WR sum - GIH WR sum: -0.0844 ± 0.0581
+      GD WR sum - GIH WR sum: -0.1240 ± 0.0562
+      IWD sum - GIH WR sum: +0.2829 ± 0.1304
+      deck model w (clean) sum - GIH WR sum: +1.7566 ± 0.1453
+      HV train sum - GIH WR sum: -0.0465 ± 0.2236
+      FM w (T2 champion) sum - GIH WR sum: +1.4358 ± 0.1586
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.8022 ± 0.1493
+  experienced raw        GP WR sum -664.310  OH WR sum -663.576  GD WR sum -663.578  GIH WR sum -663.466  IWD sum -663.099  deck model w (clean) sum -661.626  HV train sum -663.547  HV train shrunk sum -663.541  FM w (T2 champion) sum -662.002  FM full marginal (T2 champion) sum -661.553
+      HV train shrunk sum - GP WR sum: +0.7689 ± 0.2046
+      HV train shrunk sum - OH WR sum: +0.0350 ± 0.1134
+      HV train shrunk sum - GD WR sum: +0.0378 ± 0.2003
+      HV train shrunk sum - GIH WR sum: -0.0747 ± 0.1591
+      HV train shrunk sum - IWD sum: -0.4415 ± 0.1662
+      HV train shrunk sum - deck model w (clean) sum: -1.9143 ± 0.2284
+      HV train shrunk sum - HV train sum: +0.0063 ± 0.0481
+      HV train shrunk sum - FM w (T2 champion) sum: -1.5384 ± 0.2175
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.9873 ± 0.2463
+      GP WR sum - GIH WR sum: -0.8436 ± 0.1026
+      OH WR sum - GIH WR sum: -0.1097 ± 0.0516
+      GD WR sum - GIH WR sum: -0.1125 ± 0.0500
+      IWD sum - GIH WR sum: +0.3668 ± 0.1267
+      deck model w (clean) sum - GIH WR sum: +1.8396 ± 0.1651
+      HV train sum - GIH WR sum: -0.0810 ± 0.1909
+      FM w (T2 champion) sum - GIH WR sum: +1.4637 ± 0.1629
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.9126 ± 0.1952
+  match 1 raw            GP WR sum -659.073  OH WR sum -658.241  GD WR sum -658.518  GIH WR sum -658.284  IWD sum -657.875  deck model w (clean) sum -656.439  HV train sum -657.640  HV train shrunk sum -657.694  FM w (T2 champion) sum -656.845  FM full marginal (T2 champion) sum -656.585
+      HV train shrunk sum - GP WR sum: +1.3790 ± 0.5445
+      HV train shrunk sum - OH WR sum: +0.5467 ± 0.4844
+      HV train shrunk sum - GD WR sum: +0.8232 ± 0.6203
+      HV train shrunk sum - GIH WR sum: +0.5900 ± 0.5691
+      HV train shrunk sum - IWD sum: +0.1810 ± 0.5438
+      HV train shrunk sum - deck model w (clean) sum: -1.2554 ± 0.6250
+      HV train shrunk sum - HV train sum: -0.0540 ± 0.1127
+      HV train shrunk sum - FM w (T2 champion) sum: -0.8493 ± 0.6186
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.1093 ± 0.6192
+      GP WR sum - GIH WR sum: -0.7890 ± 0.1736
+      OH WR sum - GIH WR sum: +0.0432 ± 0.1209
+      GD WR sum - GIH WR sum: -0.2332 ± 0.0946
+      IWD sum - GIH WR sum: +0.4090 ± 0.4520
+      deck model w (clean) sum - GIH WR sum: +1.8454 ± 0.5872
+      HV train sum - GIH WR sum: +0.6440 ± 0.5354
+      FM w (T2 champion) sum - GIH WR sum: +1.4393 ± 0.4968
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.6993 ± 0.5266
+  main build raw         GP WR sum -657.091  OH WR sum -656.395  GD WR sum -656.431  GIH WR sum -656.311  IWD sum -656.016  deck model w (clean) sum -654.515  HV train sum -656.347  HV train shrunk sum -656.346  FM w (T2 champion) sum -654.783  FM full marginal (T2 champion) sum -654.454
+      HV train shrunk sum - GP WR sum: +0.7450 ± 0.2453
+      HV train shrunk sum - OH WR sum: +0.0490 ± 0.1646
+      HV train shrunk sum - GD WR sum: +0.0849 ± 0.2609
+      HV train shrunk sum - GIH WR sum: -0.0345 ± 0.2170
+      HV train shrunk sum - IWD sum: -0.3292 ± 0.1903
+      HV train shrunk sum - deck model w (clean) sum: -1.8303 ± 0.1667
+      HV train shrunk sum - HV train sum: +0.0018 ± 0.0349
+      HV train shrunk sum - FM w (T2 champion) sum: -1.5629 ± 0.1777
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.8918 ± 0.1733
+      GP WR sum - GIH WR sum: -0.7794 ± 0.0921
+      OH WR sum - GIH WR sum: -0.0834 ± 0.0571
+      GD WR sum - GIH WR sum: -0.1194 ± 0.0547
+      IWD sum - GIH WR sum: +0.2947 ± 0.1304
+      deck model w (clean) sum - GIH WR sum: +1.7959 ± 0.1468
+      HV train sum - GIH WR sum: -0.0363 ± 0.2394
+      FM w (T2 champion) sum - GIH WR sum: +1.5284 ± 0.1477
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.8574 ± 0.1430
+MSH done [171s]
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+EOE: loaded [6s]; T2 FM card power found
+  563418 games, 1.0000 valid [0s]
+  hand values on train games [15s]
+  hand values on test games [21s]
+  deck model (no FM score) lambda 0.003 (interior) val 0.65893 [91s]
+    GP WR                            r +0.622  rho +0.583  skill tilt +0.715  (n=240)
+    OH WR                            r +0.791  rho +0.753  skill tilt +0.554  (n=240)
+    GD WR                            r +0.463  rho +0.363  skill tilt +0.579  (n=240)
+    GIH WR                           r +0.671  rho +0.601  skill tilt +0.629  (n=240)
+    IWD                              r +0.627  rho +0.529  skill tilt +0.372  (n=240)
+    deck model w (clean)             r +0.619  rho +0.536  skill tilt +0.255  (n=240)
+    HV train                         r +0.791  rho +0.758  skill tilt +0.129  (n=240)
+    HV train shrunk                  r +0.782  rho +0.757  skill tilt +0.088  (n=240)
+    FM w (T2 champion)               r +0.623  rho +0.517  skill tilt +0.260  (n=240)
+    FM full marginal (T2 champion)   r +0.640  rho +0.535  skill tilt +0.300  (n=240)
+  deck vs hand [clean deck model w]: slope 0.179 (EIV 0.195), implied lambda 0.06
+  deck vs hand [FM w (T2 champion)]: slope 0.219 (EIV 0.239), implied lambda 0.20
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.257 (EIV 0.281), implied lambda 0.31
+    prior arm ridge              lam 0.003 kappa +0.000 test 0.65878  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.003 kappa +0.249 test 0.65868  vs ridge -0.100 ± 0.071
+    prior arm kappa*HV only      lam 0 kappa +0.208 test 0.66034  vs ridge +1.567 ± 0.416
+  all dl                 GP WR sum -667.604  OH WR sum -666.973  GD WR sum -667.226  GIH WR sum -666.602  IWD sum -667.524  deck model w (clean) sum -666.123  HV train sum -667.352  HV train shrunk sum -667.444  FM w (T2 champion) sum -666.170  FM full marginal (T2 champion) sum -666.004
+      HV train shrunk sum - GP WR sum: +0.1601 ± 0.0927
+      HV train shrunk sum - OH WR sum: -0.4709 ± 0.0960
+      HV train shrunk sum - GD WR sum: -0.2173 ± 0.1569
+      HV train shrunk sum - GIH WR sum: -0.8422 ± 0.1533
+      HV train shrunk sum - IWD sum: +0.0797 ± 0.2058
+      HV train shrunk sum - deck model w (clean) sum: -1.3211 ± 0.1537
+      HV train shrunk sum - HV train sum: -0.0918 ± 0.0175
+      HV train shrunk sum - FM w (T2 champion) sum: -1.2736 ± 0.1694
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.4397 ± 0.1845
+      GP WR sum - GIH WR sum: -1.0023 ± 0.1152
+      OH WR sum - GIH WR sum: -0.3712 ± 0.0989
+      GD WR sum - GIH WR sum: -0.6249 ± 0.0976
+      IWD sum - GIH WR sum: -0.9219 ± 0.2167
+      deck model w (clean) sum - GIH WR sum: +0.4789 ± 0.1723
+      HV train sum - GIH WR sum: -0.7504 ± 0.1531
+      FM w (T2 champion) sum - GIH WR sum: +0.4315 ± 0.1490
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.5976 ± 0.1439
+  experienced dl         GP WR sum -667.142  OH WR sum -666.493  GD WR sum -666.669  GIH WR sum -666.059  IWD sum -666.938  deck model w (clean) sum -665.657  HV train sum -666.869  HV train shrunk sum -666.960  FM w (T2 champion) sum -665.671  FM full marginal (T2 champion) sum -665.509
+      HV train shrunk sum - GP WR sum: +0.1815 ± 0.1513
+      HV train shrunk sum - OH WR sum: -0.4669 ± 0.1240
+      HV train shrunk sum - GD WR sum: -0.2911 ± 0.1671
+      HV train shrunk sum - GIH WR sum: -0.9006 ± 0.1907
+      HV train shrunk sum - IWD sum: -0.0223 ± 0.1565
+      HV train shrunk sum - deck model w (clean) sum: -1.3034 ± 0.1675
+      HV train shrunk sum - HV train sum: -0.0906 ± 0.0168
+      HV train shrunk sum - FM w (T2 champion) sum: -1.2893 ± 0.1786
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.4512 ± 0.1964
+      GP WR sum - GIH WR sum: -1.0821 ± 0.1165
+      OH WR sum - GIH WR sum: -0.4337 ± 0.0933
+      GD WR sum - GIH WR sum: -0.6095 ± 0.0844
+      IWD sum - GIH WR sum: -0.8783 ± 0.2209
+      deck model w (clean) sum - GIH WR sum: +0.4027 ± 0.1478
+      HV train sum - GIH WR sum: -0.8100 ± 0.1918
+      FM w (T2 champion) sum - GIH WR sum: +0.3887 ± 0.1181
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.5506 ± 0.0990
+  match 1 dl             GP WR sum -664.153  OH WR sum -663.929  GD WR sum -663.709  GIH WR sum -663.178  IWD sum -664.799  deck model w (clean) sum -662.459  HV train sum -664.860  HV train shrunk sum -665.010  FM w (T2 champion) sum -663.001  FM full marginal (T2 champion) sum -662.668
+      HV train shrunk sum - GP WR sum: -0.8572 ± 0.4516
+      HV train shrunk sum - OH WR sum: -1.0814 ± 0.3050
+      HV train shrunk sum - GD WR sum: -1.3012 ± 0.3865
+      HV train shrunk sum - GIH WR sum: -1.8326 ± 0.4177
+      HV train shrunk sum - IWD sum: -0.2110 ± 0.2404
+      HV train shrunk sum - deck model w (clean) sum: -2.5510 ± 0.4743
+      HV train shrunk sum - HV train sum: -0.1506 ± 0.0392
+      HV train shrunk sum - FM w (T2 champion) sum: -2.0093 ± 0.2581
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -2.3427 ± 0.3354
+      GP WR sum - GIH WR sum: -0.9754 ± 0.1975
+      OH WR sum - GIH WR sum: -0.7512 ± 0.1340
+      GD WR sum - GIH WR sum: -0.5314 ± 0.2436
+      IWD sum - GIH WR sum: -1.6215 ± 0.5144
+      deck model w (clean) sum - GIH WR sum: +0.7185 ± 0.4735
+      HV train sum - GIH WR sum: -1.6820 ± 0.4151
+      FM w (T2 champion) sum - GIH WR sum: +0.1768 ± 0.3430
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.5101 ± 0.2905
+  main build dl          GP WR sum -665.410  OH WR sum -664.735  GD WR sum -665.061  GIH WR sum -664.413  IWD sum -665.291  deck model w (clean) sum -663.984  HV train sum -665.057  HV train shrunk sum -665.138  FM w (T2 champion) sum -663.952  FM full marginal (T2 champion) sum -663.847
+      HV train shrunk sum - GP WR sum: +0.2728 ± 0.1047
+      HV train shrunk sum - OH WR sum: -0.4024 ± 0.0993
+      HV train shrunk sum - GD WR sum: -0.0766 ± 0.1851
+      HV train shrunk sum - GIH WR sum: -0.7249 ± 0.1797
+      HV train shrunk sum - IWD sum: +0.1536 ± 0.2064
+      HV train shrunk sum - deck model w (clean) sum: -1.1539 ± 0.1766
+      HV train shrunk sum - HV train sum: -0.0803 ± 0.0187
+      HV train shrunk sum - FM w (T2 champion) sum: -1.1857 ± 0.1765
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.2904 ± 0.1945
+      GP WR sum - GIH WR sum: -0.9978 ± 0.1276
+      OH WR sum - GIH WR sum: -0.3226 ± 0.1092
+      GD WR sum - GIH WR sum: -0.6484 ± 0.0879
+      IWD sum - GIH WR sum: -0.8785 ± 0.1988
+      deck model w (clean) sum - GIH WR sum: +0.4290 ± 0.1684
+      HV train sum - GIH WR sum: -0.6446 ± 0.1789
+      FM w (T2 champion) sum - GIH WR sum: +0.4607 ± 0.1591
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.5655 ± 0.1411
+  all raw                GP WR sum -661.351  OH WR sum -660.799  GD WR sum -661.088  GIH WR sum -660.595  IWD sum -661.207  deck model w (clean) sum -659.876  HV train sum -660.951  HV train shrunk sum -661.010  FM w (T2 champion) sum -660.047  FM full marginal (T2 champion) sum -659.877
+      HV train shrunk sum - GP WR sum: +0.3409 ± 0.0848
+      HV train shrunk sum - OH WR sum: -0.2111 ± 0.0784
+      HV train shrunk sum - GD WR sum: +0.0774 ± 0.0946
+      HV train shrunk sum - GIH WR sum: -0.4157 ± 0.1119
+      HV train shrunk sum - IWD sum: +0.1966 ± 0.1336
+      HV train shrunk sum - deck model w (clean) sum: -1.1338 ± 0.1398
+      HV train shrunk sum - HV train sum: -0.0589 ± 0.0172
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9631 ± 0.1464
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.1334 ± 0.1534
+      GP WR sum - GIH WR sum: -0.7566 ± 0.0865
+      OH WR sum - GIH WR sum: -0.2046 ± 0.0599
+      GD WR sum - GIH WR sum: -0.4931 ± 0.0711
+      IWD sum - GIH WR sum: -0.6123 ± 0.1708
+      deck model w (clean) sum - GIH WR sum: +0.7181 ± 0.1098
+      HV train sum - GIH WR sum: -0.3568 ± 0.1144
+      FM w (T2 champion) sum - GIH WR sum: +0.5474 ± 0.1091
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.7177 ± 0.1006
+  experienced raw        GP WR sum -664.806  OH WR sum -664.212  GD WR sum -664.413  GIH WR sum -663.906  IWD sum -664.545  deck model w (clean) sum -663.227  HV train sum -664.400  HV train shrunk sum -664.471  FM w (T2 champion) sum -663.349  FM full marginal (T2 champion) sum -663.186
+      HV train shrunk sum - GP WR sum: +0.3358 ± 0.1348
+      HV train shrunk sum - OH WR sum: -0.2581 ± 0.1153
+      HV train shrunk sum - GD WR sum: -0.0580 ± 0.1273
+      HV train shrunk sum - GIH WR sum: -0.5648 ± 0.1685
+      HV train shrunk sum - IWD sum: +0.0744 ± 0.1241
+      HV train shrunk sum - deck model w (clean) sum: -1.2439 ± 0.1723
+      HV train shrunk sum - HV train sum: -0.0709 ± 0.0195
+      HV train shrunk sum - FM w (T2 champion) sum: -1.1220 ± 0.1932
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.2846 ± 0.2014
+      GP WR sum - GIH WR sum: -0.9006 ± 0.1088
+      OH WR sum - GIH WR sum: -0.3067 ± 0.0757
+      GD WR sum - GIH WR sum: -0.5068 ± 0.0782
+      IWD sum - GIH WR sum: -0.6392 ± 0.2078
+      deck model w (clean) sum - GIH WR sum: +0.6790 ± 0.1151
+      HV train sum - GIH WR sum: -0.4939 ± 0.1709
+      FM w (T2 champion) sum - GIH WR sum: +0.5571 ± 0.1234
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.7198 ± 0.0983
+  match 1 raw            GP WR sum -659.129  OH WR sum -658.953  GD WR sum -658.848  GIH WR sum -658.503  IWD sum -659.525  deck model w (clean) sum -657.565  HV train sum -659.463  HV train shrunk sum -659.560  FM w (T2 champion) sum -658.196  FM full marginal (T2 champion) sum -657.884
+      HV train shrunk sum - GP WR sum: -0.4316 ± 0.3255
+      HV train shrunk sum - OH WR sum: -0.6074 ± 0.2106
+      HV train shrunk sum - GD WR sum: -0.7123 ± 0.2821
+      HV train shrunk sum - GIH WR sum: -1.0576 ± 0.2929
+      HV train shrunk sum - IWD sum: -0.0357 ± 0.1816
+      HV train shrunk sum - deck model w (clean) sum: -1.9953 ± 0.3651
+      HV train shrunk sum - HV train sum: -0.0970 ± 0.0267
+      HV train shrunk sum - FM w (T2 champion) sum: -1.3648 ± 0.1775
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.6759 ± 0.2500
+      GP WR sum - GIH WR sum: -0.6260 ± 0.1380
+      OH WR sum - GIH WR sum: -0.4503 ± 0.0955
+      GD WR sum - GIH WR sum: -0.3453 ± 0.1629
+      IWD sum - GIH WR sum: -1.0220 ± 0.3618
+      deck model w (clean) sum - GIH WR sum: +0.9377 ± 0.3310
+      HV train sum - GIH WR sum: -0.9606 ± 0.2937
+      FM w (T2 champion) sum - GIH WR sum: +0.3072 ± 0.2195
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.6183 ± 0.1859
+  main build raw         GP WR sum -658.970  OH WR sum -658.383  GD WR sum -658.739  GIH WR sum -658.222  IWD sum -658.812  deck model w (clean) sum -657.554  HV train sum -658.492  HV train shrunk sum -658.542  FM w (T2 champion) sum -657.657  FM full marginal (T2 champion) sum -657.540
+      HV train shrunk sum - GP WR sum: +0.4278 ± 0.0949
+      HV train shrunk sum - OH WR sum: -0.1585 ± 0.0820
+      HV train shrunk sum - GD WR sum: +0.1975 ± 0.1137
+      HV train shrunk sum - GIH WR sum: -0.3193 ± 0.1281
+      HV train shrunk sum - IWD sum: +0.2700 ± 0.1279
+      HV train shrunk sum - deck model w (clean) sum: -0.9877 ± 0.1612
+      HV train shrunk sum - HV train sum: -0.0493 ± 0.0186
+      HV train shrunk sum - FM w (T2 champion) sum: -0.8850 ± 0.1509
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.0014 ± 0.1606
+      GP WR sum - GIH WR sum: -0.7470 ± 0.0963
+      OH WR sum - GIH WR sum: -0.1608 ± 0.0655
+      GD WR sum - GIH WR sum: -0.5168 ± 0.0642
+      IWD sum - GIH WR sum: -0.5893 ± 0.1573
+      deck model w (clean) sum - GIH WR sum: +0.6684 ± 0.1072
+      HV train sum - GIH WR sum: -0.2700 ± 0.1290
+      FM w (T2 champion) sum - GIH WR sum: +0.5658 ± 0.1188
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.6821 ± 0.0983
+EOE done [253s]
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+SOS: loaded [7s]; T2 FM card power found
+  582712 games, 1.0000 valid [0s]
+  hand values on train games [16s]
+  hand values on test games [23s]
+  deck model (no FM score) lambda 3e-07 (lower edge) val 0.65795 [97s]
+    GP WR                            r +0.376  rho +0.388  skill tilt +0.758  (n=286)
+    OH WR                            r +0.621  rho +0.628  skill tilt +0.664  (n=286)
+    GD WR                            r +0.332  rho +0.346  skill tilt +0.721  (n=286)
+    GIH WR                           r +0.496  rho +0.516  skill tilt +0.769  (n=286)
+    IWD                              r +0.475  rho +0.473  skill tilt +0.476  (n=286)
+    deck model w (clean)             r +0.446  rho +0.449  skill tilt +0.331  (n=286)
+    HV train                         r +0.709  rho +0.697  skill tilt +0.310  (n=286)
+    HV train shrunk                  r +0.720  rho +0.708  skill tilt +0.272  (n=286)
+    FM w (T2 champion)               r +0.338  rho +0.307  skill tilt +0.273  (n=286)
+    FM full marginal (T2 champion)   r +0.451  rho +0.459  skill tilt +0.386  (n=286)
+  deck vs hand [clean deck model w]: slope 0.226 (EIV 0.261), implied lambda 0.25
+  deck vs hand [FM w (T2 champion)]: slope 0.173 (EIV 0.200), implied lambda 0.07
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.246 (EIV 0.284), implied lambda 0.30
+    prior arm ridge              lam 3e-07 kappa +0.000 test 0.66031  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 3e-07 kappa +0.224 test 0.66034  vs ridge +0.031 ± 0.032
+    prior arm kappa*HV only      lam 0 kappa +0.238 test 0.66280  vs ridge +2.486 ± 0.520
+  all dl                 GP WR sum -668.528  OH WR sum -667.497  GD WR sum -669.423  GIH WR sum -667.760  IWD sum -670.243  deck model w (clean) sum -666.130  HV train sum -668.022  HV train shrunk sum -668.093  FM w (T2 champion) sum -669.335  FM full marginal (T2 champion) sum -668.448
+      HV train shrunk sum - GP WR sum: +0.4352 ± 0.3194
+      HV train shrunk sum - OH WR sum: -0.5954 ± 0.2570
+      HV train shrunk sum - GD WR sum: +1.3304 ± 0.2222
+      HV train shrunk sum - GIH WR sum: -0.3326 ± 0.2157
+      HV train shrunk sum - IWD sum: +2.1502 ± 0.2292
+      HV train shrunk sum - deck model w (clean) sum: -1.9620 ± 0.2681
+      HV train shrunk sum - HV train sum: -0.0705 ± 0.0325
+      HV train shrunk sum - FM w (T2 champion) sum: +1.2428 ± 0.2243
+      HV train shrunk sum - FM full marginal (T2 champion) sum: +0.3559 ± 0.1505
+      GP WR sum - GIH WR sum: -0.7678 ± 0.1678
+      OH WR sum - GIH WR sum: +0.2628 ± 0.1387
+      GD WR sum - GIH WR sum: -1.6630 ± 0.1158
+      IWD sum - GIH WR sum: -2.4828 ± 0.1700
+      deck model w (clean) sum - GIH WR sum: +1.6295 ± 0.2776
+      HV train sum - GIH WR sum: -0.2620 ± 0.2194
+      FM w (T2 champion) sum - GIH WR sum: -1.5753 ± 0.1872
+      FM full marginal (T2 champion) sum - GIH WR sum: -0.6885 ± 0.1877
+  experienced dl         GP WR sum -667.726  OH WR sum -666.778  GD WR sum -668.674  GIH WR sum -667.049  IWD sum -669.373  deck model w (clean) sum -665.546  HV train sum -667.378  HV train shrunk sum -667.434  FM w (T2 champion) sum -668.665  FM full marginal (T2 champion) sum -667.848
+      HV train shrunk sum - GP WR sum: +0.2913 ± 0.2531
+      HV train shrunk sum - OH WR sum: -0.6561 ± 0.1912
+      HV train shrunk sum - GD WR sum: +1.2397 ± 0.1893
+      HV train shrunk sum - GIH WR sum: -0.3855 ± 0.1878
+      HV train shrunk sum - IWD sum: +1.9382 ± 0.2026
+      HV train shrunk sum - deck model w (clean) sum: -1.8885 ± 0.2293
+      HV train shrunk sum - HV train sum: -0.0561 ± 0.0321
+      HV train shrunk sum - FM w (T2 champion) sum: +1.2305 ± 0.1930
+      HV train shrunk sum - FM full marginal (T2 champion) sum: +0.4131 ± 0.1072
+      GP WR sum - GIH WR sum: -0.6768 ± 0.1785
+      OH WR sum - GIH WR sum: +0.2707 ± 0.1451
+      GD WR sum - GIH WR sum: -1.6252 ± 0.0987
+      IWD sum - GIH WR sum: -2.3236 ± 0.2001
+      deck model w (clean) sum - GIH WR sum: +1.5031 ± 0.2796
+      HV train sum - GIH WR sum: -0.3293 ± 0.1867
+      FM w (T2 champion) sum - GIH WR sum: -1.6160 ± 0.1701
+      FM full marginal (T2 champion) sum - GIH WR sum: -0.7986 ± 0.1632
+  match 1 dl             GP WR sum -665.697  OH WR sum -664.184  GD WR sum -666.714  GIH WR sum -664.627  IWD sum -667.718  deck model w (clean) sum -662.305  HV train sum -664.277  HV train shrunk sum -664.504  FM w (T2 champion) sum -666.229  FM full marginal (T2 champion) sum -665.174
+      HV train shrunk sum - GP WR sum: +1.1926 ± 0.8314
+      HV train shrunk sum - OH WR sum: -0.3208 ± 0.6211
+      HV train shrunk sum - GD WR sum: +2.2093 ± 0.8060
+      HV train shrunk sum - GIH WR sum: +0.1229 ± 0.6448
+      HV train shrunk sum - IWD sum: +3.2134 ± 0.8683
+      HV train shrunk sum - deck model w (clean) sum: -2.1992 ± 0.7278
+      HV train shrunk sum - HV train sum: -0.2277 ± 0.0726
+      HV train shrunk sum - FM w (T2 champion) sum: +1.7242 ± 0.6391
+      HV train shrunk sum - FM full marginal (T2 champion) sum: +0.6697 ± 0.6124
+      GP WR sum - GIH WR sum: -1.0697 ± 0.3384
+      OH WR sum - GIH WR sum: +0.4437 ± 0.3571
+      GD WR sum - GIH WR sum: -2.0864 ± 0.3970
+      IWD sum - GIH WR sum: -3.0905 ± 0.5299
+      deck model w (clean) sum - GIH WR sum: +2.3221 ± 0.7579
+      HV train sum - GIH WR sum: +0.3506 ± 0.6756
+      FM w (T2 champion) sum - GIH WR sum: -1.6014 ± 0.4128
+      FM full marginal (T2 champion) sum - GIH WR sum: -0.5469 ± 0.4312
+  main build dl          GP WR sum -666.893  OH WR sum -665.879  GD WR sum -667.750  GIH WR sum -666.151  IWD sum -668.513  deck model w (clean) sum -664.468  HV train sum -666.298  HV train shrunk sum -666.363  FM w (T2 champion) sum -667.598  FM full marginal (T2 champion) sum -666.726
+      HV train shrunk sum - GP WR sum: +0.5303 ± 0.3121
+      HV train shrunk sum - OH WR sum: -0.4840 ± 0.2519
+      HV train shrunk sum - GD WR sum: +1.3872 ± 0.2374
+      HV train shrunk sum - GIH WR sum: -0.2124 ± 0.2312
+      HV train shrunk sum - IWD sum: +2.1498 ± 0.2199
+      HV train shrunk sum - deck model w (clean) sum: -1.8948 ± 0.2500
+      HV train shrunk sum - HV train sum: -0.0652 ± 0.0309
+      HV train shrunk sum - FM w (T2 champion) sum: +1.2354 ± 0.2173
+      HV train shrunk sum - FM full marginal (T2 champion) sum: +0.3627 ± 0.1320
+      GP WR sum - GIH WR sum: -0.7427 ± 0.1552
+      OH WR sum - GIH WR sum: +0.2716 ± 0.1395
+      GD WR sum - GIH WR sum: -1.5996 ± 0.1124
+      IWD sum - GIH WR sum: -2.3622 ± 0.1723
+      deck model w (clean) sum - GIH WR sum: +1.6823 ± 0.2918
+      HV train sum - GIH WR sum: -0.1472 ± 0.2326
+      FM w (T2 champion) sum - GIH WR sum: -1.4478 ± 0.1792
+      FM full marginal (T2 champion) sum - GIH WR sum: -0.5751 ± 0.1998
+  all raw                GP WR sum -663.435  OH WR sum -662.585  GD WR sum -664.329  GIH WR sum -663.007  IWD sum -664.810  deck model w (clean) sum -661.283  HV train sum -663.020  HV train shrunk sum -663.048  FM w (T2 champion) sum -664.133  FM full marginal (T2 champion) sum -663.407
+      HV train shrunk sum - GP WR sum: +0.3877 ± 0.2605
+      HV train shrunk sum - OH WR sum: -0.4625 ± 0.2077
+      HV train shrunk sum - GD WR sum: +1.2810 ± 0.1965
+      HV train shrunk sum - GIH WR sum: -0.0406 ± 0.1773
+      HV train shrunk sum - IWD sum: +1.7623 ± 0.2212
+      HV train shrunk sum - deck model w (clean) sum: -1.7647 ± 0.2491
+      HV train shrunk sum - HV train sum: -0.0278 ± 0.0266
+      HV train shrunk sum - FM w (T2 champion) sum: +1.0858 ± 0.1943
+      HV train shrunk sum - FM full marginal (T2 champion) sum: +0.3589 ± 0.1227
+      GP WR sum - GIH WR sum: -0.4282 ± 0.1320
+      OH WR sum - GIH WR sum: +0.4219 ± 0.1118
+      GD WR sum - GIH WR sum: -1.3216 ± 0.1039
+      IWD sum - GIH WR sum: -1.8029 ± 0.1565
+      deck model w (clean) sum - GIH WR sum: +1.7241 ± 0.2565
+      HV train sum - GIH WR sum: -0.0128 ± 0.1787
+      FM w (T2 champion) sum - GIH WR sum: -1.1264 ± 0.1461
+      FM full marginal (T2 champion) sum - GIH WR sum: -0.3994 ± 0.1334
+  experienced raw        GP WR sum -666.394  OH WR sum -665.485  GD WR sum -667.358  GIH WR sum -665.899  IWD sum -667.860  deck model w (clean) sum -664.191  HV train sum -665.980  HV train shrunk sum -666.022  FM w (T2 champion) sum -667.260  FM full marginal (T2 champion) sum -666.474
+      HV train shrunk sum - GP WR sum: +0.3722 ± 0.2542
+      HV train shrunk sum - OH WR sum: -0.5371 ± 0.1870
+      HV train shrunk sum - GD WR sum: +1.3361 ± 0.2075
+      HV train shrunk sum - GIH WR sum: -0.1228 ± 0.1919
+      HV train shrunk sum - IWD sum: +1.8383 ± 0.2244
+      HV train shrunk sum - deck model w (clean) sum: -1.8307 ± 0.2373
+      HV train shrunk sum - HV train sum: -0.0416 ± 0.0307
+      HV train shrunk sum - FM w (T2 champion) sum: +1.2379 ± 0.2092
+      HV train shrunk sum - FM full marginal (T2 champion) sum: +0.4522 ± 0.1151
+      GP WR sum - GIH WR sum: -0.4950 ± 0.1522
+      OH WR sum - GIH WR sum: +0.4143 ± 0.1266
+      GD WR sum - GIH WR sum: -1.4589 ± 0.0993
+      IWD sum - GIH WR sum: -1.9611 ± 0.1837
+      deck model w (clean) sum - GIH WR sum: +1.7079 ± 0.2866
+      HV train sum - GIH WR sum: -0.0812 ± 0.1917
+      FM w (T2 champion) sum - GIH WR sum: -1.3607 ± 0.1601
+      FM full marginal (T2 champion) sum - GIH WR sum: -0.5750 ± 0.1488
+  match 1 raw            GP WR sum -659.220  OH WR sum -658.048  GD WR sum -660.211  GIH WR sum -658.660  IWD sum -660.749  deck model w (clean) sum -656.325  HV train sum -658.030  HV train shrunk sum -658.177  FM w (T2 champion) sum -659.657  FM full marginal (T2 champion) sum -658.826
+      HV train shrunk sum - GP WR sum: +1.0434 ± 0.6887
+      HV train shrunk sum - OH WR sum: -0.1287 ± 0.5154
+      HV train shrunk sum - GD WR sum: +2.0337 ± 0.6972
+      HV train shrunk sum - GIH WR sum: +0.4829 ± 0.5592
+      HV train shrunk sum - IWD sum: +2.5719 ± 0.7425
+      HV train shrunk sum - deck model w (clean) sum: -1.8518 ± 0.6242
+      HV train shrunk sum - HV train sum: -0.1472 ± 0.0620
+      HV train shrunk sum - FM w (T2 champion) sum: +1.4804 ± 0.5642
+      HV train shrunk sum - FM full marginal (T2 champion) sum: +0.6488 ± 0.5240
+      GP WR sum - GIH WR sum: -0.5604 ± 0.2445
+      OH WR sum - GIH WR sum: +0.6116 ± 0.3281
+      GD WR sum - GIH WR sum: -1.5507 ± 0.3103
+      IWD sum - GIH WR sum: -2.0890 ± 0.3838
+      deck model w (clean) sum - GIH WR sum: +2.3347 ± 0.6881
+      HV train sum - GIH WR sum: +0.6302 ± 0.5838
+      FM w (T2 champion) sum - GIH WR sum: -0.9974 ± 0.3018
+      FM full marginal (T2 champion) sum - GIH WR sum: -0.1658 ± 0.3238
+  main build raw         GP WR sum -661.578  OH WR sum -660.744  GD WR sum -662.421  GIH WR sum -661.158  IWD sum -662.866  deck model w (clean) sum -659.404  HV train sum -661.083  HV train shrunk sum -661.109  FM w (T2 champion) sum -662.173  FM full marginal (T2 champion) sum -661.461
+      HV train shrunk sum - GP WR sum: +0.4692 ± 0.2640
+      HV train shrunk sum - OH WR sum: -0.3649 ± 0.2118
+      HV train shrunk sum - GD WR sum: +1.3120 ± 0.2096
+      HV train shrunk sum - GIH WR sum: +0.0491 ± 0.1951
+      HV train shrunk sum - IWD sum: +1.7574 ± 0.2152
+      HV train shrunk sum - deck model w (clean) sum: -1.7049 ± 0.2313
+      HV train shrunk sum - HV train sum: -0.0260 ± 0.0269
+      HV train shrunk sum - FM w (T2 champion) sum: +1.0645 ± 0.1906
+      HV train shrunk sum - FM full marginal (T2 champion) sum: +0.3521 ± 0.1085
+      GP WR sum - GIH WR sum: -0.4200 ± 0.1291
+      OH WR sum - GIH WR sum: +0.4140 ± 0.1183
+      GD WR sum - GIH WR sum: -1.2629 ± 0.1051
+      IWD sum - GIH WR sum: -1.7082 ± 0.1620
+      deck model w (clean) sum - GIH WR sum: +1.7540 ± 0.2738
+      HV train sum - GIH WR sum: +0.0751 ± 0.1948
+      FM w (T2 champion) sum - GIH WR sum: -1.0154 ± 0.1433
+      FM full marginal (T2 champion) sum - GIH WR sum: -0.3030 ± 0.1548
+SOS done [267s]
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+TDM: loaded [6s]; T2 FM card power found
+  552428 games, 1.0000 valid [0s]
+  hand values on train games [16s]
+  hand values on test games [23s]
+  deck model (no FM score) lambda 0.0003 (interior) val 0.65980 [93s]
+    GP WR                            r +0.631  rho +0.528  skill tilt +0.651  (n=244)
+    OH WR                            r +0.782  rho +0.719  skill tilt +0.519  (n=244)
+    GD WR                            r +0.431  rho +0.319  skill tilt +0.542  (n=244)
+    GIH WR                           r +0.635  rho +0.555  skill tilt +0.593  (n=244)
+    IWD                              r +0.513  rho +0.447  skill tilt +0.400  (n=244)
+    deck model w (clean)             r +0.597  rho +0.512  skill tilt +0.218  (n=244)
+    HV train                         r +0.778  rho +0.747  skill tilt +0.224  (n=244)
+    HV train shrunk                  r +0.759  rho +0.745  skill tilt +0.208  (n=244)
+    FM w (T2 champion)               r +0.559  rho +0.447  skill tilt +0.203  (n=244)
+    FM full marginal (T2 champion)   r +0.598  rho +0.506  skill tilt +0.247  (n=244)
+  deck vs hand [clean deck model w]: slope 0.302 (EIV 0.327), implied lambda 0.43
+  deck vs hand [FM w (T2 champion)]: slope 0.259 (EIV 0.281), implied lambda 0.32
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.341 (EIV 0.370), implied lambda 0.54
+    prior arm ridge              lam 0.0003 kappa +0.000 test 0.65825  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 3e-05 kappa +0.334 test 0.65827  vs ridge +0.027 ± 0.036
+    prior arm kappa*HV only      lam 0 kappa +0.252 test 0.66048  vs ridge +2.233 ± 0.512
+  all dl                 GP WR sum -666.052  OH WR sum -665.157  GD WR sum -667.380  GIH WR sum -666.322  IWD sum -667.578  deck model w (clean) sum -664.723  HV train sum -665.720  HV train shrunk sum -665.773  FM w (T2 champion) sum -665.911  FM full marginal (T2 champion) sum -665.331
+      HV train shrunk sum - GP WR sum: +0.2790 ± 0.2639
+      HV train shrunk sum - OH WR sum: -0.6159 ± 0.1617
+      HV train shrunk sum - GD WR sum: +1.6071 ± 0.1975
+      HV train shrunk sum - GIH WR sum: +0.5491 ± 0.2085
+      HV train shrunk sum - IWD sum: +1.8059 ± 0.1790
+      HV train shrunk sum - deck model w (clean) sum: -1.0500 ± 0.1109
+      HV train shrunk sum - HV train sum: -0.0525 ± 0.0123
+      HV train shrunk sum - FM w (T2 champion) sum: +0.1389 ± 0.1952
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.4412 ± 0.1351
+      GP WR sum - GIH WR sum: +0.2701 ± 0.1920
+      OH WR sum - GIH WR sum: +1.1650 ± 0.1649
+      GD WR sum - GIH WR sum: -1.0580 ± 0.1151
+      IWD sum - GIH WR sum: -1.2568 ± 0.1587
+      deck model w (clean) sum - GIH WR sum: +1.5992 ± 0.1302
+      HV train sum - GIH WR sum: +0.6016 ± 0.2109
+      FM w (T2 champion) sum - GIH WR sum: +0.4102 ± 0.1855
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.9903 ± 0.1217
+  experienced dl         GP WR sum -664.640  OH WR sum -663.762  GD WR sum -665.987  GIH WR sum -664.956  IWD sum -666.172  deck model w (clean) sum -663.307  HV train sum -664.323  HV train shrunk sum -664.368  FM w (T2 champion) sum -664.529  FM full marginal (T2 champion) sum -663.958
+      HV train shrunk sum - GP WR sum: +0.2717 ± 0.3065
+      HV train shrunk sum - OH WR sum: -0.6060 ± 0.1893
+      HV train shrunk sum - GD WR sum: +1.6189 ± 0.1661
+      HV train shrunk sum - GIH WR sum: +0.5882 ± 0.2309
+      HV train shrunk sum - IWD sum: +1.8044 ± 0.1392
+      HV train shrunk sum - deck model w (clean) sum: -1.0611 ± 0.1272
+      HV train shrunk sum - HV train sum: -0.0451 ± 0.0120
+      HV train shrunk sum - FM w (T2 champion) sum: +0.1610 ± 0.1549
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.4102 ± 0.1303
+      GP WR sum - GIH WR sum: +0.3165 ± 0.1886
+      OH WR sum - GIH WR sum: +1.1942 ± 0.1417
+      GD WR sum - GIH WR sum: -1.0307 ± 0.1213
+      IWD sum - GIH WR sum: -1.2162 ± 0.1743
+      deck model w (clean) sum - GIH WR sum: +1.6493 ± 0.1475
+      HV train sum - GIH WR sum: +0.6332 ± 0.2295
+      FM w (T2 champion) sum - GIH WR sum: +0.4272 ± 0.2043
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.9984 ± 0.1434
+  match 1 dl             GP WR sum -668.160  OH WR sum -667.522  GD WR sum -669.701  GIH WR sum -668.242  IWD sum -670.147  deck model w (clean) sum -666.059  HV train sum -668.601  HV train shrunk sum -668.659  FM w (T2 champion) sum -668.101  FM full marginal (T2 champion) sum -666.729
+      HV train shrunk sum - GP WR sum: -0.4985 ± 0.7020
+      HV train shrunk sum - OH WR sum: -1.1364 ± 0.3895
+      HV train shrunk sum - GD WR sum: +1.0422 ± 0.4874
+      HV train shrunk sum - GIH WR sum: -0.4170 ± 0.5026
+      HV train shrunk sum - IWD sum: +1.4885 ± 0.4316
+      HV train shrunk sum - deck model w (clean) sum: -2.6000 ± 0.3483
+      HV train shrunk sum - HV train sum: -0.0578 ± 0.0349
+      HV train shrunk sum - FM w (T2 champion) sum: -0.5574 ± 0.6079
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.9294 ± 0.3880
+      GP WR sum - GIH WR sum: +0.0815 ± 0.4145
+      OH WR sum - GIH WR sum: +0.7194 ± 0.3731
+      GD WR sum - GIH WR sum: -1.4592 ± 0.1466
+      IWD sum - GIH WR sum: -1.9055 ± 0.2198
+      deck model w (clean) sum - GIH WR sum: +2.1830 ± 0.4741
+      HV train sum - GIH WR sum: -0.3592 ± 0.5143
+      FM w (T2 champion) sum - GIH WR sum: +0.1404 ± 0.3278
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.5124 ± 0.3051
+  main build dl          GP WR sum -664.209  OH WR sum -663.318  GD WR sum -665.479  GIH WR sum -664.504  IWD sum -665.643  deck model w (clean) sum -662.865  HV train sum -663.829  HV train shrunk sum -663.872  FM w (T2 champion) sum -663.956  FM full marginal (T2 champion) sum -663.504
+      HV train shrunk sum - GP WR sum: +0.3370 ± 0.2801
+      HV train shrunk sum - OH WR sum: -0.5533 ± 0.1710
+      HV train shrunk sum - GD WR sum: +1.6076 ± 0.2213
+      HV train shrunk sum - GIH WR sum: +0.6326 ± 0.2209
+      HV train shrunk sum - IWD sum: +1.7712 ± 0.1996
+      HV train shrunk sum - deck model w (clean) sum: -1.0062 ± 0.1229
+      HV train shrunk sum - HV train sum: -0.0429 ± 0.0119
+      HV train shrunk sum - FM w (T2 champion) sum: +0.0842 ± 0.2126
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.3682 ± 0.1540
+      GP WR sum - GIH WR sum: +0.2956 ± 0.2178
+      OH WR sum - GIH WR sum: +1.1858 ± 0.1967
+      GD WR sum - GIH WR sum: -0.9750 ± 0.1114
+      IWD sum - GIH WR sum: -1.1386 ± 0.1507
+      deck model w (clean) sum - GIH WR sum: +1.6388 ± 0.1482
+      HV train sum - GIH WR sum: +0.6755 ± 0.2217
+      FM w (T2 champion) sum - GIH WR sum: +0.5483 ± 0.1901
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.0008 ± 0.1280
+  all raw                GP WR sum -660.943  OH WR sum -660.181  GD WR sum -662.150  GIH WR sum -661.278  IWD sum -662.295  deck model w (clean) sum -659.671  HV train sum -660.643  HV train shrunk sum -660.683  FM w (T2 champion) sum -660.831  FM full marginal (T2 champion) sum -660.254
+      HV train shrunk sum - GP WR sum: +0.2601 ± 0.2589
+      HV train shrunk sum - OH WR sum: -0.5018 ± 0.1734
+      HV train shrunk sum - GD WR sum: +1.4671 ± 0.1409
+      HV train shrunk sum - GIH WR sum: +0.5957 ± 0.1690
+      HV train shrunk sum - IWD sum: +1.6126 ± 0.1292
+      HV train shrunk sum - deck model w (clean) sum: -1.0118 ± 0.0927
+      HV train shrunk sum - HV train sum: -0.0397 ± 0.0108
+      HV train shrunk sum - FM w (T2 champion) sum: +0.1480 ± 0.1483
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.4285 ± 0.1134
+      GP WR sum - GIH WR sum: +0.3355 ± 0.1797
+      OH WR sum - GIH WR sum: +1.0975 ± 0.1410
+      GD WR sum - GIH WR sum: -0.8714 ± 0.1025
+      IWD sum - GIH WR sum: -1.0170 ± 0.1383
+      deck model w (clean) sum - GIH WR sum: +1.6075 ± 0.1091
+      HV train sum - GIH WR sum: +0.6354 ± 0.1711
+      FM w (T2 champion) sum - GIH WR sum: +0.4477 ± 0.1614
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.0242 ± 0.1139
+  experienced raw        GP WR sum -663.212  OH WR sum -662.404  GD WR sum -664.561  GIH WR sum -663.621  IWD sum -664.715  deck model w (clean) sum -661.929  HV train sum -662.953  HV train shrunk sum -662.999  FM w (T2 champion) sum -663.189  FM full marginal (T2 champion) sum -662.584
+      HV train shrunk sum - GP WR sum: +0.2139 ± 0.2983
+      HV train shrunk sum - OH WR sum: -0.5942 ± 0.1912
+      HV train shrunk sum - GD WR sum: +1.5627 ± 0.1550
+      HV train shrunk sum - GIH WR sum: +0.6224 ± 0.2037
+      HV train shrunk sum - IWD sum: +1.7162 ± 0.1434
+      HV train shrunk sum - deck model w (clean) sum: -1.0699 ± 0.1167
+      HV train shrunk sum - HV train sum: -0.0456 ± 0.0110
+      HV train shrunk sum - FM w (T2 champion) sum: +0.1905 ± 0.1466
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.4142 ± 0.1146
+      GP WR sum - GIH WR sum: +0.4085 ± 0.1887
+      OH WR sum - GIH WR sum: +1.2166 ± 0.1372
+      GD WR sum - GIH WR sum: -0.9403 ± 0.1259
+      IWD sum - GIH WR sum: -1.0938 ± 0.1718
+      deck model w (clean) sum - GIH WR sum: +1.6923 ± 0.1377
+      HV train sum - GIH WR sum: +0.6680 ± 0.2036
+      FM w (T2 champion) sum - GIH WR sum: +0.4319 ± 0.1968
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.0366 ± 0.1356
+  match 1 raw            GP WR sum -664.233  OH WR sum -663.781  GD WR sum -665.665  GIH WR sum -664.540  IWD sum -665.941  deck model w (clean) sum -662.410  HV train sum -664.642  HV train shrunk sum -664.678  FM w (T2 champion) sum -664.234  FM full marginal (T2 champion) sum -663.072
+      HV train shrunk sum - GP WR sum: -0.4457 ± 0.6052
+      HV train shrunk sum - OH WR sum: -0.8978 ± 0.3448
+      HV train shrunk sum - GD WR sum: +0.9868 ± 0.3697
+      HV train shrunk sum - GIH WR sum: -0.1384 ± 0.3908
+      HV train shrunk sum - IWD sum: +1.2630 ± 0.3530
+      HV train shrunk sum - deck model w (clean) sum: -2.2688 ± 0.2908
+      HV train shrunk sum - HV train sum: -0.0364 ± 0.0277
+      HV train shrunk sum - FM w (T2 champion) sum: -0.4443 ± 0.5027
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.6066 ± 0.3169
+      GP WR sum - GIH WR sum: +0.3073 ± 0.3412
+      OH WR sum - GIH WR sum: +0.7594 ± 0.2733
+      GD WR sum - GIH WR sum: -1.1252 ± 0.1525
+      IWD sum - GIH WR sum: -1.4013 ± 0.2082
+      deck model w (clean) sum - GIH WR sum: +2.1304 ± 0.3836
+      HV train sum - GIH WR sum: -0.1020 ± 0.3980
+      FM w (T2 champion) sum - GIH WR sum: +0.3059 ± 0.2774
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.4682 ± 0.2348
+  main build raw         GP WR sum -658.970  OH WR sum -658.211  GD WR sum -660.113  GIH WR sum -659.321  IWD sum -660.230  deck model w (clean) sum -657.690  HV train sum -658.622  HV train shrunk sum -658.653  FM w (T2 champion) sum -658.762  FM full marginal (T2 champion) sum -658.299
+      HV train shrunk sum - GP WR sum: +0.3169 ± 0.2727
+      HV train shrunk sum - OH WR sum: -0.4419 ± 0.1835
+      HV train shrunk sum - GD WR sum: +1.4598 ± 0.1534
+      HV train shrunk sum - GIH WR sum: +0.6678 ± 0.1740
+      HV train shrunk sum - IWD sum: +1.5762 ± 0.1386
+      HV train shrunk sum - deck model w (clean) sum: -0.9638 ± 0.0975
+      HV train shrunk sum - HV train sum: -0.0311 ± 0.0100
+      HV train shrunk sum - FM w (T2 champion) sum: +0.1084 ± 0.1549
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.3546 ± 0.1252
+      GP WR sum - GIH WR sum: +0.3510 ± 0.2037
+      OH WR sum - GIH WR sum: +1.1097 ± 0.1661
+      GD WR sum - GIH WR sum: -0.7919 ± 0.0980
+      IWD sum - GIH WR sum: -0.9084 ± 0.1309
+      deck model w (clean) sum - GIH WR sum: +1.6316 ± 0.1265
+      HV train sum - GIH WR sum: +0.6989 ± 0.1739
+      FM w (T2 champion) sum - GIH WR sum: +0.5594 ± 0.1641
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.0224 ± 0.1205
+TDM done [254s]
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+FDN: loaded [7s]; T2 FM card power found
+  765317 games, 1.0000 valid [0s]
+  hand values on train games [20s]
+  hand values on test games [28s]
+  deck model (no FM score) lambda 0.0003 (interior) val 0.66189 [120s]
+    GP WR                            r +0.583  rho +0.568  skill tilt +0.747  (n=253)
+    OH WR                            r +0.763  rho +0.756  skill tilt +0.666  (n=253)
+    GD WR                            r +0.472  rho +0.426  skill tilt +0.623  (n=253)
+    GIH WR                           r +0.660  rho +0.638  skill tilt +0.710  (n=253)
+    IWD                              r +0.618  rho +0.608  skill tilt +0.463  (n=253)
+    deck model w (clean)             r +0.657  rho +0.625  skill tilt +0.306  (n=253)
+    HV train                         r +0.801  rho +0.810  skill tilt +0.381  (n=253)
+    HV train shrunk                  r +0.796  rho +0.816  skill tilt +0.327  (n=253)
+    FM w (T2 champion)               r +0.619  rho +0.566  skill tilt +0.265  (n=253)
+    FM full marginal (T2 champion)   r +0.677  rho +0.640  skill tilt +0.371  (n=253)
+  deck vs hand [clean deck model w]: slope 0.243 (EIV 0.262), implied lambda 0.27
+  deck vs hand [FM w (T2 champion)]: slope 0.208 (EIV 0.224), implied lambda 0.16
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.271 (EIV 0.292), implied lambda 0.35
+    prior arm ridge              lam 0.0003 kappa +0.000 test 0.65868  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 3e-06 kappa +0.217 test 0.65870  vs ridge +0.020 ± 0.038
+    prior arm kappa*HV only      lam 0 kappa +0.251 test 0.66124  vs ridge +2.555 ± 0.408
+  all dl                 GP WR sum -667.835  OH WR sum -666.569  GD WR sum -668.493  GIH WR sum -667.132  IWD sum -668.697  deck model w (clean) sum -665.270  HV train sum -667.069  HV train shrunk sum -667.112  FM w (T2 champion) sum -666.128  FM full marginal (T2 champion) sum -665.405
+      HV train shrunk sum - GP WR sum: +0.7223 ± 0.1549
+      HV train shrunk sum - OH WR sum: -0.5432 ± 0.1283
+      HV train shrunk sum - GD WR sum: +1.3804 ± 0.1598
+      HV train shrunk sum - GIH WR sum: +0.0191 ± 0.1739
+      HV train shrunk sum - IWD sum: +1.5843 ± 0.1363
+      HV train shrunk sum - deck model w (clean) sum: -1.8424 ± 0.1950
+      HV train shrunk sum - HV train sum: -0.0436 ± 0.0129
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9842 ± 0.1986
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.7079 ± 0.2095
+      GP WR sum - GIH WR sum: -0.7032 ± 0.0804
+      OH WR sum - GIH WR sum: +0.5623 ± 0.0852
+      GD WR sum - GIH WR sum: -1.3613 ± 0.1051
+      IWD sum - GIH WR sum: -1.5652 ± 0.1590
+      deck model w (clean) sum - GIH WR sum: +1.8615 ± 0.1625
+      HV train sum - GIH WR sum: +0.0627 ± 0.1673
+      FM w (T2 champion) sum - GIH WR sum: +1.0033 ± 0.1931
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7270 ± 0.1646
+  experienced dl         GP WR sum -666.565  OH WR sum -665.302  GD WR sum -667.073  GIH WR sum -665.822  IWD sum -667.160  deck model w (clean) sum -663.841  HV train sum -665.665  HV train shrunk sum -665.701  FM w (T2 champion) sum -664.736  FM full marginal (T2 champion) sum -663.973
+      HV train shrunk sum - GP WR sum: +0.8634 ± 0.1947
+      HV train shrunk sum - OH WR sum: -0.3998 ± 0.1440
+      HV train shrunk sum - GD WR sum: +1.3720 ± 0.1872
+      HV train shrunk sum - GIH WR sum: +0.1205 ± 0.1847
+      HV train shrunk sum - IWD sum: +1.4589 ± 0.1504
+      HV train shrunk sum - deck model w (clean) sum: -1.8601 ± 0.2277
+      HV train shrunk sum - HV train sum: -0.0361 ± 0.0128
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9654 ± 0.2272
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.7280 ± 0.2288
+      GP WR sum - GIH WR sum: -0.7429 ± 0.0687
+      OH WR sum - GIH WR sum: +0.5203 ± 0.0831
+      GD WR sum - GIH WR sum: -1.2515 ± 0.1035
+      IWD sum - GIH WR sum: -1.3384 ± 0.1482
+      deck model w (clean) sum - GIH WR sum: +1.9806 ± 0.2137
+      HV train sum - GIH WR sum: +0.1566 ± 0.1769
+      FM w (T2 champion) sum - GIH WR sum: +1.0859 ± 0.2460
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.8485 ± 0.2167
+  match 1 dl             GP WR sum -663.874  OH WR sum -662.439  GD WR sum -665.088  GIH WR sum -663.325  IWD sum -665.537  deck model w (clean) sum -661.443  HV train sum -663.417  HV train shrunk sum -663.488  FM w (T2 champion) sum -662.286  FM full marginal (T2 champion) sum -661.521
+      HV train shrunk sum - GP WR sum: +0.3863 ± 0.4474
+      HV train shrunk sum - OH WR sum: -1.0490 ± 0.2470
+      HV train shrunk sum - GD WR sum: +1.6003 ± 0.6276
+      HV train shrunk sum - GIH WR sum: -0.1625 ± 0.4939
+      HV train shrunk sum - IWD sum: +2.0489 ± 0.6055
+      HV train shrunk sum - deck model w (clean) sum: -2.0443 ± 0.3957
+      HV train shrunk sum - HV train sum: -0.0702 ± 0.0233
+      HV train shrunk sum - FM w (T2 champion) sum: -1.2013 ± 0.3917
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.9671 ± 0.4148
+      GP WR sum - GIH WR sum: -0.5488 ± 0.1864
+      OH WR sum - GIH WR sum: +0.8865 ± 0.3387
+      GD WR sum - GIH WR sum: -1.7628 ± 0.2201
+      IWD sum - GIH WR sum: -2.2114 ± 0.2709
+      deck model w (clean) sum - GIH WR sum: +1.8818 ± 0.3539
+      HV train sum - GIH WR sum: -0.0923 ± 0.4911
+      FM w (T2 champion) sum - GIH WR sum: +1.0388 ± 0.3607
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.8046 ± 0.3560
+  main build dl          GP WR sum -666.354  OH WR sum -665.127  GD WR sum -666.963  GIH WR sum -665.675  IWD sum -667.127  deck model w (clean) sum -663.822  HV train sum -665.549  HV train shrunk sum -665.586  FM w (T2 champion) sum -664.574  FM full marginal (T2 champion) sum -663.915
+      HV train shrunk sum - GP WR sum: +0.7672 ± 0.1523
+      HV train shrunk sum - OH WR sum: -0.4591 ± 0.1237
+      HV train shrunk sum - GD WR sum: +1.3769 ± 0.1468
+      HV train shrunk sum - GIH WR sum: +0.0888 ± 0.1463
+      HV train shrunk sum - IWD sum: +1.5404 ± 0.1379
+      HV train shrunk sum - deck model w (clean) sum: -1.7647 ± 0.1787
+      HV train shrunk sum - HV train sum: -0.0371 ± 0.0123
+      HV train shrunk sum - FM w (T2 champion) sum: -1.0124 ± 0.1785
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.6714 ± 0.1835
+      GP WR sum - GIH WR sum: -0.6784 ± 0.0899
+      OH WR sum - GIH WR sum: +0.5479 ± 0.0808
+      GD WR sum - GIH WR sum: -1.2881 ± 0.1080
+      IWD sum - GIH WR sum: -1.4516 ± 0.1573
+      deck model w (clean) sum - GIH WR sum: +1.8535 ± 0.1695
+      HV train sum - GIH WR sum: +0.1259 ± 0.1409
+      FM w (T2 champion) sum - GIH WR sum: +1.1012 ± 0.1994
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7602 ± 0.1705
+  all raw                GP WR sum -662.441  OH WR sum -661.410  GD WR sum -662.957  GIH WR sum -661.944  IWD sum -663.034  deck model w (clean) sum -660.090  HV train sum -661.643  HV train shrunk sum -661.662  FM w (T2 champion) sum -660.869  FM full marginal (T2 champion) sum -660.272
+      HV train shrunk sum - GP WR sum: +0.7797 ± 0.1474
+      HV train shrunk sum - OH WR sum: -0.2519 ± 0.1062
+      HV train shrunk sum - GD WR sum: +1.2953 ± 0.1556
+      HV train shrunk sum - GIH WR sum: +0.2821 ± 0.1542
+      HV train shrunk sum - IWD sum: +1.3726 ± 0.1344
+      HV train shrunk sum - deck model w (clean) sum: -1.5715 ± 0.1954
+      HV train shrunk sum - HV train sum: -0.0187 ± 0.0113
+      HV train shrunk sum - FM w (T2 champion) sum: -0.7923 ± 0.1878
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.3898 ± 0.1931
+      GP WR sum - GIH WR sum: -0.4976 ± 0.0667
+      OH WR sum - GIH WR sum: +0.5340 ± 0.0778
+      GD WR sum - GIH WR sum: -1.0132 ± 0.0864
+      IWD sum - GIH WR sum: -1.0905 ± 0.1190
+      deck model w (clean) sum - GIH WR sum: +1.8536 ± 0.1690
+      HV train sum - GIH WR sum: +0.3007 ± 0.1486
+      FM w (T2 champion) sum - GIH WR sum: +1.0743 ± 0.1815
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.6719 ± 0.1675
+  experienced raw        GP WR sum -665.499  OH WR sum -664.315  GD WR sum -665.998  GIH WR sum -664.895  IWD sum -666.020  deck model w (clean) sum -662.799  HV train sum -664.522  HV train shrunk sum -664.545  FM w (T2 champion) sum -663.726  FM full marginal (T2 champion) sum -662.993
+      HV train shrunk sum - GP WR sum: +0.9541 ± 0.1848
+      HV train shrunk sum - OH WR sum: -0.2302 ± 0.1372
+      HV train shrunk sum - GD WR sum: +1.4524 ± 0.1788
+      HV train shrunk sum - GIH WR sum: +0.3501 ± 0.1781
+      HV train shrunk sum - IWD sum: +1.4745 ± 0.1464
+      HV train shrunk sum - deck model w (clean) sum: -1.7462 ± 0.2251
+      HV train shrunk sum - HV train sum: -0.0229 ± 0.0130
+      HV train shrunk sum - FM w (T2 champion) sum: -0.8189 ± 0.2159
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.5526 ± 0.2190
+      GP WR sum - GIH WR sum: -0.6040 ± 0.0544
+      OH WR sum - GIH WR sum: +0.5803 ± 0.0754
+      GD WR sum - GIH WR sum: -1.1024 ± 0.0935
+      IWD sum - GIH WR sum: -1.1245 ± 0.1308
+      deck model w (clean) sum - GIH WR sum: +2.0963 ± 0.2185
+      HV train sum - GIH WR sum: +0.3729 ± 0.1708
+      FM w (T2 champion) sum - GIH WR sum: +1.1690 ± 0.2437
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.9027 ± 0.2183
+  match 1 raw            GP WR sum -658.040  OH WR sum -656.998  GD WR sum -658.930  GIH WR sum -657.755  IWD sum -659.142  deck model w (clean) sum -656.007  HV train sum -657.565  HV train shrunk sum -657.597  FM w (T2 champion) sum -656.682  FM full marginal (T2 champion) sum -656.137
+      HV train shrunk sum - GP WR sum: +0.4434 ± 0.3815
+      HV train shrunk sum - OH WR sum: -0.5993 ± 0.2056
+      HV train shrunk sum - GD WR sum: +1.3328 ± 0.5222
+      HV train shrunk sum - GIH WR sum: +0.1584 ± 0.4147
+      HV train shrunk sum - IWD sum: +1.5446 ± 0.5133
+      HV train shrunk sum - deck model w (clean) sum: -1.5895 ± 0.3493
+      HV train shrunk sum - HV train sum: -0.0314 ± 0.0206
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9154 ± 0.3469
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.4595 ± 0.3609
+      GP WR sum - GIH WR sum: -0.2850 ± 0.1385
+      OH WR sum - GIH WR sum: +0.7577 ± 0.2834
+      GD WR sum - GIH WR sum: -1.1743 ± 0.1710
+      IWD sum - GIH WR sum: -1.3862 ± 0.2026
+      deck model w (clean) sum - GIH WR sum: +1.7480 ± 0.3177
+      HV train sum - GIH WR sum: +0.1899 ± 0.4106
+      FM w (T2 champion) sum - GIH WR sum: +1.0738 ± 0.3000
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.6179 ± 0.3088
+  main build raw         GP WR sum -660.783  OH WR sum -659.787  GD WR sum -661.253  GIH WR sum -660.307  IWD sum -661.297  deck model w (clean) sum -658.461  HV train sum -659.948  HV train shrunk sum -659.962  FM w (T2 champion) sum -659.150  FM full marginal (T2 champion) sum -658.608
+      HV train shrunk sum - GP WR sum: +0.8211 ± 0.1554
+      HV train shrunk sum - OH WR sum: -0.1752 ± 0.1093
+      HV train shrunk sum - GD WR sum: +1.2908 ± 0.1521
+      HV train shrunk sum - GIH WR sum: +0.3450 ± 0.1390
+      HV train shrunk sum - IWD sum: +1.3352 ± 0.1340
+      HV train shrunk sum - deck model w (clean) sum: -1.5014 ± 0.1812
+      HV train shrunk sum - HV train sum: -0.0140 ± 0.0108
+      HV train shrunk sum - FM w (T2 champion) sum: -0.8119 ± 0.1702
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.3541 ± 0.1720
+      GP WR sum - GIH WR sum: -0.4762 ± 0.0708
+      OH WR sum - GIH WR sum: +0.5202 ± 0.0699
+      GD WR sum - GIH WR sum: -0.9458 ± 0.0902
+      IWD sum - GIH WR sum: -0.9902 ± 0.1217
+      deck model w (clean) sum - GIH WR sum: +1.8463 ± 0.1784
+      HV train sum - GIH WR sum: +0.3589 ± 0.1342
+      FM w (T2 champion) sum - GIH WR sum: +1.1568 ± 0.1865
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.6991 ± 0.1751
+FDN done [331s]
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+DFT: loaded [8s]; T2 FM card power found
+  824163 games, 1.0000 valid [0s]
+  hand values on train games [22s]
+  hand values on test games [31s]
+  deck model (no FM score) lambda 0.0003 (interior) val 0.66220 [132s]
+    GP WR                            r +0.538  rho +0.506  skill tilt +0.774  (n=245)
+    OH WR                            r +0.795  rho +0.766  skill tilt +0.653  (n=245)
+    GD WR                            r +0.393  rho +0.324  skill tilt +0.670  (n=245)
+    GIH WR                           r +0.632  rho +0.590  skill tilt +0.716  (n=245)
+    IWD                              r +0.622  rho +0.573  skill tilt +0.454  (n=245)
+    deck model w (clean)             r +0.640  rho +0.582  skill tilt +0.335  (n=245)
+    HV train                         r +0.854  rho +0.817  skill tilt +0.222  (n=245)
+    HV train shrunk                  r +0.863  rho +0.823  skill tilt +0.202  (n=245)
+    FM w (T2 champion)               r +0.628  rho +0.538  skill tilt +0.320  (n=245)
+    FM full marginal (T2 champion)   r +0.639  rho +0.577  skill tilt +0.367  (n=245)
+  deck vs hand [clean deck model w]: slope 0.286 (EIV 0.302), implied lambda 0.37
+  deck vs hand [FM w (T2 champion)]: slope 0.248 (EIV 0.262), implied lambda 0.26
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.311 (EIV 0.328), implied lambda 0.44
+    prior arm ridge              lam 0.0003 kappa +0.000 test 0.65981  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.0003 kappa +0.357 test 0.65981  vs ridge -0.001 ± 0.027
+    prior arm kappa*HV only      lam 0 kappa +0.242 test 0.66209  vs ridge +2.278 ± 0.420
+  all dl                 GP WR sum -669.660  OH WR sum -668.524  GD WR sum -669.403  GIH WR sum -668.748  IWD sum -668.850  deck model w (clean) sum -666.567  HV train sum -668.316  HV train shrunk sum -668.365  FM w (T2 champion) sum -667.598  FM full marginal (T2 champion) sum -666.987
+      HV train shrunk sum - GP WR sum: +1.2954 ± 0.1460
+      HV train shrunk sum - OH WR sum: +0.1598 ± 0.0988
+      HV train shrunk sum - GD WR sum: +1.0382 ± 0.1782
+      HV train shrunk sum - GIH WR sum: +0.3836 ± 0.1507
+      HV train shrunk sum - IWD sum: +0.4856 ± 0.1673
+      HV train shrunk sum - deck model w (clean) sum: -1.7980 ± 0.1793
+      HV train shrunk sum - HV train sum: -0.0482 ± 0.0097
+      HV train shrunk sum - FM w (T2 champion) sum: -0.7663 ± 0.1901
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.3778 ± 0.1519
+      GP WR sum - GIH WR sum: -0.9117 ± 0.0645
+      OH WR sum - GIH WR sum: +0.2239 ± 0.0615
+      GD WR sum - GIH WR sum: -0.6546 ± 0.0482
+      IWD sum - GIH WR sum: -0.1019 ± 0.0735
+      deck model w (clean) sum - GIH WR sum: +2.1817 ± 0.1304
+      HV train sum - GIH WR sum: +0.4319 ± 0.1543
+      FM w (T2 champion) sum - GIH WR sum: +1.1499 ± 0.1461
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7614 ± 0.1027
+  experienced dl         GP WR sum -668.358  OH WR sum -667.266  GD WR sum -668.101  GIH WR sum -667.484  IWD sum -667.508  deck model w (clean) sum -665.238  HV train sum -666.990  HV train shrunk sum -667.031  FM w (T2 champion) sum -666.278  FM full marginal (T2 champion) sum -665.630
+      HV train shrunk sum - GP WR sum: +1.3272 ± 0.1795
+      HV train shrunk sum - OH WR sum: +0.2357 ± 0.1100
+      HV train shrunk sum - GD WR sum: +1.0702 ± 0.2116
+      HV train shrunk sum - GIH WR sum: +0.4529 ± 0.1694
+      HV train shrunk sum - IWD sum: +0.4774 ± 0.1996
+      HV train shrunk sum - deck model w (clean) sum: -1.7921 ± 0.1175
+      HV train shrunk sum - HV train sum: -0.0408 ± 0.0094
+      HV train shrunk sum - FM w (T2 champion) sum: -0.7523 ± 0.1596
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.4004 ± 0.1015
+      GP WR sum - GIH WR sum: -0.8743 ± 0.0613
+      OH WR sum - GIH WR sum: +0.2172 ± 0.0750
+      GD WR sum - GIH WR sum: -0.6173 ± 0.0580
+      IWD sum - GIH WR sum: -0.0245 ± 0.1046
+      deck model w (clean) sum - GIH WR sum: +2.2450 ± 0.1393
+      HV train sum - GIH WR sum: +0.4937 ± 0.1727
+      FM w (T2 champion) sum - GIH WR sum: +1.2052 ± 0.1451
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.8534 ± 0.1088
+  match 1 dl             GP WR sum -666.343  OH WR sum -664.978  GD WR sum -666.051  GIH WR sum -665.220  IWD sum -665.488  deck model w (clean) sum -663.716  HV train sum -665.042  HV train shrunk sum -665.062  FM w (T2 champion) sum -664.754  FM full marginal (T2 champion) sum -664.059
+      HV train shrunk sum - GP WR sum: +1.2809 ± 0.6995
+      HV train shrunk sum - OH WR sum: -0.0835 ± 0.5468
+      HV train shrunk sum - GD WR sum: +0.9898 ± 0.7156
+      HV train shrunk sum - GIH WR sum: +0.1580 ± 0.6770
+      HV train shrunk sum - IWD sum: +0.4266 ± 0.4762
+      HV train shrunk sum - deck model w (clean) sum: -1.3455 ± 0.6676
+      HV train shrunk sum - HV train sum: -0.0200 ± 0.0371
+      HV train shrunk sum - FM w (T2 champion) sum: -0.3081 ± 0.6575
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.0024 ± 0.5900
+      GP WR sum - GIH WR sum: -1.1229 ± 0.1503
+      OH WR sum - GIH WR sum: +0.2415 ± 0.1797
+      GD WR sum - GIH WR sum: -0.8318 ± 0.1307
+      IWD sum - GIH WR sum: -0.2686 ± 0.3913
+      deck model w (clean) sum - GIH WR sum: +1.5034 ± 0.6395
+      HV train sum - GIH WR sum: +0.1779 ± 0.6826
+      FM w (T2 champion) sum - GIH WR sum: +0.4660 ± 0.3923
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.1603 ± 0.4389
+  main build dl          GP WR sum -668.003  OH WR sum -666.923  GD WR sum -667.723  GIH WR sum -667.128  IWD sum -667.086  deck model w (clean) sum -664.905  HV train sum -666.622  HV train shrunk sum -666.667  FM w (T2 champion) sum -665.889  FM full marginal (T2 champion) sum -665.315
+      HV train shrunk sum - GP WR sum: +1.3361 ± 0.1398
+      HV train shrunk sum - OH WR sum: +0.2555 ± 0.0993
+      HV train shrunk sum - GD WR sum: +1.0555 ± 0.1870
+      HV train shrunk sum - GIH WR sum: +0.4603 ± 0.1606
+      HV train shrunk sum - IWD sum: +0.4184 ± 0.1954
+      HV train shrunk sum - deck model w (clean) sum: -1.7622 ± 0.1691
+      HV train shrunk sum - HV train sum: -0.0451 ± 0.0094
+      HV train shrunk sum - FM w (T2 champion) sum: -0.7780 ± 0.1992
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.3518 ± 0.1667
+      GP WR sum - GIH WR sum: -0.8758 ± 0.0724
+      OH WR sum - GIH WR sum: +0.2048 ± 0.0709
+      GD WR sum - GIH WR sum: -0.5952 ± 0.0450
+      IWD sum - GIH WR sum: +0.0419 ± 0.0860
+      deck model w (clean) sum - GIH WR sum: +2.2225 ± 0.1140
+      HV train sum - GIH WR sum: +0.5054 ± 0.1637
+      FM w (T2 champion) sum - GIH WR sum: +1.2383 ± 0.1334
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.8121 ± 0.0899
+  all raw                GP WR sum -663.551  OH WR sum -662.636  GD WR sum -663.332  GIH WR sum -662.824  IWD sum -662.794  deck model w (clean) sum -660.698  HV train sum -662.362  HV train shrunk sum -662.400  FM w (T2 champion) sum -661.716  FM full marginal (T2 champion) sum -661.133
+      HV train shrunk sum - GP WR sum: +1.1515 ± 0.1492
+      HV train shrunk sum - OH WR sum: +0.2356 ± 0.0932
+      HV train shrunk sum - GD WR sum: +0.9323 ± 0.1912
+      HV train shrunk sum - GIH WR sum: +0.4244 ± 0.1537
+      HV train shrunk sum - IWD sum: +0.3936 ± 0.1868
+      HV train shrunk sum - deck model w (clean) sum: -1.7022 ± 0.1527
+      HV train shrunk sum - HV train sum: -0.0376 ± 0.0096
+      HV train shrunk sum - FM w (T2 champion) sum: -0.6835 ± 0.1710
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.2669 ± 0.1313
+      GP WR sum - GIH WR sum: -0.7272 ± 0.0501
+      OH WR sum - GIH WR sum: +0.1887 ± 0.0692
+      GD WR sum - GIH WR sum: -0.5079 ± 0.0501
+      IWD sum - GIH WR sum: +0.0308 ± 0.0773
+      deck model w (clean) sum - GIH WR sum: +2.1265 ± 0.1164
+      HV train sum - GIH WR sum: +0.4619 ± 0.1594
+      FM w (T2 champion) sum - GIH WR sum: +1.1079 ± 0.1145
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.6913 ± 0.0883
+  experienced raw        GP WR sum -666.198  OH WR sum -665.208  GD WR sum -665.971  GIH WR sum -665.420  IWD sum -665.388  deck model w (clean) sum -663.105  HV train sum -664.885  HV train shrunk sum -664.921  FM w (T2 champion) sum -664.173  FM full marginal (T2 champion) sum -663.544
+      HV train shrunk sum - GP WR sum: +1.2772 ± 0.1789
+      HV train shrunk sum - OH WR sum: +0.2877 ± 0.1099
+      HV train shrunk sum - GD WR sum: +1.0499 ± 0.2157
+      HV train shrunk sum - GIH WR sum: +0.4994 ± 0.1734
+      HV train shrunk sum - IWD sum: +0.4672 ± 0.2026
+      HV train shrunk sum - deck model w (clean) sum: -1.8162 ± 0.1190
+      HV train shrunk sum - HV train sum: -0.0361 ± 0.0102
+      HV train shrunk sum - FM w (T2 champion) sum: -0.7475 ± 0.1552
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.3771 ± 0.1069
+      GP WR sum - GIH WR sum: -0.7778 ± 0.0582
+      OH WR sum - GIH WR sum: +0.2117 ± 0.0758
+      GD WR sum - GIH WR sum: -0.5505 ± 0.0578
+      IWD sum - GIH WR sum: +0.0322 ± 0.0954
+      deck model w (clean) sum - GIH WR sum: +2.3156 ± 0.1320
+      HV train sum - GIH WR sum: +0.5355 ± 0.1775
+      FM w (T2 champion) sum - GIH WR sum: +1.2469 ± 0.1280
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.8765 ± 0.1060
+  match 1 raw            GP WR sum -659.415  OH WR sum -658.394  GD WR sum -659.225  GIH WR sum -658.619  IWD sum -658.725  deck model w (clean) sum -657.205  HV train sum -658.305  HV train shrunk sum -658.316  FM w (T2 champion) sum -658.135  FM full marginal (T2 champion) sum -657.569
+      HV train shrunk sum - GP WR sum: +1.0994 ± 0.5733
+      HV train shrunk sum - OH WR sum: +0.0781 ± 0.4396
+      HV train shrunk sum - GD WR sum: +0.9090 ± 0.5920
+      HV train shrunk sum - GIH WR sum: +0.3030 ± 0.5506
+      HV train shrunk sum - IWD sum: +0.4095 ± 0.4250
+      HV train shrunk sum - deck model w (clean) sum: -1.1109 ± 0.5388
+      HV train shrunk sum - HV train sum: -0.0105 ± 0.0310
+      HV train shrunk sum - FM w (T2 champion) sum: -0.1804 ± 0.5468
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.7471 ± 0.4575
+      GP WR sum - GIH WR sum: -0.7964 ± 0.1158
+      OH WR sum - GIH WR sum: +0.2249 ± 0.1640
+      GD WR sum - GIH WR sum: -0.6060 ± 0.1154
+      IWD sum - GIH WR sum: -0.1065 ± 0.3268
+      deck model w (clean) sum - GIH WR sum: +1.4139 ± 0.5734
+      HV train sum - GIH WR sum: +0.3135 ± 0.5573
+      FM w (T2 champion) sum - GIH WR sum: +0.4833 ± 0.3473
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.0501 ± 0.3823
+  main build raw         GP WR sum -661.896  OH WR sum -661.026  GD WR sum -661.655  GIH WR sum -661.198  IWD sum -661.039  deck model w (clean) sum -659.045  HV train sum -660.671  HV train shrunk sum -660.707  FM w (T2 champion) sum -660.015  FM full marginal (T2 champion) sum -659.464
+      HV train shrunk sum - GP WR sum: +1.1890 ± 0.1453
+      HV train shrunk sum - OH WR sum: +0.3194 ± 0.0954
+      HV train shrunk sum - GD WR sum: +0.9486 ± 0.1961
+      HV train shrunk sum - GIH WR sum: +0.4909 ± 0.1616
+      HV train shrunk sum - IWD sum: +0.3318 ± 0.2038
+      HV train shrunk sum - deck model w (clean) sum: -1.6619 ± 0.1429
+      HV train shrunk sum - HV train sum: -0.0352 ± 0.0089
+      HV train shrunk sum - FM w (T2 champion) sum: -0.6914 ± 0.1784
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.2424 ± 0.1460
+      GP WR sum - GIH WR sum: -0.6981 ± 0.0587
+      OH WR sum - GIH WR sum: +0.1715 ± 0.0735
+      GD WR sum - GIH WR sum: -0.4577 ± 0.0466
+      IWD sum - GIH WR sum: +0.1591 ± 0.0847
+      deck model w (clean) sum - GIH WR sum: +2.1528 ± 0.1035
+      HV train sum - GIH WR sum: +0.5261 ± 0.1665
+      FM w (T2 champion) sum - GIH WR sum: +1.1823 ± 0.1057
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7333 ± 0.0816
+DFT done [363s]
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+LCI: loaded [8s]; T2 FM card power found
+  793671 games, 0.8854 valid [0s]
+  hand values on train games [19s]
+  hand values on test games [28s]
+  deck model (no FM score) lambda 0.0003 (interior) val 0.65786 [115s]
+    GP WR                            r +0.556  rho +0.513  skill tilt +0.671  (n=260)
+    OH WR                            r +0.791  rho +0.744  skill tilt +0.541  (n=260)
+    GD WR                            r +0.578  rho +0.509  skill tilt +0.523  (n=260)
+    GIH WR                           r +0.722  rho +0.671  skill tilt +0.575  (n=260)
+    IWD                              r +0.699  rho +0.663  skill tilt +0.130  (n=260)
+    deck model w (clean)             r +0.665  rho +0.596  skill tilt +0.202  (n=260)
+    HV train                         r +0.838  rho +0.832  skill tilt +0.124  (n=260)
+    HV train shrunk                  r +0.830  rho +0.834  skill tilt +0.100  (n=260)
+    FM w (T2 champion)               r +0.669  rho +0.598  skill tilt +0.158  (n=260)
+    FM full marginal (T2 champion)   r +0.696  rho +0.641  skill tilt +0.175  (n=260)
+  deck vs hand [clean deck model w]: slope 0.296 (EIV 0.314), implied lambda 0.42
+  deck vs hand [FM w (T2 champion)]: slope 0.284 (EIV 0.301), implied lambda 0.38
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.338 (EIV 0.358), implied lambda 0.53
+    prior arm ridge              lam 0.0003 kappa +0.000 test 0.65674  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.003 kappa +0.329 test 0.65681  vs ridge +0.074 ± 0.104
+    prior arm kappa*HV only      lam 0 kappa +0.295 test 0.65929  vs ridge +2.553 ± 0.489
+  all dl                 GP WR sum -667.444  OH WR sum -665.868  GD WR sum -664.521  GIH WR sum -664.964  IWD sum -667.695  deck model w (clean) sum -662.866  HV train sum -664.885  HV train shrunk sum -664.938  FM w (T2 champion) sum -664.299  FM full marginal (T2 champion) sum -663.210
+      HV train shrunk sum - GP WR sum: +2.5060 ± 0.2175
+      HV train shrunk sum - OH WR sum: +0.9300 ± 0.1911
+      HV train shrunk sum - GD WR sum: -0.4168 ± 0.3420
+      HV train shrunk sum - GIH WR sum: +0.0262 ± 0.2546
+      HV train shrunk sum - IWD sum: +2.7570 ± 0.2000
+      HV train shrunk sum - deck model w (clean) sum: -2.0717 ± 0.2250
+      HV train shrunk sum - HV train sum: -0.0527 ± 0.0100
+      HV train shrunk sum - FM w (T2 champion) sum: -0.6390 ± 0.2212
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.7278 ± 0.2161
+      GP WR sum - GIH WR sum: -2.4798 ± 0.0970
+      OH WR sum - GIH WR sum: -0.9038 ± 0.0826
+      GD WR sum - GIH WR sum: +0.4430 ± 0.1147
+      IWD sum - GIH WR sum: -2.7308 ± 0.2704
+      deck model w (clean) sum - GIH WR sum: +2.0979 ± 0.2042
+      HV train sum - GIH WR sum: +0.0788 ± 0.2570
+      FM w (T2 champion) sum - GIH WR sum: +0.6652 ± 0.1906
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7540 ± 0.1922
+  experienced dl         GP WR sum -666.453  OH WR sum -664.902  GD WR sum -663.557  GIH WR sum -663.999  IWD sum -666.765  deck model w (clean) sum -661.995  HV train sum -663.924  HV train shrunk sum -663.962  FM w (T2 champion) sum -663.391  FM full marginal (T2 champion) sum -662.380
+      HV train shrunk sum - GP WR sum: +2.4911 ± 0.2137
+      HV train shrunk sum - OH WR sum: +0.9401 ± 0.1837
+      HV train shrunk sum - GD WR sum: -0.4056 ± 0.3295
+      HV train shrunk sum - GIH WR sum: +0.0365 ± 0.2415
+      HV train shrunk sum - IWD sum: +2.8027 ± 0.2473
+      HV train shrunk sum - deck model w (clean) sum: -1.9667 ± 0.2326
+      HV train shrunk sum - HV train sum: -0.0384 ± 0.0099
+      HV train shrunk sum - FM w (T2 champion) sum: -0.5713 ± 0.2336
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.5819 ± 0.2367
+      GP WR sum - GIH WR sum: -2.4546 ± 0.1268
+      OH WR sum - GIH WR sum: -0.9035 ± 0.0878
+      GD WR sum - GIH WR sum: +0.4421 ± 0.1280
+      IWD sum - GIH WR sum: -2.7661 ± 0.3032
+      deck model w (clean) sum - GIH WR sum: +2.0032 ± 0.2301
+      HV train sum - GIH WR sum: +0.0749 ± 0.2451
+      FM w (T2 champion) sum - GIH WR sum: +0.6078 ± 0.2392
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.6184 ± 0.2393
+  match 1 dl             GP WR sum -665.568  OH WR sum -663.412  GD WR sum -661.807  GIH WR sum -662.308  IWD sum -665.999  deck model w (clean) sum -660.147  HV train sum -661.987  HV train shrunk sum -662.084  FM w (T2 champion) sum -662.090  FM full marginal (T2 champion) sum -660.547
+      HV train shrunk sum - GP WR sum: +3.4844 ± 0.6255
+      HV train shrunk sum - OH WR sum: +1.3283 ± 0.5582
+      HV train shrunk sum - GD WR sum: -0.2770 ± 0.6880
+      HV train shrunk sum - GIH WR sum: +0.2238 ± 0.5848
+      HV train shrunk sum - IWD sum: +3.9154 ± 0.5008
+      HV train shrunk sum - deck model w (clean) sum: -1.9364 ± 0.4766
+      HV train shrunk sum - HV train sum: -0.0969 ± 0.0488
+      HV train shrunk sum - FM w (T2 champion) sum: +0.0065 ± 0.4744
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.5370 ± 0.4667
+      GP WR sum - GIH WR sum: -3.2606 ± 0.2761
+      OH WR sum - GIH WR sum: -1.1045 ± 0.2130
+      GD WR sum - GIH WR sum: +0.5008 ± 0.3247
+      IWD sum - GIH WR sum: -3.6915 ± 0.7304
+      deck model w (clean) sum - GIH WR sum: +2.1602 ± 0.6645
+      HV train sum - GIH WR sum: +0.3207 ± 0.5637
+      FM w (T2 champion) sum - GIH WR sum: +0.2173 ± 0.5386
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7608 ± 0.6422
+  main build dl          GP WR sum -665.405  OH WR sum -663.846  GD WR sum -662.538  GIH WR sum -662.973  IWD sum -665.478  deck model w (clean) sum -660.758  HV train sum -662.715  HV train shrunk sum -662.764  FM w (T2 champion) sum -662.106  FM full marginal (T2 champion) sum -661.068
+      HV train shrunk sum - GP WR sum: +2.6410 ± 0.2258
+      HV train shrunk sum - OH WR sum: +1.0819 ± 0.2040
+      HV train shrunk sum - GD WR sum: -0.2268 ± 0.3721
+      HV train shrunk sum - GIH WR sum: +0.2087 ± 0.2780
+      HV train shrunk sum - IWD sum: +2.7135 ± 0.1954
+      HV train shrunk sum - deck model w (clean) sum: -2.0061 ± 0.2400
+      HV train shrunk sum - HV train sum: -0.0492 ± 0.0095
+      HV train shrunk sum - FM w (T2 champion) sum: -0.6586 ± 0.2520
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.6963 ± 0.2424
+      GP WR sum - GIH WR sum: -2.4323 ± 0.1156
+      OH WR sum - GIH WR sum: -0.8732 ± 0.0926
+      GD WR sum - GIH WR sum: +0.4355 ± 0.1208
+      IWD sum - GIH WR sum: -2.5048 ± 0.2970
+      deck model w (clean) sum - GIH WR sum: +2.2147 ± 0.1938
+      HV train sum - GIH WR sum: +0.2579 ± 0.2799
+      FM w (T2 champion) sum - GIH WR sum: +0.8673 ± 0.2057
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.9050 ± 0.1903
+  all raw                GP WR sum -661.666  OH WR sum -660.313  GD WR sum -659.344  GIH WR sum -659.620  IWD sum -661.857  deck model w (clean) sum -657.635  HV train sum -659.347  HV train shrunk sum -659.389  FM w (T2 champion) sum -658.950  FM full marginal (T2 champion) sum -657.994
+      HV train shrunk sum - GP WR sum: +2.2771 ± 0.1979
+      HV train shrunk sum - OH WR sum: +0.9242 ± 0.1636
+      HV train shrunk sum - GD WR sum: -0.0450 ± 0.3034
+      HV train shrunk sum - GIH WR sum: +0.2305 ± 0.2191
+      HV train shrunk sum - IWD sum: +2.4684 ± 0.2163
+      HV train shrunk sum - deck model w (clean) sum: -1.7540 ± 0.2153
+      HV train shrunk sum - HV train sum: -0.0420 ± 0.0099
+      HV train shrunk sum - FM w (T2 champion) sum: -0.4391 ± 0.2189
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.3952 ± 0.2136
+      GP WR sum - GIH WR sum: -2.0466 ± 0.1011
+      OH WR sum - GIH WR sum: -0.6937 ± 0.0760
+      GD WR sum - GIH WR sum: +0.2755 ± 0.1099
+      IWD sum - GIH WR sum: -2.2379 ± 0.2471
+      deck model w (clean) sum - GIH WR sum: +1.9845 ± 0.1830
+      HV train sum - GIH WR sum: +0.2725 ± 0.2223
+      FM w (T2 champion) sum - GIH WR sum: +0.6696 ± 0.1878
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.6257 ± 0.1914
+  experienced raw        GP WR sum -664.049  OH WR sum -662.600  GD WR sum -661.453  GIH WR sum -661.806  IWD sum -664.283  deck model w (clean) sum -659.724  HV train sum -661.574  HV train shrunk sum -661.611  FM w (T2 champion) sum -661.123  FM full marginal (T2 champion) sum -660.135
+      HV train shrunk sum - GP WR sum: +2.4382 ± 0.2002
+      HV train shrunk sum - OH WR sum: +0.9889 ± 0.1726
+      HV train shrunk sum - GD WR sum: -0.1581 ± 0.3362
+      HV train shrunk sum - GIH WR sum: +0.1956 ± 0.2385
+      HV train shrunk sum - IWD sum: +2.6726 ± 0.2699
+      HV train shrunk sum - deck model w (clean) sum: -1.8871 ± 0.2486
+      HV train shrunk sum - HV train sum: -0.0370 ± 0.0099
+      HV train shrunk sum - FM w (T2 champion) sum: -0.4876 ± 0.2446
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.4760 ± 0.2543
+      GP WR sum - GIH WR sum: -2.2426 ± 0.1320
+      OH WR sum - GIH WR sum: -0.7933 ± 0.0918
+      GD WR sum - GIH WR sum: +0.3537 ± 0.1347
+      IWD sum - GIH WR sum: -2.4770 ± 0.3168
+      deck model w (clean) sum - GIH WR sum: +2.0827 ± 0.2305
+      HV train sum - GIH WR sum: +0.2326 ± 0.2423
+      FM w (T2 champion) sum - GIH WR sum: +0.6832 ± 0.2266
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.6716 ± 0.2342
+  match 1 raw            GP WR sum -660.246  OH WR sum -658.547  GD WR sum -657.598  GIH WR sum -657.814  IWD sum -660.644  deck model w (clean) sum -655.983  HV train sum -657.290  HV train shrunk sum -657.359  FM w (T2 champion) sum -657.582  FM full marginal (T2 champion) sum -656.364
+      HV train shrunk sum - GP WR sum: +2.8870 ± 0.5120
+      HV train shrunk sum - OH WR sum: +1.1874 ± 0.4523
+      HV train shrunk sum - GD WR sum: +0.2389 ± 0.5756
+      HV train shrunk sum - GIH WR sum: +0.4543 ± 0.4724
+      HV train shrunk sum - IWD sum: +3.2847 ± 0.4507
+      HV train shrunk sum - deck model w (clean) sum: -1.3765 ± 0.4322
+      HV train shrunk sum - HV train sum: -0.0690 ± 0.0414
+      HV train shrunk sum - FM w (T2 champion) sum: +0.2226 ± 0.4180
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.9956 ± 0.4192
+      GP WR sum - GIH WR sum: -2.4327 ± 0.2320
+      OH WR sum - GIH WR sum: -0.7331 ± 0.1858
+      GD WR sum - GIH WR sum: +0.2154 ± 0.2836
+      IWD sum - GIH WR sum: -2.8304 ± 0.5852
+      deck model w (clean) sum - GIH WR sum: +1.8308 ± 0.5260
+      HV train sum - GIH WR sum: +0.5233 ± 0.4526
+      FM w (T2 champion) sum - GIH WR sum: +0.2317 ± 0.4678
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.4499 ± 0.5314
+  main build raw         GP WR sum -659.652  OH WR sum -658.310  GD WR sum -657.369  GIH WR sum -657.640  IWD sum -659.690  deck model w (clean) sum -655.550  HV train sum -657.209  HV train shrunk sum -657.250  FM w (T2 champion) sum -656.791  FM full marginal (T2 champion) sum -655.878
+      HV train shrunk sum - GP WR sum: +2.4021 ± 0.2081
+      HV train shrunk sum - OH WR sum: +1.0605 ± 0.1753
+      HV train shrunk sum - GD WR sum: +0.1190 ± 0.3323
+      HV train shrunk sum - GIH WR sum: +0.3903 ± 0.2404
+      HV train shrunk sum - IWD sum: +2.4405 ± 0.2080
+      HV train shrunk sum - deck model w (clean) sum: -1.6997 ± 0.2368
+      HV train shrunk sum - HV train sum: -0.0410 ± 0.0098
+      HV train shrunk sum - FM w (T2 champion) sum: -0.4590 ± 0.2522
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.3720 ± 0.2440
+      GP WR sum - GIH WR sum: -2.0119 ± 0.1167
+      OH WR sum - GIH WR sum: -0.6703 ± 0.0853
+      GD WR sum - GIH WR sum: +0.2713 ± 0.1145
+      IWD sum - GIH WR sum: -2.0503 ± 0.2559
+      deck model w (clean) sum - GIH WR sum: +2.0900 ± 0.1789
+      HV train sum - GIH WR sum: +0.4312 ± 0.2426
+      FM w (T2 champion) sum - GIH WR sum: +0.8492 ± 0.1980
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7622 ± 0.1895
+LCI done [317s]
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+FIN: loaded [9s]; T2 FM card power found
+  769659 games, 1.0000 valid [0s]
+  hand values on train games [21s]
+  hand values on test games [29s]
+  deck model (no FM score) lambda 0.0003 (interior) val 0.65712 [124s]
+    GP WR                            r +0.545  rho +0.499  skill tilt +0.740  (n=295)
+    OH WR                            r +0.733  rho +0.703  skill tilt +0.568  (n=295)
+    GD WR                            r +0.440  rho +0.390  skill tilt +0.654  (n=295)
+    GIH WR                           r +0.621  rho +0.575  skill tilt +0.682  (n=295)
+    IWD                              r +0.584  rho +0.560  skill tilt +0.448  (n=295)
+    deck model w (clean)             r +0.608  rho +0.563  skill tilt +0.381  (n=295)
+    HV train                         r +0.744  rho +0.723  skill tilt +0.172  (n=295)
+    HV train shrunk                  r +0.754  rho +0.729  skill tilt +0.154  (n=295)
+    FM w (T2 champion)               r +0.542  rho +0.468  skill tilt +0.303  (n=295)
+    FM full marginal (T2 champion)   r +0.628  rho +0.585  skill tilt +0.376  (n=295)
+  deck vs hand [clean deck model w]: slope 0.233 (EIV 0.257), implied lambda 0.25
+  deck vs hand [FM w (T2 champion)]: slope 0.220 (EIV 0.242), implied lambda 0.21
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.280 (EIV 0.308), implied lambda 0.39
+    prior arm ridge              lam 0.0003 kappa +0.000 test 0.65895  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.0003 kappa +0.349 test 0.65895  vs ridge +0.004 ± 0.026
+    prior arm kappa*HV only      lam 0 kappa +0.234 test 0.66203  vs ridge +3.086 ± 0.456
+  all dl                 GP WR sum -664.383  OH WR sum -663.867  GD WR sum -666.107  GIH WR sum -664.507  IWD sum -666.820  deck model w (clean) sum -663.665  HV train sum -665.484  HV train shrunk sum -665.501  FM w (T2 champion) sum -664.813  FM full marginal (T2 champion) sum -663.959
+      HV train shrunk sum - GP WR sum: -1.1178 ± 0.1432
+      HV train shrunk sum - OH WR sum: -1.6333 ± 0.0897
+      HV train shrunk sum - GD WR sum: +0.6063 ± 0.1914
+      HV train shrunk sum - GIH WR sum: -0.9935 ± 0.1720
+      HV train shrunk sum - IWD sum: +1.3191 ± 0.1603
+      HV train shrunk sum - deck model w (clean) sum: -1.8351 ± 0.1696
+      HV train shrunk sum - HV train sum: -0.0169 ± 0.0189
+      HV train shrunk sum - FM w (T2 champion) sum: -0.6880 ± 0.1834
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.5418 ± 0.1552
+      GP WR sum - GIH WR sum: +0.1243 ± 0.0638
+      OH WR sum - GIH WR sum: +0.6398 ± 0.1255
+      GD WR sum - GIH WR sum: -1.5999 ± 0.0658
+      IWD sum - GIH WR sum: -2.3126 ± 0.1083
+      deck model w (clean) sum - GIH WR sum: +0.8416 ± 0.1965
+      HV train sum - GIH WR sum: -0.9766 ± 0.1686
+      FM w (T2 champion) sum - GIH WR sum: -0.3055 ± 0.2081
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.5482 ± 0.1770
+  experienced dl         GP WR sum -663.717  OH WR sum -663.268  GD WR sum -665.363  GIH WR sum -663.808  IWD sum -666.073  deck model w (clean) sum -663.075  HV train sum -664.840  HV train shrunk sum -664.861  FM w (T2 champion) sum -664.181  FM full marginal (T2 champion) sum -663.357
+      HV train shrunk sum - GP WR sum: -1.1438 ± 0.1291
+      HV train shrunk sum - OH WR sum: -1.5935 ± 0.0910
+      HV train shrunk sum - GD WR sum: +0.5017 ± 0.1484
+      HV train shrunk sum - GIH WR sum: -1.0537 ± 0.1495
+      HV train shrunk sum - IWD sum: +1.2118 ± 0.1198
+      HV train shrunk sum - deck model w (clean) sum: -1.7859 ± 0.1588
+      HV train shrunk sum - HV train sum: -0.0214 ± 0.0239
+      HV train shrunk sum - FM w (T2 champion) sum: -0.6799 ± 0.1360
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.5046 ± 0.1322
+      GP WR sum - GIH WR sum: +0.0901 ± 0.0666
+      OH WR sum - GIH WR sum: +0.5399 ± 0.1027
+      GD WR sum - GIH WR sum: -1.5554 ± 0.0544
+      IWD sum - GIH WR sum: -2.2655 ± 0.0973
+      deck model w (clean) sum - GIH WR sum: +0.7322 ± 0.2007
+      HV train sum - GIH WR sum: -1.0323 ± 0.1431
+      FM w (T2 champion) sum - GIH WR sum: -0.3738 ± 0.1691
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.4509 ± 0.1621
+  match 1 dl             GP WR sum -662.642  OH WR sum -662.284  GD WR sum -664.591  GIH WR sum -662.946  IWD sum -665.477  deck model w (clean) sum -661.797  HV train sum -664.162  HV train shrunk sum -664.173  FM w (T2 champion) sum -663.226  FM full marginal (T2 champion) sum -662.260
+      HV train shrunk sum - GP WR sum: -1.5312 ± 0.2958
+      HV train shrunk sum - OH WR sum: -1.8894 ± 0.2195
+      HV train shrunk sum - GD WR sum: +0.4177 ± 0.3449
+      HV train shrunk sum - GIH WR sum: -1.2272 ± 0.2956
+      HV train shrunk sum - IWD sum: +1.3039 ± 0.2796
+      HV train shrunk sum - deck model w (clean) sum: -2.3759 ± 0.5741
+      HV train shrunk sum - HV train sum: -0.0110 ± 0.0546
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9471 ± 0.5253
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.9133 ± 0.5926
+      GP WR sum - GIH WR sum: +0.3039 ± 0.1654
+      OH WR sum - GIH WR sum: +0.6621 ± 0.2351
+      GD WR sum - GIH WR sum: -1.6450 ± 0.1831
+      IWD sum - GIH WR sum: -2.5311 ± 0.2279
+      deck model w (clean) sum - GIH WR sum: +1.1487 ± 0.4945
+      HV train sum - GIH WR sum: -1.2163 ± 0.3073
+      FM w (T2 champion) sum - GIH WR sum: -0.2801 ± 0.5100
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.6861 ± 0.5296
+  main build dl          GP WR sum -662.635  OH WR sum -662.149  GD WR sum -664.257  GIH WR sum -662.748  IWD sum -664.925  deck model w (clean) sum -661.928  HV train sum -663.677  HV train shrunk sum -663.693  FM w (T2 champion) sum -663.011  FM full marginal (T2 champion) sum -662.209
+      HV train shrunk sum - GP WR sum: -1.0580 ± 0.1529
+      HV train shrunk sum - OH WR sum: -1.5441 ± 0.0836
+      HV train shrunk sum - GD WR sum: +0.5639 ± 0.2214
+      HV train shrunk sum - GIH WR sum: -0.9448 ± 0.1995
+      HV train shrunk sum - IWD sum: +1.2320 ± 0.1752
+      HV train shrunk sum - deck model w (clean) sum: -1.7652 ± 0.1844
+      HV train shrunk sum - HV train sum: -0.0158 ± 0.0223
+      HV train shrunk sum - FM w (T2 champion) sum: -0.6816 ± 0.1768
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.4838 ± 0.1564
+      GP WR sum - GIH WR sum: +0.1132 ± 0.0599
+      OH WR sum - GIH WR sum: +0.5993 ± 0.1433
+      GD WR sum - GIH WR sum: -1.5087 ± 0.0593
+      IWD sum - GIH WR sum: -2.1768 ± 0.0938
+      deck model w (clean) sum - GIH WR sum: +0.8204 ± 0.2183
+      HV train sum - GIH WR sum: -0.9290 ± 0.1947
+      FM w (T2 champion) sum - GIH WR sum: -0.2632 ± 0.2054
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.5390 ± 0.1845
+  all raw                GP WR sum -661.498  OH WR sum -661.036  GD WR sum -662.839  GIH WR sum -661.600  IWD sum -663.343  deck model w (clean) sum -660.612  HV train sum -662.215  HV train shrunk sum -662.224  FM w (T2 champion) sum -661.631  FM full marginal (T2 champion) sum -660.889
+      HV train shrunk sum - GP WR sum: -0.7257 ± 0.1319
+      HV train shrunk sum - OH WR sum: -1.1877 ± 0.0942
+      HV train shrunk sum - GD WR sum: +0.6148 ± 0.1521
+      HV train shrunk sum - GIH WR sum: -0.6238 ± 0.1551
+      HV train shrunk sum - IWD sum: +1.1192 ± 0.1232
+      HV train shrunk sum - deck model w (clean) sum: -1.6119 ± 0.1922
+      HV train shrunk sum - HV train sum: -0.0092 ± 0.0167
+      HV train shrunk sum - FM w (T2 champion) sum: -0.5930 ± 0.1724
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.3351 ± 0.1700
+      GP WR sum - GIH WR sum: +0.1019 ± 0.0616
+      OH WR sum - GIH WR sum: +0.5639 ± 0.1041
+      GD WR sum - GIH WR sum: -1.2386 ± 0.0565
+      IWD sum - GIH WR sum: -1.7429 ± 0.1063
+      deck model w (clean) sum - GIH WR sum: +0.9881 ± 0.1772
+      HV train sum - GIH WR sum: -0.6146 ± 0.1521
+      FM w (T2 champion) sum - GIH WR sum: -0.0308 ± 0.1622
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.7113 ± 0.1498
+  experienced raw        GP WR sum -664.249  OH WR sum -663.807  GD WR sum -665.649  GIH WR sum -664.322  IWD sum -666.211  deck model w (clean) sum -663.390  HV train sum -665.087  HV train shrunk sum -665.102  FM w (T2 champion) sum -664.470  FM full marginal (T2 champion) sum -663.687
+      HV train shrunk sum - GP WR sum: -0.8533 ± 0.1148
+      HV train shrunk sum - OH WR sum: -1.2953 ± 0.0892
+      HV train shrunk sum - GD WR sum: +0.5461 ± 0.1148
+      HV train shrunk sum - GIH WR sum: -0.7805 ± 0.1221
+      HV train shrunk sum - IWD sum: +1.1088 ± 0.0996
+      HV train shrunk sum - deck model w (clean) sum: -1.7125 ± 0.1719
+      HV train shrunk sum - HV train sum: -0.0151 ± 0.0230
+      HV train shrunk sum - FM w (T2 champion) sum: -0.6326 ± 0.1318
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.4151 ± 0.1442
+      GP WR sum - GIH WR sum: +0.0728 ± 0.0766
+      OH WR sum - GIH WR sum: +0.5148 ± 0.0951
+      GD WR sum - GIH WR sum: -1.3266 ± 0.0503
+      IWD sum - GIH WR sum: -1.8893 ± 0.0938
+      deck model w (clean) sum - GIH WR sum: +0.9320 ± 0.1939
+      HV train sum - GIH WR sum: -0.7654 ± 0.1168
+      FM w (T2 champion) sum - GIH WR sum: -0.1479 ± 0.1614
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.6346 ± 0.1633
+  match 1 raw            GP WR sum -658.715  OH WR sum -658.389  GD WR sum -660.153  GIH WR sum -658.976  IWD sum -660.726  deck model w (clean) sum -657.692  HV train sum -659.666  HV train shrunk sum -659.671  FM w (T2 champion) sum -658.960  FM full marginal (T2 champion) sum -658.135
+      HV train shrunk sum - GP WR sum: -0.9567 ± 0.2497
+      HV train shrunk sum - OH WR sum: -1.2824 ± 0.1821
+      HV train shrunk sum - GD WR sum: +0.4816 ± 0.2663
+      HV train shrunk sum - GIH WR sum: -0.6953 ± 0.2246
+      HV train shrunk sum - IWD sum: +1.0550 ± 0.2240
+      HV train shrunk sum - deck model w (clean) sum: -1.9791 ± 0.5103
+      HV train shrunk sum - HV train sum: -0.0049 ± 0.0409
+      HV train shrunk sum - FM w (T2 champion) sum: -0.7115 ± 0.4534
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.5361 ± 0.5119
+      GP WR sum - GIH WR sum: +0.2614 ± 0.1369
+      OH WR sum - GIH WR sum: +0.5871 ± 0.1833
+      GD WR sum - GIH WR sum: -1.1769 ± 0.1520
+      IWD sum - GIH WR sum: -1.7503 ± 0.1929
+      deck model w (clean) sum - GIH WR sum: +1.2838 ± 0.4230
+      HV train sum - GIH WR sum: -0.6904 ± 0.2370
+      FM w (T2 champion) sum - GIH WR sum: +0.0162 ± 0.4229
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.8408 ± 0.4360
+  main build raw         GP WR sum -659.763  OH WR sum -659.333  GD WR sum -661.012  GIH WR sum -659.849  IWD sum -661.487  deck model w (clean) sum -658.896  HV train sum -660.447  HV train shrunk sum -660.455  FM w (T2 champion) sum -659.857  FM full marginal (T2 champion) sum -659.158
+      HV train shrunk sum - GP WR sum: -0.6927 ± 0.1403
+      HV train shrunk sum - OH WR sum: -1.1220 ± 0.0876
+      HV train shrunk sum - GD WR sum: +0.5561 ± 0.1806
+      HV train shrunk sum - GIH WR sum: -0.6062 ± 0.1777
+      HV train shrunk sum - IWD sum: +1.0311 ± 0.1382
+      HV train shrunk sum - deck model w (clean) sum: -1.5589 ± 0.2078
+      HV train shrunk sum - HV train sum: -0.0081 ± 0.0197
+      HV train shrunk sum - FM w (T2 champion) sum: -0.5984 ± 0.1731
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.2977 ± 0.1768
+      GP WR sum - GIH WR sum: +0.0864 ± 0.0601
+      OH WR sum - GIH WR sum: +0.5157 ± 0.1202
+      GD WR sum - GIH WR sum: -1.1624 ± 0.0495
+      IWD sum - GIH WR sum: -1.6374 ± 0.0936
+      deck model w (clean) sum - GIH WR sum: +0.9527 ± 0.1926
+      HV train sum - GIH WR sum: -0.5982 ± 0.1733
+      FM w (T2 champion) sum - GIH WR sum: -0.0079 ± 0.1511
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.6914 ± 0.1521
+FIN done [344s]
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+MKM: loaded [9s]; T2 FM card power found
+  919942 games, 0.8857 valid [0s]
+  hand values on train games [22s]
+  hand values on test games [31s]
+  deck model (no FM score) lambda 0.0003 (interior) val 0.66103 [132s]
+    GP WR                            r +0.523  rho +0.516  skill tilt +0.715  (n=265)
+    OH WR                            r +0.772  rho +0.743  skill tilt +0.597  (n=264)
+    GD WR                            r +0.542  rho +0.517  skill tilt +0.618  (n=265)
+    GIH WR                           r +0.703  rho +0.685  skill tilt +0.688  (n=265)
+    IWD                              r +0.703  rho +0.667  skill tilt +0.324  (n=265)
+    deck model w (clean)             r +0.725  rho +0.687  skill tilt +0.337  (n=265)
+    HV train                         r +0.813  rho +0.778  skill tilt +0.196  (n=265)
+    HV train shrunk                  r +0.816  rho +0.782  skill tilt +0.191  (n=265)
+    FM w (T2 champion)               r +0.684  rho +0.613  skill tilt +0.226  (n=265)
+    FM full marginal (T2 champion)   r +0.747  rho +0.694  skill tilt +0.324  (n=265)
+  deck vs hand [clean deck model w]: slope 0.254 (EIV 0.311), implied lambda 0.40
+  deck vs hand [FM w (T2 champion)]: slope 0.212 (EIV 0.261), implied lambda 0.27
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.293 (EIV 0.360), implied lambda 0.53
+    prior arm ridge              lam 0.0003 kappa +0.000 test 0.66195  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.0003 kappa +0.356 test 0.66195  vs ridge -0.006 ± 0.026
+    prior arm kappa*HV only      lam 0 kappa +0.265 test 0.66369  vs ridge +1.740 ± 0.403
+  all dl                 GP WR sum -669.793  OH WR sum -668.696  GD WR sum -668.626  GIH WR sum -668.096  IWD sum -670.323  deck model w (clean) sum -667.495  HV train sum -668.559  HV train shrunk sum -668.615  FM w (T2 champion) sum -668.406  FM full marginal (T2 champion) sum -667.806
+      HV train shrunk sum - GP WR sum: +1.1778 ± 0.1638
+      HV train shrunk sum - OH WR sum: +0.0810 ± 0.1270
+      HV train shrunk sum - GD WR sum: +0.0109 ± 0.1540
+      HV train shrunk sum - GIH WR sum: -0.5186 ± 0.1277
+      HV train shrunk sum - IWD sum: +1.7077 ± 0.1493
+      HV train shrunk sum - deck model w (clean) sum: -1.1201 ± 0.1947
+      HV train shrunk sum - HV train sum: -0.0564 ± 0.0072
+      HV train shrunk sum - FM w (T2 champion) sum: -0.2087 ± 0.1373
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.8091 ± 0.1809
+      GP WR sum - GIH WR sum: -1.6964 ± 0.1443
+      OH WR sum - GIH WR sum: -0.5997 ± 0.1019
+      GD WR sum - GIH WR sum: -0.5295 ± 0.1044
+      IWD sum - GIH WR sum: -2.2264 ± 0.2064
+      deck model w (clean) sum - GIH WR sum: +0.6014 ± 0.2241
+      HV train sum - GIH WR sum: -0.4623 ± 0.1273
+      FM w (T2 champion) sum - GIH WR sum: -0.3099 ± 0.2115
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.2904 ± 0.2070
+  experienced dl         GP WR sum -669.130  OH WR sum -668.086  GD WR sum -668.036  GIH WR sum -667.509  IWD sum -669.667  deck model w (clean) sum -666.919  HV train sum -667.933  HV train shrunk sum -667.979  FM w (T2 champion) sum -667.824  FM full marginal (T2 champion) sum -667.227
+      HV train shrunk sum - GP WR sum: +1.1512 ± 0.1679
+      HV train shrunk sum - OH WR sum: +0.1071 ± 0.1123
+      HV train shrunk sum - GD WR sum: +0.0572 ± 0.1895
+      HV train shrunk sum - GIH WR sum: -0.4703 ± 0.1438
+      HV train shrunk sum - IWD sum: +1.6881 ± 0.1694
+      HV train shrunk sum - deck model w (clean) sum: -1.0599 ± 0.2032
+      HV train shrunk sum - HV train sum: -0.0456 ± 0.0105
+      HV train shrunk sum - FM w (T2 champion) sum: -0.1554 ± 0.1287
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.7516 ± 0.1874
+      GP WR sum - GIH WR sum: -1.6215 ± 0.1514
+      OH WR sum - GIH WR sum: -0.5774 ± 0.1037
+      GD WR sum - GIH WR sum: -0.5275 ± 0.0935
+      IWD sum - GIH WR sum: -2.1584 ± 0.1906
+      deck model w (clean) sum - GIH WR sum: +0.5896 ± 0.2052
+      HV train sum - GIH WR sum: -0.4247 ± 0.1409
+      FM w (T2 champion) sum - GIH WR sum: -0.3149 ± 0.1734
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.2813 ± 0.1905
+  match 1 dl             GP WR sum -667.216  OH WR sum -665.888  GD WR sum -665.915  GIH WR sum -665.278  IWD sum -667.740  deck model w (clean) sum -664.404  HV train sum -665.555  HV train shrunk sum -665.577  FM w (T2 champion) sum -665.403  FM full marginal (T2 champion) sum -664.738
+      HV train shrunk sum - GP WR sum: +1.6384 ± 0.4332
+      HV train shrunk sum - OH WR sum: +0.3113 ± 0.3536
+      HV train shrunk sum - GD WR sum: +0.3382 ± 0.5299
+      HV train shrunk sum - GIH WR sum: -0.2993 ± 0.4274
+      HV train shrunk sum - IWD sum: +2.1625 ± 0.4873
+      HV train shrunk sum - deck model w (clean) sum: -1.1734 ± 0.3783
+      HV train shrunk sum - HV train sum: -0.0225 ± 0.0333
+      HV train shrunk sum - FM w (T2 champion) sum: -0.1739 ± 0.3963
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.8397 ± 0.3922
+      GP WR sum - GIH WR sum: -1.9377 ± 0.2153
+      OH WR sum - GIH WR sum: -0.6105 ± 0.1780
+      GD WR sum - GIH WR sum: -0.6375 ± 0.2682
+      IWD sum - GIH WR sum: -2.4618 ± 0.5609
+      deck model w (clean) sum - GIH WR sum: +0.8741 ± 0.3872
+      HV train sum - GIH WR sum: -0.2768 ± 0.4311
+      FM w (T2 champion) sum - GIH WR sum: -0.1254 ± 0.4384
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.5404 ± 0.4719
+  main build dl          GP WR sum -668.292  OH WR sum -667.233  GD WR sum -667.098  GIH WR sum -666.629  IWD sum -668.685  deck model w (clean) sum -665.979  HV train sum -667.026  HV train shrunk sum -667.077  FM w (T2 champion) sum -666.868  FM full marginal (T2 champion) sum -666.276
+      HV train shrunk sum - GP WR sum: +1.2145 ± 0.1430
+      HV train shrunk sum - OH WR sum: +0.1561 ± 0.1168
+      HV train shrunk sum - GD WR sum: +0.0205 ± 0.1542
+      HV train shrunk sum - GIH WR sum: -0.4488 ± 0.1229
+      HV train shrunk sum - IWD sum: +1.6079 ± 0.1469
+      HV train shrunk sum - deck model w (clean) sum: -1.0987 ± 0.1906
+      HV train shrunk sum - HV train sum: -0.0512 ± 0.0088
+      HV train shrunk sum - FM w (T2 champion) sum: -0.2095 ± 0.1240
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.8018 ± 0.1764
+      GP WR sum - GIH WR sum: -1.6632 ± 0.1238
+      OH WR sum - GIH WR sum: -0.6049 ± 0.0963
+      GD WR sum - GIH WR sum: -0.4692 ± 0.1022
+      IWD sum - GIH WR sum: -2.0567 ± 0.1920
+      deck model w (clean) sum - GIH WR sum: +0.6499 ± 0.2178
+      HV train sum - GIH WR sum: -0.3976 ± 0.1207
+      FM w (T2 champion) sum - GIH WR sum: -0.2393 ± 0.1950
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.3530 ± 0.2005
+  all raw                GP WR sum -664.087  OH WR sum -663.192  GD WR sum -663.258  GIH WR sum -662.759  IWD sum -664.609  deck model w (clean) sum -662.129  HV train sum -663.067  HV train shrunk sum -663.099  FM w (T2 champion) sum -662.939  FM full marginal (T2 champion) sum -662.424
+      HV train shrunk sum - GP WR sum: +0.9874 ± 0.1546
+      HV train shrunk sum - OH WR sum: +0.0927 ± 0.1096
+      HV train shrunk sum - GD WR sum: +0.1586 ± 0.1426
+      HV train shrunk sum - GIH WR sum: -0.3402 ± 0.1120
+      HV train shrunk sum - IWD sum: +1.5100 ± 0.1360
+      HV train shrunk sum - deck model w (clean) sum: -0.9706 ± 0.1573
+      HV train shrunk sum - HV train sum: -0.0326 ± 0.0087
+      HV train shrunk sum - FM w (T2 champion) sum: -0.1603 ± 0.1196
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.6758 ± 0.1539
+      GP WR sum - GIH WR sum: -1.3276 ± 0.1206
+      OH WR sum - GIH WR sum: -0.4329 ± 0.0845
+      GD WR sum - GIH WR sum: -0.4988 ± 0.0837
+      IWD sum - GIH WR sum: -1.8502 ± 0.1532
+      deck model w (clean) sum - GIH WR sum: +0.6304 ± 0.1789
+      HV train sum - GIH WR sum: -0.3076 ± 0.1109
+      FM w (T2 champion) sum - GIH WR sum: -0.1799 ± 0.1733
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.3356 ± 0.1697
+  experienced raw        GP WR sum -666.618  OH WR sum -665.678  GD WR sum -665.778  GIH WR sum -665.228  IWD sum -667.208  deck model w (clean) sum -664.609  HV train sum -665.546  HV train shrunk sum -665.586  FM w (T2 champion) sum -665.479  FM full marginal (T2 champion) sum -664.916
+      HV train shrunk sum - GP WR sum: +1.0318 ± 0.1720
+      HV train shrunk sum - OH WR sum: +0.0922 ± 0.1119
+      HV train shrunk sum - GD WR sum: +0.1917 ± 0.1803
+      HV train shrunk sum - GIH WR sum: -0.3580 ± 0.1324
+      HV train shrunk sum - IWD sum: +1.6225 ± 0.1684
+      HV train shrunk sum - deck model w (clean) sum: -0.9772 ± 0.1871
+      HV train shrunk sum - HV train sum: -0.0398 ± 0.0110
+      HV train shrunk sum - FM w (T2 champion) sum: -0.1069 ± 0.1327
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.6694 ± 0.1767
+      GP WR sum - GIH WR sum: -1.3898 ± 0.1337
+      OH WR sum - GIH WR sum: -0.4503 ± 0.0920
+      GD WR sum - GIH WR sum: -0.5498 ± 0.0882
+      IWD sum - GIH WR sum: -1.9806 ± 0.1604
+      deck model w (clean) sum - GIH WR sum: +0.6191 ± 0.1947
+      HV train sum - GIH WR sum: -0.3183 ± 0.1308
+      FM w (T2 champion) sum - GIH WR sum: -0.2511 ± 0.1650
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.3114 ± 0.1774
+  match 1 raw            GP WR sum -661.683  OH WR sum -660.686  GD WR sum -660.877  GIH WR sum -660.315  IWD sum -662.189  deck model w (clean) sum -659.498  HV train sum -660.419  HV train shrunk sum -660.413  FM w (T2 champion) sum -660.336  FM full marginal (T2 champion) sum -659.814
+      HV train shrunk sum - GP WR sum: +1.2695 ± 0.3780
+      HV train shrunk sum - OH WR sum: +0.2733 ± 0.3012
+      HV train shrunk sum - GD WR sum: +0.4642 ± 0.4586
+      HV train shrunk sum - GIH WR sum: -0.0976 ± 0.3629
+      HV train shrunk sum - IWD sum: +1.7765 ± 0.4279
+      HV train shrunk sum - deck model w (clean) sum: -0.9146 ± 0.3307
+      HV train shrunk sum - HV train sum: +0.0062 ± 0.0313
+      HV train shrunk sum - FM w (T2 champion) sum: -0.0767 ± 0.3447
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.5992 ± 0.3512
+      GP WR sum - GIH WR sum: -1.3671 ± 0.1942
+      OH WR sum - GIH WR sum: -0.3709 ± 0.1638
+      GD WR sum - GIH WR sum: -0.5619 ± 0.2339
+      IWD sum - GIH WR sum: -1.8741 ± 0.4629
+      deck model w (clean) sum - GIH WR sum: +0.8169 ± 0.3276
+      HV train sum - GIH WR sum: -0.1038 ± 0.3674
+      FM w (T2 champion) sum - GIH WR sum: -0.0209 ± 0.3704
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.5016 ± 0.3969
+  main build raw         GP WR sum -662.668  OH WR sum -661.805  GD WR sum -661.810  GIH WR sum -661.364  IWD sum -663.074  deck model w (clean) sum -660.696  HV train sum -661.622  HV train shrunk sum -661.650  FM w (T2 champion) sum -661.494  FM full marginal (T2 champion) sum -660.980
+      HV train shrunk sum - GP WR sum: +1.0176 ± 0.1386
+      HV train shrunk sum - OH WR sum: +0.1547 ± 0.1037
+      HV train shrunk sum - GD WR sum: +0.1594 ± 0.1467
+      HV train shrunk sum - GIH WR sum: -0.2865 ± 0.1125
+      HV train shrunk sum - IWD sum: +1.4235 ± 0.1311
+      HV train shrunk sum - deck model w (clean) sum: -0.9541 ± 0.1597
+      HV train shrunk sum - HV train sum: -0.0284 ± 0.0100
+      HV train shrunk sum - FM w (T2 champion) sum: -0.1565 ± 0.1116
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.6705 ± 0.1531
+      GP WR sum - GIH WR sum: -1.3040 ± 0.1023
+      OH WR sum - GIH WR sum: -0.4412 ± 0.0819
+      GD WR sum - GIH WR sum: -0.4459 ± 0.0825
+      IWD sum - GIH WR sum: -1.7100 ± 0.1401
+      deck model w (clean) sum - GIH WR sum: +0.6676 ± 0.1755
+      HV train sum - GIH WR sum: -0.2581 ± 0.1095
+      FM w (T2 champion) sum - GIH WR sum: -0.1300 ± 0.1610
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.3840 ± 0.1666
+MKM done [363s]
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+BLB: loaded [8s]; T2 FM card power found
+  898354 games, 0.8712 valid [0s]
+  hand values on train games [21s]
+  hand values on test games [30s]
+  deck model (no FM score) lambda 3e-06 (interior) val 0.66008 [126s]
+    GP WR                            r +0.557  rho +0.546  skill tilt +0.610  (n=252)
+    OH WR                            r +0.807  rho +0.792  skill tilt +0.483  (n=252)
+    GD WR                            r +0.454  rho +0.390  skill tilt +0.588  (n=252)
+    GIH WR                           r +0.684  rho +0.660  skill tilt +0.607  (n=252)
+    IWD                              r +0.658  rho +0.629  skill tilt +0.397  (n=252)
+    deck model w (clean)             r +0.691  rho +0.677  skill tilt +0.340  (n=252)
+    HV train                         r +0.853  rho +0.863  skill tilt +0.154  (n=252)
+    HV train shrunk                  r +0.836  rho +0.859  skill tilt +0.104  (n=252)
+    FM w (T2 champion)               r +0.633  rho +0.602  skill tilt +0.314  (n=252)
+    FM full marginal (T2 champion)   r +0.695  rho +0.679  skill tilt +0.315  (n=252)
+  deck vs hand [clean deck model w]: slope 0.280 (EIV 0.298), implied lambda 0.38
+  deck vs hand [FM w (T2 champion)]: slope 0.225 (EIV 0.239), implied lambda 0.21
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.299 (EIV 0.318), implied lambda 0.44
+    prior arm ridge              lam 3e-06 kappa +0.000 test 0.65807  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 3e-05 kappa +0.276 test 0.65806  vs ridge -0.009 ± 0.021
+    prior arm kappa*HV only      lam 0 kappa +0.252 test 0.66003  vs ridge +1.953 ± 0.404
+  all dl                 GP WR sum -668.429  OH WR sum -667.164  GD WR sum -668.573  GIH WR sum -667.342  IWD sum -668.667  deck model w (clean) sum -665.285  HV train sum -666.593  HV train shrunk sum -666.615  FM w (T2 champion) sum -666.277  FM full marginal (T2 champion) sum -665.517
+      HV train shrunk sum - GP WR sum: +1.8144 ± 0.0925
+      HV train shrunk sum - OH WR sum: +0.5491 ± 0.0874
+      HV train shrunk sum - GD WR sum: +1.9588 ± 0.1223
+      HV train shrunk sum - GIH WR sum: +0.7275 ± 0.1050
+      HV train shrunk sum - IWD sum: +2.0528 ± 0.1412
+      HV train shrunk sum - deck model w (clean) sum: -1.3301 ± 0.1269
+      HV train shrunk sum - HV train sum: -0.0219 ± 0.0094
+      HV train shrunk sum - FM w (T2 champion) sum: -0.3373 ± 0.1147
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.0980 ± 0.1112
+      GP WR sum - GIH WR sum: -1.0869 ± 0.0864
+      OH WR sum - GIH WR sum: +0.1784 ± 0.0866
+      GD WR sum - GIH WR sum: -1.2313 ± 0.0944
+      IWD sum - GIH WR sum: -1.3254 ± 0.1356
+      deck model w (clean) sum - GIH WR sum: +2.0576 ± 0.0603
+      HV train sum - GIH WR sum: +0.7494 ± 0.1091
+      FM w (T2 champion) sum - GIH WR sum: +1.0648 ± 0.0942
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.8255 ± 0.0858
+  experienced dl         GP WR sum -668.036  OH WR sum -666.872  GD WR sum -668.117  GIH WR sum -667.009  IWD sum -668.169  deck model w (clean) sum -664.986  HV train sum -666.239  HV train shrunk sum -666.255  FM w (T2 champion) sum -665.974  FM full marginal (T2 champion) sum -665.216
+      HV train shrunk sum - GP WR sum: +1.7812 ± 0.1285
+      HV train shrunk sum - OH WR sum: +0.6167 ± 0.1049
+      HV train shrunk sum - GD WR sum: +1.8622 ± 0.1668
+      HV train shrunk sum - GIH WR sum: +0.7536 ± 0.1455
+      HV train shrunk sum - IWD sum: +1.9137 ± 0.1835
+      HV train shrunk sum - deck model w (clean) sum: -1.2692 ± 0.1734
+      HV train shrunk sum - HV train sum: -0.0155 ± 0.0129
+      HV train shrunk sum - FM w (T2 champion) sum: -0.2811 ± 0.1487
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.0393 ± 0.1615
+      GP WR sum - GIH WR sum: -1.0275 ± 0.1211
+      OH WR sum - GIH WR sum: +0.1370 ± 0.1116
+      GD WR sum - GIH WR sum: -1.1086 ± 0.1198
+      IWD sum - GIH WR sum: -1.1601 ± 0.1756
+      deck model w (clean) sum - GIH WR sum: +2.0228 ± 0.0805
+      HV train sum - GIH WR sum: +0.7691 ± 0.1460
+      FM w (T2 champion) sum - GIH WR sum: +1.0348 ± 0.0886
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7929 ± 0.0878
+  match 1 dl             GP WR sum -667.586  OH WR sum -665.942  GD WR sum -668.231  GIH WR sum -666.649  IWD sum -668.314  deck model w (clean) sum -663.397  HV train sum -665.137  HV train shrunk sum -665.116  FM w (T2 champion) sum -665.296  FM full marginal (T2 champion) sum -664.042
+      HV train shrunk sum - GP WR sum: +2.4701 ± 0.4955
+      HV train shrunk sum - OH WR sum: +0.8266 ± 0.3651
+      HV train shrunk sum - GD WR sum: +3.1155 ± 0.5262
+      HV train shrunk sum - GIH WR sum: +1.5332 ± 0.5178
+      HV train shrunk sum - IWD sum: +3.1985 ± 0.4677
+      HV train shrunk sum - deck model w (clean) sum: -1.7184 ± 0.4794
+      HV train shrunk sum - HV train sum: +0.0212 ± 0.0282
+      HV train shrunk sum - FM w (T2 champion) sum: +0.1799 ± 0.3940
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.0736 ± 0.3389
+      GP WR sum - GIH WR sum: -0.9369 ± 0.2939
+      OH WR sum - GIH WR sum: +0.7066 ± 0.2883
+      GD WR sum - GIH WR sum: -1.5823 ± 0.1863
+      IWD sum - GIH WR sum: -1.6653 ± 0.2697
+      deck model w (clean) sum - GIH WR sum: +3.2515 ± 0.3640
+      HV train sum - GIH WR sum: +1.5120 ± 0.5226
+      FM w (T2 champion) sum - GIH WR sum: +1.3533 ± 0.3842
+      FM full marginal (T2 champion) sum - GIH WR sum: +2.6068 ± 0.3155
+  main build dl          GP WR sum -666.909  OH WR sum -665.672  GD WR sum -666.964  GIH WR sum -665.807  IWD sum -666.985  deck model w (clean) sum -663.785  HV train sum -665.017  HV train shrunk sum -665.035  FM w (T2 champion) sum -664.696  FM full marginal (T2 champion) sum -664.007
+      HV train shrunk sum - GP WR sum: +1.8735 ± 0.1136
+      HV train shrunk sum - OH WR sum: +0.6372 ± 0.1028
+      HV train shrunk sum - GD WR sum: +1.9285 ± 0.1088
+      HV train shrunk sum - GIH WR sum: +0.7716 ± 0.1047
+      HV train shrunk sum - IWD sum: +1.9496 ± 0.1292
+      HV train shrunk sum - deck model w (clean) sum: -1.2500 ± 0.1115
+      HV train shrunk sum - HV train sum: -0.0185 ± 0.0099
+      HV train shrunk sum - FM w (T2 champion) sum: -0.3391 ± 0.1075
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.0278 ± 0.1030
+      GP WR sum - GIH WR sum: -1.1019 ± 0.0971
+      OH WR sum - GIH WR sum: +0.1344 ± 0.0758
+      GD WR sum - GIH WR sum: -1.1569 ± 0.0954
+      IWD sum - GIH WR sum: -1.1780 ± 0.1453
+      deck model w (clean) sum - GIH WR sum: +2.0216 ± 0.0466
+      HV train sum - GIH WR sum: +0.7901 ± 0.1075
+      FM w (T2 champion) sum - GIH WR sum: +1.1107 ± 0.0929
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7994 ± 0.0794
+  all raw                GP WR sum -661.101  OH WR sum -660.026  GD WR sum -661.349  GIH WR sum -660.291  IWD sum -661.453  deck model w (clean) sum -658.310  HV train sum -659.549  HV train shrunk sum -659.565  FM w (T2 champion) sum -659.344  FM full marginal (T2 champion) sum -658.590
+      HV train shrunk sum - GP WR sum: +1.5355 ± 0.1037
+      HV train shrunk sum - OH WR sum: +0.4610 ± 0.0779
+      HV train shrunk sum - GD WR sum: +1.7834 ± 0.1116
+      HV train shrunk sum - GIH WR sum: +0.7260 ± 0.0931
+      HV train shrunk sum - IWD sum: +1.8882 ± 0.1230
+      HV train shrunk sum - deck model w (clean) sum: -1.2554 ± 0.1225
+      HV train shrunk sum - HV train sum: -0.0158 ± 0.0095
+      HV train shrunk sum - FM w (T2 champion) sum: -0.2216 ± 0.0828
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.9748 ± 0.0941
+      GP WR sum - GIH WR sum: -0.8095 ± 0.1043
+      OH WR sum - GIH WR sum: +0.2650 ± 0.0810
+      GD WR sum - GIH WR sum: -1.0574 ± 0.0920
+      IWD sum - GIH WR sum: -1.1622 ± 0.1242
+      deck model w (clean) sum - GIH WR sum: +1.9814 ± 0.0472
+      HV train sum - GIH WR sum: +0.7418 ± 0.0936
+      FM w (T2 champion) sum - GIH WR sum: +0.9476 ± 0.0552
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7008 ± 0.0457
+  experienced raw        GP WR sum -664.726  OH WR sum -663.641  GD WR sum -664.918  GIH WR sum -663.867  IWD sum -665.001  deck model w (clean) sum -661.845  HV train sum -663.085  HV train shrunk sum -663.098  FM w (T2 champion) sum -662.903  FM full marginal (T2 champion) sum -662.117
+      HV train shrunk sum - GP WR sum: +1.6281 ± 0.1373
+      HV train shrunk sum - OH WR sum: +0.5427 ± 0.1078
+      HV train shrunk sum - GD WR sum: +1.8195 ± 0.1590
+      HV train shrunk sum - GIH WR sum: +0.7689 ± 0.1371
+      HV train shrunk sum - IWD sum: +1.9030 ± 0.1711
+      HV train shrunk sum - deck model w (clean) sum: -1.2534 ± 0.1844
+      HV train shrunk sum - HV train sum: -0.0131 ± 0.0119
+      HV train shrunk sum - FM w (T2 champion) sum: -0.1956 ± 0.1441
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.9815 ± 0.1638
+      GP WR sum - GIH WR sum: -0.8592 ± 0.1123
+      OH WR sum - GIH WR sum: +0.2262 ± 0.1020
+      GD WR sum - GIH WR sum: -1.0507 ± 0.1138
+      IWD sum - GIH WR sum: -1.1341 ± 0.1662
+      deck model w (clean) sum - GIH WR sum: +2.0223 ± 0.0797
+      HV train sum - GIH WR sum: +0.7820 ± 0.1366
+      FM w (T2 champion) sum - GIH WR sum: +0.9644 ± 0.0581
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.7504 ± 0.0668
+  match 1 raw            GP WR sum -659.118  OH WR sum -657.847  GD WR sum -659.781  GIH WR sum -658.565  IWD sum -659.865  deck model w (clean) sum -655.702  HV train sum -657.232  HV train shrunk sum -657.206  FM w (T2 champion) sum -657.477  FM full marginal (T2 champion) sum -656.343
+      HV train shrunk sum - GP WR sum: +1.9128 ± 0.4256
+      HV train shrunk sum - OH WR sum: +0.6417 ± 0.2985
+      HV train shrunk sum - GD WR sum: +2.5752 ± 0.4365
+      HV train shrunk sum - GIH WR sum: +1.3594 ± 0.4302
+      HV train shrunk sum - IWD sum: +2.6589 ± 0.3884
+      HV train shrunk sum - deck model w (clean) sum: -1.5041 ± 0.3839
+      HV train shrunk sum - HV train sum: +0.0265 ± 0.0261
+      HV train shrunk sum - FM w (T2 champion) sum: +0.2713 ± 0.3171
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.8630 ± 0.2638
+      GP WR sum - GIH WR sum: -0.5533 ± 0.2707
+      OH WR sum - GIH WR sum: +0.7178 ± 0.2393
+      GD WR sum - GIH WR sum: -1.2158 ± 0.1590
+      IWD sum - GIH WR sum: -1.2994 ± 0.2063
+      deck model w (clean) sum - GIH WR sum: +2.8635 ± 0.2975
+      HV train sum - GIH WR sum: +1.3329 ± 0.4333
+      FM w (T2 champion) sum - GIH WR sum: +1.0881 ± 0.3363
+      FM full marginal (T2 champion) sum - GIH WR sum: +2.2225 ± 0.2795
+  main build raw         GP WR sum -659.459  OH WR sum -658.408  GD WR sum -659.624  GIH WR sum -658.629  IWD sum -659.667  deck model w (clean) sum -656.681  HV train sum -657.856  HV train shrunk sum -657.869  FM w (T2 champion) sum -657.643  FM full marginal (T2 champion) sum -656.956
+      HV train shrunk sum - GP WR sum: +1.5908 ± 0.1359
+      HV train shrunk sum - OH WR sum: +0.5397 ± 0.1031
+      HV train shrunk sum - GD WR sum: +1.7549 ± 0.1037
+      HV train shrunk sum - GIH WR sum: +0.7607 ± 0.0966
+      HV train shrunk sum - IWD sum: +1.7988 ± 0.1101
+      HV train shrunk sum - deck model w (clean) sum: -1.1874 ± 0.1101
+      HV train shrunk sum - HV train sum: -0.0129 ± 0.0096
+      HV train shrunk sum - FM w (T2 champion) sum: -0.2253 ± 0.0820
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.9128 ± 0.0852
+      GP WR sum - GIH WR sum: -0.8301 ± 0.1138
+      OH WR sum - GIH WR sum: +0.2210 ± 0.0685
+      GD WR sum - GIH WR sum: -0.9942 ± 0.0943
+      IWD sum - GIH WR sum: -1.0381 ± 0.1336
+      deck model w (clean) sum - GIH WR sum: +1.9481 ± 0.0481
+      HV train sum - GIH WR sum: +0.7736 ± 0.0954
+      FM w (T2 champion) sum - GIH WR sum: +0.9860 ± 0.0634
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.6734 ± 0.0531
+BLB done [348s]
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+DSK: loaded [9s]; T2 FM card power found
+  977322 games, 0.8857 valid [0s]
+  hand values on train games [23s]
+  hand values on test games [33s]
+  deck model (no FM score) lambda 3e-05 (interior) val 0.66460 [139s]
+    GP WR                            r +0.438  rho +0.481  skill tilt +0.696  (n=250)
+    OH WR                            r +0.706  rho +0.692  skill tilt +0.666  (n=250)
+    GD WR                            r +0.430  rho +0.366  skill tilt +0.612  (n=250)
+    GIH WR                           r +0.605  rho +0.577  skill tilt +0.681  (n=250)
+    IWD                              r +0.634  rho +0.541  skill tilt +0.395  (n=250)
+    deck model w (clean)             r +0.605  rho +0.541  skill tilt +0.360  (n=250)
+    HV train                         r +0.791  rho +0.769  skill tilt +0.428  (n=250)
+    HV train shrunk                  r +0.816  rho +0.787  skill tilt +0.375  (n=250)
+    FM w (T2 champion)               r +0.591  rho +0.481  skill tilt +0.321  (n=250)
+    FM full marginal (T2 champion)   r +0.625  rho +0.532  skill tilt +0.328  (n=250)
+  deck vs hand [clean deck model w]: slope 0.295 (EIV 0.312), implied lambda 0.42
+  deck vs hand [FM w (T2 champion)]: slope 0.241 (EIV 0.256), implied lambda 0.26
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.312 (EIV 0.331), implied lambda 0.47
+    prior arm ridge              lam 3e-05 kappa +0.000 test 0.66400  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.0003 kappa +0.343 test 0.66401  vs ridge +0.009 ± 0.036
+    prior arm kappa*HV only      lam 0 kappa +0.256 test 0.66681  vs ridge +2.810 ± 0.440
+  all dl                 GP WR sum -671.654  OH WR sum -670.561  GD WR sum -670.243  GIH WR sum -669.814  IWD sum -672.112  deck model w (clean) sum -669.062  HV train sum -670.602  HV train shrunk sum -670.631  FM w (T2 champion) sum -669.752  FM full marginal (T2 champion) sum -669.605
+      HV train shrunk sum - GP WR sum: +1.0228 ± 0.2346
+      HV train shrunk sum - OH WR sum: -0.0705 ± 0.1742
+      HV train shrunk sum - GD WR sum: -0.3885 ± 0.1806
+      HV train shrunk sum - GIH WR sum: -0.8173 ± 0.1839
+      HV train shrunk sum - IWD sum: +1.4807 ± 0.1696
+      HV train shrunk sum - deck model w (clean) sum: -1.5696 ± 0.0859
+      HV train shrunk sum - HV train sum: -0.0297 ± 0.0102
+      HV train shrunk sum - FM w (T2 champion) sum: -0.8791 ± 0.1322
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.0267 ± 0.1264
+      GP WR sum - GIH WR sum: -1.8401 ± 0.1132
+      OH WR sum - GIH WR sum: -0.7468 ± 0.0563
+      GD WR sum - GIH WR sum: -0.4288 ± 0.0954
+      IWD sum - GIH WR sum: -2.2980 ± 0.2735
+      deck model w (clean) sum - GIH WR sum: +0.7523 ± 0.1843
+      HV train sum - GIH WR sum: -0.7877 ± 0.1842
+      FM w (T2 champion) sum - GIH WR sum: +0.0618 ± 0.2442
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.2093 ± 0.2299
+  experienced dl         GP WR sum -670.889  OH WR sum -669.860  GD WR sum -669.461  GIH WR sum -669.091  IWD sum -671.351  deck model w (clean) sum -668.235  HV train sum -669.946  HV train shrunk sum -669.970  FM w (T2 champion) sum -668.976  FM full marginal (T2 champion) sum -668.840
+      HV train shrunk sum - GP WR sum: +0.9195 ± 0.2284
+      HV train shrunk sum - OH WR sum: -0.1092 ± 0.1632
+      HV train shrunk sum - GD WR sum: -0.5087 ± 0.2016
+      HV train shrunk sum - GIH WR sum: -0.8790 ± 0.1856
+      HV train shrunk sum - IWD sum: +1.3815 ± 0.1647
+      HV train shrunk sum - deck model w (clean) sum: -1.7347 ± 0.0949
+      HV train shrunk sum - HV train sum: -0.0231 ± 0.0116
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9933 ± 0.1375
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.1300 ± 0.1437
+      GP WR sum - GIH WR sum: -1.7985 ± 0.1228
+      OH WR sum - GIH WR sum: -0.7698 ± 0.0691
+      GD WR sum - GIH WR sum: -0.3703 ± 0.0980
+      IWD sum - GIH WR sum: -2.2605 ± 0.2569
+      deck model w (clean) sum - GIH WR sum: +0.8557 ± 0.2010
+      HV train sum - GIH WR sum: -0.8559 ± 0.1860
+      FM w (T2 champion) sum - GIH WR sum: +0.1143 ± 0.2375
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.2510 ± 0.2391
+  match 1 dl             GP WR sum -669.363  OH WR sum -668.308  GD WR sum -668.373  GIH WR sum -667.758  IWD sum -670.211  deck model w (clean) sum -666.907  HV train sum -668.501  HV train shrunk sum -668.516  FM w (T2 champion) sum -667.883  FM full marginal (T2 champion) sum -667.465
+      HV train shrunk sum - GP WR sum: +0.8470 ± 0.5266
+      HV train shrunk sum - OH WR sum: -0.2087 ± 0.3961
+      HV train shrunk sum - GD WR sum: -0.1432 ± 0.4341
+      HV train shrunk sum - GIH WR sum: -0.7586 ± 0.4495
+      HV train shrunk sum - IWD sum: +1.6944 ± 0.3050
+      HV train shrunk sum - deck model w (clean) sum: -1.6093 ± 0.2128
+      HV train shrunk sum - HV train sum: -0.0156 ± 0.0408
+      HV train shrunk sum - FM w (T2 champion) sum: -0.6329 ± 0.2234
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.0515 ± 0.1216
+      GP WR sum - GIH WR sum: -1.6056 ± 0.2471
+      OH WR sum - GIH WR sum: -0.5499 ± 0.1210
+      GD WR sum - GIH WR sum: -0.6154 ± 0.1638
+      IWD sum - GIH WR sum: -2.4529 ± 0.5704
+      deck model w (clean) sum - GIH WR sum: +0.8508 ± 0.3632
+      HV train sum - GIH WR sum: -0.7429 ± 0.4494
+      FM w (T2 champion) sum - GIH WR sum: -0.1257 ± 0.5708
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.2929 ± 0.4449
+  main build dl          GP WR sum -670.342  OH WR sum -669.266  GD WR sum -668.933  GIH WR sum -668.540  IWD sum -670.696  deck model w (clean) sum -667.729  HV train sum -669.261  HV train shrunk sum -669.289  FM w (T2 champion) sum -668.377  FM full marginal (T2 champion) sum -668.262
+      HV train shrunk sum - GP WR sum: +1.0522 ± 0.2406
+      HV train shrunk sum - OH WR sum: -0.0230 ± 0.1784
+      HV train shrunk sum - GD WR sum: -0.3568 ± 0.2011
+      HV train shrunk sum - GIH WR sum: -0.7495 ± 0.1874
+      HV train shrunk sum - IWD sum: +1.4069 ± 0.1845
+      HV train shrunk sum - deck model w (clean) sum: -1.5605 ± 0.0923
+      HV train shrunk sum - HV train sum: -0.0284 ± 0.0094
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9124 ± 0.1574
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.0274 ± 0.1376
+      GP WR sum - GIH WR sum: -1.8017 ± 0.1122
+      OH WR sum - GIH WR sum: -0.7265 ± 0.0576
+      GD WR sum - GIH WR sum: -0.3926 ± 0.1062
+      IWD sum - GIH WR sum: -2.1564 ± 0.2747
+      deck model w (clean) sum - GIH WR sum: +0.8110 ± 0.1729
+      HV train sum - GIH WR sum: -0.7211 ± 0.1873
+      FM w (T2 champion) sum - GIH WR sum: +0.1630 ± 0.2524
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.2779 ± 0.2259
+  all raw                GP WR sum -666.662  OH WR sum -665.734  GD WR sum -665.510  GIH WR sum -665.133  IWD sum -667.017  deck model w (clean) sum -664.030  HV train sum -665.713  HV train shrunk sum -665.729  FM w (T2 champion) sum -664.819  FM full marginal (T2 champion) sum -664.587
+      HV train shrunk sum - GP WR sum: +0.9330 ± 0.1946
+      HV train shrunk sum - OH WR sum: +0.0047 ± 0.1479
+      HV train shrunk sum - GD WR sum: -0.2189 ± 0.1544
+      HV train shrunk sum - GIH WR sum: -0.5957 ± 0.1552
+      HV train shrunk sum - IWD sum: +1.2879 ± 0.1614
+      HV train shrunk sum - deck model w (clean) sum: -1.6985 ± 0.0800
+      HV train shrunk sum - HV train sum: -0.0160 ± 0.0103
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9102 ± 0.1116
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.1421 ± 0.1221
+      GP WR sum - GIH WR sum: -1.5286 ± 0.0810
+      OH WR sum - GIH WR sum: -0.6004 ± 0.0402
+      GD WR sum - GIH WR sum: -0.3768 ± 0.0901
+      IWD sum - GIH WR sum: -1.8835 ± 0.2402
+      deck model w (clean) sum - GIH WR sum: +1.1028 ± 0.1783
+      HV train sum - GIH WR sum: -0.5797 ± 0.1527
+      FM w (T2 champion) sum - GIH WR sum: +0.3145 ± 0.2206
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.5465 ± 0.2147
+  experienced raw        GP WR sum -669.664  OH WR sum -668.712  GD WR sum -668.398  GIH WR sum -668.029  IWD sum -670.101  deck model w (clean) sum -666.915  HV train sum -668.760  HV train shrunk sum -668.776  FM w (T2 champion) sum -667.778  FM full marginal (T2 champion) sum -667.547
+      HV train shrunk sum - GP WR sum: +0.8880 ± 0.2085
+      HV train shrunk sum - OH WR sum: -0.0638 ± 0.1502
+      HV train shrunk sum - GD WR sum: -0.3781 ± 0.1970
+      HV train shrunk sum - GIH WR sum: -0.7468 ± 0.1758
+      HV train shrunk sum - IWD sum: +1.3249 ± 0.1680
+      HV train shrunk sum - deck model w (clean) sum: -1.8615 ± 0.0929
+      HV train shrunk sum - HV train sum: -0.0159 ± 0.0117
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9984 ± 0.1295
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.2291 ± 0.1406
+      GP WR sum - GIH WR sum: -1.6348 ± 0.1050
+      OH WR sum - GIH WR sum: -0.6831 ± 0.0618
+      GD WR sum - GIH WR sum: -0.3687 ± 0.0966
+      IWD sum - GIH WR sum: -2.0717 ± 0.2444
+      deck model w (clean) sum - GIH WR sum: +1.1146 ± 0.1966
+      HV train sum - GIH WR sum: -0.7310 ± 0.1747
+      FM w (T2 champion) sum - GIH WR sum: +0.2516 ± 0.2306
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.4823 ± 0.2278
+  match 1 raw            GP WR sum -664.434  OH WR sum -663.639  GD WR sum -663.812  GIH WR sum -663.297  IWD sum -665.098  deck model w (clean) sum -662.134  HV train sum -663.742  HV train shrunk sum -663.741  FM w (T2 champion) sum -663.131  FM full marginal (T2 champion) sum -662.670
+      HV train shrunk sum - GP WR sum: +0.6931 ± 0.4767
+      HV train shrunk sum - OH WR sum: -0.1017 ± 0.3640
+      HV train shrunk sum - GD WR sum: +0.0710 ± 0.4266
+      HV train shrunk sum - GIH WR sum: -0.4439 ± 0.4303
+      HV train shrunk sum - IWD sum: +1.3571 ± 0.2677
+      HV train shrunk sum - deck model w (clean) sum: -1.6067 ± 0.2125
+      HV train shrunk sum - HV train sum: +0.0010 ± 0.0387
+      HV train shrunk sum - FM w (T2 champion) sum: -0.6098 ± 0.1776
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.0705 ± 0.1268
+      GP WR sum - GIH WR sum: -1.1370 ± 0.2052
+      OH WR sum - GIH WR sum: -0.3422 ± 0.1168
+      GD WR sum - GIH WR sum: -0.5149 ± 0.1441
+      IWD sum - GIH WR sum: -1.8009 ± 0.5127
+      deck model w (clean) sum - GIH WR sum: +1.1628 ± 0.3130
+      HV train sum - GIH WR sum: -0.4449 ± 0.4244
+      FM w (T2 champion) sum - GIH WR sum: +0.1660 ± 0.4944
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.6267 ± 0.3986
+  main build raw         GP WR sum -665.293  OH WR sum -664.378  GD WR sum -664.136  GIH WR sum -663.793  IWD sum -665.545  deck model w (clean) sum -662.637  HV train sum -664.310  HV train shrunk sum -664.324  FM w (T2 champion) sum -663.388  FM full marginal (T2 champion) sum -663.179
+      HV train shrunk sum - GP WR sum: +0.9683 ± 0.2039
+      HV train shrunk sum - OH WR sum: +0.0533 ± 0.1534
+      HV train shrunk sum - GD WR sum: -0.1886 ± 0.1650
+      HV train shrunk sum - GIH WR sum: -0.5312 ± 0.1552
+      HV train shrunk sum - IWD sum: +1.2206 ± 0.1710
+      HV train shrunk sum - deck model w (clean) sum: -1.6876 ± 0.0834
+      HV train shrunk sum - HV train sum: -0.0145 ± 0.0092
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9366 ± 0.1402
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.1450 ± 0.1331
+      GP WR sum - GIH WR sum: -1.4995 ± 0.0880
+      OH WR sum - GIH WR sum: -0.5845 ± 0.0424
+      GD WR sum - GIH WR sum: -0.3425 ± 0.0976
+      IWD sum - GIH WR sum: -1.7518 ± 0.2413
+      deck model w (clean) sum - GIH WR sum: +1.1564 ± 0.1673
+      HV train sum - GIH WR sum: -0.5166 ± 0.1533
+      FM w (T2 champion) sum - GIH WR sum: +0.4054 ± 0.2324
+      FM full marginal (T2 champion) sum - GIH WR sum: +0.6138 ± 0.2108
+DSK done [383s]
+  round 4 game_logit: precision covariate of p_hat only (not in the deck model)
+OTJ: loaded [13s]; T2 FM card power found
+  1132415 games, 0.8850 valid [0s]
+  hand values on train games [28s]
+  hand values on test games [40s]
+  deck model (no FM score) lambda 0.0003 (interior) val 0.66503 [163s]
+    GP WR                            r +0.507  rho +0.462  skill tilt +0.732  (n=321)
+    OH WR                            r +0.710  rho +0.691  skill tilt +0.675  (n=321)
+    GD WR                            r +0.406  rho +0.346  skill tilt +0.660  (n=321)
+    GIH WR                           r +0.593  rho +0.549  skill tilt +0.721  (n=321)
+    IWD                              r +0.514  rho +0.492  skill tilt +0.396  (n=321)
+    deck model w (clean)             r +0.615  rho +0.562  skill tilt +0.372  (n=321)
+    HV train                         r +0.742  rho +0.749  skill tilt +0.311  (n=321)
+    HV train shrunk                  r +0.752  rho +0.755  skill tilt +0.259  (n=321)
+    FM w (T2 champion)               r +0.595  rho +0.549  skill tilt +0.295  (n=321)
+    FM full marginal (T2 champion)   r +0.618  rho +0.572  skill tilt +0.375  (n=321)
+  deck vs hand [clean deck model w]: slope 0.263 (EIV 0.288), implied lambda 0.35
+  deck vs hand [FM w (T2 champion)]: slope 0.227 (EIV 0.248), implied lambda 0.23
+  deck vs hand [FM full marginal (T2 champion)]: slope 0.288 (EIV 0.315), implied lambda 0.42
+    prior arm ridge              lam 0.0003 kappa +0.000 test 0.66591  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.0003 kappa +0.367 test 0.66590  vs ridge -0.005 ± 0.019
+    prior arm kappa*HV only      lam 0 kappa +0.288 test 0.66819  vs ridge +2.288 ± 0.372
+  all dl                 GP WR sum -672.094  OH WR sum -671.464  GD WR sum -671.408  GIH WR sum -671.119  IWD sum -672.897  deck model w (clean) sum -669.476  HV train sum -671.245  HV train shrunk sum -671.319  FM w (T2 champion) sum -670.155  FM full marginal (T2 champion) sum -669.918
+      HV train shrunk sum - GP WR sum: +0.7752 ± 0.1740
+      HV train shrunk sum - OH WR sum: +0.1448 ± 0.1491
+      HV train shrunk sum - GD WR sum: +0.0888 ± 0.2128
+      HV train shrunk sum - GIH WR sum: -0.2001 ± 0.1864
+      HV train shrunk sum - IWD sum: +1.5779 ± 0.1510
+      HV train shrunk sum - deck model w (clean) sum: -1.8436 ± 0.1851
+      HV train shrunk sum - HV train sum: -0.0741 ± 0.0165
+      HV train shrunk sum - FM w (T2 champion) sum: -1.1637 ± 0.1668
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.4007 ± 0.1759
+      GP WR sum - GIH WR sum: -0.9753 ± 0.0582
+      OH WR sum - GIH WR sum: -0.3448 ± 0.0593
+      GD WR sum - GIH WR sum: -0.2889 ± 0.0549
+      IWD sum - GIH WR sum: -1.7780 ± 0.1623
+      deck model w (clean) sum - GIH WR sum: +1.6435 ± 0.0917
+      HV train sum - GIH WR sum: -0.1260 ± 0.1837
+      FM w (T2 champion) sum - GIH WR sum: +0.9636 ± 0.0817
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.2006 ± 0.0758
+  experienced dl         GP WR sum -671.275  OH WR sum -670.668  GD WR sum -670.580  GIH WR sum -670.309  IWD sum -672.005  deck model w (clean) sum -668.644  HV train sum -670.433  HV train shrunk sum -670.494  FM w (T2 champion) sum -669.365  FM full marginal (T2 champion) sum -669.078
+      HV train shrunk sum - GP WR sum: +0.7812 ± 0.1507
+      HV train shrunk sum - OH WR sum: +0.1740 ± 0.1325
+      HV train shrunk sum - GD WR sum: +0.0865 ± 0.1974
+      HV train shrunk sum - GIH WR sum: -0.1843 ± 0.1741
+      HV train shrunk sum - IWD sum: +1.5118 ± 0.1400
+      HV train shrunk sum - deck model w (clean) sum: -1.8494 ± 0.2006
+      HV train shrunk sum - HV train sum: -0.0602 ± 0.0176
+      HV train shrunk sum - FM w (T2 champion) sum: -1.1288 ± 0.1550
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.4152 ± 0.1906
+      GP WR sum - GIH WR sum: -0.9655 ± 0.0619
+      OH WR sum - GIH WR sum: -0.3583 ± 0.0568
+      GD WR sum - GIH WR sum: -0.2708 ± 0.0485
+      IWD sum - GIH WR sum: -1.6961 ± 0.1591
+      deck model w (clean) sum - GIH WR sum: +1.6651 ± 0.0959
+      HV train sum - GIH WR sum: -0.1241 ± 0.1708
+      FM w (T2 champion) sum - GIH WR sum: +0.9445 ± 0.0973
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.2309 ± 0.0779
+  match 1 dl             GP WR sum -672.573  OH WR sum -671.858  GD WR sum -672.388  GIH WR sum -671.822  IWD sum -673.870  deck model w (clean) sum -670.174  HV train sum -671.719  HV train shrunk sum -671.785  FM w (T2 champion) sum -670.948  FM full marginal (T2 champion) sum -670.698
+      HV train shrunk sum - GP WR sum: +0.7880 ± 0.4582
+      HV train shrunk sum - OH WR sum: +0.0732 ± 0.3854
+      HV train shrunk sum - GD WR sum: +0.6035 ± 0.4812
+      HV train shrunk sum - GIH WR sum: +0.0369 ± 0.4440
+      HV train shrunk sum - IWD sum: +2.0849 ± 0.3834
+      HV train shrunk sum - deck model w (clean) sum: -1.6105 ± 0.3625
+      HV train shrunk sum - HV train sum: -0.0661 ± 0.0596
+      HV train shrunk sum - FM w (T2 champion) sum: -0.8368 ± 0.3673
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.0873 ± 0.3365
+      GP WR sum - GIH WR sum: -0.7511 ± 0.1559
+      OH WR sum - GIH WR sum: -0.0363 ± 0.1427
+      GD WR sum - GIH WR sum: -0.5666 ± 0.1598
+      IWD sum - GIH WR sum: -2.0480 ± 0.4360
+      deck model w (clean) sum - GIH WR sum: +1.6474 ± 0.2973
+      HV train sum - GIH WR sum: +0.1030 ± 0.4070
+      FM w (T2 champion) sum - GIH WR sum: +0.8737 ± 0.4308
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.1243 ± 0.2605
+  main build dl          GP WR sum -670.784  OH WR sum -670.172  GD WR sum -670.094  GIH WR sum -669.834  IWD sum -671.451  deck model w (clean) sum -668.181  HV train sum -669.871  HV train shrunk sum -669.928  FM w (T2 champion) sum -668.814  FM full marginal (T2 champion) sum -668.584
+      HV train shrunk sum - GP WR sum: +0.8565 ± 0.1827
+      HV train shrunk sum - OH WR sum: +0.2448 ± 0.1560
+      HV train shrunk sum - GD WR sum: +0.1664 ± 0.2133
+      HV train shrunk sum - GIH WR sum: -0.0932 ± 0.1869
+      HV train shrunk sum - IWD sum: +1.5237 ± 0.1627
+      HV train shrunk sum - deck model w (clean) sum: -1.7469 ± 0.1811
+      HV train shrunk sum - HV train sum: -0.0566 ± 0.0133
+      HV train shrunk sum - FM w (T2 champion) sum: -1.1138 ± 0.1556
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.3436 ± 0.1684
+      GP WR sum - GIH WR sum: -0.9497 ± 0.0532
+      OH WR sum - GIH WR sum: -0.3379 ± 0.0578
+      GD WR sum - GIH WR sum: -0.2596 ± 0.0584
+      IWD sum - GIH WR sum: -1.6169 ± 0.1590
+      deck model w (clean) sum - GIH WR sum: +1.6537 ± 0.0958
+      HV train sum - GIH WR sum: -0.0366 ± 0.1843
+      FM w (T2 champion) sum - GIH WR sum: +1.0206 ± 0.0783
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.2504 ± 0.0780
+  all raw                GP WR sum -667.593  OH WR sum -667.032  GD WR sum -667.057  GIH WR sum -666.776  IWD sum -668.280  deck model w (clean) sum -665.152  HV train sum -666.769  HV train shrunk sum -666.816  FM w (T2 champion) sum -665.834  FM full marginal (T2 champion) sum -665.563
+      HV train shrunk sum - GP WR sum: +0.7773 ± 0.1431
+      HV train shrunk sum - OH WR sum: +0.2155 ± 0.1244
+      HV train shrunk sum - GD WR sum: +0.2413 ± 0.1728
+      HV train shrunk sum - GIH WR sum: -0.0397 ± 0.1535
+      HV train shrunk sum - IWD sum: +1.4639 ± 0.1296
+      HV train shrunk sum - deck model w (clean) sum: -1.6644 ± 0.1671
+      HV train shrunk sum - HV train sum: -0.0475 ± 0.0147
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9819 ± 0.1442
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.2533 ± 0.1520
+      GP WR sum - GIH WR sum: -0.8170 ± 0.0493
+      OH WR sum - GIH WR sum: -0.2553 ± 0.0487
+      GD WR sum - GIH WR sum: -0.2810 ± 0.0463
+      IWD sum - GIH WR sum: -1.5036 ± 0.1401
+      deck model w (clean) sum - GIH WR sum: +1.6246 ± 0.0759
+      HV train sum - GIH WR sum: +0.0078 ± 0.1509
+      FM w (T2 champion) sum - GIH WR sum: +0.9422 ± 0.0750
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.2136 ± 0.0567
+  experienced raw        GP WR sum -669.983  OH WR sum -669.419  GD WR sum -669.414  GIH WR sum -669.134  IWD sum -670.672  deck model w (clean) sum -667.443  HV train sum -669.172  HV train shrunk sum -669.216  FM w (T2 champion) sum -668.174  FM full marginal (T2 champion) sum -667.878
+      HV train shrunk sum - GP WR sum: +0.7674 ± 0.1294
+      HV train shrunk sum - OH WR sum: +0.2029 ± 0.1181
+      HV train shrunk sum - GD WR sum: +0.1984 ± 0.1655
+      HV train shrunk sum - GIH WR sum: -0.0812 ± 0.1502
+      HV train shrunk sum - IWD sum: +1.4560 ± 0.1184
+      HV train shrunk sum - deck model w (clean) sum: -1.7723 ± 0.1883
+      HV train shrunk sum - HV train sum: -0.0434 ± 0.0158
+      HV train shrunk sum - FM w (T2 champion) sum: -1.0420 ± 0.1481
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.3376 ± 0.1756
+      GP WR sum - GIH WR sum: -0.8486 ± 0.0529
+      OH WR sum - GIH WR sum: -0.2842 ± 0.0484
+      GD WR sum - GIH WR sum: -0.2796 ± 0.0435
+      IWD sum - GIH WR sum: -1.5373 ± 0.1458
+      deck model w (clean) sum - GIH WR sum: +1.6911 ± 0.0852
+      HV train sum - GIH WR sum: -0.0378 ± 0.1467
+      FM w (T2 champion) sum - GIH WR sum: +0.9608 ± 0.0897
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.2564 ± 0.0665
+  match 1 raw            GP WR sum -667.529  OH WR sum -666.934  GD WR sum -667.496  GIH WR sum -666.992  IWD sum -668.572  deck model w (clean) sum -665.445  HV train sum -666.737  HV train shrunk sum -666.772  FM w (T2 champion) sum -666.183  FM full marginal (T2 champion) sum -665.923
+      HV train shrunk sum - GP WR sum: +0.7570 ± 0.4091
+      HV train shrunk sum - OH WR sum: +0.1621 ± 0.3412
+      HV train shrunk sum - GD WR sum: +0.7244 ± 0.4106
+      HV train shrunk sum - GIH WR sum: +0.2204 ± 0.3786
+      HV train shrunk sum - IWD sum: +1.7999 ± 0.3461
+      HV train shrunk sum - deck model w (clean) sum: -1.3272 ± 0.3105
+      HV train shrunk sum - HV train sum: -0.0346 ± 0.0542
+      HV train shrunk sum - FM w (T2 champion) sum: -0.5888 ± 0.3277
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -0.8494 ± 0.2883
+      GP WR sum - GIH WR sum: -0.5366 ± 0.1504
+      OH WR sum - GIH WR sum: +0.0583 ± 0.1318
+      GD WR sum - GIH WR sum: -0.5040 ± 0.1470
+      IWD sum - GIH WR sum: -1.5795 ± 0.3673
+      deck model w (clean) sum - GIH WR sum: +1.5476 ± 0.2590
+      HV train sum - GIH WR sum: +0.2551 ± 0.3459
+      FM w (T2 champion) sum - GIH WR sum: +0.8093 ± 0.3790
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.0698 ± 0.2292
+  main build raw         GP WR sum -666.215  OH WR sum -665.671  GD WR sum -665.680  GIH WR sum -665.425  IWD sum -666.781  deck model w (clean) sum -663.791  HV train sum -665.333  HV train shrunk sum -665.364  FM w (T2 champion) sum -664.424  FM full marginal (T2 champion) sum -664.163
+      HV train shrunk sum - GP WR sum: +0.8517 ± 0.1509
+      HV train shrunk sum - OH WR sum: +0.3075 ± 0.1294
+      HV train shrunk sum - GD WR sum: +0.3166 ± 0.1729
+      HV train shrunk sum - GIH WR sum: +0.0608 ± 0.1519
+      HV train shrunk sum - IWD sum: +1.4175 ± 0.1442
+      HV train shrunk sum - deck model w (clean) sum: -1.5724 ± 0.1636
+      HV train shrunk sum - HV train sum: -0.0307 ± 0.0123
+      HV train shrunk sum - FM w (T2 champion) sum: -0.9402 ± 0.1338
+      HV train shrunk sum - FM full marginal (T2 champion) sum: -1.2007 ± 0.1447
+      GP WR sum - GIH WR sum: -0.7908 ± 0.0452
+      OH WR sum - GIH WR sum: -0.2466 ± 0.0478
+      GD WR sum - GIH WR sum: -0.2557 ± 0.0506
+      IWD sum - GIH WR sum: -1.3566 ± 0.1363
+      deck model w (clean) sum - GIH WR sum: +1.6332 ± 0.0870
+      HV train sum - GIH WR sum: +0.0916 ± 0.1485
+      FM w (T2 champion) sum - GIH WR sum: +1.0010 ± 0.0665
+      FM full marginal (T2 champion) sum - GIH WR sum: +1.2615 ± 0.0639
+OTJ done [451s]

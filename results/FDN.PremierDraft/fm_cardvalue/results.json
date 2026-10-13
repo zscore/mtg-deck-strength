@@ -1,0 +1,2555 @@
+{
+ "set": "FDN",
+ "seeds": 2,
+ "champion setting": [
+  1e-05,
+  0.001
+ ],
+ "picks": {
+  "l2 [val-gll pick]": "l2 0.0003",
+  "l2 [val-scgll pick]": "l2 3e-05",
+  "draft aux [pick]": "draft aux 0.3",
+  "lgbm prior [pick]": "lgbm prior 0.0001",
+  "distill [pick]": "distill 0.003"
+ },
+ "lgbm": {
+  "kappa (sd matched)": 0.9009415817729421,
+  "kappa (OLS of w on c)": 0.8077558254454837,
+  "r(c, champion w) played": 0.8965684809886233,
+  "cards with c": 272,
+  "champion deck score train mean/sd": [
+   0.09440788117551653,
+   0.2623580989164658
+  ],
+  "lgbm trees (full, fold0, fold1)": [
+   1307,
+   781,
+   861
+  ],
+  "deck agreement": 1.0
+ },
+ "reproduction": {
+  "r(champion here, game_fm_v2 champion) test, seed 0": 0.9999999999999984,
+  "max |diff| seed 0": 5.942330272290519e-08
+ },
+ "val scgll blend*": {
+  "blend* (saved T1)": [
+   -664.1275006542578,
+   -664.202671813556,
+   -664.1190659665888
+  ],
+  "blend* (saved alpha, this champion)": [
+   -664.1275006653664,
+   -664.2026718301917,
+   -664.1190659774115
+  ]
+ },
+ "blend* alphas (T1)": [
+  0.65,
+  0.7,
+  0.65
+ ],
+ "contexts": {
+  "dl": {
+   "skill": "dl",
+   "own mulligans": true,
+   "train games": 537244,
+   "train logloss": 0.6716597927613507,
+   "test logloss (context only)": 0.6697430741169532
+  },
+  "pre": {
+   "skill": "dl",
+   "own mulligans": false,
+   "train games": 537244,
+   "train logloss": 0.6775292404243564,
+   "test logloss (context only)": 0.6757624794838414
+  }
+ },
+ "diagnostics": {
+  "champion": {
+   "card w r with champion": 1.0,
+   "card w sd ratio vs champion": 0.9999999999782483,
+   "card w r with LightGBM c": 0.8965684809886233,
+   "test score r with LightGBM counts-only": 0.8942885488409656,
+   "test score r with blend* (saved, seed 0)": 0.9902217530470955,
+   "val gll": [
+    0.6607043743133545,
+    0.6606355905532837
+   ],
+   "val scgll": [
+    -664.2382041296252,
+    -664.3092706301311
+   ],
+   "epochs": [
+    29,
+    26
+   ],
+   "setting": [
+    1e-05,
+    0.001
+   ],
+   "extra": [
+    {},
+    {}
+   ]
+  },
+  "l2 1e-06": {
+   "card w r with champion": 0.9999863484451124,
+   "card w sd ratio vs champion": 1.0047274488879023,
+   "card w r with LightGBM c": 0.8965237963242906,
+   "test score r with LightGBM counts-only": 0.8941917313197021,
+   "test score r with blend* (saved, seed 0)": 0.990132521143004,
+   "val gll": [
+    0.6607049107551575
+   ],
+   "val scgll": [
+    -664.2385493341542
+   ],
+   "epochs": [
+    29
+   ],
+   "setting": {
+    "l2w": 1e-06
+   },
+   "extra": [
+    {}
+   ]
+  },
+  "l2 3e-06": {
+   "card w r with champion": 0.9999917257975732,
+   "card w sd ratio vs champion": 1.003668050862233,
+   "card w r with LightGBM c": 0.8965396867927389,
+   "test score r with LightGBM counts-only": 0.894216106911005,
+   "test score r with blend* (saved, seed 0)": 0.9901544442131275,
+   "val gll": [
+    0.6607048511505127
+   ],
+   "val scgll": [
+    -664.2384615170545
+   ],
+   "epochs": [
+    29
+   ],
+   "setting": {
+    "l2w": 3e-06
+   },
+   "extra": [
+    {}
+   ]
+  },
+  "l2 3e-05": {
+   "card w r with champion": 0.9999332075867524,
+   "card w sd ratio vs champion": 0.9898605002703255,
+   "card w r with LightGBM c": 0.8964939229650135,
+   "test score r with LightGBM counts-only": 0.8944327973338342,
+   "test score r with blend* (saved, seed 0)": 0.9903681577311491,
+   "val gll": [
+    0.6607025265693665,
+    0.6606348752975464
+   ],
+   "val scgll": [
+    -664.2378822486456,
+    -664.3097225866804
+   ],
+   "epochs": [
+    29,
+    26
+   ],
+   "setting": {
+    "l2w": 3e-05
+   },
+   "extra": [
+    {},
+    {}
+   ]
+  },
+  "l2 0.0001": {
+   "card w r with champion": 0.9988217899725588,
+   "card w sd ratio vs champion": 0.9580647629086572,
+   "card w r with LightGBM c": 0.8952120244912778,
+   "test score r with LightGBM counts-only": 0.8946178399983559,
+   "test score r with blend* (saved, seed 0)": 0.9906243316463309,
+   "val gll": [
+    0.660698413848877
+   ],
+   "val scgll": [
+    -664.2398995426033
+   ],
+   "epochs": [
+    29
+   ],
+   "setting": {
+    "l2w": 0.0001
+   },
+   "extra": [
+    {}
+   ]
+  },
+  "l2 0.0003": {
+   "card w r with champion": 0.9922537345339525,
+   "card w sd ratio vs champion": 0.8888166204438377,
+   "card w r with LightGBM c": 0.8881173005415913,
+   "test score r with LightGBM counts-only": 0.894163092549265,
+   "test score r with blend* (saved, seed 0)": 0.9904727807906886,
+   "val gll": [
+    0.6606980562210083,
+    0.660637617111206
+   ],
+   "val scgll": [
+    -664.254288840006,
+    -664.3288288316134
+   ],
+   "epochs": [
+    29,
+    26
+   ],
+   "setting": {
+    "l2w": 0.0003
+   },
+   "extra": [
+    {},
+    {}
+   ]
+  },
+  "l2 0.001": {
+   "card w r with champion": 0.9686267297055492,
+   "card w sd ratio vs champion": 0.7450490793926273,
+   "card w r with LightGBM c": 0.8633868091720961,
+   "test score r with LightGBM counts-only": 0.8897891423200356,
+   "test score r with blend* (saved, seed 0)": 0.9875297914182715,
+   "val gll": [
+    0.6607330441474915
+   ],
+   "val scgll": [
+    -664.320424678675
+   ],
+   "epochs": [
+    29
+   ],
+   "setting": {
+    "l2w": 0.001
+   },
+   "extra": [
+    {}
+   ]
+  },
+  "draft aux 0.1": {
+   "card w r with champion": 0.9967129966818553,
+   "card w sd ratio vs champion": 1.0071147437116337,
+   "card w r with LightGBM c": 0.9042431099165473,
+   "test score r with LightGBM counts-only": 0.8964929852753821,
+   "test score r with blend* (saved, seed 0)": 0.9848360327674656,
+   "val gll": [
+    0.6604911088943481
+   ],
+   "val scgll": [
+    -664.2684866853334
+   ],
+   "epochs": [
+    32
+   ],
+   "setting": {
+    "aux": [
+     "draft",
+     0.1
+    ]
+   },
+   "extra": [
+    {
+     "draft beta": 1.0821154117584229
+    }
+   ]
+  },
+  "draft aux 0.3": {
+   "card w r with champion": 0.9915996925663482,
+   "card w sd ratio vs champion": 1.0172275367582961,
+   "card w r with LightGBM c": 0.9243184051399882,
+   "test score r with LightGBM counts-only": 0.9079913142708943,
+   "test score r with blend* (saved, seed 0)": 0.9869444436802324,
+   "val gll": [
+    0.6607776284217834,
+    0.6606807708740234
+   ],
+   "val scgll": [
+    -664.2301337597281,
+    -664.2912287351019
+   ],
+   "epochs": [
+    26,
+    26
+   ],
+   "setting": {
+    "aux": [
+     "draft",
+     0.3
+    ]
+   },
+   "extra": [
+    {
+     "draft beta": 1.0837033987045288
+    },
+    {
+     "draft beta": 1.0918484926223755
+    }
+   ]
+  },
+  "draft aux 1": {
+   "card w r with champion": 0.969050315364845,
+   "card w sd ratio vs champion": 1.060868850894209,
+   "card w r with LightGBM c": 0.9418918916178749,
+   "test score r with LightGBM counts-only": 0.9091768523924738,
+   "test score r with blend* (saved, seed 0)": 0.9743913978953069,
+   "val gll": [
+    0.661106288433075
+   ],
+   "val scgll": [
+    -664.2328072478158
+   ],
+   "epochs": [
+    27
+   ],
+   "setting": {
+    "aux": [
+     "draft",
+     1.0
+    ]
+   },
+   "extra": [
+    {
+     "draft beta": 1.096874713897705
+    }
+   ]
+  },
+  "lgbm prior 1e-05": {
+   "card w r with champion": 0.9992194427457126,
+   "card w sd ratio vs champion": 1.009283386741389,
+   "card w r with LightGBM c": 0.8980523003775164,
+   "test score r with LightGBM counts-only": 0.8942104707447263,
+   "test score r with blend* (saved, seed 0)": 0.990078625424342,
+   "val gll": [
+    0.6607117056846619
+   ],
+   "val scgll": [
+    -664.2411557108562
+   ],
+   "epochs": [
+    29
+   ],
+   "setting": {
+    "prior": 1e-05
+   },
+   "extra": [
+    {}
+   ]
+  },
+  "lgbm prior 0.0001": {
+   "card w r with champion": 0.9990474960120473,
+   "card w sd ratio vs champion": 1.0032943257118645,
+   "card w r with LightGBM c": 0.906946157512968,
+   "test score r with LightGBM counts-only": 0.8957484097569924,
+   "test score r with blend* (saved, seed 0)": 0.9905104934611312,
+   "val gll": [
+    0.6607152223587036,
+    0.6606174111366272
+   ],
+   "val scgll": [
+    -664.2383922627351,
+    -664.306314432292
+   ],
+   "epochs": [
+    29,
+    26
+   ],
+   "setting": {
+    "prior": 0.0001
+   },
+   "extra": [
+    {},
+    {}
+   ]
+  },
+  "lgbm prior 0.001": {
+   "card w r with champion": 0.9864584969328374,
+   "card w sd ratio vs champion": 0.9918114385435605,
+   "card w r with LightGBM c": 0.9472777027164171,
+   "test score r with LightGBM counts-only": 0.9022882040325055,
+   "test score r with blend* (saved, seed 0)": 0.9908765263905494,
+   "val gll": [
+    0.6607427597045898
+   ],
+   "val scgll": [
+    -664.2408272122323
+   ],
+   "epochs": [
+    29
+   ],
+   "setting": {
+    "prior": 0.001
+   },
+   "extra": [
+    {}
+   ]
+  },
+  "lgbm prior 0.01": {
+   "card w r with champion": 0.9375197482232268,
+   "card w sd ratio vs champion": 0.9921446847338193,
+   "card w r with LightGBM c": 0.9907974230816888,
+   "test score r with LightGBM counts-only": 0.9146855537251102,
+   "test score r with blend* (saved, seed 0)": 0.9860503529854217,
+   "val gll": [
+    0.6608540415763855
+   ],
+   "val scgll": [
+    -664.2779770972032
+   ],
+   "epochs": [
+    29
+   ],
+   "setting": {
+    "prior": 0.01
+   },
+   "extra": [
+    {}
+   ]
+  },
+  "distill 0.003": {
+   "card w r with champion": 0.98999319308046,
+   "card w sd ratio vs champion": 0.9683612658776342,
+   "card w r with LightGBM c": 0.9363237789317376,
+   "test score r with LightGBM counts-only": 0.9226614215425138,
+   "test score r with blend* (saved, seed 0)": 0.9891767661609934,
+   "val gll": [
+    0.6607431769371033,
+    0.6606396436691284
+   ],
+   "val scgll": [
+    -664.2644025009063,
+    -664.2703433241855
+   ],
+   "epochs": [
+    26,
+    26
+   ],
+   "setting": {
+    "aux": [
+     "distill",
+     0.003
+    ]
+   },
+   "extra": [
+    {},
+    {}
+   ]
+  },
+  "distill 0.01": {
+   "card w r with champion": 0.967532434479581,
+   "card w sd ratio vs champion": 0.9609304457790818,
+   "card w r with LightGBM c": 0.9633939080384336,
+   "test score r with LightGBM counts-only": 0.9407990090569575,
+   "test score r with blend* (saved, seed 0)": 0.9774953465448776,
+   "val gll": [
+    0.6608600616455078
+   ],
+   "val scgll": [
+    -664.4131743572997
+   ],
+   "epochs": [
+    32
+   ],
+   "setting": {
+    "aux": [
+     "distill",
+     0.01
+    ]
+   },
+   "extra": [
+    {}
+   ]
+  },
+  "distill 0.03": {
+   "card w r with champion": 0.9315471640126706,
+   "card w sd ratio vs champion": 0.9639861850604459,
+   "card w r with LightGBM c": 0.9765124620004729,
+   "test score r with LightGBM counts-only": 0.949568626520708,
+   "test score r with blend* (saved, seed 0)": 0.9634152944355125,
+   "val gll": [
+    0.6615163087844849
+   ],
+   "val scgll": [
+    -664.53324122443
+   ],
+   "epochs": [
+    20
+   ],
+   "setting": {
+    "aux": [
+     "distill",
+     0.03
+    ]
+   },
+   "extra": [
+    {}
+   ]
+  },
+  "distill 0.1": {
+   "card w r with champion": 0.9082345076429812,
+   "card w sd ratio vs champion": 0.9594313522653508,
+   "card w r with LightGBM c": 0.9786237757052274,
+   "test score r with LightGBM counts-only": 0.9519487712046097,
+   "test score r with blend* (saved, seed 0)": 0.9482347607453668,
+   "val gll": [
+    0.6614871025085449
+   ],
+   "val scgll": [
+    -664.8008560101304
+   ],
+   "epochs": [
+    25
+   ],
+   "setting": {
+    "aux": [
+     "distill",
+     0.1
+    ]
+   },
+   "extra": [
+    {}
+   ]
+  }
+ },
+ "models": {
+  "champion": {
+   "experienced dl": {
+    "b per sd": 0.22890932650519905,
+    "calibration": "own val fit",
+    "sc_gll": -661.9036015631813,
+    "seed sd": 0.011659266178526195,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.23965542939718232,
+    "calibration": "own val fit",
+    "sc_gll": -658.7377211613205,
+    "seed sd": 0.03977411149111276,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22740394973661854,
+    "calibration": "own val fit",
+    "sc_gll": -668.0041189931803,
+    "seed sd": 0.013176721912032008,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.2369724294094288,
+    "calibration": "own val fit",
+    "sc_gll": -665.4113981008941,
+    "seed sd": 0.04533905864559529,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "l2 1e-06": {
+   "experienced dl": {
+    "b per sd": 0.2295934280908504,
+    "calibration": "own val fit",
+    "sc_gll": -661.9158034905527,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.24008906614579886,
+    "calibration": "own val fit",
+    "sc_gll": -658.6992254391888,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.2281902039656934,
+    "calibration": "own val fit",
+    "sc_gll": -668.0178049794958,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23757822204011225,
+    "calibration": "own val fit",
+    "sc_gll": -665.3675591354117,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "l2 3e-06": {
+   "experienced dl": {
+    "b per sd": 0.22959239856229366,
+    "calibration": "own val fit",
+    "sc_gll": -661.9156504719587,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.24008439922782487,
+    "calibration": "own val fit",
+    "sc_gll": -658.6988882730479,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.2281898721722043,
+    "calibration": "own val fit",
+    "sc_gll": -668.0176637917725,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23757339974591588,
+    "calibration": "own val fit",
+    "sc_gll": -665.3671630541495,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "l2 3e-05": {
+   "experienced dl": {
+    "b per sd": 0.22888743252850519,
+    "calibration": "own val fit",
+    "sc_gll": -661.9033928049867,
+    "seed sd": 0.011333089772790572,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.2396146380752389,
+    "calibration": "own val fit",
+    "sc_gll": -658.7361012180526,
+    "seed sd": 0.04016489174614435,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22738587174158653,
+    "calibration": "own val fit",
+    "sc_gll": -668.0039370964813,
+    "seed sd": 0.01282800173942178,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.2369303426292289,
+    "calibration": "own val fit",
+    "sc_gll": -665.4095258119203,
+    "seed sd": 0.04575006959731809,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "l2 0.0001": {
+   "experienced dl": {
+    "b per sd": 0.22948563045178214,
+    "calibration": "own val fit",
+    "sc_gll": -661.9151874246631,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.23994018441523401,
+    "calibration": "own val fit",
+    "sc_gll": -658.6899368154704,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22810052410415305,
+    "calibration": "own val fit",
+    "sc_gll": -668.0171860398799,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.2374315396705845,
+    "calibration": "own val fit",
+    "sc_gll": -665.3573471753722,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "l2 0.0003": {
+   "experienced dl": {
+    "b per sd": 0.22841299362420037,
+    "calibration": "own val fit",
+    "sc_gll": -661.9173150971541,
+    "seed sd": 0.008328578757868854,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.23905392937631353,
+    "calibration": "own val fit",
+    "sc_gll": -658.72773921329,
+    "seed sd": 0.04668500176967427,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22693636195563877,
+    "calibration": "own val fit",
+    "sc_gll": -668.0180024766074,
+    "seed sd": 0.009654595290271573,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23637812191304586,
+    "calibration": "own val fit",
+    "sc_gll": -665.3999594330161,
+    "seed sd": 0.05239049981446442,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "l2 0.001": {
+   "experienced dl": {
+    "b per sd": 0.22776014631939137,
+    "calibration": "own val fit",
+    "sc_gll": -661.989705494834,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.23843522891009986,
+    "calibration": "own val fit",
+    "sc_gll": -658.7213438359155,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.226400602174122,
+    "calibration": "own val fit",
+    "sc_gll": -668.0925920020477,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23594994316251514,
+    "calibration": "own val fit",
+    "sc_gll": -665.3850539174117,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "draft aux 0.1": {
+   "experienced dl": {
+    "b per sd": 0.22884130558597676,
+    "calibration": "own val fit",
+    "sc_gll": -661.9259870239636,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.23996685336124832,
+    "calibration": "own val fit",
+    "sc_gll": -658.7129255416438,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22766586239480488,
+    "calibration": "own val fit",
+    "sc_gll": -668.0141594571181,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23752861237665013,
+    "calibration": "own val fit",
+    "sc_gll": -665.3745845005157,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "draft aux 0.3": {
+   "experienced dl": {
+    "b per sd": 0.22926360283647274,
+    "calibration": "own val fit",
+    "sc_gll": -661.8582550272156,
+    "seed sd": 0.0022201046002692237,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.24023872223963655,
+    "calibration": "own val fit",
+    "sc_gll": -658.7573538880476,
+    "seed sd": 0.011269671053867114,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22811016117593494,
+    "calibration": "own val fit",
+    "sc_gll": -667.9407140476358,
+    "seed sd": 0.008918739578177792,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23791396304919799,
+    "calibration": "own val fit",
+    "sc_gll": -665.4102706491844,
+    "seed sd": 0.012551252672494684,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "draft aux 1": {
+   "experienced dl": {
+    "b per sd": 0.23023407631816342,
+    "calibration": "own val fit",
+    "sc_gll": -662.0020996621158,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.24023674318763436,
+    "calibration": "own val fit",
+    "sc_gll": -658.7367996417075,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22943680513013887,
+    "calibration": "own val fit",
+    "sc_gll": -668.0552591554934,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23850196942337082,
+    "calibration": "own val fit",
+    "sc_gll": -665.3588365336581,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "lgbm prior 1e-05": {
+   "experienced dl": {
+    "b per sd": 0.22955304281414404,
+    "calibration": "own val fit",
+    "sc_gll": -661.9150529269945,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.23988052610813118,
+    "calibration": "own val fit",
+    "sc_gll": -658.6946975705711,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.2281406205665044,
+    "calibration": "own val fit",
+    "sc_gll": -668.0166476607143,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.237356970057751,
+    "calibration": "own val fit",
+    "sc_gll": -665.3622502823116,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "lgbm prior 0.0001": {
+   "experienced dl": {
+    "b per sd": 0.2289107257903079,
+    "calibration": "own val fit",
+    "sc_gll": -661.9082635563088,
+    "seed sd": 0.006416507155904583,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.2393879609941863,
+    "calibration": "own val fit",
+    "sc_gll": -658.7497904220409,
+    "seed sd": 0.05119082555256682,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22742091478944204,
+    "calibration": "own val fit",
+    "sc_gll": -668.0087822095596,
+    "seed sd": 0.007700220447304673,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23674164737050318,
+    "calibration": "own val fit",
+    "sc_gll": -665.4191719252754,
+    "seed sd": 0.05377068841636401,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "lgbm prior 0.001": {
+   "experienced dl": {
+    "b per sd": 0.22956315989429213,
+    "calibration": "own val fit",
+    "sc_gll": -661.9155648486045,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.2399437183371515,
+    "calibration": "own val fit",
+    "sc_gll": -658.7069529817811,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22820018425337507,
+    "calibration": "own val fit",
+    "sc_gll": -668.0180187526375,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.237677161974949,
+    "calibration": "own val fit",
+    "sc_gll": -665.3715448364081,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "lgbm prior 0.01": {
+   "experienced dl": {
+    "b per sd": 0.22918210578593615,
+    "calibration": "own val fit",
+    "sc_gll": -661.9241337008881,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.24027958225588356,
+    "calibration": "own val fit",
+    "sc_gll": -658.748120331661,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22795325829601285,
+    "calibration": "own val fit",
+    "sc_gll": -668.0262202415869,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23837809115255804,
+    "calibration": "own val fit",
+    "sc_gll": -665.4116891186841,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "distill 0.003": {
+   "experienced dl": {
+    "b per sd": 0.22921042272795095,
+    "calibration": "own val fit",
+    "sc_gll": -661.8470486404628,
+    "seed sd": 0.03489974774663551,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.2403991078422492,
+    "calibration": "own val fit",
+    "sc_gll": -658.6843815405958,
+    "seed sd": 0.04352365000113423,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22811789060455887,
+    "calibration": "own val fit",
+    "sc_gll": -667.9382524276413,
+    "seed sd": 0.03924124013462915,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23805904179978782,
+    "calibration": "own val fit",
+    "sc_gll": -665.3435986960465,
+    "seed sd": 0.0398685231528475,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "distill 0.01": {
+   "experienced dl": {
+    "b per sd": 0.22654070653497008,
+    "calibration": "own val fit",
+    "sc_gll": -661.9735027501891,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.23766327733904663,
+    "calibration": "own val fit",
+    "sc_gll": -658.6923310406415,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22605876230460636,
+    "calibration": "own val fit",
+    "sc_gll": -668.046538314168,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23596414995417844,
+    "calibration": "own val fit",
+    "sc_gll": -665.3400519482027,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "distill 0.03": {
+   "experienced dl": {
+    "b per sd": 0.22457942537790893,
+    "calibration": "own val fit",
+    "sc_gll": -662.1391799539797,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.23482989989288086,
+    "calibration": "own val fit",
+    "sc_gll": -658.8858034301136,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22437655583774105,
+    "calibration": "own val fit",
+    "sc_gll": -668.2186879294939,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.2335319649192376,
+    "calibration": "own val fit",
+    "sc_gll": -665.5266294639606,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "distill 0.1": {
+   "experienced dl": {
+    "b per sd": 0.21913340114249566,
+    "calibration": "own val fit",
+    "sc_gll": -662.3137858876082,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.22831644580662439,
+    "calibration": "own val fit",
+    "sc_gll": -659.0581157596691,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.2193981163291593,
+    "calibration": "own val fit",
+    "sc_gll": -668.3723340754874,
+    "seed sd": 0.0,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.2276797000254315,
+    "calibration": "own val fit",
+    "sc_gll": -665.686235479544,
+    "seed sd": 0.0,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "l2 [val-gll pick]": {
+   "experienced dl": {
+    "b per sd": 0.22841299362420037,
+    "calibration": "own val fit",
+    "sc_gll": -661.9173150971541,
+    "seed sd": 0.008328578757868854,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.23905392937631353,
+    "calibration": "own val fit",
+    "sc_gll": -658.72773921329,
+    "seed sd": 0.04668500176967427,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22693636195563877,
+    "calibration": "own val fit",
+    "sc_gll": -668.0180024766074,
+    "seed sd": 0.009654595290271573,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23637812191304586,
+    "calibration": "own val fit",
+    "sc_gll": -665.3999594330161,
+    "seed sd": 0.05239049981446442,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "l2 [val-scgll pick]": {
+   "experienced dl": {
+    "b per sd": 0.22888743252850519,
+    "calibration": "own val fit",
+    "sc_gll": -661.9033928049867,
+    "seed sd": 0.011333089772790572,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.2396146380752389,
+    "calibration": "own val fit",
+    "sc_gll": -658.7361012180526,
+    "seed sd": 0.04016489174614435,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22738587174158653,
+    "calibration": "own val fit",
+    "sc_gll": -668.0039370964813,
+    "seed sd": 0.01282800173942178,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.2369303426292289,
+    "calibration": "own val fit",
+    "sc_gll": -665.4095258119203,
+    "seed sd": 0.04575006959731809,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "draft aux [pick]": {
+   "experienced dl": {
+    "b per sd": 0.22926360283647274,
+    "calibration": "own val fit",
+    "sc_gll": -661.8582550272156,
+    "seed sd": 0.0022201046002692237,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.24023872223963655,
+    "calibration": "own val fit",
+    "sc_gll": -658.7573538880476,
+    "seed sd": 0.011269671053867114,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22811016117593494,
+    "calibration": "own val fit",
+    "sc_gll": -667.9407140476358,
+    "seed sd": 0.008918739578177792,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23791396304919799,
+    "calibration": "own val fit",
+    "sc_gll": -665.4102706491844,
+    "seed sd": 0.012551252672494684,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "lgbm prior [pick]": {
+   "experienced dl": {
+    "b per sd": 0.2289107257903079,
+    "calibration": "own val fit",
+    "sc_gll": -661.9082635563088,
+    "seed sd": 0.006416507155904583,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.2393879609941863,
+    "calibration": "own val fit",
+    "sc_gll": -658.7497904220409,
+    "seed sd": 0.05119082555256682,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22742091478944204,
+    "calibration": "own val fit",
+    "sc_gll": -668.0087822095596,
+    "seed sd": 0.007700220447304673,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23674164737050318,
+    "calibration": "own val fit",
+    "sc_gll": -665.4191719252754,
+    "seed sd": 0.05377068841636401,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "distill [pick]": {
+   "experienced dl": {
+    "b per sd": 0.22921042272795095,
+    "calibration": "own val fit",
+    "sc_gll": -661.8470486404628,
+    "seed sd": 0.03489974774663551,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.2403991078422492,
+    "calibration": "own val fit",
+    "sc_gll": -658.6843815405958,
+    "seed sd": 0.04352365000113423,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.22811789060455887,
+    "calibration": "own val fit",
+    "sc_gll": -667.9382524276413,
+    "seed sd": 0.03924124013462915,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.23805904179978782,
+    "calibration": "own val fit",
+    "sc_gll": -665.3435986960465,
+    "seed sd": 0.0398685231528475,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "blend* (saved T1)": {
+   "experienced dl": {
+    "b per sd": 0.23154240682305982,
+    "calibration": "own val fit",
+    "sc_gll": -661.7740341657736,
+    "seed sd": 0.0075746604396699484,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.24324294684195413,
+    "calibration": "own val fit",
+    "sc_gll": -658.6051321039331,
+    "seed sd": 0.014827389276554068,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.2306034598164548,
+    "calibration": "own val fit",
+    "sc_gll": -667.8438596950481,
+    "seed sd": 0.006827068493692566,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.24128577096984258,
+    "calibration": "own val fit",
+    "sc_gll": -665.2523766981395,
+    "seed sd": 0.020111861357715692,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  },
+  "blend* (saved alpha, this champion)": {
+   "experienced dl": {
+    "b per sd": 0.2315424065419525,
+    "calibration": "own val fit",
+    "sc_gll": -661.7740341601024,
+    "seed sd": 0.007574659278925962,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 dl": {
+    "b per sd": 0.2432429468803071,
+    "calibration": "own val fit",
+    "sc_gll": -658.6051320928658,
+    "seed sd": 0.014827407488517371,
+    "test games": 19231,
+    "test drafts": 19231
+   },
+   "experienced pre": {
+    "b per sd": 0.23060345956635483,
+    "calibration": "own val fit",
+    "sc_gll": -667.8438596876589,
+    "seed sd": 0.006827067943067161,
+    "test games": 96950,
+    "test drafts": 16347
+   },
+   "match 1 pre": {
+    "b per sd": 0.2412857710506471,
+    "calibration": "own val fit",
+    "sc_gll": -665.2523766900105,
+    "seed sd": 0.020111883421813102,
+    "test games": 19231,
+    "test drafts": 19231
+   }
+  }
+ },
+ "pairs": {
+  "l2 1e-06 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.01220192737139314,
+    "se": 0.03010820519223798,
+    "se_boot": 0.027759062161322765,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.03849572213164265,
+    "se": 0.056853719975663186,
+    "se_boot": 0.040624691139301665,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.013685986315522314,
+    "se": 0.030645101527474343,
+    "se_boot": 0.02766760284669031,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.04383896548233679,
+    "se": 0.059742456714567925,
+    "se_boot": 0.038904124401190336,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "l2 3e-06 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.012048908777387624,
+    "se": 0.029997385894128464,
+    "se_boot": 0.027638825457307923,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.03883288827250908,
+    "se": 0.056594957471632734,
+    "se_boot": 0.04026175935436068,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.01354479859219282,
+    "se": 0.030538406557005605,
+    "se_boot": 0.027549378844067218,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.0442350467445749,
+    "se": 0.0595199093246611,
+    "se_boot": 0.038561501100801955,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "l2 3e-05 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": 0.0002087581946170758,
+    "se": 0.001755382251518727,
+    "se_boot": 0.0017248118161957105,
+    "se_seed": 0.0003261764057356231,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.0016199432678831727,
+    "se": 0.0035181573579883816,
+    "se_boot": 0.0034963869905725877,
+    "se_seed": 0.0003907802550315864,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": 0.00018189669901857997,
+    "se": 0.001781799677868365,
+    "se_boot": 0.0017473420767744655,
+    "se_seed": 0.0003487201726102285,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.0018722889738000958,
+    "se": 0.003586081648352605,
+    "se_boot": 0.003562450222278938,
+    "se_seed": 0.0004110109517228011,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "l2 0.0001 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.011585861481876236,
+    "se": 0.028155861523176503,
+    "se_boot": 0.025628383684707202,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.047784345850004684,
+    "se": 0.053557687890597096,
+    "se_boot": 0.03586705991964134,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.013067046699575258,
+    "se": 0.02843849110347673,
+    "se_boot": 0.025201622485377814,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.05405092552189217,
+    "se": 0.057408806885873805,
+    "se_boot": 0.035215633874613454,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "l2 0.0003 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.013713533972804726,
+    "se": 0.016897568262315622,
+    "se_boot": 0.016566059715137187,
+    "se_seed": 0.0033306874206573407,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.00998194803048591,
+    "se": 0.025588550697346477,
+    "se_boot": 0.02463764441557583,
+    "se_seed": 0.00691089027856151,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.013883483427093779,
+    "se": 0.01794071900279991,
+    "se_boot": 0.017591589535846733,
+    "se_seed": 0.003522126621760435,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.011438667877996522,
+    "se": 0.02660294428339109,
+    "se_boot": 0.02565139025447136,
+    "se_seed": 0.0070514411688691325,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "l2 0.001 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.08610393165270125,
+    "se": 0.04413928589702115,
+    "se_boot": 0.042571564120633926,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.016377325404960175,
+    "se": 0.06501009810806918,
+    "se_boot": 0.05142307761222884,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.08847300886736775,
+    "se": 0.04507840221268502,
+    "se_boot": 0.04310958531117623,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.026344183482365224,
+    "se": 0.06956198310080203,
+    "se_boot": 0.05275641434032015,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "draft aux 0.1 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.022385460782288646,
+    "se": 0.05092082615299747,
+    "se_boot": 0.04956805471553293,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.024795619676638125,
+    "se": 0.11368339430413654,
+    "se_boot": 0.10649851733992505,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.01004046393779845,
+    "se": 0.05125060930557891,
+    "se_boot": 0.049527759426871584,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.03681360037842296,
+    "se": 0.11147444917580604,
+    "se_boot": 0.10183772670371542,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "draft aux 0.3 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": 0.045346535965677504,
+    "se": 0.04298918253309849,
+    "se_boot": 0.04194010066229715,
+    "se_seed": 0.009439161578256972,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.019632726727195404,
+    "se": 0.09661395185528965,
+    "se_boot": 0.0820291896619553,
+    "se_seed": 0.05104378254497987,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": 0.063404945544562,
+    "se": 0.04186539573821152,
+    "se_boot": 0.04164830064674482,
+    "se_seed": 0.004257982333854215,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.001127451709635352,
+    "se": 0.09647091594557104,
+    "se_boot": 0.07717091083350033,
+    "se_seed": 0.05789031131808997,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "draft aux 1 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.09849809893455586,
+    "se": 0.06285276602610161,
+    "se_boot": 0.06176189528592973,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.0009215196129161995,
+    "se": 0.253804856631424,
+    "se_boot": 0.2506689556063738,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.0511401623131178,
+    "se": 0.061183659973868994,
+    "se_boot": 0.05974792253669574,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.0525615672360118,
+    "se": 0.25291012125871826,
+    "se_boot": 0.24881298036121596,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "lgbm prior 1e-05 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.011451363813193893,
+    "se": 0.03013720801392374,
+    "se_boot": 0.027790516710791552,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.04302359074938522,
+    "se": 0.06512519245081641,
+    "se_boot": 0.05156850537729794,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.01252866753395665,
+    "se": 0.030942816876089175,
+    "se_boot": 0.027996998336967564,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.04914781858246897,
+    "se": 0.06737141620513307,
+    "se_boot": 0.049832494244383733,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "lgbm prior 0.0001 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.0046619931275699855,
+    "se": 0.010154736974729444,
+    "se_boot": 0.008696675276026867,
+    "se_seed": 0.0052427590226216125,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.012069260720409147,
+    "se": 0.018319853671854843,
+    "se_boot": 0.014327444943086349,
+    "se_seed": 0.011416714061454059,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.004663216379299229,
+    "se": 0.01017180841862087,
+    "se_boot": 0.008571675344526632,
+    "se_seed": 0.005476501464727335,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": -0.007773824381274608,
+    "se": 0.01701077061291369,
+    "se_boot": 0.014774096799935169,
+    "se_seed": 0.008431629770768721,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "lgbm prior 0.001 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.011963285423234993,
+    "se": 0.02315973536981096,
+    "se_boot": 0.020010868411389545,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.030768179539336415,
+    "se": 0.061128930453648915,
+    "se_boot": 0.0464194592116235,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.013899759457217442,
+    "se": 0.02428181180864262,
+    "se_boot": 0.02039559718084547,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.03985326448594151,
+    "se": 0.0659202723288517,
+    "se_boot": 0.047852398738634214,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "lgbm prior 0.01 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.02053213770682305,
+    "se": 0.055297205199785114,
+    "se_boot": 0.05405406936656497,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.010399170340519959,
+    "se": 0.11605909575872429,
+    "se_boot": 0.10903088444759708,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.022101248406556806,
+    "se": 0.05539435896142349,
+    "se_boot": 0.05380435860039607,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": -0.00029101779000484385,
+    "se": 0.1170304548486379,
+    "se_boot": 0.10789113551729052,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "distill 0.003 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": 0.05655292271842427,
+    "se": 0.056318105613931815,
+    "se_boot": 0.05129921087525957,
+    "se_seed": 0.023240481568109313,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.05333962072461418,
+    "se": 0.11809879338101767,
+    "se_boot": 0.08371862354597713,
+    "se_seed": 0.08329776149224699,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": 0.06586656553906778,
+    "se": 0.058180170831964945,
+    "se_boot": 0.05201512441454433,
+    "se_seed": 0.02606451822259714,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.06779940484761937,
+    "se": 0.11935631261070319,
+    "se_boot": 0.08357988612151601,
+    "se_seed": 0.08520758179844279,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "distill 0.01 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.06990118700787207,
+    "se": 0.103752803936906,
+    "se_boot": 0.1030956150228919,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.0453901206789169,
+    "se": 0.23231989509830384,
+    "se_boot": 0.22888982876829506,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.04241932098761936,
+    "se": 0.10222627080720151,
+    "se_boot": 0.10137348984226732,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.07134615269137612,
+    "se": 0.23137525051690433,
+    "se_boot": 0.22688956854137546,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "distill 0.03 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.23557839079842324,
+    "se": 0.12965641705078307,
+    "se_boot": 0.12913112713294522,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.14808226879313224,
+    "se": 0.25794521769875506,
+    "se_boot": 0.2548602663985712,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.21456893631352614,
+    "se": 0.12821298242954934,
+    "se_boot": 0.12753408510328879,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": -0.11523136306652759,
+    "se": 0.2567425710588431,
+    "se_boot": 0.25270757320475457,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "distill 0.1 - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.4101843244269503,
+    "se": 0.1490519758581639,
+    "se_boot": 0.14859526580413304,
+    "se_seed": 0.011659266178526195,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.32039459834868467,
+    "se": 0.27536837359974753,
+    "se_boot": 0.2724807538782559,
+    "se_seed": 0.03977411149111276,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.3682150823070742,
+    "se": 0.14613411546154279,
+    "se_boot": 0.14553883915086205,
+    "se_seed": 0.013176721912032008,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": -0.2748373786499769,
+    "se": 0.2848103034443671,
+    "se_boot": 0.28117837525173184,
+    "se_seed": 0.04533905864559529,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "l2 [val-gll pick] - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.013713533972804726,
+    "se": 0.016897568262315622,
+    "se_boot": 0.016566059715137187,
+    "se_seed": 0.0033306874206573407,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.00998194803048591,
+    "se": 0.025588550697346477,
+    "se_boot": 0.02463764441557583,
+    "se_seed": 0.00691089027856151,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.013883483427093779,
+    "se": 0.01794071900279991,
+    "se_boot": 0.017591589535846733,
+    "se_seed": 0.003522126621760435,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.011438667877996522,
+    "se": 0.02660294428339109,
+    "se_boot": 0.02565139025447136,
+    "se_seed": 0.0070514411688691325,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "l2 [val-scgll pick] - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": 0.0002087581946170758,
+    "se": 0.001755382251518727,
+    "se_boot": 0.0017248118161957105,
+    "se_seed": 0.0003261764057356231,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.0016199432678831727,
+    "se": 0.0035181573579883816,
+    "se_boot": 0.0034963869905725877,
+    "se_seed": 0.0003907802550315864,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": 0.00018189669901857997,
+    "se": 0.001781799677868365,
+    "se_boot": 0.0017473420767744655,
+    "se_seed": 0.0003487201726102285,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.0018722889738000958,
+    "se": 0.003586081648352605,
+    "se_boot": 0.003562450222278938,
+    "se_seed": 0.0004110109517228011,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "draft aux [pick] - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": 0.045346535965677504,
+    "se": 0.04298918253309849,
+    "se_boot": 0.04194010066229715,
+    "se_seed": 0.009439161578256972,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.019632726727195404,
+    "se": 0.09661395185528965,
+    "se_boot": 0.0820291896619553,
+    "se_seed": 0.05104378254497987,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": 0.063404945544562,
+    "se": 0.04186539573821152,
+    "se_boot": 0.04164830064674482,
+    "se_seed": 0.004257982333854215,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.001127451709635352,
+    "se": 0.09647091594557104,
+    "se_boot": 0.07717091083350033,
+    "se_seed": 0.05789031131808997,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "lgbm prior [pick] - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.0046619931275699855,
+    "se": 0.010154736974729444,
+    "se_boot": 0.008696675276026867,
+    "se_seed": 0.0052427590226216125,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.012069260720409147,
+    "se": 0.018319853671854843,
+    "se_boot": 0.014327444943086349,
+    "se_seed": 0.011416714061454059,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.004663216379299229,
+    "se": 0.01017180841862087,
+    "se_boot": 0.008571675344526632,
+    "se_seed": 0.005476501464727335,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": -0.007773824381274608,
+    "se": 0.01701077061291369,
+    "se_boot": 0.014774096799935169,
+    "se_seed": 0.008431629770768721,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "distill [pick] - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": 0.05655292271842427,
+    "se": 0.056318105613931815,
+    "se_boot": 0.05129921087525957,
+    "se_seed": 0.023240481568109313,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.05333962072461418,
+    "se": 0.11809879338101767,
+    "se_boot": 0.08371862354597713,
+    "se_seed": 0.08329776149224699,
+    "n_units": 19231,
+    "n_seeds": 2
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": 0.06586656553906778,
+    "se": 0.058180170831964945,
+    "se_boot": 0.05201512441454433,
+    "se_seed": 0.02606451822259714,
+    "n_units": 16347,
+    "n_seeds": 2
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.06779940484761937,
+    "se": 0.11935631261070319,
+    "se_boot": 0.08357988612151601,
+    "se_seed": 0.08520758179844279,
+    "n_units": 19231,
+    "n_seeds": 2
+   }
+  },
+  "blend* (saved T1) - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": 0.12956739740764078,
+    "se": 0.051449819657996845,
+    "se_boot": 0.049824268330107196,
+    "se_seed": 0.012830675282691684,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.13258905738734938,
+    "se": 0.12328885232710053,
+    "se_boot": 0.11622493461752043,
+    "se_seed": 0.0411327811032357,
+    "n_units": 19231,
+    "n_seeds": 3
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": 0.16025929813224593,
+    "se": 0.05046033628648233,
+    "se_boot": 0.048469733913949604,
+    "se_seed": 0.014033190387642053,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.15902140275454713,
+    "se": 0.12524748165182434,
+    "se_boot": 0.11588381223285396,
+    "se_seed": 0.047517088741890715,
+    "n_units": 19231,
+    "n_seeds": 3
+   }
+  },
+  "blend* (saved alpha, this champion) - champion": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": 0.12956740307890868,
+    "se": 0.051449824205499296,
+    "se_boot": 0.04982427311420756,
+    "se_seed": 0.012830674940065874,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 0.13258906845464935,
+    "se": 0.12328884720045435,
+    "se_boot": 0.11622492801759114,
+    "se_seed": 0.041132784385727386,
+    "n_units": 19231,
+    "n_seeds": 3
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": 0.16025930552143564,
+    "se": 0.050460341040017884,
+    "se_boot": 0.04846973890148637,
+    "se_seed": 0.01403319025370397,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 0.15902141088361077,
+    "se": 0.12524747850872756,
+    "se_boot": 0.1158838069211533,
+    "se_seed": 0.04751709341126653,
+    "n_units": 19231,
+    "n_seeds": 3
+   }
+  },
+  "champion - blend* (saved T1)": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.12956739740764078,
+    "se": 0.051449819657996845,
+    "se_boot": 0.049824268330107196,
+    "se_seed": 0.012830675282691684,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.13258905738734938,
+    "se": 0.12328885232710053,
+    "se_boot": 0.11622493461752043,
+    "se_seed": 0.0411327811032357,
+    "n_units": 19231,
+    "n_seeds": 3
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.16025929813224593,
+    "se": 0.05046033628648233,
+    "se_boot": 0.048469733913949604,
+    "se_seed": 0.014033190387642053,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": -0.15902140275454713,
+    "se": 0.12524748165182434,
+    "se_boot": 0.11588381223285396,
+    "se_seed": 0.047517088741890715,
+    "n_units": 19231,
+    "n_seeds": 3
+   }
+  },
+  "blend* (saved alpha, this champion) - blend* (saved T1)": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": 5.671267899742816e-09,
+    "se": 8.903668765513467e-09,
+    "se_boot": 8.799280044188116e-09,
+    "se_seed": 1.3594072936147186e-09,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": 1.1067299965361599e-08,
+    "se": 2.4491582955406582e-08,
+    "se_boot": 1.820803598873019e-08,
+    "se_seed": 1.6380020179922502e-08,
+    "n_units": 19231,
+    "n_seeds": 3
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": 7.3891897045541555e-09,
+    "se": 8.869778198888198e-09,
+    "se_boot": 8.728811834805475e-09,
+    "se_seed": 1.5750584909876326e-09,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": 8.129063644446433e-09,
+    "se": 2.4276838581458152e-08,
+    "se_boot": 1.7986795841673848e-08,
+    "se_seed": 1.6304602628096138e-08,
+    "n_units": 19231,
+    "n_seeds": 3
+   }
+  },
+  "l2 [val-gll pick] - blend* (saved T1)": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.1432809313804455,
+    "se": 0.04801389129259429,
+    "se_boot": 0.046981706999031946,
+    "se_seed": 0.009902169687203647,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.12260710935686348,
+    "se": 0.12195716560603517,
+    "se_boot": 0.11217903153461509,
+    "se_seed": 0.0478478330398956,
+    "n_units": 19231,
+    "n_seeds": 3
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.1741427815593397,
+    "se": 0.04725724085920452,
+    "se_boot": 0.04600794682766391,
+    "se_seed": 0.010794241164978615,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": -0.1475827348765506,
+    "se": 0.12353441591484987,
+    "se_boot": 0.11096731032595919,
+    "se_seed": 0.054286351456377925,
+    "n_units": 19231,
+    "n_seeds": 3
+   }
+  },
+  "l2 [val-scgll pick] - blend* (saved T1)": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.1293586392130237,
+    "se": 0.05062606891702218,
+    "se_boot": 0.04904969102659871,
+    "se_seed": 0.012535017518387469,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.1309691141194662,
+    "se": 0.12171804555649009,
+    "se_boot": 0.11442088248537968,
+    "se_seed": 0.041510772883177324,
+    "n_units": 19231,
+    "n_seeds": 3
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.16007740143322735,
+    "se": 0.04963146852835453,
+    "se_boot": 0.04770136903219501,
+    "se_seed": 0.013706278150373027,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": -0.15714911378074703,
+    "se": 0.12364676300222988,
+    "se_boot": 0.11398776096201806,
+    "se_seed": 0.04790941819512566,
+    "n_units": 19231,
+    "n_seeds": 3
+   }
+  },
+  "draft aux [pick] - blend* (saved T1)": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.08422086144196328,
+    "se": 0.059823263555615715,
+    "se_boot": 0.05954163465693877,
+    "se_seed": 0.0057979828237316325,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.1522217841145448,
+    "se": 0.09519261915202053,
+    "se_boot": 0.09393989311778048,
+    "se_seed": 0.01539257035201092,
+    "n_units": 19231,
+    "n_seeds": 3
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.09685435258768393,
+    "se": 0.05980645267492736,
+    "se_boot": 0.05894033791713606,
+    "se_seed": 0.010141417443934543,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": -0.15789395104491177,
+    "se": 0.09937159760548932,
+    "se_boot": 0.09754453846004141,
+    "se_seed": 0.018967799748120334,
+    "n_units": 19231,
+    "n_seeds": 3
+   }
+  },
+  "lgbm prior [pick] - blend* (saved T1)": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.13422939053521077,
+    "se": 0.049721330161002365,
+    "se_boot": 0.049013787534830225,
+    "se_seed": 0.008358187869982655,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.14465831810775853,
+    "se": 0.12656684184077777,
+    "se_boot": 0.11527679339926095,
+    "se_seed": 0.05225348177042907,
+    "n_units": 19231,
+    "n_seeds": 3
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.16492251451154516,
+    "se": 0.0485721517735488,
+    "se_boot": 0.047714317566814116,
+    "se_seed": 0.009088334668456802,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": -0.16679522713582173,
+    "se": 0.1264262603196234,
+    "se_boot": 0.11353443918917067,
+    "se_seed": 0.055619514708469826,
+    "n_units": 19231,
+    "n_seeds": 3
+   }
+  },
+  "distill [pick] - blend* (saved T1)": {
+   "experienced dl": {
+    "name": "FDN",
+    "delta": -0.07301447468921651,
+    "se": 0.06484086996607873,
+    "se_boot": 0.054384356986094715,
+    "se_seed": 0.03530835783730165,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 dl": {
+    "name": "FDN",
+    "delta": -0.0792494366627352,
+    "se": 0.08860137911095674,
+    "se_boot": 0.0764589467267436,
+    "se_seed": 0.04476867035997905,
+    "n_units": 19231,
+    "n_seeds": 3
+   },
+   "experienced pre": {
+    "name": "FDN",
+    "delta": -0.09439273259317815,
+    "se": 0.06861083314036026,
+    "se_boot": 0.05607376449643758,
+    "se_seed": 0.03953706311061071,
+    "n_units": 16347,
+    "n_seeds": 3
+   },
+   "match 1 pre": {
+    "name": "FDN",
+    "delta": -0.09122199790692775,
+    "se": 0.0922610809978523,
+    "se_boot": 0.08197782898361688,
+    "se_seed": 0.042328980876287656,
+    "n_units": 19231,
+    "n_seeds": 3
+   }
+  }
+ },
+ "primary key": "experienced dl",
+ "total seconds": 295.52539920806885,
+ "peak rss GB": 5.006072998046875
+}

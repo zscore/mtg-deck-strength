@@ -1,0 +1,144 @@
+=== BLB (22610 test drafts, picknet coverage 1.000, 550s)
+  round 4: lgbm                        spearman 0.2752 nll 0.68040  vs round 4 +0.0000 ± 0.0000  {'trees': 1168, 'val_nll': 0.6808344549520312}
+  round 4: lgbm + game FM              spearman 0.2798 nll 0.68021  vs round 4 +0.0000 ± 0.0000  {'alpha': 0.45}
+  + deck vec                           spearman 0.2780 nll 0.68022  vs round 4 +0.0029 ± 0.0019  {'trees': 1444, 'val_nll': 0.68068462472843}
+  + deck vec + game FM                 spearman 0.2819 nll 0.68004  vs round 4 +0.0021 ± 0.0012  {'alpha': 0.4}
+  + state                              spearman 0.2706 nll 0.68072  vs round 4 -0.0046 ± 0.0016  {'trees': 1136, 'val_nll': 0.6810556183705617}
+  + state + game FM                    spearman 0.2777 nll 0.68039  vs round 4 -0.0021 ± 0.0009  {'alpha': 0.5}
+  + surprise                           spearman 0.2769 nll 0.68037  vs round 4 +0.0018 ± 0.0017  {'trees': 1454, 'val_nll': 0.6808512464947212}
+  + surprise + game FM                 spearman 0.2816 nll 0.68013  vs round 4 +0.0018 ± 0.0010  {'alpha': 0.45}
+  + deck vec + state                   spearman 0.2747 nll 0.68049  vs round 4 -0.0005 ± 0.0022  {'trees': 1426, 'val_nll': 0.6808641778152132}
+  + deck vec + state + game FM         spearman 0.2802 nll 0.68020  vs round 4 +0.0004 ± 0.0013  {'alpha': 0.45}
+  + all three                          spearman 0.2773 nll 0.68033  vs round 4 +0.0022 ± 0.0023  {'trees': 1632, 'val_nll': 0.680838939463174}
+  + all three + game FM                spearman 0.2824 nll 0.68007  vs round 4 +0.0026 ± 0.0014  {'alpha': 0.45}
+=== DFT (20692 test drafts, picknet coverage 1.000, 201s)
+  round 4: lgbm                        spearman 0.2648 nll 0.68099  vs round 4 +0.0000 ± 0.0000  {'trees': 1266, 'val_nll': 0.6817227651548528}
+  round 4: lgbm + game FM              spearman 0.2661 nll 0.68094  vs round 4 +0.0000 ± 0.0000  {'alpha': 0.15000000000000002}
+  + deck vec                           spearman 0.2641 nll 0.68090  vs round 4 -0.0007 ± 0.0020  {'trees': 968, 'val_nll': 0.681699149374562}
+  + deck vec + game FM                 spearman 0.2655 nll 0.68086  vs round 4 -0.0006 ± 0.0017  {'alpha': 0.15000000000000002}
+  + state                              spearman 0.2586 nll 0.68116  vs round 4 -0.0062 ± 0.0019  {'trees': 1351, 'val_nll': 0.6818518995243431}
+  + state + game FM                    spearman 0.2614 nll 0.68105  vs round 4 -0.0046 ± 0.0016  {'alpha': 0.2}
+  + surprise                           spearman 0.2633 nll 0.68104  vs round 4 -0.0015 ± 0.0017  {'trees': 1218, 'val_nll': 0.681946044857489}
+  + surprise + game FM                 spearman 0.2657 nll 0.68095  vs round 4 -0.0003 ± 0.0014  {'alpha': 0.25}
+  + deck vec + state                   spearman 0.2608 nll 0.68100  vs round 4 -0.0040 ± 0.0022  {'trees': 968, 'val_nll': 0.6818890760259119}
+  + deck vec + state + game FM         spearman 0.2631 nll 0.68094  vs round 4 -0.0029 ± 0.0019  {'alpha': 0.2}
+  + all three                          spearman 0.2576 nll 0.68126  vs round 4 -0.0073 ± 0.0025  {'trees': 729, 'val_nll': 0.6820844650205161}
+  + all three + game FM                spearman 0.2620 nll 0.68112  vs round 4 -0.0041 ± 0.0020  {'alpha': 0.30000000000000004}
+=== DSK (24539 test drafts, picknet coverage 1.000, 277s)
+  round 4: lgbm                        spearman 0.2838 nll 0.68091  vs round 4 +0.0000 ± 0.0000  {'trees': 1680, 'val_nll': 0.6806867466827875}
+  round 4: lgbm + game FM              spearman 0.2865 nll 0.68068  vs round 4 +0.0000 ± 0.0000  {'alpha': 0.25}
+  + deck vec                           spearman 0.2814 nll 0.68103  vs round 4 -0.0024 ± 0.0020  {'trees': 952, 'val_nll': 0.680812563567696}
+  + deck vec + game FM                 spearman 0.2846 nll 0.68080  vs round 4 -0.0019 ± 0.0015  {'alpha': 0.25}
+  + state                              spearman 0.2770 nll 0.68125  vs round 4 -0.0068 ± 0.0016  {'trees': 1415, 'val_nll': 0.680960819810658}
+  + state + game FM                    spearman 0.2822 nll 0.68091  vs round 4 -0.0043 ± 0.0012  {'alpha': 0.30000000000000004}
+  + surprise                           spearman 0.2821 nll 0.68099  vs round 4 -0.0016 ± 0.0018  {'trees': 994, 'val_nll': 0.6808841302235893}
+  + surprise + game FM                 spearman 0.2862 nll 0.68074  vs round 4 -0.0004 ± 0.0014  {'alpha': 0.30000000000000004}
+  + deck vec + state                   spearman 0.2794 nll 0.68114  vs round 4 -0.0043 ± 0.0020  {'trees': 1273, 'val_nll': 0.6809153580482952}
+  + deck vec + state + game FM         spearman 0.2839 nll 0.68083  vs round 4 -0.0027 ± 0.0015  {'alpha': 0.30000000000000004}
+  + all three                          spearman 0.2797 nll 0.68114  vs round 4 -0.0040 ± 0.0024  {'trees': 997, 'val_nll': 0.6807481858326735}
+  + all three + game FM                spearman 0.2842 nll 0.68085  vs round 4 -0.0024 ± 0.0018  {'alpha': 0.25}
+=== EOE (15302 test drafts, picknet coverage 1.000, 163s)
+  round 4: lgbm                        spearman 0.2473 nll 0.68183  vs round 4 +0.0000 ± 0.0000  {'trees': 1107, 'val_nll': 0.6814548612244024}
+  round 4: lgbm + game FM              spearman 0.2513 nll 0.68166  vs round 4 +0.0000 ± 0.0000  {'alpha': 0.25}
+  + deck vec                           spearman 0.2463 nll 0.68189  vs round 4 -0.0010 ± 0.0026  {'trees': 837, 'val_nll': 0.6815585380739162}
+  + deck vec + game FM                 spearman 0.2515 nll 0.68170  vs round 4 +0.0002 ± 0.0020  {'alpha': 0.30000000000000004}
+  + state                              spearman 0.2442 nll 0.68197  vs round 4 -0.0031 ± 0.0023  {'trees': 1016, 'val_nll': 0.6815412408173621}
+  + state + game FM                    spearman 0.2495 nll 0.68177  vs round 4 -0.0018 ± 0.0018  {'alpha': 0.25}
+  + surprise                           spearman 0.2472 nll 0.68184  vs round 4 -0.0001 ± 0.0021  {'trees': 851, 'val_nll': 0.6814387948060044}
+  + surprise + game FM                 spearman 0.2518 nll 0.68169  vs round 4 +0.0005 ± 0.0017  {'alpha': 0.25}
+  + deck vec + state                   spearman 0.2435 nll 0.68198  vs round 4 -0.0038 ± 0.0028  {'trees': 1102, 'val_nll': 0.6814072242783662}
+  + deck vec + state + game FM         spearman 0.2490 nll 0.68175  vs round 4 -0.0024 ± 0.0023  {'alpha': 0.25}
+  + all three                          spearman 0.2438 nll 0.68203  vs round 4 -0.0035 ± 0.0030  {'trees': 776, 'val_nll': 0.6813839697831885}
+  + all three + game FM                spearman 0.2485 nll 0.68184  vs round 4 -0.0028 ± 0.0025  {'alpha': 0.2}
+=== FDN (19264 test drafts, picknet coverage 1.000, 257s)
+  round 4: lgbm                        spearman 0.2843 nll 0.67928  vs round 4 +0.0000 ± 0.0000  {'trees': 1194, 'val_nll': 0.6808965908828379}
+  round 4: lgbm + game FM              spearman 0.2869 nll 0.67910  vs round 4 +0.0000 ± 0.0000  {'alpha': 0.35000000000000003}
+  + deck vec                           spearman 0.2825 nll 0.67938  vs round 4 -0.0018 ± 0.0020  {'trees': 1040, 'val_nll': 0.6808266225888117}
+  + deck vec + game FM                 spearman 0.2857 nll 0.67915  vs round 4 -0.0012 ± 0.0014  {'alpha': 0.35000000000000003}
+  + state                              spearman 0.2822 nll 0.67944  vs round 4 -0.0022 ± 0.0017  {'trees': 1178, 'val_nll': 0.681096429098184}
+  + state + game FM                    spearman 0.2858 nll 0.67919  vs round 4 -0.0011 ± 0.0011  {'alpha': 0.45}
+  + surprise                           spearman 0.2815 nll 0.67944  vs round 4 -0.0028 ± 0.0016  {'trees': 894, 'val_nll': 0.6811592137755247}
+  + surprise + game FM                 spearman 0.2857 nll 0.67920  vs round 4 -0.0012 ± 0.0011  {'alpha': 0.45}
+  + deck vec + state                   spearman 0.2799 nll 0.67952  vs round 4 -0.0045 ± 0.0022  {'trees': 928, 'val_nll': 0.6810392313048793}
+  + deck vec + state + game FM         spearman 0.2841 nll 0.67924  vs round 4 -0.0028 ± 0.0014  {'alpha': 0.4}
+  + all three                          spearman 0.2826 nll 0.67940  vs round 4 -0.0017 ± 0.0023  {'trees': 1268, 'val_nll': 0.6809573464493839}
+  + all three + game FM                spearman 0.2866 nll 0.67912  vs round 4 -0.0003 ± 0.0015  {'alpha': 0.4}
+=== FIN (20564 test drafts, picknet coverage 1.000, 244s)
+  round 4: lgbm                        spearman 0.2901 nll 0.67922  vs round 4 +0.0000 ± 0.0000  {'trees': 1045, 'val_nll': 0.6781256119015265}
+  round 4: lgbm + game FM              spearman 0.2913 nll 0.67913  vs round 4 +0.0000 ± 0.0000  {'alpha': 0.4}
+  + deck vec                           spearman 0.2881 nll 0.67929  vs round 4 -0.0020 ± 0.0018  {'trees': 1323, 'val_nll': 0.6780749604563382}
+  + deck vec + game FM                 spearman 0.2904 nll 0.67912  vs round 4 -0.0009 ± 0.0012  {'alpha': 0.4}
+  + state                              spearman 0.2847 nll 0.67950  vs round 4 -0.0054 ± 0.0014  {'trees': 1120, 'val_nll': 0.6783777989024163}
+  + state + game FM                    spearman 0.2882 nll 0.67929  vs round 4 -0.0030 ± 0.0008  {'alpha': 0.5}
+  + surprise                           spearman 0.2866 nll 0.67946  vs round 4 -0.0034 ± 0.0017  {'trees': 1449, 'val_nll': 0.6781794318403426}
+  + surprise + game FM                 spearman 0.2900 nll 0.67920  vs round 4 -0.0013 ± 0.0011  {'alpha': 0.45}
+  + deck vec + state                   spearman 0.2849 nll 0.67941  vs round 4 -0.0052 ± 0.0020  {'trees': 1095, 'val_nll': 0.6783577240942916}
+  + deck vec + state + game FM         spearman 0.2882 nll 0.67924  vs round 4 -0.0031 ± 0.0011  {'alpha': 0.5}
+  + all three                          spearman 0.2836 nll 0.67952  vs round 4 -0.0065 ± 0.0023  {'trees': 1105, 'val_nll': 0.6783338927674946}
+  + all three + game FM                spearman 0.2881 nll 0.67926  vs round 4 -0.0032 ± 0.0014  {'alpha': 0.5}
+=== LCI (19852 test drafts, picknet coverage 1.000, 223s)
+  round 4: lgbm                        spearman 0.2982 nll 0.67750  vs round 4 +0.0000 ± 0.0000  {'trees': 1351, 'val_nll': 0.678026454884628}
+  round 4: lgbm + game FM              spearman 0.3010 nll 0.67727  vs round 4 +0.0000 ± 0.0000  {'alpha': 0.4}
+  + deck vec                           spearman 0.2971 nll 0.67744  vs round 4 -0.0012 ± 0.0020  {'trees': 1041, 'val_nll': 0.6781237065989736}
+  + deck vec + game FM                 spearman 0.3007 nll 0.67723  vs round 4 -0.0003 ± 0.0012  {'alpha': 0.4}
+  + state                              spearman 0.2930 nll 0.67780  vs round 4 -0.0052 ± 0.0015  {'trees': 1312, 'val_nll': 0.6782641629059812}
+  + state + game FM                    spearman 0.2983 nll 0.67743  vs round 4 -0.0027 ± 0.0009  {'alpha': 0.45}
+  + surprise                           spearman 0.2967 nll 0.67754  vs round 4 -0.0015 ± 0.0016  {'trees': 1096, 'val_nll': 0.6781483090991882}
+  + surprise + game FM                 spearman 0.3004 nll 0.67728  vs round 4 -0.0006 ± 0.0010  {'alpha': 0.45}
+  + deck vec + state                   spearman 0.2963 nll 0.67753  vs round 4 -0.0019 ± 0.0020  {'trees': 1314, 'val_nll': 0.6779771263937656}
+  + deck vec + state + game FM         spearman 0.3005 nll 0.67726  vs round 4 -0.0005 ± 0.0013  {'alpha': 0.4}
+  + all three                          spearman 0.2954 nll 0.67756  vs round 4 -0.0028 ± 0.0022  {'trees': 1033, 'val_nll': 0.678256347883701}
+  + all three + game FM                spearman 0.3003 nll 0.67727  vs round 4 -0.0008 ± 0.0013  {'alpha': 0.45}
+=== MKM (23042 test drafts, picknet coverage 1.000, 226s)
+  round 4: lgbm                        spearman 0.2622 nll 0.68044  vs round 4 +0.0000 ± 0.0000  {'trees': 1128, 'val_nll': 0.6808340893326161}
+  round 4: lgbm + game FM              spearman 0.2645 nll 0.68028  vs round 4 +0.0000 ± 0.0000  {'alpha': 0.5}
+  + deck vec                           spearman 0.2641 nll 0.68036  vs round 4 +0.0019 ± 0.0018  {'trees': 912, 'val_nll': 0.680756052843871}
+  + deck vec + game FM                 spearman 0.2658 nll 0.68023  vs round 4 +0.0013 ± 0.0010  {'alpha': 0.45}
+  + state                              spearman 0.2598 nll 0.68062  vs round 4 -0.0024 ± 0.0016  {'trees': 1514, 'val_nll': 0.6808629166030166}
+  + state + game FM                    spearman 0.2638 nll 0.68033  vs round 4 -0.0007 ± 0.0008  {'alpha': 0.5}
+  + surprise                           spearman 0.2594 nll 0.68066  vs round 4 -0.0029 ± 0.0017  {'trees': 913, 'val_nll': 0.6808581887729829}
+  + surprise + game FM                 spearman 0.2634 nll 0.68037  vs round 4 -0.0012 ± 0.0009  {'alpha': 0.5}
+  + deck vec + state                   spearman 0.2615 nll 0.68053  vs round 4 -0.0008 ± 0.0019  {'trees': 903, 'val_nll': 0.6808045195528359}
+  + deck vec + state + game FM         spearman 0.2645 nll 0.68032  vs round 4 -0.0000 ± 0.0010  {'alpha': 0.45}
+  + all three                          spearman 0.2634 nll 0.68036  vs round 4 +0.0012 ± 0.0021  {'trees': 1334, 'val_nll': 0.6807575308883973}
+  + all three + game FM                spearman 0.2662 nll 0.68017  vs round 4 +0.0017 ± 0.0012  {'alpha': 0.45}
+=== OTJ (28657 test drafts, picknet coverage 1.000, 365s)
+  round 4: lgbm                        spearman 0.2615 nll 0.68251  vs round 4 +0.0000 ± 0.0000  {'trees': 1466, 'val_nll': 0.6822352588246059}
+  round 4: lgbm + game FM              spearman 0.2637 nll 0.68238  vs round 4 +0.0000 ± 0.0000  {'alpha': 0.35000000000000003}
+  + deck vec                           spearman 0.2632 nll 0.68244  vs round 4 +0.0016 ± 0.0018  {'trees': 1496, 'val_nll': 0.6822035881783837}
+  + deck vec + game FM                 spearman 0.2653 nll 0.68230  vs round 4 +0.0016 ± 0.0012  {'alpha': 0.35000000000000003}
+  + state                              spearman 0.2621 nll 0.68251  vs round 4 +0.0006 ± 0.0015  {'trees': 1701, 'val_nll': 0.6823438698818675}
+  + state + game FM                    spearman 0.2645 nll 0.68236  vs round 4 +0.0008 ± 0.0010  {'alpha': 0.4}
+  + surprise                           spearman 0.2612 nll 0.68247  vs round 4 -0.0003 ± 0.0013  {'trees': 1329, 'val_nll': 0.6821776714546463}
+  + surprise + game FM                 spearman 0.2640 nll 0.68234  vs round 4 +0.0003 ± 0.0009  {'alpha': 0.30000000000000004}
+  + deck vec + state                   spearman 0.2608 nll 0.68252  vs round 4 -0.0008 ± 0.0018  {'trees': 1023, 'val_nll': 0.6823900991837959}
+  + deck vec + state + game FM         spearman 0.2638 nll 0.68239  vs round 4 +0.0001 ± 0.0012  {'alpha': 0.4}
+  + all three                          spearman 0.2625 nll 0.68245  vs round 4 +0.0010 ± 0.0020  {'trees': 1711, 'val_nll': 0.6822065736223425}
+  + all three + game FM                spearman 0.2655 nll 0.68228  vs round 4 +0.0019 ± 0.0014  {'alpha': 0.35000000000000003}
+=== SOS (15841 test drafts, picknet coverage 1.000, 144s)
+  round 4: lgbm                        spearman 0.2915 nll 0.68102  vs round 4 +0.0000 ± 0.0000  {'trees': 1100, 'val_nll': 0.6798864001814752}
+  round 4: lgbm + game FM              spearman 0.2970 nll 0.68083  vs round 4 +0.0000 ± 0.0000  {'alpha': 0.30000000000000004}
+  + deck vec                           spearman 0.2931 nll 0.68091  vs round 4 +0.0016 ± 0.0025  {'trees': 762, 'val_nll': 0.6799189118213549}
+  + deck vec + game FM                 spearman 0.2982 nll 0.68076  vs round 4 +0.0013 ± 0.0019  {'alpha': 0.30000000000000004}
+  + state                              spearman 0.2901 nll 0.68102  vs round 4 -0.0014 ± 0.0024  {'trees': 1345, 'val_nll': 0.6798759976048375}
+  + state + game FM                    spearman 0.2975 nll 0.68077  vs round 4 +0.0005 ± 0.0017  {'alpha': 0.35000000000000003}
+  + surprise                           spearman 0.2914 nll 0.68110  vs round 4 -0.0001 ± 0.0021  {'trees': 1023, 'val_nll': 0.6798482132282736}
+  + surprise + game FM                 spearman 0.2979 nll 0.68085  vs round 4 +0.0010 ± 0.0016  {'alpha': 0.30000000000000004}
+  + deck vec + state                   spearman 0.2925 nll 0.68098  vs round 4 +0.0010 ± 0.0027  {'trees': 862, 'val_nll': 0.6798930229405049}
+  + deck vec + state + game FM         spearman 0.2982 nll 0.68079  vs round 4 +0.0012 ± 0.0021  {'alpha': 0.30000000000000004}
+  + all three                          spearman 0.2915 nll 0.68116  vs round 4 -0.0000 ± 0.0031  {'trees': 682, 'val_nll': 0.6798623584845834}
+  + all three + game FM                spearman 0.2984 nll 0.68089  vs round 4 +0.0015 ± 0.0024  {'alpha': 0.30000000000000004}
+=== TDM (14889 test drafts, picknet coverage 1.000, 128s)
+  round 4: lgbm                        spearman 0.2606 nll 0.68070  vs round 4 +0.0000 ± 0.0000  {'trees': 870, 'val_nll': 0.6820269276607238}
+  round 4: lgbm + game FM              spearman 0.2635 nll 0.68052  vs round 4 +0.0000 ± 0.0000  {'alpha': 0.5}
+  + deck vec                           spearman 0.2621 nll 0.68061  vs round 4 +0.0014 ± 0.0027  {'trees': 878, 'val_nll': 0.6818459097690172}
+  + deck vec + game FM                 spearman 0.2655 nll 0.68041  vs round 4 +0.0021 ± 0.0015  {'alpha': 0.45}
+  + state                              spearman 0.2581 nll 0.68092  vs round 4 -0.0025 ± 0.0021  {'trees': 938, 'val_nll': 0.6822509332618695}
+  + state + game FM                    spearman 0.2622 nll 0.68063  vs round 4 -0.0012 ± 0.0010  {'alpha': 0.6000000000000001}
+  + surprise                           spearman 0.2623 nll 0.68071  vs round 4 +0.0016 ± 0.0023  {'trees': 946, 'val_nll': 0.681954610020758}
+  + surprise + game FM                 spearman 0.2656 nll 0.68044  vs round 4 +0.0021 ± 0.0013  {'alpha': 0.5}
+  + deck vec + state                   spearman 0.2575 nll 0.68089  vs round 4 -0.0032 ± 0.0029  {'trees': 909, 'val_nll': 0.6819774070106963}
+  + deck vec + state + game FM         spearman 0.2629 nll 0.68055  vs round 4 -0.0006 ± 0.0016  {'alpha': 0.5}
+  + all three                          spearman 0.2609 nll 0.68072  vs round 4 +0.0002 ± 0.0033  {'trees': 891, 'val_nll': 0.68186689838285}
+  + all three + game FM                spearman 0.2657 nll 0.68042  vs round 4 +0.0022 ± 0.0018  {'alpha': 0.5}
+ALLDONE

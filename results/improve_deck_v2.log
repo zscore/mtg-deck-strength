@@ -1,0 +1,14 @@
+=== BLB (22610 test drafts, 1030s)  tau=1.0 params={'num_leaves': 15, 'min_data_in_leaf': 100, 'feature_fraction': 0.3, 'lambda_l2': 10}
+  round 4: lgbm                                        spearman 0.2752 nll 0.68040  vs r4 blend -0.0046 ± 0.0013
+  recency                                              spearman 0.2760 nll 0.68041  vs r4 blend -0.0038 ± 0.0016
+  recency + tuned                                      spearman 0.2748 nll 0.68041  vs r4 blend -0.0050 ± 0.0018
+  recency + tuned, refit on train+val                  spearman 0.2792 nll 0.68015  vs r4 blend -0.0006 ± 0.0020
+  recency + tuned, refit, 5 seeds                      spearman 0.2814 nll 0.67999  vs r4 blend +0.0016 ± 0.0018
+  round 4: lgbm, refit on train+val                    spearman 0.2784 nll 0.68022  vs r4 blend -0.0014 ± 0.0016
+  game FM                                              spearman 0.2719 nll 0.68073  vs r4 blend -0.0079 ± 0.0017
+  game FM, calibrated on train+val                     spearman 0.2724 nll 0.68068  vs r4 blend -0.0074 ± 0.0018
+  round 4: lgbm + game FM                              spearman 0.2798 nll 0.68021  vs r4 blend +0.0000 ± 0.0000
+  recency + tuned + game FM                            spearman 0.2800 nll 0.68012  vs r4 blend +0.0002 ± 0.0010
+  round 4: lgbm, refit on train+val + game FM          spearman 0.2818 nll 0.68008  vs r4 blend +0.0020 ± 0.0008
+  recency + tuned, refit on train+val + game FM        spearman 0.2833 nll 0.67992  vs r4 blend +0.0035 ± 0.0013
+  recency + tuned, refit, 5 seeds + game FM            spearman 0.2841 nll 0.67987  vs r4 blend +0.0043 ± 0.0011

@@ -1,0 +1,196 @@
+t3_within_build/results.json: ['MSH', 'EOE', 'SOS', 'TDM', 'FDN', 'DFT', 'LCI', 'FIN', 'MKM', 'BLB', 'DSK', 'OTJ']; pooled qualifying drafts 44989 (gate 5000: PASS)
+  - own mull                     pooled b (raw units) +0.293 ± 0.192  over 12 sets
+  LightGBM                       pooled b (raw units) +0.296 ± 0.160  over 12 sets
+  champion                       pooled b (raw units) +0.320 ± 0.190  over 12 sets
+  refit                          pooled b (raw units) +0.322 ± 0.194  over 12 sets
+  split mull                     pooled b (raw units) +0.309 ± 0.190  over 12 sets
+
+- own mull - champion [within-build b]
+  MSH    -0.00482 ± 0.00361  z -1.33
+  EOE    +0.00680 ± 0.00367  z +1.85
+  SOS    -0.00651 ± 0.00302  z -2.16
+  TDM    -0.00752 ± 0.00464  z -1.62
+  FDN    -0.00122 ± 0.00264  z -0.46
+  DFT    -0.00349 ± 0.00365  z -0.96
+  LCI    +0.00082 ± 0.00228  z +0.36
+  FIN    -0.00193 ± 0.00283  z -0.68
+  MKM    +0.00189 ± 0.00225  z +0.84
+  BLB    +0.00174 ± 0.00295  z +0.59
+  DSK    +0.00037 ± 0.00233  z +0.16
+  OTJ    +0.00047 ± 0.00235  z +0.20
+  fixed effect -0.00047 ± 0.00081
+  random effects (DL + HKSJ) -0.00062, 95% CI [-0.00281, +0.00158], p = 0.5500; tau = 0.00170, I2 = 27%, Q p = 0.184
+  95% prediction interval for a new set [-0.00501, +0.00378]
+  sets better 6/12 (sign test one-sided p = 0.613), Wilcoxon p = 0.424, significantly worse on 1
+  leakage veto (one-sided p that B lowers b): 0.275
+
+- own mull - champion [within-build b (match control)]
+  MSH    -0.00240 ± 0.00263  z -0.91
+  EOE    +0.00118 ± 0.00273  z +0.43
+  SOS    -0.00539 ± 0.00235  z -2.30
+  TDM    -0.01154 ± 0.00364  z -3.17
+  FDN    -0.00092 ± 0.00194  z -0.47
+  DFT    -0.00589 ± 0.00368  z -1.60
+  LCI    -0.00017 ± 0.00152  z -0.11
+  FIN    -0.00213 ± 0.00248  z -0.86
+  MKM    +0.00016 ± 0.00158  z +0.10
+  BLB    -0.00287 ± 0.00226  z -1.27
+  DSK    -0.00109 ± 0.00164  z -0.66
+  OTJ    +0.00128 ± 0.00167  z +0.77
+  fixed effect -0.00128 ± 0.00060
+  random effects (DL + HKSJ) -0.00162, 95% CI [-0.00350, +0.00025], p = 0.0832; tau = 0.00167, I2 = 39%, Q p = 0.083
+  95% prediction interval for a new set [-0.00580, +0.00255]
+  sets better 3/12 (sign test one-sided p = 0.981), Wilcoxon p = 0.034, significantly worse on 2
+  leakage veto (one-sided p that B lowers b): 0.042
+
+- own mull - split mull [within-build b]
+  MSH    -0.00985 ± 0.00748  z -1.32
+  EOE    +0.00446 ± 0.00407  z +1.10
+  SOS    -0.00683 ± 0.00295  z -2.32
+  TDM    -0.00098 ± 0.00356  z -0.28
+  FDN    -0.00094 ± 0.00275  z -0.34
+  DFT    -0.00383 ± 0.00389  z -0.99
+  LCI    +0.00191 ± 0.00238  z +0.80
+  FIN    -0.00130 ± 0.00277  z -0.47
+  MKM    +0.00228 ± 0.00224  z +1.02
+  BLB    +0.00208 ± 0.00299  z +0.70
+  DSK    +0.00028 ± 0.00230  z +0.12
+  OTJ    +0.00090 ± 0.00235  z +0.38
+  fixed effect -0.00005 ± 0.00083
+  random effects (DL + HKSJ) -0.00010, 95% CI [-0.00203, +0.00184], p = 0.9155; tau = 0.00088, I2 = 9%, Q p = 0.362
+  95% prediction interval for a new set [-0.00287, +0.00268]
+  sets better 6/12 (sign test one-sided p = 0.613), Wilcoxon p = 0.733, significantly worse on 1
+  leakage veto (one-sided p that B lowers b): 0.458
+
+- own mull - split mull [within-build b (match control)]
+  MSH    -0.00710 ± 0.00610  z -1.16
+  EOE    -0.00012 ± 0.00296  z -0.04
+  SOS    -0.00557 ± 0.00229  z -2.43
+  TDM    -0.00568 ± 0.00279  z -2.04
+  FDN    -0.00047 ± 0.00213  z -0.22
+  DFT    -0.00493 ± 0.00338  z -1.46
+  LCI    +0.00083 ± 0.00160  z +0.52
+  FIN    -0.00153 ± 0.00246  z -0.62
+  MKM    +0.00097 ± 0.00156  z +0.62
+  BLB    -0.00266 ± 0.00230  z -1.16
+  DSK    -0.00116 ± 0.00160  z -0.72
+  OTJ    +0.00180 ± 0.00167  z +1.08
+  fixed effect -0.00089 ± 0.00061
+  random effects (DL + HKSJ) -0.00116, 95% CI [-0.00283, +0.00051], p = 0.1546; tau = 0.00139, I2 = 29%, Q p = 0.158
+  95% prediction interval for a new set [-0.00468, +0.00236]
+  sets better 3/12 (sign test one-sided p = 0.981), Wilcoxon p = 0.052, significantly worse on 2
+  leakage veto (one-sided p that B lowers b): 0.077
+
+champion - LightGBM [within-build b]
+  MSH    +0.02220 ± 0.02466  z +0.90
+  EOE    -0.00235 ± 0.01884  z -0.12
+  SOS    +0.01090 ± 0.01705  z +0.64
+  TDM    -0.00609 ± 0.01598  z -0.38
+  FDN    +0.00629 ± 0.01593  z +0.40
+  DFT    -0.00969 ± 0.01389  z -0.70
+  LCI    +0.01810 ± 0.01371  z +1.32
+  FIN    -0.00116 ± 0.01480  z -0.08
+  MKM    -0.01648 ± 0.01506  z -1.09
+  BLB    -0.02344 ± 0.01527  z -1.53
+  DSK    +0.00512 ± 0.01350  z +0.38
+  OTJ    -0.01010 ± 0.01281  z -0.79
+  fixed effect -0.00191 ± 0.00442
+  random effects (DL + HKSJ) -0.00191, 95% CI [-0.01164, +0.00783], p = 0.6745; tau = 0.00000, I2 = 0%, Q p = 0.722
+  95% prediction interval for a new set [-0.01177, +0.00795]
+  sets better 5/12 (sign test one-sided p = 0.806), Wilcoxon p = 0.910, significantly worse on 0
+  leakage veto (one-sided p that B lowers b): 0.337
+
+champion - LightGBM [within-build b (match control)]
+  MSH    +0.00875 ± 0.01783  z +0.49
+  EOE    +0.00455 ± 0.01385  z +0.33
+  SOS    +0.00878 ± 0.01254  z +0.70
+  TDM    +0.01006 ± 0.01206  z +0.83
+  FDN    +0.00909 ± 0.01163  z +0.78
+  DFT    +0.00011 ± 0.00992  z +0.01
+  LCI    +0.01402 ± 0.00934  z +1.50
+  FIN    +0.00044 ± 0.01108  z +0.04
+  MKM    -0.00783 ± 0.01067  z -0.73
+  BLB    -0.00746 ± 0.01072  z -0.70
+  DSK    +0.00111 ± 0.00936  z +0.12
+  OTJ    -0.01018 ± 0.00926  z -1.10
+  fixed effect +0.00170 ± 0.00317
+  random effects (DL + HKSJ) +0.00170, 95% CI [-0.00528, +0.00869], p = 0.6022; tau = 0.00000, I2 = 0%, Q p = 0.848
+  95% prediction interval for a new set [-0.00537, +0.00877]
+  sets better 9/12 (sign test one-sided p = 0.073), Wilcoxon p = 0.204, significantly worse on 0
+  leakage veto (one-sided p that B lowers b): 0.699
+
+refit - champion [within-build b]
+  MSH    +0.00615 ± 0.00668  z +0.92
+  EOE    +0.00068 ± 0.00539  z +0.13
+  SOS    -0.00103 ± 0.00418  z -0.25
+  TDM    -0.00926 ± 0.00483  z -1.92
+  FDN    +0.00305 ± 0.00477  z +0.64
+  DFT    +0.00179 ± 0.00426  z +0.42
+  LCI    +0.00375 ± 0.00266  z +1.41
+  FIN    -0.00762 ± 0.00389  z -1.96
+  MKM    -0.00024 ± 0.00446  z -0.05
+  BLB    +0.00305 ± 0.00282  z +1.08
+  DSK    -0.00244 ± 0.00238  z -1.03
+  OTJ    +0.00141 ± 0.00285  z +0.50
+  fixed effect +0.00008 ± 0.00103
+  random effects (DL + HKSJ) +0.00002, 95% CI [-0.00257, +0.00262], p = 0.9847; tau = 0.00173, I2 = 19%, Q p = 0.262
+  95% prediction interval for a new set [-0.00464, +0.00469]
+  sets better 7/12 (sign test one-sided p = 0.387), Wilcoxon p = 0.677, significantly worse on 0
+  leakage veto (one-sided p that B lowers b): 0.508
+
+refit - champion [within-build b (match control)]
+  MSH    +0.00135 ± 0.00618  z +0.22
+  EOE    -0.00147 ± 0.00403  z -0.37
+  SOS    -0.00092 ± 0.00331  z -0.28
+  TDM    -0.00606 ± 0.00319  z -1.90
+  FDN    -0.00146 ± 0.00435  z -0.34
+  DFT    -0.00092 ± 0.00379  z -0.24
+  LCI    +0.00164 ± 0.00182  z +0.90
+  FIN    -0.00805 ± 0.00410  z -1.96
+  MKM    -0.00046 ± 0.00294  z -0.16
+  BLB    +0.00084 ± 0.00213  z +0.40
+  DSK    -0.00210 ± 0.00164  z -1.28
+  OTJ    +0.00194 ± 0.00206  z +0.94
+  fixed effect -0.00062 ± 0.00077
+  random effects (DL + HKSJ) -0.00062, 95% CI [-0.00231, +0.00107], p = 0.4368; tau = 0.00000, I2 = 0%, Q p = 0.464
+  95% prediction interval for a new set [-0.00233, +0.00109]
+  sets better 4/12 (sign test one-sided p = 0.927), Wilcoxon p = 0.266, significantly worse on 1
+  leakage veto (one-sided p that B lowers b): 0.218
+
+split mull - champion [within-build b]
+  MSH    +0.00503 ± 0.00668  z +0.75
+  EOE    +0.00234 ± 0.00185  z +1.26
+  SOS    +0.00033 ± 0.00030  z +1.08
+  TDM    -0.00654 ± 0.00438  z -1.49
+  FDN    -0.00028 ± 0.00103  z -0.27
+  DFT    +0.00035 ± 0.00152  z +0.23
+  LCI    -0.00109 ± 0.00054  z -2.02
+  FIN    -0.00062 ± 0.00056  z -1.12
+  MKM    -0.00039 ± 0.00046  z -0.83
+  BLB    -0.00033 ± 0.00038  z -0.87
+  DSK    +0.00010 ± 0.00078  z +0.12
+  OTJ    -0.00043 ± 0.00056  z -0.76
+  fixed effect -0.00020 ± 0.00017
+  random effects (DL + HKSJ) -0.00022, 95% CI [-0.00061, +0.00017], p = 0.2472; tau = 0.00015, I2 = 6%, Q p = 0.391
+  95% prediction interval for a new set [-0.00073, +0.00030]
+  sets better 5/12 (sign test one-sided p = 0.806), Wilcoxon p = 0.519, significantly worse on 1
+  leakage veto (one-sided p that B lowers b): 0.124
+
+split mull - champion [within-build b (match control)]
+  MSH    +0.00470 ± 0.00509  z +0.92
+  EOE    +0.00130 ± 0.00123  z +1.06
+  SOS    +0.00018 ± 0.00025  z +0.73
+  TDM    -0.00586 ± 0.00382  z -1.53
+  FDN    -0.00045 ± 0.00089  z -0.50
+  DFT    -0.00096 ± 0.00115  z -0.84
+  LCI    -0.00100 ± 0.00043  z -2.33
+  FIN    -0.00060 ± 0.00041  z -1.46
+  MKM    -0.00081 ± 0.00032  z -2.50
+  BLB    -0.00021 ± 0.00028  z -0.74
+  DSK    +0.00007 ± 0.00056  z +0.13
+  OTJ    -0.00052 ± 0.00039  z -1.33
+  fixed effect -0.00032 ± 0.00013
+  random effects (DL + HKSJ) -0.00037, 95% CI [-0.00074, +0.00000], p = 0.0510; tau = 0.00029, I2 = 29%, Q p = 0.163
+  95% prediction interval for a new set [-0.00112, +0.00038]
+  sets better 4/12 (sign test one-sided p = 0.927), Wilcoxon p = 0.266, significantly worse on 2
+  leakage veto (one-sided p that B lowers b): 0.025

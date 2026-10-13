@@ -1,0 +1,301 @@
+=== MSH: 68609 drafts [2s]
+  train agree 0.520  stale 0.188  missing 0.289  complete 0.715
+  val   agree 0.541  stale 0.208  missing 0.248  complete 0.748
+  test  agree 0.542  stale 0.165  missing 0.289  complete 0.722
+  trained on draft  target: trees 720/719/873, alpha 0.40/0.35 [55s]
+  trained on game   target: trees 898/695/844, alpha 0.35/0.35 [59s]
+  round 10 - round 4 | train draft | eval draft                            +0.0052 ± 0.0014
+  round 10 - round 4 | train game | eval draft                             +0.0032 ± 0.0018
+  train game - train draft | round 4 blend | eval draft                    +0.0021 ± 0.0012
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft +0.0002 ± 0.0012
+  train game - train draft | round 4: lgbm | eval draft                    +0.0037 ± 0.0019
+  round 10 - round 4 | train draft | eval game                             +0.0043 ± 0.0015
+  round 10 - round 4 | train game | eval game                              +0.0021 ± 0.0020
+  train game - train draft | round 4 blend | eval game                     +0.0048 ± 0.0018
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0026 ± 0.0015
+  train game - train draft | round 4: lgbm | eval game                     +0.0082 ± 0.0024
+  round 4 blend | train draft | eval draft                                         0.2882
+  round 4 blend | train draft | eval game                                          0.2829
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.2934
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.2872
+  round 4 blend | train game | eval draft                                          0.2903
+  round 4 blend | train game | eval game                                           0.2877
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.2936
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.2898
+MSH done [123s]
+=== BLB: 154585 drafts [4s]
+  train agree 0.775  stale 0.193  missing 0.032  complete 0.994
+  val   agree 0.734  stale 0.235  missing 0.030  complete 0.994
+  test  agree 0.746  stale 0.217  missing 0.036  complete 0.993
+  trained on draft  target: trees 1168/2178/2644, alpha 0.45/0.40 [353s]
+  trained on game   target: trees 1843/1769/2147, alpha 0.40/0.40 [323s]
+  round 10 - round 4 | train draft | eval draft                            +0.0043 ± 0.0007
+  round 10 - round 4 | train game | eval draft                             +0.0036 ± 0.0008
+  train game - train draft | round 4 blend | eval draft                    +0.0006 ± 0.0011
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft -0.0001 ± 0.0003
+  train game - train draft | round 4: lgbm | eval draft                    +0.0012 ± 0.0018
+  round 10 - round 4 | train draft | eval game                             +0.0055 ± 0.0006
+  round 10 - round 4 | train game | eval game                              +0.0046 ± 0.0007
+  train game - train draft | round 4 blend | eval game                     +0.0012 ± 0.0011
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0003 ± 0.0003
+  train game - train draft | round 4: lgbm | eval game                     +0.0022 ± 0.0019
+  round 4 blend | train draft | eval draft                                         0.2798
+  round 4 blend | train draft | eval game                                          0.3060
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.2841
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.3115
+  round 4 blend | train game | eval draft                                          0.2804
+  round 4 blend | train game | eval game                                           0.3072
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.2840
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.3118
+BLB done [698s]
+=== DFT: 141166 drafts [4s]
+  train agree 0.741  stale 0.227  missing 0.032  complete 0.993
+  val   agree 0.717  stale 0.254  missing 0.028  complete 0.992
+  test  agree 0.723  stale 0.245  missing 0.032  complete 0.991
+  trained on draft  target: trees 1266/1310/1590, alpha 0.15/0.15 [235s]
+  trained on game   target: trees 1548/1218/1479, alpha 0.10/0.10 [242s]
+  round 10 - round 4 | train draft | eval draft                            +0.0025 ± 0.0012
+  round 10 - round 4 | train game | eval draft                             +0.0012 ± 0.0010
+  train game - train draft | round 4 blend | eval draft                    +0.0024 ± 0.0017
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft +0.0010 ± 0.0008
+  train game - train draft | round 4: lgbm | eval draft                    +0.0030 ± 0.0020
+  round 10 - round 4 | train draft | eval game                             +0.0036 ± 0.0011
+  round 10 - round 4 | train game | eval game                              +0.0027 ± 0.0007
+  train game - train draft | round 4 blend | eval game                     +0.0022 ± 0.0016
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0013 ± 0.0008
+  train game - train draft | round 4: lgbm | eval game                     +0.0030 ± 0.0018
+  round 4 blend | train draft | eval draft                                         0.2661
+  round 4 blend | train draft | eval game                                          0.2929
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.2686
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.2965
+  round 4 blend | train game | eval draft                                          0.2684
+  round 4 blend | train game | eval game                                           0.2951
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.2696
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.2978
+DFT done [496s]
+=== DSK: 167672 drafts [5s]
+  train agree 0.784  stale 0.186  missing 0.030  complete 0.994
+  val   agree 0.766  stale 0.206  missing 0.027  complete 0.995
+  test  agree 0.773  stale 0.190  missing 0.036  complete 0.993
+  trained on draft  target: trees 1680/1328/1612, alpha 0.25/0.25 [282s]
+  trained on game   target: trees 1701/1282/1556, alpha 0.20/0.20 [293s]
+  round 10 - round 4 | train draft | eval draft                            +0.0018 ± 0.0005
+  round 10 - round 4 | train game | eval draft                             +0.0032 ± 0.0006
+  train game - train draft | round 4 blend | eval draft                    -0.0016 ± 0.0009
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft -0.0002 ± 0.0005
+  train game - train draft | round 4: lgbm | eval draft                    -0.0012 ± 0.0010
+  round 10 - round 4 | train draft | eval game                             +0.0011 ± 0.0006
+  round 10 - round 4 | train game | eval game                              +0.0028 ± 0.0007
+  train game - train draft | round 4 blend | eval game                     -0.0025 ± 0.0009
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game -0.0008 ± 0.0005
+  train game - train draft | round 4: lgbm | eval game                     -0.0021 ± 0.0011
+  round 4 blend | train draft | eval draft                                         0.2865
+  round 4 blend | train draft | eval game                                          0.3009
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.2884
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.3019
+  round 4 blend | train game | eval draft                                          0.2850
+  round 4 blend | train game | eval game                                           0.2984
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.2881
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.3011
+DSK done [598s]
+=== EOE: 104377 drafts [2s]
+  train agree 0.520  stale 0.178  missing 0.298  complete 0.709
+  val   agree 0.496  stale 0.210  missing 0.289  complete 0.703
+  test  agree 0.518  stale 0.171  missing 0.307  complete 0.706
+  trained on draft  target: trees 1107/873/1060, alpha 0.25/0.25 [124s]
+  trained on game   target: trees 986/959/1164, alpha 0.20/0.25 [137s]
+  round 10 - round 4 | train draft | eval draft                            +0.0034 ± 0.0023
+  round 10 - round 4 | train game | eval draft                             +0.0063 ± 0.0021
+  train game - train draft | round 4 blend | eval draft                    -0.0028 ± 0.0012
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft +0.0001 ± 0.0012
+  train game - train draft | round 4: lgbm | eval draft                    -0.0023 ± 0.0014
+  round 10 - round 4 | train draft | eval game                             +0.0037 ± 0.0023
+  round 10 - round 4 | train game | eval game                              +0.0067 ± 0.0019
+  train game - train draft | round 4 blend | eval game                     -0.0030 ± 0.0012
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0000 ± 0.0010
+  train game - train draft | round 4: lgbm | eval game                     -0.0026 ± 0.0015
+  round 4 blend | train draft | eval draft                                         0.2513
+  round 4 blend | train draft | eval game                                          0.2594
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.2547
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.2631
+  round 4 blend | train game | eval draft                                          0.2485
+  round 4 blend | train game | eval game                                           0.2564
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.2549
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.2631
+EOE done [275s]
+=== FDN: 130935 drafts [3s]
+  train agree 0.824  stale 0.142  missing 0.034  complete 0.992
+  val   agree 0.771  stale 0.202  missing 0.027  complete 0.992
+  test  agree 0.765  stale 0.201  missing 0.034  complete 0.991
+  trained on draft  target: trees 1194/935/1135, alpha 0.35/0.40 [165s]
+  trained on game   target: trees 965/940/1141, alpha 0.35/0.40 [170s]
+  round 10 - round 4 | train draft | eval draft                            +0.0005 ± 0.0012
+  round 10 - round 4 | train game | eval draft                             +0.0013 ± 0.0008
+  train game - train draft | round 4 blend | eval draft                    -0.0016 ± 0.0012
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft -0.0008 ± 0.0006
+  train game - train draft | round 4: lgbm | eval draft                    -0.0021 ± 0.0017
+  round 10 - round 4 | train draft | eval game                             +0.0018 ± 0.0011
+  round 10 - round 4 | train game | eval game                              +0.0023 ± 0.0005
+  train game - train draft | round 4 blend | eval game                     -0.0007 ± 0.0012
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game -0.0003 ± 0.0005
+  train game - train draft | round 4: lgbm | eval game                     -0.0008 ± 0.0018
+  round 4 blend | train draft | eval draft                                         0.2869
+  round 4 blend | train draft | eval game                                          0.3029
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.2874
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.3047
+  round 4 blend | train game | eval draft                                          0.2853
+  round 4 blend | train game | eval game                                           0.3022
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.2866
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.3045
+FDN done [352s]
+=== FIN: 140237 drafts [4s]
+  train agree 0.557  stale 0.152  missing 0.288  complete 0.733
+  val   agree 0.533  stale 0.181  missing 0.283  complete 0.729
+  test  agree 0.530  stale 0.158  missing 0.307  complete 0.711
+  trained on draft  target: trees 1045/1308/1588, alpha 0.40/0.40 [240s]
+  trained on game   target: trees 1452/1363/1655, alpha 0.35/0.35 [269s]
+  round 10 - round 4 | train draft | eval draft                            +0.0024 ± 0.0005
+  round 10 - round 4 | train game | eval draft                             +0.0022 ± 0.0008
+  train game - train draft | round 4 blend | eval draft                    +0.0008 ± 0.0010
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft +0.0007 ± 0.0005
+  train game - train draft | round 4: lgbm | eval draft                    +0.0007 ± 0.0014
+  round 10 - round 4 | train draft | eval game                             +0.0034 ± 0.0006
+  round 10 - round 4 | train game | eval game                              +0.0028 ± 0.0007
+  train game - train draft | round 4 blend | eval game                     +0.0017 ± 0.0013
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0010 ± 0.0006
+  train game - train draft | round 4: lgbm | eval game                     +0.0021 ± 0.0019
+  round 4 blend | train draft | eval draft                                         0.2913
+  round 4 blend | train draft | eval game                                          0.2934
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.2936
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.2968
+  round 4 blend | train game | eval draft                                          0.2921
+  round 4 blend | train game | eval game                                           0.2951
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.2943
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.2979
+FIN done [528s]
+=== LCI: 134970 drafts [4s]
+  train agree 0.754  stale 0.201  missing 0.045  complete 0.994
+  val   agree 0.715  stale 0.239  missing 0.045  complete 0.993
+  test  agree 0.740  stale 0.215  missing 0.044  complete 0.992
+  trained on draft  target: trees 1351/1045/1269, alpha 0.40/0.40 [187s]
+  trained on game   target: trees 1250/1659/2014, alpha 0.30/0.30 [288s]
+  round 10 - round 4 | train draft | eval draft                            +0.0010 ± 0.0009
+  round 10 - round 4 | train game | eval draft                             +0.0020 ± 0.0012
+  train game - train draft | round 4 blend | eval draft                    -0.0001 ± 0.0008
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft +0.0008 ± 0.0007
+  train game - train draft | round 4: lgbm | eval draft                    +0.0003 ± 0.0013
+  round 10 - round 4 | train draft | eval game                             +0.0022 ± 0.0008
+  round 10 - round 4 | train game | eval game                              +0.0027 ± 0.0012
+  train game - train draft | round 4 blend | eval game                     +0.0008 ± 0.0010
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0013 ± 0.0007
+  train game - train draft | round 4: lgbm | eval game                     +0.0016 ± 0.0013
+  round 4 blend | train draft | eval draft                                         0.3010
+  round 4 blend | train draft | eval game                                          0.3231
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.3021
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.3252
+  round 4 blend | train game | eval draft                                          0.3009
+  round 4 blend | train game | eval game                                           0.3238
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.3029
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.3265
+LCI done [494s]
+=== MKM: 157553 drafts [4s]
+  train agree 0.749  stale 0.211  missing 0.040  complete 0.990
+  val   agree 0.716  stale 0.241  missing 0.042  complete 0.990
+  test  agree 0.739  stale 0.225  missing 0.035  complete 0.994
+  trained on draft  target: trees 1128/1040/1262, alpha 0.50/0.50 [212s]
+  trained on game   target: trees 1472/1249/1516, alpha 0.45/0.45 [268s]
+  round 10 - round 4 | train draft | eval draft                            +0.0012 ± 0.0006
+  round 10 - round 4 | train game | eval draft                             +0.0011 ± 0.0005
+  train game - train draft | round 4 blend | eval draft                    +0.0002 ± 0.0006
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft +0.0001 ± 0.0004
+  train game - train draft | round 4: lgbm | eval draft                    +0.0000 ± 0.0009
+  round 10 - round 4 | train draft | eval game                             +0.0012 ± 0.0007
+  round 10 - round 4 | train game | eval game                              +0.0010 ± 0.0005
+  train game - train draft | round 4 blend | eval game                     +0.0008 ± 0.0006
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0006 ± 0.0004
+  train game - train draft | round 4: lgbm | eval game                     +0.0009 ± 0.0008
+  round 4 blend | train draft | eval draft                                         0.2645
+  round 4 blend | train draft | eval game                                          0.2817
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.2657
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.2829
+  round 4 blend | train game | eval draft                                          0.2648
+  round 4 blend | train game | eval game                                           0.2825
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.2659
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.2835
+MKM done [502s]
+=== OTJ: 195312 drafts [6s]
+  train agree 0.780  stale 0.190  missing 0.030  complete 0.995
+  val   agree 0.747  stale 0.223  missing 0.029  complete 0.994
+  test  agree 0.778  stale 0.186  missing 0.036  complete 0.994
+  trained on draft  target: trees 1466/1470/1784, alpha 0.35/0.35 [399s]
+  trained on game   target: trees 1500/1519/1843, alpha 0.30/0.30 [441s]
+  round 10 - round 4 | train draft | eval draft                            +0.0024 ± 0.0010
+  round 10 - round 4 | train game | eval draft                             +0.0025 ± 0.0009
+  train game - train draft | round 4 blend | eval draft                    +0.0008 ± 0.0008
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft +0.0009 ± 0.0004
+  train game - train draft | round 4: lgbm | eval draft                    +0.0015 ± 0.0012
+  round 10 - round 4 | train draft | eval game                             +0.0030 ± 0.0011
+  round 10 - round 4 | train game | eval game                              +0.0033 ± 0.0008
+  train game - train draft | round 4 blend | eval game                     +0.0004 ± 0.0008
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0006 ± 0.0004
+  train game - train draft | round 4: lgbm | eval game                     +0.0009 ± 0.0011
+  round 4 blend | train draft | eval draft                                         0.2637
+  round 4 blend | train draft | eval game                                          0.2800
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.2661
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.2831
+  round 4 blend | train game | eval draft                                          0.2645
+  round 4 blend | train game | eval game                                           0.2804
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.2670
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.2837
+OTJ done [869s]
+=== SOS: 107459 drafts [4s]
+  train agree 0.512  stale 0.180  missing 0.304  complete 0.700
+  val   agree 0.494  stale 0.201  missing 0.301  complete 0.691
+  test  agree 0.557  stale 0.179  missing 0.260  complete 0.748
+  trained on draft  target: trees 1100/944/1146, alpha 0.30/0.30 [152s]
+  trained on game   target: trees 962/960/1165, alpha 0.25/0.30 [859s]
+  round 10 - round 4 | train draft | eval draft                            +0.0043 ± 0.0010
+  round 10 - round 4 | train game | eval draft                             +0.0033 ± 0.0013
+  train game - train draft | round 4 blend | eval draft                    +0.0002 ± 0.0013
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft -0.0007 ± 0.0008
+  train game - train draft | round 4: lgbm | eval draft                    +0.0016 ± 0.0016
+  round 10 - round 4 | train draft | eval game                             +0.0039 ± 0.0007
+  round 10 - round 4 | train game | eval game                              +0.0035 ± 0.0015
+  train game - train draft | round 4 blend | eval game                     +0.0020 ± 0.0015
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0016 ± 0.0011
+  train game - train draft | round 4: lgbm | eval game                     +0.0047 ± 0.0020
+  round 4 blend | train draft | eval draft                                         0.2970
+  round 4 blend | train draft | eval game                                          0.2995
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.3012
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.3034
+  round 4 blend | train game | eval draft                                          0.2972
+  round 4 blend | train game | eval game                                           0.3015
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.3005
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.3050
+SOS done [1029s]
+=== TDM: 101323 drafts [4s]
+  train agree 0.552  stale 0.179  missing 0.266  complete 0.745
+  val   agree 0.532  stale 0.195  missing 0.269  complete 0.735
+  test  agree 0.532  stale 0.177  missing 0.287  complete 0.722
+  trained on draft  target: trees 870/744/903, alpha 0.50/0.55 [794s]
+  trained on game   target: trees 807/832/1010, alpha 0.45/0.50 [507s]
+  round 10 - round 4 | train draft | eval draft                            +0.0007 ± 0.0008
+  round 10 - round 4 | train game | eval draft                             +0.0009 ± 0.0011
+  train game - train draft | round 4 blend | eval draft                    +0.0004 ± 0.0016
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft +0.0006 ± 0.0006
+  train game - train draft | round 4: lgbm | eval draft                    +0.0002 ± 0.0028
+  round 10 - round 4 | train draft | eval game                             +0.0015 ± 0.0010
+  round 10 - round 4 | train game | eval game                              +0.0024 ± 0.0009
+  train game - train draft | round 4 blend | eval game                     +0.0004 ± 0.0016
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0014 ± 0.0004
+  train game - train draft | round 4: lgbm | eval game                     +0.0007 ± 0.0028
+  round 4 blend | train draft | eval draft                                         0.2635
+  round 4 blend | train draft | eval game                                          0.2674
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval draft             0.2642
+  round 10 best (refit, 5 seeds, + game FM) | train draft | eval game              0.2688
+  round 4 blend | train game | eval draft                                          0.2639
+  round 4 blend | train game | eval game                                           0.2678
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval draft              0.2648
+  round 10 best (refit, 5 seeds, + game FM) | train game | eval game               0.2702
+TDM done [1316s]
+ALLDONE

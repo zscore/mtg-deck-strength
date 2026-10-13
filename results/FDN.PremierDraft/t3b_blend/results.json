@@ -1,0 +1,208 @@
+{
+ "control": "state",
+ "min games per build": 1,
+ "splits": [
+  2
+ ],
+ "qualifying drafts": 3544,
+ "informative drafts (outcome varies, >= 2 builds played)": 3169,
+ "games in informative drafts": 19388,
+ "games beyond M_MAX dropped": 0,
+ "models": {
+  "champion": {
+   "b per within-sd": 0.03967739183912823,
+   "se per within-sd": 0.01963392052460923,
+   "b raw": 1.1730187795208038,
+   "se raw": 0.5805628690313369,
+   "b per sd": 0.29994202016807175,
+   "within-draft sd": 0.033818976908369075,
+   "score sd": 0.25570095330494425,
+   "within / overall sd": 0.13225987807733036,
+   "LR chi2 (score vs context only)": 5.793548611419283,
+   "loglik": -6314.747710065256,
+   "seeds": 2,
+   "b by seed": [
+    0.0367736014740551,
+    0.042581182204201366
+   ],
+   "seed se": 0.0029037903650731348
+  },
+  "LightGBM": {
+   "b per within-sd": 0.03338472053621571,
+   "se per within-sd": 0.020322328581070297,
+   "b raw": 0.8557552245281976,
+   "se raw": 0.5202854793945034,
+   "b per sd": 0.23703688661312158,
+   "within-draft sd": 0.03905946671105588,
+   "score sd": 0.2769914571585664,
+   "within / overall sd": 0.14101325402500023,
+   "LR chi2 (score vs context only)": 4.204815542731012,
+   "loglik": -6315.5420765996,
+   "seeds": 3,
+   "b by seed": [
+    0.043918764492312,
+    0.025045846983088458,
+    0.031189550133246674
+   ],
+   "seed se": 0.005557602410243785
+  },
+  "blend*": {
+   "b per within-sd": 0.039453649517733384,
+   "se per within-sd": 0.01963505175813875,
+   "b raw": 0.3227392684215619,
+   "se raw": 0.16058941053603112,
+   "b per sd": 0.30574440118365526,
+   "within-draft sd": 0.12226894417402408,
+   "score sd": 0.9473418052875179,
+   "within / overall sd": 0.1290652893090847,
+   "LR chi2 (score vs context only)": 5.683170014532152,
+   "loglik": -6314.802899363701,
+   "seeds": 3,
+   "b by seed": [
+    0.04201132644702963,
+    0.039356426273128464,
+    0.03699319583304205
+   ],
+   "seed se": 0.001449424941626675
+  }
+ },
+ "pairs": {
+  "blend* - champion": {
+   "within-build b": {
+    "name": "",
+    "delta": -0.00022374232139484723,
+    "se": 0.00594923958746376,
+    "se_boot": 0.004986042571353048,
+    "se_seed": 0.003245432351120735,
+    "n_units": 3169,
+    "n_seeds": 3
+   },
+   "within-build b (match control)": {
+    "name": "",
+    "delta": -0.0022738188549730025,
+    "se": 0.005589872958462725,
+    "se_boot": 0.0036070444965915003,
+    "se_seed": 0.004270352408333742,
+    "n_units": 3169,
+    "n_seeds": 3
+   }
+  },
+  "blend* - LightGBM": {
+   "within-build b": {
+    "name": "",
+    "delta": 0.006068928981517674,
+    "se": 0.010956286441449246,
+    "se_boot": 0.009904743556740517,
+    "se_seed": 0.00468361694230984,
+    "n_units": 3169,
+    "n_seeds": 3
+   },
+   "within-build b (match control)": {
+    "name": "",
+    "delta": 0.0068142019657551275,
+    "se": 0.007791703415431044,
+    "se_boot": 0.007032997314623706,
+    "se_seed": 0.0033537428175898555,
+    "n_units": 3169,
+    "n_seeds": 3
+   }
+  },
+  "LightGBM - champion": {
+   "within-build b": {
+    "name": "",
+    "delta": -0.006292671302912521,
+    "se": 0.015930692997457068,
+    "se_boot": 0.014644727254018377,
+    "se_seed": 0.006270481882171345,
+    "n_units": 3169,
+    "n_seeds": 3
+   },
+   "within-build b (match control)": {
+    "name": "",
+    "delta": -0.00908802082072813,
+    "se": 0.011630492252741112,
+    "se_boot": 0.010447768567240385,
+    "se_seed": 0.005110037378185687,
+    "n_units": 3169,
+    "n_seeds": 3
+   }
+  }
+ },
+ "seconds": 32.44514989852905,
+ "models (match control)": {
+  "champion": {
+   "b per within-sd": 0.027912970005413436,
+   "se per within-sd": 0.01447175597563223,
+   "b raw": 0.8250812280614062,
+   "se raw": 0.42792239337181226,
+   "b per sd": 0.21097405656931567,
+   "within-draft sd": 0.033818976908369075,
+   "score sd": 0.25570095330494425,
+   "within / overall sd": 0.13225987807733036,
+   "LR chi2 (score vs context only)": 3.8547904715815093,
+   "loglik": -8350.686314564402,
+   "seeds": 2,
+   "b by seed": [
+    0.02406320360726426,
+    0.03176273640356261
+   ],
+   "seed se": 0.0038497663981491726
+  },
+  "LightGBM": {
+   "b per within-sd": 0.018824949184685306,
+   "se per within-sd": 0.01480926839534479,
+   "b raw": 0.4824990110455592,
+   "se raw": 0.3791455153988547,
+   "b per sd": 0.13364810414707665,
+   "within-draft sd": 0.03905946671105588,
+   "score sd": 0.2769914571585664,
+   "within / overall sd": 0.14101325402500023,
+   "LR chi2 (score vs context only)": 1.8235315295302523,
+   "loglik": -8351.701944035427,
+   "seeds": 3,
+   "b by seed": [
+    0.025521816364901213,
+    0.015965718554829547,
+    0.014987312634325163
+   ],
+   "seed se": 0.003360324491196706
+  },
+  "blend*": {
+   "b per within-sd": 0.025639151150440433,
+   "se per within-sd": 0.014496685332177538,
+   "b raw": 0.20973932165430506,
+   "se raw": 0.11856469149748168,
+   "b per sd": 0.19869482761576873,
+   "within-draft sd": 0.12226894417402408,
+   "score sd": 0.9473418052875179,
+   "within / overall sd": 0.1290652893090847,
+   "LR chi2 (score vs context only)": 3.225281306542456,
+   "loglik": -8351.001069146922,
+   "seeds": 3,
+   "b by seed": [
+    0.026366625321178606,
+    0.02841367968660685,
+    0.022137148443535842
+   ],
+   "seed se": 0.0018480282387028989
+  }
+ },
+ "within-draft build-score correlation (test, all builds)": {
+  "champion vs LightGBM": 0.7551855622839293,
+  "champion vs blend*": 0.9722661270783857,
+  "LightGBM vs blend*": 0.8869679779997806
+ },
+ "set": "FDN",
+ "alphas": [
+  0.65,
+  0.7,
+  0.65
+ ],
+ "r(per-build blend* at main build, T1 blend*)": [
+  0.9999329487515343,
+  0.9999513439357702,
+  0.9999338458330356
+ ],
+ "total seconds": 39.475374937057495,
+ "peak rss GB": 4.059783935546875
+}

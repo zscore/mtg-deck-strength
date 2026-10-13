@@ -1,0 +1,5 @@
+large-s check: sd(deck) 0.45, sd(u) 0.5, s 0.673, users mean 0.3
+  iid games, no record terms                             val 0.67361  scale 0.78  r(deck) 0.9943  r(deck+skill) 0.6501  Spearman(WR) 0.3478  t 0.000 [0.8s]
+  iid games + free record dummies                        val 0.67258  scale 0.82  r(deck) 0.9938  r(deck+skill) 0.6495  Spearman(WR) 0.3476  t 0.000, m(6-0)-m(0-2) +0.52 [0.4s]
+  iid games + free record dummies + skill bucket (round 4) val 0.64149  scale 0.92  r(deck) 0.9949  r(deck+skill) 0.6501  Spearman(WR) 0.3464  t 0.000, m(6-0)-m(0-2) +1.46 [0.3s]
+  RE + structural pool, s fixed at truth                 val 0.67253  scale 1.03  r(deck) 0.9932  r(deck+skill) 0.6485  Spearman(WR) 0.3469  t 0.497, s 0.673 [3.4s]

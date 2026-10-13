@@ -1,0 +1,291 @@
+{
+ "sets": [
+  "MSH",
+  "EOE",
+  "SOS",
+  "TDM",
+  "FDN",
+  "DFT",
+  "LCI",
+  "FIN",
+  "MKM",
+  "BLB",
+  "DSK",
+  "OTJ"
+ ],
+ "pooled qualifying drafts": 44989,
+ "models": {
+  "- own mull": {
+   "b raw FE": 0.29260637192819516,
+   "se": 0.19153019746278133,
+   "per set": [
+    -0.47123643299654494,
+    1.7041497923027404,
+    0.11057298255908304,
+    -0.09285351086248839,
+    1.1518064583649703,
+    0.3897250637635291,
+    0.012957062008539124,
+    0.3475713637310729,
+    -0.7228392831387325,
+    0.6750340255233868,
+    0.5251165704793864,
+    -0.18062681249708062
+   ]
+  },
+  "LightGBM": {
+   "b raw FE": 0.29584923590823176,
+   "se": 0.15976871595108533,
+   "per set": [
+    -0.8869161281943333,
+    1.2106138711142933,
+    -0.021758552185986824,
+    0.32358928025682665,
+    0.8557552899330026,
+    0.7073979493446269,
+    -0.4475418235108542,
+    0.36137392556601156,
+    -0.19336622002511947,
+    1.1428124901131604,
+    0.28949974856853256,
+    0.1288351073789766
+   ]
+  },
+  "champion": {
+   "b raw FE": 0.3204354910900005,
+   "se": 0.1897737968474325,
+   "per set": [
+    -0.30748480717753346,
+    1.4450178785362229,
+    0.31480921849212906,
+    0.1586370882387336,
+    1.1730187795208038,
+    0.49578470506714534,
+    -0.011051500602683742,
+    0.4127071678806028,
+    -0.7784128744377162,
+    0.6088148869066703,
+    0.5084025888801603,
+    -0.1974366630912336
+   ]
+  },
+  "refit": {
+   "b raw FE": 0.32153262424042495,
+   "se": 0.19392020138844737,
+   "per set": [
+    -0.10483652848770675,
+    1.5154208822367954,
+    0.2914798286714241,
+    -0.15895989983408645,
+    1.2759931895455503,
+    0.5545238580639058,
+    0.10162086391108516,
+    0.1642801941945059,
+    -0.8199799158061646,
+    0.7280235454513205,
+    0.43678477513067904,
+    -0.14403533503299065
+   ]
+  },
+  "split mull": {
+   "b raw FE": 0.3094932323726264,
+   "se": 0.1897858661253167,
+   "per set": [
+    -0.13582180032826974,
+    1.5293281115148065,
+    0.3251197385709369,
+    -0.059810076530906406,
+    1.1652597405197969,
+    0.5069584378998354,
+    -0.04286017073606896,
+    0.39038725146782605,
+    -0.7938904448860603,
+    0.5961507199944522,
+    0.5117456530469986,
+    -0.21399328207684984
+   ]
+  }
+ },
+ "pairs": {
+  "- own mull - champion": {
+   "within-build b": {
+    "re mean": -0.0006152148045420682,
+    "ci": [
+     -0.0028110269746702715,
+     0.0015805973655861351
+    ],
+    "p two-sided": 0.5500059122056924,
+    "p one-sided (B lower)": 0.2750029561028462,
+    "sets better": "6/12",
+    "decide": false,
+    "why": [
+     "FAIL RE mean -0.00062 > 0 with p = 0.5500 < 0.05",
+     "FAIL 6/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.0",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "within-build b (match control)": {
+    "re mean": -0.001624350399354416,
+    "ci": [
+     -0.0035008657822545837,
+     0.0002521649835457518
+    ],
+    "p two-sided": 0.08321204881019838,
+    "p one-sided (B lower)": 0.041606024405099196,
+    "sets better": "3/12",
+    "decide": false,
+    "why": [
+     "FAIL RE mean -0.00162 > 0 with p = 0.0832 < 0.05",
+     "FAIL 3/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.0",
+     "FAIL 2 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "- own mull - split mull": {
+   "within-build b": {
+    "re mean": -9.538674103883445e-05,
+    "ci": [
+     -0.0020289907437973796,
+     0.0018382172617197109
+    ],
+    "p two-sided": 0.9154933287937942,
+    "p one-sided (B lower)": 0.45774666439689704,
+    "sets better": "6/12",
+    "decide": false,
+    "why": [
+     "FAIL RE mean -0.00010 > 0 with p = 0.9155 < 0.05",
+     "FAIL 6/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.0",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "within-build b (match control)": {
+    "re mean": -0.0011617756602800519,
+    "ci": [
+     -0.00283460062786236,
+     0.0005110493073022561
+    ],
+    "p two-sided": 0.1545997938916204,
+    "p one-sided (B lower)": 0.07729989694581019,
+    "sets better": "3/12",
+    "decide": false,
+    "why": [
+     "FAIL RE mean -0.00116 > 0 with p = 0.1546 < 0.05",
+     "FAIL 3/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.0",
+     "FAIL 2 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "champion - LightGBM": {
+   "within-build b": {
+    "re mean": -0.0019086997424479504,
+    "ci": [
+     -0.011644944655534369,
+     0.007827545170638469
+    ],
+    "p two-sided": 0.6744524802094546,
+    "p one-sided (B lower)": 0.33722624010472724,
+    "sets better": "5/12",
+    "decide": false,
+    "why": [
+     "FAIL RE mean -0.00191 > 0 with p = 0.6745 < 0.05",
+     "FAIL 5/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "within-build b (match control)": {
+    "re mean": 0.0017029183505804033,
+    "ci": [
+     -0.005281128197811966,
+     0.008686964898972773
+    ],
+    "p two-sided": 0.602183583895928,
+    "p one-sided (B lower)": 0.698908208052036,
+    "sets better": "9/12",
+    "decide": false,
+    "why": [
+     "FAIL RE mean +0.00170 > 0 with p = 0.6022 < 0.05",
+     "PASS 9/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "refit - champion": {
+   "within-build b": {
+    "re mean": 2.304904889554863e-05,
+    "ci": [
+     -0.0025692925651951666,
+     0.0026153906629862635
+    ],
+    "p two-sided": 0.9847373182089362,
+    "p one-sided (B lower)": 0.507631340895532,
+    "sets better": "7/12",
+    "decide": false,
+    "why": [
+     "FAIL RE mean +0.00002 > 0 with p = 0.9847 < 0.05",
+     "FAIL 7/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "within-build b (match control)": {
+    "re mean": -0.0006185085764055846,
+    "ci": [
+     -0.0023054920766414615,
+     0.001068474923830292
+    ],
+    "p two-sided": 0.4367901825991442,
+    "p one-sided (B lower)": 0.21839509129957213,
+    "sets better": "4/12",
+    "decide": false,
+    "why": [
+     "FAIL RE mean -0.00062 > 0 with p = 0.4368 < 0.05",
+     "FAIL 4/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.0",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "split mull - champion": {
+   "within-build b": {
+    "re mean": -0.0002178951460722247,
+    "ci": [
+     -0.0006103413412033268,
+     0.00017455104905887746
+    ],
+    "p two-sided": 0.24723430468442079,
+    "p one-sided (B lower)": 0.12361715234221038,
+    "sets better": "5/12",
+    "decide": false,
+    "why": [
+     "FAIL RE mean -0.00022 > 0 with p = 0.2472 < 0.05",
+     "FAIL 5/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.0",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "within-build b (match control)": {
+    "re mean": -0.00036888839405890004,
+    "ci": [
+     -0.0007396572381813916,
+     1.8804500635915948e-06
+    ],
+    "p two-sided": 0.050984045215301935,
+    "p one-sided (B lower)": 0.025492022607650933,
+    "sets better": "4/12",
+    "decide": false,
+    "why": [
+     "FAIL RE mean -0.00037 > 0 with p = 0.0510 < 0.05",
+     "FAIL 4/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.0",
+     "FAIL 2 sets significantly worse <= 0"
+    ]
+   }
+  }
+ }
+}

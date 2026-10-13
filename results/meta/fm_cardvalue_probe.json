@@ -1,0 +1,156 @@
+{
+ "sets": [
+  "MSH",
+  "EOE",
+  "SOS",
+  "TDM",
+  "FDN",
+  "DFT",
+  "LCI",
+  "FIN",
+  "MKM",
+  "BLB",
+  "DSK",
+  "OTJ"
+ ],
+ "pairs": {
+  "blend [FM distill 0.003] - champion": {
+   "experienced dl": {
+    "unweighted mean": 0.018633023029877904,
+    "se": 0.009924986249404154,
+    "sets better": "7/12"
+   },
+   "experienced pre": {
+    "unweighted mean": 0.025427230730599604,
+    "se": 0.009427114605848644,
+    "sets better": "8/12"
+   },
+   "match 1 dl": {
+    "unweighted mean": -0.0011225665290245008,
+    "se": 0.015852884910079447,
+    "sets better": "7/12"
+   },
+   "match 1 pre": {
+    "unweighted mean": 0.00516261534505702,
+    "se": 0.013857854245029335,
+    "sets better": "8/12"
+   }
+  },
+  "blend [FM lgbm prior 0.01] - champion": {
+   "experienced dl": {
+    "unweighted mean": 0.03404276353392296,
+    "se": 0.017297075327732236,
+    "sets better": "9/12"
+   },
+   "experienced pre": {
+    "unweighted mean": 0.03522219350386043,
+    "se": 0.01872902224924851,
+    "sets better": "9/12"
+   },
+   "match 1 dl": {
+    "unweighted mean": 0.04558353446825928,
+    "se": 0.024340604662419742,
+    "sets better": "9/12"
+   },
+   "match 1 pre": {
+    "unweighted mean": 0.04948032269188237,
+    "se": 0.02671391474921821,
+    "sets better": "9/12"
+   }
+  },
+  "blend [FM seed 1] - champion": {
+   "experienced dl": {
+    "unweighted mean": -0.00016616088169977652,
+    "se": 0.003934001883493249,
+    "sets better": "6/12"
+   },
+   "experienced pre": {
+    "unweighted mean": -0.004698733949027201,
+    "se": 0.007008866678647364,
+    "sets better": "7/12"
+   },
+   "match 1 dl": {
+    "unweighted mean": 0.008993944556986358,
+    "se": 0.008427779778764658,
+    "sets better": "7/12"
+   },
+   "match 1 pre": {
+    "unweighted mean": 0.00380503726435677,
+    "se": 0.009998596095482072,
+    "sets better": "6/12"
+   }
+  },
+  "blend [LGBM counts linear] - champion": {
+   "experienced dl": {
+    "unweighted mean": 0.0038052874136932737,
+    "se": 0.008596423884034384,
+    "sets better": "6/12"
+   },
+   "experienced pre": {
+    "unweighted mean": 0.004619386915209134,
+    "se": 0.008447538875921274,
+    "sets better": "4/12"
+   },
+   "match 1 dl": {
+    "unweighted mean": 0.010500224328334676,
+    "se": 0.005161275397017135,
+    "sets better": "6/12"
+   },
+   "match 1 pre": {
+    "unweighted mean": 0.011592169062045818,
+    "se": 0.006220085613143293,
+    "sets better": "6/12"
+   }
+  },
+  "blend [LGBM counts] - champion": {
+   "experienced dl": {
+    "re mean": 0.10005756438901325,
+    "ci": [
+     0.06260150778356952,
+     0.137513620994457
+    ],
+    "p": 0.00010622199765589065,
+    "sets better": "12/12"
+   },
+   "experienced pre": {
+    "re mean": 0.12005941586568275,
+    "ci": [
+     0.08608869961566792,
+     0.15403013211569758
+    ],
+    "p": 8.520057185527997e-06,
+    "sets better": "12/12"
+   },
+   "match 1 dl": {
+    "re mean": 0.11414042883377234,
+    "ci": [
+     0.054494609539129726,
+     0.17378624812841498
+    ],
+    "p": 0.0014561334046982277,
+    "sets better": "11/12"
+   },
+   "match 1 pre": {
+    "re mean": 0.13180820329255571,
+    "ci": [
+     0.0722289669396673,
+     0.19138743964544414
+    ],
+    "p": 0.0004952784553721962,
+    "sets better": "11/12"
+   }
+  }
+ },
+ "info": {
+  "ridge alpha": 8.5,
+  "r(linear, LGBM counts) test": 0.8797227692662329,
+  "r(LGBM counts, champion) test": 0.8766262590932555,
+  "r(linear, champion) test": 0.8215603193626236,
+  "r(champion seed 0, seed 1) test": 0.994367645707278,
+  "alpha [LGBM counts]": 0.7583333333333334,
+  "alpha [LGBM counts linear]": 0.9583333333333334,
+  "alpha [FM seed 1]": 0.6166666666666666,
+  "alpha [FM lgbm prior 0.01]": 0.6958333333333334,
+  "alpha [FM distill 0.003]": 0.5625000000000001
+ }
+}

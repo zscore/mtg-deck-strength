@@ -1,0 +1,473 @@
+=== EOE: 104377 drafts, 563418 games [2s]
+  - FM power     alpha* 0.95  r(probe, d) +0.180  r(probe, FM) -0.815
+  skill markers  alpha* 0.95  r(probe, d) +0.127  r(probe, FM) +0.422
+  dl markers     alpha* 0.95  r(probe, d) +0.147  r(probe, FM) +0.370
+  HV             alpha* 0.90  r(probe, d) -0.030  r(probe, FM) +0.571
+  LightGBM       alpha* 0.55  r(probe, d) +0.202  r(probe, FM) +0.903
+  experienced dl         champion -663.962  blend [- FM power] -663.969  blend [skill markers] -663.944  blend [dl markers] -663.943  blend [HV] -663.930  blend [LightGBM] -663.839
+      blend [- FM power] - champion: -0.0065 ± 0.0123
+      blend [skill markers] - champion: +0.0181 ± 0.0176
+      blend [dl markers] - champion: +0.0188 ± 0.0188
+      blend [HV] - champion: +0.0317 ± 0.0155
+      blend [LightGBM] - champion: +0.1230 ± 0.0761
+  all dl                 champion -664.465  blend [- FM power] -664.470  blend [skill markers] -664.453  blend [dl markers] -664.453  blend [HV] -664.432  blend [LightGBM] -664.324
+      blend [- FM power] - champion: -0.0049 ± 0.0122
+      blend [skill markers] - champion: +0.0124 ± 0.0158
+      blend [dl markers] - champion: +0.0126 ± 0.0169
+      blend [HV] - champion: +0.0331 ± 0.0174
+      blend [LightGBM] - champion: +0.1409 ± 0.0837
+  all n_games 1-10 dl    champion -667.387  blend [- FM power] -667.389  blend [skill markers] -667.398  blend [dl markers] -667.400  blend [HV] -667.335  blend [LightGBM] -667.026
+      blend [- FM power] - champion: -0.0023 ± 0.0251
+      blend [skill markers] - champion: -0.0107 ± 0.0416
+      blend [dl markers] - champion: -0.0132 ± 0.0422
+      blend [HV] - champion: +0.0519 ± 0.0973
+      blend [LightGBM] - champion: +0.3613 ± 0.2272
+  all n_games 50 dl      champion -666.991  blend [- FM power] -667.007  blend [skill markers] -666.908  blend [dl markers] -666.908  blend [HV] -666.884  blend [LightGBM] -666.881
+      blend [- FM power] - champion: -0.0159 ± 0.0205
+      blend [skill markers] - champion: +0.0826 ± 0.0295
+      blend [dl markers] - champion: +0.0833 ± 0.0293
+      blend [HV] - champion: +0.1071 ± 0.0533
+      blend [LightGBM] - champion: +0.1102 ± 0.0888
+  all n_games 100 dl     champion -663.129  blend [- FM power] -663.132  blend [skill markers] -663.143  blend [dl markers] -663.143  blend [HV] -663.103  blend [LightGBM] -663.069
+      blend [- FM power] - champion: -0.0028 ± 0.0185
+      blend [skill markers] - champion: -0.0132 ± 0.0196
+      blend [dl markers] - champion: -0.0137 ± 0.0208
+      blend [HV] - champion: +0.0265 ± 0.0215
+      blend [LightGBM] - champion: +0.0605 ± 0.1095
+  all n_games >=500 dl   champion -662.716  blend [- FM power] -662.710  blend [skill markers] -662.646  blend [dl markers] -662.635  blend [HV] -662.896  blend [LightGBM] -662.189
+      blend [- FM power] - champion: +0.0059 ± 0.0411
+      blend [skill markers] - champion: +0.0702 ± 0.0470
+      blend [dl markers] - champion: +0.0810 ± 0.0480
+      blend [HV] - champion: -0.1800 ± 0.0574
+      blend [LightGBM] - champion: +0.5268 ± 0.1965
+EOE done [9s, peak RSS 3.42 GB]
+=== SOS: 107459 drafts, 582712 games [3s]
+  - FM power     alpha* 1.00  r(probe, d) +0.013  r(probe, FM) -0.391
+  skill markers  alpha* 1.00  r(probe, d) +0.283  r(probe, FM) +0.327
+  dl markers     alpha* 1.00  r(probe, d) +0.352  r(probe, FM) +0.230
+  HV             alpha* 0.95  r(probe, d) -0.028  r(probe, FM) +0.510
+  LightGBM       alpha* 0.80  r(probe, d) +0.201  r(probe, FM) +0.889
+  experienced dl         champion -662.230  blend [- FM power] -662.230  blend [skill markers] -662.230  blend [dl markers] -662.230  blend [HV] -662.241  blend [LightGBM] -662.153
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: -0.0106 ± 0.0175
+      blend [LightGBM] - champion: +0.0778 ± 0.0415
+  all dl                 champion -662.803  blend [- FM power] -662.803  blend [skill markers] -662.803  blend [dl markers] -662.803  blend [HV] -662.801  blend [LightGBM] -662.714
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0013 ± 0.0190
+      blend [LightGBM] - champion: +0.0889 ± 0.0436
+  all n_games 1-10 dl    champion -666.690  blend [- FM power] -666.690  blend [skill markers] -666.690  blend [dl markers] -666.690  blend [HV] -666.600  blend [LightGBM] -666.469
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0909 ± 0.0567
+      blend [LightGBM] - champion: +0.2211 ± 0.1087
+  all n_games 50 dl      champion -664.341  blend [- FM power] -664.341  blend [skill markers] -664.341  blend [dl markers] -664.341  blend [HV] -664.485  blend [LightGBM] -664.153
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: -0.1439 ± 0.0275
+      blend [LightGBM] - champion: +0.1877 ± 0.1004
+  all n_games 100 dl     champion -662.334  blend [- FM power] -662.334  blend [skill markers] -662.334  blend [dl markers] -662.334  blend [HV] -662.298  blend [LightGBM] -662.295
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0359 ± 0.0226
+      blend [LightGBM] - champion: +0.0386 ± 0.0484
+  all n_games >=500 dl   champion -657.855  blend [- FM power] -657.855  blend [skill markers] -657.855  blend [dl markers] -657.855  blend [HV] -657.945  blend [LightGBM] -657.779
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: -0.0897 ± 0.0544
+      blend [LightGBM] - champion: +0.0760 ± 0.1558
+SOS done [9s, peak RSS 3.68 GB]
+=== TDM: 101323 drafts, 552428 games [2s]
+  - FM power     alpha* 0.90  r(probe, d) +0.226  r(probe, FM) -0.624
+  skill markers  alpha* 1.00  r(probe, d) +0.269  r(probe, FM) +0.222
+  dl markers     alpha* 1.00  r(probe, d) +0.273  r(probe, FM) +0.164
+  HV             alpha* 1.00  r(probe, d) +0.025  r(probe, FM) +0.576
+  LightGBM       alpha* 0.75  r(probe, d) +0.178  r(probe, FM) +0.908
+  experienced dl         champion -660.239  blend [- FM power] -660.180  blend [skill markers] -660.239  blend [dl markers] -660.239  blend [HV] -660.239  blend [LightGBM] -660.177
+      blend [- FM power] - champion: +0.0589 ± 0.0262
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.0613 ± 0.0587
+  all dl                 champion -661.655  blend [- FM power] -661.599  blend [skill markers] -661.655  blend [dl markers] -661.655  blend [HV] -661.655  blend [LightGBM] -661.582
+      blend [- FM power] - champion: +0.0556 ± 0.0249
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.0725 ± 0.0512
+  all n_games 1-10 dl    champion -672.526  blend [- FM power] -672.491  blend [skill markers] -672.526  blend [dl markers] -672.526  blend [HV] -672.526  blend [LightGBM] -672.359
+      blend [- FM power] - champion: +0.0351 ± 0.1399
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1668 ± 0.1181
+  all n_games 50 dl      champion -662.702  blend [- FM power] -662.739  blend [skill markers] -662.702  blend [dl markers] -662.702  blend [HV] -662.702  blend [LightGBM] -662.708
+      blend [- FM power] - champion: -0.0369 ± 0.0974
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: -0.0059 ± 0.1013
+  all n_games 100 dl     champion -660.486  blend [- FM power] -660.375  blend [skill markers] -660.486  blend [dl markers] -660.486  blend [HV] -660.486  blend [LightGBM] -660.381
+      blend [- FM power] - champion: +0.1107 ± 0.0286
+      blend [skill markers] - champion: -0.0000 ± 0.0000
+      blend [dl markers] - champion: -0.0000 ± 0.0000
+      blend [HV] - champion: -0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1050 ± 0.0619
+  all n_games >=500 dl   champion -653.624  blend [- FM power] -653.738  blend [skill markers] -653.624  blend [dl markers] -653.624  blend [HV] -653.624  blend [LightGBM] -653.742
+      blend [- FM power] - champion: -0.1135 ± 0.1136
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: -0.1175 ± 0.0740
+TDM done [9s, peak RSS 4.37 GB]
+=== FDN: 130935 drafts, 765317 games [3s]
+  - FM power     alpha* 0.95  r(probe, d) +0.135  r(probe, FM) -0.770
+  skill markers  alpha* 0.95  r(probe, d) +0.364  r(probe, FM) +0.293
+  dl markers     alpha* 0.95  r(probe, d) +0.400  r(probe, FM) +0.191
+  HV             alpha* 0.95  r(probe, d) -0.080  r(probe, FM) +0.638
+  LightGBM       alpha* 0.65  r(probe, d) +0.185  r(probe, FM) +0.920
+  experienced dl         champion -661.915  blend [- FM power] -661.917  blend [skill markers] -661.899  blend [dl markers] -661.893  blend [HV] -661.918  blend [LightGBM] -661.785
+      blend [- FM power] - champion: -0.0020 ± 0.0146
+      blend [skill markers] - champion: +0.0162 ± 0.0106
+      blend [dl markers] - champion: +0.0222 ± 0.0130
+      blend [HV] - champion: -0.0027 ± 0.0125
+      blend [LightGBM] - champion: +0.1305 ± 0.0553
+  all dl                 champion -663.364  blend [- FM power] -663.368  blend [skill markers] -663.337  blend [dl markers] -663.334  blend [HV] -663.363  blend [LightGBM] -663.192
+      blend [- FM power] - champion: -0.0045 ± 0.0133
+      blend [skill markers] - champion: +0.0265 ± 0.0113
+      blend [dl markers] - champion: +0.0297 ± 0.0132
+      blend [HV] - champion: +0.0004 ± 0.0096
+      blend [LightGBM] - champion: +0.1719 ± 0.0589
+  all n_games 1-10 dl    champion -672.351  blend [- FM power] -672.373  blend [skill markers] -672.267  blend [dl markers] -672.282  blend [HV] -672.330  blend [LightGBM] -671.950
+      blend [- FM power] - champion: -0.0219 ± 0.0305
+      blend [skill markers] - champion: +0.0837 ± 0.0571
+      blend [dl markers] - champion: +0.0690 ± 0.0597
+      blend [HV] - champion: +0.0204 ± 0.0254
+      blend [LightGBM] - champion: +0.4008 ± 0.1061
+  all n_games 50 dl      champion -664.854  blend [- FM power] -664.862  blend [skill markers] -664.820  blend [dl markers] -664.825  blend [HV] -664.826  blend [LightGBM] -664.722
+      blend [- FM power] - champion: -0.0077 ± 0.0202
+      blend [skill markers] - champion: +0.0338 ± 0.0404
+      blend [dl markers] - champion: +0.0293 ± 0.0424
+      blend [HV] - champion: +0.0280 ± 0.0233
+      blend [LightGBM] - champion: +0.1326 ± 0.1428
+  all n_games 100 dl     champion -661.555  blend [- FM power] -661.552  blend [skill markers] -661.552  blend [dl markers] -661.543  blend [HV] -661.571  blend [LightGBM] -661.461
+      blend [- FM power] - champion: +0.0035 ± 0.0179
+      blend [skill markers] - champion: +0.0030 ± 0.0214
+      blend [dl markers] - champion: +0.0119 ± 0.0235
+      blend [HV] - champion: -0.0154 ± 0.0154
+      blend [LightGBM] - champion: +0.0940 ± 0.0766
+  all n_games >=500 dl   champion -655.219  blend [- FM power] -655.253  blend [skill markers] -655.118  blend [dl markers] -655.104  blend [HV] -655.200  blend [LightGBM] -654.681
+      blend [- FM power] - champion: -0.0337 ± 0.0583
+      blend [skill markers] - champion: +0.1011 ± 0.0645
+      blend [dl markers] - champion: +0.1157 ± 0.0683
+      blend [HV] - champion: +0.0195 ± 0.0293
+      blend [LightGBM] - champion: +0.5386 ± 0.2455
+FDN done [12s, peak RSS 4.37 GB]
+=== DFT: 141166 drafts, 824163 games [3s]
+  - FM power     alpha* 1.00  r(probe, d) +0.125  r(probe, FM) -0.713
+  skill markers  alpha* 1.00  r(probe, d) +0.228  r(probe, FM) +0.262
+  dl markers     alpha* 1.00  r(probe, d) +0.269  r(probe, FM) +0.217
+  HV             alpha* 0.95  r(probe, d) -0.071  r(probe, FM) +0.565
+  LightGBM       alpha* 0.55  r(probe, d) +0.148  r(probe, FM) +0.912
+  experienced dl         champion -662.886  blend [- FM power] -662.886  blend [skill markers] -662.886  blend [dl markers] -662.886  blend [HV] -662.875  blend [LightGBM] -662.719
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0109 ± 0.0138
+      blend [LightGBM] - champion: +0.1666 ± 0.0566
+  all dl                 champion -664.302  blend [- FM power] -664.302  blend [skill markers] -664.302  blend [dl markers] -664.302  blend [HV] -664.286  blend [LightGBM] -664.101
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0157 ± 0.0112
+      blend [LightGBM] - champion: +0.2012 ± 0.0504
+  all n_games 1-10 dl    champion -675.397  blend [- FM power] -675.397  blend [skill markers] -675.397  blend [dl markers] -675.397  blend [HV] -675.341  blend [LightGBM] -674.972
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0558 ± 0.0270
+      blend [LightGBM] - champion: +0.4252 ± 0.1695
+  all n_games 50 dl      champion -664.746  blend [- FM power] -664.746  blend [skill markers] -664.746  blend [dl markers] -664.746  blend [HV] -664.714  blend [LightGBM] -664.450
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0312 ± 0.0390
+      blend [LightGBM] - champion: +0.2951 ± 0.1436
+  all n_games 100 dl     champion -662.857  blend [- FM power] -662.857  blend [skill markers] -662.857  blend [dl markers] -662.857  blend [HV] -662.847  blend [LightGBM] -662.736
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0103 ± 0.0203
+      blend [LightGBM] - champion: +0.1212 ± 0.0651
+  all n_games >=500 dl   champion -657.014  blend [- FM power] -657.014  blend [skill markers] -657.014  blend [dl markers] -657.014  blend [HV] -657.063  blend [LightGBM] -656.663
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: -0.0489 ± 0.0507
+      blend [LightGBM] - champion: +0.3514 ± 0.1864
+DFT done [13s, peak RSS 4.78 GB]
+=== LCI: 134970 drafts, 793671 games [3s]
+  - FM power     alpha* 0.95  r(probe, d) +0.185  r(probe, FM) -0.780
+  skill markers  alpha* 0.95  r(probe, d) +0.175  r(probe, FM) +0.338
+  dl markers     alpha* 0.95  r(probe, d) +0.212  r(probe, FM) +0.282
+  HV             alpha* 0.90  r(probe, d) -0.118  r(probe, FM) +0.691
+  LightGBM       alpha* 0.65  r(probe, d) +0.152  r(probe, FM) +0.927
+  experienced dl         champion -660.010  blend [- FM power] -660.009  blend [skill markers] -660.007  blend [dl markers] -660.008  blend [HV] -660.021  blend [LightGBM] -659.888
+      blend [- FM power] - champion: +0.0010 ± 0.0128
+      blend [skill markers] - champion: +0.0032 ± 0.0181
+      blend [dl markers] - champion: +0.0023 ± 0.0189
+      blend [HV] - champion: -0.0104 ± 0.0276
+      blend [LightGBM] - champion: +0.1228 ± 0.0592
+  all dl                 champion -660.998  blend [- FM power] -660.999  blend [skill markers] -661.002  blend [dl markers] -661.004  blend [HV] -661.010  blend [LightGBM] -660.889
+      blend [- FM power] - champion: -0.0007 ± 0.0116
+      blend [skill markers] - champion: -0.0041 ± 0.0161
+      blend [dl markers] - champion: -0.0059 ± 0.0168
+      blend [HV] - champion: -0.0117 ± 0.0300
+      blend [LightGBM] - champion: +0.1086 ± 0.0589
+  all n_games 1-10 dl    champion -668.426  blend [- FM power] -668.433  blend [skill markers] -668.495  blend [dl markers] -668.504  blend [HV] -668.460  blend [LightGBM] -668.485
+      blend [- FM power] - champion: -0.0074 ± 0.0345
+      blend [skill markers] - champion: -0.0694 ± 0.0390
+      blend [dl markers] - champion: -0.0780 ± 0.0377
+      blend [HV] - champion: -0.0342 ± 0.0675
+      blend [LightGBM] - champion: -0.0594 ± 0.0882
+  all n_games 50 dl      champion -662.205  blend [- FM power] -662.191  blend [skill markers] -662.231  blend [dl markers] -662.237  blend [HV] -662.368  blend [LightGBM] -662.258
+      blend [- FM power] - champion: +0.0142 ± 0.0234
+      blend [skill markers] - champion: -0.0264 ± 0.0455
+      blend [dl markers] - champion: -0.0321 ± 0.0472
+      blend [HV] - champion: -0.1635 ± 0.0606
+      blend [LightGBM] - champion: -0.0534 ± 0.0908
+  all n_games 100 dl     champion -659.402  blend [- FM power] -659.418  blend [skill markers] -659.388  blend [dl markers] -659.384  blend [HV] -659.353  blend [LightGBM] -659.196
+      blend [- FM power] - champion: -0.0154 ± 0.0168
+      blend [skill markers] - champion: +0.0147 ± 0.0246
+      blend [dl markers] - champion: +0.0182 ± 0.0247
+      blend [HV] - champion: +0.0494 ± 0.0339
+      blend [LightGBM] - champion: +0.2065 ± 0.0717
+  all n_games >=500 dl   champion -659.286  blend [- FM power] -659.184  blend [skill markers] -659.287  blend [dl markers] -659.313  blend [HV] -659.410  blend [LightGBM] -659.338
+      blend [- FM power] - champion: +0.1020 ± 0.0434
+      blend [skill markers] - champion: -0.0012 ± 0.0654
+      blend [dl markers] - champion: -0.0277 ± 0.0699
+      blend [HV] - champion: -0.1247 ± 0.0756
+      blend [LightGBM] - champion: -0.0526 ± 0.1578
+LCI done [13s, peak RSS 4.83 GB]
+=== FIN: 140237 drafts, 769659 games [4s]
+  - FM power     alpha* 1.00  r(probe, d) +0.223  r(probe, FM) -0.682
+  skill markers  alpha* 1.00  r(probe, d) +0.337  r(probe, FM) +0.378
+  dl markers     alpha* 1.00  r(probe, d) +0.350  r(probe, FM) +0.319
+  HV             alpha* 1.00  r(probe, d) -0.068  r(probe, FM) +0.558
+  LightGBM       alpha* 0.80  r(probe, d) +0.184  r(probe, FM) +0.922
+  experienced dl         champion -660.080  blend [- FM power] -660.080  blend [skill markers] -660.080  blend [dl markers] -660.080  blend [HV] -660.080  blend [LightGBM] -659.964
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1158 ± 0.0220
+  all dl                 champion -660.793  blend [- FM power] -660.793  blend [skill markers] -660.793  blend [dl markers] -660.793  blend [HV] -660.793  blend [LightGBM] -660.677
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1158 ± 0.0167
+  all n_games 1-10 dl    champion -668.219  blend [- FM power] -668.219  blend [skill markers] -668.219  blend [dl markers] -668.219  blend [HV] -668.219  blend [LightGBM] -668.095
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1235 ± 0.0905
+  all n_games 50 dl      champion -665.601  blend [- FM power] -665.601  blend [skill markers] -665.601  blend [dl markers] -665.601  blend [HV] -665.601  blend [LightGBM] -665.385
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.2161 ± 0.0966
+  all n_games 100 dl     champion -660.103  blend [- FM power] -660.103  blend [skill markers] -660.103  blend [dl markers] -660.103  blend [HV] -660.103  blend [LightGBM] -660.013
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.0905 ± 0.0171
+  all n_games >=500 dl   champion -651.975  blend [- FM power] -651.975  blend [skill markers] -651.975  blend [dl markers] -651.975  blend [HV] -651.975  blend [LightGBM] -651.853
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1218 ± 0.0877
+FIN done [15s, peak RSS 4.89 GB]
+=== MKM: 157553 drafts, 919942 games [4s]
+  - FM power     alpha* 0.95  r(probe, d) +0.188  r(probe, FM) -0.691
+  skill markers  alpha* 1.00  r(probe, d) +0.184  r(probe, FM) +0.472
+  dl markers     alpha* 1.00  r(probe, d) +0.198  r(probe, FM) +0.436
+  HV             alpha* 1.00  r(probe, d) -0.131  r(probe, FM) +0.646
+  LightGBM       alpha* 0.65  r(probe, d) +0.202  r(probe, FM) +0.912
+  experienced dl         champion -664.730  blend [- FM power] -664.741  blend [skill markers] -664.730  blend [dl markers] -664.730  blend [HV] -664.730  blend [LightGBM] -664.544
+      blend [- FM power] - champion: -0.0112 ± 0.0104
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1866 ± 0.0455
+  all dl                 champion -665.424  blend [- FM power] -665.440  blend [skill markers] -665.424  blend [dl markers] -665.424  blend [HV] -665.424  blend [LightGBM] -665.241
+      blend [- FM power] - champion: -0.0166 ± 0.0113
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1829 ± 0.0456
+  all n_games 1-10 dl    champion -671.481  blend [- FM power] -671.549  blend [skill markers] -671.481  blend [dl markers] -671.481  blend [HV] -671.481  blend [LightGBM] -671.333
+      blend [- FM power] - champion: -0.0676 ± 0.0455
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1486 ± 0.0745
+  all n_games 50 dl      champion -666.770  blend [- FM power] -666.673  blend [skill markers] -666.770  blend [dl markers] -666.770  blend [HV] -666.770  blend [LightGBM] -666.666
+      blend [- FM power] - champion: +0.0963 ± 0.0277
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1035 ± 0.0972
+  all n_games 100 dl     champion -663.718  blend [- FM power] -663.743  blend [skill markers] -663.718  blend [dl markers] -663.718  blend [HV] -663.718  blend [LightGBM] -663.541
+      blend [- FM power] - champion: -0.0243 ± 0.0113
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1778 ± 0.0552
+  all n_games >=500 dl   champion -667.292  blend [- FM power] -667.360  blend [skill markers] -667.292  blend [dl markers] -667.292  blend [HV] -667.292  blend [LightGBM] -666.956
+      blend [- FM power] - champion: -0.0680 ± 0.0234
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.3352 ± 0.1243
+MKM done [14s, peak RSS 4.97 GB]
+=== BLB: 154585 drafts, 898354 games [4s]
+  - FM power     alpha* 1.00  r(probe, d) +0.181  r(probe, FM) -0.718
+  skill markers  alpha* 1.00  r(probe, d) +0.202  r(probe, FM) +0.350
+  dl markers     alpha* 1.00  r(probe, d) +0.289  r(probe, FM) +0.245
+  HV             alpha* 0.95  r(probe, d) -0.117  r(probe, FM) +0.634
+  LightGBM       alpha* 0.75  r(probe, d) +0.192  r(probe, FM) +0.914
+  experienced dl         champion -662.208  blend [- FM power] -662.208  blend [skill markers] -662.208  blend [dl markers] -662.208  blend [HV] -662.212  blend [LightGBM] -662.068
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: -0.0042 ± 0.0141
+      blend [LightGBM] - champion: +0.1400 ± 0.0263
+  all dl                 champion -662.486  blend [- FM power] -662.486  blend [skill markers] -662.486  blend [dl markers] -662.486  blend [HV] -662.486  blend [LightGBM] -662.347
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: -0.0007 ± 0.0127
+      blend [LightGBM] - champion: +0.1385 ± 0.0239
+  all n_games 1-10 dl    champion -664.241  blend [- FM power] -664.241  blend [skill markers] -664.241  blend [dl markers] -664.241  blend [HV] -664.225  blend [LightGBM] -664.077
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0159 ± 0.0302
+      blend [LightGBM] - champion: +0.1640 ± 0.0759
+  all n_games 50 dl      champion -663.289  blend [- FM power] -663.289  blend [skill markers] -663.289  blend [dl markers] -663.289  blend [HV] -663.272  blend [LightGBM] -663.093
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0170 ± 0.0348
+      blend [LightGBM] - champion: +0.1959 ± 0.0468
+  all n_games 100 dl     champion -662.271  blend [- FM power] -662.271  blend [skill markers] -662.271  blend [dl markers] -662.271  blend [HV] -662.261  blend [LightGBM] -662.164
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0102 ± 0.0162
+      blend [LightGBM] - champion: +0.1069 ± 0.0407
+  all n_games >=500 dl   champion -658.503  blend [- FM power] -658.503  blend [skill markers] -658.503  blend [dl markers] -658.503  blend [HV] -658.690  blend [LightGBM] -658.291
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: -0.1868 ± 0.0589
+      blend [LightGBM] - champion: +0.2124 ± 0.1702
+BLB done [14s, peak RSS 4.97 GB]
+=== DSK: 167672 drafts, 977322 games [4s]
+  - FM power     alpha* 1.00  r(probe, d) +0.141  r(probe, FM) -0.711
+  skill markers  alpha* 0.95  r(probe, d) +0.342  r(probe, FM) +0.325
+  dl markers     alpha* 0.90  r(probe, d) +0.392  r(probe, FM) +0.262
+  HV             alpha* 1.00  r(probe, d) -0.049  r(probe, FM) +0.587
+  LightGBM       alpha* 0.55  r(probe, d) +0.177  r(probe, FM) +0.910
+  experienced dl         champion -665.492  blend [- FM power] -665.492  blend [skill markers] -665.500  blend [dl markers] -665.542  blend [HV] -665.492  blend [LightGBM] -665.513
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: -0.0077 ± 0.0222
+      blend [dl markers] - champion: -0.0502 ± 0.0463
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: -0.0212 ± 0.0784
+  all dl                 champion -666.227  blend [- FM power] -666.227  blend [skill markers] -666.233  blend [dl markers] -666.274  blend [HV] -666.227  blend [LightGBM] -666.205
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: -0.0060 ± 0.0201
+      blend [dl markers] - champion: -0.0475 ± 0.0413
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.0218 ± 0.0650
+  all n_games 1-10 dl    champion -672.254  blend [- FM power] -672.254  blend [skill markers] -672.245  blend [dl markers] -672.276  blend [HV] -672.254  blend [LightGBM] -671.907
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0092 ± 0.0526
+      blend [dl markers] - champion: -0.0219 ± 0.1087
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.3468 ± 0.1165
+  all n_games 50 dl      champion -667.123  blend [- FM power] -667.123  blend [skill markers] -667.155  blend [dl markers] -667.228  blend [HV] -667.123  blend [LightGBM] -667.175
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: -0.0318 ± 0.0438
+      blend [dl markers] - champion: -0.1043 ± 0.0927
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: -0.0520 ± 0.1655
+  all n_games 100 dl     champion -665.787  blend [- FM power] -665.787  blend [skill markers] -665.791  blend [dl markers] -665.832  blend [HV] -665.787  blend [LightGBM] -665.816
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: -0.0037 ± 0.0233
+      blend [dl markers] - champion: -0.0448 ± 0.0473
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: -0.0291 ± 0.0627
+  all n_games >=500 dl   champion -660.467  blend [- FM power] -660.467  blend [skill markers] -660.458  blend [dl markers] -660.457  blend [HV] -660.467  blend [LightGBM] -660.351
+      blend [- FM power] - champion: +0.0000 ± 0.0000
+      blend [skill markers] - champion: +0.0083 ± 0.0419
+      blend [dl markers] - champion: +0.0095 ± 0.0923
+      blend [HV] - champion: +0.0000 ± 0.0000
+      blend [LightGBM] - champion: +0.1153 ± 0.1567
+DSK done [15s, peak RSS 5.21 GB]
+=== OTJ: 195312 drafts, 1132415 games [6s]
+  - FM power     alpha* 0.95  r(probe, d) +0.190  r(probe, FM) -0.768
+  skill markers  alpha* 1.00  r(probe, d) +0.167  r(probe, FM) +0.408
+  dl markers     alpha* 1.00  r(probe, d) +0.218  r(probe, FM) +0.370
+  HV             alpha* 0.95  r(probe, d) -0.139  r(probe, FM) +0.581
+  LightGBM       alpha* 0.65  r(probe, d) +0.221  r(probe, FM) +0.915
+  experienced dl         champion -666.868  blend [- FM power] -666.863  blend [skill markers] -666.868  blend [dl markers] -666.868  blend [HV] -666.871  blend [LightGBM] -666.723
+      blend [- FM power] - champion: +0.0049 ± 0.0108
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: -0.0030 ± 0.0095
+      blend [LightGBM] - champion: +0.1446 ± 0.0518
+  all dl                 champion -667.705  blend [- FM power] -667.703  blend [skill markers] -667.705  blend [dl markers] -667.705  blend [HV] -667.705  blend [LightGBM] -667.553
+      blend [- FM power] - champion: +0.0015 ± 0.0109
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: -0.0006 ± 0.0116
+      blend [LightGBM] - champion: +0.1512 ± 0.0526
+  all n_games 1-10 dl    champion -675.919  blend [- FM power] -675.947  blend [skill markers] -675.919  blend [dl markers] -675.919  blend [HV] -675.897  blend [LightGBM] -675.722
+      blend [- FM power] - champion: -0.0284 ± 0.0244
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0215 ± 0.0386
+      blend [LightGBM] - champion: +0.1967 ± 0.0922
+  all n_games 50 dl      champion -667.525  blend [- FM power] -667.518  blend [skill markers] -667.525  blend [dl markers] -667.525  blend [HV] -667.467  blend [LightGBM] -667.377
+      blend [- FM power] - champion: +0.0066 ± 0.0184
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0578 ± 0.0285
+      blend [LightGBM] - champion: +0.1476 ± 0.0466
+  all n_games 100 dl     champion -667.309  blend [- FM power] -667.302  blend [skill markers] -667.309  blend [dl markers] -667.309  blend [HV] -667.326  blend [LightGBM] -667.192
+      blend [- FM power] - champion: +0.0071 ± 0.0138
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: -0.0173 ± 0.0134
+      blend [LightGBM] - champion: +0.1173 ± 0.0494
+  all n_games >=500 dl   champion -663.659  blend [- FM power] -663.671  blend [skill markers] -663.659  blend [dl markers] -663.659  blend [HV] -663.654  blend [LightGBM] -663.354
+      blend [- FM power] - champion: -0.0120 ± 0.0238
+      blend [skill markers] - champion: +0.0000 ± 0.0000
+      blend [dl markers] - champion: +0.0000 ± 0.0000
+      blend [HV] - champion: +0.0056 ± 0.0245
+      blend [LightGBM] - champion: +0.3054 ± 0.1507
+OTJ done [18s, peak RSS 5.21 GB]

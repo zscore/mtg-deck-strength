@@ -1,0 +1,229 @@
+  using round 4 game_logit as a covariate
+MSH: loaded [5s]
+  377376 games, 1.0000 valid [0s]
+  hand values on train games [10s]
+  hand values on test games [15s]
+  deck model lambda 0.03 val 0.65976 [52s]
+    GP WR            r +0.283  rho +0.274  skill tilt +0.872  (n=250)
+    OH WR            r +0.511  rho +0.485  skill tilt +0.752  (n=250)
+    GD WR            r +0.268  rho +0.214  skill tilt +0.751  (n=250)
+    GIH WR           r +0.399  rho +0.357  skill tilt +0.797  (n=250)
+    IWD              r +0.449  rho +0.407  skill tilt +0.463  (n=250)
+    deck model w     r +0.388  rho +0.340  skill tilt +0.240  (n=250)
+    HV train         r +0.607  rho +0.587  skill tilt +0.333  (n=250)
+    HV train shrunk  r +0.619  rho +0.601  skill tilt +0.318  (n=250)
+  deck vs hand: slope 0.022 (EIV 0.025), implied lambda -0.56
+    prior arm ridge              lam 0.03 kappa +0.000 test 0.65487  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.03 kappa +0.121 test 0.65478  vs ridge -0.085 ± 0.129
+    prior arm kappa*HV only      lam 0 kappa +0.093 test 0.65480  vs ridge -0.071 ± 0.173
+MSH done [134s]
+  using round 4 game_logit as a covariate
+BLB: loaded [8s]
+  898354 games, 0.8712 valid [0s]
+  hand values on train games [21s]
+  hand values on test games [30s]
+  deck model lambda 0.03 val 0.65820 [107s]
+    GP WR            r +0.557  rho +0.546  skill tilt +0.610  (n=252)
+    OH WR            r +0.807  rho +0.792  skill tilt +0.483  (n=252)
+    GD WR            r +0.454  rho +0.390  skill tilt +0.588  (n=252)
+    GIH WR           r +0.684  rho +0.660  skill tilt +0.607  (n=252)
+    IWD              r +0.658  rho +0.629  skill tilt +0.397  (n=252)
+    deck model w     r +0.433  rho +0.469  skill tilt +0.054  (n=252)
+    HV train         r +0.853  rho +0.863  skill tilt +0.154  (n=252)
+    HV train shrunk  r +0.836  rho +0.859  skill tilt +0.104  (n=252)
+  deck vs hand: slope 0.008 (EIV 0.008), implied lambda -0.70
+    prior arm ridge              lam 0.03 kappa +0.000 test 0.65617  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.03 kappa +0.048 test 0.65620  vs ridge +0.027 ± 0.046
+    prior arm kappa*HV only      lam 0 kappa +0.028 test 0.65610  vs ridge -0.074 ± 0.062
+BLB done [276s]
+  using round 4 game_logit as a covariate
+DFT: loaded [8s]
+  824163 games, 1.0000 valid [0s]
+  hand values on train games [22s]
+  hand values on test games [31s]
+  deck model lambda 0.003 val 0.66135 [113s]
+    GP WR            r +0.538  rho +0.506  skill tilt +0.774  (n=245)
+    OH WR            r +0.795  rho +0.766  skill tilt +0.653  (n=245)
+    GD WR            r +0.393  rho +0.324  skill tilt +0.670  (n=245)
+    GIH WR           r +0.632  rho +0.590  skill tilt +0.716  (n=245)
+    IWD              r +0.622  rho +0.573  skill tilt +0.454  (n=245)
+    deck model w     r +0.589  rho +0.510  skill tilt +0.232  (n=245)
+    HV train         r +0.854  rho +0.817  skill tilt +0.222  (n=245)
+    HV train shrunk  r +0.863  rho +0.823  skill tilt +0.202  (n=245)
+  deck vs hand: slope 0.048 (EIV 0.051), implied lambda -0.47
+    prior arm ridge              lam 0.003 kappa +0.000 test 0.65853  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.003 kappa +0.083 test 0.65851  vs ridge -0.021 ± 0.031
+    prior arm kappa*HV only      lam 0 kappa +0.031 test 0.65851  vs ridge -0.025 ± 0.084
+DFT done [291s]
+  using round 4 game_logit as a covariate
+DSK: loaded [9s]
+  977322 games, 0.8857 valid [0s]
+  hand values on train games [23s]
+  hand values on test games [33s]
+  deck model lambda 0.03 val 0.66279 [118s]
+    GP WR            r +0.438  rho +0.481  skill tilt +0.696  (n=250)
+    OH WR            r +0.706  rho +0.692  skill tilt +0.666  (n=250)
+    GD WR            r +0.430  rho +0.366  skill tilt +0.612  (n=250)
+    GIH WR           r +0.605  rho +0.577  skill tilt +0.681  (n=250)
+    IWD              r +0.634  rho +0.541  skill tilt +0.395  (n=250)
+    deck model w     r +0.429  rho +0.448  skill tilt +0.087  (n=250)
+    HV train         r +0.791  rho +0.769  skill tilt +0.428  (n=250)
+    HV train shrunk  r +0.816  rho +0.787  skill tilt +0.375  (n=250)
+  deck vs hand: slope 0.008 (EIV 0.008), implied lambda -0.70
+    prior arm ridge              lam 0.03 kappa +0.000 test 0.66225  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.03 kappa +0.044 test 0.66225  vs ridge -0.007 ± 0.042
+    prior arm kappa*HV only      lam 0 kappa +0.030 test 0.66221  vs ridge -0.044 ± 0.060
+DSK done [309s]
+  using round 4 game_logit as a covariate
+EOE: loaded [7s]
+  563418 games, 1.0000 valid [0s]
+  hand values on train games [15s]
+  hand values on test games [21s]
+  deck model lambda 0.03 val 0.65805 [118s]
+    GP WR            r +0.622  rho +0.583  skill tilt +0.715  (n=240)
+    OH WR            r +0.791  rho +0.753  skill tilt +0.554  (n=240)
+    GD WR            r +0.463  rho +0.363  skill tilt +0.579  (n=240)
+    GIH WR           r +0.671  rho +0.601  skill tilt +0.629  (n=240)
+    IWD              r +0.627  rho +0.529  skill tilt +0.372  (n=240)
+    deck model w     r +0.480  rho +0.460  skill tilt +0.120  (n=240)
+    HV train         r +0.791  rho +0.758  skill tilt +0.129  (n=240)
+    HV train shrunk  r +0.782  rho +0.757  skill tilt +0.088  (n=240)
+  deck vs hand: slope 0.018 (EIV 0.019), implied lambda -0.60
+    prior arm ridge              lam 0.03 kappa +0.000 test 0.65797  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.03 kappa +0.079 test 0.65792  vs ridge -0.055 ± 0.077
+    prior arm kappa*HV only      lam 0 kappa +0.051 test 0.65788  vs ridge -0.094 ± 0.098
+EOE done [464s]
+  using round 4 game_logit as a covariate
+FDN: loaded [82s]
+  765317 games, 1.0000 valid [1s]
+  hand values on train games [94s]
+  hand values on test games [136s]
+  deck model lambda 0.03 val 0.66088 [368s]
+    GP WR            r +0.583  rho +0.568  skill tilt +0.747  (n=253)
+    OH WR            r +0.763  rho +0.756  skill tilt +0.666  (n=253)
+    GD WR            r +0.472  rho +0.426  skill tilt +0.623  (n=253)
+    GIH WR           r +0.660  rho +0.638  skill tilt +0.710  (n=253)
+    IWD              r +0.618  rho +0.608  skill tilt +0.463  (n=253)
+    deck model w     r +0.456  rho +0.506  skill tilt -0.062  (n=253)
+    HV train         r +0.801  rho +0.810  skill tilt +0.381  (n=253)
+    HV train shrunk  r +0.796  rho +0.816  skill tilt +0.327  (n=253)
+  deck vs hand: slope 0.010 (EIV 0.011), implied lambda -0.66
+    prior arm ridge              lam 0.03 kappa +0.000 test 0.65781  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.03 kappa +0.057 test 0.65780  vs ridge -0.011 ± 0.052
+    prior arm kappa*HV only      lam 0 kappa +0.044 test 0.65777  vs ridge -0.037 ± 0.079
+FDN done [619s]
+  using round 4 game_logit as a covariate
+FIN: loaded [12s]
+  769659 games, 1.0000 valid [0s]
+  hand values on train games [23s]
+  hand values on test games [39s]
+  deck model lambda 0.03 val 0.65552 [116s]
+    GP WR            r +0.545  rho +0.499  skill tilt +0.740  (n=295)
+    OH WR            r +0.733  rho +0.703  skill tilt +0.568  (n=295)
+    GD WR            r +0.440  rho +0.390  skill tilt +0.654  (n=295)
+    GIH WR           r +0.621  rho +0.575  skill tilt +0.682  (n=295)
+    IWD              r +0.584  rho +0.560  skill tilt +0.448  (n=295)
+    deck model w     r +0.437  rho +0.489  skill tilt +0.169  (n=295)
+    HV train         r +0.744  rho +0.723  skill tilt +0.172  (n=295)
+    HV train shrunk  r +0.754  rho +0.729  skill tilt +0.154  (n=295)
+  deck vs hand: slope 0.009 (EIV 0.010), implied lambda -0.66
+    prior arm ridge              lam 0.03 kappa +0.000 test 0.65754  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.03 kappa +0.056 test 0.65760  vs ridge +0.066 ± 0.051
+    prior arm kappa*HV only      lam 0 kappa +0.035 test 0.65759  vs ridge +0.056 ± 0.073
+FIN done [285s]
+  using round 4 game_logit as a covariate
+LCI: loaded [9s]
+  793671 games, 0.8854 valid [0s]
+  hand values on train games [20s]
+  hand values on test games [28s]
+  deck model lambda 0.03 val 0.65652 [99s]
+    GP WR            r +0.556  rho +0.513  skill tilt +0.671  (n=260)
+    OH WR            r +0.791  rho +0.744  skill tilt +0.541  (n=260)
+    GD WR            r +0.578  rho +0.509  skill tilt +0.523  (n=260)
+    GIH WR           r +0.722  rho +0.671  skill tilt +0.575  (n=260)
+    IWD              r +0.699  rho +0.663  skill tilt +0.130  (n=260)
+    deck model w     r +0.388  rho +0.400  skill tilt +0.019  (n=260)
+    HV train         r +0.838  rho +0.832  skill tilt +0.124  (n=260)
+    HV train shrunk  r +0.830  rho +0.834  skill tilt +0.100  (n=260)
+  deck vs hand: slope 0.008 (EIV 0.009), implied lambda -0.68
+    prior arm ridge              lam 0.03 kappa +0.000 test 0.65551  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.03 kappa +0.055 test 0.65551  vs ridge +0.004 ± 0.054
+    prior arm kappa*HV only      lam 0 kappa +0.039 test 0.65548  vs ridge -0.030 ± 0.076
+LCI done [254s]
+  using round 4 game_logit as a covariate
+MKM: loaded [10s]
+  919942 games, 0.8857 valid [0s]
+  hand values on train games [22s]
+  hand values on test games [32s]
+  deck model lambda 0.03 val 0.65931 [112s]
+    GP WR            r +0.523  rho +0.516  skill tilt +0.715  (n=265)
+    OH WR            r +0.772  rho +0.743  skill tilt +0.597  (n=264)
+    GD WR            r +0.542  rho +0.517  skill tilt +0.618  (n=265)
+    GIH WR           r +0.703  rho +0.685  skill tilt +0.688  (n=265)
+    IWD              r +0.703  rho +0.667  skill tilt +0.324  (n=265)
+    deck model w     r +0.433  rho +0.453  skill tilt +0.039  (n=265)
+    HV train         r +0.813  rho +0.778  skill tilt +0.196  (n=265)
+    HV train shrunk  r +0.816  rho +0.782  skill tilt +0.191  (n=265)
+  deck vs hand: slope 0.006 (EIV 0.008), implied lambda -0.68
+    prior arm ridge              lam 0.03 kappa +0.000 test 0.66054  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.03 kappa +0.047 test 0.66055  vs ridge +0.018 ± 0.039
+    prior arm kappa*HV only      lam 0 kappa +0.035 test 0.66052  vs ridge -0.011 ± 0.062
+MKM done [413s]
+  using round 4 game_logit as a covariate
+OTJ: loaded [22s]
+  1132415 games, 0.8850 valid [0s]
+  hand values on train games [48s]
+  hand values on test games [66s]
+  deck model lambda 0.03 val 0.66339 [402s]
+    GP WR            r +0.507  rho +0.462  skill tilt +0.732  (n=321)
+    OH WR            r +0.710  rho +0.691  skill tilt +0.675  (n=321)
+    GD WR            r +0.406  rho +0.346  skill tilt +0.660  (n=321)
+    GIH WR           r +0.593  rho +0.549  skill tilt +0.721  (n=321)
+    IWD              r +0.514  rho +0.492  skill tilt +0.396  (n=321)
+    deck model w     r +0.389  rho +0.423  skill tilt +0.011  (n=321)
+    HV train         r +0.742  rho +0.749  skill tilt +0.311  (n=321)
+    HV train shrunk  r +0.752  rho +0.755  skill tilt +0.259  (n=321)
+  deck vs hand: slope 0.006 (EIV 0.006), implied lambda -0.69
+    prior arm ridge              lam 0.03 kappa +0.000 test 0.66461  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.03 kappa +0.046 test 0.66461  vs ridge -0.001 ± 0.033
+    prior arm kappa*HV only      lam 0 kappa +0.037 test 0.66461  vs ridge -0.001 ± 0.044
+OTJ done [1084s]
+  using round 4 game_logit as a covariate
+SOS: loaded [7s]
+  582712 games, 1.0000 valid [0s]
+  hand values on train games [17s]
+  hand values on test games [24s]
+  deck model lambda 0.03 val 0.65629 [83s]
+    GP WR            r +0.376  rho +0.388  skill tilt +0.758  (n=286)
+    OH WR            r +0.621  rho +0.628  skill tilt +0.664  (n=286)
+    GD WR            r +0.332  rho +0.346  skill tilt +0.721  (n=286)
+    GIH WR           r +0.496  rho +0.516  skill tilt +0.769  (n=286)
+    IWD              r +0.475  rho +0.473  skill tilt +0.476  (n=286)
+    deck model w     r +0.380  rho +0.385  skill tilt +0.153  (n=286)
+    HV train         r +0.709  rho +0.697  skill tilt +0.310  (n=286)
+    HV train shrunk  r +0.720  rho +0.708  skill tilt +0.272  (n=286)
+  deck vs hand: slope 0.011 (EIV 0.013), implied lambda -0.60
+    prior arm ridge              lam 0.03 kappa +0.000 test 0.65815  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.03 kappa +0.060 test 0.65820  vs ridge +0.046 ± 0.055
+    prior arm kappa*HV only      lam 0 kappa +0.037 test 0.65814  vs ridge -0.017 ± 0.070
+SOS done [215s]
+  using round 4 game_logit as a covariate
+TDM: loaded [7s]
+  552428 games, 1.0000 valid [0s]
+  hand values on train games [16s]
+  hand values on test games [23s]
+  deck model lambda 0.03 val 0.65835 [81s]
+    GP WR            r +0.631  rho +0.528  skill tilt +0.651  (n=244)
+    OH WR            r +0.782  rho +0.719  skill tilt +0.519  (n=244)
+    GD WR            r +0.431  rho +0.319  skill tilt +0.542  (n=244)
+    GIH WR           r +0.635  rho +0.555  skill tilt +0.593  (n=244)
+    IWD              r +0.513  rho +0.447  skill tilt +0.400  (n=244)
+    deck model w     r +0.480  rho +0.418  skill tilt -0.072  (n=244)
+    HV train         r +0.778  rho +0.747  skill tilt +0.224  (n=244)
+    HV train shrunk  r +0.759  rho +0.745  skill tilt +0.208  (n=244)
+  deck vs hand: slope 0.015 (EIV 0.016), implied lambda -0.62
+    prior arm ridge              lam 0.03 kappa +0.000 test 0.65675  vs ridge +0.000 ± 0.000
+    prior arm ridge + kappa*HV   lam 0.03 kappa +0.070 test 0.65679  vs ridge +0.036 ± 0.062
+    prior arm kappa*HV only      lam 0 kappa +0.044 test 0.65679  vs ridge +0.037 ± 0.086
+TDM done [205s]
+ALLDONE

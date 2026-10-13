@@ -1,0 +1,206 @@
+{
+ "created": "2026-10-13T04:51:44",
+ "note": "after T1-T4, 2026-10-13 05:05; - own mull dev-adopted, not vault-tested",
+ "status": "frozen before any vault file was read; vault runs must not change this file or the hashed code",
+ "git": {
+  "commit": "72112ee978bdd27a084f8fa392afc8ad5b180e19",
+  "tracked files modified at freeze": [
+   "M src/decks/deckstrength.py"
+  ]
+ },
+ "code sha256": {
+  "scripts/t5_vault.py": "3ea74bed1636809eb105baab6fb59bc8b3e964725bd9284ef1c1306e5a6ff0df",
+  "scripts/t_common.py": "9f8b506eec874e1b31a0ad05ff4bd54f3c625d9e19754225b65be2176ca783a8",
+  "scripts/game_fm_v2.py": "643f3e470b3a28787a95c11072223d6b198b8780d4c5e77054903fc6499aa881",
+  "scripts/t2_mull_split.py": "9803f7f981d28a9171a7107d8374bbe19b7a01d31e281a9d9fa5c45f703dd4fe",
+  "scripts/t1_rescore.py": "51a7176805e608e4114bde0328a3bda70824a5f62dd2b65403a7d778a91adad9",
+  "scripts/sc_gll.py": "52acddd60e0bc7c152e36df89df65637c4178b0b44ed1d2044b7d360db443628",
+  "scripts/eval_common.py": "42594c47ba2c51c8b56e76bfb7983a3d186e0b255b8d48b5e0dfaa2a19619320",
+  "scripts/rebuild_targets.py": "d5ade2d23e7d6d22c309132fd00baba438a1592fc38004606fb89244be9727b5",
+  "scripts/improve_deck_v2.py": "389d8182ca5e0c7fe5dff21f9ea25da5d384f81d9de1c22d2269d7c20982aaf9",
+  "scripts/improve_deck.py": "1999ae520b98cdf80b4d38fe7485fac099ab266333a16dbaac0e4fc7b8c350d3",
+  "scripts/deck_synergy_v2.py": "cc6f200e9f9be0f034732813fc2e401d5408a924c107e7b0f2a3b6b57684b8d3",
+  "scripts/deck_synergy_v3.py": "5fb7f000a5eccf21b4538b9f66f536a4da1d923b882c405c93dcec5015d3f7e2",
+  "results/methodology/eval_protocol.py": "b9d79d9eec81749ade8ad50adae729030db6ff6f29cbcdbe8deaff14d8d9f631",
+  "src/decks/deckstrength.py": "f9163ed9028d9e8c2126e4e7d06bc1dc4e9b1c3461090f93bf940ad531ebed0f",
+  "src/decks/synergy.py": "b1bfbe5697a59438cf720f954b76c303b7f66940ebc091e00532e43530e563cf",
+  "mtgdata/games.py": "4b50b70bf7b2e9a335b82b4d20a56bb423585de63cc056662e0c5ba3ed2aa4d1",
+  "mtgdata/cardinfo.py": "f1710ec15118c4fee2bf2ad3928fbac5737405e1ae9f4be4f1346dd66f27a439",
+  "mtgdata/data.py": "8472811c555eee672ae1846a0431e8f3519f0ef686401401a64788b71eaf829a"
+ },
+ "vault sets": {
+  "with affinity": [
+   "ECL",
+   "TLA"
+  ],
+  "no-aff fallback (no PickNet pool model)": [
+   "WOE",
+   "MOM",
+   "HOB",
+   "TMT"
+  ],
+  "excluded": {
+   "NEO": "no draft parquet (raw CSV only), no game_time",
+   "ONE": "no draft parquet (raw CSV only), no game_time"
+  },
+  "order": [
+   "ECL",
+   "TLA",
+   "WOE",
+   "MOM",
+   "HOB",
+   "TMT"
+  ],
+  "notes": [
+   "ECL was used for play/draw outcome statistics in the matchmaking memo (not model selection)",
+   "MOM has no game_time column (nothing here uses it; day blocks use draft_time)",
+   "no-aff sets are pooled separately from ECL/TLA and in 'all'"
+  ]
+ },
+ "split": "decks.deckstrength.load_drafts: drafts sorted by draft_time, 70% train / 15% val / 15% test",
+ "deck strength pipeline (champion v2)": {
+  "model": "DeckFM fm4 nonland: card power w (all cards) + rank-4 factorised pairs between nonland cards + 17 standardised Scryfall deck features + the PickNet pool_d32 affinity profile column (deck_synergy_v3.Profile 'aff mean'); --no-aff sets: no affinity column",
+  "context (game only, not in the deck score)": "play/draw, mulligan difference (own - opp), raw user_game_win_rate_bucket + known flag, per-game rank one-hot, experience one-hot (500/1000 fix), record before the game (21 one-hot); opponent rank dropped",
+  "fit": {
+   "k": 4,
+   "lr": 0.003,
+   "epochs": 40,
+   "batch": 4096,
+   "patience": 3,
+   "lr_drops": 2
+  },
+  "grid (l2_w, l2_v)": [
+   [
+    1e-05,
+    0.001
+   ],
+   [
+    1e-05,
+    0.01
+   ]
+  ],
+  "grid chosen on": "val game log loss, seed 0",
+  "seeds": 2,
+  "refit": "train+val games, the champion's val-chosen setting, its early-stopping schedule replayed epoch for epoch (game_fm_v2.fit_fm replay), per seed",
+  "calibration of the refit": "the train-only twin's val (a, b) in raw score units, seed-paired",
+  "deck score": "deck-only logit of the most-played build: card power + pairs + deck-feature/affinity terms",
+  "adopted change (T1/T2)": "blend*"
+ },
+ "linear game model": {
+  "model": "DeckFM k = 0 + deck features (+ aff)",
+  "grid (l2_w, l2_v)": [
+   [
+    1e-05,
+    0
+   ],
+   [
+    0.0001,
+    0
+   ]
+  ],
+  "seeds": 2
+ },
+ "record pipeline (round 10)": {
+  "LightGBM features": "most-played build's card counts + structure features + own rank + deck features (+ affinity)",
+  "round 4 blend": "LightGBM (LGB_PARAMS, early stop on val) logit-blended with the train-calibrated game FM; alpha in 0..1 step 0.05 on val record NLL",
+  "round 10": "tau 2 recency weights, default LGB_PARAMS (no improve_v2.json on vault sets), refit on train+val with trees scaled by data size, 5 seeds averaged in logit space, blended with the train+val-calibrated game FM, alpha from the train-only twin on val record NLL",
+  "cfg": {
+   "tau": 2.0,
+   "params": {},
+   "source": "frozen (t5_vault)"
+  },
+  "refit seeds": 5,
+  "game FM input": "the champion (train-only, seed 0); training drafts cross-fitted on two halves (deck_synergy_v4's fold rule: rng(2) permutation of the training draft ids), val/test drafts scored by the fit on all training games (deck_synergy_v4 draft_inputs)",
+  "targets": "draft-file record (primary) and game-file record; evaluated at the player's own rank"
+ },
+ "metrics": {
+  "primary": "SC-GLL experienced (user_n_games_bucket >= 50), de-leaked-bucket context ('experienced dl'), -1000 x test game log loss, (a, b) on val games, paired day-block bootstrap (500) over test drafts with the seed spread as a variance component",
+  "contexts": [
+   "raw",
+   "dl",
+   "pre"
+  ],
+  "LightGBM seeds": 3,
+  "reference rank": "platinum",
+  "record metric": "test Spearman(p, W/(W+L)), paired day-block bootstrap (300)"
+ },
+ "hypotheses": {
+  "H1": {
+   "claim": "game FM (champion, train-only) - LightGBM (round 4, platinum) > 0",
+   "file": "lgbm_results.json",
+   "pair": "champion - LightGBM",
+   "key": "experienced dl",
+   "dev": {
+    "file": "t1_rescore/results.json",
+    "pair": "LightGBM - champion",
+    "key": "experienced dl",
+    "sign": -1
+   }
+  },
+  "H2": {
+   "claim": "game FM (champion) - linear game model > 0",
+   "file": "fm_results.json",
+   "pair": "champion - linear game model",
+   "key": "experienced dl",
+   "dev": {
+    "file": "t1_rescore/results.json",
+    "pair": "champion - linear game model",
+    "key": "experienced dl",
+    "sign": 1
+   }
+  },
+  "H3": {
+   "claim": "refit on train+val (champion v2) - train-only champion > 0 (twin calibration)",
+   "file": "fm_results.json",
+   "pair": "refit - champion",
+   "key": "experienced dl",
+   "special rule": "underpowered at k = 6 (MDE ~0.06): confirmed if the vault mean > 0 AND the dev + vault pooled one-sided p < 0.05",
+   "dev": {
+    "file": "t1_rescore/results.json",
+    "pair": "refit - champion",
+    "key": "experienced dl",
+    "sign": 1,
+    "fallback": {
+     "file": "game_fm_v2/results.json",
+     "key": "experienced dl-ctx"
+    }
+   }
+  },
+  "H4": {
+   "claim": "round 10 record recipe - round 4 blend > 0 (test Spearman; train draft | eval draft primary)",
+   "file": "targets.json",
+   "pair": "round 10 - round 4 | train draft | eval draft",
+   "key": null,
+   "secondary": "round 10 - round 4 | train game | eval game",
+   "dev": {
+    "file": "targets.json",
+    "pair": "round 10 - round 4 | train draft | eval draft",
+    "key": null,
+    "sign": 1
+   }
+  },
+  "H5": {
+   "claim": "adopted arm 'blend*' - champion v2 > 0",
+   "active": true,
+   "arm": "blend*",
+   "file": "lgbm_results.json",
+   "pair": "blend* (LightGBM + champion) - champion",
+   "key": "experienced dl",
+   "dev": {
+    "file": "t1_rescore/results.json",
+    "pair": "blend* (LightGBM + champion) - champion",
+    "key": "experienced dl",
+    "sign": 1
+   }
+  }
+ },
+ "decision rule": {
+  "per hypothesis": "random-effects (DL + HKSJ) mean over the vault sets; one-sided p = P(t_{k-1} > mean / se); CONFIRMED if mean > 0 and one-sided p < 0.05 (H3: mean > 0 and pooled dev + vault one-sided p < 0.05); 'DEV-TEST ONLY' if the vault 95% CI includes 0 and the mean <= 0; otherwise NOT CONFIRMED. eval_protocol.decide (min_positive = ceil(2k/3), min_effect 0) is reported alongside.",
+  "groups": [
+   "affinity sets (ECL, TLA)",
+   "no-aff sets",
+   "all vault sets"
+  ],
+  "no re-tuning on the vault, ever": true
+ }
+}

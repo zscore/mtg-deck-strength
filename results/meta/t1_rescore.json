@@ -1,0 +1,3334 @@
+{
+ "sets": [
+  "MSH",
+  "EOE",
+  "SOS",
+  "TDM",
+  "FDN",
+  "DFT",
+  "LCI",
+  "FIN",
+  "MKM",
+  "BLB",
+  "DSK",
+  "OTJ"
+ ],
+ "pairs": {
+  "- mull - champion": {
+   "experienced raw": {
+    "re mean": -0.0601481325951904,
+    "ci": [
+     -0.0916374827238107,
+     -0.028658782466570103
+    ],
+    "p": 0.0014752951243258814,
+    "sets better": "0/12",
+    "sig worse": 4,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.06015 > 0 with p = 0.0015 < 0.05",
+     "FAIL 0/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 4 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.04128029633847641,
+    "ci": [
+     -0.07025142386636557,
+     -0.012309168810587249
+    ],
+    "p": 0.009473484934947039,
+    "sets better": "3/12",
+    "sig worse": 3,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.04128 > 0 with p = 0.0095 < 0.05",
+     "FAIL 3/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 3 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.033918742208637234,
+    "ci": [
+     0.013964311316955302,
+     0.053873173100319166
+    ],
+    "p": 0.003259055816721487,
+    "sets better": "8/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.03392 > 0 with p = 0.0033 < 0.05",
+     "PASS 8/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.05366481646138413,
+    "ci": [
+     -0.10254428564233542,
+     -0.004785347280432846
+    ],
+    "p": 0.03422054283945616,
+    "sets better": "2/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.05366 > 0 with p = 0.0342 < 0.05",
+     "FAIL 2/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": 0.021968992269003597,
+    "ci": [
+     -0.025437899917615386,
+     0.06937588445562258
+    ],
+    "p": 0.32965336892330843,
+    "sets better": "5/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.02197 > 0 with p = 0.3297 < 0.05",
+     "FAIL 5/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "- skill - champion": {
+   "experienced raw": {
+    "re mean": -0.3735991594472251,
+    "ci": [
+     -0.4820990619531061,
+     -0.2650992569413441
+    ],
+    "p": 1.0884455240998935e-05,
+    "sets better": "0/12",
+    "sig worse": 11,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.37360 > 0 with p = 0.0000 < 0.05",
+     "FAIL 0/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 11 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.13390429032118012,
+    "ci": [
+     -0.2517150264602584,
+     -0.016093554182101857
+    ],
+    "p": 0.02941990702843141,
+    "sets better": "1/12",
+    "sig worse": 4,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.13390 > 0 with p = 0.0294 < 0.05",
+     "FAIL 1/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 4 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.06906206898352141,
+    "ci": [
+     -0.16944585368963488,
+     0.03132171572259208
+    ],
+    "p": 0.15815816278805575,
+    "sets better": "3/12",
+    "sig worse": 3,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.06906 > 0 with p = 0.1582 < 0.05",
+     "FAIL 3/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 3 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.2701781333434798,
+    "ci": [
+     -0.4204953548517072,
+     -0.11986091183525241
+    ],
+    "p": 0.0022493497343181058,
+    "sets better": "1/12",
+    "sig worse": 2,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.27018 > 0 with p = 0.0022 < 0.05",
+     "FAIL 1/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 2 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.21158438947524633,
+    "ci": [
+     -0.3603995605374717,
+     -0.06276921841302097
+    ],
+    "p": 0.00958883772970742,
+    "sets better": "2/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.21158 > 0 with p = 0.0096 < 0.05",
+     "FAIL 2/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "A iid - game FM": {
+   "experienced raw": {
+    "re mean": -0.4465093645117298,
+    "ci": [
+     -0.8485454144085507,
+     -0.04447331461490894
+    ],
+    "p": 0.04111056092584224,
+    "sets better": "0/3",
+    "sig worse": 3,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.44651 > 0 with p = 0.0411 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 3 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.1994075990512379,
+    "ci": [
+     -0.7373938801207669,
+     0.33857868201829106
+    ],
+    "p": 0.25180188243782886,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.19941 > 0 with p = 0.2518 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.1475015230090125,
+    "ci": [
+     -0.6048873551181186,
+     0.30988430910009357
+    ],
+    "p": 0.299653068784926,
+    "sets better": "1/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.14750 > 0 with p = 0.2997 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.3566294446912323,
+    "ci": [
+     -0.9253564649858628,
+     0.2120975756033982
+    ],
+    "p": 0.11429674564556401,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.35663 > 0 with p = 0.1143 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.31072795830726613,
+    "ci": [
+     -0.8605161000913586,
+     0.23906018347682628
+    ],
+    "p": 0.13555426921968594,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.31073 > 0 with p = 0.1356 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "A rated s=0.3 - game FM": {
+   "experienced raw": {
+    "re mean": -0.3236072216533352,
+    "ci": [
+     -0.6371630734323932,
+     -0.010051369874277238
+    ],
+    "p": 0.04715498095792551,
+    "sets better": "0/3",
+    "sig worse": 2,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.32361 > 0 with p = 0.0472 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 2 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.1440163514216581,
+    "ci": [
+     -0.5553397046204949,
+     0.2673070017771786
+    ],
+    "p": 0.27091793474690945,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.14402 > 0 with p = 0.2709 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.10029719751010355,
+    "ci": [
+     -0.4524121494162885,
+     0.25181775439608134
+    ],
+    "p": 0.34509225272483296,
+    "sets better": "1/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.10030 > 0 with p = 0.3451 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.24014000808764233,
+    "ci": [
+     -0.7107696724705683,
+     0.23048965629528365
+    ],
+    "p": 0.15931994289991402,
+    "sets better": "1/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.24014 > 0 with p = 0.1593 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.196506839502632,
+    "ci": [
+     -0.6516356020619962,
+     0.25862192305673215
+    ],
+    "p": 0.2043225833858712,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.19651 > 0 with p = 0.2043 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "A rated s=0.36 - game FM": {
+   "experienced raw": {
+    "re mean": -0.32231843917810327,
+    "ci": [
+     -0.6391719341473879,
+     -0.005464944208818601
+    ],
+    "p": 0.04843900776114998,
+    "sets better": "0/3",
+    "sig worse": 2,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.32232 > 0 with p = 0.0484 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 2 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.14303218720556657,
+    "ci": [
+     -0.5566431202620754,
+     0.2705787458509422
+    ],
+    "p": 0.27516952654647614,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.14303 > 0 with p = 0.2752 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.09818972512206911,
+    "ci": [
+     -0.44978007309404167,
+     0.2534006228499035
+    ],
+    "p": 0.3524974915460924,
+    "sets better": "1/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.09819 > 0 with p = 0.3525 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.2401483498765286,
+    "ci": [
+     -0.7084678688981028,
+     0.2281711691450456
+    ],
+    "p": 0.15810164013978872,
+    "sets better": "1/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.24015 > 0 with p = 0.1581 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.19503921112562173,
+    "ci": [
+     -0.6478500656467778,
+     0.2577716433955343
+    ],
+    "p": 0.20502126721244432,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.19504 > 0 with p = 0.2050 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "A rated s=0.45 - game FM": {
+   "experienced raw": {
+    "re mean": -0.32449918386240345,
+    "ci": [
+     -0.6832096421543905,
+     0.03421127442958355
+    ],
+    "p": 0.060116118777297084,
+    "sets better": "0/3",
+    "sig worse": 2,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.32450 > 0 with p = 0.0601 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 2 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.14641221600110074,
+    "ci": [
+     -0.6032691406708528,
+     0.31044470866865126
+    ],
+    "p": 0.30188850538545264,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.14641 > 0 with p = 0.3019 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.09897206826241488,
+    "ci": [
+     -0.4901573208178209,
+     0.2922131842929911
+    ],
+    "p": 0.39002921315545397,
+    "sets better": "1/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.09897 > 0 with p = 0.3900 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.2372376571860992,
+    "ci": [
+     -0.7039852403912793,
+     0.2295099260190809
+    ],
+    "p": 0.1602777874435686,
+    "sets better": "1/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.23724 > 0 with p = 0.1603 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.19318140341743983,
+    "ci": [
+     -0.6420284609511375,
+     0.2556656541162579
+    ],
+    "p": 0.20524915123922058,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.19318 > 0 with p = 0.2052 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "A record s=0.3 - game FM": {
+   "experienced raw": {
+    "re mean": -0.45090309661058114,
+    "ci": [
+     -0.844108922096084,
+     -0.057697271125078275
+    ],
+    "p": 0.03870787591483586,
+    "sets better": "0/3",
+    "sig worse": 3,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.45090 > 0 with p = 0.0387 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 3 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.2182376008250502,
+    "ci": [
+     -0.718402497687577,
+     0.2819272960374767
+    ],
+    "p": 0.20126321969862604,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.21824 > 0 with p = 0.2013 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.16077482851483468,
+    "ci": [
+     -0.5770751577126816,
+     0.2555255006830123
+    ],
+    "p": 0.23846449093321742,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.16077 > 0 with p = 0.2385 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.3521837132523641,
+    "ci": [
+     -0.9171024428500789,
+     0.21273501634535075
+    ],
+    "p": 0.11541322165686034,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.35218 > 0 with p = 0.1154 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.30282128169436345,
+    "ci": [
+     -0.8484564089781654,
+     0.24281384558943847
+    ],
+    "p": 0.139573842462238,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.30282 > 0 with p = 0.1396 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "A record s=0.36 - game FM": {
+   "experienced raw": {
+    "re mean": -0.4433544251563738,
+    "ci": [
+     -0.8513449302800793,
+     -0.03536392003266836
+    ],
+    "p": 0.042826023869041274,
+    "sets better": "0/3",
+    "sig worse": 3,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.44335 > 0 with p = 0.0428 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 3 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.1978599386332914,
+    "ci": [
+     -0.7378201337650061,
+     0.34210025649842324
+    ],
+    "p": 0.2555889024971018,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.19786 > 0 with p = 0.2556 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.14166674169673119,
+    "ci": [
+     -0.5927062004252053,
+     0.30937271703174296
+    ],
+    "p": 0.30912665963371116,
+    "sets better": "1/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.14167 > 0 with p = 0.3091 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.3502721115876565,
+    "ci": [
+     -0.9157287300366151,
+     0.2151845068613022
+    ],
+    "p": 0.11664881914033376,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.35027 > 0 with p = 0.1166 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.3004894287612551,
+    "ci": [
+     -0.8468689531130584,
+     0.24589009559054814
+    ],
+    "p": 0.14161685493802026,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.30049 > 0 with p = 0.1416 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "A record s=0.45 - game FM": {
+   "experienced raw": {
+    "re mean": -0.44308627635132575,
+    "ci": [
+     -0.8552086445597428,
+     -0.030963908142908725
+    ],
+    "p": 0.0436910215557306,
+    "sets better": "0/3",
+    "sig worse": 3,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.44309 > 0 with p = 0.0437 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 3 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.19833149415325796,
+    "ci": [
+     -0.7392293788888282,
+     0.34256639058231236
+    ],
+    "p": 0.2553747551437527,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.19833 > 0 with p = 0.2554 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.14011545042780318,
+    "ci": [
+     -0.5887231697768452,
+     0.30849226892123893
+    ],
+    "p": 0.3111530327950302,
+    "sets better": "1/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.14012 > 0 with p = 0.3112 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.35151630674480516,
+    "ci": [
+     -0.9139462828385456,
+     0.2109136693489353
+    ],
+    "p": 0.11492949727303316,
+    "sets better": "0/3",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.35152 > 0 with p = 0.1149 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.2992911308392756,
+    "ci": [
+     -0.8429458531503112,
+     0.24436359147176
+    ],
+    "p": 0.14139024960491886,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.29929 > 0 with p = 0.1414 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "LightGBM - champion": {
+   "experienced raw": {
+    "re mean": -0.6471389442240341,
+    "ci": [
+     -0.7904367364340713,
+     -0.5038411520139968
+    ],
+    "p": 7.852990084219529e-07,
+    "sets better": "0/12",
+    "sig worse": 12,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.64714 > 0 with p = 0.0000 < 0.05",
+     "FAIL 0/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 12 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.3907653818768389,
+    "ci": [
+     -0.5231325334987158,
+     -0.25839823025496195
+    ],
+    "p": 4.442277275078844e-05,
+    "sets better": "0/12",
+    "sig worse": 8,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.39077 > 0 with p = 0.0000 < 0.05",
+     "FAIL 0/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 8 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.27305946972023937,
+    "ci": [
+     -0.37997330485832953,
+     -0.1661456345821492
+    ],
+    "p": 0.00015529194101396746,
+    "sets better": "0/12",
+    "sig worse": 5,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.27306 > 0 with p = 0.0002 < 0.05",
+     "FAIL 0/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 5 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.42729165141185116,
+    "ci": [
+     -0.6995285576679211,
+     -0.15505474515578127
+    ],
+    "p": 0.005384432535922923,
+    "sets better": "1/12",
+    "sig worse": 4,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.42729 > 0 with p = 0.0054 < 0.05",
+     "FAIL 1/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 4 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.3156262700701199,
+    "ci": [
+     -0.5721122149043036,
+     -0.0591403252359361
+    ],
+    "p": 0.0203458398957279,
+    "sets better": "1/12",
+    "sig worse": 3,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.31563 > 0 with p = 0.0203 < 0.05",
+     "FAIL 1/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 3 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "LightGBM - game FM": {
+   "experienced raw": {
+    "re mean": -0.6573415499116652,
+    "ci": [
+     -0.7953706484630092,
+     -0.5193124513603211
+    ],
+    "p": 4.6104434149236953e-07,
+    "sets better": "0/12",
+    "sig worse": 12,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.65734 > 0 with p = 0.0000 < 0.05",
+     "FAIL 0/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 12 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.4023222515421405,
+    "ci": [
+     -0.5170872357580958,
+     -0.2875572673261853
+    ],
+    "p": 9.197745508588048e-06,
+    "sets better": "0/12",
+    "sig worse": 7,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.40232 > 0 with p = 0.0000 < 0.05",
+     "FAIL 0/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 7 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.2852878198834264,
+    "ci": [
+     -0.37377531761669336,
+     -0.1968003221501594
+    ],
+    "p": 2.003304361160636e-05,
+    "sets better": "0/12",
+    "sig worse": 6,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.28529 > 0 with p = 0.0000 < 0.05",
+     "FAIL 0/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 6 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.4296826162297344,
+    "ci": [
+     -0.6918282654824701,
+     -0.16753696697699877
+    ],
+    "p": 0.004114570069505126,
+    "sets better": "1/12",
+    "sig worse": 3,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.42968 > 0 with p = 0.0041 < 0.05",
+     "FAIL 1/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 3 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.3221967377382056,
+    "ci": [
+     -0.5714427356433296,
+     -0.07295073983308167
+    ],
+    "p": 0.01593347302827559,
+    "sets better": "1/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.32220 > 0 with p = 0.0159 < 0.05",
+     "FAIL 1/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "blend* (LightGBM + champion) - champion": {
+   "experienced raw": {
+    "re mean": 0.037044289755828325,
+    "ci": [
+     -0.0018239801219816498,
+     0.0759125596336383
+    ],
+    "p": 0.05983819616592397,
+    "sets better": "10/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.03704 > 0 with p = 0.0598 < 0.05",
+     "PASS 10/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 0.13244727608845952,
+    "ci": [
+     0.09206408413610795,
+     0.1728304680408111
+    ],
+    "p": 1.7111179186918283e-05,
+    "sets better": "11/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.13245 > 0 with p = 0.0000 < 0.05",
+     "PASS 11/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.17165345448775213,
+    "ci": [
+     0.13718454111631936,
+     0.2061223678591849
+    ],
+    "p": 2.93447192319974e-07,
+    "sets better": "12/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.17165 > 0 with p = 0.0000 < 0.05",
+     "PASS 12/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": 0.14713993040833045,
+    "ci": [
+     0.052513327487948624,
+     0.24176653332871229
+    ],
+    "p": 0.00569873699667168,
+    "sets better": "10/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.14714 > 0 with p = 0.0057 < 0.05",
+     "PASS 10/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": 0.1796793727142782,
+    "ci": [
+     0.08764119736953424,
+     0.27171754805902215
+    ],
+    "p": 0.0012626564674391148,
+    "sets better": "10/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.17968 > 0 with p = 0.0013 < 0.05",
+     "PASS 10/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "blend* (LightGBM + game FM) - game FM": {
+   "experienced raw": {
+    "re mean": 0.040023844058384425,
+    "ci": [
+     0.006963807640610095,
+     0.07308388047615876
+    ],
+    "p": 0.022005064251380033,
+    "sets better": "10/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "PASS RE mean +0.04002 > 0 with p = 0.0220 < 0.05",
+     "PASS 10/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 0.13187301651516686,
+    "ci": [
+     0.09864766609360504,
+     0.1650983669367287
+    ],
+    "p": 2.8028777525132173e-06,
+    "sets better": "11/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.13187 > 0 with p = 0.0000 < 0.05",
+     "PASS 11/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.16061832904307854,
+    "ci": [
+     0.12788565973958035,
+     0.19335099834657674
+    ],
+    "p": 3.408111836717023e-07,
+    "sets better": "12/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.16062 > 0 with p = 0.0000 < 0.05",
+     "PASS 12/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": 0.14901435258972087,
+    "ci": [
+     0.06453911896763861,
+     0.23348958621180313
+    ],
+    "p": 0.0025521745113928672,
+    "sets better": "10/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.14901 > 0 with p = 0.0026 < 0.05",
+     "PASS 10/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": 0.17546067825518902,
+    "ci": [
+     0.09182434645847663,
+     0.2590970100519014
+    ],
+    "p": 0.0007434601404215315,
+    "sets better": "10/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.17546 > 0 with p = 0.0007 < 0.05",
+     "PASS 10/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "champion - game FM": {
+   "experienced raw": {
+    "re mean": 0.0011096240509009475,
+    "ci": [
+     -0.010409922250317914,
+     0.012629170352119808
+    ],
+    "p": 0.8359759874589382,
+    "sets better": "4/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00111 > 0 with p = 0.8360 < 0.05",
+     "FAIL 4/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 0.001776087881635761,
+    "ci": [
+     -0.011213029797642656,
+     0.014765205560914176
+    ],
+    "p": 0.7690609490508623,
+    "sets better": "7/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00178 > 0 with p = 0.7691 < 0.05",
+     "FAIL 7/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.00042805633526669603,
+    "ci": [
+     -0.013788677832370196,
+     0.014644790502903588
+    ],
+    "p": 0.9483518504900372,
+    "sets better": "7/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00043 > 0 with p = 0.9484 < 0.05",
+     "FAIL 7/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.005338771003393606,
+    "ci": [
+     -0.028251541048451595,
+     0.01757399904166438
+    ],
+    "p": 0.6182055888837801,
+    "sets better": "4/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00534 > 0 with p = 0.6182 < 0.05",
+     "FAIL 4/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.0042989132624431485,
+    "ci": [
+     -0.029757713862082775,
+     0.021159887337196478
+    ],
+    "p": 0.717210696992064,
+    "sets better": "5/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00430 > 0 with p = 0.7172 < 0.05",
+     "FAIL 5/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "champion - linear game model": {
+   "experienced raw": {
+    "re mean": 0.13795358108729047,
+    "ci": [
+     0.06283542448761045,
+     0.2130717376869705
+    ],
+    "p": 0.0019415749214129468,
+    "sets better": "11/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "PASS RE mean +0.13795 > 0 with p = 0.0019 < 0.05",
+     "PASS 11/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 0.1440130888786626,
+    "ci": [
+     0.0413930168210313,
+     0.2466331609362939
+    ],
+    "p": 0.010308513912220164,
+    "sets better": "11/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "PASS RE mean +0.14401 > 0 with p = 0.0103 < 0.05",
+     "PASS 11/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.14019185974098905,
+    "ci": [
+     0.039034027623155595,
+     0.2413496918588225
+    ],
+    "p": 0.011041881198800818,
+    "sets better": "11/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "PASS RE mean +0.14019 > 0 with p = 0.0110 < 0.05",
+     "PASS 11/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": 0.11239734743815803,
+    "ci": [
+     0.000457804173525464,
+     0.22433689070279061
+    ],
+    "p": 0.049219716391994385,
+    "sets better": "9/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "PASS RE mean +0.11240 > 0 with p = 0.0492 < 0.05",
+     "PASS 9/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": 0.1140137039405875,
+    "ci": [
+     -0.0030392526608936515,
+     0.23106666054206865
+    ],
+    "p": 0.055235696825927945,
+    "sets better": "9/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.11401 > 0 with p = 0.0552 < 0.05",
+     "PASS 9/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "game FM - linear game model": {
+   "experienced raw": {
+    "re mean": 0.1552903222447078,
+    "ci": [
+     0.09761877641273205,
+     0.21296186807668355
+    ],
+    "p": 9.92322029380382e-05,
+    "sets better": "11/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.15529 > 0 with p = 0.0001 < 0.05",
+     "PASS 11/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 0.1627769647413296,
+    "ci": [
+     0.09905233018372137,
+     0.22650159929893784
+    ],
+    "p": 0.00015510572457043902,
+    "sets better": "11/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.16278 > 0 with p = 0.0002 < 0.05",
+     "PASS 11/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.1579227045078569,
+    "ci": [
+     0.09595449594406681,
+     0.219890913071647
+    ],
+    "p": 0.00015815272600715568,
+    "sets better": "11/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.15792 > 0 with p = 0.0002 < 0.05",
+     "PASS 11/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": 0.138706038851521,
+    "ci": [
+     0.049847605747325316,
+     0.22756447195571666
+    ],
+    "p": 0.0055668675644531,
+    "sets better": "9/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.13871 > 0 with p = 0.0056 < 0.05",
+     "PASS 9/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": 0.13898025129987274,
+    "ci": [
+     0.04438200809853467,
+     0.23357849450121082
+    ],
+    "p": 0.007963987695354596,
+    "sets better": "9/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.13898 > 0 with p = 0.0080 < 0.05",
+     "PASS 9/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "rated-dl - champion": {
+   "experienced raw": {
+    "re mean": -0.21940447241268005,
+    "ci": [
+     -0.30515953742996527,
+     -0.1336494073953948
+    ],
+    "p": 0.00015302616477895386,
+    "sets better": "1/12",
+    "sig worse": 10,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.21940 > 0 with p = 0.0002 < 0.05",
+     "FAIL 1/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 10 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.036818752389101726,
+    "ci": [
+     -0.12092924572969174,
+     0.0472917409514883
+    ],
+    "p": 0.356016818008017,
+    "sets better": "4/12",
+    "sig worse": 2,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.03682 > 0 with p = 0.3560 < 0.05",
+     "FAIL 4/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 2 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.010385687844927676,
+    "ci": [
+     -0.060006156119725804,
+     0.08077753180958115
+    ],
+    "p": 0.751473150211775,
+    "sets better": "6/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.01039 > 0 with p = 0.7515 < 0.05",
+     "FAIL 6/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.11498321683798496,
+    "ci": [
+     -0.22670485759423692,
+     -0.0032615760817329836
+    ],
+    "p": 0.04467931654063275,
+    "sets better": "3/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.11498 > 0 with p = 0.0447 < 0.05",
+     "FAIL 3/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.07806811830655397,
+    "ci": [
+     -0.18760456800068986,
+     0.03146833138758193
+    ],
+    "p": 0.14502295684868877,
+    "sets better": "4/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.07807 > 0 with p = 0.1450 < 0.05",
+     "FAIL 4/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "recency - champion": {
+   "experienced raw": {
+    "re mean": -0.0017566281904815534,
+    "ci": [
+     -0.010908886548807515,
+     0.007395630167844407
+    ],
+    "p": 0.6808405845129705,
+    "sets better": "6/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00176 > 0 with p = 0.6808 < 0.05",
+     "FAIL 6/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.0006790611190533718,
+    "ci": [
+     -0.010113129783129097,
+     0.008755007545022354
+    ],
+    "p": 0.8769920350434509,
+    "sets better": "7/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00068 > 0 with p = 0.8770 < 0.05",
+     "FAIL 7/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.0024505064009209382,
+    "ci": [
+     -0.015821401676022237,
+     0.01092038887418036
+    ],
+    "p": 0.6944000681104338,
+    "sets better": "6/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00245 > 0 with p = 0.6944 < 0.05",
+     "FAIL 6/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.014319020243515739,
+    "ci": [
+     -0.033677526474836225,
+     0.005039485987804749
+    ],
+    "p": 0.13179888003670426,
+    "sets better": "3/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01432 > 0 with p = 0.1318 < 0.05",
+     "FAIL 3/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.01707189584439952,
+    "ci": [
+     -0.03581456289757824,
+     0.0016707712087792072
+    ],
+    "p": 0.0702258925246684,
+    "sets better": "3/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01707 > 0 with p = 0.0702 < 0.05",
+     "FAIL 3/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "refit (own val fit) - champion": {
+   "experienced raw": {
+    "re mean": 0.05387697478686593,
+    "ci": [
+     0.007240047830279393,
+     0.10051390174345246
+    ],
+    "p": 0.027349568941678195,
+    "sets better": "10/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.05388 > 0 with p = 0.0273 < 0.05",
+     "PASS 10/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 0.03431180734391013,
+    "ci": [
+     -0.0049690754233343085,
+     0.07359269011115457
+    ],
+    "p": 0.08080121533197135,
+    "sets better": "9/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.03431 > 0 with p = 0.0808 < 0.05",
+     "PASS 9/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.030805532689195128,
+    "ci": [
+     -0.0070206899873323445,
+     0.06863175536572261
+    ],
+    "p": 0.10057025700726295,
+    "sets better": "7/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.03081 > 0 with p = 0.1006 < 0.05",
+     "FAIL 7/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": 0.02535356381015603,
+    "ci": [
+     -0.04583495285236852,
+     0.09654208047268059
+    ],
+    "p": 0.44966400701978027,
+    "sets better": "7/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.02535 > 0 with p = 0.4497 < 0.05",
+     "FAIL 7/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": 0.024521128231196624,
+    "ci": [
+     -0.04021172746565464,
+     0.08925398392804788
+    ],
+    "p": 0.4221608445380494,
+    "sets better": "7/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.02452 > 0 with p = 0.4222 < 0.05",
+     "FAIL 7/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "refit - champion": {
+   "experienced raw": {
+    "re mean": 0.06374418819180117,
+    "ci": [
+     0.033125106046000795,
+     0.09436327033760153
+    ],
+    "p": 0.000787617780694434,
+    "sets better": "10/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.06374 > 0 with p = 0.0008 < 0.05",
+     "PASS 10/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 0.03583003499828528,
+    "ci": [
+     0.003121859177987442,
+     0.0685382108185831
+    ],
+    "p": 0.0345495527977517,
+    "sets better": "10/12",
+    "sig worse": 0,
+    "adopt": true,
+    "why": [
+     "PASS RE mean +0.03583 > 0 with p = 0.0345 < 0.05",
+     "PASS 10/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.03313066819794797,
+    "ci": [
+     -0.002099970548891647,
+     0.06836130694478759
+    ],
+    "p": 0.06279544451905021,
+    "sets better": "9/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.03313 > 0 with p = 0.0628 < 0.05",
+     "PASS 9/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": 0.05494578961980847,
+    "ci": [
+     -0.034724672709408023,
+     0.14461625194902497
+    ],
+    "p": 0.20455729226589373,
+    "sets better": "9/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.05495 > 0 with p = 0.2046 < 0.05",
+     "PASS 9/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": 0.05339740686395103,
+    "ci": [
+     -0.029819393095758234,
+     0.1366142068236603
+    ],
+    "p": 0.18552281989047545,
+    "sets better": "9/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.05340 > 0 with p = 0.1855 < 0.05",
+     "PASS 9/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "round 4 blend - champion": {
+   "experienced raw": {
+    "re mean": -0.2003663384755553,
+    "ci": [
+     -0.321841045551982,
+     -0.07889163139912855
+    ],
+    "p": 0.003953792607350303,
+    "sets better": "1/12",
+    "sig worse": 5,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.20037 > 0 with p = 0.0040 < 0.05",
+     "FAIL 1/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 5 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.005984089175834095,
+    "ci": [
+     -0.11201076778229771,
+     0.10004258943062952
+    ],
+    "p": 0.9033800965857696,
+    "sets better": "6/12",
+    "sig worse": 2,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00598 > 0 with p = 0.9034 < 0.05",
+     "FAIL 6/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 2 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.07012354966259124,
+    "ci": [
+     -0.021272813013189534,
+     0.161519912338372
+    ],
+    "p": 0.11938907232576013,
+    "sets better": "9/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.07012 > 0 with p = 0.1194 < 0.05",
+     "PASS 9/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": 0.005124359460643332,
+    "ci": [
+     -0.1675690924893827,
+     0.17781781141066935
+    ],
+    "p": 0.9490988772739158,
+    "sets better": "6/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00512 > 0 with p = 0.9491 < 0.05",
+     "FAIL 6/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": 0.07764525991636388,
+    "ci": [
+     -0.08247985347105342,
+     0.2377703733037812
+    ],
+    "p": 0.3087152911101157,
+    "sets better": "8/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.07765 > 0 with p = 0.3087 < 0.05",
+     "PASS 8/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "round 4 blend - game FM": {
+   "experienced raw": {
+    "re mean": -0.20571015627256495,
+    "ci": [
+     -0.3183969793589778,
+     -0.09302333318615205
+    ],
+    "p": 0.002023337077846057,
+    "sets better": "0/12",
+    "sig worse": 6,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.20571 > 0 with p = 0.0020 < 0.05",
+     "FAIL 0/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 6 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.007604192594695916,
+    "ci": [
+     -0.09740584636102259,
+     0.08219746117163076
+    ],
+    "p": 0.8555439335201697,
+    "sets better": "6/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00760 > 0 with p = 0.8555 < 0.05",
+     "FAIL 6/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.06947089059209982,
+    "ci": [
+     -0.003931704854782586,
+     0.14287348603898223
+    ],
+    "p": 0.061369257040595315,
+    "sets better": "9/12",
+    "sig worse": 1,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.06947 > 0 with p = 0.0614 < 0.05",
+     "PASS 9/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "FAIL 1 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": 0.005935624936372391,
+    "ci": [
+     -0.14841978646736786,
+     0.16029103634011266
+    ],
+    "p": 0.9340705185056443,
+    "sets better": "7/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00594 > 0 with p = 0.9341 < 0.05",
+     "FAIL 7/12 sets better >= 8",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": 0.07002667660535418,
+    "ci": [
+     -0.07407786965033432,
+     0.2141312228610427
+    ],
+    "p": 0.30772810651527793,
+    "sets better": "8/12",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.07003 > 0 with p = 0.3077 < 0.05",
+     "PASS 8/12 sets better >= 8",
+     "PASS RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer FM path [picknet_a0.5] - champion": {
+   "experienced raw": {
+    "re mean": -0.013376250449310734,
+    "ci": [
+     -0.10202686617841195,
+     0.07527436527979048
+    ],
+    "p": 0.582796051586383,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01338 > 0 with p = 0.5828 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.0008502437190332365,
+    "ci": [
+     -0.08956549644494129,
+     0.08786500900687481
+    ],
+    "p": 0.9708538033619126,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00085 > 0 with p = 0.9709 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.0005658298473568501,
+    "ci": [
+     -0.06933926296973282,
+     0.07047092266444653
+    ],
+    "p": 0.975381211130082,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00057 > 0 with p = 0.9754 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.010429076671116021,
+    "ci": [
+     -0.10961526744668611,
+     0.08875711410445407
+    ],
+    "p": 0.6953095863879852,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01043 > 0 with p = 0.6953 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.00546725936448102,
+    "ci": [
+     -0.0956298949277822,
+     0.08469537619882017
+    ],
+    "p": 0.8185751772085567,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00547 > 0 with p = 0.8186 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer FM path [picknet_a0.5] - champion [picknet_a0.5]": {
+   "experienced raw": {
+    "re mean": -0.019518756827155533,
+    "ci": [
+     -0.10641641465716142,
+     0.06737890100285035
+    ],
+    "p": 0.43578047127848224,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01952 > 0 with p = 0.4358 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.0072202354231483724,
+    "ci": [
+     -0.05947819776520169,
+     0.04503772691890494
+    ],
+    "p": 0.6124863358535523,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00722 > 0 with p = 0.6125 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.0022439452075216923,
+    "ci": [
+     -0.04737994011332984,
+     0.04289204969828646
+    ],
+    "p": 0.8504458140194013,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00224 > 0 with p = 0.8504 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.015359570236980357,
+    "ci": [
+     -0.11531008490806323,
+     0.08459094443410252
+    ],
+    "p": 0.576467746163624,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01536 > 0 with p = 0.5765 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.0114969961653398,
+    "ci": [
+     -0.10171546992586866,
+     0.07872147759518905
+    ],
+    "p": 0.6385063820581992,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01150 > 0 with p = 0.6385 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer FM path [picknet_a0] - champion": {
+   "experienced raw": {
+    "re mean": -0.0024041888732162153,
+    "ci": [
+     -0.046922914716158635,
+     0.0421145369697262
+    ],
+    "p": 0.8378702005801733,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00240 > 0 with p = 0.8379 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 0.0013560615820979688,
+    "ci": [
+     -0.049518229571712945,
+     0.052230352735908876
+    ],
+    "p": 0.9191688210793296,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00136 > 0 with p = 0.9192 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.01047274136104611,
+    "ci": [
+     -0.06818184619444564,
+     0.08912732891653788
+    ],
+    "p": 0.6245414454081644,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.01047 > 0 with p = 0.6245 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.024416809979008216,
+    "ci": [
+     -0.158166884837865,
+     0.10933326487984857
+    ],
+    "p": 0.5144521777834973,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.02442 > 0 with p = 0.5145 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.01599815971633646,
+    "ci": [
+     -0.1263543195864087,
+     0.09435800015373576
+    ],
+    "p": 0.5964512756698545,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01600 > 0 with p = 0.5965 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer FM path [picknet_a0] - champion [picknet_a0]": {
+   "experienced raw": {
+    "re mean": -0.003083095381082938,
+    "ci": [
+     -0.02288852514288251,
+     0.016722334380716637
+    ],
+    "p": 0.5719659193462535,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00308 > 0 with p = 0.5720 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 0.0007763706541652316,
+    "ci": [
+     -0.018747544458465618,
+     0.02030028576679608
+    ],
+    "p": 0.8798930366519346,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00078 > 0 with p = 0.8799 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.002499281073359129,
+    "ci": [
+     -0.04152245180430147,
+     0.04652101395101973
+    ],
+    "p": 0.8297899266282083,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00250 > 0 with p = 0.8298 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.040582200233827304,
+    "ci": [
+     -0.18646427775610763,
+     0.10529987728845303
+    ],
+    "p": 0.3539662191408587,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.04058 > 0 with p = 0.3540 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.03185998655752589,
+    "ci": [
+     -0.15089914200498658,
+     0.0871791688899348
+    ],
+    "p": 0.3685734530895585,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.03186 > 0 with p = 0.3686 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer FM path [random_a0.5] - champion": {
+   "experienced raw": {
+    "re mean": -0.0033133176619457227,
+    "ci": [
+     -0.015390056930005211,
+     0.008763421606113767
+    ],
+    "p": 0.3591928974431308,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00331 > 0 with p = 0.3592 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.0037053628414660503,
+    "ci": [
+     -0.04592994939222486,
+     0.038519223709292755
+    ],
+    "p": 0.742050346057119,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00371 > 0 with p = 0.7421 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.0028691424127709675,
+    "ci": [
+     -0.052437976542262316,
+     0.04669969171672038
+    ],
+    "p": 0.8265665576399112,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00287 > 0 with p = 0.8266 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": 0.00031998395871751177,
+    "ci": [
+     -0.02597679482395411,
+     0.026616762741389133
+    ],
+    "p": 0.9630044451804788,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00032 > 0 with p = 0.9630 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": 0.0005339415651672071,
+    "ci": [
+     -0.02504646353798509,
+     0.026114346668319504
+    ],
+    "p": 0.9366227133001007,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00053 > 0 with p = 0.9366 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer FM path [random_a0.5] - champion [random_a0.5]": {
+   "experienced raw": {
+    "re mean": 3.466762568258774e-08,
+    "ci": [
+     -1.3793478711495512e-07,
+     2.072700384801306e-07
+    ],
+    "p": 0.47856891377447425,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00000 > 0 with p = 0.4786 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 3.725605604170612e-08,
+    "ci": [
+     -1.583410063788006e-07,
+     2.3285311846221283e-07
+    ],
+    "p": 0.4986035773476446,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00000 > 0 with p = 0.4986 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 4.1370741758144205e-08,
+    "ci": [
+     -1.394638399924422e-07,
+     2.2220532350873064e-07
+    ],
+    "p": 0.42872198282781104,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00000 > 0 with p = 0.4287 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -2.5519332748785104e-08,
+    "ci": [
+     -2.9682047030346093e-07,
+     2.457818048058907e-07
+    ],
+    "p": 0.72486511403791,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00000 > 0 with p = 0.7249 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -2.5739199297176742e-08,
+    "ci": [
+     -2.7507876961076325e-07,
+     2.2360037101640974e-07
+    ],
+    "p": 0.7003615469505231,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00000 > 0 with p = 0.7004 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer FM path [random_a0] - champion": {
+   "experienced raw": {
+    "re mean": -0.006654841539961016,
+    "ci": [
+     -0.07685258993708788,
+     0.06354290685716585
+    ],
+    "p": 0.7228700316728958,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00665 > 0 with p = 0.7229 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.006546581299177068,
+    "ci": [
+     -0.07536878690226452,
+     0.062275624303910385
+    ],
+    "p": 0.722002063673834,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00655 > 0 with p = 0.7220 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.005744098160356344,
+    "ci": [
+     -0.07343502693527193,
+     0.08492322325598461
+    ],
+    "p": 0.7844720189088283,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00574 > 0 with p = 0.7845 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.027994999793425977,
+    "ci": [
+     -0.21016984084014398,
+     0.154179841253292
+    ],
+    "p": 0.5764693148182484,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.02799 > 0 with p = 0.5765 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.02152671660236565,
+    "ci": [
+     -0.1902621334412289,
+     0.14720870023649757
+    ],
+    "p": 0.6381570312619746,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.02153 > 0 with p = 0.6382 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer FM path [random_a0] - champion [random_a0]": {
+   "experienced raw": {
+    "re mean": -0.00493483994606499,
+    "ci": [
+     -0.041420002619674975,
+     0.03155032272754499
+    ],
+    "p": 0.6194533311857563,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00493 > 0 with p = 0.6195 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.015653968052618226,
+    "ci": [
+     -0.0684098580778883,
+     0.03710192197265184
+    ],
+    "p": 0.32990207073412176,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01565 > 0 with p = 0.3299 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.004237657574199367,
+    "ci": [
+     -0.048646967417287044,
+     0.04017165226888831
+    ],
+    "p": 0.7211943532624117,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00424 > 0 with p = 0.7212 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.05678936911263632,
+    "ci": [
+     -0.27126164334463454,
+     0.1576829051193619
+    ],
+    "p": 0.3726514637729071,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.05679 > 0 with p = 0.3727 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.05508778817905244,
+    "ci": [
+     -0.2589480785420848,
+     0.14877250218397992
+    ],
+    "p": 0.3649340525246328,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.05509 > 0 with p = 0.3649 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer [picknet_a0.5] - champion": {
+   "experienced raw": {
+    "re mean": -0.012001781782010014,
+    "ci": [
+     -0.10151367927778394,
+     0.07751011571376391
+    ],
+    "p": 0.6222876934946381,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01200 > 0 with p = 0.6223 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.0011643058786087658,
+    "ci": [
+     -0.10034531689717352,
+     0.098016705139956
+    ],
+    "p": 0.9643070012463264,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00116 > 0 with p = 0.9643 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.00044531445349290576,
+    "ci": [
+     -0.07983621980439495,
+     0.07894559089740913
+    ],
+    "p": 0.982937050567739,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00045 > 0 with p = 0.9829 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.008259573161670999,
+    "ci": [
+     -0.107140067694097,
+     0.09062092137075499
+    ],
+    "p": 0.753692320496389,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00826 > 0 with p = 0.7537 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.0027437938244206047,
+    "ci": [
+     -0.0924768992719337,
+     0.08698931162309248
+    ],
+    "p": 0.9073705966880937,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00274 > 0 with p = 0.9074 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer [picknet_a0.5] - champion [picknet_a0.5]": {
+   "experienced raw": {
+    "re mean": -0.01858133454890242,
+    "ci": [
+     -0.10598698968412973,
+     0.0688243205863249
+    ],
+    "p": 0.4569119205978664,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01858 > 0 with p = 0.4569 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.00964187533719837,
+    "ci": [
+     -0.06745967250053177,
+     0.04817592182613503
+    ],
+    "p": 0.5475390940378219,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00964 > 0 with p = 0.5475 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.004611835480919357,
+    "ci": [
+     -0.052602217401807656,
+     0.04337854643996895
+    ],
+    "p": 0.7193730966075566,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00461 > 0 with p = 0.7194 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.013414550340253415,
+    "ci": [
+     -0.11321200912298163,
+     0.08638290844247479
+    ],
+    "p": 0.6214731175385981,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01341 > 0 with p = 0.6215 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.009115561641775474,
+    "ci": [
+     -0.09909089708388351,
+     0.08085977380033256
+    ],
+    "p": 0.7054408568077338,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00912 > 0 with p = 0.7054 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer [picknet_a0] - champion": {
+   "experienced raw": {
+    "re mean": -0.00011709695119912467,
+    "ci": [
+     -0.044820159815027495,
+     0.04458596591262925
+    ],
+    "p": 0.9920307800436468,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00012 > 0 with p = 0.9920 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 0.0026629288478131076,
+    "ci": [
+     -0.051923441209683854,
+     0.05724929890531007
+    ],
+    "p": 0.853186818070395,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00266 > 0 with p = 0.8532 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.010868784356807795,
+    "ci": [
+     -0.06894991951788894,
+     0.09068748823150453
+    ],
+    "p": 0.6172614470441229,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.01087 > 0 with p = 0.6173 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.01912807512206045,
+    "ci": [
+     -0.12963427074480813,
+     0.09137812050068723
+    ],
+    "p": 0.5340355854985533,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01913 > 0 with p = 0.5340 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.010799745082002656,
+    "ci": [
+     -0.09905935260519293,
+     0.07745986244118762
+    ],
+    "p": 0.6511101844569315,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01080 > 0 with p = 0.6511 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer [picknet_a0] - champion [picknet_a0]": {
+   "experienced raw": {
+    "re mean": -0.00041332864312800286,
+    "ci": [
+     -0.015849830904363,
+     0.015023173618106995
+    ],
+    "p": 0.9188045724507736,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00041 > 0 with p = 0.9188 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 0.001958747644616702,
+    "ci": [
+     -0.021780585706178104,
+     0.025698080995411505
+    ],
+    "p": 0.7565212753024946,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00196 > 0 with p = 0.7565 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.0021862784357942876,
+    "ci": [
+     -0.04372086143775705,
+     0.04809341830934563
+    ],
+    "p": 0.8566046859273251,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00219 > 0 with p = 0.8566 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.03142123368385502,
+    "ci": [
+     -0.1495606290248223,
+     0.08671816165711226
+    ],
+    "p": 0.3709591778782891,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.03142 > 0 with p = 0.3710 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.023184637525992372,
+    "ci": [
+     -0.11646333019198518,
+     0.07009405514000044
+    ],
+    "p": 0.39683754427862566,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.02318 > 0 with p = 0.3968 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer [random_a0.5] - champion": {
+   "experienced raw": {
+    "re mean": -0.003296347319555562,
+    "ci": [
+     -0.015370427187476509,
+     0.008777732548365384
+    ],
+    "p": 0.3610501127532912,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00330 > 0 with p = 0.3611 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.0035368383299743842,
+    "ci": [
+     -0.04201890569822377,
+     0.03494522903827501
+    ],
+    "p": 0.7307037665838281,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00354 > 0 with p = 0.7307 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.0020414434727849353,
+    "ci": [
+     -0.0538248683221505,
+     0.04974198137658063
+    ],
+    "p": 0.8809124685364178,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00204 > 0 with p = 0.8809 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": 0.00048034358645545174,
+    "ci": [
+     -0.02575416314268973,
+     0.026714850315600634
+    ],
+    "p": 0.9443804338458203,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00048 > 0 with p = 0.9444 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": 0.0007802540453634179,
+    "ci": [
+     -0.02473148185518446,
+     0.0262919899459113
+    ],
+    "p": 0.9073500318909034,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00078 > 0 with p = 0.9074 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer [random_a0.5] - champion [random_a0.5]": {
+   "experienced raw": {
+    "re mean": 3.46676289873806e-08,
+    "ci": [
+     -1.379347838101549e-07,
+     2.072700417849161e-07
+    ],
+    "p": 0.4785688775823552,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00000 > 0 with p = 0.4786 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": 3.725606556806465e-08,
+    "ci": [
+     -1.583409968524404e-07,
+     2.328531279885697e-07
+    ],
+    "p": 0.4986034813717841,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00000 > 0 with p = 0.4986 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 4.137075656993315e-08,
+    "ci": [
+     -1.3946382518067958e-07,
+     2.2220533832054589e-07
+    ],
+    "p": 0.42872184504651845,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00000 > 0 with p = 0.4287 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -2.5519318883684113e-08,
+    "ci": [
+     -2.968204564382948e-07,
+     2.457818186709266e-07
+    ],
+    "p": 0.7248652522075241,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00000 > 0 with p = 0.7249 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -2.5739179953985492e-08,
+    "ci": [
+     -2.750787502675123e-07,
+     2.2360039035954132e-07
+    ],
+    "p": 0.7003617519134862,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00000 > 0 with p = 0.7004 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer [random_a0] - champion": {
+   "experienced raw": {
+    "re mean": -0.0065939687623741755,
+    "ci": [
+     -0.07568464253795969,
+     0.06249670501321134
+    ],
+    "p": 0.7211495772600949,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00659 > 0 with p = 0.7211 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.006211415200300357,
+    "ci": [
+     -0.07365077456715065,
+     0.06122794416654993
+    ],
+    "p": 0.7301740481532711,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00621 > 0 with p = 0.7302 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": 0.006213938498496613,
+    "ci": [
+     -0.0728866207799426,
+     0.08531449777693581
+    ],
+    "p": 0.7675413236784508,
+    "sets better": "2/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean +0.00621 > 0 with p = 0.7675 < 0.05",
+     "FAIL 2/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.028298919094940662,
+    "ci": [
+     -0.2091537352233478,
+     0.15255589703346645
+    ],
+    "p": 0.5701629587604629,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.02830 > 0 with p = 0.5702 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.02180332829399894,
+    "ci": [
+     -0.18909080661036448,
+     0.1454841500223666
+    ],
+    "p": 0.6313883513299957,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.02180 > 0 with p = 0.6314 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  },
+  "transformer [random_a0] - champion [random_a0]": {
+   "experienced raw": {
+    "re mean": -0.004933622487265136,
+    "ci": [
+     -0.04119493949863417,
+     0.031327694524103895
+    ],
+    "p": 0.6175276308285983,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00493 > 0 with p = 0.6175 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced dl": {
+    "re mean": -0.014870284210906519,
+    "ci": [
+     -0.06625994381465822,
+     0.03651937539284518
+    ],
+    "p": 0.3392159593454801,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.01487 > 0 with p = 0.3392 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "experienced pre": {
+    "re mean": -0.0036201102639958366,
+    "ci": [
+     -0.04812534464701771,
+     0.04088512411902604
+    ],
+    "p": 0.7597715901907125,
+    "sets better": "1/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.00362 > 0 with p = 0.7598 < 0.05",
+     "FAIL 1/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 dl": {
+    "re mean": -0.05693390201313087,
+    "ci": [
+     -0.2697487524794565,
+     0.15588094845319478
+    ],
+    "p": 0.36873670824850685,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.05693 > 0 with p = 0.3687 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   },
+   "match 1 pre": {
+    "re mean": -0.05507433949510752,
+    "ci": [
+     -0.2569584593864445,
+     0.14680978039622947
+    ],
+    "p": 0.3613389849788227,
+    "sets better": "0/3",
+    "sig worse": 0,
+    "adopt": false,
+    "why": [
+     "FAIL RE mean -0.05507 > 0 with p = 0.3613 < 0.05",
+     "FAIL 0/3 sets better >= 3",
+     "FAIL RE mean >= min_effect 0.02",
+     "PASS 0 sets significantly worse <= 0"
+    ]
+   }
+  }
+ },
+ "rules": {
+  "FM over LightGBM confirmed (game FM)": true,
+  "FM over LightGBM confirmed (champion)": true,
+  "blend* (LightGBM + game FM): FM alone stays (blend* - FM < +0.02, dl)": false,
+  "blend* (LightGBM + game FM): blend* becomes the deck rater (>= +0.02 and decide passes)": true,
+  "blend* (LightGBM + game FM): alpha* >= 0.8 in sets (seed 0)": "2/12",
+  "blend* (LightGBM + champion): FM alone stays (blend* - FM < +0.02, dl)": false,
+  "blend* (LightGBM + champion): blend* becomes the deck rater (>= +0.02 and decide passes)": true,
+  "blend* (LightGBM + champion): alpha* >= 0.8 in sets (seed 0)": "2/12"
+ }
+}

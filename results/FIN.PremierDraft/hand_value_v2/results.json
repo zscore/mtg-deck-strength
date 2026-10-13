@@ -1,0 +1,172 @@
+{
+ "set": "FIN",
+ "games": 769659,
+ "valid games": 769659,
+ "dropped (hand != 7 or hand card not in deck)": 0.0,
+ "mulligan share": 0.1124030252358512,
+ "precision-only dense columns (p_hat only)": 2,
+ "lambda grid": [
+  3e-07,
+  3e-06,
+  3e-05,
+  0.0003,
+  0.003,
+  0.03,
+  0.3
+ ],
+ "cards in tables": 295,
+ "lambda deck": 0.0003,
+ "lambda deck grid position": "interior",
+ "deck model val logloss by lambda": {
+  "3e-07": 0.6572833812222993,
+  "3e-06": 0.6572740783650709,
+  "3e-05": 0.65725474838812,
+  "0.0003": 0.6571238916137967,
+  "0.003": 0.6572719139280974,
+  "0.03": 0.6585854447751404,
+  "0.3": 0.6605697116893933
+ },
+ "split-half r (train, halves)": 0.8306522671832499,
+ "reliability train (Spearman-Brown)": 0.9074932274946358,
+ "split-half r (test, halves)": 0.47107317566501583,
+ "reliability test (Spearman-Brown)": 0.640448325015595,
+ "hv tau (sd of true logit hand values)": 0.14565143553927629,
+ "median se_logit (train, table cards)": 0.033391791324179604,
+ "cluster/HC se ratio (pp, median)": 1.0014377118494202,
+ "balance index sd (train)": 0.03523011102364438,
+ "corr balance index vs HV (train)": 0.3892435666900499,
+ "corr hv full vs core (L in 3-4, no mulligan)": 0.9714524294250796,
+ "corr hv play vs draw": 0.7114452490698865,
+ "ratings vs test-game hand value (circular target: test HV)": {
+  "GP WR": {
+   "pearson vs test HV": 0.5451328725553125,
+   "spearman vs test HV": 0.49886133106472097,
+   "pearson disattenuated (test HV reliability)": 0.6811775473570857,
+   "skill tilt": 0.7398875596578266,
+   "cards": 295
+  },
+  "OH WR": {
+   "pearson vs test HV": 0.732825585896907,
+   "spearman vs test HV": 0.703230435554891,
+   "pearson disattenuated (test HV reliability)": 0.9157113070467496,
+   "skill tilt": 0.5680534437116771,
+   "cards": 295
+  },
+  "GD WR": {
+   "pearson vs test HV": 0.44022709724479103,
+   "spearman vs test HV": 0.3901254592537886,
+   "pearson disattenuated (test HV reliability)": 0.5500912336760778,
+   "skill tilt": 0.6537917077298793,
+   "cards": 295
+  },
+  "GIH WR": {
+   "pearson vs test HV": 0.620632862402383,
+   "spearman vs test HV": 0.5752750848392495,
+   "pearson disattenuated (test HV reliability)": 0.7755194968132598,
+   "skill tilt": 0.6818263011396576,
+   "cards": 295
+  },
+  "IWD": {
+   "pearson vs test HV": 0.5837679586801734,
+   "spearman vs test HV": 0.5602746641487563,
+   "pearson disattenuated (test HV reliability)": 0.7294544987819737,
+   "skill tilt": 0.4480012627700368,
+   "cards": 295
+  },
+  "deck model w (clean)": {
+   "pearson vs test HV": 0.6082322730498773,
+   "spearman vs test HV": 0.5625940710686474,
+   "pearson disattenuated (test HV reliability)": 0.7600241864656617,
+   "skill tilt": 0.3810817547118856,
+   "cards": 295
+  },
+  "HV train": {
+   "pearson vs test HV": 0.7436402226771555,
+   "spearman vs test HV": 0.7228004898707079,
+   "pearson disattenuated (test HV reliability)": 0.9292248706720654,
+   "skill tilt": 0.17175210637003488,
+   "cards": 295
+  },
+  "HV train shrunk": {
+   "pearson vs test HV": 0.7541559384026844,
+   "spearman vs test HV": 0.7292884721456151,
+   "pearson disattenuated (test HV reliability)": 0.9423649137831022,
+   "skill tilt": 0.1544035059436961,
+   "cards": 295
+  },
+  "FM w (T2 champion)": {
+   "pearson vs test HV": 0.5419941713135856,
+   "spearman vs test HV": 0.46794244954051256,
+   "pearson disattenuated (test HV reliability)": 0.6772555442613922,
+   "skill tilt": 0.3031970530118756,
+   "cards": 295
+  },
+  "FM full marginal (T2 champion)": {
+   "pearson vs test HV": 0.6281275010716441,
+   "spearman vs test HV": 0.5845260687875702,
+   "pearson disattenuated (test HV reliability)": 0.7848845155895524,
+   "skill tilt": 0.37619373188686267,
+   "cards": 295
+  }
+ },
+ "deck vs hand": {
+  "mean cards drawn after the opener": 9.967110633850098,
+  "deck size": 40.0,
+  "q": 0.3020336555712151,
+  "kappa if drawn = hand value (lambda 1)": 0.6077338387904637,
+  "kappa if only the opener matters (lambda 0)": 0.175,
+  "clean deck model w": {
+   "cards": 295,
+   "slope (raw)": 0.23341674553163122,
+   "slope EIV-corrected": 0.25721045453533253,
+   "implied lambda": 0.2515127381598988,
+   "pearson r": 0.6803872822183026
+  },
+  "FM w (T2 champion)": {
+   "cards": 295,
+   "slope (raw)": 0.21981186719129897,
+   "slope EIV-corrected": 0.24221874117798667,
+   "implied lambda": 0.2085362659770963,
+   "pearson r": 0.6429560250628121
+  },
+  "FM full marginal (T2 champion)": {
+   "cards": 295,
+   "slope (raw)": 0.2797811723183017,
+   "slope EIV-corrected": 0.30830111326638576,
+   "implied lambda": 0.3894333333836663,
+   "pearson r": 0.7092128007827472
+  }
+ },
+ "prior experiment (test games, deck model without the FM score)": {
+  "ridge": {
+   "val logloss": 0.6571238916137967,
+   "lambda": 0.0003,
+   "lambda grid position": "interior",
+   "kappa": 0.0,
+   "test logloss": 0.6589485657605629,
+   "vs ridge x1000": 0.0,
+   "vs ridge se x1000 (draft cluster)": 0.0
+  },
+  "ridge + kappa*HV": {
+   "val logloss": 0.6571528108039991,
+   "lambda": 0.0003,
+   "lambda grid position": "interior",
+   "kappa": 0.3492714180066883,
+   "test logloss": 0.6589526657044532,
+   "vs ridge x1000": 0.004099943890274491,
+   "vs ridge se x1000 (draft cluster)": 0.013258661585261027
+  },
+  "kappa*HV only": {
+   "val logloss": 0.6598333180970758,
+   "lambda": 0.0,
+   "lambda grid position": "-",
+   "kappa": 0.23380978058924307,
+   "test logloss": 0.6620346854598046,
+   "vs ridge x1000": 3.0861196992416224,
+   "vs ridge se x1000 (draft cluster)": 0.2325735900008816
+  }
+ },
+ "seconds": 318.7563650608063,
+ "seconds total": 343.3034839630127,
+ "max rss GB": 3.9462127685546875
+}

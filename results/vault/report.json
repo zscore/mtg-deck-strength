@@ -1,0 +1,648 @@
+{
+ "frozen sha256": "87155c5019accc3e0078798d67c6f4b516646cf90717779c83da4aec003b50be",
+ "code drift since freeze": [],
+ "hypotheses": {
+  "H1": {
+   "affinity sets": {
+    "claim": "game FM (champion, train-only) - LightGBM (round 4, platinum) > 0",
+    "vault sets": [
+     "ECL",
+     "TLA"
+    ],
+    "vault mean": 0.27239447661173793,
+    "ci": [
+     -1.1291228823007935,
+     1.6739118355242693
+    ],
+    "one-sided p": 0.1224705718846108,
+    "sets better": "2/2",
+    "sig worse": 0,
+    "decide": false,
+    "decide checks": [
+     "FAIL RE mean +0.27239 > 0 with p = 0.2449 < 0.05",
+     "PASS 2/2 sets better >= 2",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  ECL    +0.37743 \u00b1 0.25375  z +1.49\n  TLA    +0.24792 \u00b1 0.12248  z +2.02\n  fixed effect +0.27239 \u00b1 0.11030\n  random effects (DL + HKSJ) +0.27239, 95% CI [-1.12912, +1.67391], p = 0.2449; tau = 0.00000, I2 = 0%, Q p = 0.646\n  95% prediction interval for a new set [-1.12912, +1.67391]\n  sets better 2/2 (sign test one-sided p = 0.250), Wilcoxon p = 0.500, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 14,
+     "re mean": 0.3765199242820802,
+     "ci": [
+      0.2626377999046263,
+      0.4904020486595341
+     ],
+     "one-sided p": 3.7795749490075003e-06
+    },
+    "verdict": "NOT CONFIRMED"
+   },
+   "no-aff sets": {
+    "claim": "game FM (champion, train-only) - LightGBM (round 4, platinum) > 0",
+    "vault sets": [
+     "WOE",
+     "MOM",
+     "HOB",
+     "TMT"
+    ],
+    "vault mean": 0.2682995357339248,
+    "ci": [
+     -0.06300174524142638,
+     0.5996008167092759
+    ],
+    "one-sided p": 0.040987322972757353,
+    "sets better": "3/4",
+    "sig worse": 0,
+    "decide": false,
+    "decide checks": [
+     "FAIL RE mean +0.26830 > 0 with p = 0.0820 < 0.05",
+     "PASS 3/4 sets better >= 3",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  WOE    -0.01426 \u00b1 0.18799  z -0.08\n  MOM    +0.25720 \u00b1 0.08336  z +3.09\n  HOB    +0.56849 \u00b1 0.23977  z +2.37\n  TMT    +0.42018 \u00b1 0.23785  z +1.77\n  fixed effect +0.26016 \u00b1 0.06946\n  random effects (DL + HKSJ) +0.26830, 95% CI [-0.06300, +0.59960], p = 0.0820; tau = 0.11099, I2 = 29%, Q p = 0.237\n  95% prediction interval for a new set [-0.38643, +0.92303]\n  sets better 3/4 (sign test one-sided p = 0.312), Wilcoxon p = 0.250, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 16,
+     "re mean": 0.3647162656250755,
+     "ci": [
+      0.25349949883481016,
+      0.4759330324153408
+     ],
+     "one-sided p": 2.1771066166779145e-06
+    },
+    "verdict": "CONFIRMED"
+   },
+   "all vault sets": {
+    "claim": "game FM (champion, train-only) - LightGBM (round 4, platinum) > 0",
+    "vault sets": [
+     "ECL",
+     "TLA",
+     "WOE",
+     "MOM",
+     "HOB",
+     "TMT"
+    ],
+    "vault mean": 0.2636371113170758,
+    "ci": [
+     0.11255009403508287,
+     0.4147241285990687
+    ],
+    "one-sided p": 0.003242841697662043,
+    "sets better": "5/6",
+    "sig worse": 0,
+    "decide": true,
+    "decide checks": [
+     "PASS RE mean +0.26364 > 0 with p = 0.0065 < 0.05",
+     "PASS 5/6 sets better >= 4",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  ECL    +0.37743 \u00b1 0.25375  z +1.49\n  TLA    +0.24792 \u00b1 0.12248  z +2.02\n  WOE    -0.01426 \u00b1 0.18799  z -0.08\n  MOM    +0.25720 \u00b1 0.08336  z +3.09\n  HOB    +0.56849 \u00b1 0.23977  z +2.37\n  TMT    +0.42018 \u00b1 0.23785  z +1.77\n  fixed effect +0.26364 \u00b1 0.05878\n  random effects (DL + HKSJ) +0.26364, 95% CI [+0.11255, +0.41472], p = 0.0065; tau = 0.00000, I2 = 0%, Q p = 0.485\n  95% prediction interval for a new set [+0.10045, +0.42682]\n  sets better 5/6 (sign test one-sided p = 0.109), Wilcoxon p = 0.062, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 18,
+     "re mean": 0.3554634698844677,
+     "ci": [
+      0.25678103565205046,
+      0.45414590411688494
+     ],
+     "one-sided p": 3.644407345291475e-07
+    },
+    "verdict": "CONFIRMED"
+   },
+   "dev sets with results": [
+    "BLB",
+    "DFT",
+    "DSK",
+    "EOE",
+    "FDN",
+    "FIN",
+    "LCI",
+    "MKM",
+    "MSH",
+    "OTJ",
+    "SOS",
+    "TDM"
+   ]
+  },
+  "H2": {
+   "affinity sets": {
+    "claim": "game FM (champion) - linear game model > 0",
+    "vault sets": [
+     "ECL",
+     "TLA"
+    ],
+    "vault mean": 0.0682963736323237,
+    "ci": [
+     -1.3795155190385686,
+     1.516108266303216
+    ],
+    "one-sided p": 0.3281245708301199,
+    "sets better": "1/2",
+    "sig worse": 0,
+    "decide": false,
+    "decide checks": [
+     "FAIL RE mean +0.06830 > 0 with p = 0.6562 < 0.05",
+     "FAIL 1/2 sets better >= 2",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  ECL    +0.21747 \u00b1 0.12431  z +1.75\n  TLA    -0.01874 \u00b1 0.02789  z -0.67\n  fixed effect -0.00742 \u00b1 0.02721\n  random effects (DL + HKSJ) +0.06830, 95% CI [-1.37952, +1.51611], p = 0.6562; tau = 0.14065, I2 = 71%, Q p = 0.064\n  95% prediction interval for a new set [-2.23167, +2.36826]\n  sets better 1/2 (sign test one-sided p = 0.750), Wilcoxon p = 1.000, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 14,
+     "re mean": 0.1341042243070592,
+     "ci": [
+      0.04443519795467532,
+      0.2237732506594431
+     ],
+     "one-sided p": 0.003282403000951481
+    },
+    "verdict": "NOT CONFIRMED"
+   },
+   "no-aff sets": {
+    "claim": "game FM (champion) - linear game model > 0",
+    "vault sets": [
+     "WOE",
+     "MOM",
+     "HOB",
+     "TMT"
+    ],
+    "vault mean": 0.29286527042908256,
+    "ci": [
+     -0.003365221920834105,
+     0.5890957627789992
+    ],
+    "one-sided p": 0.02570625691918553,
+    "sets better": "4/4",
+    "sig worse": 0,
+    "decide": false,
+    "decide checks": [
+     "FAIL RE mean +0.29287 > 0 with p = 0.0514 < 0.05",
+     "PASS 4/4 sets better >= 3",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  WOE    +0.57606 \u00b1 0.14737  z +3.91\n  MOM    +0.32271 \u00b1 0.04071  z +7.93\n  HOB    +0.19369 \u00b1 0.14608  z +1.33\n  TMT    +0.09372 \u00b1 0.12002  z +0.78\n  fixed effect +0.30929 \u00b1 0.03614\n  random effects (DL + HKSJ) +0.29287, 95% CI [-0.00337, +0.58910], p = 0.0514; tau = 0.12340, I2 = 59%, Q p = 0.065\n  95% prediction interval for a new set [-0.37220, +0.95794]\n  sets better 4/4 (sign test one-sided p = 0.062), Wilcoxon p = 0.125, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 16,
+     "re mean": 0.17388049911167094,
+     "ci": [
+      0.08079802456675045,
+      0.26696297365659144
+     ],
+     "one-sided p": 0.0006017650006448724
+    },
+    "verdict": "CONFIRMED"
+   },
+   "all vault sets": {
+    "claim": "game FM (champion) - linear game model > 0",
+    "vault sets": [
+     "ECL",
+     "TLA",
+     "WOE",
+     "MOM",
+     "HOB",
+     "TMT"
+    ],
+    "vault mean": 0.21824809909024076,
+    "ci": [
+     -0.03571337266370453,
+     0.472209570844186
+    ],
+    "one-sided p": 0.039096820549777714,
+    "sets better": "5/6",
+    "sig worse": 0,
+    "decide": false,
+    "decide checks": [
+     "FAIL RE mean +0.21825 > 0 with p = 0.0782 < 0.05",
+     "PASS 5/6 sets better >= 4",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  ECL    +0.21747 \u00b1 0.12431  z +1.75\n  TLA    -0.01874 \u00b1 0.02789  z -0.67\n  WOE    +0.57606 \u00b1 0.14737  z +3.91\n  MOM    +0.32271 \u00b1 0.04071  z +7.93\n  HOB    +0.19369 \u00b1 0.14608  z +1.33\n  TMT    +0.09372 \u00b1 0.12002  z +0.78\n  fixed effect +0.10717 \u00b1 0.02174\n  random effects (DL + HKSJ) +0.21825, 95% CI [-0.03571, +0.47221], p = 0.0782; tau = 0.21745, I2 = 92%, Q p = 0.000\n  95% prediction interval for a new set [-0.44488, +0.88138]\n  sets better 5/6 (sign test one-sided p = 0.109), Wilcoxon p = 0.062, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 18,
+     "re mean": 0.16246573258555538,
+     "ci": [
+      0.07854249247398168,
+      0.2463889726971291
+     ],
+     "one-sided p": 0.0003862071923195765
+    },
+    "verdict": "CONFIRMED"
+   },
+   "dev sets with results": [
+    "BLB",
+    "DFT",
+    "DSK",
+    "EOE",
+    "FDN",
+    "FIN",
+    "LCI",
+    "MKM",
+    "MSH",
+    "OTJ",
+    "SOS",
+    "TDM"
+   ]
+  },
+  "H3": {
+   "affinity sets": {
+    "claim": "refit on train+val (champion v2) - train-only champion > 0 (twin calibration)",
+    "vault sets": [
+     "ECL",
+     "TLA"
+    ],
+    "vault mean": 0.027296002187116798,
+    "ci": [
+     -0.4864522146851389,
+     0.5410442190593725
+    ],
+    "one-sided p": 0.3109829486308376,
+    "sets better": "2/2",
+    "sig worse": 0,
+    "decide": false,
+    "decide checks": [
+     "FAIL RE mean +0.02730 > 0 with p = 0.6220 < 0.05",
+     "PASS 2/2 sets better >= 2",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  ECL    +0.04007 \u00b1 0.14557  z +0.28\n  TLA    +0.02623 \u00b1 0.04209  z +0.62\n  fixed effect +0.02730 \u00b1 0.04043\n  random effects (DL + HKSJ) +0.02730, 95% CI [-0.48645, +0.54104], p = 0.6220; tau = 0.00000, I2 = 0%, Q p = 0.927\n  95% prediction interval for a new set [-0.48645, +0.54104]\n  sets better 2/2 (sign test one-sided p = 0.250), Wilcoxon p = 0.500, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 14,
+     "re mean": 0.03481440596558531,
+     "ci": [
+      0.0046806861558633915,
+      0.06494812577530723
+     ],
+     "one-sided p": 0.013396556577357291
+    },
+    "verdict": "CONFIRMED"
+   },
+   "no-aff sets": {
+    "claim": "refit on train+val (champion v2) - train-only champion > 0 (twin calibration)",
+    "vault sets": [
+     "WOE",
+     "MOM",
+     "HOB",
+     "TMT"
+    ],
+    "vault mean": 0.024537290561998677,
+    "ci": [
+     -0.15140032984779542,
+     0.2004749109717928
+    ],
+    "one-sided p": 0.3436088286677234,
+    "sets better": "2/4",
+    "sig worse": 0,
+    "decide": false,
+    "decide checks": [
+     "FAIL RE mean +0.02454 > 0 with p = 0.6872 < 0.05",
+     "FAIL 2/4 sets better >= 3",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  WOE    +0.14087 \u00b1 0.08744  z +1.61\n  MOM    -0.03608 \u00b1 0.03411  z -1.06\n  HOB    +0.13229 \u00b1 0.16038  z +0.82\n  TMT    -0.06506 \u00b1 0.19362  z -0.34\n  fixed effect -0.00869 \u00b1 0.03077\n  random effects (DL + HKSJ) +0.02454, 95% CI [-0.15140, +0.20047], p = 0.6872; tau = 0.06500, I2 = 32%, Q p = 0.219\n  95% prediction interval for a new set [-0.34261, +0.39168]\n  sets better 2/4 (sign test one-sided p = 0.688), Wilcoxon p = 0.625, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 16,
+     "re mean": 0.02741076390710189,
+     "ci": [
+      -0.0011125385225175637,
+      0.05593406633672135
+     ],
+     "one-sided p": 0.0292257738288825
+    },
+    "verdict": "CONFIRMED"
+   },
+   "all vault sets": {
+    "claim": "refit on train+val (champion v2) - train-only champion > 0 (twin calibration)",
+    "vault sets": [
+     "ECL",
+     "TLA",
+     "WOE",
+     "MOM",
+     "HOB",
+     "TMT"
+    ],
+    "vault mean": 0.004507153548940689,
+    "ci": [
+     -0.05844142066721037,
+     0.06745572776509175
+    ],
+    "one-sided p": 0.4306010066889381,
+    "sets better": "4/6",
+    "sig worse": 0,
+    "decide": false,
+    "decide checks": [
+     "FAIL RE mean +0.00451 > 0 with p = 0.8612 < 0.05",
+     "PASS 4/6 sets better >= 4",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  ECL    +0.04007 \u00b1 0.14557  z +0.28\n  TLA    +0.02623 \u00b1 0.04209  z +0.62\n  WOE    +0.14087 \u00b1 0.08744  z +1.61\n  MOM    -0.03608 \u00b1 0.03411  z -1.06\n  HOB    +0.13229 \u00b1 0.16038  z +0.82\n  TMT    -0.06506 \u00b1 0.19362  z -0.34\n  fixed effect +0.00451 \u00b1 0.02449\n  random effects (DL + HKSJ) +0.00451, 95% CI [-0.05844, +0.06746], p = 0.8612; tau = 0.00000, I2 = 0%, Q p = 0.424\n  95% prediction interval for a new set [-0.06348, +0.07250]\n  sets better 4/6 (sign test one-sided p = 0.344), Wilcoxon p = 0.438, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 18,
+     "re mean": 0.02739943380412684,
+     "ci": [
+      0.0005955715457871061,
+      0.05420329606246657
+     ],
+     "one-sided p": 0.022819837329920226
+    },
+    "verdict": "CONFIRMED"
+   },
+   "dev sets with results": [
+    "BLB",
+    "DFT",
+    "DSK",
+    "EOE",
+    "FDN",
+    "FIN",
+    "LCI",
+    "MKM",
+    "MSH",
+    "OTJ",
+    "SOS",
+    "TDM"
+   ]
+  },
+  "H4": {
+   "affinity sets": {
+    "claim": "round 10 record recipe - round 4 blend > 0 (test Spearman; train draft | eval draft primary)",
+    "vault sets": [
+     "ECL",
+     "TLA"
+    ],
+    "vault mean": 0.004895415629096092,
+    "ci": [
+     -0.006355012035768936,
+     0.01614584329396112
+    ],
+    "one-sided p": 0.05695656524484798,
+    "sets better": "2/2",
+    "sig worse": 0,
+    "decide": false,
+    "decide checks": [
+     "FAIL RE mean +0.00490 > 0 with p = 0.1139 < 0.05",
+     "PASS 2/2 sets better >= 2",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  ECL    +0.00533 \u00b1 0.00113  z +4.73\n  TLA    +0.00419 \u00b1 0.00143  z +2.93\n  fixed effect +0.00490 \u00b1 0.00089\n  random effects (DL + HKSJ) +0.00490, 95% CI [-0.00636, +0.01615], p = 0.1139; tau = 0.00000, I2 = 0%, Q p = 0.530\n  95% prediction interval for a new set [-0.00636, +0.01615]\n  sets better 2/2 (sign test one-sided p = 0.250), Wilcoxon p = 0.500, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 14,
+     "re mean": 0.002615323669215393,
+     "ci": [
+      0.0016770161555098337,
+      0.003553631182920952
+     ],
+     "one-sided p": 2.1464068298466207e-05
+    },
+    "verdict": "NOT CONFIRMED"
+   },
+   "no-aff sets": {
+    "claim": "round 10 record recipe - round 4 blend > 0 (test Spearman; train draft | eval draft primary)",
+    "vault sets": [
+     "WOE",
+     "MOM",
+     "HOB",
+     "TMT"
+    ],
+    "vault mean": 0.003597977826628776,
+    "ci": [
+     0.00033534954390847856,
+     0.006860606109349073
+    ],
+    "one-sided p": 0.019605211677238905,
+    "sets better": "4/4",
+    "sig worse": 0,
+    "decide": true,
+    "decide checks": [
+     "PASS RE mean +0.00360 > 0 with p = 0.0392 < 0.05",
+     "PASS 4/4 sets better >= 3",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  WOE    +0.00195 \u00b1 0.00073  z +2.66\n  MOM    +0.00272 \u00b1 0.00096  z +2.83\n  HOB    +0.00510 \u00b1 0.00155  z +3.28\n  TMT    +0.00664 \u00b1 0.00179  z +3.70\n  fixed effect +0.00293 \u00b1 0.00052\n  random effects (DL + HKSJ) +0.00360, 95% CI [+0.00034, +0.00686], p = 0.0392; tau = 0.00147, I2 = 63%, Q p = 0.045\n  95% prediction interval for a new set [-0.00412, +0.01132]\n  sets better 4/4 (sign test one-sided p = 0.062), Wilcoxon p = 0.125, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 16,
+     "re mean": 0.002555967921041178,
+     "ci": [
+      0.00170293829330912,
+      0.0034089975487732356
+     ],
+     "one-sided p": 6.113331694723618e-06
+    },
+    "verdict": "CONFIRMED"
+   },
+   "all vault sets": {
+    "claim": "round 10 record recipe - round 4 blend > 0 (test Spearman; train draft | eval draft primary)",
+    "vault sets": [
+     "ECL",
+     "TLA",
+     "WOE",
+     "MOM",
+     "HOB",
+     "TMT"
+    ],
+    "vault mean": 0.003967131718187827,
+    "ci": [
+     0.0020360293629472547,
+     0.0058982340734284
+    ],
+    "one-sided p": 0.0016213570385404206,
+    "sets better": "6/6",
+    "sig worse": 0,
+    "decide": true,
+    "decide checks": [
+     "PASS RE mean +0.00397 > 0 with p = 0.0032 < 0.05",
+     "PASS 6/6 sets better >= 4",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  ECL    +0.00533 \u00b1 0.00113  z +4.73\n  TLA    +0.00419 \u00b1 0.00143  z +2.93\n  WOE    +0.00195 \u00b1 0.00073  z +2.66\n  MOM    +0.00272 \u00b1 0.00096  z +2.83\n  HOB    +0.00510 \u00b1 0.00155  z +3.28\n  TMT    +0.00664 \u00b1 0.00179  z +3.70\n  fixed effect +0.00344 \u00b1 0.00045\n  random effects (DL + HKSJ) +0.00397, 95% CI [+0.00204, +0.00590], p = 0.0032; tau = 0.00137, I2 = 59%, Q p = 0.034\n  95% prediction interval for a new set [-0.00037, +0.00831]\n  sets better 6/6 (sign test one-sided p = 0.016), Wilcoxon p = 0.031, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 18,
+     "re mean": 0.00278213764104084,
+     "ci": [
+      0.0019446701424567074,
+      0.0036196051396249723
+     ],
+     "one-sided p": 1.0516708886295258e-06
+    },
+    "verdict": "CONFIRMED"
+   },
+   "dev sets with results": [
+    "BLB",
+    "DFT",
+    "DSK",
+    "EOE",
+    "FDN",
+    "FIN",
+    "LCI",
+    "MKM",
+    "MSH",
+    "OTJ",
+    "SOS",
+    "TDM"
+   ],
+   "secondary (all vault sets)": {
+    "claim": "round 10 record recipe - round 4 blend > 0 (test Spearman; train draft | eval draft primary)",
+    "vault sets": [
+     "ECL",
+     "TLA",
+     "WOE",
+     "MOM",
+     "HOB",
+     "TMT"
+    ],
+    "vault mean": 0.004001106437880924,
+    "ci": [
+     0.0023349388234311557,
+     0.005667274052330693
+    ],
+    "one-sided p": 0.000812537646701431,
+    "sets better": "6/6",
+    "sig worse": 0,
+    "decide": true,
+    "decide checks": [
+     "PASS RE mean +0.00400 > 0 with p = 0.0016 < 0.05",
+     "PASS 6/6 sets better >= 4",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  ECL    +0.00198 \u00b1 0.00150  z +1.32\n  TLA    +0.00559 \u00b1 0.00096  z +5.81\n  WOE    +0.00497 \u00b1 0.00125  z +3.98\n  MOM    +0.00274 \u00b1 0.00113  z +2.41\n  HOB    +0.00324 \u00b1 0.00188  z +1.72\n  TMT    +0.00459 \u00b1 0.00266  z +1.72\n  fixed effect +0.00410 \u00b1 0.00054\n  random effects (DL + HKSJ) +0.00400, 95% CI [+0.00233, +0.00567], p = 0.0016; tau = 0.00077, I2 = 24%, Q p = 0.255\n  95% prediction interval for a new set [+0.00120, +0.00680]\n  sets better 6/6 (sign test one-sided p = 0.016), Wilcoxon p = 0.031, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 6,
+     "re mean": 0.004001106437880924,
+     "ci": [
+      0.0023349388234311557,
+      0.005667274052330693
+     ],
+     "one-sided p": 0.000812537646701431
+    },
+    "verdict": "CONFIRMED"
+   }
+  },
+  "H5": {
+   "affinity sets": {
+    "claim": "adopted arm 'blend*' - champion v2 > 0",
+    "vault sets": [
+     "ECL",
+     "TLA"
+    ],
+    "vault mean": 0.22712543946002012,
+    "ci": [
+     -0.3448928442046743,
+     0.7991437231247145
+    ],
+    "one-sided p": 0.06228528993581259,
+    "sets better": "2/2",
+    "sig worse": 0,
+    "decide": false,
+    "decide checks": [
+     "FAIL RE mean +0.22713 > 0 with p = 0.1246 < 0.05",
+     "PASS 2/2 sets better >= 2",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  ECL    +0.23463 \u00b1 0.08936  z +2.63\n  TLA    +0.22457 \u00b1 0.05212  z +4.31\n  fixed effect +0.22713 \u00b1 0.04502\n  random effects (DL + HKSJ) +0.22713, 95% CI [-0.34489, +0.79914], p = 0.1246; tau = 0.00000, I2 = 0%, Q p = 0.923\n  95% prediction interval for a new set [-0.34489, +0.79914]\n  sets better 2/2 (sign test one-sided p = 0.250), Wilcoxon p = 0.500, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 14,
+     "re mean": 0.14245050402419712,
+     "ci": [
+      0.10353657898197555,
+      0.1813644290664187
+     ],
+     "one-sided p": 1.2680945793558647e-06
+    },
+    "verdict": "NOT CONFIRMED"
+   },
+   "no-aff sets": {
+    "claim": "adopted arm 'blend*' - champion v2 > 0",
+    "vault sets": [
+     "WOE",
+     "MOM",
+     "HOB",
+     "TMT"
+    ],
+    "vault mean": 0.23526789342868445,
+    "ci": [
+     0.14657393372980948,
+     0.32396185312755943
+    ],
+    "one-sided p": 0.0017443595260994555,
+    "sets better": "4/4",
+    "sig worse": 0,
+    "decide": true,
+    "decide checks": [
+     "PASS RE mean +0.23527 > 0 with p = 0.0035 < 0.05",
+     "PASS 4/4 sets better >= 3",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  WOE    +0.28438 \u00b1 0.05787  z +4.91\n  MOM    +0.21750 \u00b1 0.03372  z +6.45\n  HOB    +0.22557 \u00b1 0.11862  z +1.90\n  TMT    +0.27879 \u00b1 0.16191  z +1.72\n  fixed effect +0.23527 \u00b1 0.02787\n  random effects (DL + HKSJ) +0.23527, 95% CI [+0.14657, +0.32396], p = 0.0035; tau = 0.00000, I2 = 0%, Q p = 0.783\n  95% prediction interval for a new set [+0.11535, +0.35518]\n  sets better 4/4 (sign test one-sided p = 0.062), Wilcoxon p = 0.125, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 16,
+     "re mean": 0.15328233685114445,
+     "ci": [
+      0.11348154928290054,
+      0.19308312441938835
+     ],
+     "one-sided p": 3.1306997171264877e-07
+    },
+    "verdict": "CONFIRMED"
+   },
+   "all vault sets": {
+    "claim": "adopted arm 'blend*' - champion v2 > 0",
+    "vault sets": [
+     "ECL",
+     "TLA",
+     "WOE",
+     "MOM",
+     "HOB",
+     "TMT"
+    ],
+    "vault mean": 0.23301192177352878,
+    "ci": [
+     0.17209826675375473,
+     0.29392557679330283
+    ],
+    "one-sided p": 9.264905843284309e-05,
+    "sets better": "6/6",
+    "sig worse": 0,
+    "decide": true,
+    "decide checks": [
+     "PASS RE mean +0.23301 > 0 with p = 0.0002 < 0.05",
+     "PASS 6/6 sets better >= 4",
+     "PASS RE mean >= min_effect 0.0",
+     "PASS 0 sets significantly worse <= 0"
+    ],
+    "summary": "  ECL    +0.23463 \u00b1 0.08936  z +2.63\n  TLA    +0.22457 \u00b1 0.05212  z +4.31\n  WOE    +0.28438 \u00b1 0.05787  z +4.91\n  MOM    +0.21750 \u00b1 0.03372  z +6.45\n  HOB    +0.22557 \u00b1 0.11862  z +1.90\n  TMT    +0.27879 \u00b1 0.16191  z +1.72\n  fixed effect +0.23301 \u00b1 0.02370\n  random effects (DL + HKSJ) +0.23301, 95% CI [+0.17210, +0.29393], p = 0.0002; tau = 0.00000, I2 = 0%, Q p = 0.953\n  95% prediction interval for a new set [+0.16722, +0.29880]\n  sets better 6/6 (sign test one-sided p = 0.016), Wilcoxon p = 0.031, significantly worse on 0",
+    "pooled dev + vault": {
+     "sets": 18,
+     "re mean": 0.1601237655138318,
+     "ci": [
+      0.1232318187616287,
+      0.19701571226603493
+     ],
+     "one-sided p": 2.7681213368817577e-08
+    },
+    "verdict": "CONFIRMED"
+   },
+   "dev sets with results": [
+    "BLB",
+    "DFT",
+    "DSK",
+    "EOE",
+    "FDN",
+    "FIN",
+    "LCI",
+    "MKM",
+    "MSH",
+    "OTJ",
+    "SOS",
+    "TDM"
+   ]
+  }
+ }
+}

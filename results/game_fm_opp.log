@@ -1,0 +1,1642 @@
+=== MSH: 68609 drafts, 377376 games (train 266251, val 56679, test 54446), 339 cards, 18 deck columns (affinity in) [11s]
+  opponent levels ['W', 'U', 'B', 'R', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'WURG', 'WBRG', 'WUBRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['W', 'U', 'B', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.66011 (1e-05, 0.01) epochs [40, 40] [23s]
+  + opp        val 0.65446 (1e-05, 0.01) epochs [40, 40] [16s]
+  + opp x own  val 0.65435 (1e-05, 0.01) epochs [40, 40] [25s]
+  SC-GLL context test logloss: base 0.65985, dl 0.66799, opp 0.65436, oppmx 0.65433 [68s]
+  all                  champion -655.185  + opp -655.266  + opp x own -655.200  cached game FM -655.146
+      + opp - champion: -0.0808 ± 0.0421 (x1000 nats/game)
+      + opp x own - champion: -0.0153 ± 0.0533 (x1000 nats/game)
+      + opp x own - + opp: +0.0655 ± 0.0573 (x1000 nats/game)
+      champion - cached game FM: -0.0387 ± 0.0941 (x1000 nats/game)
+  experienced          champion -660.490  + opp -660.565  + opp x own -660.512  cached game FM -660.459
+      + opp - champion: -0.0752 ± 0.0462 (x1000 nats/game)
+      + opp x own - champion: -0.0223 ± 0.0576 (x1000 nats/game)
+      + opp x own - + opp: +0.0528 ± 0.0513 (x1000 nats/game)
+      champion - cached game FM: -0.0306 ± 0.0901 (x1000 nats/game)
+  match 1              champion -654.501  + opp -654.659  + opp x own -654.577  cached game FM -654.526
+      + opp - champion: -0.1573 ± 0.1043 (x1000 nats/game)
+      + opp x own - champion: -0.0760 ± 0.0853 (x1000 nats/game)
+      + opp x own - + opp: +0.0812 ± 0.0955 (x1000 nats/game)
+      champion - cached game FM: +0.0250 ± 0.1817 (x1000 nats/game)
+  main build           champion -653.410  + opp -653.491  + opp x own -653.431  cached game FM -653.383
+      + opp - champion: -0.0813 ± 0.0355 (x1000 nats/game)
+      + opp x own - champion: -0.0208 ± 0.0561 (x1000 nats/game)
+      + opp x own - + opp: +0.0605 ± 0.0514 (x1000 nats/game)
+      champion - cached game FM: -0.0268 ± 0.0930 (x1000 nats/game)
+  experienced dl-ctx   champion -663.141  + opp -663.226  + opp x own -663.131  cached game FM -663.062
+      + opp - champion: -0.0851 ± 0.0472 (x1000 nats/game)
+      + opp x own - champion: +0.0100 ± 0.0775 (x1000 nats/game)
+      + opp x own - + opp: +0.0951 ± 0.0909 (x1000 nats/game)
+      champion - cached game FM: -0.0790 ± 0.0963 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.866  + opp -661.073  + opp x own -660.871  cached game FM -660.802
+      + opp - champion: -0.2072 ± 0.1613 (x1000 nats/game)
+      + opp x own - champion: -0.0054 ± 0.1125 (x1000 nats/game)
+      + opp x own - + opp: +0.2018 ± 0.1938 (x1000 nats/game)
+      champion - cached game FM: -0.0643 ± 0.2181 (x1000 nats/game)
+  experienced opp-ctx  champion -654.942  + opp -655.012  + opp x own -654.943  cached game FM -654.907
+      + opp - champion: -0.0699 ± 0.0463 (x1000 nats/game)
+      + opp x own - champion: -0.0010 ± 0.0539 (x1000 nats/game)
+      + opp x own - + opp: +0.0690 ± 0.0648 (x1000 nats/game)
+      champion - cached game FM: -0.0347 ± 0.0948 (x1000 nats/game)
+  match 1 opp-ctx      champion -647.434  + opp -647.596  + opp x own -647.495  cached game FM -647.467
+      + opp - champion: -0.1620 ± 0.1158 (x1000 nats/game)
+      + opp x own - champion: -0.0602 ± 0.0815 (x1000 nats/game)
+      + opp x own - + opp: +0.1017 ± 0.1144 (x1000 nats/game)
+      champion - cached game FM: +0.0330 ± 0.1746 (x1000 nats/game)
+  experienced oppmx-ctx champion -654.898  + opp -654.969  + opp x own -654.899  cached game FM -654.864
+      + opp - champion: -0.0706 ± 0.0463 (x1000 nats/game)
+      + opp x own - champion: -0.0011 ± 0.0540 (x1000 nats/game)
+      + opp x own - + opp: +0.0694 ± 0.0654 (x1000 nats/game)
+      champion - cached game FM: -0.0342 ± 0.0949 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -647.349  + opp -647.514  + opp x own -647.411  cached game FM -647.387
+      + opp - champion: -0.1650 ± 0.1162 (x1000 nats/game)
+      + opp x own - champion: -0.0622 ± 0.0815 (x1000 nats/game)
+      + opp x own - + opp: +0.1027 ± 0.1152 (x1000 nats/game)
+      champion - cached game FM: +0.0375 ± 0.1740 (x1000 nats/game)
+  champion       draft spearman 0.2647 (+0.0000)  sd 0.238  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2626 (-0.0022)  sd 0.238  card r 0.990 (pearson 0.995)  own-colour r 0.962
+  + opp x own    draft spearman 0.2682 (+0.0034)  sd 0.241  card r 0.993 (pearson 0.996)  own-colour r 0.962
+  cached game FM draft spearman 0.2730 (+0.0083)  sd 0.251
+  opponent strength (logit, + = harder; SE):
+    WUBRG      +0.429 ± 0.029  share 0.014  user WR 0.454  arm +0.396
+    WBRG       +0.359 ± 0.045  share 0.006  user WR 0.470  arm +0.334
+    WURG       +0.274 ± 0.037  share 0.008  user WR 0.490  arm +0.258
+    WUR        +0.243 ± 0.019  share 0.033  user WR 0.504  arm +0.261
+    other 3+   +0.187 ± 0.029  share 0.013  user WR 0.511  arm +0.134
+    WRG        +0.181 ± 0.018  share 0.034  user WR 0.518  arm +0.179
+    BRG        +0.171 ± 0.021  share 0.025  user WR 0.518  arm +0.165
+    UBG        +0.157 ± 0.024  share 0.019  user WR 0.519  arm +0.168
+    WBG        +0.151 ± 0.024  share 0.019  user WR 0.528  arm +0.154
+    URG        +0.149 ± 0.025  share 0.018  user WR 0.528  arm +0.125
+    WU         +0.148 ± 0.010  share 0.125  user WR 0.527  arm +0.158
+    WUG        +0.141 ± 0.017  share 0.038  user WR 0.530  arm +0.156
+    WBR        +0.105 ± 0.022  share 0.023  user WR 0.535  arm +0.101
+    WUB        +0.085 ± 0.022  share 0.023  user WR 0.542  arm +0.075
+    UBR        +0.064 ± 0.023  share 0.022  user WR 0.545  arm +0.079
+    UG         +0.004 ± 0.015  share 0.050  user WR 0.563  arm -0.005
+    WG         +0.002 ± 0.012  share 0.082  user WR 0.563  arm +0.010
+    WR         -0.002 ± 0.014  share 0.059  user WR 0.565  arm +0.010
+    BG         -0.019 ± 0.016  share 0.042  user WR 0.566  arm -0.003
+    RG         -0.034 ± 0.016  share 0.046  user WR 0.572  arm -0.035
+    WB         -0.036 ± 0.014  share 0.058  user WR 0.571  arm -0.040
+    UR         -0.095 ± 0.014  share 0.061  user WR 0.584  arm -0.119
+    BR         -0.103 ± 0.013  share 0.067  user WR 0.587  arm -0.116
+    UB         -0.109 ± 0.014  share 0.060  user WR 0.587  arm -0.115
+    G          -0.536 ± 0.033  share 0.012  user WR 0.692  arm -0.519
+    W          -0.693 ± 0.032  share 0.013  user WR 0.721  arm -0.677
+    B          -0.798 ± 0.035  share 0.012  user WR 0.739  arm -0.779
+    U          -0.838 ± 0.040  share 0.009  user WR 0.748  arm -0.851
+    R          -1.079 ± 0.052  share 0.006  user WR 0.792  arm -1.063
+    unknown    -2.678 ± 0.153  share 0.002  user WR 0.950  arm -2.613
+    heterogeneity Q 3806.8 df 29 p 0;  by wins before: 0:-0.004 1:-0.002 2:+0.001 3:+0.002 4:+0.004 5:+0.003 6:+0.007
+  matchups (own row x opponent col, centred logit x100):
+                    W      U      B      G     WU     WB     WR     WG     UB     UR     UG     BR     BG     RG    WUB    WUR    WUG    WBR    WBG    WRG    UBR    UBG    URG    BRG   WURG  WUBRG other 
+    B               .      .      .      .  -16.7      .      .   +9.5      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    WU           +9.6   -1.2   +5.0   +1.0   +2.6   +5.5   +0.7   +4.8   -2.3   -5.7   +2.3   -3.4   +9.2   -5.6   +0.8   -7.5   +2.0   +1.0   +3.9   -4.4   -5.0   +0.1   +4.3   -5.4  -15.6   +3.2   -7.6
+    WB           -9.5      .  -12.4   +6.4   -7.8   +4.6   +4.0   +4.9   -1.5   -9.3   +1.6   +4.0   +7.5  +10.5   -2.3   -6.9   -0.9   +1.3   +2.2  +10.2   -8.3  -11.3   +3.5   +2.4      .   -5.2  +11.3
+    WR           +0.8      .      .      .   +5.8   -4.4  +15.7  -10.6   -4.4   +7.2   +6.0   +0.9   +7.7   -5.3   +2.8  -13.2   -4.8   -7.1  -16.2   +3.8   +5.4  +13.0  -20.2   +4.9      .  -10.4      .
+    WG           +3.5  +28.5  +15.6   +7.9   -1.3   -4.0   +4.1   -3.8   -0.9  +12.5   -3.4   -1.5   -0.5   +3.3   -6.6   +6.4   -4.5   -4.3   -1.2   +2.7   -9.6  -14.3   +5.5   -6.6  -14.2   +1.6  -14.8
+    UB           +2.9      .   +4.0      .   -4.2   +8.9   +3.5   -2.5   -4.8   -7.5  -13.4   +2.2   +1.1   +3.0   +8.6   -8.6   +1.5  +10.4  +17.9   +5.7   +5.2   +9.0   -0.6   +9.4      .   +9.9  +13.7
+    UR          -18.4      .   +4.7      .   +5.8   +6.7   -6.4   -5.3  +12.0   -3.0   +1.4   +4.3   -6.5  -10.8  +10.9  +10.3   +2.0   +5.1   -7.8  -12.8   +6.2  +11.1  +10.0  -10.5      .      .   -2.6
+    UG           +7.0      .      .   +6.7   +5.5   +0.4  -11.0   +4.4   +8.9   +8.3   -6.5   -0.6   -8.0   -1.1   -1.6   +9.6   -4.8  -22.5   +2.4   -6.7  +18.3   -6.0   -2.4   +3.3      .   -4.7   -9.2
+    BR              .      .      .      .   -2.3   -3.5   -1.4   -3.9   +7.0   -2.8   +1.7   +3.3   -8.0   -1.3   +0.4  +13.2   +4.8   -2.0   -9.0   -1.0  +12.6  +17.7   -1.3   -2.8      .      .      .
+    BG              .      .      .      .  -12.9  -12.7  -11.1   +4.3   -2.4   +6.5   +7.2   +4.8   -1.8  +30.9   -4.8   -1.8   +7.1  -10.1  +10.8  +10.2   -0.7   +4.0   +6.6   +6.3      .      .      .
+    RG              .      .      .      .   +4.6  -14.6   -8.0   -4.0  -15.3  +11.2   +5.5  +10.6  -17.3   -1.7   -8.6  +22.2  -16.8  +17.5      .   -6.0      .      .      .  +12.2      .      .      .
+    WUB             .      .      .      .   +7.1      .      .  +10.8      .  -19.3      .  -20.4      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    WUR             .      .      .      .  +29.4   -5.7      .  -20.4      .  -14.1      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    WUG             .      .      .      .   -8.0  -16.6   +4.2   +1.9  +10.3   -2.6  +13.2  -11.0   -0.9  +14.5      .      .  +10.5      .      .  +20.2      .      .      .      .      .      .      .
+    WBG             .      .      .      .  -12.3      .      .   -8.9      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    WRG             .      .      .      .   -3.6      .      .   -2.5      .      .      .  +12.0      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    UBG             .      .      .      .   +4.1      .      .   +0.3      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    rps test Q 385.4 df 588 p 1
+MSH done [83s]
+=== BLB: 154585 drafts, 898354 games (train 635246, val 133584, test 129524), 276 cards, 18 deck columns (affinity in) [24s]
+  opponent levels ['W', 'U', 'B', 'R', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'WUBG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['W', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUG', 'WBG', 'WRG', 'UBG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.65730 (1e-05, 0.001) epochs [38, 33] [39s]
+  + opp        val 0.65076 (1e-05, 0.001) epochs [38, 29] [29s]
+  + opp x own  val 0.65059 (1e-05, 0.001) epochs [38, 29] [48s]
+  SC-GLL context test logloss: base 0.66214, dl 0.66965, opp 0.65552, oppmx 0.65540 [124s]
+  all                  champion -655.974  + opp -656.036  + opp x own -656.034  cached game FM -655.966
+      + opp - champion: -0.0620 ± 0.0281 (x1000 nats/game)
+      + opp x own - champion: -0.0598 ± 0.0263 (x1000 nats/game)
+      + opp x own - + opp: +0.0022 ± 0.0038 (x1000 nats/game)
+      champion - cached game FM: -0.0076 ± 0.0121 (x1000 nats/game)
+  experienced          champion -659.318  + opp -659.392  + opp x own -659.390  cached game FM -659.318
+      + opp - champion: -0.0732 ± 0.0349 (x1000 nats/game)
+      + opp x own - champion: -0.0715 ± 0.0325 (x1000 nats/game)
+      + opp x own - + opp: +0.0018 ± 0.0047 (x1000 nats/game)
+      champion - cached game FM: -0.0007 ± 0.0148 (x1000 nats/game)
+  match 1              champion -653.492  + opp -653.648  + opp x own -653.636  cached game FM -653.504
+      + opp - champion: -0.1569 ± 0.0614 (x1000 nats/game)
+      + opp x own - champion: -0.1444 ± 0.0567 (x1000 nats/game)
+      + opp x own - + opp: +0.0124 ± 0.0097 (x1000 nats/game)
+      champion - cached game FM: +0.0123 ± 0.0319 (x1000 nats/game)
+  main build           champion -654.391  + opp -654.447  + opp x own -654.445  cached game FM -654.387
+      + opp - champion: -0.0559 ± 0.0270 (x1000 nats/game)
+      + opp x own - champion: -0.0542 ± 0.0266 (x1000 nats/game)
+      + opp x own - + opp: +0.0017 ± 0.0040 (x1000 nats/game)
+      champion - cached game FM: -0.0040 ± 0.0111 (x1000 nats/game)
+  experienced dl-ctx   champion -662.201  + opp -662.254  + opp x own -662.255  cached game FM -662.207
+      + opp - champion: -0.0536 ± 0.0338 (x1000 nats/game)
+      + opp x own - champion: -0.0541 ± 0.0309 (x1000 nats/game)
+      + opp x own - + opp: -0.0005 ± 0.0047 (x1000 nats/game)
+      champion - cached game FM: +0.0057 ± 0.0163 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.405  + opp -660.563  + opp x own -660.551  cached game FM -660.436
+      + opp - champion: -0.1580 ± 0.0760 (x1000 nats/game)
+      + opp x own - champion: -0.1461 ± 0.0705 (x1000 nats/game)
+      + opp x own - + opp: +0.0119 ± 0.0106 (x1000 nats/game)
+      champion - cached game FM: +0.0309 ± 0.0482 (x1000 nats/game)
+  experienced opp-ctx  champion -652.825  + opp -652.863  + opp x own -652.863  cached game FM -652.819
+      + opp - champion: -0.0385 ± 0.0280 (x1000 nats/game)
+      + opp x own - champion: -0.0384 ± 0.0251 (x1000 nats/game)
+      + opp x own - + opp: +0.0002 ± 0.0048 (x1000 nats/game)
+      champion - cached game FM: -0.0054 ± 0.0147 (x1000 nats/game)
+  match 1 opp-ctx      champion -646.844  + opp -646.958  + opp x own -646.947  cached game FM -646.852
+      + opp - champion: -0.1146 ± 0.0532 (x1000 nats/game)
+      + opp x own - champion: -0.1036 ± 0.0497 (x1000 nats/game)
+      + opp x own - + opp: +0.0111 ± 0.0094 (x1000 nats/game)
+      champion - cached game FM: +0.0084 ± 0.0273 (x1000 nats/game)
+  experienced oppmx-ctx champion -652.693  + opp -652.733  + opp x own -652.732  cached game FM -652.686
+      + opp - champion: -0.0402 ± 0.0281 (x1000 nats/game)
+      + opp x own - champion: -0.0395 ± 0.0251 (x1000 nats/game)
+      + opp x own - + opp: +0.0007 ± 0.0049 (x1000 nats/game)
+      champion - cached game FM: -0.0063 ± 0.0146 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -646.846  + opp -646.966  + opp x own -646.954  cached game FM -646.854
+      + opp - champion: -0.1196 ± 0.0536 (x1000 nats/game)
+      + opp x own - champion: -0.1075 ± 0.0500 (x1000 nats/game)
+      + opp x own - + opp: +0.0121 ± 0.0093 (x1000 nats/game)
+      champion - cached game FM: +0.0082 ± 0.0274 (x1000 nats/game)
+  champion       draft spearman 0.2720 (+0.0000)  sd 0.254  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2721 (+0.0001)  sd 0.254  card r 0.975 (pearson 0.985)  own-colour r 0.998
+  + opp x own    draft spearman 0.2721 (+0.0002)  sd 0.254  card r 0.975 (pearson 0.985)  own-colour r 0.998
+  cached game FM draft spearman 0.2719 (-0.0001)  sd 0.252
+  opponent strength (logit, + = harder; SE):
+    UBG        +0.193 ± 0.012  share 0.031  user WR 0.496  arm +0.199
+    WUBG       +0.169 ± 0.029  share 0.006  user WR 0.499  arm +0.156
+    WG         +0.119 ± 0.007  share 0.107  user WR 0.521  arm +0.133
+    BR         +0.117 ± 0.008  share 0.079  user WR 0.522  arm +0.120
+    WB         +0.108 ± 0.007  share 0.108  user WR 0.522  arm +0.109
+    WBG        +0.105 ± 0.015  share 0.021  user WR 0.520  arm +0.110
+    WR         +0.093 ± 0.007  share 0.094  user WR 0.529  arm +0.088
+    WUG        +0.071 ± 0.014  share 0.024  user WR 0.531  arm +0.058
+    BG         +0.070 ± 0.007  share 0.101  user WR 0.528  arm +0.076
+    WUB        +0.067 ± 0.021  share 0.011  user WR 0.529  arm +0.051
+    RG         +0.061 ± 0.009  share 0.065  user WR 0.536  arm +0.062
+    other 3+   +0.061 ± 0.019  share 0.013  user WR 0.530  arm +0.056
+    UG         +0.056 ± 0.008  share 0.084  user WR 0.535  arm +0.058
+    BRG        +0.024 ± 0.017  share 0.016  user WR 0.541  arm +0.021
+    URG        +0.002 ± 0.023  share 0.009  user WR 0.545  arm -0.005
+    WBR        +0.000 ± 0.022  share 0.010  user WR 0.548  arm +0.007
+    UBR        -0.018 ± 0.024  share 0.008  user WR 0.550  arm -0.060
+    UB         -0.021 ± 0.010  share 0.047  user WR 0.553  arm -0.019
+    WRG        -0.035 ± 0.015  share 0.022  user WR 0.557  arm -0.025
+    WUR        -0.042 ± 0.028  share 0.006  user WR 0.560  arm -0.044
+    WU         -0.047 ± 0.012  share 0.035  user WR 0.561  arm -0.060
+    UR         -0.151 ± 0.010  share 0.048  user WR 0.586  arm -0.176
+    W          -0.651 ± 0.018  share 0.017  user WR 0.701  arm -0.648
+    R          -0.833 ± 0.024  share 0.011  user WR 0.740  arm -0.852
+    G          -1.006 ± 0.027  share 0.009  user WR 0.770  arm -0.987
+    B          -1.281 ± 0.028  share 0.010  user WR 0.814  arm -1.284
+    U          -1.464 ± 0.037  share 0.006  user WR 0.841  arm -1.468
+    unknown    -2.980 ± 0.101  share 0.003  user WR 0.962  arm -2.954
+    heterogeneity Q 10360.8 df 27 p 0;  by wins before: 0:-0.007 1:-0.002 2:+0.002 3:+0.004 4:+0.006 5:+0.008 6:+0.010
+  matchups (own row x opponent col, centred logit x100):
+                    W      U      B      R      G     WU     WB     WR     WG     UB     UR     UG     BR     BG     RG    WUB    WUR    WUG    WBR    WBG    WRG    UBR    UBG    URG    BRG   WUBG other  unknow
+    W               .      .      .      .      .      .   -3.7   -0.9  -12.1      .      .  +16.6  -32.9   -1.5  -13.0      .      .      .      .      .      .      .      .      .      .      .      .      .
+    WU           +8.6      .      .      .      .   +1.6   +1.2   -1.7   +1.4  +13.4   -3.2   -8.0   -4.7   +8.8   -5.9   +8.6      .   -6.8  +23.3   +4.7   -1.7      .   +6.2      .   -1.6      .   +4.2      .
+    WB           -4.8  -11.0  -17.2  -25.1   -3.2   +5.1   -1.0   -3.4   +1.9  +14.9   -0.8   -3.4   -4.2   -1.3  -10.7   +5.5   -2.4   +4.9   +0.6   +6.5   +8.4  +20.8  +10.7   -2.3   +8.7  +16.0  +12.0      .
+    WR          +14.2  +19.1  +25.2  +22.4  +14.1   +2.0   +6.0   +0.7   -1.6   +0.5   +3.0   +1.0   +3.1   +0.6   -2.8   -9.4   -6.6   -5.7   -2.3  -13.6  -15.4   +5.7   -6.7  -19.6  -23.8  -18.1  -23.5  +20.6
+    WG          +18.0  +12.5   +9.8  +16.2  +12.1   -3.3   -3.0   +3.1   +1.2   -1.6   +5.3   +5.7   +1.4   +1.1   -1.2  -12.0   -2.8   -6.7   -4.5   -5.4   -7.5  -10.2   -6.7  -13.6   -8.1  -28.0  -16.3   -0.3
+    UB          -36.0      .  -56.2  -33.3  -36.1   -9.3   -6.3   -1.0   +5.5   +1.2  -15.6   -3.6   +0.0   +9.4   +8.1   +2.5   +5.6  +10.0   -2.9  +12.3  +10.9   +5.4  +19.7  +31.0  +17.8   +7.9  +26.5      .
+    UR           +1.8      .   +5.6  -28.4  -13.4   -1.7   +1.9   -5.7   +0.2  +15.6   +5.0   -0.1  -10.3   +0.5   -0.9  +14.0      .  +22.7  -11.6   +5.6  -14.9   +4.0   +2.7  +11.7   -1.8      .   +5.8      .
+    UG           -3.8   +8.4  -11.7   -0.6   -3.2   +4.8   +0.0   -0.5   -2.5   -9.4   -2.0   -0.8   -4.5   +5.5   -1.4   +4.1   +4.6   +3.6   +3.7   +6.7   +3.9   +0.2   +4.2   +6.5  +12.4  +14.4   +0.2  -30.0
+    BR           -0.3  +33.2  +18.7  +17.9   +5.2   +6.6   +0.7   +1.7   -7.9   +1.3   +8.7   +6.0   -0.2   -4.6   -2.9   -8.9  -13.3   -8.8   +5.9   -4.3   +2.9   -9.3   -4.9   +1.0   -7.7   -0.9   +6.0      .
+    BG          -14.5  -27.3   -1.7   -7.3   -7.1   -4.4   -0.7   -1.2   +1.5   -6.3   -3.4   -3.2   +6.1   -4.0  +11.2   +3.9   +9.0   +2.0   +5.2   +6.2   +5.2   +0.0   -2.0  +11.7   +6.1  +10.1  +10.9  -41.5
+    RG          +19.0  +15.1  +13.6  +23.4  +17.1   +3.2   +4.4   +9.7   +1.2  -11.8   +4.6   -1.4   +3.6   -7.4   -0.3   -0.4   +3.1   -7.4   -5.9  -16.7  -10.7  -13.9  -12.4   -8.6  -11.5  -17.4  -10.4      .
+    WUG             .      .      .      .      .      .   -7.9   -5.2   -3.7   +9.8  -15.3   +4.0   +0.8   +9.2   +2.6      .      .      .      .      .      .      .      .      .      .      .      .      .
+    WBG             .      .      .      .      .      .  -11.3  -10.5   +2.1   +7.1  -31.0   +2.8   +7.3   -9.8   +8.3      .      .      .      .      .      .      .      .      .      .      .      .      .
+    WRG             .      .      .      .      .      .   -1.7   -5.7   +7.2      .      .   -4.7   -1.7   -4.7      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    UBG             .      .      .      .      .   -5.9   +5.5   -5.2   +2.6   -6.6  -17.0   +5.0  -11.8   +3.3   +4.2      .      .  +21.0      .   -0.5      .      .   +4.4      .      .      .      .      .
+    other mono      .      .      .      .      .      .  +10.8   -6.6   -9.4  -10.6   -1.0   +0.1   +1.2   +2.9   -0.7      .      .      .      .      .      .      .      .      .      .      .      .      .
+    other 3+        .      .      .      .      .   +5.3   -2.3   -7.9   +6.6   +4.3   -7.6   -5.7   +5.6   -2.8   +0.9      .      .   +3.6      .      .   +6.3      .   +0.8      .      .      .      .      .
+    rps test Q 936.5 df 432 p 2.5e-39
+BLB done [157s]
+=== DFT: 141166 drafts, 824163 games (train 582703, val 122870, test 118590), 286 cards, 18 deck columns (affinity in) [22s]
+  opponent levels ['W', 'U', 'B', 'R', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'WUBRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.66062 (1e-05, 0.001) epochs [35, 27] [36s]
+  + opp        val 0.65342 (1e-05, 0.001) epochs [31, 27] [23s]
+  + opp x own  val 0.65317 (1e-05, 0.001) epochs [31, 27] [36s]
+  SC-GLL context test logloss: base 0.66413, dl 0.67056, opp 0.65705, oppmx 0.65687 [101s]
+  all                  champion -658.729  + opp -658.787  + opp x own -658.797  cached game FM -658.736
+      + opp - champion: -0.0585 ± 0.0307 (x1000 nats/game)
+      + opp x own - champion: -0.0681 ± 0.0382 (x1000 nats/game)
+      + opp x own - + opp: -0.0097 ± 0.0109 (x1000 nats/game)
+      champion - cached game FM: +0.0074 ± 0.0205 (x1000 nats/game)
+  experienced          champion -660.942  + opp -661.000  + opp x own -661.012  cached game FM -660.950
+      + opp - champion: -0.0579 ± 0.0352 (x1000 nats/game)
+      + opp x own - champion: -0.0700 ± 0.0440 (x1000 nats/game)
+      + opp x own - + opp: -0.0122 ± 0.0127 (x1000 nats/game)
+      champion - cached game FM: +0.0081 ± 0.0211 (x1000 nats/game)
+  match 1              champion -654.832  + opp -654.889  + opp x own -654.917  cached game FM -654.826
+      + opp - champion: -0.0571 ± 0.0836 (x1000 nats/game)
+      + opp x own - champion: -0.0852 ± 0.0992 (x1000 nats/game)
+      + opp x own - + opp: -0.0281 ± 0.0213 (x1000 nats/game)
+      champion - cached game FM: -0.0064 ± 0.0502 (x1000 nats/game)
+  main build           champion -657.153  + opp -657.216  + opp x own -657.227  cached game FM -657.163
+      + opp - champion: -0.0629 ± 0.0374 (x1000 nats/game)
+      + opp x own - champion: -0.0733 ± 0.0455 (x1000 nats/game)
+      + opp x own - + opp: -0.0104 ± 0.0125 (x1000 nats/game)
+      champion - cached game FM: +0.0101 ± 0.0197 (x1000 nats/game)
+  experienced dl-ctx   champion -662.892  + opp -662.934  + opp x own -662.945  cached game FM -662.896
+      + opp - champion: -0.0427 ± 0.0305 (x1000 nats/game)
+      + opp x own - champion: -0.0533 ± 0.0373 (x1000 nats/game)
+      + opp x own - + opp: -0.0106 ± 0.0105 (x1000 nats/game)
+      champion - cached game FM: +0.0044 ± 0.0206 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.797  + opp -660.833  + opp x own -660.863  cached game FM -660.791
+      + opp - champion: -0.0360 ± 0.0836 (x1000 nats/game)
+      + opp x own - champion: -0.0653 ± 0.0987 (x1000 nats/game)
+      + opp x own - + opp: -0.0293 ± 0.0204 (x1000 nats/game)
+      champion - cached game FM: -0.0062 ± 0.0568 (x1000 nats/game)
+  experienced opp-ctx  champion -653.895  + opp -653.914  + opp x own -653.927  cached game FM -653.911
+      + opp - champion: -0.0195 ± 0.0292 (x1000 nats/game)
+      + opp x own - champion: -0.0328 ± 0.0369 (x1000 nats/game)
+      + opp x own - + opp: -0.0134 ± 0.0123 (x1000 nats/game)
+      champion - cached game FM: +0.0162 ± 0.0215 (x1000 nats/game)
+  match 1 opp-ctx      champion -647.555  + opp -647.581  + opp x own -647.609  cached game FM -647.554
+      + opp - champion: -0.0256 ± 0.0818 (x1000 nats/game)
+      + opp x own - champion: -0.0540 ± 0.0956 (x1000 nats/game)
+      + opp x own - + opp: -0.0284 ± 0.0196 (x1000 nats/game)
+      champion - cached game FM: -0.0006 ± 0.0444 (x1000 nats/game)
+  experienced oppmx-ctx champion -653.720  + opp -653.744  + opp x own -653.757  cached game FM -653.735
+      + opp - champion: -0.0242 ± 0.0299 (x1000 nats/game)
+      + opp x own - champion: -0.0369 ± 0.0375 (x1000 nats/game)
+      + opp x own - + opp: -0.0127 ± 0.0120 (x1000 nats/game)
+      champion - cached game FM: +0.0147 ± 0.0216 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -647.577  + opp -647.603  + opp x own -647.631  cached game FM -647.577
+      + opp - champion: -0.0260 ± 0.0806 (x1000 nats/game)
+      + opp x own - champion: -0.0539 ± 0.0943 (x1000 nats/game)
+      + opp x own - + opp: -0.0278 ± 0.0195 (x1000 nats/game)
+      champion - cached game FM: +0.0004 ± 0.0442 (x1000 nats/game)
+  champion       draft spearman 0.2545 (+0.0000)  sd 0.249  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2554 (+0.0009)  sd 0.250  card r 0.994 (pearson 0.997)  own-colour r 0.977
+  + opp x own    draft spearman 0.2553 (+0.0008)  sd 0.250  card r 0.994 (pearson 0.997)  own-colour r 0.977
+  cached game FM draft spearman 0.2542 (-0.0003)  sd 0.248
+  opponent strength (logit, + = harder; SE):
+    WUBRG      +0.267 ± 0.017  share 0.018  user WR 0.481  arm +0.272
+    WUB        +0.257 ± 0.013  share 0.031  user WR 0.487  arm +0.256
+    other 3+   +0.198 ± 0.020  share 0.013  user WR 0.497  arm +0.175
+    URG        +0.181 ± 0.012  share 0.036  user WR 0.504  arm +0.188
+    UBG        +0.142 ± 0.013  share 0.032  user WR 0.514  arm +0.153
+    WUG        +0.136 ± 0.019  share 0.015  user WR 0.517  arm +0.145
+    WBG        +0.135 ± 0.016  share 0.020  user WR 0.519  arm +0.128
+    BR         +0.094 ± 0.009  share 0.071  user WR 0.532  arm +0.084
+    WG         +0.089 ± 0.009  share 0.069  user WR 0.535  arm +0.082
+    WBR        +0.085 ± 0.021  share 0.012  user WR 0.535  arm +0.069
+    BG         +0.085 ± 0.007  share 0.108  user WR 0.529  arm +0.100
+    WRG        +0.079 ± 0.014  share 0.027  user WR 0.536  arm +0.056
+    UG         +0.060 ± 0.008  share 0.077  user WR 0.535  arm +0.080
+    UBR        +0.056 ± 0.019  share 0.015  user WR 0.533  arm +0.059
+    RG         +0.050 ± 0.009  share 0.065  user WR 0.541  arm +0.044
+    BRG        +0.048 ± 0.018  share 0.016  user WR 0.537  arm +0.057
+    WUR        +0.041 ± 0.020  share 0.013  user WR 0.540  arm +0.030
+    UB         +0.002 ± 0.009  share 0.072  user WR 0.550  arm +0.007
+    WB         -0.005 ± 0.010  share 0.048  user WR 0.557  arm -0.016
+    WU         -0.020 ± 0.009  share 0.060  user WR 0.558  arm -0.031
+    UR         -0.035 ± 0.008  share 0.073  user WR 0.557  arm -0.048
+    WR         -0.091 ± 0.010  share 0.056  user WR 0.577  arm -0.100
+    G          -0.666 ± 0.024  share 0.011  user WR 0.703  arm -0.633
+    R          -0.781 ± 0.026  share 0.010  user WR 0.731  arm -0.800
+    W          -1.002 ± 0.027  share 0.010  user WR 0.775  arm -0.998
+    B          -1.196 ± 0.031  share 0.008  user WR 0.804  arm -1.155
+    U          -1.394 ± 0.031  share 0.010  user WR 0.833  arm -1.403
+    unknown    -3.157 ± 0.116  share 0.003  user WR 0.968  arm -2.949
+    heterogeneity Q 9280.0 df 27 p 0;  by wins before: 0:-0.005 1:-0.001 2:+0.002 3:+0.002 4:+0.005 5:+0.007 6:+0.007
+  matchups (own row x opponent col, centred logit x100):
+                    W      U      B      R      G     WU     WB     WR     WG     UB     UR     UG     BR     BG     RG    WUB    WUR    WUG    WBR    WBG    WRG    UBR    UBG    URG    BRG  WUBRG other 
+    WU          -20.8  -27.0   -8.1  -27.5  -23.3   +3.4   +4.2   -4.5   +1.4   +2.4   -4.6   -1.0   -1.1   +9.3   -9.0  +12.1   +2.3  +12.7   +6.9   +6.1   -9.7   +1.8   +8.3   -3.1   +9.9  +20.3   +0.2
+    WB           -7.5   -0.8  +13.0   +0.8   -2.9   -8.2   +5.2   +1.6   +2.4   -6.9   -4.7  -12.3  +13.4   +7.7   -0.7   +6.7  -16.2   +4.5   +3.5   -2.7   +6.0   -8.3   -1.7   -0.4  +17.3   -0.1   +4.0
+    WR           +0.5  +32.5  +35.5  +23.0  +19.4  +17.3   -1.5   -4.0   -5.8   +4.8   -2.5   +2.5   -0.2   -0.1   -6.2   -1.7   -9.1   -9.2  -15.2   -4.9   -5.0   +4.3   -7.8   -2.4  -10.4   -2.4   -1.4
+    WG          +16.4  +22.6  +11.7  +15.6  +22.3   +4.3   -1.5   -0.5   -3.1   +5.1   +5.4   -0.4   +2.8   -5.5   +6.1   -3.0   -5.8  -17.3  -15.0  -12.0   -2.8   +4.6  -15.2  -11.2   -2.0  -13.9   +2.5
+    UB           -9.2  -16.7  -33.2  -18.0   +0.0   +2.2   +0.2   -5.8   -3.5   -1.2   -4.8   +7.2   -2.0   +5.5  -14.4   +7.2   -2.8  +23.8   +1.0   +7.6   +3.0   -0.7  +17.3  +10.3   -7.1  +14.1  +13.0
+    UR          +27.9   -3.9  +10.6   +3.3  -13.6   +4.7   +8.2   -4.9   -5.0   +0.1   -1.7   +5.8   -0.1   -1.2   -8.0   +2.9  +10.9   +0.6   +7.5  +11.1   -5.5  -10.4   +4.5   -7.1   -1.0   +4.8   -0.7
+    UG          +14.4   -5.5   -3.5   +8.0   -8.6   -3.7   +5.4   -0.3   +4.4   -6.3   -0.3   -3.8   -5.2   +4.6   -0.6   -1.9   +5.2   -6.7  +17.5   +8.6   +4.6  +11.2   +0.4   -3.3   -3.0   -2.9   -5.1
+    BR          -15.5   +5.0  -17.1   -4.2  +14.3   +3.1   -7.3   -2.2   -0.9   +4.5   +3.6   +5.9   -3.8   -5.8   -3.1   -2.7   -3.3  +21.5   -4.9   -2.9   +0.9   +8.7   +9.3   +9.1   -0.7   -6.1   -4.5
+    BG          -10.8  -14.6   +2.9   +5.9   +7.1  -11.0   -4.8   +5.4   +6.4   -6.0   +1.6   -2.5   +1.0   +0.7  +13.1  -10.7   +5.2   -3.2   -5.0   -3.0  +10.0   -6.6   -6.7   -0.7   +1.5   -3.7   -3.2
+    RG           +7.5  +37.7  +11.0  +30.7   +3.0   +2.8   -8.0   +7.4   -4.9  +13.6  +10.1   -0.7   +6.1  -15.2  +12.1   -2.6   -1.5  -18.9   -7.0  -16.3   -7.4   -7.0  -15.1   +1.0   -9.2  -15.9  -13.3
+    WUB             .      .      .      .      .   +5.5   +7.0  -16.3   -5.4   +1.0   -7.4   -1.8   -1.1   +9.0   +2.9  +18.0      .      .      .  +12.5  -12.5      .  +18.4   -8.1      .  +12.5      .
+    WUR             .      .      .      .      .  -10.6      .      .   -0.8  +29.8   +1.4   +1.3   +0.4   -7.5   +5.9      .      .      .      .      .      .      .      .      .      .      .      .
+    WUG             .      .      .      .      .   +4.7  -14.0  +22.4   +1.0   -6.2   -8.2   -9.9  -12.4   +9.2   -4.5      .      .      .      .      .      .      .      .      .      .      .      .
+    WBG             .      .      .      .      .   -7.5   +1.8   +9.7   -2.8   -2.2   -4.3   +0.5   -4.8   +1.7   -2.6      .      .      .      .      .      .      .      .   +9.9      .      .      .
+    WRG             .      .      .      .      .   +6.5   +7.4   +7.2   -0.8  +10.2  +14.9   +7.6   +1.6  -14.4   -8.4   +6.8      .      .      .      .      .      .      .   +8.1      .      .      .
+    UBR             .      .      .      .      .   +1.6  +14.0   +6.7  -11.1   -6.9  -17.9   -2.4   -8.3   -8.8   -1.9      .      .      .      .      .      .      .      .      .      .      .      .
+    UBG             .      .      .      .      .   +3.4   +4.0   +4.3   +6.4   -4.0  -10.7   -3.6   +2.9   +5.8   -3.2  -17.5      .      .      .   +2.5  -16.6      .  +11.4   +7.5      .  +20.6      .
+    URG             .      .      .      .      .   +2.2   +0.5   +4.4   +2.9   +2.7   -1.8   +6.4   -3.4   -3.9   -2.9   +5.8      .      .      .   -3.6   +2.2      .   -1.8   +4.3   +0.9  -21.3      .
+    BRG             .      .      .      .      .  +10.0   -6.8  +10.0   -8.1  -16.7   -2.7   -2.1   -4.6   -2.1   -6.6      .      .      .      .      .      .      .      .      .      .      .      .
+    other mono      .      .      .      .      .   -7.9      .  -13.8   -7.6   +2.5   +9.8   +2.3   +9.7   -5.0   +2.9      .      .      .      .      .      .      .      .      .      .      .      .
+    other 3+        .      .      .      .      .   -3.4   -0.4  -14.0   +6.2   +8.5   +0.5  -18.8   -0.5   +5.3   +8.9   +4.8      .      .      .      .      .      .      .   -1.9      .      .      .
+    rps test Q 971.9 df 567 p 8.7e-24
+DFT done [132s]
+=== DSK: 167672 drafts, 977322 games (train 691722, val 145385, test 140215), 286 cards, 18 deck columns (affinity in) [28s]
+  opponent levels ['W', 'U', 'B', 'R', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBG', 'WRG', 'UBG', 'URG', 'BRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.66132 (1e-05, 0.001) epochs [32, 35] [42s]
+  + opp        val 0.65460 (1e-05, 0.001) epochs [34, 28] [28s]
+  + opp x own  val 0.65452 (1e-05, 0.001) epochs [34, 28] [48s]
+  SC-GLL context test logloss: base 0.66809, dl 0.67342, opp 0.66116, oppmx 0.66109 [125s]
+  all                  champion -661.493  + opp -661.565  + opp x own -661.564  cached game FM -661.498
+      + opp - champion: -0.0716 ± 0.0366 (x1000 nats/game)
+      + opp x own - champion: -0.0713 ± 0.0363 (x1000 nats/game)
+      + opp x own - + opp: +0.0003 ± 0.0007 (x1000 nats/game)
+      champion - cached game FM: +0.0044 ± 0.0106 (x1000 nats/game)
+  experienced          champion -664.232  + opp -664.306  + opp x own -664.306  cached game FM -664.235
+      + opp - champion: -0.0742 ± 0.0322 (x1000 nats/game)
+      + opp x own - champion: -0.0738 ± 0.0319 (x1000 nats/game)
+      + opp x own - + opp: +0.0004 ± 0.0007 (x1000 nats/game)
+      champion - cached game FM: +0.0025 ± 0.0113 (x1000 nats/game)
+  match 1              champion -659.853  + opp -660.025  + opp x own -660.026  cached game FM -659.844
+      + opp - champion: -0.1718 ± 0.0555 (x1000 nats/game)
+      + opp x own - champion: -0.1723 ± 0.0550 (x1000 nats/game)
+      + opp x own - + opp: -0.0005 ± 0.0015 (x1000 nats/game)
+      champion - cached game FM: -0.0098 ± 0.0135 (x1000 nats/game)
+  main build           champion -660.151  + opp -660.204  + opp x own -660.204  cached game FM -660.155
+      + opp - champion: -0.0531 ± 0.0443 (x1000 nats/game)
+      + opp x own - champion: -0.0528 ± 0.0439 (x1000 nats/game)
+      + opp x own - + opp: +0.0003 ± 0.0008 (x1000 nats/game)
+      champion - cached game FM: +0.0045 ± 0.0110 (x1000 nats/game)
+  experienced dl-ctx   champion -665.492  + opp -665.551  + opp x own -665.551  cached game FM -665.491
+      + opp - champion: -0.0588 ± 0.0326 (x1000 nats/game)
+      + opp x own - champion: -0.0583 ± 0.0324 (x1000 nats/game)
+      + opp x own - + opp: +0.0005 ± 0.0007 (x1000 nats/game)
+      champion - cached game FM: -0.0017 ± 0.0102 (x1000 nats/game)
+  match 1 dl-ctx       champion -664.158  + opp -664.317  + opp x own -664.317  cached game FM -664.142
+      + opp - champion: -0.1586 ± 0.0622 (x1000 nats/game)
+      + opp x own - champion: -0.1592 ± 0.0618 (x1000 nats/game)
+      + opp x own - + opp: -0.0006 ± 0.0016 (x1000 nats/game)
+      champion - cached game FM: -0.0162 ± 0.0144 (x1000 nats/game)
+  experienced opp-ctx  champion -657.381  + opp -657.429  + opp x own -657.428  cached game FM -657.379
+      + opp - champion: -0.0475 ± 0.0308 (x1000 nats/game)
+      + opp x own - champion: -0.0470 ± 0.0305 (x1000 nats/game)
+      + opp x own - + opp: +0.0006 ± 0.0007 (x1000 nats/game)
+      champion - cached game FM: -0.0021 ± 0.0111 (x1000 nats/game)
+  match 1 opp-ctx      champion -652.473  + opp -652.605  + opp x own -652.605  cached game FM -652.458
+      + opp - champion: -0.1326 ± 0.0605 (x1000 nats/game)
+      + opp x own - champion: -0.1329 ± 0.0600 (x1000 nats/game)
+      + opp x own - + opp: -0.0002 ± 0.0016 (x1000 nats/game)
+      champion - cached game FM: -0.0142 ± 0.0148 (x1000 nats/game)
+  experienced oppmx-ctx champion -657.302  + opp -657.349  + opp x own -657.349  cached game FM -657.300
+      + opp - champion: -0.0478 ± 0.0309 (x1000 nats/game)
+      + opp x own - champion: -0.0472 ± 0.0306 (x1000 nats/game)
+      + opp x own - + opp: +0.0006 ± 0.0007 (x1000 nats/game)
+      champion - cached game FM: -0.0018 ± 0.0111 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -652.366  + opp -652.499  + opp x own -652.500  cached game FM -652.353
+      + opp - champion: -0.1330 ± 0.0606 (x1000 nats/game)
+      + opp x own - champion: -0.1332 ± 0.0600 (x1000 nats/game)
+      + opp x own - + opp: -0.0002 ± 0.0015 (x1000 nats/game)
+      champion - cached game FM: -0.0139 ± 0.0146 (x1000 nats/game)
+  champion       draft spearman 0.2754 (+0.0000)  sd 0.258  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2761 (+0.0007)  sd 0.255  card r 0.992 (pearson 0.997)  own-colour r 0.986
+  + opp x own    draft spearman 0.2761 (+0.0006)  sd 0.255  card r 0.993 (pearson 0.997)  own-colour r 0.986
+  cached game FM draft spearman 0.2763 (+0.0009)  sd 0.256
+  opponent strength (logit, + = harder; SE):
+    WR         +0.185 ± 0.006  share 0.114  user WR 0.505  arm +0.188
+    URG        +0.184 ± 0.014  share 0.022  user WR 0.496  arm +0.194
+    UBG        +0.176 ± 0.012  share 0.033  user WR 0.501  arm +0.185
+    BRG        +0.156 ± 0.011  share 0.034  user WR 0.507  arm +0.167
+    WU         +0.139 ± 0.006  share 0.121  user WR 0.513  arm +0.140
+    WBG        +0.122 ± 0.014  share 0.024  user WR 0.516  arm +0.099
+    other 3+   +0.121 ± 0.017  share 0.015  user WR 0.511  arm +0.108
+    WUR        +0.091 ± 0.016  share 0.017  user WR 0.523  arm +0.092
+    WUG        +0.088 ± 0.014  share 0.022  user WR 0.522  arm +0.085
+    RG         +0.085 ± 0.007  share 0.078  user WR 0.527  arm +0.090
+    BR         +0.057 ± 0.008  share 0.068  user WR 0.533  arm +0.052
+    UG         +0.042 ± 0.008  share 0.074  user WR 0.535  arm +0.046
+    WUB        +0.035 ± 0.014  share 0.024  user WR 0.539  arm +0.019
+    WBR        +0.031 ± 0.021  share 0.010  user WR 0.540  arm +0.028
+    UBR        +0.022 ± 0.023  share 0.008  user WR 0.538  arm +0.030
+    BG         -0.023 ± 0.008  share 0.069  user WR 0.552  arm -0.017
+    WRG        -0.027 ± 0.018  share 0.013  user WR 0.551  arm -0.023
+    WG         -0.059 ± 0.009  share 0.060  user WR 0.565  arm -0.053
+    WB         -0.095 ± 0.008  share 0.064  user WR 0.571  arm -0.113
+    UR         -0.099 ± 0.011  share 0.040  user WR 0.568  arm -0.104
+    UB         -0.198 ± 0.010  share 0.042  user WR 0.596  arm -0.209
+    W          -0.740 ± 0.022  share 0.011  user WR 0.721  arm -0.768
+    R          -0.889 ± 0.024  share 0.010  user WR 0.747  arm -0.869
+    U          -1.056 ± 0.027  share 0.009  user WR 0.779  arm -1.073
+    G          -1.082 ± 0.029  share 0.007  user WR 0.785  arm -1.036
+    B          -1.368 ± 0.030  share 0.008  user WR 0.827  arm -1.358
+    unknown    -2.905 ± 0.096  share 0.003  user WR 0.959  arm -2.812
+    heterogeneity Q 11412.6 df 26 p 0;  by wins before: 0:-0.007 1:-0.003 2:+0.001 3:+0.003 4:+0.007 5:+0.011 6:+0.013
+  matchups (own row x opponent col, centred logit x100):
+                    W      U      B      R      G     WU     WB     WR     WG     UB     UR     UG     BR     BG     RG    WUB    WUR    WUG    WBR    WBG    WRG    UBR    UBG    URG    BRG other  unknow
+    WU           -1.2   +4.8  +10.8  +13.8  +25.0   -0.8   -1.4   -0.9   +6.1   -3.5   -2.1   +5.2   -5.4   -1.4   -0.1   +1.7  -13.9   +5.8   +5.7   +2.5   -4.3   -9.1   -0.1   -3.4   -2.3   +2.6  -12.1
+    WB           +3.5  -12.2   +6.7   -5.7  -17.7   -8.0   +0.5   +4.1   +6.4   +2.2   -1.6   -6.2   +2.9   -2.9   +5.0   -5.2   -3.6   -3.6   +2.5   -3.6  +10.8   +5.8   -0.7   -4.8  +14.5   +1.0      .
+    WR          +16.8  +21.1   +7.2  +17.4  +25.2   +4.8   -7.8   -1.1   -0.9   -0.5   +5.0   +3.6   -2.2   -0.7   -1.0   -7.1   +3.8   -1.2   -3.0   -9.2   +1.5   +4.8   -1.7   +0.8   -8.2  -10.2  -23.6
+    WG          +29.7   +7.4   -7.0   +6.5  +20.5   -5.2   -6.0   +4.0   -2.8   +8.6   +5.9   +2.3   -1.7   -4.8   -1.7   +6.7   -2.7   -1.4  -13.0  -15.5   -6.5  +19.4   -0.2  +10.4   +4.2   -7.8      .
+    UB           -9.1      .      .  -13.7      .   +3.2   +6.3   +2.8   -7.7   -6.7   -5.8   -2.3   -1.3   -0.2   -0.4   -1.3   +0.2   +1.8   -0.0  +17.0   -1.9   -1.2   +1.3  +18.1   +1.1  +15.0      .
+    UR          -18.1   +2.4  -19.5  -22.0  -10.3   +3.2   +5.4   -5.0   -4.3   -1.9   +1.9   -0.6   +5.7   +0.4   -6.5  +11.5  +12.1   +5.5   -5.3   +1.6   +1.2   +9.8   +5.8   -4.7   -1.8  +11.9      .
+    UG           -9.5  -21.8   +9.9   -8.2   -6.8   -7.4  +11.8   -0.7   +3.4   -0.7   -4.0   -0.0   +0.7   +6.2   +2.4   -0.3   -6.3   -8.5   +0.8   +4.2   +0.7   -2.9   -0.9   +2.1   -2.1   -3.2  +42.7
+    BR           -1.7  +13.2   -2.2  +11.7  -11.3   +4.7   -5.6   -1.8   -1.3   +3.9   -9.2   +2.4   -1.9   +1.7   -0.2   -3.7   +7.2   +3.8   -3.4   +0.1   +2.4   -2.1   +3.4   -8.5   -1.7   +3.5      .
+    BG           -0.5  -20.5   -2.2  -24.6  -23.6   +2.7   +3.4   +6.8   +0.7   -0.8   +1.9   -8.9   +4.2   -1.9   -3.8   +2.9   +4.2   -2.0   +2.4  +11.4   -0.5  -14.2   -1.5   -6.2   -2.9   -3.9      .
+    RG           +4.6   +5.8   +0.2   -0.3   -7.1   -0.7   -5.8   -0.0   -1.9   +3.0  +10.4   -1.9   +2.9   +0.5   +3.6   -5.1   +4.0   -3.2   -5.4  -10.0   +7.2   +4.8   -5.0   -0.1   +6.2   -1.0  -42.5
+    WUB             .      .      .      .      .   -0.0   +6.8   +4.1   +6.7   +4.4  -21.2   -3.2   -7.8   +3.1   -1.3      .      .      .      .      .      .      .   +6.5      .   +5.4      .      .
+    WUR             .      .      .      .      .   +7.4   +9.1   +6.5   -7.6   -9.1   +8.2  +20.5   -5.2  -22.1   -7.6      .      .      .      .      .      .      .      .      .      .      .      .
+    WUG             .      .      .      .      .   +3.6   +0.9   -7.6   -2.0  +28.2   -2.4  -12.1   +0.9   -0.4  +12.1      .      .      .      .      .      .      .   -6.8      .   -9.4      .      .
+    WBG             .      .      .      .      .   -7.3  +18.9   -3.7   +4.2   -5.8  -27.7   -9.3   +5.9   -3.1   +4.3      .      .      .      .      .      .      .  +12.4      .   +2.8      .      .
+    WRG             .      .      .      .      .   +4.0  -19.9   +2.1  -13.9      .      .  -28.6   +6.7   +7.4   +6.1      .      .      .      .      .      .      .      .      .      .      .      .
+    UBG             .      .      .      .      .   +3.8  +17.1   -6.8   +5.2   -4.2  -13.4   +5.1   +3.8  +11.5   -2.5   +1.1      .   -0.4      .   -3.3      .      .  -10.9   +9.3  -13.3      .      .
+    URG             .      .      .      .      .   +9.4   +0.3  -17.6   -5.1  -12.7  -10.0   -0.6  +13.8   -2.3   -0.9      .      .      .      .      .      .      .   -2.5      .  +17.1      .      .
+    BRG             .      .      .      .      .   +3.5   +1.0   -2.7   -3.9   -4.1   +9.9   -2.4   -2.8   -0.7   -3.7  +15.3   +6.4  +10.4      .   -4.6      .      .  +13.4  -16.0   +6.2   +5.5      .
+    other mono      .      .      .      .      .   -3.3   -2.5   +1.2  -12.4   -2.1   -1.0   +5.2   -3.0   -9.3   -0.7  +20.1      .  -20.8      .   +9.8      .      .   +9.2      .   +1.7      .      .
+    other 3+        .      .      .      .      .   +1.4   -2.1   +1.6  -27.8   +8.7   +5.4   -2.9   +5.9   +9.0   -0.7   -1.9      .      .      .      .      .      .  +26.7      .  +13.4      .      .
+    rps test Q 699.4 df 494 p 2.9e-09
+DSK done [163s]
+=== EOE: 104377 drafts, 563418 games (train 398343, val 84501, test 80574), 321 cards, 18 deck columns (affinity in) [15s]
+  opponent levels ['W', 'U', 'B', 'R', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['B', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUG', 'UBG', 'URG', 'BRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.65823 (1e-05, 0.001) epochs [39, 34] [30s]
+  + opp        val 0.65229 (1e-05, 0.001) epochs [39, 34] [20s]
+  + opp x own  val 0.65227 (1e-05, 0.001) epochs [39, 34] [33s]
+  SC-GLL context test logloss: base 0.66260, dl 0.66944, opp 0.65793, oppmx 0.65782 [87s]
+  all                  champion -658.570  + opp -658.573  + opp x own -658.571  cached game FM -658.569
+      + opp - champion: -0.0034 ± 0.0146 (x1000 nats/game)
+      + opp x own - champion: -0.0015 ± 0.0131 (x1000 nats/game)
+      + opp x own - + opp: +0.0019 ± 0.0030 (x1000 nats/game)
+      champion - cached game FM: -0.0015 ± 0.0141 (x1000 nats/game)
+  experienced          champion -661.742  + opp -661.735  + opp x own -661.732  cached game FM -661.741
+      + opp - champion: +0.0070 ± 0.0190 (x1000 nats/game)
+      + opp x own - champion: +0.0098 ± 0.0171 (x1000 nats/game)
+      + opp x own - + opp: +0.0028 ± 0.0040 (x1000 nats/game)
+      champion - cached game FM: -0.0007 ± 0.0181 (x1000 nats/game)
+  match 1              champion -656.064  + opp -656.097  + opp x own -656.092  cached game FM -656.034
+      + opp - champion: -0.0331 ± 0.0415 (x1000 nats/game)
+      + opp x own - champion: -0.0282 ± 0.0355 (x1000 nats/game)
+      + opp x own - + opp: +0.0049 ± 0.0076 (x1000 nats/game)
+      champion - cached game FM: -0.0301 ± 0.0731 (x1000 nats/game)
+  main build           champion -656.288  + opp -656.290  + opp x own -656.289  cached game FM -656.284
+      + opp - champion: -0.0018 ± 0.0147 (x1000 nats/game)
+      + opp x own - champion: -0.0006 ± 0.0132 (x1000 nats/game)
+      + opp x own - + opp: +0.0012 ± 0.0029 (x1000 nats/game)
+      champion - cached game FM: -0.0038 ± 0.0162 (x1000 nats/game)
+  experienced dl-ctx   champion -663.995  + opp -663.969  + opp x own -663.966  cached game FM -663.968
+      + opp - champion: +0.0261 ± 0.0233 (x1000 nats/game)
+      + opp x own - champion: +0.0285 ± 0.0213 (x1000 nats/game)
+      + opp x own - + opp: +0.0025 ± 0.0036 (x1000 nats/game)
+      champion - cached game FM: -0.0261 ± 0.0362 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.503  + opp -660.515  + opp x own -660.510  cached game FM -660.436
+      + opp - champion: -0.0123 ± 0.0520 (x1000 nats/game)
+      + opp x own - champion: -0.0071 ± 0.0451 (x1000 nats/game)
+      + opp x own - + opp: +0.0052 ± 0.0083 (x1000 nats/game)
+      champion - cached game FM: -0.0667 ± 0.1234 (x1000 nats/game)
+  experienced opp-ctx  champion -656.984  + opp -656.961  + opp x own -656.958  cached game FM -656.981
+      + opp - champion: +0.0228 ± 0.0201 (x1000 nats/game)
+      + opp x own - champion: +0.0256 ± 0.0182 (x1000 nats/game)
+      + opp x own - + opp: +0.0028 ± 0.0040 (x1000 nats/game)
+      champion - cached game FM: -0.0032 ± 0.0196 (x1000 nats/game)
+  match 1 opp-ctx      champion -650.036  + opp -650.058  + opp x own -650.053  cached game FM -650.000
+      + opp - champion: -0.0220 ± 0.0405 (x1000 nats/game)
+      + opp x own - champion: -0.0168 ± 0.0345 (x1000 nats/game)
+      + opp x own - + opp: +0.0052 ± 0.0078 (x1000 nats/game)
+      champion - cached game FM: -0.0360 ± 0.0761 (x1000 nats/game)
+  experienced oppmx-ctx champion -656.880  + opp -656.858  + opp x own -656.855  cached game FM -656.876
+      + opp - champion: +0.0226 ± 0.0202 (x1000 nats/game)
+      + opp x own - champion: +0.0254 ± 0.0183 (x1000 nats/game)
+      + opp x own - + opp: +0.0028 ± 0.0040 (x1000 nats/game)
+      champion - cached game FM: -0.0040 ± 0.0199 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -650.004  + opp -650.027  + opp x own -650.022  cached game FM -649.967
+      + opp - champion: -0.0226 ± 0.0407 (x1000 nats/game)
+      + opp x own - champion: -0.0174 ± 0.0346 (x1000 nats/game)
+      + opp x own - + opp: +0.0052 ± 0.0078 (x1000 nats/game)
+      champion - cached game FM: -0.0370 ± 0.0771 (x1000 nats/game)
+  champion       draft spearman 0.2434 (+0.0000)  sd 0.221  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2444 (+0.0010)  sd 0.222  card r 0.991 (pearson 0.995)  own-colour r 0.993
+  + opp x own    draft spearman 0.2444 (+0.0010)  sd 0.222  card r 0.991 (pearson 0.995)  own-colour r 0.993
+  cached game FM draft spearman 0.2454 (+0.0020)  sd 0.223
+  opponent strength (logit, + = harder; SE):
+    other 3+   +0.335 ± 0.026  share 0.011  user WR 0.470  arm +0.337
+    URG        +0.264 ± 0.016  share 0.030  user WR 0.489  arm +0.279
+    UBG        +0.180 ± 0.020  share 0.019  user WR 0.510  arm +0.180
+    WUG        +0.167 ± 0.023  share 0.014  user WR 0.517  arm +0.181
+    BRG        +0.144 ± 0.022  share 0.016  user WR 0.520  arm +0.126
+    UBR        +0.102 ± 0.025  share 0.013  user WR 0.526  arm +0.103
+    UG         +0.095 ± 0.010  share 0.073  user WR 0.532  arm +0.099
+    WB         +0.089 ± 0.009  share 0.095  user WR 0.535  arm +0.082
+    BR         +0.082 ± 0.009  share 0.100  user WR 0.533  arm +0.078
+    WU         +0.070 ± 0.010  share 0.079  user WR 0.538  arm +0.066
+    WUB        +0.067 ± 0.027  share 0.011  user WR 0.536  arm +0.055
+    RG         +0.065 ± 0.009  share 0.088  user WR 0.541  arm +0.071
+    WBG        +0.053 ± 0.028  share 0.010  user WR 0.546  arm +0.055
+    WG         +0.035 ± 0.009  share 0.093  user WR 0.550  arm +0.039
+    WRG        +0.029 ± 0.025  share 0.012  user WR 0.551  arm +0.034
+    UB         +0.014 ± 0.009  share 0.085  user WR 0.548  arm +0.011
+    WBR        +0.005 ± 0.031  share 0.008  user WR 0.555  arm -0.000
+    WR         -0.008 ± 0.012  share 0.053  user WR 0.559  arm -0.012
+    UR         -0.022 ± 0.011  share 0.067  user WR 0.557  arm -0.041
+    WUR        -0.031 ± 0.033  share 0.007  user WR 0.562  arm -0.005
+    BG         -0.075 ± 0.013  share 0.048  user WR 0.573  arm -0.069
+    G          -0.506 ± 0.023  share 0.016  user WR 0.677  arm -0.510
+    B          -0.691 ± 0.024  share 0.015  user WR 0.714  arm -0.703
+    R          -0.728 ± 0.028  share 0.011  user WR 0.720  arm -0.745
+    W          -0.734 ± 0.026  share 0.014  user WR 0.724  arm -0.737
+    U          -1.222 ± 0.037  share 0.009  user WR 0.806  arm -1.213
+    unknown    -3.009 ± 0.132  share 0.003  user WR 0.963  arm -2.577
+    heterogeneity Q 5477.4 df 26 p 0;  by wins before: 0:-0.003 1:-0.002 2:-0.000 3:+0.003 4:+0.001 5:+0.006 6:+0.003
+  matchups (own row x opponent col, centred logit x100):
+                    W      U      B      R      G     WU     WB     WR     WG     UB     UR     UG     BR     BG     RG    WUB    WUR    WUG    WBR    WBG    WRG    UBR    UBG    URG    BRG other 
+    B               .      .      .      .      .   +7.5   +4.0      .      .      .      .      .  -11.7      .      .      .      .      .      .      .      .      .      .      .      .      .
+    G               .      .      .      .      .   +9.9  -10.7      .  -11.0   -5.4   +7.1   -3.6   -2.1      .   +3.4      .      .      .      .      .      .      .      .      .      .      .
+    WU           +7.4  +24.7  +14.7   -2.5   +1.6   -3.0   +4.5   -5.4   +0.6   +4.9   +1.9   +4.5   +2.9   -8.7   -3.9  -11.3   +2.5   -5.1   +4.7  -10.4  -11.2   -7.4   -8.2   -7.1   -5.7  -14.6
+    WB           +9.1  +13.3   -4.9   +6.1  +11.0   -2.4   -0.7   +2.2   -2.0   +2.0   -5.0   +4.3   +2.9   +4.3   -1.0   +3.9   +6.0  +12.9   -7.6  -13.5   -3.0   -4.2   -6.0   -0.0   -1.0  -21.7
+    WR          +17.0      .  +11.6      .  -12.4   +0.9   +6.6   -9.6  -10.7   +8.8   +5.0   +1.2   +4.3   -2.7  -11.3      .      .   -6.2      .      .      .      .  -18.9   +3.4   -2.8      .
+    WG          +12.7   +4.5  +19.7  +13.6  +19.7   -0.3   -0.3   +4.3   +0.9   +2.9   -1.1   -7.0   +1.5   -0.7   +0.9   -7.8  -13.8  -24.2   +2.4   -0.2   -4.1   -2.2   -7.6  -16.2   -4.5   -4.1
+    UB          -20.3  -18.9  -20.7  -13.3   +9.7   -8.2   -1.6   -2.5   +3.7   +3.8   -2.3   +4.5   -3.0   +3.7   +2.6   +3.0   -5.8   +8.5   +1.9  +15.6   +2.7   +5.2   +2.5  +10.3  +13.1  +13.7
+    UR           -8.7  +12.2   +6.1  -14.3  -12.6   +7.1   +6.6   +1.0   +0.9   -3.8   +1.0   -4.5   -2.2   -1.3   -7.7   -4.2      .  -13.5  +11.1   +3.1   -2.2   -7.4  +12.0   +5.2  +11.9  +15.5
+    UG           -5.1   +4.3   +4.5   +2.0   -1.4   -2.8   -3.1   +2.3   +6.2   -5.3   +0.4   -2.6   -2.0   +4.9   +4.5   -8.3   -5.5   +4.6   -4.7  +15.7   -1.7   +1.2   -4.8   -2.7   +4.3   +6.5
+    BR          -15.1   -5.4   -3.0  -26.6  -14.6   +7.1   +0.1   -9.5   -4.5   +3.6   -3.2   +2.9   -1.5   -3.1   +0.8  +13.4   +7.2   +3.8  +14.1  +10.3   +5.8   +8.6  +14.3  +13.4   -1.8  +11.2
+    BG          +10.3  -17.0  -28.8   -4.2   -2.3   +2.9   -1.2  +10.0   -2.6   -7.6   -1.2   +3.8   -1.8   +6.1   +3.7   +6.7      .   +5.4      .  -15.4  +10.2   -7.1   +7.3   +2.1  -13.2  +10.8
+    RG           +2.9   +5.9  +13.2  +18.5   -2.5   +1.6   -1.9   +4.8   -2.6   -1.7   +7.1   -5.9   +2.4   -2.2   +5.4   -8.0   -5.2   -5.1   +2.2  -14.0   +6.9   -7.7   -1.4   -6.0   -0.4  -13.6
+    WUG             .      .      .      .      .   -4.9   -7.8      .   -0.4  -24.1      .      .   -5.8      .   +8.1      .      .      .      .      .      .      .      .      .      .      .
+    UBG             .      .      .      .      .   -3.6   -3.1   +5.7  +11.0   -4.5   -5.8   -6.1   -3.8   +2.1   -4.8      .      .      .      .      .      .      .      .      .      .      .
+    URG             .      .      .      .      .   +1.2  -11.3   -6.0   +9.0   +3.7   +5.1   +9.4   -7.0  -13.1  -12.9      .      .      .      .      .      .      .      .   +1.7      .      .
+    BRG             .      .      .      .      .   -3.4   -8.9      .  +10.6  -10.1   -1.0  -16.6   +9.4      .   -2.4      .      .      .      .      .      .      .      .      .      .      .
+    other mono      .      .      .      .      .   +3.1  +12.7   +7.5   -6.0   -8.7   -8.6  -11.2   +8.2      .   -4.7      .      .      .      .      .      .      .      .      .      .      .
+    other 3+        .      .      .      .      .   +3.4   +2.4   +0.6   -3.9   +0.8   +1.8   +8.1   -1.6   +4.3   -8.7      .      .      .      .      .      .      .      .   +5.9      .      .
+    rps test Q 444.7 df 425 p 0.25
+EOE done [108s]
+=== FDN: 130935 drafts, 765317 games (train 537244, val 115154, test 112919), 286 cards, 18 deck columns (affinity in) [20s]
+  opponent levels ['W', 'U', 'B', 'R', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['W', 'U', 'B', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'UBG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.66070 (1e-05, 0.001) epochs [29, 26] [28s]
+  + opp        val 0.65496 (1e-05, 0.001) epochs [32, 26] [20s]
+  + opp x own  val 0.65463 (1e-05, 0.001) epochs [32, 26] [33s]
+  SC-GLL context test logloss: base 0.66373, dl 0.66974, opp 0.65808, oppmx 0.65786 [87s]
+  all                  champion -658.383  + opp -658.405  + opp x own -658.404  cached game FM -658.383
+      + opp - champion: -0.0218 ± 0.0231 (x1000 nats/game)
+      + opp x own - champion: -0.0210 ± 0.0217 (x1000 nats/game)
+      + opp x own - + opp: +0.0008 ± 0.0029 (x1000 nats/game)
+      champion - cached game FM: -0.0001 ± 0.0245 (x1000 nats/game)
+  experienced          champion -660.889  + opp -660.906  + opp x own -660.906  cached game FM -660.888
+      + opp - champion: -0.0174 ± 0.0233 (x1000 nats/game)
+      + opp x own - champion: -0.0172 ± 0.0225 (x1000 nats/game)
+      + opp x own - + opp: +0.0002 ± 0.0034 (x1000 nats/game)
+      champion - cached game FM: -0.0007 ± 0.0297 (x1000 nats/game)
+  match 1              champion -653.737  + opp -653.760  + opp x own -653.762  cached game FM -653.684
+      + opp - champion: -0.0230 ± 0.0417 (x1000 nats/game)
+      + opp x own - champion: -0.0242 ± 0.0382 (x1000 nats/game)
+      + opp x own - + opp: -0.0012 ± 0.0074 (x1000 nats/game)
+      champion - cached game FM: -0.0529 ± 0.0631 (x1000 nats/game)
+  main build           champion -656.808  + opp -656.834  + opp x own -656.833  cached game FM -656.812
+      + opp - champion: -0.0262 ± 0.0218 (x1000 nats/game)
+      + opp x own - champion: -0.0251 ± 0.0209 (x1000 nats/game)
+      + opp x own - + opp: +0.0011 ± 0.0027 (x1000 nats/game)
+      champion - cached game FM: +0.0037 ± 0.0270 (x1000 nats/game)
+  experienced dl-ctx   champion -661.904  + opp -661.909  + opp x own -661.910  cached game FM -661.915
+      + opp - champion: -0.0051 ± 0.0278 (x1000 nats/game)
+      + opp x own - champion: -0.0068 ± 0.0264 (x1000 nats/game)
+      + opp x own - + opp: -0.0017 ± 0.0037 (x1000 nats/game)
+      champion - cached game FM: +0.0114 ± 0.0297 (x1000 nats/game)
+  match 1 dl-ctx       champion -658.738  + opp -658.749  + opp x own -658.753  cached game FM -658.691
+      + opp - champion: -0.0114 ± 0.0487 (x1000 nats/game)
+      + opp x own - champion: -0.0156 ± 0.0437 (x1000 nats/game)
+      + opp x own - + opp: -0.0042 ± 0.0083 (x1000 nats/game)
+      champion - cached game FM: -0.0464 ± 0.0616 (x1000 nats/game)
+  experienced opp-ctx  champion -655.534  + opp -655.533  + opp x own -655.534  cached game FM -655.535
+      + opp - champion: +0.0011 ± 0.0253 (x1000 nats/game)
+      + opp x own - champion: +0.0001 ± 0.0246 (x1000 nats/game)
+      + opp x own - + opp: -0.0010 ± 0.0034 (x1000 nats/game)
+      champion - cached game FM: +0.0007 ± 0.0295 (x1000 nats/game)
+  match 1 opp-ctx      champion -648.474  + opp -648.479  + opp x own -648.481  cached game FM -648.423
+      + opp - champion: -0.0048 ± 0.0440 (x1000 nats/game)
+      + opp x own - champion: -0.0072 ± 0.0396 (x1000 nats/game)
+      + opp x own - + opp: -0.0024 ± 0.0073 (x1000 nats/game)
+      champion - cached game FM: -0.0508 ± 0.0625 (x1000 nats/game)
+  experienced oppmx-ctx champion -655.299  + opp -655.301  + opp x own -655.301  cached game FM -655.300
+      + opp - champion: -0.0023 ± 0.0257 (x1000 nats/game)
+      + opp x own - champion: -0.0021 ± 0.0249 (x1000 nats/game)
+      + opp x own - + opp: +0.0002 ± 0.0035 (x1000 nats/game)
+      champion - cached game FM: +0.0010 ± 0.0296 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -648.663  + opp -648.672  + opp x own -648.673  cached game FM -648.615
+      + opp - champion: -0.0088 ± 0.0439 (x1000 nats/game)
+      + opp x own - champion: -0.0097 ± 0.0393 (x1000 nats/game)
+      + opp x own - + opp: -0.0010 ± 0.0074 (x1000 nats/game)
+      champion - cached game FM: -0.0482 ± 0.0609 (x1000 nats/game)
+  champion       draft spearman 0.2768 (+0.0000)  sd 0.256  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2780 (+0.0012)  sd 0.254  card r 0.993 (pearson 0.995)  own-colour r 0.991
+  + opp x own    draft spearman 0.2779 (+0.0011)  sd 0.254  card r 0.993 (pearson 0.995)  own-colour r 0.991
+  cached game FM draft spearman 0.2767 (-0.0000)  sd 0.254
+  opponent strength (logit, + = harder; SE):
+    other 3+   +0.217 ± 0.040  share 0.003  user WR 0.485  arm +0.211
+    UBR        +0.183 ± 0.025  share 0.009  user WR 0.497  arm +0.163
+    WBR        +0.177 ± 0.023  share 0.010  user WR 0.504  arm +0.183
+    URG        +0.161 ± 0.027  share 0.008  user WR 0.505  arm +0.178
+    WUB        +0.146 ± 0.018  share 0.017  user WR 0.507  arm +0.136
+    RG         +0.141 ± 0.009  share 0.074  user WR 0.516  arm +0.127
+    WR         +0.137 ± 0.009  share 0.067  user WR 0.516  arm +0.143
+    WUG        +0.136 ± 0.021  share 0.012  user WR 0.513  arm +0.119
+    UBG        +0.131 ± 0.017  share 0.020  user WR 0.511  arm +0.139
+    BR         +0.118 ± 0.008  share 0.081  user WR 0.519  arm +0.122
+    WB         +0.107 ± 0.007  share 0.128  user WR 0.521  arm +0.117
+    WU         +0.098 ± 0.008  share 0.091  user WR 0.524  arm +0.101
+    WUR        +0.064 ± 0.028  share 0.007  user WR 0.529  arm +0.059
+    BRG        +0.060 ± 0.027  share 0.008  user WR 0.533  arm +0.072
+    UB         +0.034 ± 0.008  share 0.083  user WR 0.536  arm +0.046
+    WG         +0.026 ± 0.008  share 0.088  user WR 0.545  arm +0.019
+    WRG        +0.006 ± 0.029  share 0.007  user WR 0.547  arm +0.006
+    UR         -0.017 ± 0.009  share 0.066  user WR 0.550  arm -0.022
+    UG         -0.031 ± 0.010  share 0.054  user WR 0.555  arm -0.056
+    WBG        -0.062 ± 0.024  share 0.010  user WR 0.561  arm -0.086
+    BG         -0.107 ± 0.010  share 0.058  user WR 0.574  arm -0.109
+    G          -0.271 ± 0.014  share 0.031  user WR 0.616  arm -0.291
+    W          -0.311 ± 0.016  share 0.024  user WR 0.625  arm -0.314
+    R          -0.578 ± 0.022  share 0.013  user WR 0.683  arm -0.587
+    B          -0.903 ± 0.021  share 0.016  user WR 0.749  arm -0.875
+    U          -0.998 ± 0.024  share 0.013  user WR 0.766  arm -0.981
+    unknown    -2.922 ± 0.099  share 0.003  user WR 0.959  arm -2.755
+    heterogeneity Q 7471.0 df 26 p 0;  by wins before: 0:-0.006 1:-0.001 2:+0.003 3:+0.004 4:+0.003 5:+0.006 6:+0.002
+  matchups (own row x opponent col, centred logit x100):
+                    W      U      B      R      G     WU     WB     WR     WG     UB     UR     UG     BR     BG     RG    WUB    WUR    WUG    WBR    WBG    WRG    UBR    UBG    URG    BRG other 
+    W               .      .      .      .      .  -13.0   -4.4  +22.8   -7.0   +1.1   +4.9  +14.1   -0.7   +2.4   -0.5      .      .      .      .      .      .      .      .      .      .      .
+    U               .      .      .      .      .   -4.5   +0.7   -2.2  +12.8   -6.0   -1.3   +3.2   -7.4   +4.9  -12.1      .      .      .      .      .      .      .      .      .      .      .
+    B               .      .      .      .      .  +14.4   -3.1   -7.0   -1.6   -6.4  -21.1  +16.4   +8.5   -3.6   +2.5      .      .      .      .      .      .      .      .      .      .      .
+    G           +19.4      .      .      .  +21.4   +5.4   +0.8  -10.6   -2.6   -1.1   +1.4   +9.1   -9.1   -6.3   -0.2      .      .      .      .      .      .      .      .      .      .      .
+    WU          +11.9   +7.4   +0.1   -4.7   -6.8   +2.0   +9.4   +7.2   -2.0   -4.5   -4.2  -10.3   -1.4   +2.4   -2.1   -4.5   -6.8   -6.2   +2.7   +8.6   +4.0  -10.7   -3.0   -5.6   -9.8   +0.4
+    WB           -0.3   -8.1   +2.7  +19.3   -0.1   -6.2   +1.7   +9.4   +1.5   -2.4   -2.8   -8.2   +6.5   -2.0   +4.5   -1.8   +1.6   -8.9   +8.4  -10.7   +2.4   -7.0   -5.1   -1.9   -8.6  -13.1
+    WR          +14.5  +54.9  +31.0  +15.1  +23.9   -9.7   -9.3   -3.0   -8.9  +10.1   +4.3   +4.4  +10.3   +4.6   -1.7  -19.3  -20.5  -26.1  -25.9  -15.1   -6.3   -1.6  -17.6   -5.8   -4.2      .
+    WG          +16.0   +1.8   +0.3   +9.8  +17.5   -5.9   +0.6   +5.4   -3.1   -3.5   +2.9   -7.9   -4.7   -1.2   +3.2   -9.0   -2.9  -18.6   +6.5   +4.3  +16.4   +3.5   -9.5   +1.4   +8.2      .
+    UB          -17.1  -30.2  -20.0  -23.9  -16.4   +6.0   +2.9   -2.7   +3.3   -0.1   -1.4   +0.9   -2.6   +1.6   -1.0  +17.7   +7.1  +15.3  +14.1  +18.2   +6.0   +8.5  +11.0  +13.9  +10.9  +18.4
+    UR           +0.4  -12.0   -8.7  -28.3   +3.2   +4.4   -0.7   -0.2   +0.0   +5.5   -0.1   +6.3   +0.6   -2.6   -3.8   +3.2   +2.3  +20.7  -11.2   -7.0  -20.5   -6.1   +6.5   -6.7   -5.5      .
+    UG           +1.6   +6.1   +1.7   -9.1  -20.9   +7.0   +9.8  -14.4   +5.3   -1.1   -6.1   +7.2   -4.7   -2.5   -5.2  +15.0  +11.8   -8.5   -4.2   +9.3      .  -15.8  +15.5   -9.3  +11.0      .
+    BR           -9.3   -2.1   -0.8  +12.5   +6.0   +1.6  -11.6   -9.3   +4.6   +4.9   +3.4  +10.0   -2.0   +2.1   +2.9   -3.8  -12.9  +12.2   -5.0  -10.3   -9.8   +2.9  +13.4   +2.2   -6.4      .
+    BG          -13.9  -12.0  -11.5  -10.3   -5.6   +3.7   +1.6   +0.7   -1.4   -5.1   +3.4   +3.0   -2.5   -3.2   +3.3   -7.2  +24.7   +9.2  +14.2   +5.9   -1.0  +13.8   -7.4  +32.0  +15.4      .
+    RG          +12.9  +24.6  +16.5  +11.7  +13.5   -1.4   -5.4   -4.4   -3.1   +5.9   +4.1   +3.5   -3.1   +0.6   -2.9   +7.9   -8.8   -9.7  -21.0   -7.0  -16.2   +1.8   -2.8   -2.5   -1.1      .
+    WUB             .      .      .      .      .   -3.6   -0.7  +28.2   -6.9   +5.7   +6.3      .  +10.3   +0.3  -10.7      .      .      .      .      .      .      .      .      .      .      .
+    UBG             .      .      .      .      .  +11.7   -5.6  -17.2  +23.5  -14.9   +8.0      .   -1.7   +9.3  +11.4      .      .      .      .      .      .      .      .      .      .      .
+    other 3+    -17.5      .      .      .   -7.1   +2.1   +3.6   -7.0   +3.4  -19.7   +4.7   -6.6   -1.2   -5.2   -5.5      .      .      .      .      .      .      .  +22.3      .      .      .
+    rps test Q 933.4 df 416 p 9.8e-42
+FDN done [115s]
+=== FIN: 140237 drafts, 769659 games (train 542578, val 116202, test 110879), 363 cards, 18 deck columns (affinity in) [27s]
+  opponent levels ['W', 'U', 'B', 'R', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'WUBG', 'UBRG', 'WUBRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['W', 'B', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUG', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.65550 (1e-05, 0.001) epochs [28, 26] [32s]
+  + opp        val 0.65063 (1e-05, 0.001) epochs [28, 26] [23s]
+  + opp x own  val 0.65055 (1e-05, 0.001) epochs [28, 26] [37s]
+  SC-GLL context test logloss: base 0.66402, dl 0.66773, opp 0.65942, oppmx 0.65928 [100s]
+  all                  champion -657.971  + opp -657.984  + opp x own -657.983  cached game FM -657.935
+      + opp - champion: -0.0128 ± 0.0148 (x1000 nats/game)
+      + opp x own - champion: -0.0117 ± 0.0151 (x1000 nats/game)
+      + opp x own - + opp: +0.0011 ± 0.0015 (x1000 nats/game)
+      champion - cached game FM: -0.0363 ± 0.0331 (x1000 nats/game)
+  experienced          champion -660.604  + opp -660.608  + opp x own -660.608  cached game FM -660.559
+      + opp - champion: -0.0044 ± 0.0139 (x1000 nats/game)
+      + opp x own - champion: -0.0039 ± 0.0138 (x1000 nats/game)
+      + opp x own - + opp: +0.0005 ± 0.0022 (x1000 nats/game)
+      champion - cached game FM: -0.0454 ± 0.0381 (x1000 nats/game)
+  match 1              champion -655.588  + opp -655.597  + opp x own -655.595  cached game FM -655.575
+      + opp - champion: -0.0090 ± 0.0239 (x1000 nats/game)
+      + opp x own - champion: -0.0066 ± 0.0225 (x1000 nats/game)
+      + opp x own - + opp: +0.0024 ± 0.0037 (x1000 nats/game)
+      champion - cached game FM: -0.0137 ± 0.0296 (x1000 nats/game)
+  main build           champion -656.292  + opp -656.298  + opp x own -656.298  cached game FM -656.259
+      + opp - champion: -0.0066 ± 0.0168 (x1000 nats/game)
+      + opp x own - champion: -0.0058 ± 0.0168 (x1000 nats/game)
+      + opp x own - + opp: +0.0007 ± 0.0016 (x1000 nats/game)
+      champion - cached game FM: -0.0325 ± 0.0302 (x1000 nats/game)
+  experienced dl-ctx   champion -660.102  + opp -660.101  + opp x own -660.102  cached game FM -660.060
+      + opp - champion: +0.0005 ± 0.0151 (x1000 nats/game)
+      + opp x own - champion: +0.0003 ± 0.0152 (x1000 nats/game)
+      + opp x own - + opp: -0.0001 ± 0.0023 (x1000 nats/game)
+      champion - cached game FM: -0.0417 ± 0.0340 (x1000 nats/game)
+  match 1 dl-ctx       champion -659.376  + opp -659.376  + opp x own -659.375  cached game FM -659.370
+      + opp - champion: -0.0004 ± 0.0300 (x1000 nats/game)
+      + opp x own - champion: +0.0012 ± 0.0284 (x1000 nats/game)
+      + opp x own - + opp: +0.0016 ± 0.0042 (x1000 nats/game)
+      champion - cached game FM: -0.0053 ± 0.0302 (x1000 nats/game)
+  experienced opp-ctx  champion -655.965  + opp -655.953  + opp x own -655.953  cached game FM -655.904
+      + opp - champion: +0.0116 ± 0.0135 (x1000 nats/game)
+      + opp x own - champion: +0.0122 ± 0.0137 (x1000 nats/game)
+      + opp x own - + opp: +0.0006 ± 0.0023 (x1000 nats/game)
+      champion - cached game FM: -0.0606 ± 0.0474 (x1000 nats/game)
+  match 1 opp-ctx      champion -649.978  + opp -649.970  + opp x own -649.967  cached game FM -649.942
+      + opp - champion: +0.0085 ± 0.0240 (x1000 nats/game)
+      + opp x own - champion: +0.0113 ± 0.0228 (x1000 nats/game)
+      + opp x own - + opp: +0.0028 ± 0.0038 (x1000 nats/game)
+      champion - cached game FM: -0.0362 ± 0.0425 (x1000 nats/game)
+  experienced oppmx-ctx champion -655.832  + opp -655.820  + opp x own -655.819  cached game FM -655.771
+      + opp - champion: +0.0119 ± 0.0135 (x1000 nats/game)
+      + opp x own - champion: +0.0126 ± 0.0137 (x1000 nats/game)
+      + opp x own - + opp: +0.0007 ± 0.0023 (x1000 nats/game)
+      champion - cached game FM: -0.0610 ± 0.0476 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -649.907  + opp -649.899  + opp x own -649.896  cached game FM -649.871
+      + opp - champion: +0.0082 ± 0.0241 (x1000 nats/game)
+      + opp x own - champion: +0.0109 ± 0.0229 (x1000 nats/game)
+      + opp x own - + opp: +0.0028 ± 0.0038 (x1000 nats/game)
+      champion - cached game FM: -0.0360 ± 0.0422 (x1000 nats/game)
+  champion       draft spearman 0.2781 (+0.0000)  sd 0.261  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2789 (+0.0008)  sd 0.260  card r 0.998 (pearson 0.999)  own-colour r 0.999
+  + opp x own    draft spearman 0.2789 (+0.0008)  sd 0.260  card r 0.998 (pearson 0.999)  own-colour r 0.999
+  cached game FM draft spearman 0.2792 (+0.0011)  sd 0.255
+  opponent strength (logit, + = harder; SE):
+    WUBRG      +0.308 ± 0.020  share 0.015  user WR 0.477  arm +0.318
+    WUBG       +0.290 ± 0.024  share 0.010  user WR 0.483  arm +0.317
+    UBRG       +0.259 ± 0.024  share 0.010  user WR 0.490  arm +0.243
+    UBR        +0.136 ± 0.012  share 0.038  user WR 0.523  arm +0.124
+    UBG        +0.123 ± 0.010  share 0.051  user WR 0.524  arm +0.128
+    UR         +0.110 ± 0.008  share 0.092  user WR 0.531  arm +0.107
+    WR         +0.109 ± 0.008  share 0.083  user WR 0.536  arm +0.107
+    WB         +0.087 ± 0.008  share 0.078  user WR 0.539  arm +0.083
+    other 3+   +0.079 ± 0.024  share 0.009  user WR 0.536  arm +0.084
+    WU         +0.051 ± 0.008  share 0.078  user WR 0.547  arm +0.053
+    BRG        +0.040 ± 0.018  share 0.017  user WR 0.547  arm +0.051
+    WBG        +0.039 ± 0.017  share 0.019  user WR 0.548  arm +0.036
+    WUG        +0.032 ± 0.017  share 0.020  user WR 0.551  arm +0.024
+    URG        +0.026 ± 0.019  share 0.015  user WR 0.549  arm +0.023
+    BG         +0.023 ± 0.008  share 0.084  user WR 0.553  arm +0.023
+    WG         +0.013 ± 0.010  share 0.057  user WR 0.560  arm +0.005
+    WBR        +0.009 ± 0.019  share 0.016  user WR 0.556  arm -0.016
+    WRG        +0.000 ± 0.019  share 0.016  user WR 0.559  arm -0.001
+    BR         +0.000 ± 0.009  share 0.066  user WR 0.559  arm +0.011
+    WUR        -0.018 ± 0.023  share 0.011  user WR 0.563  arm -0.065
+    RG         -0.055 ± 0.011  share 0.047  user WR 0.577  arm -0.048
+    UB         -0.057 ± 0.009  share 0.062  user WR 0.571  arm -0.050
+    UG         -0.125 ± 0.014  share 0.029  user WR 0.588  arm -0.138
+    WUB        -0.135 ± 0.017  share 0.020  user WR 0.591  arm -0.117
+    W          -0.359 ± 0.018  share 0.017  user WR 0.647  arm -0.381
+    B          -0.586 ± 0.022  share 0.013  user WR 0.695  arm -0.597
+    G          -0.592 ± 0.025  share 0.010  user WR 0.700  arm -0.577
+    U          -1.157 ± 0.032  share 0.008  user WR 0.803  arm -1.157
+    R          -1.164 ± 0.036  share 0.007  user WR 0.803  arm -1.153
+    unknown    -2.966 ± 0.113  share 0.003  user WR 0.961  arm -2.612
+    heterogeneity Q 6175.8 df 29 p 0;  by wins before: 0:-0.004 1:-0.001 2:+0.000 3:+0.002 4:+0.003 5:+0.003 6:+0.002
+  matchups (own row x opponent col, centred logit x100):
+                    W      U      B      R      G     WU     WB     WR     WG     UB     UR     UG     BR     BG     RG    WUB    WUR    WUG    WBR    WBG    WRG    UBR    UBG    URG    BRG   WUBG   UBRG  WUBRG other 
+    W               .      .      .      .      .   -2.8   -6.5   +5.6  -11.2  +14.4   +0.4      .  +22.1  -10.6      .      .      .      .      .      .      .      .   +0.3      .      .      .      .      .      .
+    B               .      .      .      .      .  -26.9   +2.3  -15.1   +9.1  +20.2   -6.5      .  -10.6   +7.7      .      .      .      .      .      .      .      .   -1.0      .      .      .      .      .      .
+    WU           +0.6   +6.1   +4.5   -6.9   -7.9   -0.2   +0.3   -6.8   +1.3   +6.9   -1.4   -3.4   -5.1   +6.6   -7.0   +2.3   -1.7   -4.0  -10.3   -0.3   +3.3   -2.4   +9.1   +1.7   -6.4   +7.3   -1.9   +6.2  -11.7
+    WB          +11.8  -12.4  +11.6  +18.6  +10.4   -4.5   -3.4   +2.4   -0.8   +6.5   +0.1   +7.3   +2.1   -4.9   +6.0   -3.4   -0.5   +3.2   +2.5  -11.2   +0.5   -4.7   -4.4  +11.3   +5.0  -16.0  -11.3   -9.8  +10.0
+    WR          +21.7  +13.8  +22.3  +29.6  +18.8   +1.7   +2.9   -0.6   +0.5   +5.6   +6.9   +3.3   +8.1   -7.0   -1.9  -13.2   +0.3   -1.6   -6.3  -17.8  -20.1   -1.6   -6.5   -0.4  -15.2  -16.6  -16.7  -18.2   -3.5
+    WG           +7.5   +3.5   -0.8  +12.1   +9.6   +9.2   +1.4   +6.1   -4.5   +0.7   +6.4   +0.7   +4.1   -3.0   +2.0   +3.9   -9.6  -12.6   -7.8   -0.6   +3.2   -8.3  -16.1   +7.7   -5.6  -17.0   -3.1  -12.2  -29.6
+    UB          -22.6  -14.8  -19.4  -20.2  -12.8   -4.1   +1.1   -0.8   +1.6   -6.8   -4.5   -3.8   -6.9   +5.6   +3.8   +9.1   +1.5  +16.1   +8.8  +18.3   +6.8   +4.9   +6.9   -0.3   +4.5  +12.6  +12.4   +9.9  +10.5
+    UR           -0.4   +8.1  +11.6  -16.5   -8.1   +7.0   +2.5   -2.6   -2.3   +7.0   -0.8   +4.5   -2.8   +0.3  -15.8   +3.7   +2.9   -7.7   -8.8   -2.3   -3.4   +0.8   +7.6   -3.5   -2.5   +4.3   +6.4   +4.2   -6.1
+    UG           -3.2   -0.0  -10.3   +6.4   +4.8   -2.1   +1.5   +1.4   -0.8  -11.1   -1.5   +1.3   -5.0   +7.9   +2.6   -3.2  -10.9  -15.1   +6.3   +9.7   +2.6   -8.0   +5.5   +0.5   +6.4  +15.9   +1.7   +9.7  +23.8
+    BR           +9.9  +23.0  -15.9  +15.1  +19.6   +7.4   -6.0   -3.9   -5.6   -2.1   +7.6   +9.3   -0.1   -8.2   -3.3   +7.8   +7.3   +6.8   +8.3  -10.8   -5.5   +7.5   -1.2   +6.6  -10.7   -6.7   -5.1   -1.2   +2.5
+    BG           +0.1  -16.6   -1.6  +14.9   +4.9   -7.7   +0.6   +5.3   +5.9   -3.0   -2.4  -12.3  +10.0   -3.1  +12.3   +0.3   -5.6   +0.9   +5.7   +3.5   +5.9   +2.0   -8.7  -11.6   +6.9  -14.1   +7.9   -1.8  -10.1
+    RG          +28.8      .  +15.7      .  +11.6   +6.9   -7.4   +8.1   +0.5   -8.8  +19.2   +0.4   +4.0   -7.4   +5.6  -26.2   -1.0   -8.4   -7.1  -18.8  -10.0   -1.7  -22.0   -8.5  -13.1      .      .  -15.2      .
+    WUB             .      .      .      .      .   -7.5   +7.7  -13.3      .      .  -43.7      .   +5.2  +11.0      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    WUG             .      .      .      .      .   -0.3   -7.5   +0.5   +0.6  -10.3  -10.8      .   -5.6   +1.5   -1.9      .      .      .      .      .      .  -20.7   +8.6      .      .      .      .      .      .
+    WBG             .      .      .      .      .  -16.3   -2.7  +10.0      .   +6.1  -15.5      .   -1.0   -4.3      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    WRG             .      .      .      .      .  +10.3   +5.3   -9.1      .      .   +0.4      .      .   -4.9      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    UBR             .      .      .      .      .   +0.3   -5.6   +8.2   +5.2   -9.6   -0.8  +10.7  -13.1   +5.5   -9.0   +6.7      .   +2.4      .  -11.1  +15.0  +12.0  +14.0   +1.3   -2.3      .      .      .      .
+    UBG         -16.6      .  -20.3      .  -28.5   -8.8   +4.6   +3.6   -0.1   -2.5  -10.7   -7.5   -8.0   +7.6   +2.1  +11.8  +14.8  +17.7   +9.5  +21.2   -2.9   -2.6   +3.9   -8.5  +16.3  +14.9  +19.6  +15.0  +10.8
+    URG             .      .      .      .      .   +5.0   -0.5   -2.8   -4.4   -3.5  -12.1      .   +5.5   +2.8  +15.2      .      .      .      .      .      .  +12.1   +8.5      .      .      .      .      .      .
+    BRG             .      .      .      .      .   +1.5   +8.8   -4.3      .  -14.0   -8.4      .  +10.5   -2.5      .      .      .      .      .      .      .      .  -15.2      .      .      .      .      .      .
+    other mono      .      .      .      .      .  +13.1   -2.7  -20.2   -6.2   -6.0  +10.3      .  -17.3   +6.9      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    other 3+        .      .      .      .      .   -0.6   -3.5  -11.8   -0.2   +4.9   -2.4  +10.6   +4.9   +1.0   -3.1      .      .      .      .      .      .   -1.5   +9.1      .      .      .      .      .      .
+    rps test Q 905.1 df 588 p 6.9e-16
+FIN done [135s]
+=== LCI: 134970 drafts, 793671 games (train 559140, val 118410, test 116121), 291 cards, 18 deck columns (affinity in) [20s]
+  opponent levels ['W', 'U', 'B', 'R', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['B', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUR', 'WRG', 'UBG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.65547 (1e-05, 0.001) epochs [31, 31] [32s]
+  + opp        val 0.64869 (1e-05, 0.001) epochs [31, 31] [25s]
+  + opp x own  val 0.64790 (1e-05, 0.001) epochs [31, 31] [39s]
+  SC-GLL context test logloss: base 0.66242, dl 0.66858, opp 0.65609, oppmx 0.65550 [102s]
+  all                  champion -655.978  + opp -655.992  + opp x own -655.990  cached game FM -655.986
+      + opp - champion: -0.0143 ± 0.0169 (x1000 nats/game)
+      + opp x own - champion: -0.0126 ± 0.0172 (x1000 nats/game)
+      + opp x own - + opp: +0.0017 ± 0.0040 (x1000 nats/game)
+      champion - cached game FM: +0.0087 ± 0.0205 (x1000 nats/game)
+  experienced          champion -657.810  + opp -657.821  + opp x own -657.819  cached game FM -657.823
+      + opp - champion: -0.0108 ± 0.0206 (x1000 nats/game)
+      + opp x own - champion: -0.0087 ± 0.0210 (x1000 nats/game)
+      + opp x own - + opp: +0.0021 ± 0.0046 (x1000 nats/game)
+      champion - cached game FM: +0.0129 ± 0.0271 (x1000 nats/game)
+  match 1              champion -654.051  + opp -654.059  + opp x own -654.069  cached game FM -654.069
+      + opp - champion: -0.0085 ± 0.0485 (x1000 nats/game)
+      + opp x own - champion: -0.0180 ± 0.0501 (x1000 nats/game)
+      + opp x own - + opp: -0.0095 ± 0.0078 (x1000 nats/game)
+      champion - cached game FM: +0.0185 ± 0.0393 (x1000 nats/game)
+  main build           champion -653.979  + opp -653.988  + opp x own -653.988  cached game FM -653.986
+      + opp - champion: -0.0086 ± 0.0182 (x1000 nats/game)
+      + opp x own - champion: -0.0085 ± 0.0188 (x1000 nats/game)
+      + opp x own - + opp: +0.0001 ± 0.0042 (x1000 nats/game)
+      champion - cached game FM: +0.0063 ± 0.0192 (x1000 nats/game)
+  experienced dl-ctx   champion -659.986  + opp -659.994  + opp x own -659.992  cached game FM -660.003
+      + opp - champion: -0.0085 ± 0.0200 (x1000 nats/game)
+      + opp x own - champion: -0.0064 ± 0.0199 (x1000 nats/game)
+      + opp x own - + opp: +0.0021 ± 0.0045 (x1000 nats/game)
+      champion - cached game FM: +0.0177 ± 0.0296 (x1000 nats/game)
+  match 1 dl-ctx       champion -657.747  + opp -657.738  + opp x own -657.748  cached game FM -657.781
+      + opp - champion: +0.0096 ± 0.0563 (x1000 nats/game)
+      + opp x own - champion: -0.0013 ± 0.0579 (x1000 nats/game)
+      + opp x own - + opp: -0.0108 ± 0.0089 (x1000 nats/game)
+      champion - cached game FM: +0.0337 ± 0.0484 (x1000 nats/game)
+  experienced opp-ctx  champion -651.623  + opp -651.590  + opp x own -651.586  cached game FM -651.637
+      + opp - champion: +0.0333 ± 0.0209 (x1000 nats/game)
+      + opp x own - champion: +0.0367 ± 0.0213 (x1000 nats/game)
+      + opp x own - + opp: +0.0033 ± 0.0044 (x1000 nats/game)
+      champion - cached game FM: +0.0140 ± 0.0287 (x1000 nats/game)
+  match 1 opp-ctx      champion -647.574  + opp -647.540  + opp x own -647.547  cached game FM -647.598
+      + opp - champion: +0.0342 ± 0.0488 (x1000 nats/game)
+      + opp x own - champion: +0.0268 ± 0.0507 (x1000 nats/game)
+      + opp x own - + opp: -0.0074 ± 0.0078 (x1000 nats/game)
+      champion - cached game FM: +0.0239 ± 0.0415 (x1000 nats/game)
+  experienced oppmx-ctx champion -651.054  + opp -651.021  + opp x own -651.017  cached game FM -651.071
+      + opp - champion: +0.0329 ± 0.0206 (x1000 nats/game)
+      + opp x own - champion: +0.0373 ± 0.0210 (x1000 nats/game)
+      + opp x own - + opp: +0.0043 ± 0.0045 (x1000 nats/game)
+      champion - cached game FM: +0.0164 ± 0.0310 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -647.096  + opp -647.065  + opp x own -647.072  cached game FM -647.121
+      + opp - champion: +0.0313 ± 0.0486 (x1000 nats/game)
+      + opp x own - champion: +0.0244 ± 0.0505 (x1000 nats/game)
+      + opp x own - + opp: -0.0069 ± 0.0078 (x1000 nats/game)
+      champion - cached game FM: +0.0244 ± 0.0423 (x1000 nats/game)
+  champion       draft spearman 0.2921 (+0.0000)  sd 0.286  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2932 (+0.0011)  sd 0.285  card r 0.996 (pearson 0.998)  own-colour r 0.998
+  + opp x own    draft spearman 0.2932 (+0.0011)  sd 0.286  card r 0.996 (pearson 0.998)  own-colour r 0.998
+  cached game FM draft spearman 0.2917 (-0.0004)  sd 0.286
+  opponent strength (logit, + = harder; SE):
+    other 3+   +0.296 ± 0.020  share 0.014  user WR 0.475  arm +0.289
+    WRG        +0.263 ± 0.014  share 0.028  user WR 0.492  arm +0.270
+    UR         +0.182 ± 0.007  share 0.102  user WR 0.511  arm +0.200
+    RG         +0.156 ± 0.007  share 0.121  user WR 0.522  arm +0.148
+    WUR        +0.148 ± 0.015  share 0.026  user WR 0.514  arm +0.176
+    URG        +0.139 ± 0.024  share 0.009  user WR 0.519  arm +0.139
+    WR         +0.136 ± 0.007  share 0.100  user WR 0.525  arm +0.146
+    BRG        +0.114 ± 0.020  share 0.014  user WR 0.525  arm +0.106
+    WU         +0.106 ± 0.007  share 0.113  user WR 0.528  arm +0.124
+    WBR        +0.074 ± 0.024  share 0.009  user WR 0.536  arm +0.043
+    WUG        +0.003 ± 0.022  share 0.011  user WR 0.552  arm -0.008
+    UBG        +0.003 ± 0.021  share 0.013  user WR 0.553  arm -0.007
+    WG         -0.005 ± 0.011  share 0.048  user WR 0.560  arm -0.010
+    UBR        -0.015 ± 0.025  share 0.009  user WR 0.555  arm -0.040
+    WUB        -0.022 ± 0.023  share 0.011  user WR 0.556  arm -0.041
+    BG         -0.069 ± 0.009  share 0.069  user WR 0.572  arm -0.090
+    BR         -0.075 ± 0.010  share 0.056  user WR 0.573  arm -0.087
+    WBG        -0.077 ± 0.027  share 0.008  user WR 0.573  arm -0.099
+    UB         -0.077 ± 0.009  share 0.068  user WR 0.570  arm -0.092
+    WB         -0.079 ± 0.009  share 0.073  user WR 0.575  arm -0.089
+    UG         -0.089 ± 0.012  share 0.040  user WR 0.579  arm -0.083
+    W          -0.792 ± 0.022  share 0.014  user WR 0.739  arm -0.768
+    G          -0.876 ± 0.028  share 0.009  user WR 0.760  arm -0.910
+    B          -0.886 ± 0.022  share 0.015  user WR 0.755  arm -0.919
+    R          -0.939 ± 0.026  share 0.011  user WR 0.767  arm -0.923
+    U          -1.192 ± 0.036  share 0.006  user WR 0.807  arm -1.192
+    unknown    -3.095 ± 0.126  share 0.002  user WR 0.967  arm -2.872
+    heterogeneity Q 9732.5 df 26 p 0;  by wins before: 0:-0.007 1:-0.003 2:+0.001 3:+0.005 4:+0.008 5:+0.008 6:+0.012
+  matchups (own row x opponent col, centred logit x100):
+                    W      U      B      R      G     WU     WB     WR     WG     UB     UR     UG     BR     BG     RG    WUB    WUR    WUG    WBR    WBG    WRG    UBR    UBG    URG    BRG other  unknow
+    B               .      .      .      .      .  -19.3  -10.0   +3.6  -14.8  -21.3  +17.1      .  +21.3   +6.3  +12.8      .      .      .      .      .      .      .      .      .      .      .      .
+    WU           +2.9   -3.6  +14.0   +8.9   +0.4   -2.6  +11.9  -10.3   -2.6  +11.2  -10.6   +2.2   +1.4  +14.9   -3.8   +2.6  -11.9   +3.0   -2.9   +8.3   -5.1   -4.4   +7.6   -5.3   +4.4   +2.2   -0.0
+    WB           -7.1      .   +9.2   +8.8   -8.6   -9.8   -4.4   +5.9  +12.0   -3.6   -6.3   -1.0   +2.7   +6.4   +3.6   +3.0   +0.6  -19.9   +0.7  +11.7   +0.6  +10.3   -5.2   +4.6  +17.1   -1.4      .
+    WR          +17.1  +14.2   +7.6  +13.3   +8.6  +10.2   -2.4   +0.1   -8.7   -1.0   +7.8   +6.2   -4.2   -4.5   -7.4   +8.0   +0.2   +0.1  -11.1   -7.0  -13.7  -13.4   +2.8   +0.1  -14.5   -3.8   +7.0
+    WG           +1.4      .   -1.5   +6.5   -8.2   +3.5   +9.8   +8.3   +2.3   -7.3   +6.0   -2.5  -13.2   -8.0   +0.3  -21.6   -3.6   +1.2   -1.4      .   -1.9  -10.6  +14.0   -2.7  -13.7  -28.1      .
+    UB          -33.1      .  -17.5  -34.2  -16.9  -12.2   +2.5   -0.5   +7.9   +2.1  -15.7   -5.5  +12.0   +9.4  +10.6   +2.0   -3.5   -3.2  +15.9  +15.1  +18.5   +1.8   -1.8  +33.3  +25.3  +23.8      .
+    UR          +15.7  +30.9  +13.7   +4.4   +8.8   +9.2   -4.5   -6.2   -9.5   +9.6   +1.9   +6.7   +1.2   +0.6  -10.0   +1.2   +2.8   -0.7   -1.6   -4.2  -12.2   +4.4  +10.7  -13.7   -6.4  -10.0  +38.7
+    UG          -16.2      .  -13.9   -7.7   +0.2   -3.7   +6.0   -1.7   -5.7   -4.2   -5.6   -2.9   +2.0   +1.9   +7.3  +16.5   +3.3   +0.1      .      .   +6.3   +8.3   +5.0      .   +3.2  +19.3      .
+    BR          -32.5      .  -18.0      .      .   -1.4   -7.0   +1.9   +6.0   -6.2   +4.2   -1.1   -1.3   -5.2   +5.2   -4.6   +3.8  +14.1  +12.2   -1.1   +7.9  +11.1   -6.3   +4.6  +31.0   -5.6      .
+    BG          -15.6      .  -18.0  -18.0   -6.3  -16.4   -5.1   +5.4  +10.6   -8.6   +3.4   -5.6   -3.9   -2.6  +21.2   -3.7   -0.2   -0.2   +7.3  -18.0  +13.7   +6.6  -19.0  +10.1   +2.3  +27.2      .
+    RG          +15.6   +8.3  -12.8   +8.0   -2.1   +3.1   -7.1  +11.0   +6.5  -13.6  +13.0   -9.6   -0.6  -21.9   +1.6   -9.3  +13.2   +7.2   +5.9   +0.4   +9.4   +0.2  -16.2   -4.8  -11.6   -9.4      .
+    WUR             .      .      .      .      .   +6.9   +9.3   -8.0   -8.3  +16.0  -10.3   +0.3   -2.3   -8.2  -13.7      .      .      .      .      .      .      .      .      .      .      .      .
+    WRG             .      .      .      .      .   -4.2   +4.2  +27.9      .  -20.9   +4.9      .      .   -6.0   +0.3      .      .      .      .      .      .      .      .      .      .      .      .
+    UBG             .      .      .      .      .  -18.3   -4.4   +9.8      .   +1.5  -17.8      .      .  +12.4   +5.9      .      .      .      .      .      .      .      .      .      .      .      .
+    other mono      .      .      .      .      .   -0.2   -7.4   -1.3   +9.9   +9.0   +9.4   -1.6  -20.0   -3.9   +2.1      .      .      .      .      .      .      .      .      .      .      .      .
+    other 3+        .      .      .      .      .   +7.3   -0.6   +3.5   +5.6   -7.8   +1.4   -8.4   +0.1   +7.4   +1.1      .   +8.7      .      .      .   +7.6      .      .      .      .  +14.5      .
+    rps test Q 1402.3 df 390 p 4e-114
+LCI done [130s]
+=== MKM: 157553 drafts, 919942 games (train 649467, val 137438, test 133037), 326 cards, 18 deck columns (affinity in) [31s]
+  opponent levels ['W', 'U', 'B', 'R', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'WUBR', 'WUBG', 'WURG', 'WBRG', 'UBRG', 'WUBRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'WUBG', 'WUBRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.65860 (1e-05, 0.001) epochs [24, 25] [33s]
+  + opp        val 0.65124 (1e-05, 0.001) epochs [24, 25] [24s]
+  + opp x own  val 0.65085 (1e-05, 0.001) epochs [24, 25] [38s]
+  SC-GLL context test logloss: base 0.66514, dl 0.67103, opp 0.65748, oppmx 0.65719 [101s]
+  all                  champion -660.285  + opp -660.313  + opp x own -660.321  cached game FM -660.221
+      + opp - champion: -0.0279 ± 0.0116 (x1000 nats/game)
+      + opp x own - champion: -0.0358 ± 0.0118 (x1000 nats/game)
+      + opp x own - + opp: -0.0079 ± 0.0034 (x1000 nats/game)
+      champion - cached game FM: -0.0644 ± 0.0639 (x1000 nats/game)
+  experienced          champion -662.500  + opp -662.533  + opp x own -662.542  cached game FM -662.429
+      + opp - champion: -0.0327 ± 0.0149 (x1000 nats/game)
+      + opp x own - champion: -0.0414 ± 0.0142 (x1000 nats/game)
+      + opp x own - + opp: -0.0087 ± 0.0035 (x1000 nats/game)
+      champion - cached game FM: -0.0715 ± 0.0691 (x1000 nats/game)
+  match 1              champion -657.552  + opp -657.631  + opp x own -657.636  cached game FM -657.453
+      + opp - champion: -0.0791 ± 0.0392 (x1000 nats/game)
+      + opp x own - champion: -0.0841 ± 0.0380 (x1000 nats/game)
+      + opp x own - + opp: -0.0050 ± 0.0096 (x1000 nats/game)
+      champion - cached game FM: -0.0988 ± 0.1313 (x1000 nats/game)
+  main build           champion -658.954  + opp -658.974  + opp x own -658.982  cached game FM -658.889
+      + opp - champion: -0.0194 ± 0.0110 (x1000 nats/game)
+      + opp x own - champion: -0.0277 ± 0.0114 (x1000 nats/game)
+      + opp x own - + opp: -0.0084 ± 0.0038 (x1000 nats/game)
+      champion - cached game FM: -0.0659 ± 0.0641 (x1000 nats/game)
+  experienced dl-ctx   champion -664.820  + opp -664.844  + opp x own -664.854  cached game FM -664.724
+      + opp - champion: -0.0246 ± 0.0152 (x1000 nats/game)
+      + opp x own - champion: -0.0340 ± 0.0142 (x1000 nats/game)
+      + opp x own - + opp: -0.0094 ± 0.0034 (x1000 nats/game)
+      champion - cached game FM: -0.0954 ± 0.0930 (x1000 nats/game)
+  match 1 dl-ctx       champion -662.124  + opp -662.194  + opp x own -662.202  cached game FM -661.987
+      + opp - champion: -0.0699 ± 0.0452 (x1000 nats/game)
+      + opp x own - champion: -0.0779 ± 0.0445 (x1000 nats/game)
+      + opp x own - + opp: -0.0080 ± 0.0103 (x1000 nats/game)
+      champion - cached game FM: -0.1366 ± 0.1641 (x1000 nats/game)
+  experienced opp-ctx  champion -654.959  + opp -654.964  + opp x own -654.973  cached game FM -654.866
+      + opp - champion: -0.0054 ± 0.0158 (x1000 nats/game)
+      + opp x own - champion: -0.0148 ± 0.0158 (x1000 nats/game)
+      + opp x own - + opp: -0.0095 ± 0.0035 (x1000 nats/game)
+      champion - cached game FM: -0.0929 ± 0.0891 (x1000 nats/game)
+  match 1 opp-ctx      champion -650.195  + opp -650.247  + opp x own -650.253  cached game FM -650.084
+      + opp - champion: -0.0521 ± 0.0378 (x1000 nats/game)
+      + opp x own - champion: -0.0576 ± 0.0369 (x1000 nats/game)
+      + opp x own - + opp: -0.0056 ± 0.0096 (x1000 nats/game)
+      champion - cached game FM: -0.1114 ± 0.1357 (x1000 nats/game)
+  experienced oppmx-ctx champion -654.613  + opp -654.621  + opp x own -654.631  cached game FM -654.526
+      + opp - champion: -0.0087 ± 0.0154 (x1000 nats/game)
+      + opp x own - champion: -0.0177 ± 0.0152 (x1000 nats/game)
+      + opp x own - + opp: -0.0091 ± 0.0034 (x1000 nats/game)
+      champion - cached game FM: -0.0871 ± 0.0838 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -649.873  + opp -649.927  + opp x own -649.932  cached game FM -649.763
+      + opp - champion: -0.0548 ± 0.0380 (x1000 nats/game)
+      + opp x own - champion: -0.0598 ± 0.0369 (x1000 nats/game)
+      + opp x own - + opp: -0.0050 ± 0.0096 (x1000 nats/game)
+      champion - cached game FM: -0.1094 ± 0.1348 (x1000 nats/game)
+  champion       draft spearman 0.2512 (+0.0000)  sd 0.243  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2516 (+0.0004)  sd 0.243  card r 0.996 (pearson 0.997)  own-colour r 0.999
+  + opp x own    draft spearman 0.2514 (+0.0002)  sd 0.243  card r 0.995 (pearson 0.997)  own-colour r 0.999
+  cached game FM draft spearman 0.2552 (+0.0040)  sd 0.242
+  opponent strength (logit, + = harder; SE):
+    WUBRG      +0.277 ± 0.014  share 0.024  user WR 0.475  arm +0.279
+    WURG       +0.264 ± 0.018  share 0.015  user WR 0.483  arm +0.255
+    WUBG       +0.231 ± 0.017  share 0.016  user WR 0.488  arm +0.210
+    WR         +0.209 ± 0.006  share 0.122  user WR 0.504  arm +0.209
+    WUG        +0.184 ± 0.012  share 0.033  user WR 0.506  arm +0.168
+    WUBR       +0.162 ± 0.023  share 0.009  user WR 0.508  arm +0.158
+    WRG        +0.125 ± 0.012  share 0.035  user WR 0.522  arm +0.137
+    UBG        +0.123 ± 0.011  share 0.038  user WR 0.519  arm +0.103
+    WUR        +0.123 ± 0.013  share 0.029  user WR 0.522  arm +0.121
+    URG        +0.122 ± 0.014  share 0.022  user WR 0.517  arm +0.108
+    UBRG       +0.120 ± 0.021  share 0.011  user WR 0.517  arm +0.119
+    WG         +0.074 ± 0.009  share 0.060  user WR 0.537  arm +0.083
+    WU         +0.055 ± 0.008  share 0.080  user WR 0.541  arm +0.057
+    WBG        +0.053 ± 0.013  share 0.026  user WR 0.540  arm +0.033
+    UBR        +0.045 ± 0.016  share 0.018  user WR 0.539  arm +0.045
+    WBR        +0.017 ± 0.014  share 0.026  user WR 0.551  arm +0.012
+    WBRG       +0.017 ± 0.020  share 0.012  user WR 0.545  arm +0.014
+    WUB        +0.007 ± 0.014  share 0.024  user WR 0.552  arm +0.015
+    UR         +0.002 ± 0.008  share 0.066  user WR 0.551  arm +0.012
+    WB         -0.022 ± 0.009  share 0.056  user WR 0.560  arm -0.017
+    UG         -0.034 ± 0.011  share 0.040  user WR 0.561  arm -0.044
+    BRG        -0.048 ± 0.017  share 0.017  user WR 0.564  arm -0.041
+    RG         -0.054 ± 0.010  share 0.044  user WR 0.567  arm -0.044
+    BR         -0.076 ± 0.009  share 0.053  user WR 0.572  arm -0.083
+    BG         -0.174 ± 0.010  share 0.046  user WR 0.595  arm -0.176
+    UB         -0.225 ± 0.011  share 0.037  user WR 0.607  arm -0.231
+    G          -0.878 ± 0.028  share 0.008  user WR 0.752  arm -0.842
+    W          -1.022 ± 0.026  share 0.009  user WR 0.776  arm -1.021
+    R          -1.074 ± 0.029  share 0.008  user WR 0.784  arm -1.102
+    B          -1.451 ± 0.037  share 0.006  user WR 0.844  arm -1.450
+    U          -1.660 ± 0.043  share 0.005  user WR 0.867  arm -1.636
+    unknown    -2.870 ± 0.100  share 0.003  user WR 0.958  arm -2.528
+    heterogeneity Q 11366.4 df 31 p 0;  by wins before: 0:-0.005 1:-0.002 2:+0.000 3:+0.003 4:+0.005 5:+0.007 6:+0.010
+  matchups (own row x opponent col, centred logit x100):
+                    W      U      B      R      G     WU     WB     WR     WG     UB     UR     UG     BR     BG     RG    WUB    WUR    WUG    WBR    WBG    WRG    UBR    UBG    URG    BRG   WUBR   WUBG   WURG   WBRG   UBRG  WUBRG
+    WU          +16.1   -3.9  +22.5   -3.3   +1.3   +0.3   -1.9   -2.4   +4.3   -0.7   -7.0   +9.5   -2.5   +4.9   -1.2   -9.2  -11.5   +3.5   -2.7   -0.3   +6.2   -6.9   +2.5   +3.1   +7.2  -11.2   +3.6   -1.6   -2.7   +8.9   -3.1
+    WB           -4.9      .      .  +14.4  +14.6   -0.6   +4.4   -0.4   +3.9   -2.4   -3.4   +5.4   -3.8  +11.0   +5.4  -10.5   -9.9  +11.7   +1.9   -6.2   +2.0  -11.8  -12.9   -1.3   +5.2   -5.3   -6.8  +12.8   -0.7  -21.0   -8.1
+    WR          +16.5  +14.5  +42.6  +13.6  +23.5   +3.9   -0.5   +1.2   -2.4  +13.8   +8.5   +3.5  +12.8   +3.7   -0.1   -2.3   +1.6   -9.3   -7.5  -10.2  -10.4   -4.3   -1.7   -6.8  -13.1  -11.9  -13.1  -20.3  -18.0  -12.5  -22.4
+    WG          -15.3   +7.8   +1.3  +17.5  +12.8   -2.3   -5.6   +8.8   -5.4   -4.0   +6.6   +0.5   +7.8   -2.4   +6.1   -1.1   +3.2   -6.8   -1.8   -4.8   -0.1   -9.7   -7.9   -1.7   +4.1  -14.9   +2.3   -6.0   +9.7  -16.9  -13.7
+    UB              .      .      .      .      .   +0.9   -1.4   -8.7  +10.6   +5.0  -19.2   +2.0   -8.8   -4.0   -2.6   +4.3   +0.3  +14.3  +19.3   +3.8   +0.9   +4.2   +0.5   +2.9  +11.2   -4.5  +16.1  +14.4   +8.0  +25.0  +10.3
+    UR           -4.7  +25.8   -3.1  -21.5   -8.8  +12.1   +9.3   -5.5   -4.0  +12.6   -1.1   +1.1   -5.0   +1.7  -15.4   +8.6   -2.8   +1.7   -2.2   +1.9  -13.1   +1.1   +5.9   -3.2   -5.5   +6.8   +5.5   -6.0   -0.6   +4.2   +7.7
+    UG          -10.3  -29.9  -27.7  -29.8  -40.4  -10.0   +3.2   -1.1   +2.2   -3.6   -0.8   -4.5  -10.0   -5.4   +8.5   -0.6   +0.2   -0.2   +9.2   +9.7   +9.8  +16.4   +7.5   +2.1   +0.4  +15.8  +12.2   +7.4  +16.7  +12.0  +20.9
+    BR           -3.2      .      .  +11.8  +16.0   +4.1   -6.9  -12.7   -0.8   +0.4   -1.4   +5.1   +0.5   -1.4   +2.2  +15.1   +3.8  +14.6   +1.6   +1.7   +3.3   -0.2   +5.8   +5.7   -1.1  -13.4   -3.3   +4.8   -1.4   +2.5   +2.0
+    BG          -25.4      .      .   +9.6   -8.4   -7.9   +1.1   +1.7   -1.0  -11.3   -3.7   -3.1   -3.5   -4.5   +5.0  -11.9   +3.7   +0.7   -4.4   +3.2  +23.1   -0.3   -3.1  +13.9  +12.8  +10.4   +7.0  +15.5  +10.9   -4.3  +13.4
+    RG          +41.3      .   -4.3  +30.4   -8.9   -2.5   -1.5   +0.7   -4.6   -2.6  +13.9   +3.4   -5.1   -2.2   +5.5   +1.6   +0.6   -6.7   +0.2   -7.5   -3.5   +8.7   -2.3   -0.2  -10.7  +18.6   -7.0   -2.5  -10.9   +3.6   -4.7
+    WUB             .      .      .      .      .   -5.5   +2.5   +0.1  -14.3   -3.1  -11.2  -11.3   -6.8  -20.3  +17.4   +6.7   -1.9   +4.9  +10.3   +9.1   -1.7      .   +1.9      .      .      .      .      .      .      .   +6.7
+    WUR             .      .      .      .      .  +10.3  +11.9   -7.3   -7.8   +3.8   -2.0   +6.0   +0.3   -3.4  -13.7   +1.8   +6.8   +7.0   +4.7   +9.8  -12.9   +2.9   -1.0   -5.4  -11.8      .   +2.2      .      .      .   +0.0
+    WUG             .      .      .      .      .   -8.4   +0.7   +3.3  +12.7   -3.0   -3.1   -3.1   -5.2   +1.1   +2.0  -19.2   +1.4   -7.4   +8.8   -2.2  +11.6   +4.3  +14.3   -8.7   +4.1      .   +0.9   -1.7      .  -17.5  +11.9
+    WBR             .      .      .      .      .  +11.5   +4.1  -10.2   +1.2   -3.6  +11.7   +1.5   -1.0   +5.3   +1.4  +12.5   +0.5   +2.4  -20.5   +5.6   -8.9      .   +7.1      .      .      .      .      .      .      .      .
+    WBG             .      .      .      .      .   -8.0  -21.2   +1.7  +12.6  -10.7   -9.4   -6.0  +21.5  -13.2   -8.9   -0.0   -8.4   -5.8   +1.3   -2.3   +4.0      .   -7.5  +24.2      .      .      .      .      .      .   +0.3
+    WRG             .      .      .      .      .   +0.9   +3.5   +5.8   -5.4   -8.6  +13.6   -8.4   +3.4   -0.4   +4.1  +10.4   -1.2   +5.0  -14.1   -7.7   -3.8   +4.1   -1.0   +6.5  -18.5      .   -4.9  -17.1      .      .   -3.4
+    UBR             .      .      .      .      .  +22.2  +18.2   +4.4   +5.3  -21.6  -18.0  -22.9  -17.2  -25.6   -8.8      .  +10.7   -4.9      .      .   -3.3      .  -13.8      .      .      .      .      .      .      .  +16.9
+    UBG             .      .      .      .      .  -13.5   -7.9   +6.5   +3.0  -11.4  -13.5  -18.7  -10.3   +8.2   +0.6  +11.9   +1.8   +9.2  +16.8  +16.3   +2.4   +2.6  +14.9   -1.6   +1.8  +24.9   +7.3  +20.0   +9.4   -1.6  +37.4
+    URG             .      .      .      .      .   -1.6   -0.2   -5.9   +4.4  -11.6   +2.8  -12.3   -1.9   -7.2   -7.1   +4.1   +4.6   -4.2  +14.9  +20.6   +0.1      .   +6.4   +3.6  +20.5      .   -6.1      .      .      .  +26.2
+    BRG             .      .      .      .      .   +2.2   +6.8   +6.6   +7.2   +6.4   +9.1  -10.7   -0.7  -16.5   -7.0      .      .  -15.0      .      .      .      .   -0.7      .      .      .      .      .      .      .      .
+    WUBG            .      .      .      .      .   -4.4      .  +13.1   +4.0      .  -23.5      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    WUBRG           .      .      .      .      .   -1.6   +8.2   +9.0  -17.0      .  -19.8      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    other mono      .      .      .      .      .   -4.8  -16.9   +5.5   +9.9      .   +0.8      .   +1.0      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .      .
+    other 3+        .      .      .      .      .  -11.8   -5.4  +16.2   +4.9  -12.1   +3.3  -15.0   -2.4   -6.4  -13.6  +12.2   +7.0  -17.4  +25.1  +10.1  -12.7      .  -10.1      .      .      .      .      .      .      .  +28.8
+    rps test Q 1361.4 df 713 p 5.1e-43
+MKM done [141s]
+=== OTJ: 195312 drafts, 1132415 games (train 799767, val 168204, test 164444), 381 cards, 18 deck columns (affinity in) [50s]
+  opponent levels ['W', 'U', 'B', 'R', 'G', 'WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'WUBG', 'WURG', 'WBRG', 'UBRG', 'WUBRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG', 'WUB', 'WUR', 'WUG', 'WBR', 'WBG', 'WRG', 'UBR', 'UBG', 'URG', 'BRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.66224 (1e-05, 0.001) epochs [27, 29] [50s]
+  + opp        val 0.65433 (1e-05, 0.001) epochs [27, 29] [36s]
+  + opp x own  val 0.65389 (1e-05, 0.001) epochs [27, 29] [55s]
+  SC-GLL context test logloss: base 0.66870, dl 0.67335, opp 0.66069, oppmx 0.66030 [149s]
+  all                  champion -663.502  + opp -663.571  + opp x own -663.564  cached game FM -663.499
+      + opp - champion: -0.0692 ± 0.0154 (x1000 nats/game)
+      + opp x own - champion: -0.0614 ± 0.0152 (x1000 nats/game)
+      + opp x own - + opp: +0.0078 ± 0.0035 (x1000 nats/game)
+      champion - cached game FM: -0.0035 ± 0.0119 (x1000 nats/game)
+  experienced          champion -665.670  + opp -665.738  + opp x own -665.729  cached game FM -665.666
+      + opp - champion: -0.0676 ± 0.0121 (x1000 nats/game)
+      + opp x own - champion: -0.0593 ± 0.0131 (x1000 nats/game)
+      + opp x own - + opp: +0.0083 ± 0.0040 (x1000 nats/game)
+      champion - cached game FM: -0.0042 ± 0.0123 (x1000 nats/game)
+  match 1              champion -664.130  + opp -664.266  + opp x own -664.259  cached game FM -664.125
+      + opp - champion: -0.1354 ± 0.0628 (x1000 nats/game)
+      + opp x own - champion: -0.1289 ± 0.0555 (x1000 nats/game)
+      + opp x own - + opp: +0.0065 ± 0.0102 (x1000 nats/game)
+      champion - cached game FM: -0.0054 ± 0.0291 (x1000 nats/game)
+  main build           champion -662.212  + opp -662.275  + opp x own -662.269  cached game FM -662.206
+      + opp - champion: -0.0634 ± 0.0174 (x1000 nats/game)
+      + opp x own - champion: -0.0567 ± 0.0173 (x1000 nats/game)
+      + opp x own - + opp: +0.0066 ± 0.0036 (x1000 nats/game)
+      champion - cached game FM: -0.0057 ± 0.0117 (x1000 nats/game)
+  experienced dl-ctx   champion -666.862  + opp -666.919  + opp x own -666.910  cached game FM -666.862
+      + opp - champion: -0.0569 ± 0.0126 (x1000 nats/game)
+      + opp x own - champion: -0.0480 ± 0.0130 (x1000 nats/game)
+      + opp x own - + opp: +0.0088 ± 0.0047 (x1000 nats/game)
+      champion - cached game FM: +0.0001 ± 0.0142 (x1000 nats/game)
+  match 1 dl-ctx       champion -668.605  + opp -668.736  + opp x own -668.728  cached game FM -668.605
+      + opp - champion: -0.1304 ± 0.0669 (x1000 nats/game)
+      + opp x own - champion: -0.1226 ± 0.0612 (x1000 nats/game)
+      + opp x own - + opp: +0.0078 ± 0.0089 (x1000 nats/game)
+      champion - cached game FM: -0.0008 ± 0.0313 (x1000 nats/game)
+  experienced opp-ctx  champion -657.819  + opp -657.825  + opp x own -657.823  cached game FM -657.809
+      + opp - champion: -0.0064 ± 0.0135 (x1000 nats/game)
+      + opp x own - champion: -0.0042 ± 0.0142 (x1000 nats/game)
+      + opp x own - + opp: +0.0022 ± 0.0041 (x1000 nats/game)
+      champion - cached game FM: -0.0095 ± 0.0121 (x1000 nats/game)
+  match 1 opp-ctx      champion -655.484  + opp -655.553  + opp x own -655.555  cached game FM -655.477
+      + opp - champion: -0.0696 ± 0.0624 (x1000 nats/game)
+      + opp x own - champion: -0.0710 ± 0.0555 (x1000 nats/game)
+      + opp x own - + opp: -0.0014 ± 0.0105 (x1000 nats/game)
+      champion - cached game FM: -0.0070 ± 0.0290 (x1000 nats/game)
+  experienced oppmx-ctx champion -657.370  + opp -657.393  + opp x own -657.387  cached game FM -657.362
+      + opp - champion: -0.0237 ± 0.0129 (x1000 nats/game)
+      + opp x own - champion: -0.0177 ± 0.0136 (x1000 nats/game)
+      + opp x own - + opp: +0.0059 ± 0.0041 (x1000 nats/game)
+      champion - cached game FM: -0.0078 ± 0.0118 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -655.028  + opp -655.113  + opp x own -655.111  cached game FM -655.022
+      + opp - champion: -0.0849 ± 0.0634 (x1000 nats/game)
+      + opp x own - champion: -0.0833 ± 0.0561 (x1000 nats/game)
+      + opp x own - + opp: +0.0016 ± 0.0108 (x1000 nats/game)
+      champion - cached game FM: -0.0059 ± 0.0289 (x1000 nats/game)
+  champion       draft spearman 0.2529 (+0.0000)  sd 0.234  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2525 (-0.0004)  sd 0.234  card r 0.995 (pearson 0.997)  own-colour r 0.995
+  + opp x own    draft spearman 0.2526 (-0.0003)  sd 0.234  card r 0.996 (pearson 0.997)  own-colour r 0.996
+  cached game FM draft spearman 0.2533 (+0.0004)  sd 0.232
+  opponent strength (logit, + = harder; SE):
+    WUBRG      +0.350 ± 0.023  share 0.007  user WR 0.450  arm +0.383
+    UBRG       +0.341 ± 0.018  share 0.011  user WR 0.453  arm +0.336
+    WBRG       +0.292 ± 0.018  share 0.011  user WR 0.466  arm +0.318
+    WUBG       +0.277 ± 0.018  share 0.012  user WR 0.472  arm +0.320
+    BRG        +0.194 ± 0.011  share 0.034  user WR 0.495  arm +0.206
+    other 3+   +0.178 ± 0.031  share 0.004  user WR 0.496  arm +0.156
+    UBG        +0.177 ± 0.010  share 0.041  user WR 0.496  arm +0.184
+    WURG       +0.176 ± 0.021  share 0.008  user WR 0.498  arm +0.178
+    WBG        +0.159 ± 0.009  share 0.047  user WR 0.504  arm +0.178
+    WRG        +0.159 ± 0.008  share 0.057  user WR 0.506  arm +0.158
+    WG         +0.144 ± 0.006  share 0.118  user WR 0.511  arm +0.153
+    URG        +0.123 ± 0.013  share 0.022  user WR 0.513  arm +0.107
+    WUG        +0.112 ± 0.010  share 0.037  user WR 0.516  arm +0.113
+    WBR        +0.084 ± 0.012  share 0.025  user WR 0.525  arm +0.077
+    WR         +0.064 ± 0.009  share 0.046  user WR 0.533  arm +0.045
+    RG         +0.059 ± 0.008  share 0.057  user WR 0.532  arm +0.058
+    UBR        +0.052 ± 0.009  share 0.043  user WR 0.530  arm +0.039
+    BG         +0.007 ± 0.008  share 0.065  user WR 0.542  arm +0.017
+    WUB        +0.002 ± 0.014  share 0.020  user WR 0.543  arm -0.005
+    BR         -0.001 ± 0.007  share 0.069  user WR 0.547  arm -0.012
+    WB         -0.016 ± 0.009  share 0.045  user WR 0.549  arm -0.018
+    WUR        -0.020 ± 0.018  share 0.012  user WR 0.548  arm -0.026
+    UG         -0.044 ± 0.010  share 0.035  user WR 0.556  arm -0.045
+    UB         -0.148 ± 0.009  share 0.051  user WR 0.580  arm -0.161
+    WU         -0.154 ± 0.010  share 0.036  user WR 0.581  arm -0.162
+    UR         -0.187 ± 0.010  share 0.042  user WR 0.591  arm -0.204
+    G          -0.645 ± 0.020  share 0.011  user WR 0.700  arm -0.629
+    R          -1.157 ± 0.029  share 0.007  user WR 0.797  arm -1.231
+    W          -1.188 ± 0.025  share 0.009  user WR 0.798  arm -1.192
+    U          -1.415 ± 0.032  share 0.006  user WR 0.834  arm -1.429
+    B          -1.450 ± 0.029  share 0.008  user WR 0.837  arm -1.430
+    unknown    -3.142 ± 0.086  share 0.004  user WR 0.966  arm -2.878
+    heterogeneity Q 15127.8 df 31 p 0;  by wins before: 0:-0.007 1:-0.002 2:+0.002 3:+0.005 4:+0.007 5:+0.008 6:+0.007
+  matchups (own row x opponent col, centred logit x100):
+                    W      U      B      R      G     WU     WB     WR     WG     UB     UR     UG     BR     BG     RG    WUB    WUR    WUG    WBR    WBG    WRG    UBR    UBG    URG    BRG   WUBG   WURG   WBRG   UBRG  WUBRG other  unknow
+    WU           -1.0      .      .      .  -25.7   -1.6   -0.6   -0.9   +2.1   +0.7  -17.3   +2.2   +0.9   +0.5   -5.5   -1.3   +4.0  +18.5   -0.5   +6.9   -2.8   +2.9   +5.0   -8.4   -2.0   -2.1   +6.9  +15.5   +5.9  +14.0      .      .
+    WB          -21.4  -27.7   +4.8  -12.9   +6.6   -4.8   +4.7   +5.9   +3.4   -5.1   -1.7   +4.7   +1.0   +0.7   -3.6   +1.6   -5.3   +0.6   +1.9   -0.6   +4.8   -4.7   +0.0   +6.0   +1.9   +3.4   +3.0   -6.1   -9.5   +1.0      .      .
+    WR          +18.6  +32.5   -3.9   +8.0  +16.3   +4.5   -1.0   +0.3   -7.9   +9.7  +11.5  +12.4   +3.5   +2.5   -2.4   +5.4   +5.6  -10.5   -9.1   -8.1  -12.4  +12.3   +0.6   -2.3   -2.9   -8.2  -11.4  -11.0   +0.1      .      .      .
+    WG          +18.6  +21.8  +14.6  +38.5  +27.7   +2.3   -0.5   +6.2   +2.1   -0.3   +5.2   +4.4   +7.2   +0.6  +13.2  -14.4   -9.5   -9.0   -4.6  -12.5   -2.9   -5.1  -10.3   -4.8   -5.0  -28.0  -15.6   -9.4  -14.3  -27.0  -24.1   +7.6
+    UB          -26.2  -43.9  -27.4  -50.0  -28.5   +2.5   -0.1   -5.1   +2.1   -9.2  -12.6   -1.4  -13.1   +1.4  -14.6  +12.3   -2.7  +11.1   +9.2  +21.2   +6.6   -2.9  +13.2   -1.2  +13.9  +37.1  +25.9  +18.4  +19.1  +36.8  +24.7      .
+    UR           +4.2   -5.6  +12.0  -18.5  -45.2   +5.3   +5.8   -7.6   -7.8   +9.8   -2.5   -1.2   -3.7   -4.1   -3.9   +3.5  +14.4  +10.2  +13.8   +1.9   -9.2   +6.7   +9.2   +0.4   -0.6  +30.2   +5.8   +3.5  +15.7  +13.3      .      .
+    UG           -0.3  -10.6   +9.6   -4.2   +1.8   -8.3   -1.3   +1.0   +1.5   -7.5   +3.9   -0.1   -8.0   +7.4   -4.8   +4.3   +5.4   +1.2   -5.2  +10.5   -0.2   -0.9   +1.3   -2.1   +3.2  +12.6   +3.0   -1.9   +7.7  -19.1      .      .
+    BR          -24.5  +37.4  +25.0   -7.5   +2.7   +5.5   -4.9   -9.1   -6.3  +15.0   -2.4   +2.3   -1.0   -0.1   -6.6   +1.5  -10.6   +2.8   +2.3   -3.8   -8.3   +6.8   +5.6   +3.1   +5.5   +4.0  +16.6  +16.2  +13.1  +20.0  +10.5      .
+    BG           +0.4  -27.1  -17.7   +3.5  +14.1   -8.9   +2.5   +1.6   +2.3   -6.0   -3.1  -12.6   +1.0   +2.6   +7.8   -2.7   +5.8   -1.5   +0.5   +4.8   +6.2   -4.8   -3.9   +4.8   +3.9   +0.0   -4.9   -9.6   -6.1   +0.6   +0.7   -3.6
+    RG          +35.0  +43.3  +36.8  +25.0   +8.4  +10.8   +1.5   +8.0   -3.4  +11.5  +19.4   +1.1   +7.1   -6.4   +4.7   -4.4   +0.3  -11.3   -6.9  -16.2   -9.9   +5.3   -9.7   -6.8  -14.3  -16.5  -11.6  -27.7  -20.3  -19.6      .  +15.3
+    WUB             .      .      .      .      .   +8.3  -11.3   -7.5   +3.3   -4.6  -29.6   -1.0  -15.9   -5.2   -8.9  +13.9      .  +15.1  +30.2  +19.6  +10.3   +9.2  +14.8      .   -8.1      .      .      .      .      .      .      .
+    WUR             .      .      .      .      .      .      .      .   +2.2      .      .      .   +8.1  -15.6  -18.8      .      .      .      .      .  -12.2      .      .      .      .      .      .      .      .      .      .      .
+    WUG             .      .      .      .      .   +3.0   -6.2   +9.9   +0.6   -3.1   -8.5   -1.0   +5.0   +6.7   +6.7   -1.7      .   -6.9  -12.0   +3.8   +3.5   +1.0   -2.3   -6.7   -8.3   -8.1      .      .      .      .      .      .
+    WBR             .      .      .      .      .  +24.7   -7.8   -7.7   -4.2   +6.7   -5.3  +24.2   +4.6  -18.5   +8.6      .      .   +4.2   +0.0   +2.9   +6.1   +2.6   +8.3   -2.8   +0.8      .      .      .      .      .      .      .
+    WBG         -16.4      .      .      .   -8.2  -14.0   -1.1   +1.7   +9.4  -12.1   -5.1   -7.5   -1.8   +4.9   +2.0   +8.1   +6.7   +1.5   -5.8   +3.2  +13.4   -8.1   -8.1   +0.8   +6.5   +7.9  -18.2  -16.3  +12.6   -0.4      .      .
+    WRG          +1.4      .   +3.9      .   +4.0   +6.6   -4.7   +2.2   -0.1   +2.1   +7.7   -4.8   +5.2   +0.4   -0.9   +4.2  +14.1   -1.7   -9.0  -15.1   +1.3   +9.3   -8.0  +11.1   -4.0  -15.2      .  -28.8   +4.8      .      .      .
+    UBR             .      .      .      .  -28.4   +3.9   +6.0  -15.6   +0.2   -8.6   -1.8   -3.6  -10.9   -7.2  -24.2   +6.8  +14.2  +12.2   +2.0  +19.2  +10.3   +4.6  +19.6   +7.7   +8.8  +22.4  +30.8  +58.1  +13.8  +51.5      .      .
+    UBG             .      .      .      .  -15.6   -8.6  -10.1   -9.7   +3.1  -10.7   -7.8   +5.7   -5.7   -9.9   -3.3  +12.5   +0.2  +13.8   +4.2  +14.8   +9.0   -4.1   +8.9   +3.9   +3.6  +25.6   -0.4  +29.0  +16.2  +12.0      .      .
+    URG             .      .      .      .      .   -8.6   +0.4   +4.1   -7.7  +14.9   +9.2  +16.1  -11.3   -6.4   -9.2      .      .   +6.1  +13.5   -1.3   +6.2   +4.0  +16.0      .   -3.3      .      .      .      .      .      .      .
+    BRG             .      .      .      .      .   -8.1  +11.2   -6.5   -5.0   +2.6   -3.5   -4.8   -3.4   +3.9   -3.7   -2.1      .   -5.2   -4.8   +0.4   +5.5   -2.1   +1.0   +3.4   -0.8      .      .      .      .      .      .      .
+    other mono      .      .      .      .      .   +8.3  -15.2   -3.2   -4.0   -7.1   -2.3  -15.5  +10.3  +15.8   -1.1      .      .  -28.2      .  -15.7   +2.5  +16.7   -6.0      .  -18.1      .      .      .      .      .      .      .
+    other 3+        .      .      .      .      .  -14.1   +4.3  -18.9   +3.1   +9.4   +5.4   +1.5   -7.5   -2.5  -22.4  +21.9      .  +23.5  +12.3  +12.0   -0.2  -11.4  +16.8   -4.7   +2.3      .      .      .      .      .      .      .
+    rps test Q 1984.1 df 651 p 1.2e-134
+OTJ done [211s]
+=== SOS: 107459 drafts, 582712 games (train 410839, val 86378, test 85495), 346 cards, 18 deck columns (affinity in) [18s]
+  opponent levels ['W', 'B', 'G', 'WB', 'WR', 'UR', 'UG', 'BG', 'WUR', 'WBR', 'WBG', 'UBG', 'URG', 'WURG', 'UBRG', 'WUBRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['WB', 'WR', 'UR', 'UG', 'BG', 'WUR', 'WBR', 'WBG', 'UBG', 'URG', 'WURG', 'UBRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.65596 (1e-05, 0.001) epochs [40, 39] [34s]
+  + opp        val 0.64653 (1e-05, 0.001) epochs [40, 38] [24s]
+  + opp x own  val 0.64631 (1e-05, 0.001) epochs [40, 38] [40s]
+  SC-GLL context test logloss: base 0.66482, dl 0.67026, opp 0.65436, oppmx 0.65407 [103s]
+  all                  champion -658.285  + opp -658.350  + opp x own -658.322  cached game FM -658.273
+      + opp - champion: -0.0652 ± 0.0229 (x1000 nats/game)
+      + opp x own - champion: -0.0372 ± 0.0362 (x1000 nats/game)
+      + opp x own - + opp: +0.0280 ± 0.0345 (x1000 nats/game)
+      champion - cached game FM: -0.0116 ± 0.0205 (x1000 nats/game)
+  experienced          champion -661.031  + opp -661.093  + opp x own -661.067  cached game FM -661.027
+      + opp - champion: -0.0623 ± 0.0298 (x1000 nats/game)
+      + opp x own - champion: -0.0359 ± 0.0432 (x1000 nats/game)
+      + opp x own - + opp: +0.0263 ± 0.0354 (x1000 nats/game)
+      champion - cached game FM: -0.0040 ± 0.0256 (x1000 nats/game)
+  match 1              champion -652.740  + opp -652.919  + opp x own -652.892  cached game FM -652.728
+      + opp - champion: -0.1789 ± 0.0920 (x1000 nats/game)
+      + opp x own - champion: -0.1514 ± 0.1047 (x1000 nats/game)
+      + opp x own - + opp: +0.0275 ± 0.0474 (x1000 nats/game)
+      champion - cached game FM: -0.0122 ± 0.0574 (x1000 nats/game)
+  main build           champion -656.594  + opp -656.647  + opp x own -656.627  cached game FM -656.580
+      + opp - champion: -0.0527 ± 0.0225 (x1000 nats/game)
+      + opp x own - champion: -0.0323 ± 0.0385 (x1000 nats/game)
+      + opp x own - + opp: +0.0204 ± 0.0298 (x1000 nats/game)
+      champion - cached game FM: -0.0144 ± 0.0240 (x1000 nats/game)
+  experienced dl-ctx   champion -662.244  + opp -662.305  + opp x own -662.287  cached game FM -662.265
+      + opp - champion: -0.0614 ± 0.0313 (x1000 nats/game)
+      + opp x own - champion: -0.0431 ± 0.0426 (x1000 nats/game)
+      + opp x own - + opp: +0.0183 ± 0.0301 (x1000 nats/game)
+      champion - cached game FM: +0.0213 ± 0.0296 (x1000 nats/game)
+  match 1 dl-ctx       champion -658.071  + opp -658.251  + opp x own -658.232  cached game FM -658.101
+      + opp - champion: -0.1795 ± 0.1009 (x1000 nats/game)
+      + opp x own - champion: -0.1612 ± 0.1120 (x1000 nats/game)
+      + opp x own - + opp: +0.0183 ± 0.0454 (x1000 nats/game)
+      champion - cached game FM: +0.0293 ± 0.0611 (x1000 nats/game)
+  experienced opp-ctx  champion -650.362  + opp -650.377  + opp x own -650.381  cached game FM -650.387
+      + opp - champion: -0.0144 ± 0.0428 (x1000 nats/game)
+      + opp x own - champion: -0.0192 ± 0.0504 (x1000 nats/game)
+      + opp x own - + opp: -0.0047 ± 0.0176 (x1000 nats/game)
+      champion - cached game FM: +0.0251 ± 0.0240 (x1000 nats/game)
+  match 1 opp-ctx      champion -642.602  + opp -642.725  + opp x own -642.725  cached game FM -642.611
+      + opp - champion: -0.1232 ± 0.1075 (x1000 nats/game)
+      + opp x own - champion: -0.1227 ± 0.1091 (x1000 nats/game)
+      + opp x own - + opp: +0.0005 ± 0.0375 (x1000 nats/game)
+      champion - cached game FM: +0.0091 ± 0.0497 (x1000 nats/game)
+  experienced oppmx-ctx champion -650.019  + opp -650.036  + opp x own -650.036  cached game FM -650.041
+      + opp - champion: -0.0167 ± 0.0397 (x1000 nats/game)
+      + opp x own - champion: -0.0176 ± 0.0490 (x1000 nats/game)
+      + opp x own - + opp: -0.0008 ± 0.0190 (x1000 nats/game)
+      champion - cached game FM: +0.0224 ± 0.0240 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -642.595  + opp -642.725  + opp x own -642.720  cached game FM -642.603
+      + opp - champion: -0.1293 ± 0.1050 (x1000 nats/game)
+      + opp x own - champion: -0.1249 ± 0.1079 (x1000 nats/game)
+      + opp x own - + opp: +0.0044 ± 0.0381 (x1000 nats/game)
+      champion - cached game FM: +0.0077 ± 0.0502 (x1000 nats/game)
+  champion       draft spearman 0.2879 (+0.0000)  sd 0.261  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2872 (-0.0006)  sd 0.261  card r 0.988 (pearson 0.992)  own-colour r 0.981
+  + opp x own    draft spearman 0.2865 (-0.0013)  sd 0.263  card r 0.988 (pearson 0.992)  own-colour r 0.991
+  cached game FM draft spearman 0.2862 (-0.0016)  sd 0.261
+  opponent strength (logit, + = harder; SE):
+    WUBRG      +0.567 ± 0.023  share 0.014  user WR 0.414  arm +0.575
+    UBRG       +0.396 ± 0.017  share 0.027  user WR 0.458  arm +0.389
+    WURG       +0.337 ± 0.022  share 0.016  user WR 0.470  arm +0.372
+    WB         +0.155 ± 0.007  share 0.159  user WR 0.524  arm +0.138
+    WR         +0.116 ± 0.007  share 0.153  user WR 0.531  arm +0.116
+    other 3+   +0.089 ± 0.018  share 0.024  user WR 0.533  arm +0.090
+    WUR        +0.078 ± 0.014  share 0.039  user WR 0.536  arm +0.086
+    URG        +0.054 ± 0.010  share 0.071  user WR 0.540  arm +0.065
+    UBG        +0.045 ± 0.012  share 0.056  user WR 0.546  arm +0.044
+    WBR        +0.034 ± 0.017  share 0.025  user WR 0.550  arm +0.040
+    BG         +0.000 ± 0.007  share 0.149  user WR 0.559  arm -0.014
+    WBG        -0.070 ± 0.018  share 0.024  user WR 0.576  arm -0.067
+    UR         -0.093 ± 0.008  share 0.129  user WR 0.576  arm -0.081
+    UG         -0.104 ± 0.010  share 0.078  user WR 0.584  arm -0.098
+    other pair -0.719 ± 0.037  share 0.007  user WR 0.725  arm -0.758
+    G          -1.190 ± 0.049  share 0.005  user WR 0.806  arm -1.139
+    W          -1.234 ± 0.043  share 0.006  user WR 0.810  arm -1.211
+    other mono -1.739 ± 0.043  share 0.009  user WR 0.876  arm -1.727
+    B          -2.014 ± 0.062  share 0.005  user WR 0.902  arm -2.029
+    unknown    -3.090 ± 0.112  share 0.004  user WR 0.966  arm -2.853
+    heterogeneity Q 7817.6 df 19 p 0;  by wins before: 0:-0.010 1:-0.004 2:+0.003 3:+0.005 4:+0.006 5:+0.011 6:+0.015
+  matchups (own row x opponent col, centred logit x100):
+                    W      B      G     WB     WR     UR     UG     BG    WUR    WBR    WBG    UBG    URG   WURG   UBRG  WUBRG other  other  other  unknow
+    WB          +28.6  +18.5  +12.9   -1.2   -6.6   +1.9  +13.9   -4.3   -2.9   -2.5   +0.1   -0.3   +2.5   -4.6   -8.9  -12.4  +21.2  +26.5   +2.6  +31.8
+    WR          +30.8  +29.0  +20.7   +8.9   +0.7   +0.7   -4.0   +4.6  -10.7   -2.0   +1.5   -8.0  -11.1  -21.2   -4.4  -27.1  +15.2   +4.1   -9.9   -7.8
+    UR          -24.5   -8.5  -30.6   +0.3   +3.3   -1.0   -0.4   -5.6   +2.2   +0.7   -5.0   +6.7   +1.1   +8.9   +5.2  +23.3   -4.0  -23.7   +1.4   +3.5
+    UG          -50.2      .      .   -5.7   +3.7   -8.0   -3.8   +4.3   +7.6   +9.0   +2.6   +3.3   +5.9  +27.0   -1.2  +17.8  -18.4  +18.3   +6.7      .
+    BG          +47.5   +2.8  +30.8   +0.9   -4.3   +5.9   +6.3   +2.6   -2.8   -6.9   -9.5   -6.7   -2.6  -22.4   -7.4  -14.9  +10.7   +7.2   -3.5   +2.5
+    WUR             .      .      .   -4.9   +2.6   +1.4   -8.3   +0.4   +1.1  +15.0  +25.0   -3.4   +1.3  +24.4   +8.8  +20.5      .      .   -8.2      .
+    WBR             .      .      .  -10.0   +7.0  +10.3   -6.5   -4.7   -3.5      .      .   +5.5   -0.8      .      .      .      .      .      .      .
+    WBG             .      .      .  -13.4   -3.4   +9.5   -2.2  +10.6      .      .      .   +5.1   +3.6      .      .      .      .      .      .      .
+    UBG             .      .      .   -6.5   +4.2   -4.4   -5.4   +1.6   -3.4   -9.0  +16.8   +3.7  +12.7  +36.1  +16.8   +8.2      .      .   +6.9      .
+    URG             .      .      .   -6.2   +0.6   -2.9  -10.1   -0.2  +20.1   +4.9   +0.0   +9.7   +6.3   +9.5  +10.5  +29.6  -27.8      .  +11.8      .
+    WURG            .      .      .   +2.7  +15.2  -29.5      .   +1.3      .      .      .      .      .      .      .      .      .      .      .      .
+    UBRG            .      .      .   -5.4  +13.9   +1.5  -21.6   -3.2      .      .      .      .  +24.6      .      .      .      .      .      .      .
+    other pair      .      .      .   +5.0   -2.4      .      .  -10.8      .      .      .      .      .      .      .      .      .      .      .      .
+    other 3+        .      .      .   -2.5   -2.9   -5.2  -16.1   +0.6  +21.0      .      .  +10.3  +16.1      .      .      .      .      .      .      .
+    rps test Q 660.2 df 247 p 2.1e-39
+SOS done [127s]
+=== TDM: 101323 drafts, 552428 games (train 389670, val 82425, test 80333), 286 cards, 18 deck columns (affinity in) [15s]
+  opponent levels ['W', 'G', 'WB', 'WR', 'WG', 'UR', 'UG', 'BR', 'BG', 'WUR', 'WBR', 'WBG', 'UBG', 'URG', 'WUBR', 'WUBG', 'WURG', 'WBRG', 'UBRG', 'WUBRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  own levels ['WB', 'WR', 'UR', 'UG', 'BG', 'WUR', 'WBR', 'WBG', 'UBG', 'URG', 'WUBR', 'WUBG', 'WURG', 'WBRG', 'UBRG', 'WUBRG', 'other mono', 'other pair', 'other 3+', 'unknown']
+  champion     val 0.65852 (1e-05, 0.001) epochs [35, 34] [24s]
+  + opp        val 0.64845 (1e-05, 0.001) epochs [37, 34] [19s]
+  + opp x own  val 0.64798 (1e-05, 0.001) epochs [37, 34] [30s]
+  SC-GLL context test logloss: base 0.66237, dl 0.66768, opp 0.65245, oppmx 0.65224 [78s]
+  all                  champion -657.001  + opp -657.051  + opp x own -657.048  cached game FM -657.005
+      + opp - champion: -0.0503 ± 0.0269 (x1000 nats/game)
+      + opp x own - champion: -0.0467 ± 0.0217 (x1000 nats/game)
+      + opp x own - + opp: +0.0036 ± 0.0105 (x1000 nats/game)
+      champion - cached game FM: +0.0045 ± 0.0117 (x1000 nats/game)
+  experienced          champion -659.083  + opp -659.151  + opp x own -659.153  cached game FM -659.093
+      + opp - champion: -0.0680 ± 0.0284 (x1000 nats/game)
+      + opp x own - champion: -0.0702 ± 0.0261 (x1000 nats/game)
+      + opp x own - + opp: -0.0022 ± 0.0134 (x1000 nats/game)
+      champion - cached game FM: +0.0105 ± 0.0118 (x1000 nats/game)
+  match 1              champion -660.513  + opp -660.545  + opp x own -660.538  cached game FM -660.542
+      + opp - champion: -0.0321 ± 0.0659 (x1000 nats/game)
+      + opp x own - champion: -0.0250 ± 0.0680 (x1000 nats/game)
+      + opp x own - + opp: +0.0071 ± 0.0205 (x1000 nats/game)
+      champion - cached game FM: +0.0294 ± 0.0466 (x1000 nats/game)
+  main build           champion -655.020  + opp -655.062  + opp x own -655.059  cached game FM -655.029
+      + opp - champion: -0.0415 ± 0.0253 (x1000 nats/game)
+      + opp x own - champion: -0.0391 ± 0.0247 (x1000 nats/game)
+      + opp x own - + opp: +0.0024 ± 0.0117 (x1000 nats/game)
+      champion - cached game FM: +0.0088 ± 0.0118 (x1000 nats/game)
+  experienced dl-ctx   champion -660.251  + opp -660.315  + opp x own -660.317  cached game FM -660.270
+      + opp - champion: -0.0645 ± 0.0335 (x1000 nats/game)
+      + opp x own - champion: -0.0657 ± 0.0277 (x1000 nats/game)
+      + opp x own - + opp: -0.0012 ± 0.0114 (x1000 nats/game)
+      champion - cached game FM: +0.0193 ± 0.0192 (x1000 nats/game)
+  match 1 dl-ctx       champion -663.687  + opp -663.720  + opp x own -663.712  cached game FM -663.737
+      + opp - champion: -0.0328 ± 0.0843 (x1000 nats/game)
+      + opp x own - champion: -0.0255 ± 0.0808 (x1000 nats/game)
+      + opp x own - + opp: +0.0072 ± 0.0214 (x1000 nats/game)
+      champion - cached game FM: +0.0505 ± 0.0453 (x1000 nats/game)
+  experienced opp-ctx  champion -649.356  + opp -649.364  + opp x own -649.370  cached game FM -649.364
+      + opp - champion: -0.0079 ± 0.0569 (x1000 nats/game)
+      + opp x own - champion: -0.0138 ± 0.0459 (x1000 nats/game)
+      + opp x own - + opp: -0.0059 ± 0.0142 (x1000 nats/game)
+      champion - cached game FM: +0.0084 ± 0.0239 (x1000 nats/game)
+  match 1 opp-ctx      champion -651.425  + opp -651.393  + opp x own -651.391  cached game FM -651.451
+      + opp - champion: +0.0326 ± 0.0784 (x1000 nats/game)
+      + opp x own - champion: +0.0340 ± 0.0703 (x1000 nats/game)
+      + opp x own - + opp: +0.0015 ± 0.0226 (x1000 nats/game)
+      champion - cached game FM: +0.0250 ± 0.0379 (x1000 nats/game)
+  experienced oppmx-ctx champion -649.110  + opp -649.114  + opp x own -649.119  cached game FM -649.118
+      + opp - champion: -0.0044 ± 0.0590 (x1000 nats/game)
+      + opp x own - champion: -0.0097 ± 0.0478 (x1000 nats/game)
+      + opp x own - + opp: -0.0052 ± 0.0144 (x1000 nats/game)
+      champion - cached game FM: +0.0081 ± 0.0252 (x1000 nats/game)
+  match 1 oppmx-ctx    champion -650.679  + opp -650.644  + opp x own -650.641  cached game FM -650.704
+      + opp - champion: +0.0359 ± 0.0810 (x1000 nats/game)
+      + opp x own - champion: +0.0382 ± 0.0715 (x1000 nats/game)
+      + opp x own - + opp: +0.0023 ± 0.0233 (x1000 nats/game)
+      champion - cached game FM: +0.0241 ± 0.0374 (x1000 nats/game)
+  champion       draft spearman 0.2546 (+0.0000)  sd 0.255  card r 1.000 (pearson 1.000)  own-colour r 1.000
+  + opp          draft spearman 0.2541 (-0.0005)  sd 0.256  card r 0.992 (pearson 0.996)  own-colour r 0.991
+  + opp x own    draft spearman 0.2542 (-0.0004)  sd 0.256  card r 0.992 (pearson 0.996)  own-colour r 0.991
+  cached game FM draft spearman 0.2540 (-0.0006)  sd 0.253
+  opponent strength (logit, + = harder; SE):
+    WUBRG      +0.266 ± 0.010  share 0.072  user WR 0.479  arm +0.249
+    WBR        +0.197 ± 0.007  share 0.157  user WR 0.510  arm +0.193
+    UBRG       +0.172 ± 0.013  share 0.046  user WR 0.505  arm +0.178
+    WURG       +0.165 ± 0.014  share 0.040  user WR 0.506  arm +0.171
+    WUBR       +0.116 ± 0.023  share 0.015  user WR 0.523  arm +0.136
+    WR         +0.103 ± 0.011  share 0.060  user WR 0.533  arm +0.076
+    WBG        +0.086 ± 0.008  share 0.112  user WR 0.536  arm +0.077
+    URG        +0.064 ± 0.008  share 0.110  user WR 0.536  arm +0.089
+    WUR        +0.059 ± 0.009  share 0.105  user WR 0.538  arm +0.074
+    WUBG       +0.051 ± 0.016  share 0.029  user WR 0.535  arm +0.050
+    WBRG       +0.008 ± 0.022  share 0.016  user WR 0.549  arm +0.034
+    UBG        -0.011 ± 0.009  share 0.101  user WR 0.555  arm -0.013
+    BG         -0.235 ± 0.017  share 0.026  user WR 0.616  arm -0.275
+    WB         -0.328 ± 0.017  share 0.027  user WR 0.637  arm -0.334
+    WG         -0.446 ± 0.041  share 0.005  user WR 0.666  arm -0.445
+    UG         -0.568 ± 0.022  share 0.018  user WR 0.686  arm -0.595
+    other 3+   -0.626 ± 0.037  share 0.007  user WR 0.697  arm -0.562
+    UR         -0.680 ± 0.028  share 0.012  user WR 0.709  arm -0.672
+    other pair -0.775 ± 0.030  share 0.010  user WR 0.731  arm -0.808
+    BR         -0.832 ± 0.043  share 0.005  user WR 0.742  arm -0.838
+    W          -1.004 ± 0.041  share 0.007  user WR 0.776  arm -1.038
+    G          -1.228 ± 0.049  share 0.005  user WR 0.814  arm -1.240
+    other mono -1.653 ± 0.037  share 0.012  user WR 0.870  arm -1.684
+    unknown    -2.944 ± 0.116  share 0.004  user WR 0.961  arm -2.620
+    heterogeneity Q 9226.5 df 23 p 0;  by wins before: 0:-0.007 1:-0.003 2:+0.003 3:+0.004 4:+0.005 5:+0.005 6:+0.011
+  matchups (own row x opponent col, centred logit x100):
+                    W      G     WB     WR     WG     UR     UG     BR     BG    WUR    WBR    WBG    UBG    URG   WUBR   WUBG   WURG   WBRG   UBRG  WUBRG other  other  other  unknow
+    WB              .      .  +33.2  +20.4      .      .      .      .   +0.1   -6.3   +0.9   -4.6   -5.7   -2.0      .   -3.0   -6.7      .   -9.4   -4.3      .      .      .      .
+    WR          +23.7  +30.6  +10.9  +15.9      .  +34.0  +37.6  +32.1  +15.1   -0.1   -8.9  -16.3   +1.0   +8.5   -9.5   -8.7  -13.1  -12.0   -8.0  -25.8  +39.2   +9.5  +10.0      .
+    UR              .      .      .   +0.3      .      .      .      .      .   -4.8   -0.0   -0.7  +12.9   +1.5      .   -4.9  -15.1      .  +11.2  +11.2      .      .      .      .
+    UG              .      .   +3.6  -26.7      .      .  -18.2      .  -14.1   +3.4   -6.9   +1.4   +1.2   +1.3  -18.0   +7.1  +18.6   -2.6   +7.7  +13.9      .      .      .      .
+    BG              .      .  +13.8  +20.6      .      .      .      .   +7.2   +1.8   +5.5   -6.7   -7.9   -3.8      .   +5.1  -10.5      .   -1.4  -11.7      .      .      .      .
+    WUR         -14.3   +4.2   -3.4   +1.1   -9.6  -16.6   -3.6   +6.2   -0.3   -1.3   +0.1   +2.5   +3.4   -0.5  +12.5   +2.9   -4.1   +9.3   +1.3   -4.5   +6.8   -4.9   -0.5      .
+    WBR         +25.7  +11.1  +13.0  +12.3  +15.0  +12.3  +22.1  +21.9  +13.9   +0.6   -1.2   -8.0   +0.8   -0.6   -7.4   -6.2   -3.7   -9.7   -6.7  -11.4  +23.2  +16.6  +16.4  -54.4
+    WBG             .      .   -0.1   +9.5      .  +17.9  +10.1      .   +7.1   -1.2   +6.5   -0.6   -2.5   -2.5  -15.9   -6.0   -6.9  -10.4   -7.4   -8.7   +8.0  +14.2   +7.4      .
+    UBG         -13.6   -1.1   -5.4   -4.1   +6.2   -9.2  -22.7   +1.9   +0.9   +0.1   +3.6   +5.3   -3.7   -1.2  +14.7   -3.4   +4.3   -4.5   +5.2  +10.4  -24.7  -11.7   -6.3      .
+    URG         -20.0  -23.0   +0.1   -9.4   -6.7   -0.5   -4.3   -5.6   -8.1   +2.2   -2.4   +3.3   +1.5   -1.2   +6.4   +2.7   +4.3   +5.1   +1.7   +9.6  -17.7   +1.5   +2.3  -28.8
+    WUBR            .      .      .      .      .      .      .      .      .  +14.8  -12.7  +10.2   -8.6   +3.2      .      .      .      .      .      .      .      .      .      .
+    WUBG            .      .      .   -9.5      .      .      .      .      .   -8.9   +4.5   +9.5   +9.2   -0.3      .  +16.1   +9.9      .   +1.2   +6.0      .      .      .      .
+    WURG            .      .  -18.5  -21.5      .      .      .      .  -37.4   +7.1   +1.9   +3.5   +3.6   +4.3      .   +4.2   +4.1      .   +8.0  +15.4      .      .      .      .
+    WBRG            .      .      .      .      .      .      .      .      .   -7.7   +4.5  +10.5      .  -13.6      .      .      .      .      .      .      .      .      .      .
+    UBRG            .      .  -10.8   -9.6      .      .      .      .  -15.1   -7.8   +2.8   +9.8   -3.7   +3.9   -0.2  +16.2  +17.2  +11.3   +6.7   +5.4      .      .      .      .
+    WUBRG           .      .  -24.4  -15.1      .      .      .      .  -23.7   +0.4   -2.8   +8.6   -5.3   +2.0      .  +18.3  +13.5      .  +14.0  +22.1      .      .      .      .
+    other pair      .      .      .   -3.1      .      .      .      .      .   +1.9   +8.4   -0.0  -14.6   +1.4      .      .      .      .  -10.4   -3.4      .      .      .      .
+    other 3+        .      .      .      .      .      .      .      .      .      .  +11.7  +13.6      .  -17.7      .      .      .      .      .      .      .      .      .      .
+    rps test Q 780.6 df 391 p 3.5e-28
+TDM done [98s]
+game_fm_opp/results.json: sets with results ['MSH', 'BLB', 'DFT', 'DSK', 'EOE', 'FDN', 'FIN', 'LCI', 'MKM', 'OTJ', 'SOS', 'TDM']  (subset 'experienced')
+
++ opp - champion
+  MSH    -0.07518 ± 0.04620  z -1.63
+  BLB    -0.07324 ± 0.03491  z -2.10
+  DFT    -0.05787 ± 0.03517  z -1.65
+  DSK    -0.07423 ± 0.03220  z -2.30
+  EOE    +0.00698 ± 0.01904  z +0.37
+  FDN    -0.01740 ± 0.02332  z -0.75
+  FIN    -0.00442 ± 0.01385  z -0.32
+  LCI    -0.01077 ± 0.02064  z -0.52
+  MKM    -0.03269 ± 0.01493  z -2.19
+  OTJ    -0.06762 ± 0.01212  z -5.58
+  SOS    -0.06228 ± 0.02984  z -2.09
+  TDM    -0.06803 ± 0.02837  z -2.40
+  fixed effect -0.03589 ± 0.00588
+  random effects (DL + HKSJ) -0.03815, 95% CI [-0.05959, -0.01672], p = 0.0024; tau = 0.02370, I2 = 56%, Q p = 0.009
+  95% prediction interval for a new set [-0.09525, +0.01895]
+  sets better 1/12 (sign test one-sided p = 1.000), Wilcoxon p = 0.001, significantly worse on 6
+  adopt: False
+    FAIL RE mean -0.03815 > 0 with p = 0.0024 < 0.05
+    FAIL 1/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    FAIL 6 sets significantly worse <= 0
+
++ opp x own - + opp
+  MSH    +0.05284 ± 0.05128  z +1.03
+  BLB    +0.00177 ± 0.00471  z +0.38
+  DFT    -0.01216 ± 0.01273  z -0.96
+  DSK    +0.00042 ± 0.00070  z +0.61
+  EOE    +0.00281 ± 0.00395  z +0.71
+  FDN    +0.00022 ± 0.00340  z +0.06
+  FIN    +0.00049 ± 0.00217  z +0.23
+  LCI    +0.00212 ± 0.00464  z +0.46
+  MKM    -0.00870 ± 0.00351  z -2.48
+  OTJ    +0.00832 ± 0.00398  z +2.09
+  SOS    +0.02633 ± 0.03538  z +0.74
+  TDM    -0.00215 ± 0.01337  z -0.16
+  fixed effect +0.00042 ± 0.00061
+  random effects (DL + HKSJ) +0.00045, 95% CI [-0.00214, +0.00303], p = 0.7114; tau = 0.00164, I2 = 21%, Q p = 0.241
+  95% prediction interval for a new set [-0.00405, +0.00495]
+  sets better 9/12 (sign test one-sided p = 0.073), Wilcoxon p = 0.301, significantly worse on 1
+  adopt: False
+    FAIL RE mean +0.00045 > 0 with p = 0.7114 < 0.05
+    PASS 9/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    FAIL 1 sets significantly worse <= 0
+
++ opp x own - champion
+  MSH    -0.02234 ± 0.05765  z -0.39
+  BLB    -0.07147 ± 0.03251  z -2.20
+  DFT    -0.07003 ± 0.04399  z -1.59
+  DSK    -0.07380 ± 0.03194  z -2.31
+  EOE    +0.00979 ± 0.01713  z +0.57
+  FDN    -0.01719 ± 0.02247  z -0.76
+  FIN    -0.00393 ± 0.01385  z -0.28
+  LCI    -0.00866 ± 0.02105  z -0.41
+  MKM    -0.04139 ± 0.01416  z -2.92
+  OTJ    -0.05930 ± 0.01305  z -4.54
+  SOS    -0.03595 ± 0.04320  z -0.83
+  TDM    -0.07018 ± 0.02609  z -2.69
+  fixed effect -0.03163 ± 0.00593
+  random effects (DL + HKSJ) -0.03386, 95% CI [-0.05462, -0.01309], p = 0.0043; tau = 0.02179, I2 = 51%, Q p = 0.020
+  95% prediction interval for a new set [-0.08675, +0.01904]
+  sets better 1/12 (sign test one-sided p = 1.000), Wilcoxon p = 0.002, significantly worse on 5
+  adopt: False
+    FAIL RE mean -0.03386 > 0 with p = 0.0043 < 0.05
+    FAIL 1/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    FAIL 5 sets significantly worse <= 0
+
+champion - cached game FM
+  MSH    -0.03058 ± 0.09013  z -0.34
+  BLB    -0.00071 ± 0.01476  z -0.05
+  DFT    +0.00806 ± 0.02113  z +0.38
+  DSK    +0.00252 ± 0.01130  z +0.22
+  EOE    -0.00067 ± 0.01807  z -0.04
+  FDN    -0.00069 ± 0.02971  z -0.02
+  FIN    -0.04543 ± 0.03809  z -1.19
+  LCI    +0.01288 ± 0.02709  z +0.48
+  MKM    -0.07147 ± 0.06914  z -1.03
+  OTJ    -0.00422 ± 0.01233  z -0.34
+  SOS    -0.00398 ± 0.02557  z -0.16
+  TDM    +0.01050 ± 0.01182  z +0.89
+  fixed effect +0.00111 ± 0.00523
+  random effects (DL + HKSJ) +0.00111, 95% CI [-0.01041, +0.01263], p = 0.8360; tau = 0.00000, I2 = 0%, Q p = 0.972
+  95% prediction interval for a new set [-0.01055, +0.01277]
+  sets better 4/12 (sign test one-sided p = 0.927), Wilcoxon p = 0.424, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.00111 > 0 with p = 0.8360 < 0.05
+    FAIL 4/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+game_fm_opp/results.json: sets with results ['MSH', 'BLB', 'DFT', 'DSK', 'EOE', 'FDN', 'FIN', 'LCI', 'MKM', 'OTJ', 'SOS', 'TDM']  (subset 'experienced opp-ctx')
+
++ opp - champion
+  MSH    -0.06993 ± 0.04628  z -1.51
+  BLB    -0.03853 ± 0.02800  z -1.38
+  DFT    -0.01948 ± 0.02920  z -0.67
+  DSK    -0.04752 ± 0.03084  z -1.54
+  EOE    +0.02284 ± 0.02006  z +1.14
+  FDN    +0.00108 ± 0.02531  z +0.04
+  FIN    +0.01161 ± 0.01353  z +0.86
+  LCI    +0.03333 ± 0.02085  z +1.60
+  MKM    -0.00538 ± 0.01583  z -0.34
+  OTJ    -0.00643 ± 0.01355  z -0.47
+  SOS    -0.01441 ± 0.04277  z -0.34
+  TDM    -0.00790 ± 0.05695  z -0.14
+  fixed effect -0.00088 ± 0.00619
+  random effects (DL + HKSJ) -0.00140, 95% CI [-0.01618, +0.01337], p = 0.8383; tau = 0.00680, I2 = 9%, Q p = 0.361
+  95% prediction interval for a new set [-0.02270, +0.01989]
+  sets better 4/12 (sign test one-sided p = 0.927), Wilcoxon p = 0.233, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00140 > 0 with p = 0.8383 < 0.05
+    FAIL 4/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
++ opp x own - + opp
+  MSH    +0.06896 ± 0.06475  z +1.07
+  BLB    +0.00017 ± 0.00483  z +0.04
+  DFT    -0.01336 ± 0.01234  z -1.08
+  DSK    +0.00056 ± 0.00073  z +0.77
+  EOE    +0.00280 ± 0.00399  z +0.70
+  FDN    -0.00100 ± 0.00343  z -0.29
+  FIN    +0.00063 ± 0.00232  z +0.27
+  LCI    +0.00334 ± 0.00445  z +0.75
+  MKM    -0.00947 ± 0.00350  z -2.71
+  OTJ    +0.00221 ± 0.00409  z +0.54
+  SOS    -0.00475 ± 0.01761  z -0.27
+  TDM    -0.00589 ± 0.01425  z -0.41
+  fixed effect +0.00028 ± 0.00064
+  random effects (DL + HKSJ) +0.00005, 95% CI [-0.00188, +0.00199], p = 0.9525; tau = 0.00088, I2 = 7%, Q p = 0.380
+  95% prediction interval for a new set [-0.00272, +0.00283]
+  sets better 7/12 (sign test one-sided p = 0.387), Wilcoxon p = 0.850, significantly worse on 1
+  adopt: False
+    FAIL RE mean +0.00005 > 0 with p = 0.9525 < 0.05
+    FAIL 7/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    FAIL 1 sets significantly worse <= 0
+
++ opp x own - champion
+  MSH    -0.00097 ± 0.05386  z -0.02
+  BLB    -0.03836 ± 0.02507  z -1.53
+  DFT    -0.03284 ± 0.03691  z -0.89
+  DSK    -0.04696 ± 0.03051  z -1.54
+  EOE    +0.02564 ± 0.01819  z +1.41
+  FDN    +0.00008 ± 0.02459  z +0.00
+  FIN    +0.01223 ± 0.01367  z +0.90
+  LCI    +0.03667 ± 0.02134  z +1.72
+  MKM    -0.01485 ± 0.01585  z -0.94
+  OTJ    -0.00422 ± 0.01418  z -0.30
+  SOS    -0.01916 ± 0.05041  z -0.38
+  TDM    -0.01379 ± 0.04593  z -0.30
+  fixed effect -0.00025 ± 0.00623
+  random effects (DL + HKSJ) -0.00087, 95% CI [-0.01599, +0.01426], p = 0.9021; tau = 0.00805, I2 = 12%, Q p = 0.331
+  95% prediction interval for a new set [-0.02445, +0.02272]
+  sets better 4/12 (sign test one-sided p = 0.927), Wilcoxon p = 0.233, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00087 > 0 with p = 0.9021 < 0.05
+    FAIL 4/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+champion - cached game FM
+  MSH    -0.03468 ± 0.09481  z -0.37
+  BLB    -0.00543 ± 0.01467  z -0.37
+  DFT    +0.01623 ± 0.02154  z +0.75
+  DSK    -0.00211 ± 0.01110  z -0.19
+  EOE    -0.00320 ± 0.01963  z -0.16
+  FDN    +0.00067 ± 0.02953  z +0.02
+  FIN    -0.06060 ± 0.04742  z -1.28
+  LCI    +0.01398 ± 0.02868  z +0.49
+  MKM    -0.09288 ± 0.08910  z -1.04
+  OTJ    -0.00953 ± 0.01210  z -0.79
+  SOS    +0.02510 ± 0.02398  z +1.05
+  TDM    +0.00842 ± 0.02390  z +0.35
+  fixed effect -0.00153 ± 0.00569
+  random effects (DL + HKSJ) -0.00153, 95% CI [-0.01405, +0.01100], p = 0.7936; tau = 0.00000, I2 = 0%, Q p = 0.897
+  95% prediction interval for a new set [-0.01421, +0.01115]
+  sets better 5/12 (sign test one-sided p = 0.806), Wilcoxon p = 0.519, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00153 > 0 with p = 0.7936 < 0.05
+    FAIL 5/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+game_fm_opp/results.json: sets with results ['MSH', 'BLB', 'DFT', 'DSK', 'EOE', 'FDN', 'FIN', 'LCI', 'MKM', 'OTJ', 'SOS', 'TDM']  (subset 'experienced oppmx-ctx')
+
++ opp - champion
+  MSH    -0.07058 ± 0.04628  z -1.52
+  BLB    -0.04023 ± 0.02814  z -1.43
+  DFT    -0.02420 ± 0.02993  z -0.81
+  DSK    -0.04777 ± 0.03090  z -1.55
+  EOE    +0.02255 ± 0.02018  z +1.12
+  FDN    -0.00235 ± 0.02575  z -0.09
+  FIN    +0.01192 ± 0.01355  z +0.88
+  LCI    +0.03295 ± 0.02058  z +1.60
+  MKM    -0.00869 ± 0.01537  z -0.57
+  OTJ    -0.02366 ± 0.01287  z -1.84
+  SOS    -0.01675 ± 0.03968  z -0.42
+  TDM    -0.00442 ± 0.05902  z -0.07
+  fixed effect -0.00587 ± 0.00610
+  random effects (DL + HKSJ) -0.00675, 95% CI [-0.02365, +0.01015], p = 0.3983; tau = 0.01312, I2 = 26%, Q p = 0.184
+  95% prediction interval for a new set [-0.04061, +0.02712]
+  sets better 3/12 (sign test one-sided p = 0.981), Wilcoxon p = 0.129, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00675 > 0 with p = 0.3983 < 0.05
+    FAIL 3/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
++ opp x own - + opp
+  MSH    +0.06944 ± 0.06544  z +1.06
+  BLB    +0.00073 ± 0.00489  z +0.15
+  DFT    -0.01271 ± 0.01199  z -1.06
+  DSK    +0.00059 ± 0.00072  z +0.81
+  EOE    +0.00280 ± 0.00398  z +0.70
+  FDN    +0.00022 ± 0.00349  z +0.06
+  FIN    +0.00069 ± 0.00231  z +0.30
+  LCI    +0.00430 ± 0.00447  z +0.96
+  MKM    -0.00905 ± 0.00344  z -2.63
+  OTJ    +0.00593 ± 0.00407  z +1.46
+  SOS    -0.00085 ± 0.01896  z -0.04
+  TDM    -0.00523 ± 0.01440  z -0.36
+  fixed effect +0.00047 ± 0.00063
+  random effects (DL + HKSJ) +0.00033, 95% CI [-0.00208, +0.00274], p = 0.7710; tau = 0.00143, I2 = 16%, Q p = 0.291
+  95% prediction interval for a new set [-0.00368, +0.00433]
+  sets better 8/12 (sign test one-sided p = 0.194), Wilcoxon p = 0.733, significantly worse on 1
+  adopt: False
+    FAIL RE mean +0.00033 > 0 with p = 0.7710 < 0.05
+    PASS 8/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    FAIL 1 sets significantly worse <= 0
+
++ opp x own - champion
+  MSH    -0.00114 ± 0.05397  z -0.02
+  BLB    -0.03950 ± 0.02511  z -1.57
+  DFT    -0.03691 ± 0.03747  z -0.99
+  DSK    -0.04718 ± 0.03058  z -1.54
+  EOE    +0.02535 ± 0.01828  z +1.39
+  FDN    -0.00213 ± 0.02495  z -0.09
+  FIN    +0.01260 ± 0.01366  z +0.92
+  LCI    +0.03725 ± 0.02096  z +1.78
+  MKM    -0.01774 ± 0.01521  z -1.17
+  OTJ    -0.01773 ± 0.01363  z -1.30
+  SOS    -0.01760 ± 0.04899  z -0.36
+  TDM    -0.00966 ± 0.04783  z -0.20
+  fixed effect -0.00373 ± 0.00614
+  random effects (DL + HKSJ) -0.00448, 95% CI [-0.02122, +0.01225], p = 0.5674; tau = 0.01260, I2 = 25%, Q p = 0.201
+  95% prediction interval for a new set [-0.03727, +0.02830]
+  sets better 3/12 (sign test one-sided p = 0.981), Wilcoxon p = 0.204, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00448 > 0 with p = 0.5674 < 0.05
+    FAIL 3/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+champion - cached game FM
+  MSH    -0.03419 ± 0.09494  z -0.36
+  BLB    -0.00632 ± 0.01458  z -0.43
+  DFT    +0.01473 ± 0.02161  z +0.68
+  DSK    -0.00184 ± 0.01108  z -0.17
+  EOE    -0.00396 ± 0.01994  z -0.20
+  FDN    +0.00098 ± 0.02965  z +0.03
+  FIN    -0.06096 ± 0.04762  z -1.28
+  LCI    +0.01638 ± 0.03098  z +0.53
+  MKM    -0.08711 ± 0.08383  z -1.04
+  OTJ    -0.00782 ± 0.01176  z -0.66
+  SOS    +0.02241 ± 0.02395  z +0.94
+  TDM    +0.00809 ± 0.02517  z +0.32
+  fixed effect -0.00170 ± 0.00569
+  random effects (DL + HKSJ) -0.00170, 95% CI [-0.01422, +0.01081], p = 0.7700; tau = 0.00000, I2 = 0%, Q p = 0.922
+  95% prediction interval for a new set [-0.01437, +0.01097]
+  sets better 5/12 (sign test one-sided p = 0.806), Wilcoxon p = 0.569, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00170 > 0 with p = 0.7700 < 0.05
+    FAIL 5/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+ALLDONE

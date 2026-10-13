@@ -1,0 +1,312 @@
+=== MSH: 68609 drafts, 377376 games, 83430 builds; T2 deck columns vs draft_inputs max |diff| 7.87e-01 [1s]
+  lgbm seed 0: 720 trees [10s]
+  lgbm seed 1: 1032 trees [13s]
+  lgbm seed 2: 761 trees [10s]
+  champion                     b -0.307 ± 0.968 (raw units)   b per within-sd -0.0091 ± 0.0287   within/overall sd 0.12   LR 0.2
+  split mull                   b -0.136 ± 0.956 (raw units)   b per within-sd -0.0041 ± 0.0287   within/overall sd 0.12   LR 0.0
+  - own mull                   b -0.471 ± 0.970 (raw units)   b per within-sd -0.0139 ± 0.0287   within/overall sd 0.12   LR 0.4
+  refit                        b -0.105 ± 1.012 (raw units)   b per within-sd -0.0030 ± 0.0283   within/overall sd 0.12   LR 0.0
+  LightGBM                     b -0.887 ± 0.815 (raw units)   b per within-sd -0.0313 ± 0.0288   within/overall sd 0.13   LR 1.7
+      champion - LightGBM: +0.0222 ± 0.0247 (b per within-sd)
+      split mull - champion: +0.0050 ± 0.0067 (b per within-sd)
+      - own mull - champion: -0.0048 ± 0.0036 (b per within-sd)
+      refit - champion: +0.0062 ± 0.0067 (b per within-sd)
+      - own mull - split mull: -0.0099 ± 0.0075 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b -0.170 ± 0.687 (raw units)   b per within-sd -0.0050 ± 0.0204   within/overall sd 0.12   LR 0.1
+  split mull                   b -0.011 ± 0.675 (raw units)   b per within-sd -0.0003 ± 0.0203   within/overall sd 0.12   LR 0.0
+  - own mull                   b -0.252 ± 0.687 (raw units)   b per within-sd -0.0074 ± 0.0204   within/overall sd 0.12   LR 0.2
+  refit                        b -0.131 ± 0.724 (raw units)   b per within-sd -0.0037 ± 0.0202   within/overall sd 0.12   LR 0.0
+  LightGBM                     b -0.389 ± 0.598 (raw units)   b per within-sd -0.0138 ± 0.0212   within/overall sd 0.13   LR 0.5
+      champion - LightGBM: +0.0088 ± 0.0178 (b per within-sd)
+      split mull - champion: +0.0047 ± 0.0051 (b per within-sd)
+      - own mull - champion: -0.0024 ± 0.0026 (b per within-sd)
+      refit - champion: +0.0014 ± 0.0062 (b per within-sd)
+      - own mull - split mull: -0.0071 ± 0.0061 (b per within-sd)
+MSH done [56s]
+=== EOE: 104377 drafts, 563418 games, 130002 builds; T2 deck columns vs draft_inputs max |diff| 9.18e-01 [2s]
+  lgbm seed 0: 1107 trees [19s]
+  lgbm seed 1: 1006 trees [18s]
+  lgbm seed 2: 959 trees [17s]
+  champion                     b +1.445 ± 0.840 (raw units)   b per within-sd +0.0406 ± 0.0236   within/overall sd 0.13   LR 4.5
+  split mull                   b +1.529 ± 0.843 (raw units)   b per within-sd +0.0429 ± 0.0236   within/overall sd 0.13   LR 5.0
+  - own mull                   b +1.704 ± 0.851 (raw units)   b per within-sd +0.0474 ± 0.0236   within/overall sd 0.13   LR 6.1
+  refit                        b +1.515 ± 0.870 (raw units)   b per within-sd +0.0412 ± 0.0237   within/overall sd 0.12   LR 4.6
+  LightGBM                     b +1.211 ± 0.655 (raw units)   b per within-sd +0.0429 ± 0.0232   within/overall sd 0.15   LR 5.0
+      champion - LightGBM: -0.0023 ± 0.0188 (b per within-sd)
+      split mull - champion: +0.0023 ± 0.0018 (b per within-sd)
+      - own mull - champion: +0.0068 ± 0.0037 (b per within-sd)
+      refit - champion: +0.0007 ± 0.0054 (b per within-sd)
+      - own mull - split mull: +0.0045 ± 0.0041 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b +0.797 ± 0.625 (raw units)   b per within-sd +0.0224 ± 0.0175   within/overall sd 0.13   LR 1.8
+  split mull                   b +0.843 ± 0.628 (raw units)   b per within-sd +0.0237 ± 0.0176   within/overall sd 0.13   LR 2.0
+  - own mull                   b +0.847 ± 0.629 (raw units)   b per within-sd +0.0235 ± 0.0175   within/overall sd 0.13   LR 2.0
+  refit                        b +0.768 ± 0.645 (raw units)   b per within-sd +0.0209 ± 0.0176   within/overall sd 0.12   LR 1.6
+  LightGBM                     b +0.502 ± 0.485 (raw units)   b per within-sd +0.0178 ± 0.0172   within/overall sd 0.15   LR 1.2
+      champion - LightGBM: +0.0045 ± 0.0139 (b per within-sd)
+      split mull - champion: +0.0013 ± 0.0012 (b per within-sd)
+      - own mull - champion: +0.0012 ± 0.0027 (b per within-sd)
+      refit - champion: -0.0015 ± 0.0040 (b per within-sd)
+      - own mull - split mull: -0.0001 ± 0.0030 (b per within-sd)
+EOE done [97s]
+=== SOS: 107459 drafts, 582712 games, 132857 builds; T2 deck columns vs draft_inputs max |diff| 6.59e-01 [2s]
+  lgbm seed 0: 1100 trees [21s]
+  lgbm seed 1: 970 trees [20s]
+  lgbm seed 2: 981 trees [19s]
+  champion                     b +0.315 ± 0.666 (raw units)   b per within-sd +0.0100 ± 0.0212   within/overall sd 0.12   LR 0.3
+  split mull                   b +0.325 ± 0.666 (raw units)   b per within-sd +0.0103 ± 0.0212   within/overall sd 0.12   LR 0.3
+  - own mull                   b +0.111 ± 0.668 (raw units)   b per within-sd +0.0035 ± 0.0212   within/overall sd 0.12   LR 0.0
+  refit                        b +0.291 ± 0.685 (raw units)   b per within-sd +0.0090 ± 0.0212   within/overall sd 0.12   LR 0.2
+  LightGBM                     b -0.022 ± 0.587 (raw units)   b per within-sd -0.0009 ± 0.0214   within/overall sd 0.13   LR 0.0
+      champion - LightGBM: +0.0109 ± 0.0170 (b per within-sd)
+      split mull - champion: +0.0003 ± 0.0003 (b per within-sd)
+      - own mull - champion: -0.0065 ± 0.0030 (b per within-sd)
+      refit - champion: -0.0010 ± 0.0042 (b per within-sd)
+      - own mull - split mull: -0.0068 ± 0.0029 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b +0.164 ± 0.503 (raw units)   b per within-sd +0.0052 ± 0.0160   within/overall sd 0.12   LR 0.1
+  split mull                   b +0.170 ± 0.503 (raw units)   b per within-sd +0.0054 ± 0.0160   within/overall sd 0.12   LR 0.1
+  - own mull                   b -0.005 ± 0.504 (raw units)   b per within-sd -0.0002 ± 0.0160   within/overall sd 0.12   LR 0.0
+  refit                        b +0.140 ± 0.524 (raw units)   b per within-sd +0.0043 ± 0.0162   within/overall sd 0.12   LR 0.1
+  LightGBM                     b -0.097 ± 0.438 (raw units)   b per within-sd -0.0035 ± 0.0160   within/overall sd 0.13   LR 0.1
+      champion - LightGBM: +0.0088 ± 0.0125 (b per within-sd)
+      split mull - champion: +0.0002 ± 0.0002 (b per within-sd)
+      - own mull - champion: -0.0054 ± 0.0023 (b per within-sd)
+      refit - champion: -0.0009 ± 0.0033 (b per within-sd)
+      - own mull - split mull: -0.0056 ± 0.0023 (b per within-sd)
+SOS done [77s]
+=== TDM: 101323 drafts, 552428 games, 126902 builds; T2 deck columns vs draft_inputs max |diff| 6.78e-01 [2s]
+  lgbm seed 0: 870 trees [16s]
+  lgbm seed 1: 1101 trees [20s]
+  lgbm seed 2: 959 trees [18s]
+  champion                     b +0.159 ± 0.714 (raw units)   b per within-sd +0.0048 ± 0.0214   within/overall sd 0.12   LR 0.1
+  split mull                   b -0.060 ± 0.731 (raw units)   b per within-sd -0.0018 ± 0.0214   within/overall sd 0.12   LR 0.0
+  - own mull                   b -0.093 ± 0.729 (raw units)   b per within-sd -0.0027 ± 0.0214   within/overall sd 0.11   LR 0.0
+  refit                        b -0.159 ± 0.753 (raw units)   b per within-sd -0.0045 ± 0.0212   within/overall sd 0.11   LR 0.1
+  LightGBM                     b +0.324 ± 0.643 (raw units)   b per within-sd +0.0109 ± 0.0217   within/overall sd 0.13   LR 0.4
+      champion - LightGBM: -0.0061 ± 0.0160 (b per within-sd)
+      split mull - champion: -0.0065 ± 0.0044 (b per within-sd)
+      - own mull - champion: -0.0075 ± 0.0046 (b per within-sd)
+      refit - champion: -0.0093 ± 0.0048 (b per within-sd)
+      - own mull - split mull: -0.0010 ± 0.0036 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b +0.159 ± 0.544 (raw units)   b per within-sd +0.0048 ± 0.0163   within/overall sd 0.12   LR 0.1
+  split mull                   b -0.036 ± 0.555 (raw units)   b per within-sd -0.0011 ± 0.0163   within/overall sd 0.12   LR 0.0
+  - own mull                   b -0.230 ± 0.549 (raw units)   b per within-sd -0.0067 ± 0.0162   within/overall sd 0.11   LR 0.2
+  refit                        b -0.046 ± 0.572 (raw units)   b per within-sd -0.0013 ± 0.0161   within/overall sd 0.11   LR 0.0
+  LightGBM                     b -0.155 ± 0.486 (raw units)   b per within-sd -0.0053 ± 0.0164   within/overall sd 0.13   LR 0.1
+      champion - LightGBM: +0.0101 ± 0.0121 (b per within-sd)
+      split mull - champion: -0.0059 ± 0.0038 (b per within-sd)
+      - own mull - champion: -0.0115 ± 0.0036 (b per within-sd)
+      refit - champion: -0.0061 ± 0.0032 (b per within-sd)
+      - own mull - split mull: -0.0057 ± 0.0028 (b per within-sd)
+TDM done [97s]
+=== FDN: 130935 drafts, 765317 games, 161556 builds; T2 deck columns vs draft_inputs max |diff| 7.13e-01 [2s]
+  lgbm seed 0: 1194 trees [26s]
+  lgbm seed 1: 1185 trees [26s]
+  lgbm seed 2: 1205 trees [26s]
+  champion                     b +1.173 ± 0.581 (raw units)   b per within-sd +0.0397 ± 0.0196   within/overall sd 0.13   LR 5.8
+  split mull                   b +1.165 ± 0.581 (raw units)   b per within-sd +0.0394 ± 0.0196   within/overall sd 0.13   LR 5.7
+  - own mull                   b +1.152 ± 0.579 (raw units)   b per within-sd +0.0385 ± 0.0193   within/overall sd 0.13   LR 5.5
+  refit                        b +1.276 ± 0.587 (raw units)   b per within-sd +0.0427 ± 0.0197   within/overall sd 0.13   LR 6.7
+  LightGBM                     b +0.856 ± 0.520 (raw units)   b per within-sd +0.0334 ± 0.0203   within/overall sd 0.14   LR 4.2
+      champion - LightGBM: +0.0063 ± 0.0159 (b per within-sd)
+      split mull - champion: -0.0003 ± 0.0010 (b per within-sd)
+      - own mull - champion: -0.0012 ± 0.0026 (b per within-sd)
+      refit - champion: +0.0031 ± 0.0048 (b per within-sd)
+      - own mull - split mull: -0.0009 ± 0.0027 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b +0.825 ± 0.428 (raw units)   b per within-sd +0.0279 ± 0.0145   within/overall sd 0.13   LR 3.9
+  split mull                   b +0.812 ± 0.428 (raw units)   b per within-sd +0.0275 ± 0.0145   within/overall sd 0.13   LR 3.7
+  - own mull                   b +0.808 ± 0.432 (raw units)   b per within-sd +0.0270 ± 0.0144   within/overall sd 0.13   LR 3.6
+  refit                        b +0.790 ± 0.434 (raw units)   b per within-sd +0.0265 ± 0.0145   within/overall sd 0.13   LR 3.4
+  LightGBM                     b +0.482 ± 0.379 (raw units)   b per within-sd +0.0188 ± 0.0148   within/overall sd 0.14   LR 1.8
+      champion - LightGBM: +0.0091 ± 0.0116 (b per within-sd)
+      split mull - champion: -0.0004 ± 0.0009 (b per within-sd)
+      - own mull - champion: -0.0009 ± 0.0019 (b per within-sd)
+      refit - champion: -0.0015 ± 0.0044 (b per within-sd)
+      - own mull - split mull: -0.0005 ± 0.0021 (b per within-sd)
+FDN done [131s]
+=== DFT: 141166 drafts, 824163 games, 177392 builds; T2 deck columns vs draft_inputs max |diff| 8.44e-01 [3s]
+  lgbm seed 0: 1266 trees [29s]
+  lgbm seed 1: 1125 trees [26s]
+  lgbm seed 2: 931 trees [22s]
+  champion                     b +0.496 ± 0.613 (raw units)   b per within-sd +0.0152 ± 0.0188   within/overall sd 0.12   LR 1.0
+  split mull                   b +0.507 ± 0.611 (raw units)   b per within-sd +0.0156 ± 0.0188   within/overall sd 0.12   LR 1.0
+  - own mull                   b +0.390 ± 0.622 (raw units)   b per within-sd +0.0118 ± 0.0187   within/overall sd 0.12   LR 0.6
+  refit                        b +0.555 ± 0.623 (raw units)   b per within-sd +0.0170 ± 0.0191   within/overall sd 0.13   LR 1.2
+  LightGBM                     b +0.707 ± 0.542 (raw units)   b per within-sd +0.0249 ± 0.0190   within/overall sd 0.14   LR 2.8
+      champion - LightGBM: -0.0097 ± 0.0139 (b per within-sd)
+      split mull - champion: +0.0003 ± 0.0015 (b per within-sd)
+      - own mull - champion: -0.0035 ± 0.0036 (b per within-sd)
+      refit - champion: +0.0018 ± 0.0043 (b per within-sd)
+      - own mull - split mull: -0.0038 ± 0.0039 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b +0.167 ± 0.425 (raw units)   b per within-sd +0.0051 ± 0.0131   within/overall sd 0.12   LR 0.2
+  split mull                   b +0.136 ± 0.425 (raw units)   b per within-sd +0.0042 ± 0.0131   within/overall sd 0.12   LR 0.1
+  - own mull                   b -0.026 ± 0.432 (raw units)   b per within-sd -0.0007 ± 0.0130   within/overall sd 0.12   LR 0.1
+  refit                        b +0.138 ± 0.430 (raw units)   b per within-sd +0.0042 ± 0.0132   within/overall sd 0.13   LR 0.1
+  LightGBM                     b +0.141 ± 0.380 (raw units)   b per within-sd +0.0050 ± 0.0133   within/overall sd 0.14   LR 0.2
+      champion - LightGBM: +0.0001 ± 0.0099 (b per within-sd)
+      split mull - champion: -0.0010 ± 0.0012 (b per within-sd)
+      - own mull - champion: -0.0059 ± 0.0037 (b per within-sd)
+      refit - champion: -0.0009 ± 0.0038 (b per within-sd)
+      - own mull - split mull: -0.0049 ± 0.0034 (b per within-sd)
+DFT done [102s]
+=== LCI: 134970 drafts, 793671 games, 170681 builds; T2 deck columns vs draft_inputs max |diff| 7.54e-01 [3s]
+  lgbm seed 0: 1351 trees [30s]
+  lgbm seed 1: 1404 trees [30s]
+  lgbm seed 2: 1415 trees [31s]
+  champion                     b -0.011 ± 0.573 (raw units)   b per within-sd -0.0004 ± 0.0197   within/overall sd 0.12   LR 0.0
+  split mull                   b -0.043 ± 0.576 (raw units)   b per within-sd -0.0015 ± 0.0197   within/overall sd 0.12   LR 0.0
+  - own mull                   b +0.013 ± 0.580 (raw units)   b per within-sd +0.0004 ± 0.0198   within/overall sd 0.12   LR 0.0
+  refit                        b +0.102 ± 0.592 (raw units)   b per within-sd +0.0034 ± 0.0197   within/overall sd 0.12   LR 0.0
+  LightGBM                     b -0.448 ± 0.455 (raw units)   b per within-sd -0.0185 ± 0.0188   within/overall sd 0.14   LR 1.4
+      champion - LightGBM: +0.0181 ± 0.0137 (b per within-sd)
+      split mull - champion: -0.0011 ± 0.0005 (b per within-sd)
+      - own mull - champion: +0.0008 ± 0.0023 (b per within-sd)
+      refit - champion: +0.0037 ± 0.0027 (b per within-sd)
+      - own mull - split mull: +0.0019 ± 0.0024 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b -0.017 ± 0.398 (raw units)   b per within-sd -0.0006 ± 0.0137   within/overall sd 0.12   LR 0.0
+  split mull                   b -0.047 ± 0.399 (raw units)   b per within-sd -0.0016 ± 0.0136   within/overall sd 0.12   LR 0.0
+  - own mull                   b -0.022 ± 0.402 (raw units)   b per within-sd -0.0008 ± 0.0137   within/overall sd 0.12   LR 0.0
+  refit                        b +0.032 ± 0.411 (raw units)   b per within-sd +0.0010 ± 0.0137   within/overall sd 0.12   LR 0.0
+  LightGBM                     b -0.354 ± 0.325 (raw units)   b per within-sd -0.0146 ± 0.0134   within/overall sd 0.14   LR 1.2
+      champion - LightGBM: +0.0140 ± 0.0093 (b per within-sd)
+      split mull - champion: -0.0010 ± 0.0004 (b per within-sd)
+      - own mull - champion: -0.0002 ± 0.0015 (b per within-sd)
+      refit - champion: +0.0016 ± 0.0018 (b per within-sd)
+      - own mull - split mull: +0.0008 ± 0.0016 (b per within-sd)
+LCI done [142s]
+=== FIN: 140237 drafts, 769659 games, 173242 builds; T2 deck columns vs draft_inputs max |diff| 6.93e-01 [3s]
+  lgbm seed 0: 1045 trees [26s]
+  lgbm seed 1: 1179 trees [29s]
+  lgbm seed 2: 1421 trees [34s]
+  champion                     b +0.413 ± 0.624 (raw units)   b per within-sd +0.0124 ± 0.0188   within/overall sd 0.12   LR 0.6
+  split mull                   b +0.390 ± 0.623 (raw units)   b per within-sd +0.0118 ± 0.0188   within/overall sd 0.12   LR 0.5
+  - own mull                   b +0.348 ± 0.623 (raw units)   b per within-sd +0.0105 ± 0.0188   within/overall sd 0.12   LR 0.4
+  refit                        b +0.164 ± 0.648 (raw units)   b per within-sd +0.0048 ± 0.0189   within/overall sd 0.11   LR 0.1
+  LightGBM                     b +0.361 ± 0.499 (raw units)   b per within-sd +0.0136 ± 0.0185   within/overall sd 0.13   LR 0.9
+      champion - LightGBM: -0.0012 ± 0.0148 (b per within-sd)
+      split mull - champion: -0.0006 ± 0.0006 (b per within-sd)
+      - own mull - champion: -0.0019 ± 0.0028 (b per within-sd)
+      refit - champion: -0.0076 ± 0.0039 (b per within-sd)
+      - own mull - split mull: -0.0013 ± 0.0028 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b +0.179 ± 0.464 (raw units)   b per within-sd +0.0054 ± 0.0139   within/overall sd 0.12   LR 0.1
+  split mull                   b +0.158 ± 0.462 (raw units)   b per within-sd +0.0048 ± 0.0140   within/overall sd 0.12   LR 0.1
+  - own mull                   b +0.108 ± 0.461 (raw units)   b per within-sd +0.0033 ± 0.0139   within/overall sd 0.12   LR 0.1
+  refit                        b -0.093 ± 0.481 (raw units)   b per within-sd -0.0027 ± 0.0140   within/overall sd 0.11   LR 0.1
+  LightGBM                     b +0.130 ± 0.377 (raw units)   b per within-sd +0.0050 ± 0.0140   within/overall sd 0.13   LR 0.3
+      champion - LightGBM: +0.0004 ± 0.0111 (b per within-sd)
+      split mull - champion: -0.0006 ± 0.0004 (b per within-sd)
+      - own mull - champion: -0.0021 ± 0.0025 (b per within-sd)
+      refit - champion: -0.0081 ± 0.0041 (b per within-sd)
+      - own mull - split mull: -0.0015 ± 0.0025 (b per within-sd)
+FIN done [137s]
+=== MKM: 157553 drafts, 919942 games, 194890 builds; T2 deck columns vs draft_inputs max |diff| 9.25e-01 [3s]
+  lgbm seed 0: 1128 trees [29s]
+  lgbm seed 1: 861 trees [23s]
+  lgbm seed 2: 926 trees [25s]
+  champion                     b -0.778 ± 0.658 (raw units)   b per within-sd -0.0231 ± 0.0195   within/overall sd 0.12   LR 2.2
+  split mull                   b -0.794 ± 0.659 (raw units)   b per within-sd -0.0235 ± 0.0195   within/overall sd 0.12   LR 2.3
+  - own mull                   b -0.723 ± 0.666 (raw units)   b per within-sd -0.0212 ± 0.0195   within/overall sd 0.12   LR 1.9
+  refit                        b -0.820 ± 0.687 (raw units)   b per within-sd -0.0233 ± 0.0196   within/overall sd 0.12   LR 2.2
+  LightGBM                     b -0.193 ± 0.570 (raw units)   b per within-sd -0.0066 ± 0.0194   within/overall sd 0.13   LR 0.2
+      champion - LightGBM: -0.0165 ± 0.0151 (b per within-sd)
+      split mull - champion: -0.0004 ± 0.0005 (b per within-sd)
+      - own mull - champion: +0.0019 ± 0.0023 (b per within-sd)
+      refit - champion: -0.0002 ± 0.0045 (b per within-sd)
+      - own mull - split mull: +0.0023 ± 0.0022 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b -0.896 ± 0.446 (raw units)   b per within-sd -0.0266 ± 0.0132   within/overall sd 0.12   LR 4.0
+  split mull                   b -0.926 ± 0.447 (raw units)   b per within-sd -0.0274 ± 0.0132   within/overall sd 0.12   LR 4.3
+  - own mull                   b -0.900 ± 0.450 (raw units)   b per within-sd -0.0264 ± 0.0132   within/overall sd 0.12   LR 4.0
+  refit                        b -0.950 ± 0.468 (raw units)   b per within-sd -0.0270 ± 0.0133   within/overall sd 0.12   LR 4.1
+  LightGBM                     b -0.549 ± 0.385 (raw units)   b per within-sd -0.0187 ± 0.0131   within/overall sd 0.13   LR 2.0
+      champion - LightGBM: -0.0078 ± 0.0107 (b per within-sd)
+      split mull - champion: -0.0008 ± 0.0003 (b per within-sd)
+      - own mull - champion: +0.0002 ± 0.0016 (b per within-sd)
+      refit - champion: -0.0005 ± 0.0029 (b per within-sd)
+      - own mull - split mull: +0.0010 ± 0.0016 (b per within-sd)
+MKM done [138s]
+=== BLB: 154585 drafts, 898354 games, 187018 builds; T2 deck columns vs draft_inputs max |diff| 8.59e-01 [3s]
+  lgbm seed 0: 1168 trees [29s]
+  lgbm seed 1: 1765 trees [41s]
+  lgbm seed 2: 1588 trees [38s]
+  champion                     b +0.609 ± 0.695 (raw units)   b per within-sd +0.0178 ± 0.0203   within/overall sd 0.11   LR 1.2
+  split mull                   b +0.596 ± 0.694 (raw units)   b per within-sd +0.0174 ± 0.0203   within/overall sd 0.12   LR 1.1
+  - own mull                   b +0.675 ± 0.698 (raw units)   b per within-sd +0.0195 ± 0.0201   within/overall sd 0.11   LR 1.4
+  refit                        b +0.728 ± 0.709 (raw units)   b per within-sd +0.0208 ± 0.0203   within/overall sd 0.11   LR 1.6
+  LightGBM                     b +1.143 ± 0.553 (raw units)   b per within-sd +0.0412 ± 0.0200   within/overall sd 0.14   LR 6.3
+      champion - LightGBM: -0.0234 ± 0.0153 (b per within-sd)
+      split mull - champion: -0.0003 ± 0.0004 (b per within-sd)
+      - own mull - champion: +0.0017 ± 0.0029 (b per within-sd)
+      refit - champion: +0.0030 ± 0.0028 (b per within-sd)
+      - own mull - split mull: +0.0021 ± 0.0030 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b +0.227 ± 0.488 (raw units)   b per within-sd +0.0066 ± 0.0142   within/overall sd 0.11   LR 0.2
+  split mull                   b +0.220 ± 0.487 (raw units)   b per within-sd +0.0064 ± 0.0142   within/overall sd 0.12   LR 0.2
+  - own mull                   b +0.130 ± 0.488 (raw units)   b per within-sd +0.0038 ± 0.0141   within/overall sd 0.11   LR 0.1
+  refit                        b +0.262 ± 0.500 (raw units)   b per within-sd +0.0075 ± 0.0143   within/overall sd 0.11   LR 0.3
+  LightGBM                     b +0.395 ± 0.390 (raw units)   b per within-sd +0.0141 ± 0.0141   within/overall sd 0.14   LR 1.1
+      champion - LightGBM: -0.0075 ± 0.0107 (b per within-sd)
+      split mull - champion: -0.0002 ± 0.0003 (b per within-sd)
+      - own mull - champion: -0.0029 ± 0.0023 (b per within-sd)
+      refit - champion: +0.0008 ± 0.0021 (b per within-sd)
+      - own mull - split mull: -0.0027 ± 0.0023 (b per within-sd)
+BLB done [157s]
+=== DSK: 167672 drafts, 977322 games, 207049 builds; T2 deck columns vs draft_inputs max |diff| 6.62e-01 [3s]
+  lgbm seed 0: 1680 trees [43s]
+  lgbm seed 1: 1591 trees [41s]
+  lgbm seed 2: 1278 trees [34s]
+  champion                     b +0.508 ± 0.589 (raw units)   b per within-sd +0.0163 ± 0.0189   within/overall sd 0.12   LR 1.2
+  split mull                   b +0.512 ± 0.589 (raw units)   b per within-sd +0.0164 ± 0.0189   within/overall sd 0.12   LR 1.2
+  - own mull                   b +0.525 ± 0.596 (raw units)   b per within-sd +0.0167 ± 0.0189   within/overall sd 0.12   LR 1.3
+  refit                        b +0.437 ± 0.601 (raw units)   b per within-sd +0.0139 ± 0.0191   within/overall sd 0.12   LR 0.9
+  LightGBM                     b +0.289 ± 0.481 (raw units)   b per within-sd +0.0112 ± 0.0185   within/overall sd 0.14   LR 0.6
+      champion - LightGBM: +0.0051 ± 0.0135 (b per within-sd)
+      split mull - champion: +0.0001 ± 0.0008 (b per within-sd)
+      - own mull - champion: +0.0004 ± 0.0023 (b per within-sd)
+      refit - champion: -0.0024 ± 0.0024 (b per within-sd)
+      - own mull - split mull: +0.0003 ± 0.0023 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b +0.012 ± 0.402 (raw units)   b per within-sd +0.0004 ± 0.0129   within/overall sd 0.12   LR 0.0
+  split mull                   b +0.014 ± 0.402 (raw units)   b per within-sd +0.0005 ± 0.0129   within/overall sd 0.12   LR 0.0
+  - own mull                   b -0.022 ± 0.405 (raw units)   b per within-sd -0.0007 ± 0.0129   within/overall sd 0.12   LR 0.0
+  refit                        b -0.054 ± 0.407 (raw units)   b per within-sd -0.0017 ± 0.0129   within/overall sd 0.12   LR 0.0
+  LightGBM                     b -0.021 ± 0.328 (raw units)   b per within-sd -0.0007 ± 0.0126   within/overall sd 0.14   LR 0.0
+      champion - LightGBM: +0.0011 ± 0.0094 (b per within-sd)
+      split mull - champion: +0.0001 ± 0.0006 (b per within-sd)
+      - own mull - champion: -0.0011 ± 0.0016 (b per within-sd)
+      refit - champion: -0.0021 ± 0.0016 (b per within-sd)
+      - own mull - split mull: -0.0012 ± 0.0016 (b per within-sd)
+DSK done [180s]
+=== OTJ: 195312 drafts, 1132415 games, 240717 builds; T2 deck columns vs draft_inputs max |diff| 8.57e-01 [5s]
+  lgbm seed 0: 1466 trees [49s]
+  lgbm seed 1: 1942 trees [62s]
+  lgbm seed 2: 1699 trees [55s]
+  champion                     b -0.197 ± 0.605 (raw units)   b per within-sd -0.0055 ± 0.0168   within/overall sd 0.12   LR 0.2
+  split mull                   b -0.214 ± 0.609 (raw units)   b per within-sd -0.0059 ± 0.0168   within/overall sd 0.12   LR 0.2
+  - own mull                   b -0.181 ± 0.612 (raw units)   b per within-sd -0.0050 ± 0.0169   within/overall sd 0.12   LR 0.1
+  refit                        b -0.144 ± 0.590 (raw units)   b per within-sd -0.0041 ± 0.0166   within/overall sd 0.12   LR 0.1
+  LightGBM                     b +0.129 ± 0.478 (raw units)   b per within-sd +0.0046 ± 0.0171   within/overall sd 0.14   LR 0.2
+      champion - LightGBM: -0.0101 ± 0.0128 (b per within-sd)
+      split mull - champion: -0.0004 ± 0.0006 (b per within-sd)
+      - own mull - champion: +0.0005 ± 0.0023 (b per within-sd)
+      refit - champion: +0.0014 ± 0.0028 (b per within-sd)
+      - own mull - split mull: +0.0009 ± 0.0024 (b per within-sd)
+  sensitivity: match-number control instead of the record state
+  champion                     b -0.270 ± 0.432 (raw units)   b per within-sd -0.0075 ± 0.0120   within/overall sd 0.12   LR 0.4
+  split mull                   b -0.291 ± 0.435 (raw units)   b per within-sd -0.0080 ± 0.0120   within/overall sd 0.12   LR 0.5
+  - own mull                   b -0.224 ± 0.435 (raw units)   b per within-sd -0.0062 ± 0.0120   within/overall sd 0.12   LR 0.3
+  refit                        b -0.197 ± 0.422 (raw units)   b per within-sd -0.0055 ± 0.0119   within/overall sd 0.12   LR 0.2
+  LightGBM                     b +0.074 ± 0.341 (raw units)   b per within-sd +0.0027 ± 0.0122   within/overall sd 0.14   LR 0.2
+      champion - LightGBM: -0.0102 ± 0.0093 (b per within-sd)
+      split mull - champion: -0.0005 ± 0.0004 (b per within-sd)
+      - own mull - champion: +0.0013 ± 0.0017 (b per within-sd)
+      refit - champion: +0.0019 ± 0.0021 (b per within-sd)
+      - own mull - split mull: +0.0018 ± 0.0017 (b per within-sd)
+OTJ done [198s]

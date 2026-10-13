@@ -1,0 +1,189 @@
+{
+ "set": "DFT",
+ "draft order": "results/DFT.PremierDraft/sc_gll/scores.npz",
+ "drafts": {
+  "train": 98816,
+  "val": 21175,
+  "test": 21175
+ },
+ "drafts with games": {
+  "train": 97801,
+  "val": 20941,
+  "test": 20692
+ },
+ "games": {
+  "train": 582703,
+  "val": 122870,
+  "test": 118590
+ },
+ "builds per draft (drafts with games)": {
+  "1": 108905,
+  "2": 24292,
+  "3": 5234,
+  "4": 841,
+  "5": 139,
+  "6": 19,
+  "7": 4
+ },
+ "multi-build": {
+  "k=1": {
+   "qualifying drafts": {
+    "train": 21853,
+    "val": 4348,
+    "test": 4328
+   },
+   "share of drafts with games": {
+    "train": 0.22344352307236123,
+    "val": 0.207630963182274,
+    "test": 0.20916296153102648
+   },
+   "games in qualifying drafts": {
+    "train": 128837,
+    "val": 25134,
+    "test": 24899
+   },
+   "experienced test games in qualifying drafts": 21341
+  },
+  "k=2": {
+   "qualifying drafts": {
+    "train": 9928,
+    "val": 1960,
+    "test": 1839
+   },
+   "share of drafts with games": {
+    "train": 0.1015122544759256,
+    "val": 0.0935962943507951,
+    "test": 0.08887492750821574
+   },
+   "games in qualifying drafts": {
+    "train": 67340,
+    "val": 13013,
+    "test": 12233
+   },
+   "experienced test games in qualifying drafts": 10589
+  },
+  "k=3": {
+   "qualifying drafts": {
+    "train": 3341,
+    "val": 614,
+    "test": 608
+   },
+   "share of drafts with games": {
+    "train": 0.03416120489565547,
+    "val": 0.029320471801728667,
+    "test": 0.02938333655519041
+   },
+   "games in qualifying drafts": {
+    "train": 26214,
+    "val": 4756,
+    "test": 4716
+   },
+   "experienced test games in qualifying drafts": 4122
+  }
+ },
+ "test game shares": {
+  "experienced (n_bucket >= 50)": 0.8826545239902184,
+  "match 1": 0.17413778564803103,
+  "main build": 0.9327009022683194,
+  "multi-build k=1": 0.2099586811704191,
+  "experienced x multi-build k=1": 0.17995615144615904,
+  "multi-build k=2": 0.10315372291086938,
+  "experienced x multi-build k=2": 0.0892908339657644,
+  "multi-build k=3": 0.03976726536807488,
+  "experienced x multi-build k=3": 0.034758411333164686
+ },
+ "T3 gate per set (k=1, >= 1000 test drafts)": true,
+ "T3 gate per set (k=2, >= 1000 test drafts)": true,
+ "num_turns by revealed opponent colours": {
+  "all games": {
+   "unknown (0)": {
+    "games": 2425,
+    "share": 0.00294237911675239,
+    "user win rate": 0.9682474226804124,
+    "mean num_turns": 3.763298969072165,
+    "median num_turns": 4.0
+   },
+   "1": {
+    "games": 39873,
+    "share": 0.048379992792687856,
+    "user win rate": 0.7669350186843227,
+    "mean num_turns": 6.505906252351215,
+    "median num_turns": 6.0
+   },
+   "2": {
+    "games": 576605,
+    "share": 0.6996249528309327,
+    "user win rate": 0.5449657911395149,
+    "mean num_turns": 9.425781947780543,
+    "median num_turns": 9.0
+   },
+   "3": {
+    "games": 179964,
+    "share": 0.21835971767720705,
+    "user win rate": 0.517586850703474,
+    "mean num_turns": 10.275382854348647,
+    "median num_turns": 10.0
+   },
+   "4": {
+    "games": 10471,
+    "share": 0.012705011023304857,
+    "user win rate": 0.4971826950625537,
+    "mean num_turns": 10.741762964377806,
+    "median num_turns": 10.0
+   },
+   "5": {
+    "games": 14825,
+    "share": 0.017987946559115127,
+    "user win rate": 0.48074198988195616,
+    "mean num_turns": 10.823608768971333,
+    "median num_turns": 10.0
+   }
+  },
+  "test games": {
+   "unknown (0)": {
+    "games": 344,
+    "share": 0.0029007504848638163,
+    "user win rate": 0.9593023255813954,
+    "mean num_turns": 3.808139534883721,
+    "median num_turns": 4.0
+   },
+   "1": {
+    "games": 5290,
+    "share": 0.04460747111898136,
+    "user win rate": 0.7729678638941399,
+    "mean num_turns": 6.439130434782609,
+    "median num_turns": 6.0
+   },
+   "2": {
+    "games": 78885,
+    "share": 0.6651909941816342,
+    "user win rate": 0.542156303479749,
+    "mean num_turns": 9.394853267414591,
+    "median num_turns": 9.0
+   },
+   "3": {
+    "games": 29056,
+    "share": 0.24501222700059028,
+    "user win rate": 0.5130437775330396,
+    "mean num_turns": 10.284175385462555,
+    "median num_turns": 10.0
+   },
+   "4": {
+    "games": 1974,
+    "share": 0.016645585631166204,
+    "user win rate": 0.48125633232016213,
+    "mean num_turns": 10.839412360688957,
+    "median num_turns": 10.0
+   },
+   "5": {
+    "games": 3041,
+    "share": 0.025642971582764146,
+    "user win rate": 0.4718842486024334,
+    "mean num_turns": 10.93028609010194,
+    "median num_turns": 10.0
+   }
+  }
+ },
+ "spearman(num_turns, opp colours), games with >= 1 colour": 0.23274205197021358,
+ "seconds": 0.7647616863250732
+}

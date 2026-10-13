@@ -1,0 +1,464 @@
+t2_mull_split/results.json: sets with results ['MSH', 'EOE', 'SOS', 'TDM', 'FDN', 'DFT', 'LCI', 'FIN', 'MKM', 'BLB', 'DSK', 'OTJ']  (subset 'experienced pre')
+
+- own mull - champion
+  MSH    +0.05396 ± 0.03606  z +1.50
+  EOE    +0.09412 ± 0.02402  z +3.92
+  SOS    +0.02058 ± 0.03974  z +0.52
+  TDM    +0.01827 ± 0.07898  z +0.23
+  FDN    +0.03493 ± 0.02432  z +1.44
+  DFT    -0.00362 ± 0.09515  z -0.04
+  LCI    +0.08480 ± 0.02965  z +2.86
+  FIN    +0.03122 ± 0.04385  z +0.71
+  MKM    +0.05447 ± 0.04073  z +1.34
+  BLB    +0.07822 ± 0.02749  z +2.84
+  DSK    +0.05021 ± 0.02015  z +2.49
+  OTJ    +0.03617 ± 0.01193  z +3.03
+  fixed effect +0.04987 ± 0.00742
+  random effects (DL + HKSJ) +0.04987, 95% CI [+0.03354, +0.06620], p = 0.0000; tau = 0.00000, I2 = 0%, Q p = 0.643
+  95% prediction interval for a new set [+0.03334, +0.06640]
+  sets better 11/12 (sign test one-sided p = 0.003), Wilcoxon p = 0.001, significantly worse on 0
+  adopt: True
+    PASS RE mean +0.04987 > 0 with p = 0.0000 < 0.05
+    PASS 11/12 sets better >= 8
+    PASS RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+- own mull - split mull
+  MSH    -0.01251 ± 0.03521  z -0.36
+  EOE    +0.10377 ± 0.03290  z +3.15
+  SOS    +0.02265 ± 0.03801  z +0.60
+  TDM    +0.10739 ± 0.03577  z +3.00
+  FDN    +0.04060 ± 0.02372  z +1.71
+  DFT    +0.00467 ± 0.07160  z +0.07
+  LCI    +0.07880 ± 0.02951  z +2.67
+  FIN    +0.02682 ± 0.04341  z +0.62
+  MKM    +0.05939 ± 0.04664  z +1.27
+  BLB    +0.07850 ± 0.02801  z +2.80
+  DSK    +0.04375 ± 0.02014  z +2.17
+  OTJ    +0.02895 ± 0.01013  z +2.86
+  fixed effect +0.04233 ± 0.00693
+  random effects (DL + HKSJ) +0.04799, 95% CI [+0.02708, +0.06889], p = 0.0004; tau = 0.01602, I2 = 27%, Q p = 0.184
+  95% prediction interval for a new set [+0.00649, +0.08948]
+  sets better 11/12 (sign test one-sided p = 0.003), Wilcoxon p = 0.001, significantly worse on 0
+  adopt: True
+    PASS RE mean +0.04799 > 0 with p = 0.0004 < 0.05
+    PASS 11/12 sets better >= 8
+    PASS RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+champion - cached game FM
+  MSH    -0.08396 ± 0.10025  z -0.84
+  EOE    -0.01617 ± 0.02744  z -0.59
+  SOS    +0.05876 ± 0.03209  z +1.83
+  TDM    +0.00900 ± 0.03288  z +0.27
+  FDN    +0.01248 ± 0.03062  z +0.41
+  DFT    +0.00319 ± 0.01943  z +0.16
+  LCI    +0.02407 ± 0.03329  z +0.72
+  FIN    -0.05767 ± 0.04610  z -1.25
+  MKM    -0.11736 ± 0.11320  z -1.04
+  BLB    +0.00150 ± 0.01478  z +0.10
+  DSK    -0.00695 ± 0.01147  z -0.61
+  OTJ    +0.00408 ± 0.01741  z +0.23
+  fixed effect +0.00043 ± 0.00646
+  random effects (DL + HKSJ) +0.00043, 95% CI [-0.01379, +0.01464], p = 0.9484; tau = 0.00000, I2 = 0%, Q p = 0.690
+  95% prediction interval for a new set [-0.01396, +0.01482]
+  sets better 7/12 (sign test one-sided p = 0.387), Wilcoxon p = 0.791, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.00043 > 0 with p = 0.9484 < 0.05
+    FAIL 7/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+refit - champion
+  MSH    +0.07923 ± 0.04649  z +1.70
+  EOE    -0.01651 ± 0.15404  z -0.11
+  SOS    -0.16548 ± 0.21066  z -0.79
+  TDM    +0.01544 ± 0.05171  z +0.30
+  FDN    -0.06472 ± 0.04692  z -1.38
+  DFT    +0.10031 ± 0.11272  z +0.89
+  LCI    +0.17954 ± 0.12259  z +1.46
+  FIN    +0.06409 ± 0.03967  z +1.62
+  MKM    +0.04476 ± 0.09044  z +0.49
+  BLB    +0.02503 ± 0.03628  z +0.69
+  DSK    +0.03598 ± 0.05523  z +0.65
+  OTJ    +0.04282 ± 0.04237  z +1.01
+  fixed effect +0.03313 ± 0.01601
+  random effects (DL + HKSJ) +0.03313, 95% CI [-0.00210, +0.06836], p = 0.0628; tau = 0.00000, I2 = 0%, Q p = 0.626
+  95% prediction interval for a new set [-0.00253, +0.06880]
+  sets better 9/12 (sign test one-sided p = 0.073), Wilcoxon p = 0.176, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.03313 > 0 with p = 0.0628 < 0.05
+    PASS 9/12 sets better >= 8
+    PASS RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+split mull - champion
+  MSH    +0.06647 ± 0.02053  z +3.24
+  EOE    -0.00965 ± 0.01453  z -0.66
+  SOS    -0.00208 ± 0.00307  z -0.68
+  TDM    -0.08912 ± 0.08399  z -1.06
+  FDN    -0.00567 ± 0.00641  z -0.88
+  DFT    -0.00828 ± 0.03080  z -0.27
+  LCI    +0.00600 ± 0.00277  z +2.17
+  FIN    +0.00440 ± 0.00646  z +0.68
+  MKM    -0.00492 ± 0.00745  z -0.66
+  BLB    -0.00029 ± 0.00361  z -0.08
+  DSK    +0.00646 ± 0.00283  z +2.28
+  OTJ    +0.00722 ± 0.00451  z +1.60
+  fixed effect +0.00297 ± 0.00133
+  random effects (DL + HKSJ) +0.00254, 95% CI [-0.00328, +0.00836], p = 0.3579; tau = 0.00480, I2 = 49%, Q p = 0.026
+  95% prediction interval for a new set [-0.00968, +0.01476]
+  sets better 5/12 (sign test one-sided p = 0.806), Wilcoxon p = 0.791, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.00254 > 0 with p = 0.3579 < 0.05
+    FAIL 5/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+t2_mull_split/results.json: sets with results ['MSH', 'EOE', 'SOS', 'TDM', 'FDN', 'DFT', 'LCI', 'FIN', 'MKM', 'BLB', 'DSK', 'OTJ']  (subset 'experienced dl')
+
+- own mull - champion
+  MSH    +0.00375 ± 0.03300  z +0.11
+  EOE    +0.02342 ± 0.02476  z +0.95
+  SOS    -0.08437 ± 0.03860  z -2.19
+  TDM    -0.06037 ± 0.04075  z -1.48
+  FDN    -0.03968 ± 0.02475  z -1.60
+  DFT    -0.08781 ± 0.09763  z -0.90
+  LCI    +0.00037 ± 0.02937  z +0.01
+  FIN    -0.05140 ± 0.04193  z -1.23
+  MKM    +0.00601 ± 0.04046  z +0.15
+  BLB    -0.01288 ± 0.02692  z -0.48
+  DSK    -0.02666 ± 0.02224  z -1.20
+  OTJ    -0.02090 ± 0.01147  z -1.82
+  fixed effect -0.02016 ± 0.00727
+  random effects (DL + HKSJ) -0.02016, 95% CI [-0.03617, -0.00415], p = 0.0182; tau = 0.00000, I2 = 0%, Q p = 0.522
+  95% prediction interval for a new set [-0.03636, -0.00395]
+  sets better 4/12 (sign test one-sided p = 0.927), Wilcoxon p = 0.034, significantly worse on 1
+  adopt: False
+    FAIL RE mean -0.02016 > 0 with p = 0.0182 < 0.05
+    FAIL 4/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    FAIL 1 sets significantly worse <= 0
+
+- own mull - split mull
+  MSH    -0.05618 ± 0.03442  z -1.63
+  EOE    +0.03336 ± 0.03273  z +1.02
+  SOS    -0.07877 ± 0.03700  z -2.13
+  TDM    +0.02550 ± 0.05690  z +0.45
+  FDN    -0.03049 ± 0.02363  z -1.29
+  DFT    -0.07043 ± 0.07141  z -0.99
+  LCI    -0.00533 ± 0.02926  z -0.18
+  FIN    -0.05426 ± 0.04235  z -1.28
+  MKM    +0.01210 ± 0.04661  z +0.26
+  BLB    -0.01226 ± 0.02715  z -0.45
+  DSK    -0.03100 ± 0.02246  z -1.38
+  OTJ    -0.02612 ± 0.01006  z -2.60
+  fixed effect -0.02481 ± 0.00704
+  random effects (DL + HKSJ) -0.02481, 95% CI [-0.04029, -0.00933], p = 0.0047; tau = 0.00000, I2 = 0%, Q p = 0.601
+  95% prediction interval for a new set [-0.04049, -0.00913]
+  sets better 3/12 (sign test one-sided p = 0.981), Wilcoxon p = 0.052, significantly worse on 2
+  adopt: False
+    FAIL RE mean -0.02481 > 0 with p = 0.0047 < 0.05
+    FAIL 3/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    FAIL 2 sets significantly worse <= 0
+
+champion - cached game FM
+  MSH    -0.07895 ± 0.09625  z -0.82
+  EOE    -0.02613 ± 0.03621  z -0.72
+  SOS    +0.02128 ± 0.02957  z +0.72
+  TDM    +0.01927 ± 0.01919  z +1.00
+  FDN    +0.01144 ± 0.02969  z +0.39
+  DFT    +0.00443 ± 0.02063  z +0.21
+  LCI    +0.01775 ± 0.02958  z +0.60
+  FIN    -0.04168 ± 0.03398  z -1.23
+  MKM    -0.09544 ± 0.09303  z -1.03
+  BLB    +0.00573 ± 0.01626  z +0.35
+  DSK    -0.00167 ± 0.01018  z -0.16
+  OTJ    +0.00015 ± 0.01424  z +0.01
+  fixed effect +0.00178 ± 0.00590
+  random effects (DL + HKSJ) +0.00178, 95% CI [-0.01121, +0.01477], p = 0.7691; tau = 0.00000, I2 = 0%, Q p = 0.880
+  95% prediction interval for a new set [-0.01137, +0.01493]
+  sets better 7/12 (sign test one-sided p = 0.387), Wilcoxon p = 0.733, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.00178 > 0 with p = 0.7691 < 0.05
+    FAIL 7/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+refit - champion
+  MSH    +0.07188 ± 0.04681  z +1.54
+  EOE    +0.00340 ± 0.13181  z +0.03
+  SOS    -0.13857 ± 0.21891  z -0.63
+  TDM    +0.06291 ± 0.04368  z +1.44
+  FDN    -0.04772 ± 0.03905  z -1.22
+  DFT    +0.10446 ± 0.11590  z +0.90
+  LCI    +0.18072 ± 0.11804  z +1.53
+  FIN    +0.04427 ± 0.03769  z +1.17
+  MKM    +0.05516 ± 0.06108  z +0.90
+  BLB    +0.02912 ± 0.03675  z +0.79
+  DSK    +0.03462 ± 0.04728  z +0.73
+  OTJ    +0.05264 ± 0.04439  z +1.19
+  fixed effect +0.03583 ± 0.01486
+  random effects (DL + HKSJ) +0.03583, 95% CI [+0.00312, +0.06854], p = 0.0345; tau = 0.00000, I2 = 0%, Q p = 0.674
+  95% prediction interval for a new set [+0.00272, +0.06894]
+  sets better 10/12 (sign test one-sided p = 0.019), Wilcoxon p = 0.077, significantly worse on 0
+  adopt: True
+    PASS RE mean +0.03583 > 0 with p = 0.0345 < 0.05
+    PASS 10/12 sets better >= 8
+    PASS RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+split mull - champion
+  MSH    +0.05993 ± 0.02105  z +2.85
+  EOE    -0.00994 ± 0.01387  z -0.72
+  SOS    -0.00560 ± 0.00300  z -1.87
+  TDM    -0.08587 ± 0.07414  z -1.16
+  FDN    -0.00919 ± 0.00734  z -1.25
+  DFT    -0.01738 ± 0.03523  z -0.49
+  LCI    +0.00570 ± 0.00294  z +1.94
+  FIN    +0.00286 ± 0.00560  z +0.51
+  MKM    -0.00609 ± 0.00785  z -0.78
+  BLB    -0.00061 ± 0.00387  z -0.16
+  DSK    +0.00434 ± 0.00301  z +1.44
+  OTJ    +0.00522 ± 0.00398  z +1.31
+  fixed effect +0.00125 ± 0.00136
+  random effects (DL + HKSJ) +0.00085, 95% CI [-0.00500, +0.00670], p = 0.7549; tau = 0.00511, I2 = 52%, Q p = 0.018
+  95% prediction interval for a new set [-0.01199, +0.01369]
+  sets better 5/12 (sign test one-sided p = 0.806), Wilcoxon p = 0.339, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.00085 > 0 with p = 0.7549 < 0.05
+    FAIL 5/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+t2_mull_split/results.json: sets with results ['MSH', 'EOE', 'SOS', 'TDM', 'FDN', 'DFT', 'LCI', 'FIN', 'MKM', 'BLB', 'DSK', 'OTJ']  (subset 'match 1 pre')
+
+- own mull - champion
+  MSH    -0.04791 ± 0.08589  z -0.56
+  EOE    +0.07523 ± 0.06327  z +1.19
+  SOS    -0.05073 ± 0.07384  z -0.69
+  TDM    -0.01474 ± 0.13912  z -0.11
+  FDN    +0.08993 ± 0.07535  z +1.19
+  DFT    -0.11229 ± 0.22728  z -0.49
+  LCI    +0.13437 ± 0.06609  z +2.03
+  FIN    +0.05661 ± 0.07534  z +0.75
+  MKM    +0.08146 ± 0.05287  z +1.54
+  BLB    +0.03138 ± 0.04887  z +0.64
+  DSK    +0.03886 ± 0.05110  z +0.76
+  OTJ    -0.02951 ± 0.04979  z -0.59
+  fixed effect +0.03660 ± 0.01895
+  random effects (DL + HKSJ) +0.03660, 95% CI [-0.00511, +0.07832], p = 0.0796; tau = 0.00000, I2 = 0%, Q p = 0.662
+  95% prediction interval for a new set [-0.00563, +0.07883]
+  sets better 7/12 (sign test one-sided p = 0.387), Wilcoxon p = 0.301, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.03660 > 0 with p = 0.0796 < 0.05
+    FAIL 7/12 sets better >= 8
+    PASS RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+- own mull - split mull
+  MSH    -0.08573 ± 0.06254  z -1.37
+  EOE    +0.09609 ± 0.05373  z +1.79
+  SOS    -0.03957 ± 0.07483  z -0.53
+  TDM    +0.02719 ± 0.13509  z +0.20
+  FDN    +0.09416 ± 0.07661  z +1.23
+  DFT    -0.05771 ± 0.16486  z -0.35
+  LCI    +0.12873 ± 0.06595  z +1.95
+  FIN    +0.06595 ± 0.07988  z +0.83
+  MKM    +0.09703 ± 0.05271  z +1.84
+  BLB    +0.02680 ± 0.04606  z +0.58
+  DSK    +0.02990 ± 0.05280  z +0.57
+  OTJ    -0.03361 ± 0.04517  z -0.74
+  fixed effect +0.03263 ± 0.01793
+  random effects (DL + HKSJ) +0.03325, 95% CI [-0.01026, +0.07676], p = 0.1207; tau = 0.02558, I2 = 14%, Q p = 0.306
+  95% prediction interval for a new set [-0.03878, +0.10527]
+  sets better 8/12 (sign test one-sided p = 0.194), Wilcoxon p = 0.233, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.03325 > 0 with p = 0.1207 < 0.05
+    PASS 8/12 sets better >= 8
+    PASS RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+champion - cached game FM
+  MSH    -0.04877 ± 0.21829  z -0.22
+  EOE    -0.05531 ± 0.11226  z -0.49
+  SOS    +0.06909 ± 0.06228  z +1.11
+  TDM    +0.03620 ± 0.04131  z +0.88
+  FDN    -0.05069 ± 0.06428  z -0.79
+  DFT    -0.00035 ± 0.05362  z -0.01
+  LCI    +0.03816 ± 0.04860  z +0.79
+  FIN    -0.01745 ± 0.03518  z -0.50
+  MKM    -0.16014 ± 0.17957  z -0.89
+  BLB    +0.02636 ± 0.04169  z +0.63
+  DSK    -0.02191 ± 0.01774  z -1.24
+  OTJ    +0.00441 ± 0.03291  z +0.13
+  fixed effect -0.00430 ± 0.01157
+  random effects (DL + HKSJ) -0.00430, 95% CI [-0.02976, +0.02116], p = 0.7172; tau = 0.00000, I2 = 0%, Q p = 0.847
+  95% prediction interval for a new set [-0.03007, +0.02147]
+  sets better 5/12 (sign test one-sided p = 0.806), Wilcoxon p = 0.569, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00430 > 0 with p = 0.7172 < 0.05
+    FAIL 5/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+refit - champion
+  MSH    +0.02414 ± 0.24025  z +0.10
+  EOE    -0.23261 ± 0.14200  z -1.64
+  SOS    -0.19839 ± 0.17301  z -1.15
+  TDM    +0.18028 ± 0.13592  z +1.33
+  FDN    +0.13589 ± 0.42929  z +0.32
+  DFT    +0.00346 ± 0.14856  z +0.02
+  LCI    +0.29852 ± 0.15584  z +1.92
+  FIN    -0.08242 ± 0.14531  z -0.57
+  MKM    +0.21740 ± 0.14954  z +1.45
+  BLB    +0.07920 ± 0.06276  z +1.26
+  DSK    +0.05364 ± 0.09484  z +0.57
+  OTJ    +0.06969 ± 0.08756  z +0.80
+  fixed effect +0.05537 ± 0.03463
+  random effects (DL + HKSJ) +0.05340, 95% CI [-0.02982, +0.13661], p = 0.1855; tau = 0.03697, I2 = 8%, Q p = 0.367
+  95% prediction interval for a new set [-0.06442, +0.17122]
+  sets better 9/12 (sign test one-sided p = 0.073), Wilcoxon p = 0.339, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.05340 > 0 with p = 0.1855 < 0.05
+    PASS 9/12 sets better >= 8
+    PASS RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+split mull - champion
+  MSH    +0.03782 ± 0.06937  z +0.55
+  EOE    -0.02086 ± 0.03746  z -0.56
+  SOS    -0.01117 ± 0.01700  z -0.66
+  TDM    -0.04193 ± 0.04703  z -0.89
+  FDN    -0.00423 ± 0.01440  z -0.29
+  DFT    -0.05457 ± 0.08594  z -0.64
+  LCI    +0.00564 ± 0.00861  z +0.66
+  FIN    -0.00935 ± 0.01018  z -0.92
+  MKM    -0.01557 ± 0.00881  z -1.77
+  BLB    +0.00458 ± 0.00877  z +0.52
+  DSK    +0.00896 ± 0.00991  z +0.90
+  OTJ    +0.00409 ± 0.00800  z +0.51
+  fixed effect -0.00109 ± 0.00344
+  random effects (DL + HKSJ) -0.00109, 95% CI [-0.00866, +0.00647], p = 0.7566; tau = 0.00000, I2 = 0%, Q p = 0.716
+  95% prediction interval for a new set [-0.00875, +0.00657]
+  sets better 5/12 (sign test one-sided p = 0.806), Wilcoxon p = 0.233, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00109 > 0 with p = 0.7566 < 0.05
+    FAIL 5/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+t2_mull_split/results.json: sets with results ['MSH', 'EOE', 'SOS', 'TDM', 'FDN', 'DFT', 'LCI', 'FIN', 'MKM', 'BLB', 'DSK', 'OTJ']  (subset 'experienced raw')
+
+- own mull - champion
+  MSH    -0.04304 ± 0.02117  z -2.03
+  EOE    -0.00221 ± 0.02383  z -0.09
+  SOS    -0.10175 ± 0.03695  z -2.75
+  TDM    -0.08929 ± 0.03097  z -2.88
+  FDN    -0.05829 ± 0.02564  z -2.27
+  DFT    -0.14274 ± 0.09045  z -1.58
+  LCI    -0.01252 ± 0.02773  z -0.45
+  FIN    -0.06637 ± 0.04201  z -1.58
+  MKM    -0.03054 ± 0.03485  z -0.88
+  BLB    -0.05004 ± 0.02531  z -1.98
+  DSK    -0.07444 ± 0.02479  z -3.00
+  OTJ    -0.04957 ± 0.01535  z -3.23
+  fixed effect -0.04918 ± 0.00755
+  random effects (DL + HKSJ) -0.04948, 95% CI [-0.06741, -0.03156], p = 0.0001; tau = 0.00849, I2 = 9%, Q p = 0.356
+  95% prediction interval for a new set [-0.07569, -0.02327]
+  sets better 0/12 (sign test one-sided p = 1.000), Wilcoxon p = 0.000, significantly worse on 7
+  adopt: False
+    FAIL RE mean -0.04948 > 0 with p = 0.0001 < 0.05
+    FAIL 0/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    FAIL 7 sets significantly worse <= 0
+
+- own mull - split mull
+  MSH    -0.07330 ± 0.03159  z -2.32
+  EOE    +0.00986 ± 0.03077  z +0.32
+  SOS    -0.09642 ± 0.03567  z -2.70
+  TDM    -0.01831 ± 0.05739  z -0.32
+  FDN    -0.04789 ± 0.02394  z -2.00
+  DFT    -0.11764 ± 0.06671  z -1.76
+  LCI    -0.01723 ± 0.02767  z -0.62
+  FIN    -0.06856 ± 0.04134  z -1.66
+  MKM    -0.02569 ± 0.04047  z -0.63
+  BLB    -0.04827 ± 0.02551  z -1.89
+  DSK    -0.07797 ± 0.02524  z -3.09
+  OTJ    -0.05501 ± 0.01417  z -3.88
+  fixed effect -0.05114 ± 0.00798
+  random effects (DL + HKSJ) -0.05114, 95% CI [-0.06870, -0.03358], p = 0.0001; tau = 0.00000, I2 = 0%, Q p = 0.472
+  95% prediction interval for a new set [-0.06892, -0.03336]
+  sets better 1/12 (sign test one-sided p = 1.000), Wilcoxon p = 0.001, significantly worse on 5
+  adopt: False
+    FAIL RE mean -0.05114 > 0 with p = 0.0001 < 0.05
+    FAIL 1/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    FAIL 5 sets significantly worse <= 0
+
+champion - cached game FM
+  MSH    -0.03058 ± 0.09013  z -0.34
+  EOE    -0.00067 ± 0.01807  z -0.04
+  SOS    -0.00398 ± 0.02557  z -0.16
+  TDM    +0.01050 ± 0.01182  z +0.89
+  FDN    -0.00069 ± 0.02971  z -0.02
+  DFT    +0.00806 ± 0.02113  z +0.38
+  LCI    +0.01288 ± 0.02709  z +0.48
+  FIN    -0.04543 ± 0.03809  z -1.19
+  MKM    -0.07147 ± 0.06914  z -1.03
+  BLB    -0.00071 ± 0.01476  z -0.05
+  DSK    +0.00252 ± 0.01130  z +0.22
+  OTJ    -0.00422 ± 0.01233  z -0.34
+  fixed effect +0.00111 ± 0.00523
+  random effects (DL + HKSJ) +0.00111, 95% CI [-0.01041, +0.01263], p = 0.8360; tau = 0.00000, I2 = 0%, Q p = 0.972
+  95% prediction interval for a new set [-0.01055, +0.01277]
+  sets better 4/12 (sign test one-sided p = 0.927), Wilcoxon p = 0.424, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.00111 > 0 with p = 0.8360 < 0.05
+    FAIL 4/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+refit - champion
+  MSH    +0.11743 ± 0.03215  z +3.65
+  EOE    +0.01465 ± 0.13238  z +0.11
+  SOS    -0.09241 ± 0.20514  z -0.45
+  TDM    +0.10014 ± 0.05300  z +1.89
+  FDN    -0.01018 ± 0.04117  z -0.25
+  DFT    +0.11723 ± 0.11180  z +1.05
+  LCI    +0.24489 ± 0.12728  z +1.92
+  FIN    +0.07951 ± 0.03418  z +2.33
+  MKM    +0.05043 ± 0.05276  z +0.96
+  BLB    +0.03459 ± 0.03725  z +0.93
+  DSK    +0.03629 ± 0.04161  z +0.87
+  OTJ    +0.05977 ± 0.04395  z +1.36
+  fixed effect +0.06374 ± 0.01391
+  random effects (DL + HKSJ) +0.06374, 95% CI [+0.03313, +0.09436], p = 0.0008; tau = 0.00000, I2 = 0%, Q p = 0.461
+  95% prediction interval for a new set [+0.03275, +0.09474]
+  sets better 10/12 (sign test one-sided p = 0.019), Wilcoxon p = 0.016, significantly worse on 0
+  adopt: True
+    PASS RE mean +0.06374 > 0 with p = 0.0008 < 0.05
+    PASS 10/12 sets better >= 8
+    PASS RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+split mull - champion
+  MSH    +0.03026 ± 0.02761  z +1.10
+  EOE    -0.01207 ± 0.01182  z -1.02
+  SOS    -0.00533 ± 0.00432  z -1.23
+  TDM    -0.07099 ± 0.05921  z -1.20
+  FDN    -0.01041 ± 0.01305  z -0.80
+  DFT    -0.02511 ± 0.03455  z -0.73
+  LCI    +0.00471 ± 0.00261  z +1.81
+  FIN    +0.00219 ± 0.00537  z +0.41
+  MKM    -0.00485 ± 0.00733  z -0.66
+  BLB    -0.00177 ± 0.00375  z -0.47
+  DSK    +0.00353 ± 0.00355  z +1.00
+  OTJ    +0.00544 ± 0.00405  z +1.34
+  fixed effect +0.00152 ± 0.00144
+  random effects (DL + HKSJ) +0.00123, 95% CI [-0.00229, +0.00476], p = 0.4573; tau = 0.00170, I2 = 9%, Q p = 0.353
+  95% prediction interval for a new set [-0.00398, +0.00645]
+  sets better 5/12 (sign test one-sided p = 0.806), Wilcoxon p = 0.380, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.00123 > 0 with p = 0.4573 < 0.05
+    FAIL 5/12 sets better >= 8
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0

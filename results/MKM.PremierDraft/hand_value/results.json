@@ -1,0 +1,117 @@
+{
+ "set": "MKM",
+ "games": 919942,
+ "valid games": 814812,
+ "dropped (hand != 7 or hand card not in deck)": 0.11427894367253588,
+ "mulligan share": 0.11332236162714605,
+ "cards in tables": 265,
+ "lambda deck": 0.03,
+ "split-half r (train, halves)": 0.6885368530813802,
+ "reliability train (Spearman-Brown)": 0.8155425827098554,
+ "split-half r (test, halves)": 0.5911511021533811,
+ "reliability test (Spearman-Brown)": 0.7430483520431818,
+ "hv tau (sd of true logit hand values)": 0.17005944474586576,
+ "median se_logit (train, table cards)": 0.030965818121814533,
+ "cluster/HC se ratio (pp, median)": 1.001355413939754,
+ "balance index sd (train)": 0.07193524673346889,
+ "corr balance index vs HV (train)": 0.18169659052737594,
+ "corr hv full vs core (L in 3-4, no mulligan)": 0.9843518481375317,
+ "corr hv play vs draw": 0.7778377441285695,
+ "ratings vs test-game hand value": {
+  "GP WR": {
+   "pearson vs test HV": 0.5234685410625591,
+   "spearman vs test HV": 0.5161112472433228,
+   "pearson disattenuated (test HV reliability)": 0.6072703109971316,
+   "skill tilt": 0.7151996855348778,
+   "cards": 265
+  },
+  "OH WR": {
+   "pearson vs test HV": 0.7722454436196257,
+   "spearman vs test HV": 0.7425522895212255,
+   "pearson disattenuated (test HV reliability)": 0.8958737611262925,
+   "skill tilt": 0.5971443465494296,
+   "cards": 264
+  },
+  "GD WR": {
+   "pearson vs test HV": 0.5424558919176643,
+   "spearman vs test HV": 0.5171507241517173,
+   "pearson disattenuated (test HV reliability)": 0.6292973356496281,
+   "skill tilt": 0.6176851233130215,
+   "cards": 265
+  },
+  "GIH WR": {
+   "pearson vs test HV": 0.7025205258610322,
+   "spearman vs test HV": 0.6850094791008396,
+   "pearson disattenuated (test HV reliability)": 0.8149866224157921,
+   "skill tilt": 0.6875833153261015,
+   "cards": 265
+  },
+  "IWD": {
+   "pearson vs test HV": 0.7026674718392573,
+   "spearman vs test HV": 0.6667296457266666,
+   "pearson disattenuated (test HV reliability)": 0.815157092888985,
+   "skill tilt": 0.32444672626148763,
+   "cards": 265
+  },
+  "deck model w": {
+   "pearson vs test HV": 0.43302648250892367,
+   "spearman vs test HV": 0.4533221991513948,
+   "pearson disattenuated (test HV reliability)": 0.5023494366431497,
+   "skill tilt": 0.03863357879707895,
+   "cards": 265
+  },
+  "HV train": {
+   "pearson vs test HV": 0.8132196565471944,
+   "spearman vs test HV": 0.7783212318962072,
+   "pearson disattenuated (test HV reliability)": 0.9434075116299616,
+   "skill tilt": 0.19619387920588754,
+   "cards": 265
+  },
+  "HV train shrunk": {
+   "pearson vs test HV": 0.8156397179103111,
+   "spearman vs test HV": 0.7820367814906048,
+   "pearson disattenuated (test HV reliability)": 0.946214999189059,
+   "skill tilt": 0.19077447216972346,
+   "cards": 265
+  }
+ },
+ "deck vs hand": {
+  "slope w on HV (raw)": 0.0064007398214705885,
+  "slope EIV-corrected": 0.007848443425482998,
+  "mean cards drawn after the opener": 9.770647048950195,
+  "deck size": 40.0,
+  "q": 0.2960802136045514,
+  "kappa if drawn = hand value (lambda 1)": 0.5956164101746377,
+  "kappa if only the opener matters (lambda 0)": 0.175,
+  "implied lambda (value when drawn later / in hand)": -0.6778522804505624
+ },
+ "prior experiment (test games)": {
+  "ridge": {
+   "val logloss": 0.6593102810918693,
+   "lambda": 0.03,
+   "kappa": 0.0,
+   "test logloss": 0.6605351329518561,
+   "vs ridge x1000": 0.0,
+   "vs ridge se x1000 (draft cluster)": 0.0
+  },
+  "ridge + kappa*HV": {
+   "val logloss": 0.6593734104493185,
+   "lambda": 0.03,
+   "kappa": 0.047265010284987675,
+   "test logloss": 0.6605534565068792,
+   "vs ridge x1000": 0.018323555023161898,
+   "vs ridge se x1000 (draft cluster)": 0.019907877803600975
+  },
+  "kappa*HV only": {
+   "val logloss": 0.6593914028751774,
+   "lambda": 0.0,
+   "kappa": 0.034724771424833836,
+   "test logloss": 0.660524123809121,
+   "vs ridge x1000": -0.011009142735109086,
+   "vs ridge se x1000 (draft cluster)": 0.031419645438588995
+  }
+ },
+ "seconds": 403.4220051765442,
+ "seconds total": 413.36629915237427,
+ "max rss GB": 2.5177154541015625
+}

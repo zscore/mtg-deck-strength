@@ -1,0 +1,165 @@
+=== EOE: 104377 drafts, 563418 games, 130002 builds; alpha* [0.55, 0.5, 0.55]; r(blend* per-build at main, T1 blend*) [0.9999, 0.9998, 0.9999] [2s]
+  champion                     b +1.445 ± 0.840 (raw units)   b per within-sd +0.0406 ± 0.0236   within/overall sd 0.13   LR 4.5
+  LightGBM                     b +1.211 ± 0.655 (raw units)   b per within-sd +0.0429 ± 0.0232   within/overall sd 0.15   LR 5.0
+  blend*                       b +0.387 ± 0.196 (raw units)   b per within-sd +0.0463 ± 0.0235   within/overall sd 0.13   LR 5.8
+      blend* - champion: +0.0058 ± 0.0096 (b per within-sd)
+      blend* - LightGBM: +0.0034 ± 0.0098 (b per within-sd)
+      LightGBM - champion: +0.0023 ± 0.0188 (b per within-sd)
+  sensitivity: match-number control
+  champion                     b +0.797 ± 0.625 (raw units)   b per within-sd +0.0224 ± 0.0175   within/overall sd 0.13   LR 1.8
+  LightGBM                     b +0.502 ± 0.485 (raw units)   b per within-sd +0.0178 ± 0.0172   within/overall sd 0.15   LR 1.2
+  blend*                       b +0.184 ± 0.145 (raw units)   b per within-sd +0.0220 ± 0.0173   within/overall sd 0.13   LR 1.8
+      blend* - champion: -0.0004 ± 0.0071 (b per within-sd)
+      blend* - LightGBM: +0.0042 ± 0.0072 (b per within-sd)
+      LightGBM - champion: -0.0045 ± 0.0139 (b per within-sd)
+EOE done [31s, peak RSS 3.66 GB]
+=== SOS: 107459 drafts, 582712 games, 132857 builds; alpha* [0.8, 0.75, 0.75]; r(blend* per-build at main, T1 blend*) [0.9999, 1.0, 1.0] [2s]
+  champion                     b +0.315 ± 0.666 (raw units)   b per within-sd +0.0100 ± 0.0212   within/overall sd 0.12   LR 0.3
+  LightGBM                     b -0.022 ± 0.587 (raw units)   b per within-sd -0.0009 ± 0.0214   within/overall sd 0.13   LR 0.0
+  blend*                       b +0.072 ± 0.189 (raw units)   b per within-sd +0.0082 ± 0.0213   within/overall sd 0.12   LR 0.2
+      blend* - champion: -0.0019 ± 0.0041 (b per within-sd)
+      blend* - LightGBM: +0.0090 ± 0.0134 (b per within-sd)
+      LightGBM - champion: -0.0109 ± 0.0170 (b per within-sd)
+  sensitivity: match-number control
+  champion                     b +0.164 ± 0.503 (raw units)   b per within-sd +0.0052 ± 0.0160   within/overall sd 0.12   LR 0.1
+  LightGBM                     b -0.097 ± 0.438 (raw units)   b per within-sd -0.0035 ± 0.0160   within/overall sd 0.13   LR 0.1
+  blend*                       b +0.030 ± 0.142 (raw units)   b per within-sd +0.0034 ± 0.0160   within/overall sd 0.12   LR 0.0
+      blend* - champion: -0.0018 ± 0.0030 (b per within-sd)
+      blend* - LightGBM: +0.0069 ± 0.0098 (b per within-sd)
+      LightGBM - champion: -0.0088 ± 0.0125 (b per within-sd)
+SOS done [12s, peak RSS 3.80 GB]
+=== TDM: 101323 drafts, 552428 games, 126902 builds; alpha* [0.75, 0.75, 0.75]; r(blend* per-build at main, T1 blend*) [1.0, 0.9999, 0.9999] [2s]
+  champion                     b +0.159 ± 0.714 (raw units)   b per within-sd +0.0048 ± 0.0214   within/overall sd 0.12   LR 0.1
+  LightGBM                     b +0.324 ± 0.643 (raw units)   b per within-sd +0.0109 ± 0.0217   within/overall sd 0.13   LR 0.4
+  blend*                       b +0.067 ± 0.190 (raw units)   b per within-sd +0.0076 ± 0.0214   within/overall sd 0.12   LR 0.2
+      blend* - champion: +0.0028 ± 0.0054 (b per within-sd)
+      blend* - LightGBM: -0.0033 ± 0.0119 (b per within-sd)
+      LightGBM - champion: +0.0061 ± 0.0160 (b per within-sd)
+  sensitivity: match-number control
+  champion                     b +0.159 ± 0.544 (raw units)   b per within-sd +0.0048 ± 0.0163   within/overall sd 0.12   LR 0.1
+  LightGBM                     b -0.155 ± 0.486 (raw units)   b per within-sd -0.0053 ± 0.0164   within/overall sd 0.13   LR 0.1
+  blend*                       b +0.027 ± 0.144 (raw units)   b per within-sd +0.0031 ± 0.0163   within/overall sd 0.12   LR 0.1
+      blend* - champion: -0.0017 ± 0.0049 (b per within-sd)
+      blend* - LightGBM: +0.0084 ± 0.0088 (b per within-sd)
+      LightGBM - champion: -0.0101 ± 0.0121 (b per within-sd)
+TDM done [32s, peak RSS 4.06 GB]
+=== FDN: 130935 drafts, 765317 games, 161556 builds; alpha* [0.65, 0.7, 0.65]; r(blend* per-build at main, T1 blend*) [0.9999, 1.0, 0.9999] [2s]
+  champion                     b +1.173 ± 0.581 (raw units)   b per within-sd +0.0397 ± 0.0196   within/overall sd 0.13   LR 5.8
+  LightGBM                     b +0.856 ± 0.520 (raw units)   b per within-sd +0.0334 ± 0.0203   within/overall sd 0.14   LR 4.2
+  blend*                       b +0.323 ± 0.161 (raw units)   b per within-sd +0.0395 ± 0.0196   within/overall sd 0.13   LR 5.7
+      blend* - champion: -0.0002 ± 0.0059 (b per within-sd)
+      blend* - LightGBM: +0.0061 ± 0.0110 (b per within-sd)
+      LightGBM - champion: -0.0063 ± 0.0159 (b per within-sd)
+  sensitivity: match-number control
+  champion                     b +0.825 ± 0.428 (raw units)   b per within-sd +0.0279 ± 0.0145   within/overall sd 0.13   LR 3.9
+  LightGBM                     b +0.482 ± 0.379 (raw units)   b per within-sd +0.0188 ± 0.0148   within/overall sd 0.14   LR 1.8
+  blend*                       b +0.210 ± 0.119 (raw units)   b per within-sd +0.0256 ± 0.0145   within/overall sd 0.13   LR 3.2
+      blend* - champion: -0.0023 ± 0.0056 (b per within-sd)
+      blend* - LightGBM: +0.0068 ± 0.0078 (b per within-sd)
+      LightGBM - champion: -0.0091 ± 0.0116 (b per within-sd)
+FDN done [39s, peak RSS 4.06 GB]
+=== DFT: 141166 drafts, 824163 games, 177392 builds; alpha* [0.55, 0.6, 0.65]; r(blend* per-build at main, T1 blend*) [0.9999, 1.0, 1.0] [3s]
+  champion                     b +0.496 ± 0.613 (raw units)   b per within-sd +0.0152 ± 0.0188   within/overall sd 0.12   LR 1.0
+  LightGBM                     b +0.707 ± 0.542 (raw units)   b per within-sd +0.0249 ± 0.0190   within/overall sd 0.14   LR 2.8
+  blend*                       b +0.184 ± 0.166 (raw units)   b per within-sd +0.0210 ± 0.0189   within/overall sd 0.12   LR 1.9
+      blend* - champion: +0.0057 ± 0.0061 (b per within-sd)
+      blend* - LightGBM: -0.0040 ± 0.0081 (b per within-sd)
+      LightGBM - champion: +0.0097 ± 0.0139 (b per within-sd)
+  sensitivity: match-number control
+  champion                     b +0.167 ± 0.425 (raw units)   b per within-sd +0.0051 ± 0.0131   within/overall sd 0.12   LR 0.2
+  LightGBM                     b +0.141 ± 0.380 (raw units)   b per within-sd +0.0050 ± 0.0133   within/overall sd 0.14   LR 0.2
+  blend*                       b +0.048 ± 0.115 (raw units)   b per within-sd +0.0054 ± 0.0131   within/overall sd 0.12   LR 0.2
+      blend* - champion: +0.0003 ± 0.0044 (b per within-sd)
+      blend* - LightGBM: +0.0004 ± 0.0058 (b per within-sd)
+      LightGBM - champion: -0.0001 ± 0.0099 (b per within-sd)
+DFT done [18s, peak RSS 4.23 GB]
+=== LCI: 134970 drafts, 793671 games, 170681 builds; alpha* [0.65, 0.65, 0.65]; r(blend* per-build at main, T1 blend*) [0.9999, 0.9999, 0.9999] [3s]
+  champion                     b -0.011 ± 0.573 (raw units)   b per within-sd -0.0004 ± 0.0197   within/overall sd 0.12   LR 0.0
+  LightGBM                     b -0.448 ± 0.455 (raw units)   b per within-sd -0.0185 ± 0.0188   within/overall sd 0.14   LR 1.4
+  blend*                       b -0.070 ± 0.175 (raw units)   b per within-sd -0.0077 ± 0.0194   within/overall sd 0.12   LR 0.2
+      blend* - champion: -0.0074 ± 0.0052 (b per within-sd)
+      blend* - LightGBM: +0.0107 ± 0.0088 (b per within-sd)
+      LightGBM - champion: -0.0181 ± 0.0137 (b per within-sd)
+  sensitivity: match-number control
+  champion                     b -0.017 ± 0.398 (raw units)   b per within-sd -0.0006 ± 0.0137   within/overall sd 0.12   LR 0.0
+  LightGBM                     b -0.354 ± 0.325 (raw units)   b per within-sd -0.0146 ± 0.0134   within/overall sd 0.14   LR 1.2
+  blend*                       b -0.056 ± 0.123 (raw units)   b per within-sd -0.0062 ± 0.0136   within/overall sd 0.12   LR 0.2
+      blend* - champion: -0.0056 ± 0.0035 (b per within-sd)
+      blend* - LightGBM: +0.0084 ± 0.0060 (b per within-sd)
+      LightGBM - champion: -0.0140 ± 0.0093 (b per within-sd)
+LCI done [38s, peak RSS 4.23 GB]
+=== FIN: 140237 drafts, 769659 games, 173242 builds; alpha* [0.8, 0.75, 0.8]; r(blend* per-build at main, T1 blend*) [0.9999, 0.9999, 0.9999] [3s]
+  champion                     b +0.413 ± 0.624 (raw units)   b per within-sd +0.0124 ± 0.0188   within/overall sd 0.12   LR 0.6
+  LightGBM                     b +0.361 ± 0.499 (raw units)   b per within-sd +0.0136 ± 0.0185   within/overall sd 0.13   LR 0.9
+  blend*                       b +0.123 ± 0.171 (raw units)   b per within-sd +0.0134 ± 0.0187   within/overall sd 0.11   LR 0.7
+      blend* - champion: +0.0010 ± 0.0035 (b per within-sd)
+      blend* - LightGBM: -0.0002 ± 0.0116 (b per within-sd)
+      LightGBM - champion: +0.0012 ± 0.0148 (b per within-sd)
+  sensitivity: match-number control
+  champion                     b +0.179 ± 0.464 (raw units)   b per within-sd +0.0054 ± 0.0139   within/overall sd 0.12   LR 0.1
+  LightGBM                     b +0.130 ± 0.377 (raw units)   b per within-sd +0.0050 ± 0.0140   within/overall sd 0.13   LR 0.3
+  blend*                       b +0.050 ± 0.127 (raw units)   b per within-sd +0.0054 ± 0.0140   within/overall sd 0.11   LR 0.2
+      blend* - champion: +0.0001 ± 0.0029 (b per within-sd)
+      blend* - LightGBM: +0.0005 ± 0.0086 (b per within-sd)
+      LightGBM - champion: -0.0004 ± 0.0111 (b per within-sd)
+FIN done [36s, peak RSS 4.23 GB]
+=== MKM: 157553 drafts, 919942 games, 194890 builds; alpha* [0.65, 0.7, 0.65]; r(blend* per-build at main, T1 blend*) [0.9999, 0.9999, 0.9999] [3s]
+  champion                     b -0.778 ± 0.658 (raw units)   b per within-sd -0.0231 ± 0.0195   within/overall sd 0.12   LR 2.2
+  LightGBM                     b -0.193 ± 0.570 (raw units)   b per within-sd -0.0066 ± 0.0194   within/overall sd 0.13   LR 0.2
+  blend*                       b -0.176 ± 0.186 (raw units)   b per within-sd -0.0187 ± 0.0197   within/overall sd 0.12   LR 1.4
+      blend* - champion: +0.0044 ± 0.0056 (b per within-sd)
+      blend* - LightGBM: -0.0120 ± 0.0102 (b per within-sd)
+      LightGBM - champion: +0.0165 ± 0.0151 (b per within-sd)
+  sensitivity: match-number control
+  champion                     b -0.896 ± 0.446 (raw units)   b per within-sd -0.0266 ± 0.0132   within/overall sd 0.12   LR 4.0
+  LightGBM                     b -0.549 ± 0.385 (raw units)   b per within-sd -0.0187 ± 0.0131   within/overall sd 0.13   LR 2.0
+  blend*                       b -0.244 ± 0.125 (raw units)   b per within-sd -0.0259 ± 0.0132   within/overall sd 0.12   LR 3.8
+      blend* - champion: +0.0007 ± 0.0039 (b per within-sd)
+      blend* - LightGBM: -0.0071 ± 0.0071 (b per within-sd)
+      LightGBM - champion: +0.0078 ± 0.0107 (b per within-sd)
+MKM done [51s, peak RSS 4.24 GB]
+=== BLB: 154585 drafts, 898354 games, 187018 builds; alpha* [0.75, 0.7, 0.75]; r(blend* per-build at main, T1 blend*) [1.0, 0.9999, 0.9999] [3s]
+  champion                     b +0.609 ± 0.695 (raw units)   b per within-sd +0.0178 ± 0.0203   within/overall sd 0.11   LR 1.2
+  LightGBM                     b +1.143 ± 0.553 (raw units)   b per within-sd +0.0412 ± 0.0200   within/overall sd 0.14   LR 6.3
+  blend*                       b +0.245 ± 0.186 (raw units)   b per within-sd +0.0266 ± 0.0202   within/overall sd 0.11   LR 2.6
+      blend* - champion: +0.0089 ± 0.0045 (b per within-sd)
+      blend* - LightGBM: -0.0146 ± 0.0112 (b per within-sd)
+      LightGBM - champion: +0.0234 ± 0.0153 (b per within-sd)
+  sensitivity: match-number control
+  champion                     b +0.227 ± 0.488 (raw units)   b per within-sd +0.0066 ± 0.0142   within/overall sd 0.11   LR 0.2
+  LightGBM                     b +0.395 ± 0.390 (raw units)   b per within-sd +0.0141 ± 0.0141   within/overall sd 0.14   LR 1.1
+  blend*                       b +0.086 ± 0.131 (raw units)   b per within-sd +0.0093 ± 0.0142   within/overall sd 0.11   LR 0.5
+      blend* - champion: +0.0027 ± 0.0031 (b per within-sd)
+      blend* - LightGBM: -0.0048 ± 0.0079 (b per within-sd)
+      LightGBM - champion: +0.0075 ± 0.0107 (b per within-sd)
+BLB done [36s, peak RSS 4.24 GB]
+=== DSK: 167672 drafts, 977322 games, 207049 builds; alpha* [0.55, 0.6, 0.55]; r(blend* per-build at main, T1 blend*) [0.9998, 0.9999, 0.9999] [3s]
+  champion                     b +0.508 ± 0.589 (raw units)   b per within-sd +0.0163 ± 0.0189   within/overall sd 0.12   LR 1.2
+  LightGBM                     b +0.289 ± 0.481 (raw units)   b per within-sd +0.0112 ± 0.0185   within/overall sd 0.14   LR 0.6
+  blend*                       b +0.131 ± 0.162 (raw units)   b per within-sd +0.0151 ± 0.0187   within/overall sd 0.12   LR 1.0
+      blend* - champion: -0.0012 ± 0.0062 (b per within-sd)
+      blend* - LightGBM: +0.0039 ± 0.0076 (b per within-sd)
+      LightGBM - champion: -0.0051 ± 0.0135 (b per within-sd)
+  sensitivity: match-number control
+  champion                     b +0.012 ± 0.402 (raw units)   b per within-sd +0.0004 ± 0.0129   within/overall sd 0.12   LR 0.0
+  LightGBM                     b -0.021 ± 0.328 (raw units)   b per within-sd -0.0007 ± 0.0126   within/overall sd 0.14   LR 0.0
+  blend*                       b -0.001 ± 0.110 (raw units)   b per within-sd -0.0001 ± 0.0128   within/overall sd 0.12   LR 0.0
+      blend* - champion: -0.0005 ± 0.0043 (b per within-sd)
+      blend* - LightGBM: +0.0006 ± 0.0053 (b per within-sd)
+      LightGBM - champion: -0.0011 ± 0.0094 (b per within-sd)
+DSK done [44s, peak RSS 4.36 GB]
+=== OTJ: 195312 drafts, 1132415 games, 240717 builds; alpha* [0.65, 0.7, 0.65]; r(blend* per-build at main, T1 blend*) [0.9999, 0.9999, 0.9999] [5s]
+  champion                     b -0.197 ± 0.605 (raw units)   b per within-sd -0.0055 ± 0.0168   within/overall sd 0.12   LR 0.2
+  LightGBM                     b +0.129 ± 0.478 (raw units)   b per within-sd +0.0046 ± 0.0171   within/overall sd 0.14   LR 0.2
+  blend*                       b -0.017 ± 0.158 (raw units)   b per within-sd -0.0018 ± 0.0169   within/overall sd 0.12   LR 0.0
+      blend* - champion: +0.0036 ± 0.0047 (b per within-sd)
+      blend* - LightGBM: -0.0065 ± 0.0084 (b per within-sd)
+      LightGBM - champion: +0.0101 ± 0.0128 (b per within-sd)
+  sensitivity: match-number control
+  champion                     b -0.270 ± 0.432 (raw units)   b per within-sd -0.0075 ± 0.0120   within/overall sd 0.12   LR 0.4
+  LightGBM                     b +0.074 ± 0.341 (raw units)   b per within-sd +0.0027 ± 0.0122   within/overall sd 0.14   LR 0.2
+  blend*                       b -0.037 ± 0.113 (raw units)   b per within-sd -0.0040 ± 0.0121   within/overall sd 0.12   LR 0.1
+      blend* - champion: +0.0035 ± 0.0035 (b per within-sd)
+      blend* - LightGBM: -0.0067 ± 0.0060 (b per within-sd)
+      LightGBM - champion: +0.0102 ± 0.0093 (b per within-sd)
+OTJ done [23s, peak RSS 4.36 GB]

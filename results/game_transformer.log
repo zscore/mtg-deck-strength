@@ -1,0 +1,1075 @@
+=== MSH: 68609 drafts, 377376 games (train 266251, val 56679, test 54446), 83430 builds, 339 cards, PickNet vectors for 339, teacher yes [3s, peak RSS 3.13 GB]
+  prepared ['MSH'] [peak RSS 3.13 GB]
+  [MSH] champion val 0.66031 (1e-05, 0.01) epochs [40, 40] [28s]
+    seed 0: val 0.66031 at start MSH 0.66031
+    seed 0 epoch  0 val 0.66026 (-0.00006) best MSH 0.66026 [14s]
+    seed 0 epoch  1 val 0.66023 (-0.00009) best MSH 0.66023 [26s]
+    seed 0 epoch  2 val 0.66021 (-0.00011) best MSH 0.66021 [38s]
+    seed 0 epoch  3 val 0.66015 (-0.00017) best MSH 0.66015 [51s]
+    seed 0 epoch  4 val 0.66018 (-0.00013) - MSH 0.66018 [63s]
+    seed 0 epoch  5 val 0.66008 (-0.00023) best MSH 0.66008 [75s]
+    seed 0 epoch  6 val 0.66024 (-0.00007) - MSH 0.66024 [87s]
+    seed 0 epoch  7 val 0.66010 (-0.00021) - MSH 0.66010 [99s]
+    seed 0 epoch  8 val 0.66021 (-0.00011) drop MSH 0.66021 [111s]
+    seed 0 epoch  9 val 0.66007 (-0.00025) best MSH 0.66007 [123s]
+    seed 0 epoch 10 val 0.66006 (-0.00025) best MSH 0.66006 [135s]
+    seed 0 epoch 11 val 0.66004 (-0.00028) best MSH 0.66004 [147s]
+    seed 0 epoch 12 val 0.66012 (-0.00020) - MSH 0.66012 [159s]
+    seed 0 epoch 13 val 0.66004 (-0.00027) - MSH 0.66004 [171s]
+    seed 0 epoch 14 val 0.66007 (-0.00024) drop MSH 0.66007 [183s]
+    seed 0 epoch 15 val 0.66007 (-0.00024) - MSH 0.66007 [195s]
+    seed 0 epoch 16 val 0.66007 (-0.00025) - MSH 0.66007 [208s]
+    seed 0 epoch 17 val 0.66006 (-0.00026) stop MSH 0.66006 [220s]
+    seed 1: val 0.66013 at start MSH 0.66013
+    seed 1 epoch  0 val 0.66016 (+0.00003) - MSH 0.66016 [13s]
+    seed 1 epoch  1 val 0.66015 (+0.00003) - MSH 0.66015 [26s]
+    seed 1 epoch  2 val 0.66015 (+0.00002) drop MSH 0.66015 [38s]
+    seed 1 epoch  3 val 0.66020 (+0.00007) - MSH 0.66020 [50s]
+    seed 1 epoch  4 val 0.66018 (+0.00005) - MSH 0.66018 [62s]
+    seed 1 epoch  5 val 0.66018 (+0.00005) drop MSH 0.66018 [74s]
+    seed 1 epoch  6 val 0.66011 (-0.00002) best MSH 0.66011 [86s]
+    seed 1 epoch  7 val 0.66011 (-0.00001) - MSH 0.66011 [98s]
+    seed 1 epoch  8 val 0.66017 (+0.00004) - MSH 0.66017 [110s]
+    seed 1 epoch  9 val 0.66013 (+0.00001) stop MSH 0.66013 [122s]
+  [MSH] SC-GLL
+  all                  champion -655.162  transformer -655.157  transformer FM path -655.157  cached game FM -655.146
+      transformer - champion: +0.0049 ± 0.0119 (x1000 nats/game)
+      transformer FM path - champion: +0.0042 ± 0.0118 (x1000 nats/game)
+      transformer - transformer FM path: +0.0007 ± 0.0007 (x1000 nats/game)
+      champion - cached game FM: -0.0153 ± 0.1110 (x1000 nats/game)
+  experienced          champion -660.459  transformer -660.455  transformer FM path -660.455  cached game FM -660.459
+      transformer - champion: +0.0038 ± 0.0107 (x1000 nats/game)
+      transformer FM path - champion: +0.0031 ± 0.0107 (x1000 nats/game)
+      transformer - transformer FM path: +0.0007 ± 0.0007 (x1000 nats/game)
+      champion - cached game FM: +0.0007 ± 0.1081 (x1000 nats/game)
+  match 1              champion -654.522  transformer -654.535  transformer FM path -654.537  cached game FM -654.526
+      transformer - champion: -0.0137 ± 0.0368 (x1000 nats/game)
+      transformer FM path - champion: -0.0154 ± 0.0363 (x1000 nats/game)
+      transformer - transformer FM path: +0.0017 ± 0.0019 (x1000 nats/game)
+      champion - cached game FM: +0.0049 ± 0.2067 (x1000 nats/game)
+  main build           champion -653.389  transformer -653.386  transformer FM path -653.387  cached game FM -653.383
+      transformer - champion: +0.0024 ± 0.0121 (x1000 nats/game)
+      transformer FM path - champion: +0.0016 ± 0.0119 (x1000 nats/game)
+      transformer - transformer FM path: +0.0008 ± 0.0008 (x1000 nats/game)
+      champion - cached game FM: -0.0053 ± 0.1066 (x1000 nats/game)
+  experienced dl-ctx   champion -663.079  transformer -663.099  transformer FM path -663.100  cached game FM -663.062
+      transformer - champion: -0.0200 ± 0.0336 (x1000 nats/game)
+      transformer FM path - champion: -0.0204 ± 0.0335 (x1000 nats/game)
+      transformer - transformer FM path: +0.0004 ± 0.0005 (x1000 nats/game)
+      champion - cached game FM: -0.0172 ± 0.1117 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.813  transformer -660.883  transformer FM path -660.885  cached game FM -660.802
+      transformer - champion: -0.0701 ± 0.0764 (x1000 nats/game)
+      transformer FM path - champion: -0.0715 ± 0.0754 (x1000 nats/game)
+      transformer - transformer FM path: +0.0014 ± 0.0019 (x1000 nats/game)
+      champion - cached game FM: -0.0114 ± 0.2509 (x1000 nats/game)
+  champion             draft spearman 0.2683 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.243
+  transformer          draft spearman 0.2667 (-0.0015)  raw -0.0012  strat -0.0010  sd 0.239
+  transformer FM path  draft spearman 0.2668 (-0.0015)  raw -0.0012  strat -0.0010  sd 0.239
+  cached game FM       draft spearman 0.2730 (+0.0047)  raw +0.0039  strat +0.0011  sd 0.251
+  residual sd (test drafts) 0.000  FM-path score sd (test drafts) 0.239  r(residual, champion score) test 0.015  r(transformer, champion) test 0.995  r(transformer, teacher) test 0.973
+MSH done: transformer - champion (experienced) +0.0038 ± 0.0107 [384s, peak RSS 3.13 GB]
+=== FDN: 130935 drafts, 765317 games (train 537244, val 115154, test 112919), 161556 builds, 286 cards, PickNet vectors for 286, teacher yes [5s, peak RSS 5.66 GB]
+  prepared ['FDN'] [peak RSS 5.66 GB]
+  [FDN] champion val 0.66070 (1e-05, 0.001) epochs [29, 26] [32s]
+    seed 0: val 0.66070 at start FDN 0.66070
+    seed 0 epoch  0 val 0.66123 (+0.00052) - FDN 0.66123 [24s]
+    seed 0 epoch  1 val 0.66086 (+0.00015) - FDN 0.66086 [45s]
+    seed 0 epoch  2 val 0.66075 (+0.00005) drop FDN 0.66075 [66s]
+    seed 0 epoch  3 val 0.66071 (+0.00001) - FDN 0.66071 [87s]
+    seed 0 epoch  4 val 0.66119 (+0.00049) - FDN 0.66119 [109s]
+    seed 0 epoch  5 val 0.66050 (-0.00020) best FDN 0.66050 [130s]
+    seed 0 epoch  6 val 0.66099 (+0.00029) - FDN 0.66099 [151s]
+    seed 0 epoch  7 val 0.66092 (+0.00021) - FDN 0.66092 [172s]
+    seed 0 epoch  8 val 0.66060 (-0.00010) drop FDN 0.66060 [194s]
+    seed 0 epoch  9 val 0.66100 (+0.00029) - FDN 0.66100 [215s]
+    seed 0 epoch 10 val 0.66091 (+0.00020) - FDN 0.66091 [236s]
+    seed 0 epoch 11 val 0.66094 (+0.00023) stop FDN 0.66094 [257s]
+    seed 1: val 0.66064 at start FDN 0.66064
+    seed 1 epoch  0 val 0.66065 (+0.00001) - FDN 0.66065 [23s]
+    seed 1 epoch  1 val 0.66084 (+0.00020) - FDN 0.66084 [44s]
+    seed 1 epoch  2 val 0.66068 (+0.00004) drop FDN 0.66068 [66s]
+    seed 1 epoch  3 val 0.66140 (+0.00076) - FDN 0.66140 [87s]
+    seed 1 epoch  4 val 0.66059 (-0.00004) best FDN 0.66059 [108s]
+    seed 1 epoch  5 val 0.66069 (+0.00005) - FDN 0.66069 [129s]
+    seed 1 epoch  6 val 0.66104 (+0.00040) - FDN 0.66104 [151s]
+    seed 1 epoch  7 val 0.66095 (+0.00031) drop FDN 0.66095 [172s]
+    seed 1 epoch  8 val 0.66081 (+0.00017) - FDN 0.66081 [193s]
+    seed 1 epoch  9 val 0.66093 (+0.00029) - FDN 0.66093 [214s]
+    seed 1 epoch 10 val 0.66101 (+0.00037) stop FDN 0.66101 [236s]
+  [FDN] SC-GLL
+  all                  champion -658.385  transformer -658.410  transformer FM path -658.410  cached game FM -658.383
+      transformer - champion: -0.0249 ± 0.0154 (x1000 nats/game)
+      transformer FM path - champion: -0.0248 ± 0.0154 (x1000 nats/game)
+      transformer - transformer FM path: -0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0020 ± 0.0246 (x1000 nats/game)
+  experienced          champion -660.892  transformer -660.910  transformer FM path -660.910  cached game FM -660.888
+      transformer - champion: -0.0174 ± 0.0179 (x1000 nats/game)
+      transformer FM path - champion: -0.0174 ± 0.0179 (x1000 nats/game)
+      transformer - transformer FM path: -0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0039 ± 0.0299 (x1000 nats/game)
+  match 1              champion -653.736  transformer -653.738  transformer FM path -653.738  cached game FM -653.684
+      transformer - champion: -0.0018 ± 0.0848 (x1000 nats/game)
+      transformer FM path - champion: -0.0018 ± 0.0849 (x1000 nats/game)
+      transformer - transformer FM path: -0.0000 ± 0.0001 (x1000 nats/game)
+      champion - cached game FM: -0.0518 ± 0.0654 (x1000 nats/game)
+  main build           champion -656.811  transformer -656.830  transformer FM path -656.830  cached game FM -656.812
+      transformer - champion: -0.0192 ± 0.0167 (x1000 nats/game)
+      transformer FM path - champion: -0.0192 ± 0.0167 (x1000 nats/game)
+      transformer - transformer FM path: -0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: +0.0014 ± 0.0271 (x1000 nats/game)
+  experienced dl-ctx   champion -661.908  transformer -661.927  transformer FM path -661.927  cached game FM -661.915
+      transformer - champion: -0.0194 ± 0.0206 (x1000 nats/game)
+      transformer FM path - champion: -0.0195 ± 0.0206 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: +0.0071 ± 0.0293 (x1000 nats/game)
+  match 1 dl-ctx       champion -658.737  transformer -658.741  transformer FM path -658.741  cached game FM -658.691
+      transformer - champion: -0.0039 ± 0.0899 (x1000 nats/game)
+      transformer FM path - champion: -0.0039 ± 0.0900 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0001 (x1000 nats/game)
+      champion - cached game FM: -0.0457 ± 0.0644 (x1000 nats/game)
+  champion             draft spearman 0.2766 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.256
+  transformer          draft spearman 0.2760 (-0.0006)  raw -0.0006  strat -0.0013  sd 0.253
+  transformer FM path  draft spearman 0.2760 (-0.0006)  raw -0.0006  strat -0.0012  sd 0.253
+  cached game FM       draft spearman 0.2767 (+0.0001)  raw -0.0001  strat +0.0001  sd 0.254
+  residual sd (test drafts) 0.000  FM-path score sd (test drafts) 0.253  r(residual, champion score) test 0.017  r(transformer, champion) test 0.997  r(transformer, teacher) test 0.997
+FDN done: transformer - champion (experienced) -0.0174 ± 0.0179 [550s, peak RSS 5.66 GB]
+=== BLB: 154585 drafts, 898354 games (train 635246, val 133584, test 129524), 187018 builds, 276 cards, PickNet vectors for 276, teacher yes [6s, peak RSS 5.78 GB]
+  prepared ['BLB'] [peak RSS 5.78 GB]
+  [BLB] champion val 0.65729 (1e-05, 0.001) epochs [38, 33] [46s]
+    seed 0: val 0.65729 at start BLB 0.65729
+    seed 0 epoch  0 val 0.65760 (+0.00031) - BLB 0.65760 [24s]
+    seed 0 epoch  1 val 0.65758 (+0.00028) - BLB 0.65758 [46s]
+    seed 0 epoch  2 val 0.65775 (+0.00045) drop BLB 0.65775 [68s]
+    seed 0 epoch  3 val 0.65748 (+0.00018) - BLB 0.65748 [90s]
+    seed 0 epoch  4 val 0.65752 (+0.00023) - BLB 0.65752 [112s]
+    seed 0 epoch  5 val 0.65741 (+0.00012) drop BLB 0.65741 [134s]
+    seed 0 epoch  6 val 0.65736 (+0.00006) - BLB 0.65736 [156s]
+    seed 0 epoch  7 val 0.65733 (+0.00003) - BLB 0.65733 [178s]
+    seed 0 epoch  8 val 0.65741 (+0.00011) stop BLB 0.65741 [200s]
+    seed 1: val 0.65737 at start BLB 0.65737
+    seed 1 epoch  0 val 0.65796 (+0.00060) - BLB 0.65796 [23s]
+    seed 1 epoch  1 val 0.65761 (+0.00024) - BLB 0.65761 [44s]
+    seed 1 epoch  2 val 0.65749 (+0.00012) drop BLB 0.65749 [66s]
+    seed 1 epoch  3 val 0.65739 (+0.00002) - BLB 0.65739 [87s]
+    seed 1 epoch  4 val 0.65737 (+0.00001) - BLB 0.65737 [108s]
+    seed 1 epoch  5 val 0.65742 (+0.00005) drop BLB 0.65742 [130s]
+    seed 1 epoch  6 val 0.65735 (-0.00002) best BLB 0.65735 [151s]
+    seed 1 epoch  7 val 0.65738 (+0.00001) - BLB 0.65738 [173s]
+    seed 1 epoch  8 val 0.65740 (+0.00003) - BLB 0.65740 [194s]
+    seed 1 epoch  9 val 0.65738 (+0.00001) stop BLB 0.65738 [215s]
+  [BLB] SC-GLL
+  all                  champion -655.972  transformer -655.973  transformer FM path -655.976  cached game FM -655.966
+      transformer - champion: -0.0007 ± 0.0039 (x1000 nats/game)
+      transformer FM path - champion: -0.0036 ± 0.0060 (x1000 nats/game)
+      transformer - transformer FM path: +0.0028 ± 0.0032 (x1000 nats/game)
+      champion - cached game FM: -0.0061 ± 0.0122 (x1000 nats/game)
+  experienced          champion -659.317  transformer -659.317  transformer FM path -659.320  cached game FM -659.318
+      transformer - champion: -0.0002 ± 0.0039 (x1000 nats/game)
+      transformer FM path - champion: -0.0033 ± 0.0053 (x1000 nats/game)
+      transformer - transformer FM path: +0.0032 ± 0.0034 (x1000 nats/game)
+      champion - cached game FM: +0.0008 ± 0.0146 (x1000 nats/game)
+  match 1              champion -653.486  transformer -653.516  transformer FM path -653.527  cached game FM -653.504
+      transformer - champion: -0.0306 ± 0.0329 (x1000 nats/game)
+      transformer FM path - champion: -0.0415 ± 0.0439 (x1000 nats/game)
+      transformer - transformer FM path: +0.0110 ± 0.0117 (x1000 nats/game)
+      champion - cached game FM: +0.0182 ± 0.0313 (x1000 nats/game)
+  main build           champion -654.389  transformer -654.390  transformer FM path -654.391  cached game FM -654.387
+      transformer - champion: -0.0004 ± 0.0039 (x1000 nats/game)
+      transformer FM path - champion: -0.0020 ± 0.0053 (x1000 nats/game)
+      transformer - transformer FM path: +0.0016 ± 0.0022 (x1000 nats/game)
+      champion - cached game FM: -0.0027 ± 0.0112 (x1000 nats/game)
+  experienced dl-ctx   champion -662.200  transformer -662.195  transformer FM path -662.197  cached game FM -662.207
+      transformer - champion: +0.0043 ± 0.0058 (x1000 nats/game)
+      transformer FM path - champion: +0.0022 ± 0.0047 (x1000 nats/game)
+      transformer - transformer FM path: +0.0021 ± 0.0024 (x1000 nats/game)
+      champion - cached game FM: +0.0071 ± 0.0158 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.399  transformer -660.427  transformer FM path -660.438  cached game FM -660.436
+      transformer - champion: -0.0283 ± 0.0311 (x1000 nats/game)
+      transformer FM path - champion: -0.0390 ± 0.0419 (x1000 nats/game)
+      transformer - transformer FM path: +0.0107 ± 0.0117 (x1000 nats/game)
+      champion - cached game FM: +0.0376 ± 0.0480 (x1000 nats/game)
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  champion             draft spearman 0.2720 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.254
+  transformer          draft spearman 0.2725 (+0.0005)  raw +0.0004  strat +0.0003  sd 0.254
+  transformer FM path  draft spearman 0.2725 (+0.0005)  raw +0.0004  strat +0.0003  sd 0.254
+  cached game FM       draft spearman 0.2719 (-0.0002)  raw -0.0003  strat -0.0001  sd 0.252
+  residual sd (test drafts) 0.002  FM-path score sd (test drafts) 0.254  r(residual, champion score) test nan  r(transformer, champion) test 0.999  r(transformer, teacher) test 0.999
+BLB done: transformer - champion (experienced) -0.0002 ± 0.0039 [489s, peak RSS 5.78 GB]
+=== MSH: 68609 drafts, 377376 games (train 266251, val 56679, test 54446), 83430 builds, 339 cards, PickNet vectors for 339, teacher yes [3s, peak RSS 3.12 GB]
+  prepared ['MSH'] [peak RSS 3.12 GB]
+  [MSH] champion val 0.66031 (1e-05, 0.01) epochs [40, 40] [27s]
+    seed 0: val 0.66031 at start MSH 0.66031
+    seed 0 epoch  0 val 0.66064 (+0.00032) - MSH 0.66064 [13s]
+    seed 0 epoch  1 val 0.66022 (-0.00009) best MSH 0.66022 [25s]
+    seed 0 epoch  2 val 0.66020 (-0.00011) best MSH 0.66020 [36s]
+    seed 0 epoch  3 val 0.66015 (-0.00017) best MSH 0.66015 [48s]
+    seed 0 epoch  4 val 0.66018 (-0.00013) - MSH 0.66018 [59s]
+    seed 0 epoch  5 val 0.66008 (-0.00023) best MSH 0.66008 [70s]
+    seed 0 epoch  6 val 0.66025 (-0.00007) - MSH 0.66025 [82s]
+    seed 0 epoch  7 val 0.66010 (-0.00021) - MSH 0.66010 [93s]
+    seed 0 epoch  8 val 0.66021 (-0.00010) drop MSH 0.66021 [104s]
+    seed 0 epoch  9 val 0.66007 (-0.00025) best MSH 0.66007 [116s]
+    seed 0 epoch 10 val 0.66006 (-0.00025) best MSH 0.66006 [127s]
+    seed 0 epoch 11 val 0.66004 (-0.00028) best MSH 0.66004 [138s]
+    seed 0 epoch 12 val 0.66012 (-0.00020) - MSH 0.66012 [150s]
+    seed 0 epoch 13 val 0.66004 (-0.00027) - MSH 0.66004 [161s]
+    seed 0 epoch 14 val 0.66007 (-0.00024) drop MSH 0.66007 [172s]
+    seed 0 epoch 15 val 0.66007 (-0.00024) - MSH 0.66007 [184s]
+    seed 0 epoch 16 val 0.66007 (-0.00025) - MSH 0.66007 [195s]
+    seed 0 epoch 17 val 0.66006 (-0.00026) stop MSH 0.66006 [207s]
+    seed 1: val 0.66013 at start MSH 0.66013
+    seed 1 epoch  0 val 0.66017 (+0.00005) - MSH 0.66017 [13s]
+    seed 1 epoch  1 val 0.66015 (+0.00003) - MSH 0.66015 [24s]
+    seed 1 epoch  2 val 0.66015 (+0.00002) drop MSH 0.66015 [35s]
+    seed 1 epoch  3 val 0.66018 (+0.00005) - MSH 0.66018 [47s]
+    seed 1 epoch  4 val 0.66018 (+0.00005) - MSH 0.66018 [58s]
+    seed 1 epoch  5 val 0.66021 (+0.00008) drop MSH 0.66021 [69s]
+    seed 1 epoch  6 val 0.66011 (-0.00002) best MSH 0.66011 [80s]
+    seed 1 epoch  7 val 0.66011 (-0.00001) - MSH 0.66011 [92s]
+    seed 1 epoch  8 val 0.66015 (+0.00003) - MSH 0.66015 [103s]
+    seed 1 epoch  9 val 0.66013 (+0.00001) stop MSH 0.66013 [114s]
+  [MSH] SC-GLL
+  all                  champion -655.162  transformer -655.158  transformer FM path -655.158  cached game FM -655.146
+      transformer - champion: +0.0040 ± 0.0117 (x1000 nats/game)
+      transformer FM path - champion: +0.0040 ± 0.0117 (x1000 nats/game)
+      transformer - transformer FM path: +0.0001 ± 0.0001 (x1000 nats/game)
+      champion - cached game FM: -0.0153 ± 0.1110 (x1000 nats/game)
+  experienced          champion -660.459  transformer -660.456  transformer FM path -660.456  cached game FM -660.459
+      transformer - champion: +0.0029 ± 0.0107 (x1000 nats/game)
+      transformer FM path - champion: +0.0029 ± 0.0107 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0001 (x1000 nats/game)
+      champion - cached game FM: +0.0007 ± 0.1081 (x1000 nats/game)
+  match 1              champion -654.522  transformer -654.537  transformer FM path -654.537  cached game FM -654.526
+      transformer - champion: -0.0159 ± 0.0361 (x1000 nats/game)
+      transformer FM path - champion: -0.0156 ± 0.0363 (x1000 nats/game)
+      transformer - transformer FM path: -0.0003 ± 0.0003 (x1000 nats/game)
+      champion - cached game FM: +0.0049 ± 0.2067 (x1000 nats/game)
+  main build           champion -653.389  transformer -653.387  transformer FM path -653.387  cached game FM -653.383
+      transformer - champion: +0.0014 ± 0.0118 (x1000 nats/game)
+      transformer FM path - champion: +0.0014 ± 0.0118 (x1000 nats/game)
+      transformer - transformer FM path: +0.0001 ± 0.0001 (x1000 nats/game)
+      champion - cached game FM: -0.0053 ± 0.1066 (x1000 nats/game)
+  experienced dl-ctx   champion -663.079  transformer -663.100  transformer FM path -663.100  cached game FM -663.062
+      transformer - champion: -0.0207 ± 0.0333 (x1000 nats/game)
+      transformer FM path - champion: -0.0207 ± 0.0333 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0001 (x1000 nats/game)
+      champion - cached game FM: -0.0172 ± 0.1117 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.813  transformer -660.885  transformer FM path -660.885  cached game FM -660.802
+      transformer - champion: -0.0720 ± 0.0744 (x1000 nats/game)
+      transformer FM path - champion: -0.0717 ± 0.0747 (x1000 nats/game)
+      transformer - transformer FM path: -0.0003 ± 0.0004 (x1000 nats/game)
+      champion - cached game FM: -0.0114 ± 0.2509 (x1000 nats/game)
+  champion             draft spearman 0.2683 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.243
+  transformer          draft spearman 0.2668 (-0.0015)  raw -0.0012  strat -0.0010  sd 0.239
+  transformer FM path  draft spearman 0.2668 (-0.0015)  raw -0.0012  strat -0.0010  sd 0.239
+  cached game FM       draft spearman 0.2730 (+0.0047)  raw +0.0039  strat +0.0011  sd 0.251
+  residual sd (test drafts) 0.000  FM-path score sd (test drafts) 0.239  r(residual, champion score) test 0.023  r(transformer, champion) test 0.995  r(transformer, teacher) test 0.973
+MSH done: transformer - champion (experienced) +0.0029 ± 0.0107 [362s, peak RSS 3.12 GB]
+=== FDN: 130935 drafts, 765317 games (train 537244, val 115154, test 112919), 161556 builds, 286 cards, PickNet vectors for 286, teacher yes [5s, peak RSS 5.39 GB]
+  prepared ['FDN'] [peak RSS 5.39 GB]
+  [FDN] champion val 0.66070 (1e-05, 0.001) epochs [29, 26] [35s]
+    seed 0: val 0.66070 at start FDN 0.66070
+    seed 0 epoch  0 val 0.66118 (+0.00048) - FDN 0.66118 [22s]
+    seed 0 epoch  1 val 0.66087 (+0.00016) - FDN 0.66087 [42s]
+    seed 0 epoch  2 val 0.66076 (+0.00005) drop FDN 0.66076 [62s]
+    seed 0 epoch  3 val 0.66070 (-0.00001) best FDN 0.66070 [82s]
+    seed 0 epoch  4 val 0.66121 (+0.00051) - FDN 0.66121 [102s]
+    seed 0 epoch  5 val 0.66050 (-0.00020) best FDN 0.66050 [123s]
+    seed 0 epoch  6 val 0.66099 (+0.00028) - FDN 0.66099 [142s]
+    seed 0 epoch  7 val 0.66091 (+0.00021) - FDN 0.66091 [163s]
+    seed 0 epoch  8 val 0.66060 (-0.00010) drop FDN 0.66060 [183s]
+    seed 0 epoch  9 val 0.66100 (+0.00029) - FDN 0.66100 [203s]
+    seed 0 epoch 10 val 0.66091 (+0.00020) - FDN 0.66091 [223s]
+    seed 0 epoch 11 val 0.66094 (+0.00023) stop FDN 0.66094 [243s]
+    seed 1: val 0.66064 at start FDN 0.66064
+    seed 1 epoch  0 val 0.66065 (+0.00001) - FDN 0.66065 [22s]
+    seed 1 epoch  1 val 0.66084 (+0.00020) - FDN 0.66084 [42s]
+    seed 1 epoch  2 val 0.66068 (+0.00004) drop FDN 0.66068 [63s]
+    seed 1 epoch  3 val 0.66140 (+0.00076) - FDN 0.66140 [83s]
+    seed 1 epoch  4 val 0.66059 (-0.00005) best FDN 0.66059 [103s]
+    seed 1 epoch  5 val 0.66069 (+0.00005) - FDN 0.66069 [123s]
+    seed 1 epoch  6 val 0.66104 (+0.00040) - FDN 0.66104 [143s]
+    seed 1 epoch  7 val 0.66095 (+0.00031) drop FDN 0.66095 [163s]
+    seed 1 epoch  8 val 0.66080 (+0.00017) - FDN 0.66080 [183s]
+    seed 1 epoch  9 val 0.66093 (+0.00029) - FDN 0.66093 [203s]
+    seed 1 epoch 10 val 0.66101 (+0.00037) stop FDN 0.66101 [223s]
+  [FDN] SC-GLL
+  all                  champion -658.385  transformer -658.410  transformer FM path -658.410  cached game FM -658.383
+      transformer - champion: -0.0252 ± 0.0153 (x1000 nats/game)
+      transformer FM path - champion: -0.0252 ± 0.0153 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0020 ± 0.0246 (x1000 nats/game)
+  experienced          champion -660.892  transformer -660.910  transformer FM path -660.910  cached game FM -660.888
+      transformer - champion: -0.0178 ± 0.0178 (x1000 nats/game)
+      transformer FM path - champion: -0.0179 ± 0.0178 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0039 ± 0.0299 (x1000 nats/game)
+  match 1              champion -653.736  transformer -653.738  transformer FM path -653.738  cached game FM -653.684
+      transformer - champion: -0.0021 ± 0.0841 (x1000 nats/game)
+      transformer FM path - champion: -0.0021 ± 0.0841 (x1000 nats/game)
+      transformer - transformer FM path: -0.0001 ± 0.0001 (x1000 nats/game)
+      champion - cached game FM: -0.0518 ± 0.0654 (x1000 nats/game)
+  main build           champion -656.811  transformer -656.830  transformer FM path -656.830  cached game FM -656.812
+      transformer - champion: -0.0196 ± 0.0167 (x1000 nats/game)
+      transformer FM path - champion: -0.0196 ± 0.0167 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: +0.0014 ± 0.0271 (x1000 nats/game)
+  experienced dl-ctx   champion -661.908  transformer -661.928  transformer FM path -661.928  cached game FM -661.915
+      transformer - champion: -0.0200 ± 0.0207 (x1000 nats/game)
+      transformer FM path - champion: -0.0200 ± 0.0207 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: +0.0071 ± 0.0293 (x1000 nats/game)
+  match 1 dl-ctx       champion -658.737  transformer -658.741  transformer FM path -658.741  cached game FM -658.691
+      transformer - champion: -0.0044 ± 0.0889 (x1000 nats/game)
+      transformer FM path - champion: -0.0043 ± 0.0889 (x1000 nats/game)
+      transformer - transformer FM path: -0.0001 ± 0.0001 (x1000 nats/game)
+      champion - cached game FM: -0.0457 ± 0.0644 (x1000 nats/game)
+  champion             draft spearman 0.2766 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.256
+  transformer          draft spearman 0.2760 (-0.0006)  raw -0.0006  strat -0.0012  sd 0.253
+  transformer FM path  draft spearman 0.2760 (-0.0006)  raw -0.0006  strat -0.0012  sd 0.253
+  cached game FM       draft spearman 0.2767 (+0.0001)  raw -0.0001  strat +0.0001  sd 0.254
+  residual sd (test drafts) 0.000  FM-path score sd (test drafts) 0.253  r(residual, champion score) test 0.089  r(transformer, champion) test 0.997  r(transformer, teacher) test 0.997
+FDN done: transformer - champion (experienced) -0.0178 ± 0.0178 [525s, peak RSS 5.39 GB]
+=== BLB: 154585 drafts, 898354 games (train 635246, val 133584, test 129524), 187018 builds, 276 cards, PickNet vectors for 276, teacher yes [6s, peak RSS 5.53 GB]
+  prepared ['BLB'] [peak RSS 5.53 GB]
+  [BLB] champion val 0.65729 (1e-05, 0.001) epochs [38, 33] [48s]
+    seed 0: val 0.65729 at start BLB 0.65729
+    seed 0 epoch  0 val 0.65759 (+0.00029) - BLB 0.65759 [22s]
+    seed 0 epoch  1 val 0.65757 (+0.00028) - BLB 0.65757 [43s]
+    seed 0 epoch  2 val 0.65774 (+0.00044) drop BLB 0.65774 [63s]
+    seed 0 epoch  3 val 0.65745 (+0.00016) - BLB 0.65745 [84s]
+    seed 0 epoch  4 val 0.65752 (+0.00023) - BLB 0.65752 [104s]
+    seed 0 epoch  5 val 0.65741 (+0.00012) drop BLB 0.65741 [124s]
+    seed 0 epoch  6 val 0.65735 (+0.00006) - BLB 0.65735 [145s]
+    seed 0 epoch  7 val 0.65733 (+0.00003) - BLB 0.65733 [165s]
+    seed 0 epoch  8 val 0.65741 (+0.00011) stop BLB 0.65741 [186s]
+    seed 1: val 0.65737 at start BLB 0.65737
+    seed 1 epoch  0 val 0.65796 (+0.00059) - BLB 0.65796 [22s]
+    seed 1 epoch  1 val 0.65761 (+0.00024) - BLB 0.65761 [42s]
+    seed 1 epoch  2 val 0.65749 (+0.00012) drop BLB 0.65749 [63s]
+    seed 1 epoch  3 val 0.65738 (+0.00001) - BLB 0.65738 [83s]
+    seed 1 epoch  4 val 0.65737 (+0.00001) - BLB 0.65737 [104s]
+    seed 1 epoch  5 val 0.65742 (+0.00005) drop BLB 0.65742 [124s]
+    seed 1 epoch  6 val 0.65736 (-0.00001) best BLB 0.65736 [145s]
+    seed 1 epoch  7 val 0.65738 (+0.00001) - BLB 0.65738 [165s]
+    seed 1 epoch  8 val 0.65740 (+0.00003) - BLB 0.65740 [186s]
+    seed 1 epoch  9 val 0.65735 (-0.00001) best BLB 0.65735 [206s]
+    seed 1 epoch 10 val 0.65743 (+0.00006) - BLB 0.65743 [227s]
+    seed 1 epoch 11 val 0.65738 (+0.00001) - BLB 0.65738 [247s]
+    seed 1 epoch 12 val 0.65736 (-0.00001) stop BLB 0.65736 [268s]
+  [BLB] SC-GLL
+  all                  champion -655.972  transformer -655.988  transformer FM path -655.989  cached game FM -655.966
+      transformer - champion: -0.0155 ± 0.0190 (x1000 nats/game)
+      transformer FM path - champion: -0.0162 ± 0.0198 (x1000 nats/game)
+      transformer - transformer FM path: +0.0008 ± 0.0010 (x1000 nats/game)
+      champion - cached game FM: -0.0061 ± 0.0122 (x1000 nats/game)
+  experienced          champion -659.317  transformer -659.335  transformer FM path -659.336  cached game FM -659.318
+      transformer - champion: -0.0180 ± 0.0215 (x1000 nats/game)
+      transformer FM path - champion: -0.0191 ± 0.0225 (x1000 nats/game)
+      transformer - transformer FM path: +0.0010 ± 0.0013 (x1000 nats/game)
+      champion - cached game FM: +0.0008 ± 0.0146 (x1000 nats/game)
+  match 1              champion -653.486  transformer -653.577  transformer FM path -653.579  cached game FM -653.504
+      transformer - champion: -0.0909 ± 0.0935 (x1000 nats/game)
+      transformer FM path - champion: -0.0929 ± 0.0958 (x1000 nats/game)
+      transformer - transformer FM path: +0.0020 ± 0.0026 (x1000 nats/game)
+      champion - cached game FM: +0.0182 ± 0.0313 (x1000 nats/game)
+  main build           champion -654.389  transformer -654.402  transformer FM path -654.403  cached game FM -654.387
+      transformer - champion: -0.0130 ± 0.0167 (x1000 nats/game)
+      transformer FM path - champion: -0.0137 ± 0.0174 (x1000 nats/game)
+      transformer - transformer FM path: +0.0007 ± 0.0010 (x1000 nats/game)
+      champion - cached game FM: -0.0027 ± 0.0112 (x1000 nats/game)
+  experienced dl-ctx   champion -662.200  transformer -662.210  transformer FM path -662.211  cached game FM -662.207
+      transformer - champion: -0.0104 ± 0.0163 (x1000 nats/game)
+      transformer FM path - champion: -0.0114 ± 0.0171 (x1000 nats/game)
+      transformer - transformer FM path: +0.0010 ± 0.0013 (x1000 nats/game)
+      champion - cached game FM: +0.0071 ± 0.0158 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.399  transformer -660.494  transformer FM path -660.497  cached game FM -660.436
+      transformer - champion: -0.0957 ± 0.0992 (x1000 nats/game)
+      transformer FM path - champion: -0.0979 ± 0.1016 (x1000 nats/game)
+      transformer - transformer FM path: +0.0022 ± 0.0029 (x1000 nats/game)
+      champion - cached game FM: +0.0376 ± 0.0480 (x1000 nats/game)
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  champion             draft spearman 0.2720 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.254
+  transformer          draft spearman 0.2723 (+0.0003)  raw +0.0002  strat -0.0002  sd 0.253
+  transformer FM path  draft spearman 0.2722 (+0.0002)  raw +0.0002  strat -0.0003  sd 0.253
+  cached game FM       draft spearman 0.2719 (-0.0002)  raw -0.0003  strat -0.0001  sd 0.252
+  residual sd (test drafts) 0.000  FM-path score sd (test drafts) 0.253  r(residual, champion score) test nan  r(transformer, champion) test 0.999  r(transformer, teacher) test 0.999
+BLB done: transformer - champion (experienced) -0.0180 ± 0.0215 [529s, peak RSS 5.53 GB]
+=== MSH: 68609 drafts, 377376 games (train 266251, val 56679, test 54446), 83430 builds, 339 cards, PickNet vectors for 339, teacher yes [3s, peak RSS 3.12 GB]
+  prepared ['MSH'] [peak RSS 3.12 GB]
+  [MSH] champion val 0.66031 (1e-05, 0.01) epochs [40, 40] [27s]
+    seed 0: val 0.66031 at start MSH 0.66031
+    seed 0 epoch  0 val 0.66025 (-0.00006) best MSH 0.66025 [15s]
+    seed 0 epoch  1 val 0.66019 (-0.00013) best MSH 0.66019 [28s]
+    seed 0 epoch  2 val 0.66027 (-0.00004) - MSH 0.66027 [42s]
+    seed 0 epoch  3 val 0.66020 (-0.00011) - MSH 0.66020 [55s]
+    seed 0 epoch  4 val 0.66017 (-0.00015) best MSH 0.66017 [68s]
+    seed 0 epoch  5 val 0.66014 (-0.00018) best MSH 0.66014 [81s]
+    seed 0 epoch  6 val 0.66014 (-0.00017) - MSH 0.66014 [94s]
+    seed 0 epoch  7 val 0.66012 (-0.00019) best MSH 0.66012 [108s]
+    seed 0 epoch  8 val 0.66013 (-0.00018) - MSH 0.66013 [121s]
+    seed 0 epoch  9 val 0.66010 (-0.00021) best MSH 0.66010 [134s]
+    seed 0 epoch 10 val 0.66023 (-0.00008) - MSH 0.66023 [147s]
+    seed 0 epoch 11 val 0.66009 (-0.00022) best MSH 0.66009 [160s]
+    seed 0 epoch 12 val 0.66014 (-0.00018) - MSH 0.66014 [173s]
+    seed 0 epoch 13 val 0.66014 (-0.00017) - MSH 0.66014 [186s]
+    seed 0 epoch 14 val 0.66007 (-0.00024) best MSH 0.66007 [199s]
+    seed 0 epoch 15 val 0.66002 (-0.00029) best MSH 0.66002 [213s]
+    seed 0 epoch 16 val 0.66009 (-0.00022) - MSH 0.66009 [226s]
+    seed 0 epoch 17 val 0.66013 (-0.00019) - MSH 0.66013 [239s]
+    seed 0 epoch 18 val 0.66006 (-0.00025) drop MSH 0.66006 [252s]
+    seed 0 epoch 19 val 0.66002 (-0.00029) best MSH 0.66002 [265s]
+    seed 0 epoch 20 val 0.66005 (-0.00027) - MSH 0.66005 [278s]
+    seed 0 epoch 21 val 0.66007 (-0.00025) - MSH 0.66007 [291s]
+    seed 0 epoch 22 val 0.66004 (-0.00028) drop MSH 0.66004 [305s]
+    seed 0 epoch 23 val 0.66004 (-0.00027) - MSH 0.66004 [318s]
+    seed 0 epoch 24 val 0.66004 (-0.00028) - MSH 0.66004 [331s]
+    seed 0 epoch 25 val 0.66005 (-0.00026) stop MSH 0.66005 [344s]
+    seed 1: val 0.66013 at start MSH 0.66013
+    seed 1 epoch  0 val 0.66016 (+0.00003) - MSH 0.66016 [15s]
+    seed 1 epoch  1 val 0.66020 (+0.00007) - MSH 0.66020 [29s]
+    seed 1 epoch  2 val 0.66014 (+0.00002) drop MSH 0.66014 [42s]
+    seed 1 epoch  3 val 0.66035 (+0.00022) - MSH 0.66035 [56s]
+    seed 1 epoch  4 val 0.66020 (+0.00007) - MSH 0.66020 [69s]
+    seed 1 epoch  5 val 0.66022 (+0.00010) drop MSH 0.66022 [83s]
+    seed 1 epoch  6 val 0.66156 (+0.00143) - MSH 0.66156 [96s]
+    seed 1 epoch  7 val 0.66068 (+0.00056) - MSH 0.66068 [110s]
+    seed 1 epoch  8 val 0.66038 (+0.00025) stop MSH 0.66038 [124s]
+  [MSH] SC-GLL
+  all                  champion -655.162  transformer -655.171  transformer FM path -655.171  cached game FM -655.146
+      transformer - champion: -0.0091 ± 0.0451 (x1000 nats/game)
+      transformer FM path - champion: -0.0091 ± 0.0451 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0153 ± 0.1110 (x1000 nats/game)
+  experienced          champion -660.459  transformer -660.452  transformer FM path -660.452  cached game FM -660.459
+      transformer - champion: +0.0069 ± 0.0432 (x1000 nats/game)
+      transformer FM path - champion: +0.0069 ± 0.0432 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: +0.0007 ± 0.1081 (x1000 nats/game)
+  match 1              champion -654.522  transformer -654.560  transformer FM path -654.560  cached game FM -654.526
+      transformer - champion: -0.0386 ± 0.1286 (x1000 nats/game)
+      transformer FM path - champion: -0.0386 ± 0.1286 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: +0.0049 ± 0.2067 (x1000 nats/game)
+  main build           champion -653.389  transformer -653.412  transformer FM path -653.412  cached game FM -653.383
+      transformer - champion: -0.0236 ± 0.0468 (x1000 nats/game)
+      transformer FM path - champion: -0.0236 ± 0.0468 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0053 ± 0.1066 (x1000 nats/game)
+  experienced dl-ctx   champion -663.079  transformer -663.059  transformer FM path -663.059  cached game FM -663.062
+      transformer - champion: +0.0207 ± 0.0499 (x1000 nats/game)
+      transformer FM path - champion: +0.0207 ± 0.0499 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0172 ± 0.1117 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.813  transformer -660.820  transformer FM path -660.820  cached game FM -660.802
+      transformer - champion: -0.0066 ± 0.1439 (x1000 nats/game)
+      transformer FM path - champion: -0.0066 ± 0.1439 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0114 ± 0.2509 (x1000 nats/game)
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  champion             draft spearman 0.2683 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.243
+  transformer          draft spearman 0.2708 (+0.0025)  raw +0.0026  strat +0.0002  sd 0.242
+  transformer FM path  draft spearman 0.2708 (+0.0025)  raw +0.0026  strat +0.0002  sd 0.242
+  cached game FM       draft spearman 0.2730 (+0.0047)  raw +0.0039  strat +0.0011  sd 0.251
+  residual sd (test drafts) 0.000  FM-path score sd (test drafts) 0.242  r(residual, champion score) test nan  r(transformer, champion) test 0.981  r(transformer, teacher) test 0.977
+MSH done: transformer - champion (experienced) +0.0069 ± 0.0432 [509s, peak RSS 3.12 GB]
+=== FDN: 130935 drafts, 765317 games (train 537244, val 115154, test 112919), 161556 builds, 286 cards, PickNet vectors for 286, teacher yes [5s, peak RSS 5.49 GB]
+  prepared ['FDN'] [peak RSS 5.49 GB]
+  [FDN] champion val 0.66070 (1e-05, 0.001) epochs [29, 26] [34s]
+    seed 0: val 0.66070 at start FDN 0.66070
+    seed 0 epoch  0 val 0.66106 (+0.00036) - FDN 0.66106 [26s]
+    seed 0 epoch  1 val 0.66139 (+0.00068) - FDN 0.66139 [50s]
+    seed 0 epoch  2 val 0.66110 (+0.00040) drop FDN 0.66110 [74s]
+    seed 0 epoch  3 val 0.66107 (+0.00037) - FDN 0.66107 [97s]
+    seed 0 epoch  4 val 0.66112 (+0.00042) - FDN 0.66112 [120s]
+    seed 0 epoch  5 val 0.66096 (+0.00025) drop FDN 0.66096 [143s]
+    seed 0 epoch  6 val 0.66067 (-0.00004) best FDN 0.66067 [166s]
+    seed 0 epoch  7 val 0.66093 (+0.00022) - FDN 0.66093 [190s]
+    seed 0 epoch  8 val 0.66100 (+0.00030) - FDN 0.66100 [213s]
+    seed 0 epoch  9 val 0.66105 (+0.00034) stop FDN 0.66105 [236s]
+    seed 1: val 0.66064 at start FDN 0.66064
+    seed 1 epoch  0 val 0.66107 (+0.00044) - FDN 0.66107 [25s]
+    seed 1 epoch  1 val 0.66092 (+0.00029) - FDN 0.66092 [48s]
+    seed 1 epoch  2 val 0.66121 (+0.00058) drop FDN 0.66121 [72s]
+    seed 1 epoch  3 val 0.66107 (+0.00044) - FDN 0.66107 [95s]
+    seed 1 epoch  4 val 0.66106 (+0.00042) - FDN 0.66106 [118s]
+    seed 1 epoch  5 val 0.66103 (+0.00039) drop FDN 0.66103 [141s]
+    seed 1 epoch  6 val 0.66070 (+0.00007) - FDN 0.66070 [165s]
+    seed 1 epoch  7 val 0.66098 (+0.00035) - FDN 0.66098 [188s]
+    seed 1 epoch  8 val 0.66100 (+0.00036) stop FDN 0.66100 [211s]
+  [FDN] SC-GLL
+  all                  champion -658.385  transformer -658.443  transformer FM path -658.434  cached game FM -658.383
+      transformer - champion: -0.0578 ± 0.0597 (x1000 nats/game)
+      transformer FM path - champion: -0.0496 ± 0.0515 (x1000 nats/game)
+      transformer - transformer FM path: -0.0083 ± 0.0083 (x1000 nats/game)
+      champion - cached game FM: -0.0020 ± 0.0246 (x1000 nats/game)
+  experienced          champion -660.892  transformer -660.947  transformer FM path -660.938  cached game FM -660.888
+      transformer - champion: -0.0551 ± 0.0568 (x1000 nats/game)
+      transformer FM path - champion: -0.0454 ± 0.0475 (x1000 nats/game)
+      transformer - transformer FM path: -0.0097 ± 0.0097 (x1000 nats/game)
+      champion - cached game FM: -0.0039 ± 0.0299 (x1000 nats/game)
+  match 1              champion -653.736  transformer -653.804  transformer FM path -653.801  cached game FM -653.684
+      transformer - champion: -0.0676 ± 0.0726 (x1000 nats/game)
+      transformer FM path - champion: -0.0646 ± 0.0692 (x1000 nats/game)
+      transformer - transformer FM path: -0.0031 ± 0.0044 (x1000 nats/game)
+      champion - cached game FM: -0.0518 ± 0.0654 (x1000 nats/game)
+  main build           champion -656.811  transformer -656.872  transformer FM path -656.863  cached game FM -656.812
+      transformer - champion: -0.0612 ± 0.0628 (x1000 nats/game)
+      transformer FM path - champion: -0.0527 ± 0.0544 (x1000 nats/game)
+      transformer - transformer FM path: -0.0085 ± 0.0086 (x1000 nats/game)
+      champion - cached game FM: +0.0014 ± 0.0271 (x1000 nats/game)
+  experienced dl-ctx   champion -661.908  transformer -661.922  transformer FM path -661.915  cached game FM -661.915
+      transformer - champion: -0.0138 ± 0.0203 (x1000 nats/game)
+      transformer FM path - champion: -0.0070 ± 0.0161 (x1000 nats/game)
+      transformer - transformer FM path: -0.0068 ± 0.0070 (x1000 nats/game)
+      champion - cached game FM: +0.0071 ± 0.0293 (x1000 nats/game)
+  match 1 dl-ctx       champion -658.737  transformer -658.747  transformer FM path -658.749  cached game FM -658.691
+      transformer - champion: -0.0099 ± 0.0336 (x1000 nats/game)
+      transformer FM path - champion: -0.0119 ± 0.0324 (x1000 nats/game)
+      transformer - transformer FM path: +0.0020 ± 0.0041 (x1000 nats/game)
+      champion - cached game FM: -0.0457 ± 0.0644 (x1000 nats/game)
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  champion             draft spearman 0.2766 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.256
+  transformer          draft spearman 0.2777 (+0.0011)  raw +0.0007  strat -0.0006  sd 0.258
+  transformer FM path  draft spearman 0.2777 (+0.0011)  raw +0.0007  strat -0.0006  sd 0.257
+  cached game FM       draft spearman 0.2767 (+0.0001)  raw -0.0001  strat +0.0001  sd 0.254
+  residual sd (test drafts) 0.002  FM-path score sd (test drafts) 0.257  r(residual, champion score) test nan  r(transformer, champion) test 0.994  r(transformer, teacher) test 0.994
+FDN done: transformer - champion (experienced) -0.0551 ± 0.0568 [507s, peak RSS 5.49 GB]
+=== BLB: 154585 drafts, 898354 games (train 635246, val 133584, test 129524), 187018 builds, 276 cards, PickNet vectors for 276, teacher yes [6s, peak RSS 5.62 GB]
+  prepared ['BLB'] [peak RSS 5.62 GB]
+  [BLB] champion val 0.65729 (1e-05, 0.001) epochs [38, 33] [45s]
+    seed 0: val 0.65729 at start BLB 0.65729
+    seed 0 epoch  0 val 0.65739 (+0.00009) - BLB 0.65739 [26s]
+    seed 0 epoch  1 val 0.65739 (+0.00010) - BLB 0.65739 [49s]
+    seed 0 epoch  2 val 0.65737 (+0.00008) drop BLB 0.65737 [73s]
+    seed 0 epoch  3 val 0.65736 (+0.00007) - BLB 0.65736 [97s]
+    seed 0 epoch  4 val 0.65735 (+0.00006) - BLB 0.65735 [120s]
+    seed 0 epoch  5 val 0.65735 (+0.00006) drop BLB 0.65735 [144s]
+    seed 0 epoch  6 val 0.65732 (+0.00003) - BLB 0.65732 [168s]
+    seed 0 epoch  7 val 0.65734 (+0.00005) - BLB 0.65734 [191s]
+    seed 0 epoch  8 val 0.65734 (+0.00005) stop BLB 0.65734 [215s]
+    seed 1: val 0.65737 at start BLB 0.65737
+    seed 1 epoch  0 val 0.65736 (-0.00000) best BLB 0.65736 [25s]
+    seed 1 epoch  1 val 0.65754 (+0.00018) - BLB 0.65754 [49s]
+    seed 1 epoch  2 val 0.65748 (+0.00011) - BLB 0.65748 [72s]
+    seed 1 epoch  3 val 0.65753 (+0.00016) drop BLB 0.65753 [96s]
+    seed 1 epoch  4 val 0.65733 (-0.00003) best BLB 0.65733 [120s]
+    seed 1 epoch  5 val 0.65737 (-0.00000) - BLB 0.65737 [144s]
+    seed 1 epoch  6 val 0.65734 (-0.00003) - BLB 0.65734 [167s]
+    seed 1 epoch  7 val 0.65737 (+0.00000) drop BLB 0.65737 [191s]
+    seed 1 epoch  8 val 0.65736 (-0.00001) - BLB 0.65736 [215s]
+    seed 1 epoch  9 val 0.65734 (-0.00003) - BLB 0.65734 [239s]
+    seed 1 epoch 10 val 0.65734 (-0.00002) stop BLB 0.65734 [262s]
+  [BLB] SC-GLL
+  all                  champion -655.972  transformer -655.990  transformer FM path -655.991  cached game FM -655.966
+      transformer - champion: -0.0179 ± 0.0223 (x1000 nats/game)
+      transformer FM path - champion: -0.0190 ± 0.0232 (x1000 nats/game)
+      transformer - transformer FM path: +0.0011 ± 0.0013 (x1000 nats/game)
+      champion - cached game FM: -0.0061 ± 0.0122 (x1000 nats/game)
+  experienced          champion -659.317  transformer -659.337  transformer FM path -659.338  cached game FM -659.318
+      transformer - champion: -0.0201 ± 0.0252 (x1000 nats/game)
+      transformer FM path - champion: -0.0213 ± 0.0261 (x1000 nats/game)
+      transformer - transformer FM path: +0.0013 ± 0.0016 (x1000 nats/game)
+      champion - cached game FM: +0.0008 ± 0.0146 (x1000 nats/game)
+  match 1              champion -653.486  transformer -653.508  transformer FM path -653.510  cached game FM -653.504
+      transformer - champion: -0.0219 ± 0.0322 (x1000 nats/game)
+      transformer FM path - champion: -0.0241 ± 0.0338 (x1000 nats/game)
+      transformer - transformer FM path: +0.0022 ± 0.0025 (x1000 nats/game)
+      champion - cached game FM: +0.0182 ± 0.0313 (x1000 nats/game)
+  main build           champion -654.389  transformer -654.412  transformer FM path -654.414  cached game FM -654.387
+      transformer - champion: -0.0230 ± 0.0265 (x1000 nats/game)
+      transformer FM path - champion: -0.0244 ± 0.0277 (x1000 nats/game)
+      transformer - transformer FM path: +0.0014 ± 0.0015 (x1000 nats/game)
+      champion - cached game FM: -0.0027 ± 0.0112 (x1000 nats/game)
+  experienced dl-ctx   champion -662.200  transformer -662.210  transformer FM path -662.211  cached game FM -662.207
+      transformer - champion: -0.0104 ± 0.0192 (x1000 nats/game)
+      transformer FM path - champion: -0.0120 ± 0.0199 (x1000 nats/game)
+      transformer - transformer FM path: +0.0016 ± 0.0018 (x1000 nats/game)
+      champion - cached game FM: +0.0071 ± 0.0158 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.399  transformer -660.416  transformer FM path -660.418  cached game FM -660.436
+      transformer - champion: -0.0171 ± 0.0329 (x1000 nats/game)
+      transformer FM path - champion: -0.0198 ± 0.0343 (x1000 nats/game)
+      transformer - transformer FM path: +0.0026 ± 0.0029 (x1000 nats/game)
+      champion - cached game FM: +0.0376 ± 0.0480 (x1000 nats/game)
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  champion             draft spearman 0.2720 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.254
+  transformer          draft spearman 0.2722 (+0.0002)  raw +0.0003  strat -0.0003  sd 0.255
+  transformer FM path  draft spearman 0.2722 (+0.0002)  raw +0.0003  strat -0.0003  sd 0.255
+  cached game FM       draft spearman 0.2719 (-0.0002)  raw -0.0003  strat -0.0001  sd 0.252
+  residual sd (test drafts) 0.001  FM-path score sd (test drafts) 0.255  r(residual, champion score) test nan  r(transformer, champion) test 0.998  r(transformer, teacher) test 0.998
+BLB done: transformer - champion (experienced) -0.0201 ± 0.0252 [550s, peak RSS 5.62 GB]
+=== MSH: 68609 drafts, 377376 games (train 266251, val 56679, test 54446), 83430 builds, 339 cards, PickNet vectors for 339, teacher yes [3s, peak RSS 3.13 GB]
+  prepared ['MSH'] [peak RSS 3.13 GB]
+  [MSH] champion val 0.66031 (1e-05, 0.01) epochs [40, 40] [28s]
+    seed 0: val 0.66031 at start MSH 0.66031
+    seed 0 epoch  0 val 0.66027 (-0.00005) best MSH 0.66027 [14s]
+    seed 0 epoch  1 val 0.66018 (-0.00013) best MSH 0.66018 [27s]
+    seed 0 epoch  2 val 0.66026 (-0.00005) - MSH 0.66026 [39s]
+    seed 0 epoch  3 val 0.66020 (-0.00012) - MSH 0.66020 [51s]
+    seed 0 epoch  4 val 0.66017 (-0.00015) best MSH 0.66017 [64s]
+    seed 0 epoch  5 val 0.66014 (-0.00018) best MSH 0.66014 [76s]
+    seed 0 epoch  6 val 0.66015 (-0.00017) - MSH 0.66015 [88s]
+    seed 0 epoch  7 val 0.66012 (-0.00020) best MSH 0.66012 [101s]
+    seed 0 epoch  8 val 0.66013 (-0.00018) - MSH 0.66013 [113s]
+    seed 0 epoch  9 val 0.66010 (-0.00022) best MSH 0.66010 [125s]
+    seed 0 epoch 10 val 0.66023 (-0.00008) - MSH 0.66023 [138s]
+    seed 0 epoch 11 val 0.66009 (-0.00022) best MSH 0.66009 [150s]
+    seed 0 epoch 12 val 0.66014 (-0.00018) - MSH 0.66014 [162s]
+    seed 0 epoch 13 val 0.66015 (-0.00017) - MSH 0.66015 [174s]
+    seed 0 epoch 14 val 0.66008 (-0.00024) best MSH 0.66008 [187s]
+    seed 0 epoch 15 val 0.66002 (-0.00029) best MSH 0.66002 [199s]
+    seed 0 epoch 16 val 0.66010 (-0.00022) - MSH 0.66010 [211s]
+    seed 0 epoch 17 val 0.66014 (-0.00018) - MSH 0.66014 [224s]
+    seed 0 epoch 18 val 0.66007 (-0.00024) drop MSH 0.66007 [236s]
+    seed 0 epoch 19 val 0.66002 (-0.00030) best MSH 0.66002 [249s]
+    seed 0 epoch 20 val 0.66005 (-0.00026) - MSH 0.66005 [261s]
+    seed 0 epoch 21 val 0.66006 (-0.00026) - MSH 0.66006 [274s]
+    seed 0 epoch 22 val 0.66003 (-0.00028) drop MSH 0.66003 [287s]
+    seed 0 epoch 23 val 0.66004 (-0.00028) - MSH 0.66004 [300s]
+    seed 0 epoch 24 val 0.66004 (-0.00028) - MSH 0.66004 [313s]
+    seed 0 epoch 25 val 0.66005 (-0.00027) stop MSH 0.66005 [327s]
+    seed 1: val 0.66013 at start MSH 0.66013
+    seed 1 epoch  0 val 0.66024 (+0.00011) - MSH 0.66024 [14s]
+    seed 1 epoch  1 val 0.66019 (+0.00006) - MSH 0.66019 [27s]
+    seed 1 epoch  2 val 0.66012 (-0.00000) best MSH 0.66012 [40s]
+    seed 1 epoch  3 val 0.66011 (-0.00002) best MSH 0.66011 [53s]
+    seed 1 epoch  4 val 0.66005 (-0.00008) best MSH 0.66005 [66s]
+    seed 1 epoch  5 val 0.66015 (+0.00002) - MSH 0.66015 [79s]
+    seed 1 epoch  6 val 0.66014 (+0.00001) - MSH 0.66014 [92s]
+    seed 1 epoch  7 val 0.66012 (-0.00000) drop MSH 0.66012 [105s]
+    seed 1 epoch  8 val 0.66011 (-0.00002) - MSH 0.66011 [118s]
+    seed 1 epoch  9 val 0.66012 (-0.00001) - MSH 0.66012 [131s]
+    seed 1 epoch 10 val 0.66012 (-0.00001) drop MSH 0.66012 [144s]
+    seed 1 epoch 11 val 0.66009 (-0.00004) - MSH 0.66009 [157s]
+    seed 1 epoch 12 val 0.66010 (-0.00002) - MSH 0.66010 [170s]
+    seed 1 epoch 13 val 0.66010 (-0.00003) stop MSH 0.66010 [183s]
+  [MSH] SC-GLL
+  all                  champion -655.162  transformer -655.195  transformer FM path -655.195  cached game FM -655.146
+      transformer - champion: -0.0336 ± 0.0873 (x1000 nats/game)
+      transformer FM path - champion: -0.0336 ± 0.0873 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0153 ± 0.1110 (x1000 nats/game)
+  experienced          champion -660.459  transformer -660.458  transformer FM path -660.458  cached game FM -660.459
+      transformer - champion: +0.0009 ± 0.0832 (x1000 nats/game)
+      transformer FM path - champion: +0.0009 ± 0.0832 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: +0.0007 ± 0.1081 (x1000 nats/game)
+  match 1              champion -654.522  transformer -654.613  transformer FM path -654.613  cached game FM -654.526
+      transformer - champion: -0.0914 ± 0.2386 (x1000 nats/game)
+      transformer FM path - champion: -0.0915 ± 0.2386 (x1000 nats/game)
+      transformer - transformer FM path: +0.0001 ± 0.0001 (x1000 nats/game)
+      champion - cached game FM: +0.0049 ± 0.2067 (x1000 nats/game)
+  main build           champion -653.389  transformer -653.450  transformer FM path -653.450  cached game FM -653.383
+      transformer - champion: -0.0616 ± 0.0804 (x1000 nats/game)
+      transformer FM path - champion: -0.0617 ± 0.0804 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0053 ± 0.1066 (x1000 nats/game)
+  experienced dl-ctx   champion -663.079  transformer -663.025  transformer FM path -663.025  cached game FM -663.062
+      transformer - champion: +0.0547 ± 0.0879 (x1000 nats/game)
+      transformer FM path - champion: +0.0547 ± 0.0879 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0172 ± 0.1117 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.813  transformer -660.786  transformer FM path -660.786  cached game FM -660.802
+      transformer - champion: +0.0268 ± 0.2814 (x1000 nats/game)
+      transformer FM path - champion: +0.0267 ± 0.2814 (x1000 nats/game)
+      transformer - transformer FM path: +0.0001 ± 0.0001 (x1000 nats/game)
+      champion - cached game FM: -0.0114 ± 0.2509 (x1000 nats/game)
+  champion             draft spearman 0.2683 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.243
+  transformer          draft spearman 0.2745 (+0.0062)  raw +0.0060  strat +0.0011  sd 0.246
+  transformer FM path  draft spearman 0.2745 (+0.0062)  raw +0.0060  strat +0.0011  sd 0.246
+  cached game FM       draft spearman 0.2730 (+0.0047)  raw +0.0039  strat +0.0011  sd 0.251
+  residual sd (test drafts) 0.000  FM-path score sd (test drafts) 0.246  r(residual, champion score) test -0.014  r(transformer, champion) test 0.964  r(transformer, teacher) test 0.980
+MSH done: transformer - champion (experienced) +0.0009 ± 0.0832 [551s, peak RSS 3.13 GB]
+=== FDN: 130935 drafts, 765317 games (train 537244, val 115154, test 112919), 161556 builds, 286 cards, PickNet vectors for 286, teacher yes [5s, peak RSS 4.75 GB]
+  prepared ['FDN'] [peak RSS 4.75 GB]
+  [FDN] champion val 0.66070 (1e-05, 0.001) epochs [29, 26] [33s]
+    seed 0: val 0.66070 at start FDN 0.66070
+    seed 0 epoch  0 val 0.66103 (+0.00032) - FDN 0.66103 [25s]
+    seed 0 epoch  1 val 0.66139 (+0.00069) - FDN 0.66139 [48s]
+    seed 0 epoch  2 val 0.66110 (+0.00040) drop FDN 0.66110 [71s]
+    seed 0 epoch  3 val 0.66118 (+0.00047) - FDN 0.66118 [94s]
+    seed 0 epoch  4 val 0.66115 (+0.00044) - FDN 0.66115 [117s]
+    seed 0 epoch  5 val 0.66099 (+0.00029) drop FDN 0.66099 [140s]
+    seed 0 epoch  6 val 0.66070 (-0.00000) - FDN 0.66070 [163s]
+    seed 0 epoch  7 val 0.66092 (+0.00021) - FDN 0.66092 [185s]
+    seed 0 epoch  8 val 0.66102 (+0.00032) stop FDN 0.66102 [207s]
+    seed 1: val 0.66064 at start FDN 0.66064
+    seed 1 epoch  0 val 0.66107 (+0.00043) - FDN 0.66107 [24s]
+    seed 1 epoch  1 val 0.66094 (+0.00031) - FDN 0.66094 [46s]
+    seed 1 epoch  2 val 0.66122 (+0.00059) drop FDN 0.66122 [69s]
+    seed 1 epoch  3 val 0.66110 (+0.00046) - FDN 0.66110 [92s]
+    seed 1 epoch  4 val 0.66107 (+0.00043) - FDN 0.66107 [115s]
+    seed 1 epoch  5 val 0.66101 (+0.00037) drop FDN 0.66101 [138s]
+    seed 1 epoch  6 val 0.66071 (+0.00007) - FDN 0.66071 [161s]
+    seed 1 epoch  7 val 0.66099 (+0.00035) - FDN 0.66099 [184s]
+    seed 1 epoch  8 val 0.66100 (+0.00036) stop FDN 0.66100 [206s]
+  [FDN] SC-GLL
+  all                  champion -658.385  transformer -658.385  transformer FM path -658.385  cached game FM -658.383
+      transformer - champion: +0.0000 ± 0.0000 (x1000 nats/game)
+      transformer FM path - champion: +0.0000 ± 0.0000 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0020 ± 0.0246 (x1000 nats/game)
+  experienced          champion -660.892  transformer -660.892  transformer FM path -660.892  cached game FM -660.888
+      transformer - champion: +0.0000 ± 0.0000 (x1000 nats/game)
+      transformer FM path - champion: +0.0000 ± 0.0000 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0039 ± 0.0299 (x1000 nats/game)
+  match 1              champion -653.736  transformer -653.736  transformer FM path -653.736  cached game FM -653.684
+      transformer - champion: -0.0000 ± 0.0000 (x1000 nats/game)
+      transformer FM path - champion: -0.0000 ± 0.0000 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0518 ± 0.0654 (x1000 nats/game)
+  main build           champion -656.811  transformer -656.811  transformer FM path -656.811  cached game FM -656.812
+      transformer - champion: +0.0000 ± 0.0000 (x1000 nats/game)
+      transformer FM path - champion: +0.0000 ± 0.0000 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: +0.0014 ± 0.0271 (x1000 nats/game)
+  experienced dl-ctx   champion -661.908  transformer -661.908  transformer FM path -661.908  cached game FM -661.915
+      transformer - champion: +0.0000 ± 0.0000 (x1000 nats/game)
+      transformer FM path - champion: +0.0000 ± 0.0000 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: +0.0071 ± 0.0293 (x1000 nats/game)
+  match 1 dl-ctx       champion -658.737  transformer -658.737  transformer FM path -658.737  cached game FM -658.691
+      transformer - champion: -0.0000 ± 0.0000 (x1000 nats/game)
+      transformer FM path - champion: -0.0000 ± 0.0000 (x1000 nats/game)
+      transformer - transformer FM path: +0.0000 ± 0.0000 (x1000 nats/game)
+      champion - cached game FM: -0.0457 ± 0.0644 (x1000 nats/game)
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  champion             draft spearman 0.2766 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.256
+  transformer          draft spearman 0.2766 (-0.0000)  raw -0.0000  strat -0.0000  sd 0.256
+  transformer FM path  draft spearman 0.2766 (-0.0000)  raw -0.0000  strat -0.0000  sd 0.256
+  cached game FM       draft spearman 0.2767 (+0.0001)  raw -0.0001  strat +0.0001  sd 0.254
+  residual sd (test drafts) 0.000  FM-path score sd (test drafts) 0.256  r(residual, champion score) test nan  r(transformer, champion) test 0.997  r(transformer, teacher) test 0.997
+FDN done: transformer - champion (experienced) +0.0000 ± 0.0000 [471s, peak RSS 4.75 GB]
+=== BLB: 154585 drafts, 898354 games (train 635246, val 133584, test 129524), 187018 builds, 276 cards, PickNet vectors for 276, teacher yes [6s, peak RSS 4.99 GB]
+  prepared ['BLB'] [peak RSS 4.99 GB]
+  [BLB] champion val 0.65729 (1e-05, 0.001) epochs [38, 33] [45s]
+    seed 0: val 0.65729 at start BLB 0.65729
+    seed 0 epoch  0 val 0.65739 (+0.00009) - BLB 0.65739 [25s]
+    seed 0 epoch  1 val 0.65739 (+0.00010) - BLB 0.65739 [48s]
+    seed 0 epoch  2 val 0.65737 (+0.00008) drop BLB 0.65737 [72s]
+    seed 0 epoch  3 val 0.65736 (+0.00007) - BLB 0.65736 [95s]
+    seed 0 epoch  4 val 0.65735 (+0.00006) - BLB 0.65735 [118s]
+    seed 0 epoch  5 val 0.65735 (+0.00005) drop BLB 0.65735 [142s]
+    seed 0 epoch  6 val 0.65732 (+0.00003) - BLB 0.65732 [165s]
+    seed 0 epoch  7 val 0.65734 (+0.00005) - BLB 0.65734 [188s]
+    seed 0 epoch  8 val 0.65734 (+0.00005) stop BLB 0.65734 [212s]
+    seed 1: val 0.65737 at start BLB 0.65737
+    seed 1 epoch  0 val 0.65740 (+0.00003) - BLB 0.65740 [24s]
+    seed 1 epoch  1 val 0.65736 (-0.00000) best BLB 0.65736 [46s]
+    seed 1 epoch  2 val 0.65737 (+0.00001) - BLB 0.65737 [69s]
+    seed 1 epoch  3 val 0.65741 (+0.00005) - BLB 0.65741 [91s]
+    seed 1 epoch  4 val 0.65735 (-0.00001) best BLB 0.65735 [114s]
+    seed 1 epoch  5 val 0.65735 (-0.00001) - BLB 0.65735 [137s]
+    seed 1 epoch  6 val 0.65739 (+0.00002) - BLB 0.65739 [160s]
+    seed 1 epoch  7 val 0.65742 (+0.00005) drop BLB 0.65742 [183s]
+    seed 1 epoch  8 val 0.65737 (+0.00000) - BLB 0.65737 [205s]
+    seed 1 epoch  9 val 0.65734 (-0.00003) best BLB 0.65734 [228s]
+    seed 1 epoch 10 val 0.65736 (-0.00001) - BLB 0.65736 [251s]
+    seed 1 epoch 11 val 0.65736 (-0.00000) - BLB 0.65736 [273s]
+    seed 1 epoch 12 val 0.65735 (-0.00002) drop BLB 0.65735 [296s]
+    seed 1 epoch 13 val 0.65736 (-0.00001) - BLB 0.65736 [319s]
+    seed 1 epoch 14 val 0.65735 (-0.00002) - BLB 0.65735 [342s]
+    seed 1 epoch 15 val 0.65734 (-0.00002) stop BLB 0.65734 [364s]
+  [BLB] SC-GLL
+  all                  champion -655.972  transformer -655.988  transformer FM path -655.989  cached game FM -655.966
+      transformer - champion: -0.0155 ± 0.0243 (x1000 nats/game)
+      transformer FM path - champion: -0.0165 ± 0.0246 (x1000 nats/game)
+      transformer - transformer FM path: +0.0010 ± 0.0023 (x1000 nats/game)
+      champion - cached game FM: -0.0061 ± 0.0122 (x1000 nats/game)
+  experienced          champion -659.317  transformer -659.332  transformer FM path -659.334  cached game FM -659.318
+      transformer - champion: -0.0155 ± 0.0265 (x1000 nats/game)
+      transformer FM path - champion: -0.0177 ± 0.0270 (x1000 nats/game)
+      transformer - transformer FM path: +0.0021 ± 0.0033 (x1000 nats/game)
+      champion - cached game FM: +0.0008 ± 0.0146 (x1000 nats/game)
+  match 1              champion -653.486  transformer -653.505  transformer FM path -653.522  cached game FM -653.504
+      transformer - champion: -0.0194 ± 0.0428 (x1000 nats/game)
+      transformer FM path - champion: -0.0359 ± 0.0506 (x1000 nats/game)
+      transformer - transformer FM path: +0.0166 ± 0.0185 (x1000 nats/game)
+      champion - cached game FM: +0.0182 ± 0.0313 (x1000 nats/game)
+  main build           champion -654.389  transformer -654.414  transformer FM path -654.416  cached game FM -654.387
+      transformer - champion: -0.0245 ± 0.0312 (x1000 nats/game)
+      transformer FM path - champion: -0.0262 ± 0.0323 (x1000 nats/game)
+      transformer - transformer FM path: +0.0017 ± 0.0026 (x1000 nats/game)
+      champion - cached game FM: -0.0027 ± 0.0112 (x1000 nats/game)
+  experienced dl-ctx   champion -662.200  transformer -662.210  transformer FM path -662.213  cached game FM -662.207
+      transformer - champion: -0.0103 ± 0.0246 (x1000 nats/game)
+      transformer FM path - champion: -0.0132 ± 0.0246 (x1000 nats/game)
+      transformer - transformer FM path: +0.0028 ± 0.0040 (x1000 nats/game)
+      champion - cached game FM: +0.0071 ± 0.0158 (x1000 nats/game)
+  match 1 dl-ctx       champion -660.399  transformer -660.420  transformer FM path -660.440  cached game FM -660.436
+      transformer - champion: -0.0212 ± 0.0485 (x1000 nats/game)
+      transformer FM path - champion: -0.0410 ± 0.0573 (x1000 nats/game)
+      transformer - transformer FM path: +0.0199 ± 0.0218 (x1000 nats/game)
+      champion - cached game FM: +0.0376 ± 0.0480 (x1000 nats/game)
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  champion             draft spearman 0.2720 (+0.0000)  raw +0.0000  strat +0.0000  sd 0.254
+  transformer          draft spearman 0.2723 (+0.0003)  raw +0.0004  strat -0.0002  sd 0.258
+  transformer FM path  draft spearman 0.2722 (+0.0002)  raw +0.0003  strat -0.0003  sd 0.258
+  cached game FM       draft spearman 0.2719 (-0.0002)  raw -0.0003  strat -0.0001  sd 0.252
+  residual sd (test drafts) 0.002  FM-path score sd (test drafts) 0.258  r(residual, champion score) test nan  r(transformer, champion) test 0.998  r(transformer, teacher) test 0.998
+BLB done: transformer - champion (experienced) -0.0155 ± 0.0265 [647s, peak RSS 4.99 GB]
+game_transformer/results_picknet_a0.json: sets with results ['MSH', 'FDN', 'BLB']  (subset 'experienced')
+
+champion - cached game FM
+  MSH    +0.00071 ± 0.10808  z +0.01
+  FDN    -0.00392 ± 0.02992  z -0.13
+  BLB    +0.00079 ± 0.01458  z +0.05
+  fixed effect -0.00010 ± 0.01301
+  random effects (DL + HKSJ) -0.00010, 95% CI [-0.05609, +0.05589], p = 0.9944; tau = 0.00000, I2 = 0%, Q p = 0.990
+  95% prediction interval for a new set [-0.16545, +0.16525]
+  sets better 2/3 (sign test one-sided p = 0.500), Wilcoxon p = 1.000, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00010 > 0 with p = 0.9944 < 0.05
+    FAIL 2/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer - champion
+  MSH    +0.00383 ± 0.01071  z +0.36
+  FDN    -0.01742 ± 0.01787  z -0.97
+  BLB    -0.00017 ± 0.00390  z -0.04
+  fixed effect -0.00041 ± 0.00359
+  random effects (DL + HKSJ) -0.00041, 95% CI [-0.01585, +0.01502], p = 0.9188; tau = 0.00000, I2 = 0%, Q p = 0.587
+  95% prediction interval for a new set [-0.04600, +0.04517]
+  sets better 1/3 (sign test one-sided p = 0.875), Wilcoxon p = 0.750, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00041 > 0 with p = 0.9188 < 0.05
+    FAIL 1/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer - transformer FM path
+  MSH    +0.00069 ± 0.00066  z +1.05
+  FDN    -0.00001 ± 0.00003  z -0.27
+  BLB    +0.00318 ± 0.00341  z +0.93
+  fixed effect -0.00001 ± 0.00003
+  random effects (DL + HKSJ) -0.00001, 95% CI [-0.00012, +0.00011], p = 0.8472; tau = 0.00000, I2 = 0%, Q p = 0.369
+  95% prediction interval for a new set [-0.00035, +0.00033]
+  sets better 2/3 (sign test one-sided p = 0.500), Wilcoxon p = 0.500, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00001 > 0 with p = 0.8472 < 0.05
+    FAIL 2/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer FM path - champion
+  MSH    +0.00315 ± 0.01072  z +0.29
+  FDN    -0.01741 ± 0.01787  z -0.97
+  BLB    -0.00335 ± 0.00532  z -0.63
+  fixed effect -0.00308 ± 0.00460
+  random effects (DL + HKSJ) -0.00308, 95% CI [-0.02289, +0.01672], p = 0.5720; tau = 0.00000, I2 = 0%, Q p = 0.612
+  95% prediction interval for a new set [-0.06157, +0.05540]
+  sets better 1/3 (sign test one-sided p = 0.875), Wilcoxon p = 0.500, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00308 > 0 with p = 0.5720 < 0.05
+    FAIL 1/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+game_transformer/results_random_a0.json: sets with results ['MSH', 'FDN', 'BLB']  (subset 'experienced')
+
+champion - cached game FM
+  MSH    +0.00071 ± 0.10808  z +0.01
+  FDN    -0.00392 ± 0.02992  z -0.13
+  BLB    +0.00079 ± 0.01458  z +0.05
+  fixed effect -0.00010 ± 0.01301
+  random effects (DL + HKSJ) -0.00010, 95% CI [-0.05609, +0.05589], p = 0.9944; tau = 0.00000, I2 = 0%, Q p = 0.990
+  95% prediction interval for a new set [-0.16545, +0.16525]
+  sets better 2/3 (sign test one-sided p = 0.500), Wilcoxon p = 1.000, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00010 > 0 with p = 0.9944 < 0.05
+    FAIL 2/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer - champion
+  MSH    +0.00293 ± 0.01068  z +0.27
+  FDN    -0.01783 ± 0.01781  z -1.00
+  BLB    -0.01802 ± 0.02153  z -0.84
+  fixed effect -0.00493 ± 0.00843
+  random effects (DL + HKSJ) -0.00493, 95% CI [-0.04119, +0.03133], p = 0.6175; tau = 0.00000, I2 = 0%, Q p = 0.488
+  95% prediction interval for a new set [-0.11202, +0.10215]
+  sets better 1/3 (sign test one-sided p = 0.875), Wilcoxon p = 0.500, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00493 > 0 with p = 0.6175 < 0.05
+    FAIL 1/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer - transformer FM path
+  MSH    +0.00004 ± 0.00010  z +0.42
+  FDN    +0.00002 ± 0.00003  z +0.90
+  BLB    +0.00104 ± 0.00128  z +0.82
+  fixed effect +0.00003 ± 0.00003
+  random effects (DL + HKSJ) +0.00003, 95% CI [-0.00008, +0.00013], p = 0.4248; tau = 0.00000, I2 = 0%, Q p = 0.715
+  95% prediction interval for a new set [-0.00030, +0.00035]
+  sets better 3/3 (sign test one-sided p = 0.125), Wilcoxon p = 0.250, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.00003 > 0 with p = 0.4248 < 0.05
+    PASS 3/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer FM path - champion
+  MSH    +0.00288 ± 0.01067  z +0.27
+  FDN    -0.01786 ± 0.01780  z -1.00
+  BLB    -0.01906 ± 0.02252  z -0.85
+  fixed effect -0.00493 ± 0.00848
+  random effects (DL + HKSJ) -0.00493, 95% CI [-0.04142, +0.03155], p = 0.6195; tau = 0.00000, I2 = 0%, Q p = 0.483
+  95% prediction interval for a new set [-0.11268, +0.10281]
+  sets better 1/3 (sign test one-sided p = 0.875), Wilcoxon p = 0.500, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00493 > 0 with p = 0.6195 < 0.05
+    FAIL 1/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+game_transformer/results_picknet_a0.5.json: sets with results ['MSH', 'FDN', 'BLB']  (subset 'experienced')
+
+champion - cached game FM
+  MSH    +0.00071 ± 0.10808  z +0.01
+  FDN    -0.00392 ± 0.02992  z -0.13
+  BLB    +0.00079 ± 0.01458  z +0.05
+  fixed effect -0.00010 ± 0.01301
+  random effects (DL + HKSJ) -0.00010, 95% CI [-0.05609, +0.05589], p = 0.9944; tau = 0.00000, I2 = 0%, Q p = 0.990
+  95% prediction interval for a new set [-0.16545, +0.16525]
+  sets better 2/3 (sign test one-sided p = 0.500), Wilcoxon p = 1.000, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00010 > 0 with p = 0.9944 < 0.05
+    FAIL 2/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer - champion
+  MSH    +0.00690 ± 0.04323  z +0.16
+  FDN    -0.05508 ± 0.05682  z -0.97
+  BLB    -0.02006 ± 0.02517  z -0.80
+  fixed effect -0.01858 ± 0.02031
+  random effects (DL + HKSJ) -0.01858, 95% CI [-0.10599, +0.06882], p = 0.4569; tau = 0.00000, I2 = 0%, Q p = 0.683
+  95% prediction interval for a new set [-0.27670, +0.23954]
+  sets better 1/3 (sign test one-sided p = 0.875), Wilcoxon p = 0.500, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.01858 > 0 with p = 0.4569 < 0.05
+    FAIL 1/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer - transformer FM path
+  MSH    +0.00000 ± 0.00000  z +0.57
+  FDN    -0.00967 ± 0.00974  z -0.99
+  BLB    +0.00126 ± 0.00156  z +0.81
+  fixed effect +0.00000 ± 0.00000
+  random effects (DL + HKSJ) +0.00000, 95% CI [-0.00000, +0.00001], p = 0.6280; tau = 0.00000, I2 = 0%, Q p = 0.441
+  95% prediction interval for a new set [-0.00001, +0.00002]
+  sets better 2/3 (sign test one-sided p = 0.500), Wilcoxon p = 1.000, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.00000 > 0 with p = 0.6280 < 0.05
+    FAIL 2/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer FM path - champion
+  MSH    +0.00690 ± 0.04323  z +0.16
+  FDN    -0.04541 ± 0.04748  z -0.96
+  BLB    -0.02132 ± 0.02605  z -0.82
+  fixed effect -0.01952 ± 0.02020
+  random effects (DL + HKSJ) -0.01952, 95% CI [-0.10642, +0.06738], p = 0.4358; tau = 0.00000, I2 = 0%, Q p = 0.713
+  95% prediction interval for a new set [-0.27614, +0.23710]
+  sets better 1/3 (sign test one-sided p = 0.875), Wilcoxon p = 0.500, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.01952 > 0 with p = 0.4358 < 0.05
+    FAIL 1/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:240: RuntimeWarning: divide by zero encountered in divide
+  w = 1 / s ** 2
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:241: RuntimeWarning: invalid value encountered in multiply
+  fe = float(np.sum(w * d) / w.sum())
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:244: RuntimeWarning: invalid value encountered in scalar divide
+  c = w.sum() - np.sum(w ** 2) / w.sum()
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:247: RuntimeWarning: divide by zero encountered in divide
+  ws = 1 / (s ** 2 + tau2)
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:248: RuntimeWarning: invalid value encountered in multiply
+  re = float(np.sum(ws * d) / ws.sum())
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:264: RuntimeWarning: invalid value encountered in divide
+  (re - pi_half, re + pi_half), npos, sign_p, wil, int(np.sum(d / s < -1.96)))
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:222: RuntimeWarning: invalid value encountered in scalar divide
+  rows = "\n".join(f"  {n:6s} {d:+.5f} ± {s:.5f}  z {d / s:+.2f}" for n, d, s in zip(self.names, self.deltas,
+game_transformer/results_random_a0.5.json: sets with results ['MSH', 'FDN', 'BLB']  (subset 'experienced')
+
+champion - cached game FM
+  MSH    +0.00071 ± 0.10808  z +0.01
+  FDN    -0.00392 ± 0.02992  z -0.13
+  BLB    +0.00079 ± 0.01458  z +0.05
+  fixed effect -0.00010 ± 0.01301
+  random effects (DL + HKSJ) -0.00010, 95% CI [-0.05609, +0.05589], p = 0.9944; tau = 0.00000, I2 = 0%, Q p = 0.990
+  95% prediction interval for a new set [-0.16545, +0.16525]
+  sets better 2/3 (sign test one-sided p = 0.500), Wilcoxon p = 1.000, significantly worse on 0
+  adopt: False
+    FAIL RE mean -0.00010 > 0 with p = 0.9944 < 0.05
+    FAIL 2/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer - champion
+  MSH    +0.00092 ± 0.08325  z +0.01
+  FDN    +0.00000 ± 0.00000  z +0.91
+  BLB    -0.01555 ± 0.02654  z -0.59
+  fixed effect +0.00000 ± 0.00000
+  random effects (DL + HKSJ) +0.00000, 95% CI [-0.00000, +0.00000], p = 0.4569; tau = 0.00000, I2 = 0%, Q p = 0.842
+  95% prediction interval for a new set [-0.00000, +0.00000]
+  sets better 2/3 (sign test one-sided p = 0.500), Wilcoxon p = 1.000, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.00000 > 0 with p = 0.4569 < 0.05
+    FAIL 2/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer - transformer FM path
+  MSH    +0.00003 ± 0.00004  z +0.82
+  FDN    +0.00000 ± 0.00000  z +nan
+  BLB    +0.00210 ± 0.00329  z +0.64
+  fixed effect +nan ± 0.00000
+  random effects (DL + HKSJ) +nan, 95% CI [+nan, +nan], p = nan; tau = 0.00000, I2 = 0%, Q p = nan
+  95% prediction interval for a new set [+nan, +nan]
+  sets better 2/3 (sign test one-sided p = 0.500), Wilcoxon p = 0.500, significantly worse on 0
+  adopt: False
+    FAIL RE mean +nan > 0 with p = nan < 0.05
+    FAIL 2/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+
+transformer FM path - champion
+  MSH    +0.00089 ± 0.08324  z +0.01
+  FDN    +0.00000 ± 0.00000  z +0.91
+  BLB    -0.01765 ± 0.02705  z -0.65
+  fixed effect +0.00000 ± 0.00000
+  random effects (DL + HKSJ) +0.00000, 95% CI [-0.00000, +0.00000], p = 0.4569; tau = 0.00000, I2 = 0%, Q p = 0.808
+  95% prediction interval for a new set [-0.00000, +0.00000]
+  sets better 2/3 (sign test one-sided p = 0.500), Wilcoxon p = 1.000, significantly worse on 0
+  adopt: False
+    FAIL RE mean +0.00000 > 0 with p = 0.4569 < 0.05
+    FAIL 2/3 sets better >= 3
+    FAIL RE mean >= min_effect 0.02
+    PASS 0 sets significantly worse <= 0
+ALLDONE

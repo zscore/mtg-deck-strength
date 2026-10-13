@@ -1,0 +1,172 @@
+=== MSH: 68609 drafts, 377376 games (train 266251, val 56679, test 54446), 83430 builds, 339 cards, PickNet vectors for 339, teacher yes [3s, peak RSS 3.12 GB]
+  prepared ['MSH'] [peak RSS 3.12 GB]
+  [MSH] champion val 0.66031 (1e-05, 0.01) epochs [40, 40] [27s]
+    seed 0: val 0.66031 at start MSH 0.66031
+    seed 0 epoch  0 val 0.66025 (-0.00006) best MSH 0.66025 [15s]
+    seed 0 epoch  1 val 0.66023 (-0.00009) best MSH 0.66023 [27s]
+    seed 0 epoch  2 val 0.66021 (-0.00011) best MSH 0.66021 [39s]
+    seed 0 epoch  3 val 0.66015 (-0.00017) best MSH 0.66015 [51s]
+    seed 0 epoch  4 val 0.66018 (-0.00013) - MSH 0.66018 [63s]
+    seed 0 epoch  5 val 0.66008 (-0.00023) best MSH 0.66008 [75s]
+    seed 0 epoch  6 val 0.66024 (-0.00007) - MSH 0.66024 [86s]
+    seed 0 epoch  7 val 0.66010 (-0.00021) - MSH 0.66010 [98s]
+    seed 0 epoch  8 val 0.66021 (-0.00011) drop MSH 0.66021 [110s]
+    seed 0 epoch  9 val 0.66007 (-0.00025) best MSH 0.66007 [122s]
+    seed 0 epoch 10 val 0.66006 (-0.00025) best MSH 0.66006 [134s]
+    seed 0 epoch 11 val 0.66004 (-0.00028) best MSH 0.66004 [146s]
+    seed 0 epoch 12 val 0.66012 (-0.00020) - MSH 0.66012 [157s]
+    seed 0 epoch 13 val 0.66004 (-0.00027) - MSH 0.66004 [169s]
+    seed 0 epoch 14 val 0.66007 (-0.00024) drop MSH 0.66007 [181s]
+    seed 0 epoch 15 val 0.66007 (-0.00024) - MSH 0.66007 [193s]
+    seed 0 epoch 16 val 0.66007 (-0.00025) - MSH 0.66007 [205s]
+    seed 0 epoch 17 val 0.66006 (-0.00026) stop MSH 0.66006 [217s]
+Traceback (most recent call last):
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 967, in <module>
+    main(sys.argv[1:])
+    ~~~~^^^^^^^^^^^^^^
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 697, in main
+    out = run(sets, cfg, o["seeds"], o["init"], o["distill"], o["warm"], o["freeze_fm"], dev, o["boot"],
+              log=lambda m: print(m, flush=True))
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 528, in run
+    S[s.name][:, k] = deck_scores(s, sm, trunk, dev, cfg)
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 367, in deck_scores
+    out[:, di] = torch.stack([f + r, f, r]).double().cpu().numpy()
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Cannot convert a MPS Tensor to float64 dtype as the MPS framework doesn't support float64. Please use float32 instead.
+=== MSH: 68609 drafts, 377376 games (train 266251, val 56679, test 54446), 83430 builds, 339 cards, PickNet vectors for 339, teacher yes [3s, peak RSS 3.12 GB]
+  prepared ['MSH'] [peak RSS 3.12 GB]
+  [MSH] champion val 0.66031 (1e-05, 0.01) epochs [40, 40] [28s]
+    seed 0: val 0.66031 at start MSH 0.66031
+    seed 0 epoch  0 val 0.66036 (+0.00004) - MSH 0.66036 [13s]
+    seed 0 epoch  1 val 0.66022 (-0.00009) best MSH 0.66022 [25s]
+    seed 0 epoch  2 val 0.66021 (-0.00011) best MSH 0.66021 [36s]
+    seed 0 epoch  3 val 0.66015 (-0.00017) best MSH 0.66015 [47s]
+    seed 0 epoch  4 val 0.66018 (-0.00013) - MSH 0.66018 [59s]
+    seed 0 epoch  5 val 0.66008 (-0.00023) best MSH 0.66008 [70s]
+    seed 0 epoch  6 val 0.66024 (-0.00007) - MSH 0.66024 [82s]
+    seed 0 epoch  7 val 0.66010 (-0.00021) - MSH 0.66010 [93s]
+    seed 0 epoch  8 val 0.66021 (-0.00011) drop MSH 0.66021 [105s]
+    seed 0 epoch  9 val 0.66007 (-0.00025) best MSH 0.66007 [117s]
+    seed 0 epoch 10 val 0.66006 (-0.00025) best MSH 0.66006 [128s]
+    seed 0 epoch 11 val 0.66004 (-0.00028) best MSH 0.66004 [139s]
+    seed 0 epoch 12 val 0.66012 (-0.00020) - MSH 0.66012 [151s]
+    seed 0 epoch 13 val 0.66004 (-0.00027) - MSH 0.66004 [162s]
+    seed 0 epoch 14 val 0.66007 (-0.00024) drop MSH 0.66007 [174s]
+    seed 0 epoch 15 val 0.66007 (-0.00024) - MSH 0.66007 [185s]
+    seed 0 epoch 16 val 0.66007 (-0.00025) - MSH 0.66007 [197s]
+    seed 0 epoch 17 val 0.66006 (-0.00026) stop MSH 0.66006 [208s]
+Traceback (most recent call last):
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 967, in <module>
+    main(sys.argv[1:])
+    ~~~~^^^^^^^^^^^^^^
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 697, in main
+    out = run(sets, cfg, o["seeds"], o["init"], o["distill"], o["warm"], o["freeze_fm"], dev, o["boot"],
+              log=lambda m: print(m, flush=True))
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 528, in run
+    S[s.name][:, k] = deck_scores(s, sm, trunk, dev, cfg)
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 367, in deck_scores
+    out[:, di] = torch.stack([f + r, f, r]).double().cpu().numpy()
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Cannot convert a MPS Tensor to float64 dtype as the MPS framework doesn't support float64. Please use float32 instead.
+=== MSH: 68609 drafts, 377376 games (train 266251, val 56679, test 54446), 83430 builds, 339 cards, PickNet vectors for 339, teacher yes [3s, peak RSS 3.12 GB]
+  prepared ['MSH'] [peak RSS 3.12 GB]
+  [MSH] champion val 0.66031 (1e-05, 0.01) epochs [40, 40] [28s]
+    seed 0: val 0.66031 at start MSH 0.66031
+    seed 0 epoch  0 val 0.66025 (-0.00006) best MSH 0.66025 [15s]
+    seed 0 epoch  1 val 0.66019 (-0.00013) best MSH 0.66019 [28s]
+    seed 0 epoch  2 val 0.66027 (-0.00004) - MSH 0.66027 [41s]
+    seed 0 epoch  3 val 0.66020 (-0.00011) - MSH 0.66020 [55s]
+    seed 0 epoch  4 val 0.66017 (-0.00015) best MSH 0.66017 [68s]
+    seed 0 epoch  5 val 0.66014 (-0.00017) best MSH 0.66014 [81s]
+    seed 0 epoch  6 val 0.66014 (-0.00018) best MSH 0.66014 [94s]
+    seed 0 epoch  7 val 0.66012 (-0.00019) best MSH 0.66012 [107s]
+    seed 0 epoch  8 val 0.66013 (-0.00018) - MSH 0.66013 [120s]
+    seed 0 epoch  9 val 0.66010 (-0.00021) best MSH 0.66010 [134s]
+    seed 0 epoch 10 val 0.66023 (-0.00008) - MSH 0.66023 [147s]
+    seed 0 epoch 11 val 0.66009 (-0.00022) best MSH 0.66009 [160s]
+    seed 0 epoch 12 val 0.66014 (-0.00018) - MSH 0.66014 [173s]
+    seed 0 epoch 13 val 0.66014 (-0.00017) - MSH 0.66014 [186s]
+    seed 0 epoch 14 val 0.66007 (-0.00024) best MSH 0.66007 [199s]
+    seed 0 epoch 15 val 0.66002 (-0.00029) best MSH 0.66002 [213s]
+    seed 0 epoch 16 val 0.66010 (-0.00021) - MSH 0.66010 [226s]
+    seed 0 epoch 17 val 0.66012 (-0.00019) - MSH 0.66012 [239s]
+    seed 0 epoch 18 val 0.66006 (-0.00025) drop MSH 0.66006 [252s]
+    seed 0 epoch 19 val 0.66002 (-0.00029) best MSH 0.66002 [265s]
+    seed 0 epoch 20 val 0.66005 (-0.00027) - MSH 0.66005 [278s]
+    seed 0 epoch 21 val 0.66007 (-0.00025) - MSH 0.66007 [292s]
+    seed 0 epoch 22 val 0.66004 (-0.00028) drop MSH 0.66004 [305s]
+    seed 0 epoch 23 val 0.66005 (-0.00026) - MSH 0.66005 [318s]
+    seed 0 epoch 24 val 0.66004 (-0.00027) - MSH 0.66004 [331s]
+    seed 0 epoch 25 val 0.66006 (-0.00026) stop MSH 0.66006 [344s]
+Traceback (most recent call last):
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 967, in <module>
+    main(sys.argv[1:])
+    ~~~~^^^^^^^^^^^^^^
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 697, in main
+    out = run(sets, cfg, o["seeds"], o["init"], o["distill"], o["warm"], o["freeze_fm"], dev, o["boot"],
+              log=lambda m: print(m, flush=True))
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 528, in run
+    S[s.name][:, k] = deck_scores(s, sm, trunk, dev, cfg)
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 367, in deck_scores
+    out[:, di] = torch.stack([f + r, f, r]).double().cpu().numpy()
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Cannot convert a MPS Tensor to float64 dtype as the MPS framework doesn't support float64. Please use float32 instead.
+=== MSH: 68609 drafts, 377376 games (train 266251, val 56679, test 54446), 83430 builds, 339 cards, PickNet vectors for 339, teacher yes [3s, peak RSS 3.12 GB]
+  prepared ['MSH'] [peak RSS 3.12 GB]
+  [MSH] champion val 0.66031 (1e-05, 0.01) epochs [40, 40] [27s]
+    seed 0: val 0.66031 at start MSH 0.66031
+    seed 0 epoch  0 val 0.66026 (-0.00006) best MSH 0.66026 [14s]
+    seed 0 epoch  1 val 0.66018 (-0.00013) best MSH 0.66018 [26s]
+    seed 0 epoch  2 val 0.66026 (-0.00005) - MSH 0.66026 [39s]
+    seed 0 epoch  3 val 0.66020 (-0.00012) - MSH 0.66020 [51s]
+    seed 0 epoch  4 val 0.66017 (-0.00015) best MSH 0.66017 [64s]
+    seed 0 epoch  5 val 0.66014 (-0.00018) best MSH 0.66014 [76s]
+    seed 0 epoch  6 val 0.66015 (-0.00017) - MSH 0.66015 [88s]
+    seed 0 epoch  7 val 0.66012 (-0.00020) best MSH 0.66012 [101s]
+    seed 0 epoch  8 val 0.66013 (-0.00018) - MSH 0.66013 [113s]
+    seed 0 epoch  9 val 0.66010 (-0.00022) best MSH 0.66010 [125s]
+    seed 0 epoch 10 val 0.66023 (-0.00009) - MSH 0.66023 [138s]
+    seed 0 epoch 11 val 0.66009 (-0.00022) best MSH 0.66009 [150s]
+    seed 0 epoch 12 val 0.66014 (-0.00018) - MSH 0.66014 [163s]
+    seed 0 epoch 13 val 0.66015 (-0.00017) - MSH 0.66015 [175s]
+    seed 0 epoch 14 val 0.66008 (-0.00023) best MSH 0.66008 [187s]
+    seed 0 epoch 15 val 0.66002 (-0.00029) best MSH 0.66002 [200s]
+    seed 0 epoch 16 val 0.66010 (-0.00022) - MSH 0.66010 [212s]
+    seed 0 epoch 17 val 0.66013 (-0.00018) - MSH 0.66013 [225s]
+    seed 0 epoch 18 val 0.66006 (-0.00025) drop MSH 0.66006 [237s]
+    seed 0 epoch 19 val 0.66002 (-0.00029) - MSH 0.66002 [249s]
+    seed 0 epoch 20 val 0.66005 (-0.00026) - MSH 0.66005 [262s]
+    seed 0 epoch 21 val 0.66007 (-0.00025) drop MSH 0.66007 [274s]
+    seed 0 epoch 22 val 0.66002 (-0.00029) - MSH 0.66002 [286s]
+    seed 0 epoch 23 val 0.66004 (-0.00028) - MSH 0.66004 [299s]
+    seed 0 epoch 24 val 0.66004 (-0.00028) stop MSH 0.66004 [311s]
+Traceback (most recent call last):
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 967, in <module>
+    main(sys.argv[1:])
+    ~~~~^^^^^^^^^^^^^^
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 697, in main
+    out = run(sets, cfg, o["seeds"], o["init"], o["distill"], o["warm"], o["freeze_fm"], dev, o["boot"],
+              log=lambda m: print(m, flush=True))
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 528, in run
+    S[s.name][:, k] = deck_scores(s, sm, trunk, dev, cfg)
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/.venv/lib/python3.14/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/Users/zblanton/Documents/repos/mtg-deck-strength/scripts/game_transformer.py", line 367, in deck_scores
+    out[:, di] = torch.stack([f + r, f, r]).double().cpu().numpy()
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Cannot convert a MPS Tensor to float64 dtype as the MPS framework doesn't support float64. Please use float32 instead.
+game_transformer/results_picknet_a0.json: sets with results []  (subset 'experienced')
+game_transformer/results_random_a0.json: sets with results []  (subset 'experienced')
+game_transformer/results_picknet_a0.5.json: sets with results []  (subset 'experienced')
+game_transformer/results_random_a0.5.json: sets with results []  (subset 'experienced')
+ALLDONE

@@ -1,0 +1,492 @@
+=== WOE: 165792 drafts, 971869 games, 211370 builds, 329 cards, 17 deck columns (affinity omitted) [22s]
+  champion               val 0.65871 (1e-05, 0.001) epochs [23, 31] [42s]
+  refit                  val nan (1e-05, 0.001) epochs [23, 31] [28s]
+  linear game model      val 0.65920 (0.0001, 0) [24s]
+  cross-fit half 1: val 0.65891 [10s]
+  cross-fit half 0: val 0.66060 [6s]
+  all raw                champion -662.257  refit -662.039  linear game model -662.731
+      refit - champion: +0.2180 ± 0.0746
+      champion - linear game model: +0.4740 ± 0.1483
+  experienced raw        champion -664.445  refit -664.263  linear game model -664.963
+      refit - champion: +0.1823 ± 0.0888
+      champion - linear game model: +0.5182 ± 0.1411
+  match 1 raw            champion -660.613  refit -660.386  linear game model -660.998
+      refit - champion: +0.2263 ± 0.1668
+      champion - linear game model: +0.3857 ± 0.3021
+  main build raw         champion -660.073  refit -659.853  linear game model -660.551
+      refit - champion: +0.2197 ± 0.0876
+      champion - linear game model: +0.4783 ± 0.1429
+  all dl                 champion -666.291  refit -666.092  linear game model -666.854
+      refit - champion: +0.1989 ± 0.0737
+      champion - linear game model: +0.5626 ± 0.1599
+  experienced dl         champion -665.728  refit -665.587  linear game model -666.304
+      refit - champion: +0.1409 ± 0.0874
+      champion - linear game model: +0.5761 ± 0.1474
+  match 1 dl             champion -663.482  refit -663.294  linear game model -664.006
+      refit - champion: +0.1888 ± 0.1940
+      champion - linear game model: +0.5232 ± 0.3371
+  main build dl          champion -664.231  refit -664.032  linear game model -664.807
+      refit - champion: +0.1992 ± 0.0781
+      champion - linear game model: +0.5761 ± 0.1540
+  all pre                champion -671.480  refit -671.352  linear game model -672.062
+      refit - champion: +0.1280 ± 0.1037
+      champion - linear game model: +0.5816 ± 0.1652
+  experienced pre        champion -670.826  refit -670.747  linear game model -671.410
+      refit - champion: +0.0784 ± 0.1136
+      champion - linear game model: +0.5840 ± 0.1545
+  match 1 pre            champion -669.101  refit -668.977  linear game model -669.696
+      refit - champion: +0.1237 ± 0.2024
+      champion - linear game model: +0.5952 ± 0.3404
+  main build pre         champion -669.416  refit -669.285  linear game model -670.007
+      refit - champion: +0.1310 ± 0.1001
+      champion - linear game model: +0.5914 ± 0.1596
+WOE fm stage done [149s, 6.5 GB]
+=== WOE lgbm stage: 165792 drafts, 971869 games, affinity False [5s]
+  lgbm seed 0: 1938 trees, alpha 0.35 [53s]
+  lgbm seed 1: 1522 trees, alpha 0.40 [43s]
+  lgbm seed 2: 1532 trees, alpha 0.40 [43s]
+    blend* seed 0: alpha 0.65 (per half [0.6, 0.65]; val cross-fit loss 662.111, alpha 0 662.717, alpha 1 662.283)
+    blend* seed 1: alpha 0.65 (per half [0.7, 0.65]; val cross-fit loss 662.144, alpha 0 662.757, alpha 1 662.286)
+    blend* seed 2: alpha 0.70 (per half [0.7, 0.65]; val cross-fit loss 662.143, alpha 0 662.798, alpha 1 662.283)
+  all raw                champion -662.257  refit -662.039  linear game model -662.731  LightGBM -662.594  round 4 blend -662.221  blend* (LightGBM + champion) -662.128
+      champion - LightGBM: +0.3370 ± 0.1830
+      champion - round 4 blend: -0.0360 ± 0.1057
+      refit - LightGBM: +0.5550 ± 0.2108
+      blend* (LightGBM + champion) - champion: +0.1286 ± 0.0517
+  experienced raw        champion -664.445  refit -664.263  linear game model -664.963  LightGBM -664.686  round 4 blend -664.328  blend* (LightGBM + champion) -664.268
+      champion - LightGBM: +0.2409 ± 0.1881
+      champion - round 4 blend: -0.1175 ± 0.1080
+      refit - LightGBM: +0.4233 ± 0.2235
+      blend* (LightGBM + champion) - champion: +0.1768 ± 0.0541
+  match 1 raw            champion -660.613  refit -660.386  linear game model -660.998  LightGBM -661.268  round 4 blend -660.783  blend* (LightGBM + champion) -660.592
+      champion - LightGBM: +0.6550 ± 0.1849
+      champion - round 4 blend: +0.1701 ± 0.1314
+      refit - LightGBM: +0.8813 ± 0.2679
+      blend* (LightGBM + champion) - champion: +0.0207 ± 0.0777
+  main build raw         champion -660.073  refit -659.853  linear game model -660.551  LightGBM -660.413  round 4 blend -660.038  blend* (LightGBM + champion) -659.946
+      champion - LightGBM: +0.3402 ± 0.1926
+      champion - round 4 blend: -0.0346 ± 0.1149
+      refit - LightGBM: +0.5600 ± 0.2143
+      blend* (LightGBM + champion) - champion: +0.1265 ± 0.0596
+  all dl                 champion -666.291  refit -666.092  linear game model -666.854  LightGBM -666.369  round 4 blend -666.046  blend* (LightGBM + champion) -666.037
+      champion - LightGBM: +0.0780 ± 0.2053
+      champion - round 4 blend: -0.2455 ± 0.1168
+      refit - LightGBM: +0.2769 ± 0.2241
+      blend* (LightGBM + champion) - champion: +0.2543 ± 0.0613
+  experienced dl         champion -665.728  refit -665.587  linear game model -666.304  LightGBM -665.713  round 4 blend -665.421  blend* (LightGBM + champion) -665.443
+      champion - LightGBM: -0.0143 ± 0.1880
+      champion - round 4 blend: -0.3068 ± 0.1063
+      refit - LightGBM: +0.1266 ± 0.2206
+      blend* (LightGBM + champion) - champion: +0.2844 ± 0.0579
+  match 1 dl             champion -663.482  refit -663.294  linear game model -664.006  LightGBM -663.873  round 4 blend -663.406  blend* (LightGBM + champion) -663.303
+      champion - LightGBM: +0.3905 ± 0.2107
+      champion - round 4 blend: -0.0762 ± 0.1409
+      refit - LightGBM: +0.5792 ± 0.3176
+      blend* (LightGBM + champion) - champion: +0.1791 ± 0.0726
+  main build dl          champion -664.231  refit -664.032  linear game model -664.807  LightGBM -664.328  round 4 blend -663.997  blend* (LightGBM + champion) -663.984
+      champion - LightGBM: +0.0969 ± 0.2138
+      champion - round 4 blend: -0.2336 ± 0.1238
+      refit - LightGBM: +0.2961 ± 0.2346
+      blend* (LightGBM + champion) - champion: +0.2465 ± 0.0615
+  all pre                champion -671.480  refit -671.352  linear game model -672.062  LightGBM -671.453  round 4 blend -671.176  blend* (LightGBM + champion) -671.198
+      champion - LightGBM: -0.0277 ± 0.2103
+      champion - round 4 blend: -0.3047 ± 0.1236
+      refit - LightGBM: +0.1003 ± 0.2215
+      blend* (LightGBM + champion) - champion: +0.2825 ± 0.0744
+  experienced pre        champion -670.826  refit -670.747  linear game model -671.410  LightGBM -670.711  round 4 blend -670.465  blend* (LightGBM + champion) -670.517
+      champion - LightGBM: -0.1152 ± 0.1931
+      champion - round 4 blend: -0.3609 ± 0.1136
+      refit - LightGBM: -0.0369 ± 0.2194
+      blend* (LightGBM + champion) - champion: +0.3091 ± 0.0716
+  match 1 pre            champion -669.101  refit -668.977  linear game model -669.696  LightGBM -669.425  round 4 blend -668.993  blend* (LightGBM + champion) -668.908
+      champion - LightGBM: +0.3248 ± 0.2083
+      champion - round 4 blend: -0.1074 ± 0.1451
+      refit - LightGBM: +0.4486 ± 0.3378
+      blend* (LightGBM + champion) - champion: +0.1929 ± 0.0769
+  main build pre         champion -669.416  refit -669.285  linear game model -670.007  LightGBM -669.404  round 4 blend -669.121  blend* (LightGBM + champion) -669.140
+      champion - LightGBM: -0.0117 ± 0.2190
+      champion - round 4 blend: -0.2949 ± 0.1280
+      refit - LightGBM: +0.1193 ± 0.2339
+      blend* (LightGBM + champion) - champion: +0.2757 ± 0.0674
+  trained on draft  target: trees 1938/2202/2674, alpha 0.35/0.40 [460s]
+  trained on game   target: trees 1691/2270/2756, alpha 0.40/0.40 [494s]
+  round 10 - round 4 | train draft | eval draft                            +0.0020 ± 0.0007
+  round 10 - round 4 | train game | eval draft                             +0.0037 ± 0.0012
+  train game - train draft | round 4 blend | eval draft                    -0.0013 ± 0.0011
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft +0.0004 ± 0.0005
+  train game - train draft | round 4: lgbm | eval draft                    -0.0011 ± 0.0017
+  round 10 - round 4 | train draft | eval game                             +0.0032 ± 0.0007
+  round 10 - round 4 | train game | eval game                              +0.0050 ± 0.0012
+  train game - train draft | round 4 blend | eval game                     -0.0007 ± 0.0009
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0010 ± 0.0005
+  train game - train draft | round 4: lgbm | eval game                     -0.0004 ± 0.0013
+WOE lgbm stage done [1142s]
+=== MOM: 205437 drafts, 1193555 games, 256546 builds, 346 cards, 17 deck columns (affinity omitted) [32s]
+  champion               val 0.66128 (1e-05, 0.001) epochs [34, 30] [54s]
+  refit                  val nan (1e-05, 0.001) epochs [34, 30] [42s]
+  linear game model      val 0.66164 (0.0001, 0) [25s]
+  cross-fit half 1: val 0.66152 [13s]
+  cross-fit half 0: val 0.66158 [10s]
+  all raw                champion -659.889  refit -659.951  linear game model -660.238
+      refit - champion: -0.0622 ± 0.0643
+      champion - linear game model: +0.3498 ± 0.0430
+  experienced raw        champion -661.412  refit -661.476  linear game model -661.748
+      refit - champion: -0.0635 ± 0.0660
+      champion - linear game model: +0.3361 ± 0.0415
+  match 1 raw            champion -658.830  refit -658.920  linear game model -659.098
+      refit - champion: -0.0898 ± 0.1334
+      champion - linear game model: +0.2678 ± 0.1147
+  main build raw         champion -658.045  refit -658.121  linear game model -658.394
+      refit - champion: -0.0756 ± 0.0688
+      champion - linear game model: +0.3486 ± 0.0459
+  all dl                 champion -661.390  refit -661.436  linear game model -661.758
+      refit - champion: -0.0458 ± 0.0371
+      champion - linear game model: +0.3682 ± 0.0449
+  experienced dl         champion -660.419  refit -660.455  linear game model -660.741
+      refit - champion: -0.0361 ± 0.0341
+      champion - linear game model: +0.3227 ± 0.0407
+  match 1 dl             champion -660.931  refit -661.007  linear game model -661.224
+      refit - champion: -0.0769 ± 0.1115
+      champion - linear game model: +0.2937 ± 0.1179
+  main build dl          champion -659.598  refit -659.658  linear game model -659.965
+      refit - champion: -0.0599 ± 0.0412
+      champion - linear game model: +0.3666 ± 0.0478
+  all pre                champion -667.457  refit -667.497  linear game model -667.799
+      refit - champion: -0.0405 ± 0.0395
+      champion - linear game model: +0.3424 ± 0.0429
+  experienced pre        champion -666.474  refit -666.505  linear game model -666.768
+      refit - champion: -0.0313 ± 0.0356
+      champion - linear game model: +0.2937 ± 0.0402
+  match 1 pre            champion -666.517  refit -666.589  linear game model -666.772
+      refit - champion: -0.0724 ± 0.1159
+      champion - linear game model: +0.2547 ± 0.1218
+  main build pre         champion -665.625  refit -665.679  linear game model -665.964
+      refit - champion: -0.0543 ± 0.0436
+      champion - linear game model: +0.3390 ± 0.0466
+MOM fm stage done [197s, 5.6 GB]
+=== MOM lgbm stage: 205437 drafts, 1193555 games, affinity False [7s]
+  lgbm seed 0: 1704 trees, alpha 0.20 [61s]
+  lgbm seed 1: 2153 trees, alpha 0.20 [75s]
+  lgbm seed 2: 1779 trees, alpha 0.25 [63s]
+    blend* seed 0: alpha 0.70 (per half [0.65, 0.7]; val cross-fit loss 662.355, alpha 0 662.966, alpha 1 662.478)
+    blend* seed 1: alpha 0.70 (per half [0.6, 0.75]; val cross-fit loss 662.336, alpha 0 662.927, alpha 1 662.458)
+    blend* seed 2: alpha 0.70 (per half [0.65, 0.75]; val cross-fit loss 662.358, alpha 0 663.000, alpha 1 662.478)
+  all raw                champion -659.889  refit -659.951  linear game model -660.238  LightGBM -660.497  round 4 blend -660.179  blend* (LightGBM + champion) -659.795
+      champion - LightGBM: +0.6081 ± 0.0896
+      champion - round 4 blend: +0.2901 ± 0.0763
+      refit - LightGBM: +0.5458 ± 0.1223
+      blend* (LightGBM + champion) - champion: +0.0940 ± 0.0325
+  experienced raw        champion -661.412  refit -661.476  linear game model -661.748  LightGBM -661.975  round 4 blend -661.656  blend* (LightGBM + champion) -661.294
+      champion - LightGBM: +0.5627 ± 0.0883
+      champion - round 4 blend: +0.2436 ± 0.0745
+      refit - LightGBM: +0.4992 ± 0.1228
+      blend* (LightGBM + champion) - champion: +0.1179 ± 0.0320
+  match 1 raw            champion -658.830  refit -658.920  linear game model -659.098  LightGBM -659.224  round 4 blend -658.960  blend* (LightGBM + champion) -658.693
+      champion - LightGBM: +0.3941 ± 0.3305
+      champion - round 4 blend: +0.1297 ± 0.2752
+      refit - LightGBM: +0.3043 ± 0.3615
+      blend* (LightGBM + champion) - champion: +0.1369 ± 0.1058
+  main build raw         champion -658.045  refit -658.121  linear game model -658.394  LightGBM -658.724  round 4 blend -658.401  blend* (LightGBM + champion) -657.982
+      champion - LightGBM: +0.6787 ± 0.0959
+      champion - round 4 blend: +0.3557 ± 0.0806
+      refit - LightGBM: +0.6032 ± 0.1254
+      blend* (LightGBM + champion) - champion: +0.0633 ± 0.0323
+  all dl                 champion -661.390  refit -661.436  linear game model -661.758  LightGBM -661.657  round 4 blend -661.382  blend* (LightGBM + champion) -661.171
+      champion - LightGBM: +0.2670 ± 0.0934
+      champion - round 4 blend: -0.0086 ± 0.0779
+      refit - LightGBM: +0.2212 ± 0.1134
+      blend* (LightGBM + champion) - champion: +0.2188 ± 0.0357
+  experienced dl         champion -660.419  refit -660.455  linear game model -660.741  LightGBM -660.676  round 4 blend -660.404  blend* (LightGBM + champion) -660.201
+      champion - LightGBM: +0.2572 ± 0.0834
+      champion - round 4 blend: -0.0148 ± 0.0690
+      refit - LightGBM: +0.2211 ± 0.1020
+      blend* (LightGBM + champion) - champion: +0.2175 ± 0.0337
+  match 1 dl             champion -660.931  refit -661.007  linear game model -661.224  LightGBM -660.903  round 4 blend -660.682  blend* (LightGBM + champion) -660.628
+      champion - LightGBM: -0.0277 ± 0.3571
+      champion - round 4 blend: -0.2483 ± 0.2964
+      refit - LightGBM: -0.1046 ± 0.3835
+      blend* (LightGBM + champion) - champion: +0.3025 ± 0.1122
+  main build dl          champion -659.598  refit -659.658  linear game model -659.965  LightGBM -659.954  round 4 blend -659.671  blend* (LightGBM + champion) -659.417
+      champion - LightGBM: +0.3562 ± 0.1057
+      champion - round 4 blend: +0.0731 ± 0.0869
+      refit - LightGBM: +0.2963 ± 0.1214
+      blend* (LightGBM + champion) - champion: +0.1813 ± 0.0371
+  all pre                champion -667.457  refit -667.497  linear game model -667.799  LightGBM -667.633  round 4 blend -667.374  blend* (LightGBM + champion) -667.211
+      champion - LightGBM: +0.1768 ± 0.0899
+      champion - round 4 blend: -0.0827 ± 0.0743
+      refit - LightGBM: +0.1364 ± 0.1096
+      blend* (LightGBM + champion) - champion: +0.2452 ± 0.0307
+  experienced pre        champion -666.474  refit -666.505  linear game model -666.768  LightGBM -666.659  round 4 blend -666.401  blend* (LightGBM + champion) -666.237
+      champion - LightGBM: +0.1852 ± 0.0784
+      champion - round 4 blend: -0.0725 ± 0.0642
+      refit - LightGBM: +0.1539 ± 0.0971
+      blend* (LightGBM + champion) - champion: +0.2367 ± 0.0275
+  match 1 pre            champion -666.517  refit -666.589  linear game model -666.772  LightGBM -666.357  round 4 blend -666.161  blend* (LightGBM + champion) -666.177
+      champion - LightGBM: -0.1596 ± 0.3588
+      champion - round 4 blend: -0.3554 ± 0.2990
+      refit - LightGBM: -0.2320 ± 0.3837
+      blend* (LightGBM + champion) - champion: +0.3395 ± 0.1148
+  main build pre         champion -665.625  refit -665.679  linear game model -665.964  LightGBM -665.895  round 4 blend -665.628  blend* (LightGBM + champion) -665.419
+      champion - LightGBM: +0.2701 ± 0.1005
+      champion - round 4 blend: +0.0027 ± 0.0820
+      refit - LightGBM: +0.2158 ± 0.1160
+      blend* (LightGBM + champion) - champion: +0.2063 ± 0.0319
+  trained on draft  target: trees 1704/1938/2352, alpha 0.20/0.25 [516s]
+  trained on game   target: trees 2272/2056/2496, alpha 0.20/0.20 [603s]
+  round 10 - round 4 | train draft | eval draft                            +0.0027 ± 0.0010
+  round 10 - round 4 | train game | eval draft                             +0.0032 ± 0.0009
+  train game - train draft | round 4 blend | eval draft                    -0.0013 ± 0.0013
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft -0.0009 ± 0.0010
+  train game - train draft | round 4: lgbm | eval draft                    -0.0011 ± 0.0015
+  round 10 - round 4 | train draft | eval game                             +0.0027 ± 0.0009
+  round 10 - round 4 | train game | eval game                              +0.0027 ± 0.0011
+  train game - train draft | round 4 blend | eval game                     +0.0038 ± 0.0014
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0039 ± 0.0012
+  train game - train draft | round 4: lgbm | eval game                     +0.0038 ± 0.0016
+MOM lgbm stage done [1378s]
+=== HOB: 57994 drafts, 323000 games, 70336 builds, 193 cards, 17 deck columns (affinity omitted) [5s]
+  champion               val 0.65244 (1e-05, 0.001) epochs [38, 40] [14s]
+  refit                  val nan (1e-05, 0.001) epochs [38, 40] [10s]
+  linear game model      val 0.65260 (0.0001, 0) [8s]
+  cross-fit half 1: val 0.65542 [2s]
+  cross-fit half 0: val 0.65551 [2s]
+  all raw                champion -651.465  refit -651.346  linear game model -651.669
+      refit - champion: +0.1199 ± 0.1239
+      champion - linear game model: +0.2036 ± 0.1153
+  experienced raw        champion -655.734  refit -655.591  linear game model -655.897
+      refit - champion: +0.1435 ± 0.1266
+      champion - linear game model: +0.1623 ± 0.1477
+  match 1 raw            champion -644.439  refit -644.528  linear game model -644.447
+      refit - champion: -0.0886 ± 0.1755
+      champion - linear game model: +0.0080 ± 0.2203
+  main build raw         champion -649.284  refit -649.159  linear game model -649.538
+      refit - champion: +0.1247 ± 0.1309
+      champion - linear game model: +0.2538 ± 0.1075
+  all dl                 champion -660.159  refit -660.054  linear game model -660.419
+      refit - champion: +0.1051 ± 0.1618
+      champion - linear game model: +0.2606 ± 0.1270
+  experienced dl         champion -659.630  refit -659.497  linear game model -659.823
+      refit - champion: +0.1323 ± 0.1604
+      champion - linear game model: +0.1937 ± 0.1461
+  match 1 dl             champion -654.398  refit -654.528  linear game model -654.450
+      refit - champion: -0.1306 ± 0.1990
+      champion - linear game model: +0.0522 ± 0.2864
+  main build dl          champion -657.818  refit -657.705  linear game model -658.122
+      refit - champion: +0.1129 ± 0.1661
+      champion - linear game model: +0.3045 ± 0.1232
+  all pre                champion -665.555  refit -665.476  linear game model -665.840
+      refit - champion: +0.0784 ± 0.1386
+      champion - linear game model: +0.2850 ± 0.1248
+  experienced pre        champion -664.904  refit -664.793  linear game model -665.113
+      refit - champion: +0.1117 ± 0.1311
+      champion - linear game model: +0.2091 ± 0.1398
+  match 1 pre            champion -661.219  refit -661.361  linear game model -661.290
+      refit - champion: -0.1417 ± 0.2332
+      champion - linear game model: +0.0710 ± 0.2998
+  main build pre         champion -663.302  refit -663.216  linear game model -663.627
+      refit - champion: +0.0859 ± 0.1405
+      champion - linear game model: +0.3257 ± 0.1220
+HOB fm stage done [47s, 3.1 GB]
+=== HOB lgbm stage: 57994 drafts, 323000 games, affinity False [1s]
+  lgbm seed 0: 725 trees, alpha 0.35 [8s]
+  lgbm seed 1: 722 trees, alpha 0.40 [8s]
+  lgbm seed 2: 850 trees, alpha 0.40 [9s]
+    blend* seed 0: alpha 0.60 (per half [0.6, 0.55]; val cross-fit loss 660.522, alpha 0 661.092, alpha 1 660.780)
+    blend* seed 1: alpha 0.65 (per half [0.75, 0.6]; val cross-fit loss 660.478, alpha 0 661.208, alpha 1 660.663)
+    blend* seed 2: alpha 0.65 (per half [0.75, 0.55]; val cross-fit loss 660.565, alpha 0 661.216, alpha 1 660.780)
+  all raw                champion -651.465  refit -651.346  linear game model -651.669  LightGBM -652.429  round 4 blend -651.780  blend* (LightGBM + champion) -651.480
+      champion - LightGBM: +0.9633 ± 0.2145
+      champion - round 4 blend: +0.3146 ± 0.1485
+      refit - LightGBM: +1.0832 ± 0.2675
+      blend* (LightGBM + champion) - champion: -0.0145 ± 0.0935
+  experienced raw        champion -655.734  refit -655.591  linear game model -655.897  LightGBM -656.701  round 4 blend -655.992  blend* (LightGBM + champion) -655.696
+      champion - LightGBM: +0.9671 ± 0.2391
+      champion - round 4 blend: +0.2581 ± 0.1665
+      refit - LightGBM: +1.1106 ± 0.2955
+      blend* (LightGBM + champion) - champion: +0.0383 ± 0.1191
+  match 1 raw            champion -644.439  refit -644.528  linear game model -644.447  LightGBM -644.861  round 4 blend -644.452  blend* (LightGBM + champion) -644.310
+      champion - LightGBM: +0.4217 ± 0.4018
+      champion - round 4 blend: +0.0128 ± 0.2659
+      refit - LightGBM: +0.3331 ± 0.4417
+      blend* (LightGBM + champion) - champion: +0.1292 ± 0.1465
+  main build raw         champion -649.284  refit -649.159  linear game model -649.538  LightGBM -650.323  round 4 blend -649.644  blend* (LightGBM + champion) -649.318
+      champion - LightGBM: +1.0392 ± 0.2183
+      champion - round 4 blend: +0.3596 ± 0.1502
+      refit - LightGBM: +1.1639 ± 0.2686
+      blend* (LightGBM + champion) - champion: -0.0345 ± 0.0889
+  all dl                 champion -660.159  refit -660.054  linear game model -660.419  LightGBM -660.755  round 4 blend -660.136  blend* (LightGBM + champion) -659.945
+      champion - LightGBM: +0.5966 ± 0.2192
+      champion - round 4 blend: -0.0233 ± 0.1524
+      refit - LightGBM: +0.7017 ± 0.2800
+      blend* (LightGBM + champion) - champion: +0.2139 ± 0.0887
+  experienced dl         champion -659.630  refit -659.497  linear game model -659.823  LightGBM -660.198  round 4 blend -659.577  blend* (LightGBM + champion) -659.404
+      champion - LightGBM: +0.5685 ± 0.2398
+      champion - round 4 blend: -0.0526 ± 0.1698
+      refit - LightGBM: +0.7008 ± 0.3229
+      blend* (LightGBM + champion) - champion: +0.2256 ± 0.1186
+  match 1 dl             champion -654.398  refit -654.528  linear game model -654.450  LightGBM -654.331  round 4 blend -653.942  blend* (LightGBM + champion) -653.941
+      champion - LightGBM: -0.0664 ± 0.5282
+      champion - round 4 blend: -0.4561 ± 0.3507
+      refit - LightGBM: -0.1970 ± 0.5896
+      blend* (LightGBM + champion) - champion: +0.4571 ± 0.1964
+  main build dl          champion -657.818  refit -657.705  linear game model -658.122  LightGBM -658.509  round 4 blend -657.853  blend* (LightGBM + champion) -657.631
+      champion - LightGBM: +0.6916 ± 0.2266
+      champion - round 4 blend: +0.0356 ± 0.1574
+      refit - LightGBM: +0.8045 ± 0.2777
+      blend* (LightGBM + champion) - champion: +0.1864 ± 0.0871
+  all pre                champion -665.555  refit -665.476  linear game model -665.840  LightGBM -666.073  round 4 blend -665.480  blend* (LightGBM + champion) -665.312
+      champion - LightGBM: +0.5182 ± 0.2182
+      champion - round 4 blend: -0.0750 ± 0.1503
+      refit - LightGBM: +0.5967 ± 0.2589
+      blend* (LightGBM + champion) - champion: +0.2425 ± 0.0858
+  experienced pre        champion -664.904  refit -664.793  linear game model -665.113  LightGBM -665.393  round 4 blend -664.802  blend* (LightGBM + champion) -664.653
+      champion - LightGBM: +0.4888 ± 0.2417
+      champion - round 4 blend: -0.1024 ± 0.1673
+      refit - LightGBM: +0.6005 ± 0.2984
+      blend* (LightGBM + champion) - champion: +0.2517 ± 0.1136
+  match 1 pre            champion -661.219  refit -661.361  linear game model -661.290  LightGBM -661.154  round 4 blend -660.766  blend* (LightGBM + champion) -660.765
+      champion - LightGBM: -0.0655 ± 0.5293
+      champion - round 4 blend: -0.4538 ± 0.3485
+      refit - LightGBM: -0.2072 ± 0.6181
+      blend* (LightGBM + champion) - champion: +0.4547 ± 0.1938
+  main build pre         champion -663.302  refit -663.216  linear game model -663.627  LightGBM -663.906  round 4 blend -663.278  blend* (LightGBM + champion) -663.082
+      champion - LightGBM: +0.6043 ± 0.2275
+      champion - round 4 blend: -0.0233 ± 0.1571
+      refit - LightGBM: +0.6902 ± 0.2584
+      blend* (LightGBM + champion) - champion: +0.2195 ± 0.0863
+  trained on draft  target: trees 725/887/1076, alpha 0.35/0.40 [69s]
+  trained on game   target: trees 750/745/904, alpha 0.40/0.45 [63s]
+  round 10 - round 4 | train draft | eval draft                            +0.0051 ± 0.0016
+  round 10 - round 4 | train game | eval draft                             +0.0021 ± 0.0018
+  train game - train draft | round 4 blend | eval draft                    +0.0017 ± 0.0017
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft -0.0013 ± 0.0016
+  train game - train draft | round 4: lgbm | eval draft                    +0.0028 ± 0.0025
+  round 10 - round 4 | train draft | eval game                             +0.0057 ± 0.0015
+  round 10 - round 4 | train game | eval game                              +0.0032 ± 0.0019
+  train game - train draft | round 4 blend | eval game                     +0.0023 ± 0.0020
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game -0.0002 ± 0.0020
+  train game - train draft | round 4: lgbm | eval game                     +0.0037 ± 0.0030
+HOB lgbm stage done [174s]
+=== TMT: 32151 drafts, 180204 games, 39488 builds, 215 cards, 17 deck columns (affinity omitted) [3s]
+  champion               val 0.65186 (1e-05, 0.01) epochs [40, 40] [8s]
+  refit                  val nan (1e-05, 0.01) epochs [40, 40] [6s]
+  linear game model      val 0.65182 (0.0001, 0) [5s]
+  cross-fit half 1: val 0.65589 [1s]
+  cross-fit half 0: val 0.65629 [1s]
+  all raw                champion -647.338  refit -647.386  linear game model -647.376
+      refit - champion: -0.0482 ± 0.1442
+      champion - linear game model: +0.0378 ± 0.0909
+  experienced raw        champion -653.718  refit -653.797  linear game model -653.825
+      refit - champion: -0.0796 ± 0.1876
+      champion - linear game model: +0.1071 ± 0.1308
+  match 1 raw            champion -644.440  refit -644.737  linear game model -644.550
+      refit - champion: -0.2964 ± 0.2987
+      champion - linear game model: +0.1100 ± 0.1522
+  main build raw         champion -644.286  refit -644.358  linear game model -644.316
+      refit - champion: -0.0721 ± 0.1468
+      champion - linear game model: +0.0305 ± 0.0942
+  all dl                 champion -657.752  refit -657.742  linear game model -657.775
+      refit - champion: +0.0102 ± 0.1742
+      champion - linear game model: +0.0228 ± 0.0934
+  experienced dl         champion -656.090  refit -656.155  linear game model -656.184
+      refit - champion: -0.0651 ± 0.1936
+      champion - linear game model: +0.0937 ± 0.1200
+  match 1 dl             champion -654.945  refit -655.243  linear game model -655.033
+      refit - champion: -0.2979 ± 0.3941
+      champion - linear game model: +0.0875 ± 0.1667
+  main build dl          champion -654.772  refit -654.789  linear game model -654.787
+      refit - champion: -0.0175 ± 0.1715
+      champion - linear game model: +0.0155 ± 0.0973
+  all pre                champion -662.801  refit -662.792  linear game model -662.841
+      refit - champion: +0.0092 ± 0.1853
+      champion - linear game model: +0.0400 ± 0.1009
+  experienced pre        champion -661.574  refit -661.637  linear game model -661.678
+      refit - champion: -0.0634 ± 0.2064
+      champion - linear game model: +0.1042 ± 0.1262
+  match 1 pre            champion -658.270  refit -658.583  linear game model -658.370
+      refit - champion: -0.3124 ± 0.4004
+      champion - linear game model: +0.1001 ± 0.1697
+  main build pre         champion -659.702  refit -659.722  linear game model -659.735
+      refit - champion: -0.0204 ± 0.1829
+      champion - linear game model: +0.0334 ± 0.1077
+TMT fm stage done [29s, 2.0 GB]
+=== TMT lgbm stage: 32151 drafts, 180204 games, affinity False [1s]
+  lgbm seed 0: 459 trees, alpha 0.25 [4s]
+  lgbm seed 1: 388 trees, alpha 0.25 [3s]
+  lgbm seed 2: 617 trees, alpha 0.25 [4s]
+    blend* seed 0: alpha 0.60 (per half [0.5, 0.7]; val cross-fit loss 658.165, alpha 0 658.781, alpha 1 658.476)
+    blend* seed 1: alpha 0.50 (per half [0.5, 0.5]; val cross-fit loss 658.053, alpha 0 658.542, alpha 1 658.506)
+    blend* seed 2: alpha 0.50 (per half [0.5, 0.55]; val cross-fit loss 658.015, alpha 0 658.503, alpha 1 658.476)
+  all raw                champion -647.338  refit -647.386  linear game model -647.376  LightGBM -647.846  round 4 blend -647.487  blend* (LightGBM + champion) -647.189
+      champion - LightGBM: +0.5079 ± 0.2027
+      champion - round 4 blend: +0.1486 ± 0.1777
+      refit - LightGBM: +0.4597 ± 0.2719
+      blend* (LightGBM + champion) - champion: +0.1491 ± 0.1265
+  experienced raw        champion -653.718  refit -653.797  linear game model -653.825  LightGBM -654.332  round 4 blend -653.917  blend* (LightGBM + champion) -653.567
+      champion - LightGBM: +0.6144 ± 0.2422
+      champion - round 4 blend: +0.1994 ± 0.2121
+      refit - LightGBM: +0.5348 ± 0.3248
+      blend* (LightGBM + champion) - champion: +0.1504 ± 0.1575
+  match 1 raw            champion -644.440  refit -644.737  linear game model -644.550  LightGBM -644.953  round 4 blend -644.717  blend* (LightGBM + champion) -644.477
+      champion - LightGBM: +0.5129 ± 0.5003
+      champion - round 4 blend: +0.2772 ± 0.3883
+      refit - LightGBM: +0.2166 ± 0.5609
+      blend* (LightGBM + champion) - champion: -0.0368 ± 0.2509
+  main build raw         champion -644.286  refit -644.358  linear game model -644.316  LightGBM -644.752  round 4 blend -644.394  blend* (LightGBM + champion) -644.106
+      champion - LightGBM: +0.4663 ± 0.1783
+      champion - round 4 blend: +0.1085 ± 0.1568
+      refit - LightGBM: +0.3942 ± 0.2455
+      blend* (LightGBM + champion) - champion: +0.1800 ± 0.1156
+  all dl                 champion -657.752  refit -657.742  linear game model -657.775  LightGBM -657.980  round 4 blend -657.611  blend* (LightGBM + champion) -657.370
+      champion - LightGBM: +0.2276 ± 0.2860
+      champion - round 4 blend: -0.1413 ± 0.2598
+      refit - LightGBM: +0.2378 ± 0.3470
+      blend* (LightGBM + champion) - champion: +0.3821 ± 0.1902
+  experienced dl         champion -656.090  refit -656.155  linear game model -656.184  LightGBM -656.510  round 4 blend -656.109  blend* (LightGBM + champion) -655.811
+      champion - LightGBM: +0.4202 ± 0.2379
+      champion - round 4 blend: +0.0190 ± 0.2120
+      refit - LightGBM: +0.3551 ± 0.3203
+      blend* (LightGBM + champion) - champion: +0.2788 ± 0.1619
+  match 1 dl             champion -654.945  refit -655.243  linear game model -655.033  LightGBM -655.032  round 4 blend -654.786  blend* (LightGBM + champion) -654.635
+      champion - LightGBM: +0.0861 ± 0.5614
+      champion - round 4 blend: -0.1599 ± 0.4561
+      refit - LightGBM: -0.2118 ± 0.6757
+      blend* (LightGBM + champion) - champion: +0.3101 ± 0.3210
+  main build dl          champion -654.772  refit -654.789  linear game model -654.787  LightGBM -654.938  round 4 blend -654.574  blend* (LightGBM + champion) -654.349
+      champion - LightGBM: +0.1659 ± 0.2743
+      champion - round 4 blend: -0.1981 ± 0.2494
+      refit - LightGBM: +0.1484 ± 0.3372
+      blend* (LightGBM + champion) - champion: +0.4231 ± 0.1859
+  all pre                champion -662.801  refit -662.792  linear game model -662.841  LightGBM -662.991  round 4 blend -662.632  blend* (LightGBM + champion) -662.404
+      champion - LightGBM: +0.1897 ± 0.2782
+      champion - round 4 blend: -0.1692 ± 0.2576
+      refit - LightGBM: +0.1989 ± 0.3438
+      blend* (LightGBM + champion) - champion: +0.3967 ± 0.1913
+  experienced pre        champion -661.574  refit -661.637  linear game model -661.678  LightGBM -661.955  round 4 blend -661.564  blend* (LightGBM + champion) -661.280
+      champion - LightGBM: +0.3813 ± 0.2258
+      champion - round 4 blend: -0.0098 ± 0.2096
+      refit - LightGBM: +0.3179 ± 0.3177
+      blend* (LightGBM + champion) - champion: +0.2942 ± 0.1651
+  match 1 pre            champion -658.270  refit -658.583  linear game model -658.370  LightGBM -658.334  round 4 blend -658.087  blend* (LightGBM + champion) -657.942
+      champion - LightGBM: +0.0639 ± 0.5545
+      champion - round 4 blend: -0.1838 ± 0.4537
+      refit - LightGBM: -0.2486 ± 0.6838
+      blend* (LightGBM + champion) - champion: +0.3281 ± 0.3168
+  main build pre         champion -659.702  refit -659.722  linear game model -659.735  LightGBM -659.835  round 4 blend -659.481  blend* (LightGBM + champion) -659.269
+      champion - LightGBM: +0.1332 ± 0.2683
+      champion - round 4 blend: -0.2204 ± 0.2489
+      refit - LightGBM: +0.1128 ± 0.3341
+      blend* (LightGBM + champion) - champion: +0.4333 ± 0.1882
+  trained on draft  target: trees 459/381/463, alpha 0.25/0.25 [21s]
+  trained on game   target: trees 413/403/489, alpha 0.20/0.20 [23s]
+  round 10 - round 4 | train draft | eval draft                            +0.0066 ± 0.0018
+  round 10 - round 4 | train game | eval draft                             +0.0039 ± 0.0030
+  train game - train draft | round 4 blend | eval draft                    +0.0047 ± 0.0032
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval draft +0.0020 ± 0.0019
+  train game - train draft | round 4: lgbm | eval draft                    +0.0059 ± 0.0038
+  round 10 - round 4 | train draft | eval game                             +0.0067 ± 0.0025
+  round 10 - round 4 | train game | eval game                              +0.0046 ± 0.0027
+  train game - train draft | round 4 blend | eval game                     +0.0082 ± 0.0043
+  train game - train draft | round 10 best (refit, 5 seeds, + game FM) | eval game +0.0061 ± 0.0018
+  train game - train draft | round 4: lgbm | eval game                     +0.0109 ± 0.0050
+TMT lgbm stage done [65s]

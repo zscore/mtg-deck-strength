@@ -1,0 +1,11 @@
+  permutation invariance max |d eta| 0.00e+00, padding invariance 0.00e+00
+  build-table path vs per-draft path: loss 1.246815 vs 1.246815
+  PickNet-init, no distill       val nll/game 0.7170 -> 0.7055; test r(true deck) [0.88 0.89], Spearman(WR) [0.244 0.291] [3.8s]
+  PickNet-init, distill a=0.5    val nll/game 0.7214 -> 0.7044; test r(true deck) [0.984 0.989], Spearman(WR) [0.259 0.31 ] [2.8s]
+  random-init, no distill        val nll/game 0.7159 -> 0.7036; test r(true deck) [0.891 0.869], Spearman(WR) [0.231 0.29 ] [2.6s]
+total 9.2s
+d=64 layers=2 batch=256: 0.37M trainable params, 81 ms/step (CPU, 2 threads), peak RSS 474 MB
+d=128 layers=3 batch=256: 1.05M trainable params, 176 ms/step (CPU, 2 threads), peak RSS 661 MB
+d=128 layers=3 batch=512: 1.05M trainable params, 347 ms/step (CPU, 2 threads), peak RSS 987 MB
+d=192 layers=4 batch=256: 2.22M trainable params, 322 ms/step (CPU, 2 threads), peak RSS 927 MB
+(timing lines: python game_set_transformer.py time D LAYERS BATCH; CPU, 2 threads, machine load ~10)
