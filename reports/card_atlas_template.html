@@ -1,0 +1,299 @@
+<title>Opening-Hand Card Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#f6f7f8; --surface:#ffffff; --ink:#15181c; --ink-2:#4b5159; --ink-3:#7a818a;
+  --rule:#dfe2e6; --grid:#eceef1; --accent:#2a78d6; --accent-soft:#cde2fb;
+  --pos:#2a78d6; --neg:#e34948; --dot:#9aa3ad; --sel:#2a78d6;
+  --pip-W:#efe6c4; --pip-U:#4f8fd9; --pip-B:#4a4540; --pip-R:#dc5a4a; --pip-G:#3f8f4f; --pip-C:#b9bec4;
+  --pip-ink:#15181c; --pip-ink-dark:#ffffff;
+  --display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --bg:#121417; --surface:#1a1d21; --ink:#eef0f2; --ink-2:#b4bac1; --ink-3:#848b94;
+  --rule:#2e3338; --grid:#252a2f; --accent:#3987e5; --accent-soft:#1c3a5e;
+  --pos:#3987e5; --neg:#e66767; --dot:#5d656e; --sel:#5598e7;}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#121417; --surface:#1a1d21; --ink:#eef0f2; --ink-2:#b4bac1; --ink-3:#848b94;
+  --rule:#2e3338; --grid:#252a2f; --accent:#3987e5; --accent-soft:#1c3a5e;
+  --pos:#3987e5; --neg:#e66767; --dot:#5d656e; --sel:#5598e7;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);font-variant-numeric:tabular-nums}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px;padding-block:28px 64px;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:.005em}
+h1{font-size:clamp(30px,5vw,42px);font-weight:700;line-height:1.05}
+h2{font-size:24px;font-weight:600}
+h3{font-size:17px;font-weight:600}
+p{margin:0;max-width:68ch;color:var(--ink-2)}
+.eyebrow{font:600 12px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+header{display:grid;gap:12px}
+.picker{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;
+  border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.picker .lab{font:600 12px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-right:6px}
+.chip{font:600 14px var(--display);letter-spacing:.06em;padding:5px 10px;border-radius:4px;border:1px solid var(--rule);
+  background:var(--surface);color:var(--ink-2);cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.chip:focus-visible,.row:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section{display:grid;gap:14px}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:18px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:20px}
+.scroll{overflow-x:auto}
+svg{display:block;font-family:var(--body)}
+svg text{fill:var(--ink-2);font-size:12px}
+svg .muted{fill:var(--ink-3)}
+svg .strong{fill:var(--ink);font-weight:600}
+.grid line{stroke:var(--grid);stroke-width:1}
+.axis line{stroke:var(--rule)}
+.zero{stroke:var(--ink-3);stroke-width:1}
+.note{font-size:13px;color:var(--ink-3)}
+.stats{display:flex;flex-wrap:wrap;gap:10px 28px}
+.stat{display:grid;gap:2px}
+.stat b{font:600 22px var(--display)}
+.stat span{font-size:13px;color:var(--ink-3)}
+.pill{display:inline-flex;align-items:center;gap:6px;font:600 13px var(--display);letter-spacing:.04em;padding:3px 10px;
+  border-radius:99px;border:1px solid var(--rule)}
+.pill.ok{color:var(--pos);border-color:var(--pos)}
+.pill.flat{color:var(--ink-3)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{font:600 12px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);text-align:left;
+  padding:6px 8px;border-bottom:1px solid var(--rule)}
+td{padding:6px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
+td.num{text-align:right;white-space:nowrap}
+.tip{position:fixed;pointer-events:none;z-index:20;background:var(--surface);color:var(--ink);border:1px solid var(--rule);
+  border-radius:6px;padding:8px 10px;font-size:13px;line-height:1.4;box-shadow:0 4px 16px rgba(0,0,0,.14);max-width:280px}
+.tip b{font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--ink-2)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+footer p{font-size:13px}
+@media (prefers-reduced-motion:no-preference){.chip{transition:background .15s,border-color .15s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">17Lands Premier Draft · 12 sets · skill-adjusted</div>
+    <h1>Opening-Hand Card Atlas</h1>
+    <p>How much each card moves your game win rate when it is in your opening seven, and which pairs of cards do
+      better together than apart. The opening hand is dealt at random given the deck, so these numbers aren't
+      inflated by who drafts the card, the way 17Lands' GIH WR is.</p>
+  </header>
+
+  <div class="picker" role="group" aria-label="Choose a set"><span class="lab">Set</span><span id="chips" style="display:contents"></span></div>
+
+  <section>
+    <div class="eyebrow">All sets</div>
+    <h2>Where the power sits in each set</h2>
+    <p>Each dot is one nonland card's opening-hand value. Wide rows have a few cards far above the rest; tight rows are
+      flatter formats. Click a row to open that set.</p>
+    <div class="panel scroll"><svg id="overview" role="img" aria-label="Card power spread per set"></svg></div>
+  </section>
+
+  <section>
+    <div class="eyebrow" id="set-eyebrow"></div>
+    <h2 id="power-title">Strongest and weakest cards</h2>
+    <p>Percentage points of game win rate from having the card in the opening hand, against an average card. Bars are
+      95% intervals. Only cards seen in at least 2,000 opening hands are shown.</p>
+    <div class="cols">
+      <div class="panel"><h3>Top 20</h3><div class="scroll"><svg id="top"></svg></div></div>
+      <div class="panel"><h3>Bottom 12</h3><div class="scroll"><svg id="bottom"></svg></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Opening-hand value against GIH WR</h2>
+    <p>GIH WR mixes card power with who plays the card: strong drafters pick some cards more, and a card looks good
+      because its owners are good. Labelled cards sit furthest from the trend line. Above the line, GIH WR undersells the
+      card; below it, GIH WR oversells it.</p>
+    <div class="panel scroll"><svg id="scatter" role="img" aria-label="Hand value against GIH WR"></svg></div>
+  </section>
+
+  <section>
+    <h2>Card pairs</h2>
+    <p>Extra win rate when both cards are in the opening hand, beyond what each is worth alone. Pairs in at least 2,000
+      training decks. Treat single pairs as suggestive: in one set they replicate weakly across random halves of the
+      data, though the set of pairs as a whole improves held-out predictions.</p>
+    <div class="panel" style="display:grid;gap:14px">
+      <div class="stats" id="syn-stats"></div>
+      <div class="legend"><span><i class="sw" style="background:var(--pos)"></i>Better together</span>
+        <span><i class="sw" style="background:var(--neg)"></i>Worse together</span></div>
+      <div class="scroll"><svg id="pairs"></svg></div>
+    </div>
+    <div class="panel">
+      <h3>Build-arounds: cards whose value depends most on the partner</h3>
+      <p class="note" style="margin-block:4px 10px">Ranked by how spread out a card's pair values are across its partners.</p>
+      <div class="scroll"><table id="hubs"></table></div>
+    </div>
+  </section>
+
+  <footer style="display:grid;gap:8px">
+    <div class="eyebrow">Method</div>
+    <p>Card values: <code>results/&lt;SET&gt;/hand_value_v2/card_values.csv</code>. A residual-on-propensity estimate
+      of the effect of a card being in the opening seven, given the deck, mulligans and land count; held-out games
+      replicate it at r ≈ 0.78. Pairs: <code>deck_synergy_v8/hand_pairs.csv</code>, a rank-4 pair model on opening
+      hands fitted on top of a per-card slope, so card draw can't drive it. Pair log-odds are shown as win-rate points
+      at a 50% baseline (Q × 25). Built by <code>scripts/build_card_atlas.py</code>.</p>
+  </footer>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const D=/*__DATA__*/null;
+const SETS=Object.keys(D);
+const NS="http://www.w3.org/2000/svg";
+let cur=(()=>{try{const s=localStorage.getItem("atlas-set");if(SETS.includes(s))return s}catch(e){}return location.hash.slice(1)&&SETS.includes(location.hash.slice(1))?location.hash.slice(1):"BLB"})();
+const RAR={C:"Common",U:"Uncommon",R:"Rare",M:"Mythic",S:"Special","?":"Unknown"};
+const fmt=(v,d=1)=>(v>0?"+":v<0?"−":"")+Math.abs(v).toFixed(d);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function el(tag,attrs={},parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+function txt(parent,x,y,s,attrs={}){const t=el("text",{x,y,...attrs},parent);t.textContent=s;return t}
+function clear(svg){while(svg.firstChild)svg.firstChild.remove()}
+function width(svg){return Math.max(320,svg.parentElement.clientWidth)}
+function niceTicks(lo,hi,n=6){const step=Math.pow(10,Math.floor(Math.log10((hi-lo)/n)));const m=[1,2,5,10].find(m=>(hi-lo)/(step*m)<=n)*step;const t=[];for(let v=Math.ceil(lo/m)*m;v<=hi+1e-9;v+=m)t.push(+v.toFixed(6));return t}
+
+// tooltip
+const tip=document.getElementById("tip");
+function showTip(ev,html){tip.innerHTML=html;tip.hidden=false;const r=tip.getBoundingClientRect();let x=ev.clientX+14,y=ev.clientY+14;if(x+r.width>innerWidth-8)x=ev.clientX-r.width-14;if(y+r.height>innerHeight-8)y=ev.clientY-r.height-14;tip.style.left=x+"px";tip.style.top=y+"px"}
+function hideTip(){tip.hidden=true}
+function bindTip(node,fn){node.addEventListener("mousemove",e=>showTip(e,fn()));node.addEventListener("mouseleave",hideTip)}
+function cardTip(c){return `<b>${esc(c.name)}</b><br>${RAR[c.rarity]||c.rarity}${c.colors?" · "+c.colors:" · colourless"}<br>Opening-hand value <b>${fmt(c.hv)} pp</b> ± ${(1.96*c.se).toFixed(1)}<br>GIH WR ${c.gih??"–"}%<br>${c.games.toLocaleString()} opening hands`}
+
+function pips(g,x,y,colors){const cs=colors?colors.split(""):["C"];cs.forEach((c,i)=>{el("circle",{cx:x+i*11,cy:y,r:4.5,fill:`var(--pip-${c})`,stroke:"var(--rule)","stroke-width":1},g)});return cs.length*11}
+
+// set chips
+const chips=document.getElementById("chips");
+SETS.forEach(s=>{const b=document.createElement("button");b.className="chip";b.textContent=s;b.id="chip-"+s;b.onclick=()=>select(s);chips.appendChild(b)});
+
+function select(s){cur=s;try{localStorage.setItem("atlas-set",s)}catch(e){}history.replaceState(null,"","#"+s);render()}
+
+// overview strip plot
+function drawOverview(){
+  const svg=document.getElementById("overview");clear(svg);
+  const W=Math.max(width(svg),640),rowH=34,L=52,R=170,T=26,H=T+rowH*SETS.length+8;
+  svg.setAttribute("viewBox",`0 0 ${W} ${H}`);svg.setAttribute("width",W);svg.setAttribute("height",H);
+  const all=SETS.flatMap(s=>D[s].cards.map(c=>c.hv));const lo=Math.floor(Math.min(...all)/5)*5,hi=Math.ceil(Math.max(...all)/5)*5;
+  const x=v=>L+(v-lo)/(hi-lo)*(W-L-R);
+  const g=el("g",{class:"grid"},svg);
+  niceTicks(lo,hi,8).forEach(t=>{el("line",{x1:x(t),x2:x(t),y1:T-6,y2:H-8},g);txt(svg,x(t),T-12,fmt(t,0),{"text-anchor":"middle",class:"muted"})});
+  el("line",{x1:x(0),x2:x(0),y1:T-6,y2:H-8,class:"zero"},svg);
+  txt(svg,W-R+12,T-12,"Strongest card",{class:"muted"});
+  SETS.forEach((s,i)=>{
+    const y=T+i*rowH+rowH/2,row=el("g",{class:"row",tabindex:0,role:"button","aria-label":"Open "+s,style:"cursor:pointer"},svg);
+    const on=s===cur;
+    el("rect",{x:0,y:y-rowH/2+2,width:W,height:rowH-4,rx:4,fill:on?"var(--accent-soft)":"transparent"},row);
+    txt(row,8,y+4,s,{class:on?"strong":""}).style.fontFamily="var(--display)";
+    D[s].cards.forEach((c,j)=>{const jit=((j*7919)%13-6)*1.3;
+      const d=el("circle",{cx:x(c.hv),cy:y+jit,r:on?3.2:2.6,fill:on?"var(--sel)":"var(--dot)","fill-opacity":on?.75:.6},row);
+      bindTip(d,()=>`<b>${s}</b> · `+cardTip(c))});
+    const top=D[s].cards.reduce((a,b)=>b.hv>a.hv?b:a);
+    el("circle",{cx:x(top.hv),cy:y,r:4.5,fill:"none",stroke:"var(--ink)","stroke-width":1.5},row);
+    const nm=top.name.length>22?top.name.slice(0,21)+"…":top.name;
+    txt(row,W-R+12,y+4,`${nm} ${fmt(top.hv,0)}`,{class:on?"strong":""});
+    row.addEventListener("click",()=>select(s));
+    row.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();select(s)}});
+  });
+}
+
+// top / bottom dot + interval list
+function drawList(id,cards,lo,hi){
+  const svg=document.getElementById(id);clear(svg);
+  const W=width(svg),rowH=24,T=22,nameW=Math.min(230,W*0.48),L=nameW+40,R=48,H=T+rowH*cards.length+4;
+  svg.setAttribute("viewBox",`0 0 ${W} ${H}`);svg.setAttribute("width",W);svg.setAttribute("height",H);
+  const x=v=>L+(v-lo)/(hi-lo)*(W-L-R);const g=el("g",{class:"grid"},svg);
+  niceTicks(lo,hi,4).forEach(t=>{el("line",{x1:x(t),x2:x(t),y1:T-4,y2:H},g);txt(svg,x(t),T-10,fmt(t,0),{"text-anchor":"middle",class:"muted"})});
+  if(lo<0&&hi>0)el("line",{x1:x(0),x2:x(0),y1:T-4,y2:H,class:"zero"},svg);
+  cards.forEach((c,i)=>{const y=T+i*rowH+rowH/2,row=el("g",{},svg);
+    el("rect",{x:0,y:y-rowH/2,width:W,height:rowH,fill:"transparent"},row);
+    const w=pips(row,6,y,c.colors);
+    txt(row,6+w+4,y+4,c.rarity,{class:"muted","font-size":11,"font-weight":600});
+    let nm=c.name;const maxCh=Math.floor((nameW-w-14)/6.6);if(nm.length>maxCh)nm=nm.slice(0,maxCh-1)+"…";
+    txt(row,6+w+18,y+4,nm);
+    const ci=1.96*c.se,col=c.hv>=0?"var(--pos)":"var(--neg)";
+    el("line",{x1:x(Math.max(lo,c.hv-ci)),x2:x(Math.min(hi,c.hv+ci)),y1:y,y2:y,stroke:col,"stroke-width":2,"stroke-linecap":"round","stroke-opacity":.45},row);
+    el("circle",{cx:x(c.hv),cy:y,r:4.5,fill:col,stroke:"var(--surface)","stroke-width":2},row);
+    txt(row,W-4,y+4,fmt(c.hv),{"text-anchor":"end",class:"strong"});
+    bindTip(row,()=>cardTip(c));
+  });
+}
+
+// scatter: GIH WR vs HV
+function drawScatter(){
+  const svg=document.getElementById("scatter");clear(svg);
+  const cards=D[cur].cards.filter(c=>c.gih!=null);
+  const W=Math.max(width(svg),360),H=Math.min(520,Math.max(340,W*0.55)),L=52,R=16,T=16,B=44;
+  svg.setAttribute("viewBox",`0 0 ${W} ${H}`);svg.setAttribute("width",W);svg.setAttribute("height",H);
+  const xs=cards.map(c=>c.gih),ys=cards.map(c=>c.hv);
+  const x0=Math.floor(Math.min(...xs)/2)*2,x1=Math.ceil(Math.max(...xs)/2)*2,y0=Math.floor(Math.min(...ys)/5)*5,y1=Math.ceil(Math.max(...ys)/5)*5;
+  const x=v=>L+(v-x0)/(x1-x0)*(W-L-R),y=v=>T+(y1-v)/(y1-y0)*(H-T-B);
+  const g=el("g",{class:"grid"},svg);
+  niceTicks(x0,x1,7).forEach(t=>{el("line",{x1:x(t),x2:x(t),y1:T,y2:H-B},g);txt(svg,x(t),H-B+16,t+"%",{"text-anchor":"middle",class:"muted"})});
+  niceTicks(y0,y1,6).forEach(t=>{el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t)},g);txt(svg,L-8,y(t)+4,fmt(t,0),{"text-anchor":"end",class:"muted"})});
+  el("line",{x1:L,x2:W-R,y1:y(0),y2:y(0),class:"zero"},svg);
+  txt(svg,(L+W-R)/2,H-8,"17Lands GIH WR",{"text-anchor":"middle"});
+  txt(svg,14,(T+H-B)/2,"Opening-hand value (pp)",{"text-anchor":"middle",transform:`rotate(-90 14 ${(T+H-B)/2})`});
+  // weighted least squares trend (weights = 1/se^2)
+  let sw=0,sx=0,sy=0,sxx=0,sxy=0;cards.forEach(c=>{const w=1/(c.se*c.se);sw+=w;sx+=w*c.gih;sy+=w*c.hv;sxx+=w*c.gih*c.gih;sxy+=w*c.gih*c.hv});
+  const b=(sw*sxy-sx*sy)/(sw*sxx-sx*sx),a=(sy-b*sx)/sw;
+  el("line",{x1:x(x0),y1:y(a+b*x0),x2:x(x1),y2:y(a+b*x1),stroke:"var(--ink-3)","stroke-width":1.5},svg);
+  const res=cards.map(c=>({c,r:(c.hv-(a+b*c.gih))/Math.max(c.se,0.5)})).sort((p,q)=>q.r-p.r);
+  const lab=new Set([...res.slice(0,5),...res.slice(-5)].map(p=>p.c.name));
+  cards.forEach(c=>{const L_=lab.has(c.name);
+    const d=el("circle",{cx:x(c.gih),cy:y(c.hv),r:L_?5:3.6,fill:L_?(c.hv>a+b*c.gih?"var(--pos)":"var(--neg)"):"var(--dot)",
+      "fill-opacity":L_?1:.7,stroke:"var(--surface)","stroke-width":L_?2:1},svg);
+    bindTip(d,()=>cardTip(c)+`<br>vs trend <b>${fmt(c.hv-(a+b*c.gih))} pp</b>`)});
+  // labels, nudged apart vertically
+  const placed=[];
+  res.filter(p=>lab.has(p.c.name)).forEach(p=>{const c=p.c;let ly=y(c.hv)+4,lx=x(c.gih)+8,anchor="start";
+    if(lx>W-R-150){lx=x(c.gih)-8;anchor="end"}
+    for(let k=0;k<12&&placed.some(q=>Math.abs(q.y-ly)<13&&Math.abs(q.x-lx)<150);k++)ly+=p.r>0?-13:13;
+    placed.push({x:lx,y:ly});const nm=c.name.length>24?c.name.slice(0,23)+"…":c.name;txt(svg,lx,ly,nm,{"text-anchor":anchor,class:"strong","font-size":11.5})});
+}
+
+// synergy pairs, diverging bars in win-rate points (Q x 25)
+function drawPairs(){
+  const S=D[cur],svg=document.getElementById("pairs");clear(svg);
+  const sig=S.pairGain-S.pairGainCI>0;
+  document.getElementById("syn-stats").innerHTML=
+    `<span class="pill ${sig?"ok":"flat"}">${sig?"✓ Synergy detected":"– No detectable synergy"}</span>`+
+    `<div class="stat"><b>${S.pairGain.toFixed(2)} ± ${S.pairGainCI.toFixed(2)}</b><span>held-out log loss saved ×1000</span></div>`+
+    `<div class="stat"><b>${S.splitHalfR.toFixed(2)}</b><span>split-half pair correlation</span></div>`+
+    `<div class="stat"><b>${S.nPairs.toLocaleString()}</b><span>pairs fitted</span></div>`;
+  const rows=[...S.pairs.map(p=>({...p,k:"pos"})),{gap:true},...S.anti.map(p=>({...p,k:"neg"}))];
+  const W=Math.max(width(svg),360),rowH=24,T=22,nameW=Math.min(440,W*0.62),L=nameW+12,R=52,H=T+rowH*rows.length;
+  svg.setAttribute("viewBox",`0 0 ${W} ${H}`);svg.setAttribute("width",W);svg.setAttribute("height",H);
+  const pp=q=>q*25,m=Math.max(1,...rows.filter(r=>!r.gap).map(r=>Math.abs(pp(r.q))));const lim=Math.ceil(m);
+  const x=v=>L+(v+lim)/(2*lim)*(W-L-R);const g=el("g",{class:"grid"},svg);
+  niceTicks(-lim,lim,6).forEach(t=>{el("line",{x1:x(t),x2:x(t),y1:T-4,y2:H},g);txt(svg,x(t),T-10,fmt(t,0)+" pp",{"text-anchor":"middle",class:"muted"})});
+  el("line",{x1:x(0),x2:x(0),y1:T-4,y2:H,class:"zero"},svg);
+  rows.forEach((r,i)=>{const y=T+i*rowH+rowH/2;
+    if(r.gap){txt(svg,6,y+4,"Worst pairs",{class:"muted","font-size":11,"font-weight":600});return}
+    const row=el("g",{},svg);el("rect",{x:0,y:y-rowH/2,width:W,height:rowH,fill:"transparent"},row);
+    let nm=`${r.a} + ${r.b}`;const maxCh=Math.floor(nameW/6.5);if(nm.length>maxCh)nm=nm.slice(0,maxCh-1)+"…";
+    txt(row,6,y+4,nm);
+    const v=pp(r.q),x0=x(0),x1=x(v),col=r.k==="pos"?"var(--pos)":"var(--neg)";
+    el("rect",{x:Math.min(x0,x1),y:y-7,width:Math.max(1,Math.abs(x1-x0)),height:14,rx:3,fill:col},row);
+    txt(row,W-4,y+4,fmt(v),{"text-anchor":"end",class:"strong"});
+    bindTip(row,()=>`<b>${esc(r.a)}</b> + <b>${esc(r.b)}</b><br>Q = ${fmt(r.q,3)} log-odds (≈ ${fmt(v)} pp)<br>${r.decks.toLocaleString()} training decks with both`);
+  });
+}
+
+function drawHubs(){
+  const t=document.getElementById("hubs");
+  t.innerHTML=`<thead><tr><th>Card</th><th class="num">Spread</th><th>Best partner</th><th class="num">pp</th><th>Worst partner</th><th class="num">pp</th></tr></thead><tbody>`+
+    D[cur].hubs.map(h=>`<tr><td><b>${esc(h.card)}</b></td><td class="num">${(h.spread*25).toFixed(1)}</td><td>${esc(h.best)}</td><td class="num" style="color:var(--pos)">${fmt(h.bestQ*25)}</td><td>${esc(h.worst)}</td><td class="num" style="color:var(--neg)">${fmt(h.worstQ*25)}</td></tr>`).join("")+"</tbody>";
+}
+
+function render(){
+  SETS.forEach(s=>document.getElementById("chip-"+s).setAttribute("aria-pressed",s===cur));
+  const S=D[cur];document.getElementById("set-eyebrow").textContent=cur+" · "+S.cards.length+" nonland cards";
+  document.getElementById("power-title").textContent=`Strongest and weakest cards in ${cur}`;
+  const top=S.cards.slice(0,20),bot=S.cards.slice(-12).reverse();
+  const ext=[...top,...bot].flatMap(c=>[c.hv-1.96*c.se,c.hv+1.96*c.se]);
+  const lo=Math.floor(Math.min(0,...ext)/5)*5,hi=Math.ceil(Math.max(0,...ext)/5)*5;
+  drawOverview();drawList("top",top,lo,hi);drawList("bottom",bot,lo,hi);drawScatter();drawPairs();drawHubs();
+}
+let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(render,120)});
+render();
+</script>
