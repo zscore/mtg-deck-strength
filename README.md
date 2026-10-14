@@ -4,7 +4,7 @@ How good is a drafted Magic deck, what is each card worth, and is card synergy r
 trained on 17Lands game data, a full replication of the DraftEncoder paper (arXiv 2607.04782), and nine
 rounds of card-synergy experiments.
 
-Split out of [mtg-open-lane](https://github.com/zscore/mtg-open-lane), with history. 17Lands data comes
+Split out of [wheelnet](https://github.com/zscore/wheelnet) (formerly mtg-open-lane), with history. 17Lands data comes
 from [mtg-data](../mtg-data); please attribute 17Lands and check their
 [usage guidelines](https://www.17lands.com/usage_guidelines).
 
