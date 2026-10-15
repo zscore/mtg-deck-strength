@@ -1,0 +1,228 @@
+{
+ "models": {
+  "site FM": {
+   "experienced dl": {
+    "b per sd": 0.22077705590109337,
+    "calibration": "own val fit",
+    "sc_gll": -655.1566229381716,
+    "seed sd": 0.0,
+    "test games": 21041,
+    "test drafts": 3711
+   },
+   "match 1 dl": {
+    "b per sd": 0.19388651738271487,
+    "calibration": "own val fit",
+    "sc_gll": -654.1411240444127,
+    "seed sd": 0.0,
+    "test games": 4474,
+    "test drafts": 4474
+   },
+   "experienced pre": {
+    "b per sd": 0.2183390532353619,
+    "calibration": "own val fit",
+    "sc_gll": -660.6873087910303,
+    "seed sd": 0.0,
+    "test games": 21041,
+    "test drafts": 3711
+   },
+   "match 1 pre": {
+    "b per sd": 0.19073182012198994,
+    "calibration": "own val fit",
+    "sc_gll": -657.5131715293984,
+    "seed sd": 0.0,
+    "test games": 4474,
+    "test drafts": 4474
+   }
+  },
+  "blend @0.7, all trees": {
+   "experienced dl": {
+    "b per sd": 0.22833272118566217,
+    "calibration": "own val fit",
+    "sc_gll": -655.1455919163327,
+    "seed sd": 0.0,
+    "test games": 21041,
+    "test drafts": 3711
+   },
+   "match 1 dl": {
+    "b per sd": 0.19582749905568392,
+    "calibration": "own val fit",
+    "sc_gll": -654.0974647377077,
+    "seed sd": 0.0,
+    "test games": 4474,
+    "test drafts": 4474
+   },
+   "experienced pre": {
+    "b per sd": 0.2262789867019872,
+    "calibration": "own val fit",
+    "sc_gll": -660.655530188882,
+    "seed sd": 0.0,
+    "test games": 21041,
+    "test drafts": 3711
+   },
+   "match 1 pre": {
+    "b per sd": 0.19196958919458287,
+    "calibration": "own val fit",
+    "sc_gll": -657.4451292542848,
+    "seed sd": 0.0,
+    "test games": 4474,
+    "test drafts": 4474
+   }
+  },
+  "blend @0.7, 250 trees": {
+   "experienced dl": {
+    "b per sd": 0.22633294219252767,
+    "calibration": "own val fit",
+    "sc_gll": -655.2146311856596,
+    "seed sd": 0.0,
+    "test games": 21041,
+    "test drafts": 3711
+   },
+   "match 1 dl": {
+    "b per sd": 0.19653274528962922,
+    "calibration": "own val fit",
+    "sc_gll": -654.2441458482344,
+    "seed sd": 0.0,
+    "test games": 4474,
+    "test drafts": 4474
+   },
+   "experienced pre": {
+    "b per sd": 0.22417421603295676,
+    "calibration": "own val fit",
+    "sc_gll": -660.7228767350158,
+    "seed sd": 0.0,
+    "test games": 21041,
+    "test drafts": 3711
+   },
+   "match 1 pre": {
+    "b per sd": 0.1926656197323737,
+    "calibration": "own val fit",
+    "sc_gll": -657.5956479060774,
+    "seed sd": 0.0,
+    "test games": 4474,
+    "test drafts": 4474
+   }
+  }
+ },
+ "pairs": {
+  "blend @0.7, all trees - site FM": {
+   "experienced dl": {
+    "name": "TMT",
+    "delta": 0.011031021838903143,
+    "se": 0.15640069142277063,
+    "se_boot": 0.15640069142277063,
+    "se_seed": 0.0,
+    "n_units": 3711,
+    "n_seeds": 1
+   },
+   "match 1 dl": {
+    "name": "TMT",
+    "delta": 0.043659306704967094,
+    "se": 0.2794132760881132,
+    "se_boot": 0.2794132760881132,
+    "se_seed": 0.0,
+    "n_units": 4474,
+    "n_seeds": 1
+   },
+   "experienced pre": {
+    "name": "TMT",
+    "delta": 0.03177860214827888,
+    "se": 0.15890449375292073,
+    "se_boot": 0.15890449375292073,
+    "se_seed": 0.0,
+    "n_units": 3711,
+    "n_seeds": 1
+   },
+   "match 1 pre": {
+    "name": "TMT",
+    "delta": 0.06804227511361205,
+    "se": 0.279355763962284,
+    "se_boot": 0.279355763962284,
+    "se_seed": 0.0,
+    "n_units": 4474,
+    "n_seeds": 1
+   }
+  },
+  "blend @0.7, 250 trees - site FM": {
+   "experienced dl": {
+    "name": "TMT",
+    "delta": -0.058008247488032794,
+    "se": 0.1358021866632174,
+    "se_boot": 0.1358021866632174,
+    "se_seed": 0.0,
+    "n_units": 3711,
+    "n_seeds": 1
+   },
+   "match 1 dl": {
+    "name": "TMT",
+    "delta": -0.10302180382177539,
+    "se": 0.2750338372668096,
+    "se_boot": 0.2750338372668096,
+    "se_seed": 0.0,
+    "n_units": 4474,
+    "n_seeds": 1
+   },
+   "experienced pre": {
+    "name": "TMT",
+    "delta": -0.03556794398548391,
+    "se": 0.1366865999261183,
+    "se_boot": 0.1366865999261183,
+    "se_seed": 0.0,
+    "n_units": 3711,
+    "n_seeds": 1
+   },
+   "match 1 pre": {
+    "name": "TMT",
+    "delta": -0.08247637667898289,
+    "se": 0.27311025019965735,
+    "se_boot": 0.27311025019965735,
+    "se_seed": 0.0,
+    "n_units": 4474,
+    "n_seeds": 1
+   }
+  },
+  "blend @0.7, 250 trees - blend @0.7, all trees": {
+   "experienced dl": {
+    "name": "TMT",
+    "delta": -0.06903926932693594,
+    "se": 0.04090782593327857,
+    "se_boot": 0.04090782593327857,
+    "se_seed": 0.0,
+    "n_units": 3711,
+    "n_seeds": 1
+   },
+   "match 1 dl": {
+    "name": "TMT",
+    "delta": -0.1466811105267425,
+    "se": 0.057528659781280876,
+    "se_boot": 0.057528659781280876,
+    "se_seed": 0.0,
+    "n_units": 4474,
+    "n_seeds": 1
+   },
+   "experienced pre": {
+    "name": "TMT",
+    "delta": -0.06734654613376279,
+    "se": 0.04133844545065549,
+    "se_boot": 0.04133844545065549,
+    "se_seed": 0.0,
+    "n_units": 3711,
+    "n_seeds": 1
+   },
+   "match 1 pre": {
+    "name": "TMT",
+    "delta": -0.15051865179259494,
+    "se": 0.05626233065327133,
+    "se_boot": 0.05626233065327133,
+    "se_seed": 0.0,
+    "n_units": 4474,
+    "n_seeds": 1
+   }
+  }
+ },
+ "set": "TMT",
+ "trees": 458,
+ "test r with all trees": {
+  "250": 0.9852474513491013
+ },
+ "seconds": 2.3924779891967773
+}

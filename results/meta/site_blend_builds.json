@@ -1,0 +1,3086 @@
+{
+ "per set": {
+  "MSH": {
+   "set": "MSH",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 114.59627075000003,
+    "lgbm us": 829.4902602500001,
+    "fm build ms": 311.1826150299976,
+    "blend build ms": 598.6033313466655,
+    "fm values ms": 675.0487374333329,
+    "blend values ms": 109.01146676666673
+   },
+   "sizes": {
+    "trees": 623,
+    "nodes": 8722,
+    "leaves": 9345,
+    "text kB": 1136.9892578125,
+    "f32 int32-kids kB": 130.197265625,
+    "f32 gz kB": 91.205078125,
+    "f16 int16-kids kB": 80.30859375,
+    "site deck json kB": 215.0234375,
+    "site deck json gz kB": 71.2744140625
+   },
+   "alpha": 0.8,
+   "agreement": {
+    "same deck": 0.5033333333333333,
+    "same spells": 0.5033333333333333,
+    "spells swapped (mean, all pools)": 0.8433333333333334,
+    "spells swapped (mean, pools that differ)": 1.7210884353741496,
+    "swaps hist": {
+     "0": 153,
+     "1": 86,
+     "2": 35,
+     "3": 15,
+     "4": 7,
+     "5": 1,
+     "6": 2,
+     "7": 1
+    },
+    "land count differs": 0.07666666666666666,
+    "FM vs FM other seed: same deck": 0.95,
+    "FM vs FM other seed: spells swapped": 0.11666666666666667,
+    "FM other seed scores worse under FM (pp)": -0.0142102079025738,
+    "blend build beats both FM builds under FM": 0.05
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.11317849821046179,
+    "blend: blend build - FM build": 0.06022488954639769,
+    "blend gain, pools that differ": 0.12125816687194162,
+    "FM loss, pools that differ": -0.2278761708935473
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 2.9102525231395613,
+    "blend: blend build - registered": 2.469215714148068,
+    "blend: FM build - registered": 2.4089908246016702,
+    "FM: blend build - registered": 2.7970740249291
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.553644431359354,
+    "fm of fmBuilt": 0.6489578426424406,
+    "lg of blBuilt": 0.5946481045311799,
+    "fm of blBuilt": 0.6422756841633019,
+    "lg of reg": 0.537777310453118,
+    "fm of reg": 0.5040463772992373
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.0,
+    "fm of fmBuilt": 0.01,
+    "lg of blBuilt": 0.0,
+    "fm of blBuilt": 0.01
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6581675226636201,
+    "blend build": 0.6683405388828683
+   },
+   "overlap with registered spells (skill >= 0.60, n=70)": {
+    "FM build": 0.6658857423871923,
+    "blend build": 0.6747815965301067
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 253,
+     "hand value (logit)": -0.028918566298275758,
+     "GIH WR": 0.5619524087941825,
+     "drafter skill - mean": -0.002525697270083049
+    },
+    "blend drops": {
+     "n": 244,
+     "hand value (logit)": -0.05658848414261751,
+     "GIH WR": 0.544032605707458,
+     "drafter skill - mean": -0.013626122572382942
+    }
+   },
+   "most added": [
+    [
+     "Raft Security Officer",
+     10
+    ],
+    [
+     "Agent of Atlas",
+     9
+    ],
+    [
+     "Borough Backup",
+     9
+    ],
+    [
+     "Bold Biochemist",
+     8
+    ],
+    [
+     "Giant-Sized Flying Ant",
+     7
+    ],
+    [
+     "Ultron Drone",
+     7
+    ],
+    [
+     "Kree Sentinel",
+     6
+    ],
+    [
+     "Roxxon Brutes",
+     6
+    ]
+   ],
+   "most dropped": [
+    [
+     "Kree Commandos",
+     9
+    ],
+    [
+     "I Am Iron Man",
+     8
+    ],
+    [
+     "Restorative Technique",
+     8
+    ],
+    [
+     "Decoy Ploy",
+     8
+    ],
+    [
+     "Pym Particles",
+     8
+    ],
+    [
+     "A.I.M. Synthoids",
+     7
+    ],
+    [
+     "Giant-Sized Flying Ant",
+     6
+    ],
+    [
+     "Agents of S.H.I.E.L.D.",
+     6
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9788703323782356
+  },
+  "BLB": {
+   "set": "BLB",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 3.820395750000003,
+    "lgbm us": 59.62698949999999,
+    "fm build ms": 48.64104611999992,
+    "blend build ms": 135.30423717333335,
+    "fm values ms": 60.77002913333329,
+    "blend values ms": 13.194576400000052
+   },
+   "sizes": {
+    "trees": 1666,
+    "nodes": 23324,
+    "leaves": 24990,
+    "text kB": 3018.373046875,
+    "f32 int32-kids kB": 348.16796875,
+    "f32 gz kB": 241.9248046875,
+    "f16 int16-kids kB": 214.7578125,
+    "site deck json kB": 175.2119140625,
+    "site deck json gz kB": 58.037109375
+   },
+   "alpha": 0.65,
+   "agreement": {
+    "same deck": 0.42,
+    "same spells": 0.43666666666666665,
+    "spells swapped (mean, all pools)": 1.0033333333333334,
+    "spells swapped (mean, pools that differ)": 1.8132530120481927,
+    "swaps hist": {
+     "0": 134,
+     "1": 91,
+     "2": 43,
+     "3": 23,
+     "4": 5,
+     "5": 1,
+     "8": 3
+    },
+    "land count differs": 0.10666666666666667,
+    "FM vs FM other seed: same deck": 0.97,
+    "FM vs FM other seed: spells swapped": 0.07666666666666666,
+    "FM other seed scores worse under FM (pp)": -0.012869288314467535,
+    "blend build beats both FM builds under FM": 0.05333333333333334
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.21959698907920355,
+    "blend: blend build - FM build": 0.262377987632251,
+    "blend gain, pools that differ": 0.4523758407452602,
+    "FM loss, pools that differ": -0.37861549841242015
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 1.8301574012769348,
+    "blend: blend build - registered": 1.8398147162111973,
+    "blend: FM build - registered": 1.5774367285789461,
+    "FM: blend build - registered": 1.6105604121977313
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.5631347729893116,
+    "fm of fmBuilt": 0.5873717864821912,
+    "lg of blBuilt": 0.611229160823907,
+    "fm of blBuilt": 0.5773455797575644,
+    "lg of reg": 0.5069086036583466,
+    "fm of reg": 0.5014802904241065
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.006666666666666667,
+    "fm of fmBuilt": 0.016666666666666666,
+    "lg of blBuilt": 0.016666666666666666,
+    "fm of blBuilt": 0.016666666666666666
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.7158535539810038,
+    "blend build": 0.7107890052641909
+   },
+   "overlap with registered spells (skill >= 0.60, n=63)": {
+    "FM build": 0.715246066754533,
+    "blend build": 0.721930267200232
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 301,
+     "hand value (logit)": -0.0486349706825795,
+     "GIH WR": 0.5597714340047879,
+     "drafter skill - mean": -0.001193562944730123
+    },
+    "blend drops": {
+     "n": 295,
+     "hand value (logit)": -0.09210668374660975,
+     "GIH WR": 0.5522896838527133,
+     "drafter skill - mean": -0.006225266497013933
+    }
+   },
+   "most added": [
+    [
+     "Fountainport Bell",
+     25
+    ],
+    [
+     "Three Tree Mascot",
+     11
+    ],
+    [
+     "Treetop Sentries",
+     10
+    ],
+    [
+     "Whiskerquill Scribe",
+     9
+    ],
+    [
+     "Barkform Harvester",
+     8
+    ],
+    [
+     "Steampath Charger",
+     8
+    ],
+    [
+     "Psychic Whorl",
+     7
+    ],
+    [
+     "Daggerfang Duo",
+     7
+    ]
+   ],
+   "most dropped": [
+    [
+     "Corpseberry Cultivator",
+     12
+    ],
+    [
+     "Early Winter",
+     11
+    ],
+    [
+     "Rabbit Response",
+     10
+    ],
+    [
+     "Skyskipper Duo",
+     10
+    ],
+    [
+     "Starlit Soothsayer",
+     9
+    ],
+    [
+     "Heaped Harvest",
+     9
+    ],
+    [
+     "Bumbleflower's Sharepot",
+     9
+    ],
+    [
+     "Run Away Together",
+     8
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.972161379915493
+  },
+  "DFT": {
+   "set": "DFT",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 4.956312499999999,
+    "lgbm us": 51.484739499999996,
+    "fm build ms": 16544.702182633282,
+    "blend build ms": 21171.177056650024,
+    "fm values ms": 63.4600305333332,
+    "blend values ms": 13.894695966666491
+   },
+   "sizes": {
+    "trees": 1358,
+    "nodes": 19012,
+    "leaves": 20370,
+    "text kB": 2467.728515625,
+    "f32 int32-kids kB": 283.80078125,
+    "f32 gz kB": 197.220703125,
+    "f16 int16-kids kB": 175.0546875,
+    "site deck json kB": 184.53515625,
+    "site deck json gz kB": 61.701171875
+   },
+   "alpha": 0.7,
+   "agreement": {
+    "same deck": 0.2966666666666667,
+    "same spells": 0.3466666666666667,
+    "spells swapped (mean, all pools)": 1.1333333333333333,
+    "spells swapped (mean, pools that differ)": 1.7708333333333333,
+    "swaps hist": {
+     "0": 108,
+     "1": 97,
+     "2": 61,
+     "3": 25,
+     "4": 4,
+     "5": 2,
+     "6": 2,
+     "8": 1
+    },
+    "land count differs": 0.13333333333333333,
+    "FM vs FM other seed: same deck": 0.94,
+    "FM vs FM other seed: spells swapped": 0.15333333333333332,
+    "FM other seed scores worse under FM (pp)": 0.013657072393244955,
+    "blend build beats both FM builds under FM": 0.04666666666666667
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.2085219581304472,
+    "blend: blend build - FM build": 0.21789405845502322,
+    "blend gain, pools that differ": 0.3098019788460046,
+    "FM loss, pools that differ": -0.2964767177210148
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 2.4306145178791616,
+    "blend: blend build - registered": 2.266764577593633,
+    "blend: FM build - registered": 2.04887051913861,
+    "FM: blend build - registered": 2.2220925597487144
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.570872485966401,
+    "fm of fmBuilt": 0.6184825649362822,
+    "lg of blBuilt": 0.6313215611292318,
+    "fm of blBuilt": 0.6093836804667982,
+    "lg of reg": 0.5127430530703504,
+    "fm of reg": 0.505171828508911
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.01,
+    "fm of fmBuilt": 0.02,
+    "lg of blBuilt": 0.013333333333333334,
+    "fm of blBuilt": 0.02
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6941238853269484,
+    "blend build": 0.6889766700531578
+   },
+   "overlap with registered spells (skill >= 0.60, n=65)": {
+    "FM build": 0.7050991050866553,
+    "blend build": 0.7010474187608182
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 340,
+     "hand value (logit)": -0.039094510358602154,
+     "GIH WR": 0.535430324243752,
+     "drafter skill - mean": -0.004845249510946728
+    },
+    "blend drops": {
+     "n": 321,
+     "hand value (logit)": -0.06800649978917113,
+     "GIH WR": 0.5325434993750423,
+     "drafter skill - mean": -0.007982921656047073
+    }
+   },
+   "most added": [
+    [
+     "Guidelight Matrix",
+     14
+    ],
+    [
+     "Wreck Remover",
+     14
+    ],
+    [
+     "Howler's Heavy",
+     11
+    ],
+    [
+     "Veloheart Bike",
+     9
+    ],
+    [
+     "Burner Rocket",
+     9
+    ],
+    [
+     "Risky Shortcut",
+     9
+    ],
+    [
+     "Trip Up",
+     8
+    ],
+    [
+     "Scrap Compactor",
+     8
+    ]
+   ],
+   "most dropped": [
+    [
+     "Midnight Mangler",
+     14
+    ],
+    [
+     "Glitch Ghost Surveyor",
+     13
+    ],
+    [
+     "Gearseeker Serpent",
+     12
+    ],
+    [
+     "Keen Buccaneer",
+     10
+    ],
+    [
+     "Stall Out",
+     9
+    ],
+    [
+     "Scrap Compactor",
+     8
+    ],
+    [
+     "Aetherjacket",
+     8
+    ],
+    [
+     "Alacrian Jaguar",
+     8
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9781723512215477
+  },
+  "DSK": {
+   "set": "DSK",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 3.2504062499999975,
+    "lgbm us": 72.600552,
+    "fm build ms": 5484.072957093298,
+    "blend build ms": 28587.778943746685,
+    "fm values ms": 60681.5646959,
+    "blend values ms": 25.042906966626955
+   },
+   "sizes": {
+    "trees": 1965,
+    "nodes": 27510,
+    "leaves": 29475,
+    "text kB": 3557.70703125,
+    "f32 int32-kids kB": 410.654296875,
+    "f32 gz kB": 285.3017578125,
+    "f16 int16-kids kB": 253.30078125,
+    "site deck json kB": 184.771484375,
+    "site deck json gz kB": 62.0166015625
+   },
+   "alpha": 0.7,
+   "agreement": {
+    "same deck": 0.30666666666666664,
+    "same spells": 0.30666666666666664,
+    "spells swapped (mean, all pools)": 1.34,
+    "spells swapped (mean, pools that differ)": 1.99009900990099,
+    "swaps hist": {
+     "0": 98,
+     "1": 99,
+     "2": 53,
+     "3": 30,
+     "4": 10,
+     "5": 2,
+     "6": 1,
+     "7": 5,
+     "8": 2
+    },
+    "land count differs": 0.14666666666666667,
+    "FM vs FM other seed: same deck": 0.93,
+    "FM vs FM other seed: spells swapped": 0.22,
+    "FM other seed scores worse under FM (pp)": -0.034166787911588115,
+    "blend build beats both FM builds under FM": 0.05
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.2952824744235802,
+    "blend: blend build - FM build": 0.2632245368314506,
+    "blend gain, pools that differ": 0.3796507742761307,
+    "FM loss, pools that differ": -0.4258881842647791
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 1.7701443726547381,
+    "blend: blend build - registered": 1.9868353155641247,
+    "blend: FM build - registered": 1.7236107787326742,
+    "FM: blend build - registered": 1.4748618982311583
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.579738105693367,
+    "fm of fmBuilt": 0.5865430812546819,
+    "lg of blBuilt": 0.6533514722047626,
+    "fm of blBuilt": 0.572532065908393,
+    "lg of reg": 0.5079431036412636,
+    "fm of reg": 0.5052315145670636
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.01,
+    "fm of fmBuilt": 0.01,
+    "lg of blBuilt": 0.02,
+    "fm of blBuilt": 0.006666666666666667
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6940297602513749,
+    "blend build": 0.694973168029898
+   },
+   "overlap with registered spells (skill >= 0.60, n=57)": {
+    "FM build": 0.7183187788490667,
+    "blend build": 0.71634148991058
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 402,
+     "hand value (logit)": -0.04907963002267118,
+     "GIH WR": 0.5597044415340665,
+     "drafter skill - mean": -0.0011193532141009768
+    },
+    "blend drops": {
+     "n": 399,
+     "hand value (logit)": -0.06515093284090473,
+     "GIH WR": 0.5496637756008638,
+     "drafter skill - mean": -0.006672116225225884
+    }
+   },
+   "most added": [
+    [
+     "Glimmerlight",
+     17
+    ],
+    [
+     "Vanish from Sight",
+     15
+    ],
+    [
+     "Ragged Playmate",
+     15
+    ],
+    [
+     "Found Footage",
+     14
+    ],
+    [
+     "Bedhead Beastie",
+     10
+    ],
+    [
+     "Daggermaw Megalodon",
+     10
+    ],
+    [
+     "Say Its Name",
+     9
+    ],
+    [
+     "Cracked Skull",
+     8
+    ]
+   ],
+   "most dropped": [
+    [
+     "Scrabbling Skullcrab",
+     16
+    ],
+    [
+     "Hand That Feeds",
+     15
+    ],
+    [
+     "Flesh Burrower",
+     13
+    ],
+    [
+     "Balemurk Leech",
+     12
+    ],
+    [
+     "Cryptid Inspector",
+     11
+    ],
+    [
+     "Infernal Phantom",
+     10
+    ],
+    [
+     "Boilerbilges Ripper",
+     8
+    ],
+    [
+     "Most Valuable Slayer",
+     8
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9692766214179037
+  },
+  "EOE": {
+   "set": "EOE",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 92.2530835,
+    "lgbm us": 1356.61166675,
+    "fm build ms": 399.99161837333514,
+    "blend build ms": 1191.4621104233302,
+    "fm values ms": 730.4299568333319,
+    "blend values ms": 168.3877764666658
+   },
+   "sizes": {
+    "trees": 1172,
+    "nodes": 16408,
+    "leaves": 17580,
+    "text kB": 2125.9716796875,
+    "f32 int32-kids kB": 244.9296875,
+    "f32 gz kB": 170.5888671875,
+    "f16 int16-kids kB": 151.078125,
+    "site deck json kB": 205.6923828125,
+    "site deck json gz kB": 68.4541015625
+   },
+   "alpha": 0.6,
+   "agreement": {
+    "same deck": 0.23,
+    "same spells": 0.23,
+    "spells swapped (mean, all pools)": 1.51,
+    "spells swapped (mean, pools that differ)": 1.9781659388646289,
+    "swaps hist": {
+     "0": 71,
+     "1": 110,
+     "2": 58,
+     "3": 42,
+     "4": 12,
+     "5": 1,
+     "6": 1,
+     "7": 1,
+     "8": 4
+    },
+    "land count differs": 0.15333333333333332,
+    "FM vs FM other seed: same deck": 0.94,
+    "FM vs FM other seed: spells swapped": 0.17666666666666667,
+    "FM other seed scores worse under FM (pp)": 0.014748919382214088,
+    "blend build beats both FM builds under FM": 0.07333333333333333
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.29815755129967814,
+    "blend: blend build - FM build": 0.3103412184588803,
+    "blend gain, pools that differ": 0.4030405434530913,
+    "FM loss, pools that differ": -0.3872175990904911
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 1.9044388879712362,
+    "blend: blend build - registered": 1.8473485193758998,
+    "blend: FM build - registered": 1.5370073009170193,
+    "FM: blend build - registered": 1.606281336671558
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.6194287519135359,
+    "fm of fmBuilt": 0.6467214445120715,
+    "lg of blBuilt": 0.6874884726756304,
+    "fm of blBuilt": 0.6299275161843634,
+    "lg of reg": 0.5543514727309614,
+    "fm of reg": 0.534794859735517
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.01,
+    "fm of fmBuilt": 0.013333333333333334,
+    "lg of blBuilt": 0.01,
+    "fm of blBuilt": 0.013333333333333334
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6758677235935663,
+    "blend build": 0.6775555098549436
+   },
+   "overlap with registered spells (skill >= 0.60, n=60)": {
+    "FM build": 0.6676052166524683,
+    "blend build": 0.6680203795529851
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 453,
+     "hand value (logit)": -0.03192876941633412,
+     "GIH WR": 0.5513924811485096,
+     "drafter skill - mean": -0.0021860879699301034
+    },
+    "blend drops": {
+     "n": 432,
+     "hand value (logit)": -0.05359768032867948,
+     "GIH WR": 0.5431195327177344,
+     "drafter skill - mean": -0.007623191991889918
+    }
+   },
+   "most added": [
+    [
+     "Wurmwall Sweeper",
+     20
+    ],
+    [
+     "Nutrient Block",
+     17
+    ],
+    [
+     "Thawbringer",
+     15
+    ],
+    [
+     "Chrome Companion",
+     15
+    ],
+    [
+     "Illvoi Galeblade",
+     14
+    ],
+    [
+     "Divert Disaster",
+     13
+    ],
+    [
+     "Icecave Crasher",
+     13
+    ],
+    [
+     "Germinating Wurm",
+     11
+    ]
+   ],
+   "most dropped": [
+    [
+     "Nanoform Sentinel",
+     13
+    ],
+    [
+     "Survey Mechan",
+     13
+    ],
+    [
+     "Starbreach Whale",
+     13
+    ],
+    [
+     "Weftblade Enhancer",
+     13
+    ],
+    [
+     "Cryoshatter",
+     12
+    ],
+    [
+     "Brightspear Zealot",
+     11
+    ],
+    [
+     "Gravblade Heavy",
+     10
+    ],
+    [
+     "Mental Modulation",
+     10
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9188542508747508
+  },
+  "FDN": {
+   "set": "FDN",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 3.043635500000004,
+    "lgbm us": 47.944104249999995,
+    "fm build ms": 132.58645808000114,
+    "blend build ms": 550.6666820666635,
+    "fm values ms": 102.84427633333348,
+    "blend values ms": 18.423477800000004
+   },
+   "sizes": {
+    "trees": 1307,
+    "nodes": 18298,
+    "leaves": 19605,
+    "text kB": 2374.4375,
+    "f32 int32-kids kB": 273.142578125,
+    "f32 gz kB": 190.80078125,
+    "f16 int16-kids kB": 168.48046875,
+    "site deck json kB": 184.1787109375,
+    "site deck json gz kB": 61.603515625
+   },
+   "alpha": 0.65,
+   "agreement": {
+    "same deck": 0.31333333333333335,
+    "same spells": 0.31333333333333335,
+    "spells swapped (mean, all pools)": 1.28,
+    "spells swapped (mean, pools that differ)": 1.8823529411764706,
+    "swaps hist": {
+     "0": 96,
+     "1": 93,
+     "2": 71,
+     "3": 24,
+     "4": 8,
+     "5": 4,
+     "6": 3,
+     "7": 1
+    },
+    "land count differs": 0.11666666666666667,
+    "FM vs FM other seed: same deck": 0.93,
+    "FM vs FM other seed: spells swapped": 0.17,
+    "FM other seed scores worse under FM (pp)": -0.028603710487037855,
+    "blend build beats both FM builds under FM": 0.05333333333333334
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.3277258010150764,
+    "blend: blend build - FM build": 0.3166408818583241,
+    "blend gain, pools that differ": 0.46112749785192825,
+    "FM loss, pools that differ": -0.4772705840025387
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 2.0196388779528682,
+    "blend: blend build - registered": 2.364807747098632,
+    "blend: FM build - registered": 2.048166865240308,
+    "FM: blend build - registered": 1.6919130769377921
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.6195974148130186,
+    "fm of fmBuilt": 0.6179858248274951,
+    "lg of blBuilt": 0.6918612170513584,
+    "fm of blBuilt": 0.602420581556844,
+    "lg of reg": 0.5313142346950023,
+    "fm of reg": 0.5256825613779825
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.023333333333333334,
+    "fm of fmBuilt": 0.006666666666666667,
+    "lg of blBuilt": 0.023333333333333334,
+    "fm of blBuilt": 0.006666666666666667
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6840282986553259,
+    "blend build": 0.6854471616437763
+   },
+   "overlap with registered spells (skill >= 0.60, n=46)": {
+    "FM build": 0.7254183712805664,
+    "blend build": 0.7253193830302559
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 384,
+     "hand value (logit)": -0.04323086629000881,
+     "GIH WR": 0.5386615982912005,
+     "drafter skill - mean": -0.00289791799089616
+    },
+    "blend drops": {
+     "n": 388,
+     "hand value (logit)": -0.06248278864724002,
+     "GIH WR": 0.5266523679523213,
+     "drafter skill - mean": -0.00915038577981831
+    }
+   },
+   "most added": [
+    [
+     "Axgard Cavalry",
+     14
+    ],
+    [
+     "Pilfer",
+     11
+    ],
+    [
+     "Cathar Commando",
+     11
+    ],
+    [
+     "Soul-Shackled Zombie",
+     10
+    ],
+    [
+     "Prideful Parent",
+     9
+    ],
+    [
+     "Gnarlid Colony",
+     9
+    ],
+    [
+     "Inspiring Paladin",
+     9
+    ],
+    [
+     "Apothecary Stomper",
+     8
+    ]
+   ],
+   "most dropped": [
+    [
+     "Quick-Draw Katana",
+     12
+    ],
+    [
+     "Dwynen's Elite",
+     12
+    ],
+    [
+     "Witness Protection",
+     12
+    ],
+    [
+     "Gutless Plunderer",
+     10
+    ],
+    [
+     "Hare Apparent",
+     10
+    ],
+    [
+     "Broken Wings",
+     10
+    ],
+    [
+     "Armasaur Guide",
+     9
+    ],
+    [
+     "Hungry Ghoul",
+     8
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9717642067433895
+  },
+  "FIN": {
+   "set": "FIN",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 186.83394799999996,
+    "lgbm us": 2104.48590625,
+    "fm build ms": 699.2414862366585,
+    "blend build ms": 3441.013055723332,
+    "fm values ms": 1686.4955958000007,
+    "blend values ms": 280.2684195333328
+   },
+   "sizes": {
+    "trees": 1243,
+    "nodes": 17402,
+    "leaves": 18645,
+    "text kB": 2263.3974609375,
+    "f32 int32-kids kB": 259.767578125,
+    "f32 gz kB": 181.826171875,
+    "f16 int16-kids kB": 160.23046875,
+    "site deck json kB": 234.71875,
+    "site deck json gz kB": 78.3173828125
+   },
+   "alpha": 0.8,
+   "agreement": {
+    "same deck": 0.5,
+    "same spells": 0.5,
+    "spells swapped (mean, all pools)": 0.82,
+    "spells swapped (mean, pools that differ)": 1.662162162162162,
+    "swaps hist": {
+     "0": 152,
+     "1": 95,
+     "2": 28,
+     "3": 14,
+     "4": 5,
+     "5": 5,
+     "8": 1
+    },
+    "land count differs": 0.10666666666666667,
+    "FM vs FM other seed: same deck": 0.9433333333333334,
+    "FM vs FM other seed: spells swapped": 0.17333333333333334,
+    "FM other seed scores worse under FM (pp)": -0.0028105435225189977,
+    "blend build beats both FM builds under FM": 0.06333333333333334
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.08894549643074229,
+    "blend: blend build - FM build": 0.09225361912825673,
+    "blend gain, pools that differ": 0.1845072382565136,
+    "FM loss, pools that differ": -0.1778909928614844
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 2.036902720913838,
+    "blend: blend build - registered": 1.8764989101628249,
+    "blend: FM build - registered": 1.784245291034568,
+    "FM: blend build - registered": 1.9479572244830956
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.5520967321337891,
+    "fm of fmBuilt": 0.5953770535677524,
+    "lg of blBuilt": 0.5943859883888499,
+    "fm of blBuilt": 0.5907529748425083,
+    "lg of reg": 0.5127361002456733,
+    "fm of reg": 0.49072833889186257
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.006666666666666667,
+    "fm of fmBuilt": 0.01,
+    "lg of blBuilt": 0.006666666666666667,
+    "fm of blBuilt": 0.01
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.690450771365028,
+    "blend build": 0.69269786225341
+   },
+   "overlap with registered spells (skill >= 0.60, n=67)": {
+    "FM build": 0.692058572085343,
+    "blend build": 0.6998553948847392
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 246,
+     "hand value (logit)": -0.026611978991951012,
+     "GIH WR": 0.550371056989796,
+     "drafter skill - mean": -0.003052383904554406
+    },
+    "blend drops": {
+     "n": 229,
+     "hand value (logit)": -0.06553814209622025,
+     "GIH WR": 0.5375858124050515,
+     "drafter skill - mean": -0.009151742187649923
+    }
+   },
+   "most added": [
+    [
+     "Undercity Dire Rat",
+     12
+    ],
+    [
+     "Shinra Reinforcements",
+     11
+    ],
+    [
+     "Monk's Fist",
+     9
+    ],
+    [
+     "Goobbue Gardener",
+     9
+    ],
+    [
+     "Adventurer's Airship",
+     8
+    ],
+    [
+     "Malboro",
+     8
+    ],
+    [
+     "Instant Ramen",
+     8
+    ],
+    [
+     "You're Not Alone",
+     6
+    ]
+   ],
+   "most dropped": [
+    [
+     "Lunatic Pandora",
+     10
+    ],
+    [
+     "Rook Turret",
+     9
+    ],
+    [
+     "Vincent's Limit Break",
+     8
+    ],
+    [
+     "Relentless X-ATM092",
+     7
+    ],
+    [
+     "Warrior's Sword",
+     7
+    ],
+    [
+     "Rydia's Return",
+     7
+    ],
+    [
+     "Gigantoad",
+     6
+    ],
+    [
+     "Blitzball Shot",
+     6
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9581262253315079
+  },
+  "LCI": {
+   "set": "LCI",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 3.4522499999999994,
+    "lgbm us": 51.207125,
+    "fm build ms": 105.77092443333304,
+    "blend build ms": 296.3731466999993,
+    "fm values ms": 120.16465963333324,
+    "blend values ms": 17.342229166666467
+   },
+   "sizes": {
+    "trees": 1324,
+    "nodes": 18536,
+    "leaves": 19860,
+    "text kB": 2407.9775390625,
+    "f32 int32-kids kB": 276.6953125,
+    "f32 gz kB": 192.6513671875,
+    "f16 int16-kids kB": 170.671875,
+    "site deck json kB": 185.291015625,
+    "site deck json gz kB": 61.521484375
+   },
+   "alpha": 0.65,
+   "agreement": {
+    "same deck": 0.23,
+    "same spells": 0.23666666666666666,
+    "spells swapped (mean, all pools)": 1.44,
+    "spells swapped (mean, pools that differ)": 1.9030837004405285,
+    "swaps hist": {
+     "0": 73,
+     "1": 109,
+     "2": 63,
+     "3": 39,
+     "4": 11,
+     "5": 1,
+     "6": 1,
+     "7": 1,
+     "8": 2
+    },
+    "land count differs": 0.12666666666666668,
+    "FM vs FM other seed: same deck": 0.9466666666666667,
+    "FM vs FM other seed: spells swapped": 0.12333333333333334,
+    "FM other seed scores worse under FM (pp)": 0.0013598119382420984,
+    "blend build beats both FM builds under FM": 0.08666666666666667
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.35748081025155387,
+    "blend: blend build - FM build": 0.324610422348445,
+    "blend gain, pools that differ": 0.42157197707590266,
+    "FM loss, pools that differ": -0.4642607925344856
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 2.749106246203827,
+    "blend: blend build - registered": 2.486458906219593,
+    "blend: FM build - registered": 2.1618484838711476,
+    "FM: blend build - registered": 2.391625435952273
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.5851888076506471,
+    "fm of fmBuilt": 0.6576454805883359,
+    "lg of blBuilt": 0.6540263525454649,
+    "fm of blBuilt": 0.6430009691579727,
+    "lg of reg": 0.5439240564962088,
+    "fm of reg": 0.5428169716663815
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.006666666666666667,
+    "fm of fmBuilt": 0.0033333333333333335,
+    "lg of blBuilt": 0.013333333333333334,
+    "fm of blBuilt": 0.0033333333333333335
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6580242715929316,
+    "blend build": 0.6658922146766235
+   },
+   "overlap with registered spells (skill >= 0.60, n=71)": {
+    "FM build": 0.6814871578220791,
+    "blend build": 0.6868390951203565
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 432,
+     "hand value (logit)": -0.04938912206836652,
+     "GIH WR": 0.5597581178737208,
+     "drafter skill - mean": -0.0019728568083835097
+    },
+    "blend drops": {
+     "n": 426,
+     "hand value (logit)": -0.0745664040734759,
+     "GIH WR": 0.5504076986318288,
+     "drafter skill - mean": -0.007648344400902869
+    }
+   },
+   "most added": [
+    [
+     "Unlucky Drop",
+     18
+    ],
+    [
+     "Runaway Boulder",
+     15
+    ],
+    [
+     "Orazca Puzzle-Door",
+     14
+    ],
+    [
+     "Shipwreck Sentry",
+     13
+    ],
+    [
+     "Volatile Wanderglyph",
+     10
+    ],
+    [
+     "River Herald Scout",
+     9
+    ],
+    [
+     "In the Presence of Ages",
+     9
+    ],
+    [
+     "Attentive Sunscribe",
+     8
+    ]
+   ],
+   "most dropped": [
+    [
+     "Over the Edge",
+     17
+    ],
+    [
+     "Didact Echo",
+     14
+    ],
+    [
+     "Adaptive Gemguard",
+     14
+    ],
+    [
+     "Compass Gnome",
+     11
+    ],
+    [
+     "Shipwreck Sentry",
+     10
+    ],
+    [
+     "Pirate Hat",
+     10
+    ],
+    [
+     "Frilled Cave-Wurm",
+     9
+    ],
+    [
+     "Cavern Stomper",
+     9
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9513574951917465
+  },
+  "MKM": {
+   "set": "MKM",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 4.8282707500000015,
+    "lgbm us": 55.475291750000004,
+    "fm build ms": 49.886545683333125,
+    "blend build ms": 147.64548749000022,
+    "fm values ms": 58.58348473333335,
+    "blend values ms": 15.69004870000001
+   },
+   "sizes": {
+    "trees": 1620,
+    "nodes": 22680,
+    "leaves": 24300,
+    "text kB": 2940.865234375,
+    "f32 int32-kids kB": 338.5546875,
+    "f32 gz kB": 235.935546875,
+    "f16 int16-kids kB": 208.828125,
+    "site deck json kB": 206.4990234375,
+    "site deck json gz kB": 68.48046875
+   },
+   "alpha": 0.65,
+   "agreement": {
+    "same deck": 0.43666666666666665,
+    "same spells": 0.43666666666666665,
+    "spells swapped (mean, all pools)": 1.0466666666666666,
+    "spells swapped (mean, pools that differ)": 1.891566265060241,
+    "swaps hist": {
+     "0": 134,
+     "1": 80,
+     "2": 47,
+     "3": 23,
+     "4": 11,
+     "5": 4,
+     "7": 1
+    },
+    "land count differs": 0.12333333333333334,
+    "FM vs FM other seed: same deck": 0.9166666666666666,
+    "FM vs FM other seed: spells swapped": 0.25666666666666665,
+    "FM other seed scores worse under FM (pp)": -0.007334943537677958,
+    "blend build beats both FM builds under FM": 0.05
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.2758505840618714,
+    "blend: blend build - FM build": 0.19527604146127372,
+    "blend gain, pools that differ": 0.34664386058214264,
+    "FM loss, pools that differ": -0.4896755930092392
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 1.3966681918659902,
+    "blend: blend build - registered": 1.0731934450399216,
+    "blend: FM build - registered": 0.877917403578648,
+    "FM: blend build - registered": 1.120817607804119
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.5100824338604947,
+    "fm of fmBuilt": 0.5860162668670247,
+    "lg of blBuilt": 0.5621160671199154,
+    "fm of blBuilt": 0.5722755593835328,
+    "lg of reg": 0.5145713072745821,
+    "fm of reg": 0.5222977331451923
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.0033333333333333335,
+    "fm of fmBuilt": 0.0033333333333333335,
+    "lg of blBuilt": 0.0033333333333333335,
+    "fm of blBuilt": 0.0033333333333333335
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6780168876626441,
+    "blend build": 0.6710691384197542
+   },
+   "overlap with registered spells (skill >= 0.60, n=70)": {
+    "FM build": 0.6927014531491131,
+    "blend build": 0.6804857421815549
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 314,
+     "hand value (logit)": -0.05535231900306328,
+     "GIH WR": 0.5483015624406063,
+     "drafter skill - mean": -0.005038915818910507
+    },
+    "blend drops": {
+     "n": 310,
+     "hand value (logit)": -0.060581307453450396,
+     "GIH WR": 0.5504221771657156,
+     "drafter skill - mean": -0.006912199239577016
+    }
+   },
+   "most added": [
+    [
+     "Innocent Bystander",
+     17
+    ],
+    [
+     "Gravestone Strider",
+     10
+    ],
+    [
+     "Alley Assailant",
+     10
+    ],
+    [
+     "Lumbering Laundry",
+     9
+    ],
+    [
+     "They Went This Way",
+     8
+    ],
+    [
+     "Auspicious Arrival",
+     8
+    ],
+    [
+     "Basilica Stalker",
+     7
+    ],
+    [
+     "Offender at Large",
+     7
+    ]
+   ],
+   "most dropped": [
+    [
+     "On the Job",
+     11
+    ],
+    [
+     "Gearbane Orangutan",
+     11
+    ],
+    [
+     "Due Diligence",
+     8
+    ],
+    [
+     "Griffnaut Tracker",
+     8
+    ],
+    [
+     "The Chase Is On",
+     7
+    ],
+    [
+     "Repeat Offender",
+     6
+    ],
+    [
+     "Crowd-Control Warden",
+     6
+    ],
+    [
+     "Rot Farm Mortipede",
+     6
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9147950229677101
+  },
+  "OTJ": {
+   "set": "OTJ",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 3.995937499999997,
+    "lgbm us": 56.2336145,
+    "fm build ms": 50.07670481333329,
+    "blend build ms": 142.88551517666667,
+    "fm values ms": 56.12094439999992,
+    "blend values ms": 14.048291633333292
+   },
+   "sizes": {
+    "trees": 1542,
+    "nodes": 21588,
+    "leaves": 23130,
+    "text kB": 2808.033203125,
+    "f32 int32-kids kB": 322.25390625,
+    "f32 gz kB": 224.1953125,
+    "f16 int16-kids kB": 198.7734375,
+    "site deck json kB": 241.12109375,
+    "site deck json gz kB": 79.0009765625
+   },
+   "alpha": 0.75,
+   "agreement": {
+    "same deck": 0.49333333333333335,
+    "same spells": 0.49666666666666665,
+    "spells swapped (mean, all pools)": 0.8133333333333334,
+    "spells swapped (mean, pools that differ)": 1.6375838926174497,
+    "swaps hist": {
+     "0": 151,
+     "1": 88,
+     "2": 38,
+     "3": 14,
+     "4": 7,
+     "5": 2
+    },
+    "land count differs": 0.09333333333333334,
+    "FM vs FM other seed: same deck": 0.9433333333333334,
+    "FM vs FM other seed: spells swapped": 0.15,
+    "FM other seed scores worse under FM (pp)": -0.003528427290295587,
+    "blend build beats both FM builds under FM": 0.06
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.11101409179605777,
+    "blend: blend build - FM build": 0.12652547616412066,
+    "blend gain, pools that differ": 0.24972133453444859,
+    "FM loss, pools that differ": -0.21910676012379818
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 1.4671399689260431,
+    "blend: blend build - registered": 1.452216567836296,
+    "blend: FM build - registered": 1.3256910916721754,
+    "FM: blend build - registered": 1.3561258771299856
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.5580574772111359,
+    "fm of fmBuilt": 0.5814247597930525,
+    "lg of blBuilt": 0.5966308203991131,
+    "fm of blBuilt": 0.5760051983247105,
+    "lg of reg": 0.5154257698940625,
+    "fm of reg": 0.5117744271988175
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.0033333333333333335,
+    "fm of fmBuilt": 0.006666666666666667,
+    "lg of blBuilt": 0.006666666666666667,
+    "fm of blBuilt": 0.006666666666666667
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6821694554635857,
+    "blend build": 0.6833780847958877
+   },
+   "overlap with registered spells (skill >= 0.60, n=42)": {
+    "FM build": 0.6948419501416743,
+    "blend build": 0.693584448876255
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 244,
+     "hand value (logit)": -0.03832055192653476,
+     "GIH WR": 0.5523715779395563,
+     "drafter skill - mean": -0.0025043998269124643
+    },
+    "blend drops": {
+     "n": 233,
+     "hand value (logit)": -0.059234491939114904,
+     "GIH WR": 0.5477392870658309,
+     "drafter skill - mean": -0.007259099396513255
+    }
+   },
+   "most added": [
+    [
+     "Jailbreak Scheme",
+     10
+    ],
+    [
+     "Voracious Varmint",
+     8
+    ],
+    [
+     "Sterling Hound",
+     7
+    ],
+    [
+     "Sterling Keykeeper",
+     7
+    ],
+    [
+     "Inventive Wingsmith",
+     7
+    ],
+    [
+     "Steer Clear",
+     6
+    ],
+    [
+     "Fake Your Own Death",
+     6
+    ],
+    [
+     "Highway Robbery",
+     6
+    ]
+   ],
+   "most dropped": [
+    [
+     "Bridled Bighorn",
+     10
+    ],
+    [
+     "Armored Armadillo",
+     8
+    ],
+    [
+     "Freestrider Commando",
+     7
+    ],
+    [
+     "Reach for the Sky",
+     6
+    ],
+    [
+     "Boneyard Desecrator",
+     5
+    ],
+    [
+     "Boom Box",
+     5
+    ],
+    [
+     "Razzle-Dazzler",
+     5
+    ],
+    [
+     "Congregation Gryff",
+     4
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9568963118045817
+  },
+  "SOS": {
+   "set": "SOS",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 3.03292725,
+    "lgbm us": 41.203427,
+    "fm build ms": 56.107180686666446,
+    "blend build ms": 165.32840639999986,
+    "fm values ms": 68.01204576666662,
+    "blend values ms": 14.227663866666536
+   },
+   "sizes": {
+    "trees": 1215,
+    "nodes": 17010,
+    "leaves": 18225,
+    "text kB": 2207.5693359375,
+    "f32 int32-kids kB": 253.916015625,
+    "f32 gz kB": 177.365234375,
+    "f16 int16-kids kB": 156.62109375,
+    "site deck json kB": 220.3427734375,
+    "site deck json gz kB": 73.181640625
+   },
+   "alpha": 0.7,
+   "agreement": {
+    "same deck": 0.37,
+    "same spells": 0.37666666666666665,
+    "spells swapped (mean, all pools)": 1.1266666666666667,
+    "spells swapped (mean, pools that differ)": 1.8369565217391304,
+    "swaps hist": {
+     "0": 116,
+     "1": 96,
+     "2": 48,
+     "3": 21,
+     "4": 16,
+     "5": 1,
+     "6": 1,
+     "8": 1
+    },
+    "land count differs": 0.14333333333333334,
+    "FM vs FM other seed: same deck": 0.98,
+    "FM vs FM other seed: spells swapped": 0.06,
+    "FM other seed scores worse under FM (pp)": -0.010853755232776739,
+    "blend build beats both FM builds under FM": 0.03
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.2497287954369088,
+    "blend: blend build - FM build": 0.2008821357389389,
+    "blend gain, pools that differ": 0.31886053291895067,
+    "FM loss, pools that differ": -0.3963949133919189
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 2.6232402957527814,
+    "blend: blend build - registered": 2.051309384230358,
+    "blend: FM build - registered": 1.850427248491419,
+    "FM: blend build - registered": 2.3735115003158724
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.5091884888344922,
+    "fm of fmBuilt": 0.6008017377035951,
+    "lg of blBuilt": 0.5717857639215792,
+    "fm of blBuilt": 0.5890772596647433,
+    "lg of reg": 0.5084230205377197,
+    "fm of reg": 0.4825882189434798
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.006666666666666667,
+    "fm of fmBuilt": 0.013333333333333334,
+    "lg of blBuilt": 0.01,
+    "fm of blBuilt": 0.013333333333333334
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6932261501350755,
+    "blend build": 0.6989910319415346
+   },
+   "overlap with registered spells (skill >= 0.60, n=66)": {
+    "FM build": 0.68204028223916,
+    "blend build": 0.6951053106303889
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 338,
+     "hand value (logit)": -0.019346427656931182,
+     "GIH WR": 0.5573814214777696,
+     "drafter skill - mean": -0.000841672487911724
+    },
+    "blend drops": {
+     "n": 323,
+     "hand value (logit)": -0.04912780236056844,
+     "GIH WR": 0.5455652717322247,
+     "drafter skill - mean": -0.009499273709837497
+    }
+   },
+   "most added": [
+    [
+     "Mage Tower Referee",
+     17
+    ],
+    [
+     "Ancestral Anger",
+     10
+    ],
+    [
+     "Stone Docent",
+     10
+    ],
+    [
+     "Rehearsed Debater",
+     9
+    ],
+    [
+     "Run Behind",
+     8
+    ],
+    [
+     "Cost of Brilliance",
+     8
+    ],
+    [
+     "Page, Loose Leaf",
+     8
+    ],
+    [
+     "Spirit Mascot",
+     8
+    ]
+   ],
+   "most dropped": [
+    [
+     "Sneering Shadewriter",
+     12
+    ],
+    [
+     "Rancorous Archaic",
+     10
+    ],
+    [
+     "Deluge Virtuoso",
+     9
+    ],
+    [
+     "Textbook Tabulator",
+     8
+    ],
+    [
+     "Rapier Wit",
+     7
+    ],
+    [
+     "Efflorescence",
+     7
+    ],
+    [
+     "Stadium Tidalmage",
+     6
+    ],
+    [
+     "Tackle Artist",
+     6
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9738575640734184
+  },
+  "TDM": {
+   "set": "TDM",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 3.01797925,
+    "lgbm us": 40.515187499999996,
+    "fm build ms": 41.89461372999986,
+    "blend build ms": 107.61461889000009,
+    "fm values ms": 51.19352503333327,
+    "blend values ms": 10.727025100000072
+   },
+   "sizes": {
+    "trees": 1190,
+    "nodes": 16660,
+    "leaves": 17850,
+    "text kB": 2156.5537109375,
+    "f32 int32-kids kB": 248.69140625,
+    "f32 gz kB": 172.4853515625,
+    "f16 int16-kids kB": 153.3984375,
+    "site deck json kB": 182.2294921875,
+    "site deck json gz kB": 60.7490234375
+   },
+   "alpha": 0.8,
+   "agreement": {
+    "same deck": 0.61,
+    "same spells": 0.61,
+    "spells swapped (mean, all pools)": 0.71,
+    "spells swapped (mean, pools that differ)": 1.8362068965517242,
+    "swaps hist": {
+     "0": 184,
+     "1": 72,
+     "2": 19,
+     "3": 10,
+     "4": 11,
+     "6": 2,
+     "8": 2
+    },
+    "land count differs": 0.07333333333333333,
+    "FM vs FM other seed: same deck": 0.94,
+    "FM vs FM other seed: spells swapped": 0.20333333333333334,
+    "FM other seed scores worse under FM (pp)": 0.06022035719472607,
+    "blend build beats both FM builds under FM": 0.03666666666666667
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.0818689642495314,
+    "blend: blend build - FM build": 0.07828304492028079,
+    "blend gain, pools that differ": 0.20072575620584832,
+    "FM loss, pools that differ": -0.2099204211526448
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 0.7583770844961086,
+    "blend: blend build - registered": 0.8122362487784294,
+    "blend: FM build - registered": 0.7339532038581484,
+    "FM: blend build - registered": 0.6765081202465772
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.539758261381662,
+    "fm of fmBuilt": 0.5390046448009574,
+    "lg of blBuilt": 0.5757132476562278,
+    "fm of blBuilt": 0.5347786833081621,
+    "lg of reg": 0.5096458458002071,
+    "fm of reg": 0.5030678957816849
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.0033333333333333335,
+    "fm of fmBuilt": 0.0,
+    "lg of blBuilt": 0.0033333333333333335,
+    "fm of blBuilt": 0.0
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6149830938050588,
+    "blend build": 0.6181546909257724
+   },
+   "overlap with registered spells (skill >= 0.60, n=55)": {
+    "FM build": 0.628019045011385,
+    "blend build": 0.6242163691925802
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 213,
+     "hand value (logit)": -0.035031882750166006,
+     "GIH WR": 0.5474125044953908,
+     "drafter skill - mean": -0.002260896125675943
+    },
+    "blend drops": {
+     "n": 220,
+     "hand value (logit)": -0.07400245131797231,
+     "GIH WR": 0.5341425309875453,
+     "drafter skill - mean": -0.007805098864165219
+    }
+   },
+   "most added": [
+    [
+     "Fire-Rim Form",
+     9
+    ],
+    [
+     "Watcher of the Wayside",
+     8
+    ],
+    [
+     "Sultai Devotee",
+     7
+    ],
+    [
+     "Unending Whisper",
+     7
+    ],
+    [
+     "Sibsig Appraiser",
+     6
+    ],
+    [
+     "Rescue Leopard",
+     5
+    ],
+    [
+     "Ringing Strike Mastery",
+     5
+    ],
+    [
+     "Narset's Rebuke",
+     5
+    ]
+   ],
+   "most dropped": [
+    [
+     "Heritage Reclamation",
+     9
+    ],
+    [
+     "Highspire Bell-Ringer",
+     9
+    ],
+    [
+     "Devoted Duelist",
+     7
+    ],
+    [
+     "Krotiq Nestguard",
+     7
+    ],
+    [
+     "Humbling Elder",
+     7
+    ],
+    [
+     "Summit Intimidator",
+     7
+    ],
+    [
+     "Temur Tawnyback",
+     7
+    ],
+    [
+     "Alesha's Legacy",
+     6
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.979889215061767
+  },
+  "ECL": {
+   "set": "ECL",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 2.8689792500000024,
+    "lgbm us": 54.351395999999994,
+    "fm build ms": 49.016365020000045,
+    "blend build ms": 172.07966306999984,
+    "fm values ms": 56.588204100000056,
+    "blend values ms": 15.539095899999966
+   },
+   "sizes": {
+    "trees": 1740,
+    "nodes": 24360,
+    "leaves": 26100,
+    "text kB": 3141.921875,
+    "f32 int32-kids kB": 363.6328125,
+    "f32 gz kB": 252.3916015625,
+    "f16 int16-kids kB": 224.296875,
+    "site deck json kB": 188.626953125,
+    "site deck json gz kB": 63.2783203125
+   },
+   "alpha": 0.7,
+   "agreement": {
+    "same deck": 0.4033333333333333,
+    "same spells": 0.4033333333333333,
+    "spells swapped (mean, all pools)": 1.1533333333333333,
+    "spells swapped (mean, pools that differ)": 1.9548022598870056,
+    "swaps hist": {
+     "0": 123,
+     "1": 82,
+     "2": 48,
+     "3": 30,
+     "4": 11,
+     "5": 4,
+     "6": 1,
+     "8": 1
+    },
+    "land count differs": 0.11,
+    "FM vs FM other seed: same deck": 0.94,
+    "FM vs FM other seed: spells swapped": 0.16333333333333333,
+    "FM other seed scores worse under FM (pp)": -0.016419947752919956,
+    "blend build beats both FM builds under FM": 0.04
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.3287779166060698,
+    "blend: blend build - FM build": 0.22186529945749858,
+    "blend gain, pools that differ": 0.3718412840069808,
+    "FM loss, pools that differ": -0.5510244412392232
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 1.3576333438940535,
+    "blend: blend build - registered": 0.9573864226843434,
+    "blend: FM build - registered": 0.7355211232268448,
+    "FM: blend build - registered": 1.0288554272879835
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.4909146731854956,
+    "fm of fmBuilt": 0.5734690452631783,
+    "lg of blBuilt": 0.5543403080922725,
+    "fm of blBuilt": 0.5588346623207807,
+    "lg of reg": 0.5272629163998991,
+    "fm of reg": 0.5121810915158217
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.01,
+    "fm of fmBuilt": 0.006666666666666667,
+    "lg of blBuilt": 0.013333333333333334,
+    "fm of blBuilt": 0.006666666666666667
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6568113546267388,
+    "blend build": 0.6550371632233112
+   },
+   "overlap with registered spells (skill >= 0.60, n=55)": {
+    "FM build": 0.6736627839123244,
+    "blend build": 0.6657383152281225
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 346,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.003005014082720113
+    },
+    "blend drops": {
+     "n": 343,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.005394837164670316
+    }
+   },
+   "most added": [
+    [
+     "Changeling Wayfinder",
+     19
+    ],
+    [
+     "Timid Shieldbearer",
+     14
+    ],
+    [
+     "Gristle Glutton",
+     14
+    ],
+    [
+     "Rooftop Percher",
+     11
+    ],
+    [
+     "Riverguard's Reflexes",
+     10
+    ],
+    [
+     "Boggart Prankster",
+     8
+    ],
+    [
+     "Elder Auntie",
+     7
+    ],
+    [
+     "Goldmeadow Nomad",
+     7
+    ]
+   ],
+   "most dropped": [
+    [
+     "Sun-Dappled Celebrant",
+     12
+    ],
+    [
+     "Wildvine Pummeler",
+     9
+    ],
+    [
+     "Run Away Together",
+     9
+    ],
+    [
+     "Shore Lurker",
+     8
+    ],
+    [
+     "Evolving Wilds",
+     8
+    ],
+    [
+     "Scarblade's Malice",
+     7
+    ],
+    [
+     "Tend the Sprigs",
+     7
+    ],
+    [
+     "Wild Unraveling",
+     7
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9555122757826082
+  },
+  "TLA": {
+   "set": "TLA",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 2.872874999999997,
+    "lgbm us": 37.67384375,
+    "fm build ms": 51.297626513333505,
+    "blend build ms": 117.87168220666696,
+    "fm values ms": 52.350456966666634,
+    "blend values ms": 10.05809860000007
+   },
+   "sizes": {
+    "trees": 1005,
+    "nodes": 14070,
+    "leaves": 15075,
+    "text kB": 1826.0478515625,
+    "f32 int32-kids kB": 210.029296875,
+    "f32 gz kB": 146.3935546875,
+    "f16 int16-kids kB": 129.55078125,
+    "site deck json kB": 220.8642578125,
+    "site deck json gz kB": 72.9638671875
+   },
+   "alpha": 0.65,
+   "agreement": {
+    "same deck": 0.37,
+    "same spells": 0.37,
+    "spells swapped (mean, all pools)": 1.2033333333333334,
+    "spells swapped (mean, pools that differ)": 1.9619565217391304,
+    "swaps hist": {
+     "0": 116,
+     "1": 89,
+     "2": 52,
+     "3": 20,
+     "4": 14,
+     "5": 5,
+     "6": 2,
+     "7": 1,
+     "8": 1
+    },
+    "land count differs": 0.09333333333333334,
+    "FM vs FM other seed: same deck": 0.94,
+    "FM vs FM other seed: spells swapped": 0.17333333333333334,
+    "FM other seed scores worse under FM (pp)": -0.01358658758095333,
+    "blend build beats both FM builds under FM": 0.02666666666666667
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.29259446687541374,
+    "blend: blend build - FM build": 0.23344714319056892,
+    "blend gain, pools that differ": 0.3705510209374111,
+    "FM loss, pools that differ": -0.46443566170700595
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 2.0011611840317576,
+    "blend: blend build - registered": 1.586335725594936,
+    "blend: FM build - registered": 1.352888582404367,
+    "FM: blend build - registered": 1.7085667171563443
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.5158635119683593,
+    "fm of fmBuilt": 0.5840694296050536,
+    "lg of blBuilt": 0.5763428555361862,
+    "fm of blBuilt": 0.5691988134735421,
+    "lg of reg": 0.5134347879060527,
+    "fm of reg": 0.48516274906746143
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.01,
+    "fm of fmBuilt": 0.01,
+    "lg of blBuilt": 0.013333333333333334,
+    "fm of blBuilt": 0.01
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6238267234915801,
+    "blend build": 0.6245153683759868
+   },
+   "overlap with registered spells (skill >= 0.60, n=74)": {
+    "FM build": 0.6206947007653181,
+    "blend build": 0.6255163905450726
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 361,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.0015432591239611308
+    },
+    "blend drops": {
+     "n": 357,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.009711760182340606
+    }
+   },
+   "most added": [
+    [
+     "Kyoshi Battle Fan",
+     32
+    ],
+    [
+     "Barrels of Blasting Jelly",
+     14
+    ],
+    [
+     "Aang's Journey",
+     11
+    ],
+    [
+     "Corrupt Court Official",
+     9
+    ],
+    [
+     "Flexible Waterbender",
+     9
+    ],
+    [
+     "Cunning Maneuver",
+     8
+    ],
+    [
+     "Pillar Launch",
+     8
+    ],
+    [
+     "Otter-Penguin",
+     7
+    ]
+   ],
+   "most dropped": [
+    [
+     "Boar-q-pine",
+     19
+    ],
+    [
+     "Rowdy Snowballers",
+     16
+    ],
+    [
+     "Saber-Tooth Moose-Lion",
+     10
+    ],
+    [
+     "How to Start a Riot",
+     8
+    ],
+    [
+     "Pirate Peddlers",
+     7
+    ],
+    [
+     "Bumi Bash",
+     7
+    ],
+    [
+     "Rumble Arena",
+     7
+    ],
+    [
+     "Buzzard-Wasp Colony",
+     6
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9771068843874304
+  },
+  "WOE": {
+   "set": "WOE",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 2.5950104999999972,
+    "lgbm us": 63.461583250000004,
+    "fm build ms": 82.94716599999995,
+    "blend build ms": 304.98465196999945,
+    "fm values ms": 92.14695970000004,
+    "blend values ms": 18.528159633333402
+   },
+   "sizes": {
+    "trees": 1919,
+    "nodes": 26866,
+    "leaves": 28785,
+    "text kB": 3476.9169921875,
+    "f32 int32-kids kB": 401.041015625,
+    "f32 gz kB": 278.517578125,
+    "f16 int16-kids kB": 247.37109375,
+    "site deck json kB": 55.1142578125,
+    "site deck json gz kB": 13.6689453125
+   },
+   "alpha": 0.65,
+   "agreement": {
+    "same deck": 0.22,
+    "same spells": 0.22,
+    "spells swapped (mean, all pools)": 1.6466666666666667,
+    "spells swapped (mean, pools that differ)": 2.1201716738197427,
+    "swaps hist": {
+     "0": 67,
+     "1": 94,
+     "2": 78,
+     "3": 29,
+     "4": 17,
+     "5": 11,
+     "6": 1,
+     "7": 1,
+     "8": 2
+    },
+    "land count differs": 0.15,
+    "FM vs FM other seed: same deck": 0.97,
+    "FM vs FM other seed: spells swapped": 0.06666666666666667,
+    "FM other seed scores worse under FM (pp)": 0.006969350033242918,
+    "blend build beats both FM builds under FM": 0.07666666666666666
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.32659063874998545,
+    "blend: blend build - FM build": 0.3835983379674145,
+    "blend gain, pools that differ": 0.4917927409838646,
+    "FM loss, pools that differ": -0.41870594711536613
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 2.782939110117929,
+    "blend: blend build - registered": 2.7322820863176496,
+    "blend: FM build - registered": 2.348683748350235,
+    "FM: blend build - registered": 2.456348471367943
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.580753983451125,
+    "fm of fmBuilt": 0.6502200327263864,
+    "lg of blBuilt": 0.6769933212640278,
+    "fm of blBuilt": 0.6323722278313547,
+    "lg of reg": 0.49918181132425826,
+    "fm of reg": 0.5004156657266534
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.0,
+    "fm of fmBuilt": 0.006666666666666667,
+    "lg of blBuilt": 0.0,
+    "fm of blBuilt": 0.006666666666666667
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6256121224786311,
+    "blend build": 0.6332025701175592
+   },
+   "overlap with registered spells (skill >= 0.60, n=54)": {
+    "FM build": 0.6368353180999615,
+    "blend build": 0.6412072405262931
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 494,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.004847347857260559
+    },
+    "blend drops": {
+     "n": 477,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.0072882305674192285
+    }
+   },
+   "most added": [
+    [
+     "Misleading Motes",
+     22
+    ],
+    [
+     "Brave the Wilds",
+     19
+    ],
+    [
+     "Armory Mice",
+     15
+    ],
+    [
+     "Unassuming Sage",
+     13
+    ],
+    [
+     "Johann's Stopgap",
+     12
+    ],
+    [
+     "Soul-Guide Lantern",
+     10
+    ],
+    [
+     "Flick a Coin",
+     9
+    ],
+    [
+     "Sleight of Hand",
+     9
+    ]
+   ],
+   "most dropped": [
+    [
+     "Spider Food",
+     17
+    ],
+    [
+     "Eriette's Whisper",
+     12
+    ],
+    [
+     "Charmed Clothier",
+     9
+    ],
+    [
+     "Mocking Sprite",
+     9
+    ],
+    [
+     "Gallant Pie-Wielder",
+     8
+    ],
+    [
+     "Snaremaster Sprite",
+     8
+    ],
+    [
+     "Tuinvale Guide",
+     8
+    ],
+    [
+     "Toadstool Admirer",
+     7
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9541028337677376
+  },
+  "MOM": {
+   "set": "MOM",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 2.4200415,
+    "lgbm us": 43.29003125,
+    "fm build ms": 83.17065957999962,
+    "blend build ms": 267.4699882100002,
+    "fm values ms": 82.0871068666666,
+    "blend values ms": 17.89905696666664
+   },
+   "sizes": {
+    "trees": 1318,
+    "nodes": 18452,
+    "leaves": 19770,
+    "text kB": 2401.2001953125,
+    "f32 int32-kids kB": 275.44140625,
+    "f32 gz kB": 192.287109375,
+    "f16 int16-kids kB": 169.8984375,
+    "site deck json kB": 58.583984375,
+    "site deck json gz kB": 14.666015625
+   },
+   "alpha": 0.7,
+   "agreement": {
+    "same deck": 0.26666666666666666,
+    "same spells": 0.26666666666666666,
+    "spells swapped (mean, all pools)": 1.5566666666666666,
+    "spells swapped (mean, pools that differ)": 2.132420091324201,
+    "swaps hist": {
+     "0": 81,
+     "1": 88,
+     "2": 74,
+     "3": 28,
+     "4": 15,
+     "5": 8,
+     "6": 1,
+     "7": 4,
+     "8": 1
+    },
+    "land count differs": 0.16,
+    "FM vs FM other seed: same deck": 0.9333333333333333,
+    "FM vs FM other seed: spells swapped": 0.18333333333333332,
+    "FM other seed scores worse under FM (pp)": 0.003952611031992366,
+    "blend build beats both FM builds under FM": 0.08666666666666667
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.24037140575081936,
+    "blend: blend build - FM build": 0.21447888716385421,
+    "blend gain, pools that differ": 0.29247120976889224,
+    "FM loss, pools that differ": -0.32777918966020836
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 3.71141284033398,
+    "blend: blend build - registered": 3.2954784993658137,
+    "blend: FM build - registered": 3.08099961220196,
+    "FM: blend build - registered": 3.4710414345831606
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.5971252924521011,
+    "fm of fmBuilt": 0.6832519736857513,
+    "lg of blBuilt": 0.6612920586520153,
+    "fm of blBuilt": 0.6712050783033914,
+    "lg of reg": 0.5236445328143553,
+    "fm of reg": 0.5077848348801971
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.006666666666666667,
+    "fm of fmBuilt": 0.01,
+    "lg of blBuilt": 0.013333333333333334,
+    "fm of blBuilt": 0.01
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6103691515337725,
+    "blend build": 0.6215991433436568
+   },
+   "overlap with registered spells (skill >= 0.60, n=60)": {
+    "FM build": 0.6103503742015465,
+    "blend build": 0.6340215390025337
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 467,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.0013385546539273967
+    },
+    "blend drops": {
+     "n": 441,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.006222259092763438
+    }
+   },
+   "most added": [
+    [
+     "Traumatic Revelation",
+     16
+    ],
+    [
+     "Zhalfirin Shapecraft",
+     16
+    ],
+    [
+     "Dreg Recycler",
+     14
+    ],
+    [
+     "Omen Hawker",
+     12
+    ],
+    [
+     "Sunder the Gateway",
+     10
+    ],
+    [
+     "War Historian",
+     10
+    ],
+    [
+     "Arachnoid Adaptation",
+     10
+    ],
+    [
+     "Corrupted Conviction",
+     9
+    ]
+   ],
+   "most dropped": [
+    [
+     "Phyrexian Archivist",
+     12
+    ],
+    [
+     "Flitting Guerrilla",
+     12
+    ],
+    [
+     "Scrollshift",
+     9
+    ],
+    [
+     "Stasis Field",
+     9
+    ],
+    [
+     "Atraxa's Fall",
+     8
+    ],
+    [
+     "Halo Hopper",
+     7
+    ],
+    [
+     "War-Trained Slasher",
+     6
+    ],
+    [
+     "Mirrodin Avenged",
+     6
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9690848077861479
+  },
+  "HOB": {
+   "set": "HOB",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 2.38891675,
+    "lgbm us": 28.647208250000002,
+    "fm build ms": 61.44326958333329,
+    "blend build ms": 137.87803754333328,
+    "fm values ms": 73.97611946666673,
+    "blend values ms": 11.052247266666651
+   },
+   "sizes": {
+    "trees": 888,
+    "nodes": 12432,
+    "leaves": 13320,
+    "text kB": 1599.931640625,
+    "f32 int32-kids kB": 185.578125,
+    "f32 gz kB": 128.611328125,
+    "f16 int16-kids kB": 114.46875,
+    "site deck json kB": 36.634765625,
+    "site deck json gz kB": 10.6201171875
+   },
+   "alpha": 0.6,
+   "agreement": {
+    "same deck": 0.13333333333333333,
+    "same spells": 0.13333333333333333,
+    "spells swapped (mean, all pools)": 2.453333333333333,
+    "spells swapped (mean, pools that differ)": 2.8638132295719845,
+    "swaps hist": {
+     "0": 43,
+     "1": 63,
+     "2": 68,
+     "3": 47,
+     "4": 35,
+     "5": 24,
+     "6": 9,
+     "7": 7,
+     "8": 4
+    },
+    "land count differs": 0.22,
+    "FM vs FM other seed: same deck": 0.9166666666666666,
+    "FM vs FM other seed: spells swapped": 0.31666666666666665,
+    "FM other seed scores worse under FM (pp)": -0.022846925944483443,
+    "blend build beats both FM builds under FM": 0.10333333333333333
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.716639913972538,
+    "blend: blend build - FM build": 0.6138614869406344,
+    "blend gain, pools that differ": 0.7083017157007319,
+    "FM loss, pools that differ": -0.8268922084298516
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 2.2774153765367644,
+    "blend: blend build - registered": 1.7755204463551142,
+    "blend: FM build - registered": 1.16165895941448,
+    "FM: blend build - registered": 1.560775462564227
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.49558738519383505,
+    "fm of fmBuilt": 0.6278697607393973,
+    "lg of blBuilt": 0.6292744333192544,
+    "fm of blBuilt": 0.5925433344099647,
+    "lg of reg": 0.5305150438520211,
+    "fm of reg": 0.522109369176874
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.01,
+    "fm of fmBuilt": 0.02666666666666667,
+    "lg of blBuilt": 0.02,
+    "fm of blBuilt": 0.016666666666666666
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.6456499708983553,
+    "blend build": 0.6674935765313227
+   },
+   "overlap with registered spells (skill >= 0.60, n=85)": {
+    "FM build": 0.6468644807963333,
+    "blend build": 0.6588387445591941
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 736,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.005158962806065878
+    },
+    "blend drops": {
+     "n": 766,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.00958287568067446
+    }
+   },
+   "most added": [
+    [
+     "\u00d3in the Brave",
+     43
+    ],
+    [
+     "Dwarven Shortsword",
+     28
+    ],
+    [
+     "Dwarven Provisioner",
+     27
+    ],
+    [
+     "Ragged Short Spear",
+     25
+    ],
+    [
+     "Front Porch Sentries",
+     22
+    ],
+    [
+     "Wargling",
+     22
+    ],
+    [
+     "Well-Worn Spatula",
+     21
+    ],
+    [
+     "Gundabad Opportunist",
+     19
+    ]
+   ],
+   "most dropped": [
+    [
+     "Iron Hills Stalwart",
+     37
+    ],
+    [
+     "Hobbit Hole",
+     24
+    ],
+    [
+     "Key to the Side-Door",
+     24
+    ],
+    [
+     "Mirkwood Nurturer",
+     23
+    ],
+    [
+     "Patient Instructor",
+     17
+    ],
+    [
+     "Well-Worn Spatula",
+     16
+    ],
+    [
+     "Lakeshore Apothecary",
+     15
+    ],
+    [
+     "Warg Tactics",
+     15
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.9366352132996273
+  },
+  "TMT": {
+   "set": "TMT",
+   "pools": 300,
+   "timing": {
+    "fm logit us": 2.4532602499999996,
+    "lgbm us": 16.222853999999998,
+    "fm build ms": 46.57337695666661,
+    "blend build ms": 78.59085068666656,
+    "fm values ms": 51.31682933333336,
+    "blend values ms": 7.567754233333278
+   },
+   "sizes": {
+    "trees": 458,
+    "nodes": 6412,
+    "leaves": 6870,
+    "text kB": 830.0556640625,
+    "f32 int32-kids kB": 95.71484375,
+    "f32 gz kB": 67.2978515625,
+    "f16 int16-kids kB": 59.0390625,
+    "site deck json kB": 40.08203125,
+    "site deck json gz kB": 11.1044921875
+   },
+   "alpha": 0.45,
+   "agreement": {
+    "same deck": 0.18,
+    "same spells": 0.18,
+    "spells swapped (mean, all pools)": 2.24,
+    "spells swapped (mean, pools that differ)": 2.7540983606557377,
+    "swaps hist": {
+     "0": 56,
+     "1": 62,
+     "2": 61,
+     "3": 58,
+     "4": 31,
+     "5": 18,
+     "6": 6,
+     "7": 3,
+     "8": 5
+    },
+    "land count differs": 0.23333333333333334,
+    "FM vs FM other seed: same deck": 0.9566666666666667,
+    "FM vs FM other seed: spells swapped": 0.10666666666666667,
+    "FM other seed scores worse under FM (pp)": -0.0015971723159216823,
+    "blend build beats both FM builds under FM": 0.09666666666666666
+   },
+   "model views (pp)": {
+    "FM: blend build - FM build": -0.6273602720363571,
+    "blend: blend build - FM build": 0.6490504303237553,
+    "blend gain, pools that differ": 0.7915249150289698,
+    "FM loss, pools that differ": -0.7650735024833624
+   },
+   "vs registered deck (pp)": {
+    "FM: FM build - registered": 3.362011027877743,
+    "blend: blend build - registered": 2.4871754700589275,
+    "blend: FM build - registered": 1.8381250397351716,
+    "FM: blend build - registered": 2.7346507558413866
+   },
+   "percentile among training decks": {
+    "lg of fmBuilt": 0.5716239124249368,
+    "fm of fmBuilt": 0.6961702382556869,
+    "lg of blBuilt": 0.6605456968716773,
+    "fm of blBuilt": 0.6671039429743775,
+    "lg of reg": 0.5413381853033231,
+    "fm of reg": 0.5241649070787846
+   },
+   "share above training 99.5%": {
+    "lg of fmBuilt": 0.0,
+    "fm of fmBuilt": 0.02,
+    "lg of blBuilt": 0.01,
+    "fm of blBuilt": 0.01
+   },
+   "overlap with registered spells (all, n=300)": {
+    "FM build": 0.647304504171887,
+    "blend build": 0.6577668553199426
+   },
+   "overlap with registered spells (skill >= 0.60, n=95)": {
+    "FM build": 0.6576222382649485,
+    "blend build": 0.6567179318161998
+   },
+   "swapped cards": {
+    "blend adds": {
+     "n": 672,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.0036592813966526538
+    },
+    "blend drops": {
+     "n": 667,
+     "hand value (logit)": null,
+     "GIH WR": null,
+     "drafter skill - mean": -0.009421058570531974
+    }
+   },
+   "most added": [
+    [
+     "Buzz Bots",
+     30
+    ],
+    [
+     "Purple Dragon Punks",
+     29
+    ],
+    [
+     "Primordial Pachyderm",
+     25
+    ],
+    [
+     "Rocksteady, Crash Courser",
+     25
+    ],
+    [
+     "Leonardo, Big Brother",
+     25
+    ],
+    [
+     "Mind Transfer Protocol",
+     24
+    ],
+    [
+     "Hamato Guardian Stance",
+     22
+    ],
+    [
+     "Omni-Cheese Pizza",
+     21
+    ]
+   ],
+   "most dropped": [
+    [
+     "Mutant Chain Reaction",
+     28
+    ],
+    [
+     "East Wind Avatar",
+     28
+    ],
+    [
+     "Jennika's Technique",
+     24
+    ],
+    [
+     "Donatello's Technique",
+     21
+    ],
+    [
+     "Bot Bashing Time",
+     20
+    ],
+    [
+     "Mechanized Ninja Cavalry",
+     18
+    ],
+    [
+     "Retro-Mutation",
+     16
+    ],
+    [
+     "Mind Transfer Protocol",
+     15
+    ]
+   ],
+   "card value label r (FM vs blend, own builds)": 0.892962765336892
+  }
+ },
+ "pooled": {
+  "same deck": 0.3490740740740741,
+  "same spells": 0.35370370370370374,
+  "spells swapped (mean, all pools)": 1.2955555555555556,
+  "spells swapped (mean, pools that differ)": 1.983923013681489,
+  "land count differs": 0.13148148148148148,
+  "FM vs FM other seed: same deck": 0.9437037037037038,
+  "FM vs FM other seed: spells swapped": 0.16055555555555553,
+  "FM other seed scores worse under FM (pp)": -0.00377334310108625,
+  "blend build beats both FM builds under FM": 0.060185185185185196,
+  "model views (pp)": {
+   "FM: blend build - FM build": -0.2866492571320165,
+   "blend: blend build - FM build": 0.2647131054215205,
+   "blend gain, pools that differ": 0.38198713266916745,
+   "FM loss, pools that differ": -0.4169169543385211
+  },
+  "vs registered deck (pp)": {
+   "FM: FM build - registered": 2.188291887323629,
+   "blend: blend build - registered": 1.9644932612575425,
+   "blend: FM build - registered": 1.6997801558360217,
+   "FM: blend build - registered": 1.9016426301916123
+  },
+  "percentile among training decks": {
+   "lg of fmBuilt": 0.5562587179157257,
+   "fm of fmBuilt": 0.6156323871250742,
+   "lg of blBuilt": 0.6212970501212586,
+   "fm of blBuilt": 0.6017241006684614,
+   "lg of reg": 0.5217300642276337,
+   "fm of reg": 0.5100833130547794
+  },
+  "share above training 99.5%": {
+   "lg of fmBuilt": 0.007037037037037038,
+   "fm of fmBuilt": 0.01074074074074074,
+   "lg of blBuilt": 0.010925925925925926,
+   "fm of blBuilt": 0.009444444444444443
+  },
+  "swapped cards": {
+   "blend adds": {
+    "hand value (logit)": -0.03874496628879036,
+    "GIH WR": 0.5518757441027783,
+    "drafter skill - mean": -0.0027773007663124123
+   },
+   "blend drops": {
+    "hand value (logit)": -0.06508197239466873,
+    "GIH WR": 0.5428470202661941,
+    "drafter skill - mean": -0.00817648798774577
+   }
+  },
+  "timing": {
+   "fm build ms": 1349.9223775870316,
+   "blend build ms": 3200.8181925262984,
+   "fm values ms": 3597.952980998148,
+   "blend values ms": 43.38349949814585
+  },
+  "sizes": {
+   "trees": [
+    458.0,
+    1308.5,
+    1965.0
+   ],
+   "f16 int16-kids kB": [
+    59.0390625,
+    168.673828125,
+    253.30078125
+   ],
+   "f32 gz kB": [
+    67.2978515625,
+    190.38888888888889,
+    285.3017578125
+   ],
+   "site deck json kB": [
+    36.634765625,
+    167.75119357638889,
+    241.12109375
+   ],
+   "site deck json gz kB": [
+    10.6201171875,
+    55.03553602430556,
+    79.0009765625
+   ]
+  }
+ },
+ "pooled dev": {
+  "same deck": 0.3925,
+  "same spells": 0.39944444444444444,
+  "spells swapped (mean, all pools)": 1.0888888888888888,
+  "spells swapped (mean, pools that differ)": 1.8269460091057497,
+  "land count differs": 0.11666666666666665,
+  "FM vs FM other seed: same deck": 0.9441666666666667,
+  "FM vs FM other seed: spells swapped": 0.15666666666666665,
+  "FM other seed scores worse under FM (pp)": -0.0020326252742091148,
+  "blend build beats both FM builds under FM": 0.05444444444444444,
+  "model views (pp)": {
+   "FM: blend build - FM build": -0.2189460011987594,
+   "blend: blend build - FM build": 0.20404452604530354,
+   "blend gain, pools that differ": 0.3207737918015136,
+   "FM loss, pools that differ": -0.3458828522881969
+  },
+  "vs registered deck (pp)": {
+   "FM: FM build - registered": 1.9913900907527575,
+   "blend: blend build - registered": 1.8772250043549148,
+   "blend: FM build - registered": 1.6731804783096116,
+   "FM: blend build - registered": 1.7724440895539981
+  },
+  "percentile among training decks": {
+   "lg of fmBuilt": 0.5633990136506007,
+   "fm of fmBuilt": 0.6055277073313233,
+   "lg of blBuilt": 0.6187131857039351,
+   "fm of blBuilt": 0.5949813127265746,
+   "lg of reg": 0.5213136565414579,
+   "fm of reg": 0.5108067514616864
+  },
+  "share above training 99.5%": {
+   "lg of fmBuilt": 0.007499999999999999,
+   "fm of fmBuilt": 0.009444444444444445,
+   "lg of blBuilt": 0.010555555555555554,
+   "fm of blBuilt": 0.009166666666666667
+  },
+  "swapped cards": {
+   "blend adds": {
+    "hand value (logit)": -0.03874496628879036,
+    "GIH WR": 0.5518757441027783,
+    "drafter skill - mean": -0.0025365828227529746
+   },
+   "blend drops": {
+    "hand value (logit)": -0.06508197239466873,
+    "GIH WR": 0.5428470202661941,
+    "drafter skill - mean": -0.008296313543418653
+   }
+  },
+  "timing": {
+   "fm build ms": 1993.6795277427702,
+   "blend build ms": 4711.321049315558,
+   "fm values ms": 5362.890665127777,
+   "blend values ms": 58.3548815305521
+  },
+  "sizes": {
+   "trees": [
+    623.0,
+    1352.0833333333333,
+    1965.0
+   ],
+   "f16 int16-kids kB": [
+    80.30859375,
+    174.2919921875,
+    253.30078125
+   ],
+   "f32 gz kB": [
+    91.205078125,
+    196.791748046875,
+    285.3017578125
+   ],
+   "site deck json kB": [
+    175.2119140625,
+    201.63460286458334,
+    241.12109375
+   ],
+   "site deck json gz kB": [
+    58.037109375,
+    67.02815755208333,
+    79.0009765625
+   ]
+  }
+ }
+}

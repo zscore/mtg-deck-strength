@@ -1,0 +1,756 @@
+MSH draft: 67785 decks scored in 8.8s
+BLB draft: 152459 decks scored in 10.4s
+DFT draft: 139434 decks scored in 1.8s
+DSK draft: 165491 decks scored in 1.7s
+EOE draft: 103056 decks scored in 1.1s
+FDN draft: 129403 decks scored in 35.7s
+FIN draft: 138498 decks scored in 1.5s
+LCI draft: 133418 decks scored in 13.0s
+MKM draft: 155501 decks scored in 1.6s
+OTJ draft: 192847 decks scored in 1.9s
+SOS draft: 106081 decks scored in 0.9s
+TDM draft: 100076 decks scored in 1.0s
+ECL draft: 98115 decks scored in 0.8s
+TLA draft: 101496 decks scored in 0.9s
+WOE draft: 163846 decks scored in 0.9s
+MOM draft: 202983 decks scored in 1.1s
+HOB draft: 57401 decks scored in 0.3s
+TMT draft: 31764 decks scored in 0.2s
+=== MSH: 68609 drafts (67785 with games), 377376 games, vault False [33s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 623 trees [116s]
+  counts LGBM seed 1: 822 trees [48s]
+  counts LGBM seed 2: 751 trees [69s]
+  scores ready [279s]
+  blend* r4 + site FM: alphas [0.7, 0.7, 0.7]
+  blend* counts + site FM: alphas [0.8, 0.75, 0.75]
+  blend* r4 + champion: alphas [0.65, 0.7, 0.65]
+  blend* counts + champion: alphas [0.8, 0.75, 0.75]
+  contexts + blends [318s]
+  experienced dl: site FM -663.048  site FM raw -663.058  champion -663.141  LGBM r4 -663.345  LGBM counts -663.755  blend* r4 + site FM -662.834  blend* counts + site FM -662.875  blend* r4 + champion -662.878  blend* counts + champion -662.958  blend counts + site FM @0.7 -662.857
+      site FM - champion: +0.093 ± 0.138
+      site FM raw - site FM: -0.010 ± 0.017
+      LGBM counts - site FM: -0.707 ± 0.237
+      LGBM r4 - site FM: -0.297 ± 0.128
+      blend* r4 + site FM - site FM: +0.214 ± 0.045
+      blend* counts + site FM - site FM: +0.173 ± 0.061
+      blend counts + site FM @0.7 - site FM: +0.191 ± 0.079
+      blend* r4 + site FM - blend* counts + site FM: +0.040 ± 0.035
+      blend* counts + site FM - blend counts + site FM @0.7: -0.018 ± 0.020
+      blend* r4 + champion - champion: +0.263 ± 0.045
+      blend* counts + champion - champion: +0.183 ± 0.046
+      blend* r4 + champion - blend* r4 + site FM: -0.044 ± 0.101
+      blend* counts + champion - blend* counts + site FM: -0.083 ± 0.113
+  match 1 pre: site FM -665.783  site FM raw -665.749  champion -665.969  LGBM r4 -666.169  LGBM counts -667.011  blend* r4 + site FM -665.482  blend* counts + site FM -665.604  blend* r4 + champion -665.587  blend* counts + champion -665.779  blend counts + site FM @0.7 -665.602
+      site FM - champion: +0.187 ± 0.340
+      site FM raw - site FM: +0.034 ± 0.066
+      LGBM counts - site FM: -1.228 ± 0.699
+      LGBM r4 - site FM: -0.387 ± 0.610
+      blend* r4 + site FM - site FM: +0.301 ± 0.187
+      blend* counts + site FM - site FM: +0.179 ± 0.188
+      blend counts + site FM @0.7 - site FM: +0.181 ± 0.240
+      blend* r4 + site FM - blend* counts + site FM: +0.122 ± 0.088
+      blend* counts + site FM - blend counts + site FM @0.7: -0.002 ± 0.053
+      blend* r4 + champion - champion: +0.382 ± 0.177
+      blend* counts + champion - champion: +0.191 ± 0.171
+      blend* r4 + champion - blend* r4 + site FM: -0.105 ± 0.260
+      blend* counts + champion - blend* counts + site FM: -0.175 ± 0.280
+MSH done [420s]
+=== BLB: 154585 drafts (152459 with games), 898354 games, vault False [51s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 1666 trees [304s]
+  counts LGBM seed 1: 1919 trees [38s]
+  counts LGBM seed 2: 1530 trees [26s]
+  scores ready [432s]
+  blend* r4 + site FM: alphas [0.65, 0.65, 0.65]
+  blend* counts + site FM: alphas [0.65, 0.65, 0.7]
+  blend* r4 + champion: alphas [0.75, 0.7, 0.75]
+  blend* counts + champion: alphas [0.75, 0.7, 0.75]
+  contexts + blends [616s]
+  experienced dl: site FM -662.434  site FM raw -662.436  champion -662.201  LGBM r4 -662.623  LGBM counts -662.912  blend* r4 + site FM -662.156  blend* counts + site FM -662.186  blend* r4 + champion -662.063  blend* counts + champion -662.078  blend counts + site FM @0.7 -662.193
+      site FM - champion: -0.233 ± 0.063
+      site FM raw - site FM: -0.001 ± 0.012
+      LGBM counts - site FM: -0.478 ± 0.167
+      LGBM r4 - site FM: -0.188 ± 0.109
+      blend* r4 + site FM - site FM: +0.278 ± 0.048
+      blend* counts + site FM - site FM: +0.248 ± 0.070
+      blend counts + site FM @0.7 - site FM: +0.241 ± 0.063
+      blend* r4 + site FM - blend* counts + site FM: +0.030 ± 0.044
+      blend* counts + site FM - blend counts + site FM @0.7: +0.007 ± 0.007
+      blend* r4 + champion - champion: +0.138 ± 0.028
+      blend* counts + champion - champion: +0.122 ± 0.050
+      blend* r4 + champion - blend* r4 + site FM: +0.094 ± 0.038
+      blend* counts + champion - blend* counts + site FM: +0.108 ± 0.043
+  match 1 pre: site FM -666.389  site FM raw -666.428  champion -666.263  LGBM r4 -666.773  LGBM counts -666.652  blend* r4 + site FM -666.102  blend* counts + site FM -665.967  blend* r4 + champion -666.097  blend* counts + champion -665.984  blend counts + site FM @0.7 -665.986
+      site FM - champion: -0.126 ± 0.068
+      site FM raw - site FM: -0.039 ± 0.026
+      LGBM counts - site FM: -0.263 ± 0.350
+      LGBM r4 - site FM: -0.383 ± 0.322
+      blend* r4 + site FM - site FM: +0.288 ± 0.117
+      blend* counts + site FM - site FM: +0.423 ± 0.135
+      blend counts + site FM @0.7 - site FM: +0.404 ± 0.122
+      blend* r4 + site FM - blend* counts + site FM: -0.135 ± 0.112
+      blend* counts + site FM - blend counts + site FM @0.7: +0.019 ± 0.016
+      blend* r4 + champion - champion: +0.166 ± 0.102
+      blend* counts + champion - champion: +0.279 ± 0.119
+      blend* r4 + champion - blend* r4 + site FM: +0.004 ± 0.062
+      blend* counts + champion - blend* counts + site FM: -0.017 ± 0.063
+BLB done [654s]
+=== DFT: 141166 drafts (139434 with games), 824163 games, vault False [4s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 1358 trees [27s]
+  counts LGBM seed 1: 1727 trees [31s]
+  counts LGBM seed 2: 1433 trees [26s]
+  scores ready [91s]
+  blend* r4 + site FM: alphas [0.55, 0.6, 0.6]
+  blend* counts + site FM: alphas [0.7, 0.7, 0.75]
+  blend* r4 + champion: alphas [0.55, 0.6, 0.65]
+  blend* counts + champion: alphas [0.75, 0.7, 0.75]
+  contexts + blends [111s]
+  experienced dl: site FM -663.043  site FM raw -663.034  champion -662.892  LGBM r4 -663.152  LGBM counts -663.625  blend* r4 + site FM -662.817  blend* counts + site FM -662.872  blend* r4 + champion -662.716  blend* counts + champion -662.765  blend counts + site FM @0.7 -662.870
+      site FM - champion: -0.152 ± 0.074
+      site FM raw - site FM: +0.009 ± 0.019
+      LGBM counts - site FM: -0.581 ± 0.120
+      LGBM r4 - site FM: -0.109 ± 0.123
+      blend* r4 + site FM - site FM: +0.226 ± 0.057
+      blend* counts + site FM - site FM: +0.171 ± 0.036
+      blend counts + site FM @0.7 - site FM: +0.174 ± 0.038
+      blend* r4 + site FM - blend* counts + site FM: +0.055 ± 0.051
+      blend* counts + site FM - blend counts + site FM @0.7: -0.003 ± 0.003
+      blend* r4 + champion - champion: +0.175 ± 0.060
+      blend* counts + champion - champion: +0.126 ± 0.036
+      blend* r4 + champion - blend* r4 + site FM: +0.101 ± 0.047
+      blend* counts + champion - blend* counts + site FM: +0.107 ± 0.057
+  match 1 pre: site FM -667.529  site FM raw -667.534  champion -667.439  LGBM r4 -667.114  LGBM counts -667.971  blend* r4 + site FM -667.050  blend* counts + site FM -667.276  blend* r4 + champion -666.997  blend* counts + champion -667.220  blend counts + site FM @0.7 -667.269
+      site FM - champion: -0.090 ± 0.124
+      site FM raw - site FM: -0.005 ± 0.049
+      LGBM counts - site FM: -0.442 ± 0.384
+      LGBM r4 - site FM: +0.415 ± 0.221
+      blend* r4 + site FM - site FM: +0.479 ± 0.099
+      blend* counts + site FM - site FM: +0.253 ± 0.118
+      blend counts + site FM @0.7 - site FM: +0.260 ± 0.124
+      blend* r4 + site FM - blend* counts + site FM: +0.226 ± 0.103
+      blend* counts + site FM - blend counts + site FM @0.7: -0.008 ± 0.010
+      blend* r4 + champion - champion: +0.442 ± 0.094
+      blend* counts + champion - champion: +0.219 ± 0.097
+      blend* r4 + champion - blend* r4 + site FM: +0.053 ± 0.078
+      blend* counts + champion - blend* counts + site FM: +0.056 ± 0.090
+DFT done [147s]
+=== DSK: 167672 drafts (165491 with games), 977322 games, vault False [5s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 1965 trees [42s]
+  counts LGBM seed 1: 1754 trees [5593s]
+  counts LGBM seed 2: 1912 trees [7533s]
+  scores ready [13174s]
+  blend* r4 + site FM: alphas [0.5, 0.55, 0.55]
+  blend* counts + site FM: alphas [0.7, 0.7, 0.65]
+  blend* r4 + champion: alphas [0.55, 0.6, 0.55]
+  blend* counts + champion: alphas [0.7, 0.75, 0.7]
+  contexts + blends [17989s]
+  experienced dl: site FM -665.510  site FM raw -665.510  champion -665.492  LGBM r4 -666.249  LGBM counts -666.471  blend* r4 + site FM -665.495  blend* counts + site FM -665.399  blend* r4 + champion -665.497  blend* counts + champion -665.409  blend counts + site FM @0.7 -665.395
+      site FM - champion: -0.018 ± 0.043
+      site FM raw - site FM: +0.000 ± 0.008
+      LGBM counts - site FM: -0.961 ± 0.168
+      LGBM r4 - site FM: -0.739 ± 0.164
+      blend* r4 + site FM - site FM: +0.015 ± 0.081
+      blend* counts + site FM - site FM: +0.111 ± 0.057
+      blend counts + site FM @0.7 - site FM: +0.115 ± 0.054
+      blend* r4 + site FM - blend* counts + site FM: -0.096 ± 0.041
+      blend* counts + site FM - blend counts + site FM @0.7: -0.004 ± 0.005
+      blend* r4 + champion - champion: -0.004 ± 0.071
+      blend* counts + champion - champion: +0.084 ± 0.047
+      blend* r4 + champion - blend* r4 + site FM: -0.001 ± 0.026
+      blend* counts + champion - blend* counts + site FM: -0.010 ± 0.029
+  match 1 pre: site FM -668.949  site FM raw -668.973  champion -668.921  LGBM r4 -669.784  LGBM counts -670.426  blend* r4 + site FM -669.004  blend* counts + site FM -669.039  blend* r4 + champion -668.994  blend* counts + champion -669.019  blend counts + site FM @0.7 -669.026
+      site FM - champion: -0.027 ± 0.113
+      site FM raw - site FM: -0.024 ± 0.020
+      LGBM counts - site FM: -1.478 ± 0.535
+      LGBM r4 - site FM: -0.835 ± 0.450
+      blend* r4 + site FM - site FM: -0.055 ± 0.219
+      blend* counts + site FM - site FM: -0.090 ± 0.173
+      blend counts + site FM @0.7 - site FM: -0.078 ± 0.164
+      blend* r4 + site FM - blend* counts + site FM: +0.035 ± 0.097
+      blend* counts + site FM - blend counts + site FM @0.7: -0.013 ± 0.016
+      blend* r4 + champion - champion: -0.072 ± 0.184
+      blend* counts + champion - champion: -0.098 ± 0.146
+      blend* r4 + champion - blend* r4 + site FM: +0.010 ± 0.060
+      blend* counts + champion - blend* counts + site FM: +0.020 ± 0.077
+DSK done [22593s]
+=== EOE: 104377 drafts (103056 with games), 563418 games, vault False [968s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 1172 trees [4738s]
+  counts LGBM seed 1: 1432 trees [3051s]
+  counts LGBM seed 2: 1151 trees [2177s]
+  scores ready [10937s]
+  blend* r4 + site FM: alphas [0.45, 0.45, 0.45]
+  blend* counts + site FM: alphas [0.6, 0.6, 0.6]
+  blend* r4 + champion: alphas [0.55, 0.5, 0.55]
+  blend* counts + champion: alphas [0.65, 0.6, 0.7]
+  contexts + blends [13600s]
+  experienced dl: site FM -664.276  site FM raw -664.241  champion -663.995  LGBM r4 -664.292  LGBM counts -664.677  blend* r4 + site FM -664.011  blend* counts + site FM -664.090  blend* r4 + champion -663.864  blend* counts + champion -663.927  blend counts + site FM @0.7 -664.097
+      site FM - champion: -0.282 ± 0.069
+      site FM raw - site FM: +0.035 ± 0.010
+      LGBM counts - site FM: -0.400 ± 0.147
+      LGBM r4 - site FM: -0.016 ± 0.169
+      blend* r4 + site FM - site FM: +0.265 ± 0.094
+      blend* counts + site FM - site FM: +0.186 ± 0.064
+      blend counts + site FM @0.7 - site FM: +0.180 ± 0.048
+      blend* r4 + site FM - blend* counts + site FM: +0.079 ± 0.050
+      blend* counts + site FM - blend counts + site FM @0.7: +0.006 ± 0.016
+      blend* r4 + champion - champion: +0.130 ± 0.078
+      blend* counts + champion - champion: +0.068 ± 0.061
+      blend* r4 + champion - blend* r4 + site FM: +0.147 ± 0.034
+      blend* counts + champion - blend* counts + site FM: +0.164 ± 0.042
+  match 1 pre: site FM -666.572  site FM raw -666.515  champion -666.337  LGBM r4 -666.415  LGBM counts -667.106  blend* r4 + site FM -666.121  blend* counts + site FM -666.328  blend* r4 + champion -666.016  blend* counts + champion -666.194  blend counts + site FM @0.7 -666.334
+      site FM - champion: -0.235 ± 0.206
+      site FM raw - site FM: +0.057 ± 0.035
+      LGBM counts - site FM: -0.534 ± 0.441
+      LGBM r4 - site FM: +0.157 ± 0.386
+      blend* r4 + site FM - site FM: +0.451 ± 0.210
+      blend* counts + site FM - site FM: +0.244 ± 0.189
+      blend counts + site FM @0.7 - site FM: +0.238 ± 0.141
+      blend* r4 + site FM - blend* counts + site FM: +0.207 ± 0.129
+      blend* counts + site FM - blend counts + site FM @0.7: +0.006 ± 0.048
+      blend* r4 + champion - champion: +0.321 ± 0.160
+      blend* counts + champion - champion: +0.143 ± 0.163
+      blend* r4 + champion - blend* r4 + site FM: +0.105 ± 0.082
+      blend* counts + champion - blend* counts + site FM: +0.134 ± 0.116
+EOE done [16363s]
+=== FDN: 130935 drafts (129403 with games), 765317 games, vault False [143s]
+  split overlap: {'our val drafts the site trained on': 0.0040170984189112635, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 1307 trees [575s]
+  counts LGBM seed 1: 1166 trees [371s]
+  counts LGBM seed 2: 1065 trees [353s]
+  scores ready [1491s]
+  blend* r4 + site FM: alphas [0.45, 0.5, 0.45]
+  blend* counts + site FM: alphas [0.65, 0.65, 0.65]
+  blend* r4 + champion: alphas [0.65, 0.7, 0.65]
+  blend* counts + champion: alphas [0.8, 0.8, 0.85]
+  contexts + blends [1513s]
+  experienced dl: site FM -662.228  site FM raw -662.241  champion -661.904  LGBM r4 -662.232  LGBM counts -662.690  blend* r4 + site FM -661.968  blend* counts + site FM -662.058  blend* r4 + champion -661.774  blend* counts + champion -661.844  blend counts + site FM @0.7 -662.061
+      site FM - champion: -0.324 ± 0.075
+      site FM raw - site FM: -0.014 ± 0.010
+      LGBM counts - site FM: -0.462 ± 0.117
+      LGBM r4 - site FM: -0.004 ± 0.124
+      blend* r4 + site FM - site FM: +0.260 ± 0.068
+      blend* counts + site FM - site FM: +0.169 ± 0.042
+      blend counts + site FM @0.7 - site FM: +0.167 ± 0.036
+      blend* r4 + site FM - blend* counts + site FM: +0.090 ± 0.046
+      blend* counts + site FM - blend counts + site FM @0.7: +0.003 ± 0.006
+      blend* r4 + champion - champion: +0.130 ± 0.052
+      blend* counts + champion - champion: +0.060 ± 0.026
+      blend* r4 + champion - blend* r4 + site FM: +0.194 ± 0.066
+      blend* counts + champion - blend* counts + site FM: +0.215 ± 0.069
+  match 1 pre: site FM -665.667  site FM raw -665.702  champion -665.411  LGBM r4 -665.812  LGBM counts -666.197  blend* r4 + site FM -665.433  blend* counts + site FM -665.453  blend* r4 + champion -665.252  blend* counts + champion -665.294  blend counts + site FM @0.7 -665.457
+      site FM - champion: -0.256 ± 0.205
+      site FM raw - site FM: -0.035 ± 0.031
+      LGBM counts - site FM: -0.530 ± 0.282
+      LGBM r4 - site FM: -0.145 ± 0.324
+      blend* r4 + site FM - site FM: +0.234 ± 0.194
+      blend* counts + site FM - site FM: +0.214 ± 0.124
+      blend counts + site FM @0.7 - site FM: +0.210 ± 0.108
+      blend* r4 + site FM - blend* counts + site FM: +0.020 ± 0.091
+      blend* counts + site FM - blend counts + site FM @0.7: +0.004 ± 0.017
+      blend* r4 + champion - champion: +0.159 ± 0.123
+      blend* counts + champion - champion: +0.117 ± 0.073
+      blend* r4 + champion - blend* r4 + site FM: +0.180 ± 0.134
+      blend* counts + champion - blend* counts + site FM: +0.159 ± 0.154
+FDN done [1548s]
+=== FIN: 140237 drafts (138498 with games), 769659 games, vault False [5s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 1243 trees [28s]
+  counts LGBM seed 1: 1582 trees [37s]
+  counts LGBM seed 2: 1427 trees [465s]
+  scores ready [536s]
+  blend* r4 + site FM: alphas [0.75, 0.75, 0.75]
+  blend* counts + site FM: alphas [0.8, 0.75, 0.8]
+  blend* r4 + champion: alphas [0.8, 0.75, 0.8]
+  blend* counts + champion: alphas [0.85, 0.75, 0.8]
+  contexts + blends [570s]
+  experienced dl: site FM -660.173  site FM raw -660.146  champion -660.102  LGBM r4 -660.460  LGBM counts -660.844  blend* r4 + site FM -660.001  blend* counts + site FM -660.016  blend* r4 + champion -659.977  blend* counts + champion -659.990  blend counts + site FM @0.7 -659.998
+      site FM - champion: -0.071 ± 0.072
+      site FM raw - site FM: +0.027 ± 0.013
+      LGBM counts - site FM: -0.672 ± 0.146
+      LGBM r4 - site FM: -0.287 ± 0.169
+      blend* r4 + site FM - site FM: +0.172 ± 0.041
+      blend* counts + site FM - site FM: +0.157 ± 0.035
+      blend counts + site FM @0.7 - site FM: +0.175 ± 0.046
+      blend* r4 + site FM - blend* counts + site FM: +0.015 ± 0.035
+      blend* counts + site FM - blend counts + site FM @0.7: -0.018 ± 0.013
+      blend* r4 + champion - champion: +0.125 ± 0.038
+      blend* counts + champion - champion: +0.112 ± 0.041
+      blend* r4 + champion - blend* r4 + site FM: +0.023 ± 0.052
+      blend* counts + champion - blend* counts + site FM: +0.026 ± 0.057
+  match 1 pre: site FM -664.006  site FM raw -663.976  champion -664.135  LGBM r4 -664.385  LGBM counts -664.832  blend* r4 + site FM -663.857  blend* counts + site FM -663.880  blend* r4 + champion -663.992  blend* counts + champion -664.018  blend counts + site FM @0.7 -663.876
+      site FM - champion: +0.129 ± 0.128
+      site FM raw - site FM: +0.030 ± 0.019
+      LGBM counts - site FM: -0.826 ± 0.419
+      LGBM r4 - site FM: -0.379 ± 0.434
+      blend* r4 + site FM - site FM: +0.149 ± 0.100
+      blend* counts + site FM - site FM: +0.126 ± 0.089
+      blend counts + site FM @0.7 - site FM: +0.130 ± 0.125
+      blend* r4 + site FM - blend* counts + site FM: +0.023 ± 0.072
+      blend* counts + site FM - blend counts + site FM @0.7: -0.004 ± 0.037
+      blend* r4 + champion - champion: +0.143 ± 0.076
+      blend* counts + champion - champion: +0.117 ± 0.073
+      blend* r4 + champion - blend* r4 + site FM: -0.136 ± 0.099
+      blend* counts + champion - blend* counts + site FM: -0.138 ± 0.104
+FIN done [915s]
+=== LCI: 134970 drafts (133418 with games), 793671 games, vault False [100s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 1324 trees [499s]
+  counts LGBM seed 1: 1683 trees [266s]
+  counts LGBM seed 2: 1620 trees [579s]
+  scores ready [1463s]
+  blend* r4 + site FM: alphas [0.55, 0.55, 0.55]
+  blend* counts + site FM: alphas [0.65, 0.65, 0.65]
+  blend* r4 + champion: alphas [0.65, 0.65, 0.65]
+  blend* counts + champion: alphas [0.7, 0.7, 0.75]
+  contexts + blends [1484s]
+  experienced dl: site FM -660.118  site FM raw -660.123  champion -659.986  LGBM r4 -660.420  LGBM counts -660.724  blend* r4 + site FM -659.938  blend* counts + site FM -659.941  blend* r4 + champion -659.865  blend* counts + champion -659.876  blend counts + site FM @0.7 -659.941
+      site FM - champion: -0.133 ± 0.057
+      site FM raw - site FM: -0.004 ± 0.013
+      LGBM counts - site FM: -0.606 ± 0.178
+      LGBM r4 - site FM: -0.301 ± 0.148
+      blend* r4 + site FM - site FM: +0.180 ± 0.067
+      blend* counts + site FM - site FM: +0.177 ± 0.060
+      blend counts + site FM @0.7 - site FM: +0.177 ± 0.051
+      blend* r4 + site FM - blend* counts + site FM: +0.003 ± 0.040
+      blend* counts + site FM - blend counts + site FM @0.7: +0.000 ± 0.009
+      blend* r4 + champion - champion: +0.121 ± 0.058
+      blend* counts + champion - champion: +0.109 ± 0.056
+      blend* r4 + champion - blend* r4 + site FM: +0.074 ± 0.035
+      blend* counts + champion - blend* counts + site FM: +0.065 ± 0.038
+  match 1 pre: site FM -662.986  site FM raw -662.959  champion -662.777  LGBM r4 -663.030  LGBM counts -663.264  blend* r4 + site FM -662.636  blend* counts + site FM -662.625  blend* r4 + champion -662.548  blend* counts + champion -662.540  blend counts + site FM @0.7 -662.647
+      site FM - champion: -0.209 ± 0.110
+      site FM raw - site FM: +0.027 ± 0.035
+      LGBM counts - site FM: -0.278 ± 0.508
+      LGBM r4 - site FM: -0.044 ± 0.364
+      blend* r4 + site FM - site FM: +0.350 ± 0.167
+      blend* counts + site FM - site FM: +0.361 ± 0.191
+      blend counts + site FM @0.7 - site FM: +0.339 ± 0.163
+      blend* r4 + site FM - blend* counts + site FM: -0.011 ± 0.133
+      blend* counts + site FM - blend counts + site FM @0.7: +0.023 ± 0.028
+      blend* r4 + champion - champion: +0.229 ± 0.119
+      blend* counts + champion - champion: +0.237 ± 0.151
+      blend* r4 + champion - blend* r4 + site FM: +0.088 ± 0.058
+      blend* counts + champion - blend* counts + site FM: +0.084 ± 0.070
+LCI done [1512s]
+=== MKM: 157553 drafts (155501 with games), 919942 games, vault False [6s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 1620 trees [30s]
+  counts LGBM seed 1: 1787 trees [36s]
+  counts LGBM seed 2: 1638 trees [35s]
+  scores ready [109s]
+  blend* r4 + site FM: alphas [0.65, 0.65, 0.6]
+  blend* counts + site FM: alphas [0.65, 0.6, 0.65]
+  blend* r4 + champion: alphas [0.65, 0.7, 0.65]
+  blend* counts + champion: alphas [0.7, 0.65, 0.65]
+  contexts + blends [132s]
+  experienced dl: site FM -664.951  site FM raw -664.933  champion -664.820  LGBM r4 -664.961  LGBM counts -665.170  blend* r4 + site FM -664.698  blend* counts + site FM -664.653  blend* r4 + champion -664.609  blend* counts + champion -664.560  blend counts + site FM @0.7 -664.676
+      site FM - champion: -0.132 ± 0.103
+      site FM raw - site FM: +0.018 ± 0.015
+      LGBM counts - site FM: -0.219 ± 0.116
+      LGBM r4 - site FM: -0.010 ± 0.125
+      blend* r4 + site FM - site FM: +0.253 ± 0.048
+      blend* counts + site FM - site FM: +0.298 ± 0.042
+      blend counts + site FM @0.7 - site FM: +0.276 ± 0.034
+      blend* r4 + site FM - blend* counts + site FM: -0.045 ± 0.036
+      blend* counts + site FM - blend counts + site FM @0.7: +0.023 ± 0.009
+      blend* r4 + champion - champion: +0.211 ± 0.111
+      blend* counts + champion - champion: +0.260 ± 0.105
+      blend* r4 + champion - blend* r4 + site FM: +0.089 ± 0.054
+      blend* counts + champion - blend* counts + site FM: +0.093 ± 0.056
+  match 1 pre: site FM -666.537  site FM raw -666.463  champion -666.179  LGBM r4 -666.453  LGBM counts -666.481  blend* r4 + site FM -666.229  blend* counts + site FM -666.102  blend* r4 + champion -665.975  blend* counts + champion -665.850  blend counts + site FM @0.7 -666.147
+      site FM - champion: -0.358 ± 0.224
+      site FM raw - site FM: +0.074 ± 0.040
+      LGBM counts - site FM: +0.056 ± 0.526
+      LGBM r4 - site FM: +0.083 ± 0.399
+      blend* r4 + site FM - site FM: +0.308 ± 0.129
+      blend* counts + site FM - site FM: +0.435 ± 0.175
+      blend counts + site FM @0.7 - site FM: +0.390 ± 0.140
+      blend* r4 + site FM - blend* counts + site FM: -0.127 ± 0.101
+      blend* counts + site FM - blend counts + site FM @0.7: +0.045 ± 0.036
+      blend* r4 + champion - champion: +0.204 ± 0.194
+      blend* counts + champion - champion: +0.329 ± 0.215
+      blend* r4 + champion - blend* r4 + site FM: +0.254 ± 0.134
+      blend* counts + champion - blend* counts + site FM: +0.252 ± 0.140
+MKM done [167s]
+=== OTJ: 195312 drafts (192847 with games), 1132415 games, vault False [7s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 1542 trees [39s]
+  counts LGBM seed 1: 1895 trees [42s]
+  counts LGBM seed 2: 1599 trees [30s]
+  scores ready [122s]
+  blend* r4 + site FM: alphas [0.55, 0.6, 0.55]
+  blend* counts + site FM: alphas [0.75, 0.7, 0.7]
+  blend* r4 + champion: alphas [0.65, 0.7, 0.65]
+  blend* counts + champion: alphas [0.8, 0.8, 0.8]
+  contexts + blends [146s]
+  experienced dl: site FM -666.892  site FM raw -666.894  champion -666.862  LGBM r4 -667.102  LGBM counts -667.519  blend* r4 + site FM -666.699  blend* counts + site FM -666.785  blend* r4 + champion -666.716  blend* counts + champion -666.780  blend counts + site FM @0.7 -666.785
+      site FM - champion: -0.030 ± 0.058
+      site FM raw - site FM: -0.002 ± 0.015
+      LGBM counts - site FM: -0.627 ± 0.128
+      LGBM r4 - site FM: -0.210 ± 0.141
+      blend* r4 + site FM - site FM: +0.193 ± 0.061
+      blend* counts + site FM - site FM: +0.107 ± 0.039
+      blend counts + site FM @0.7 - site FM: +0.107 ± 0.041
+      blend* r4 + site FM - blend* counts + site FM: +0.086 ± 0.040
+      blend* counts + site FM - blend counts + site FM @0.7: +0.000 ± 0.002
+      blend* r4 + champion - champion: +0.146 ± 0.045
+      blend* counts + champion - champion: +0.082 ± 0.030
+      blend* r4 + champion - blend* r4 + site FM: -0.017 ± 0.040
+      blend* counts + champion - blend* counts + site FM: +0.005 ± 0.051
+  match 1 pre: site FM -672.744  site FM raw -672.750  champion -672.820  LGBM r4 -673.518  LGBM counts -673.452  blend* r4 + site FM -672.830  blend* counts + site FM -672.673  blend* r4 + champion -672.850  blend* counts + champion -672.742  blend counts + site FM @0.7 -672.675
+      site FM - champion: +0.075 ± 0.110
+      site FM raw - site FM: -0.006 ± 0.033
+      LGBM counts - site FM: -0.707 ± 0.378
+      LGBM r4 - site FM: -0.774 ± 0.429
+      blend* r4 + site FM - site FM: -0.085 ± 0.196
+      blend* counts + site FM - site FM: +0.071 ± 0.116
+      blend counts + site FM @0.7 - site FM: +0.069 ± 0.123
+      blend* r4 + site FM - blend* counts + site FM: -0.157 ± 0.117
+      blend* counts + site FM - blend counts + site FM @0.7: +0.002 ± 0.007
+      blend* r4 + champion - champion: -0.031 ± 0.118
+      blend* counts + champion - champion: +0.078 ± 0.069
+      blend* r4 + champion - blend* r4 + site FM: -0.021 ± 0.047
+      blend* counts + champion - blend* counts + site FM: -0.069 ± 0.072
+OTJ done [186s]
+=== SOS: 107459 drafts (106081 with games), 582712 games, vault False [2s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 1215 trees [16s]
+  counts LGBM seed 1: 1279 trees [19s]
+  counts LGBM seed 2: 1187 trees [18s]
+  scores ready [57s]
+  blend* r4 + site FM: alphas [0.65, 0.65, 0.65]
+  blend* counts + site FM: alphas [0.7, 0.7, 0.7]
+  blend* r4 + champion: alphas [0.8, 0.75, 0.75]
+  blend* counts + champion: alphas [0.8, 0.8, 0.8]
+  contexts + blends [70s]
+  experienced dl: site FM -662.418  site FM raw -662.419  champion -662.244  LGBM r4 -663.072  LGBM counts -663.657  blend* r4 + site FM -662.268  blend* counts + site FM -662.351  blend* r4 + champion -662.153  blend* counts + champion -662.217  blend counts + site FM @0.7 -662.351
+      site FM - champion: -0.174 ± 0.074
+      site FM raw - site FM: -0.002 ± 0.018
+      LGBM counts - site FM: -1.240 ± 0.187
+      LGBM r4 - site FM: -0.655 ± 0.161
+      blend* r4 + site FM - site FM: +0.150 ± 0.059
+      blend* counts + site FM - site FM: +0.066 ± 0.055
+      blend counts + site FM @0.7 - site FM: +0.066 ± 0.055
+      blend* r4 + site FM - blend* counts + site FM: +0.084 ± 0.058
+      blend* counts + site FM - blend counts + site FM @0.7: +0.000 ± 0.000
+      blend* r4 + champion - champion: +0.091 ± 0.047
+      blend* counts + champion - champion: +0.027 ± 0.042
+      blend* r4 + champion - blend* r4 + site FM: +0.114 ± 0.067
+      blend* counts + champion - blend* counts + site FM: +0.135 ± 0.069
+  match 1 pre: site FM -662.461  site FM raw -662.450  champion -662.312  LGBM r4 -663.391  LGBM counts -663.484  blend* r4 + site FM -662.281  blend* counts + site FM -662.158  blend* r4 + champion -662.185  blend* counts + champion -662.114  blend counts + site FM @0.7 -662.158
+      site FM - champion: -0.149 ± 0.288
+      site FM raw - site FM: +0.011 ± 0.042
+      LGBM counts - site FM: -1.023 ± 0.683
+      LGBM r4 - site FM: -0.930 ± 0.531
+      blend* r4 + site FM - site FM: +0.181 ± 0.154
+      blend* counts + site FM - site FM: +0.303 ± 0.159
+      blend counts + site FM @0.7 - site FM: +0.303 ± 0.159
+      blend* r4 + site FM - blend* counts + site FM: -0.123 ± 0.138
+      blend* counts + site FM - blend counts + site FM @0.7: +0.000 ± 0.000
+      blend* r4 + champion - champion: +0.127 ± 0.103
+      blend* counts + champion - champion: +0.198 ± 0.099
+      blend* r4 + champion - blend* r4 + site FM: +0.096 ± 0.221
+      blend* counts + champion - blend* counts + site FM: +0.044 ± 0.222
+SOS done [93s]
+=== TDM: 101323 drafts (100076 with games), 552428 games, vault False [2s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  counts LGBM seed 0: 1190 trees [19s]
+  counts LGBM seed 1: 1129 trees [19s]
+  counts LGBM seed 2: 1204 trees [18s]
+  scores ready [60s]
+  blend* r4 + site FM: alphas [0.75, 0.75, 0.8]
+  blend* counts + site FM: alphas [0.8, 0.8, 0.75]
+  blend* r4 + champion: alphas [0.75, 0.75, 0.75]
+  blend* counts + champion: alphas [0.8, 0.85, 0.75]
+  contexts + blends [73s]
+  experienced dl: site FM -660.425  site FM raw -660.399  champion -660.251  LGBM r4 -660.904  LGBM counts -661.487  blend* r4 + site FM -660.342  blend* counts + site FM -660.384  blend* r4 + champion -660.199  blend* counts + champion -660.242  blend counts + site FM @0.7 -660.406
+      site FM - champion: -0.175 ± 0.073
+      site FM raw - site FM: +0.027 ± 0.021
+      LGBM counts - site FM: -1.061 ± 0.177
+      LGBM r4 - site FM: -0.478 ± 0.135
+      blend* r4 + site FM - site FM: +0.083 ± 0.038
+      blend* counts + site FM - site FM: +0.042 ± 0.048
+      blend counts + site FM @0.7 - site FM: +0.020 ± 0.066
+      blend* r4 + site FM - blend* counts + site FM: +0.041 ± 0.033
+      blend* counts + site FM - blend counts + site FM @0.7: +0.022 ± 0.019
+      blend* r4 + champion - champion: +0.052 ± 0.051
+      blend* counts + champion - champion: +0.009 ± 0.050
+      blend* r4 + champion - blend* r4 + site FM: +0.143 ± 0.056
+      blend* counts + champion - blend* counts + site FM: +0.141 ± 0.062
+  match 1 pre: site FM -667.720  site FM raw -667.764  champion -667.745  LGBM r4 -668.286  LGBM counts -668.728  blend* r4 + site FM -667.636  blend* counts + site FM -667.628  blend* r4 + champion -667.650  blend* counts + champion -667.662  blend counts + site FM @0.7 -667.635
+      site FM - champion: +0.025 ± 0.129
+      site FM raw - site FM: -0.045 ± 0.050
+      LGBM counts - site FM: -1.008 ± 0.409
+      LGBM r4 - site FM: -0.566 ± 0.330
+      blend* r4 + site FM - site FM: +0.084 ± 0.076
+      blend* counts + site FM - site FM: +0.091 ± 0.087
+      blend counts + site FM @0.7 - site FM: +0.085 ± 0.123
+      blend* r4 + site FM - blend* counts + site FM: -0.007 ± 0.067
+      blend* counts + site FM - blend counts + site FM @0.7: +0.006 ± 0.036
+      blend* r4 + champion - champion: +0.095 ± 0.095
+      blend* counts + champion - champion: +0.083 ± 0.088
+      blend* r4 + champion - blend* r4 + site FM: -0.014 ± 0.100
+      blend* counts + champion - blend* counts + site FM: -0.033 ± 0.107
+TDM done [97s]
+=== ECL: 99289 drafts (98115 with games), 536560 games, vault True [3s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  lgbm seed 0: 1359 trees, alpha 0.30 [23s]
+  lgbm seed 1: 1613 trees, alpha 0.30 [28s]
+  lgbm seed 2: 1309 trees, alpha 0.35 [22s]
+  counts LGBM seed 0: 1740 trees [19s]
+  counts LGBM seed 1: 1540 trees [17s]
+  counts LGBM seed 2: 1318 trees [15s]
+  scores ready [128s]
+  blend* r4 + site FM: alphas [0.65, 0.65, 0.65]
+  blend* counts + site FM: alphas [0.7, 0.7, 0.7]
+  blend* r4 + champion: alphas [0.65, 0.65, 0.65]
+  blend* counts + champion: alphas [0.7, 0.7, 0.7]
+  contexts + blends [140s]
+  experienced dl: site FM -659.365  site FM raw -659.371  champion -659.285  LGBM r4 -659.663  LGBM counts -660.047  blend* r4 + site FM -659.077  blend* counts + site FM -659.059  blend* r4 + champion -659.051  blend* counts + champion -659.039  blend counts + site FM @0.7 -659.059
+      site FM - champion: -0.079 ± 0.069
+      site FM raw - site FM: -0.006 ± 0.017
+      LGBM counts - site FM: -0.682 ± 0.242
+      LGBM r4 - site FM: -0.298 ± 0.247
+      blend* r4 + site FM - site FM: +0.288 ± 0.086
+      blend* counts + site FM - site FM: +0.305 ± 0.072
+      blend counts + site FM @0.7 - site FM: +0.305 ± 0.072
+      blend* r4 + site FM - blend* counts + site FM: -0.018 ± 0.055
+      blend* counts + site FM - blend counts + site FM @0.7: +0.000 ± 0.000
+      blend* r4 + champion - champion: +0.235 ± 0.089
+      blend* counts + champion - champion: +0.246 ± 0.075
+      blend* r4 + champion - blend* r4 + site FM: +0.026 ± 0.050
+      blend* counts + champion - blend* counts + site FM: +0.020 ± 0.053
+  match 1 pre: site FM -662.760  site FM raw -662.757  champion -662.477  LGBM r4 -662.419  LGBM counts -663.184  blend* r4 + site FM -662.155  blend* counts + site FM -662.260  blend* r4 + champion -661.991  blend* counts + champion -662.084  blend counts + site FM @0.7 -662.260
+      site FM - champion: -0.283 ± 0.188
+      site FM raw - site FM: +0.003 ± 0.030
+      LGBM counts - site FM: -0.423 ± 0.449
+      LGBM r4 - site FM: +0.341 ± 0.385
+      blend* r4 + site FM - site FM: +0.606 ± 0.133
+      blend* counts + site FM - site FM: +0.501 ± 0.147
+      blend counts + site FM @0.7 - site FM: +0.501 ± 0.147
+      blend* r4 + site FM - blend* counts + site FM: +0.105 ± 0.156
+      blend* counts + site FM - blend counts + site FM @0.7: +0.000 ± 0.000
+      blend* r4 + champion - champion: +0.486 ± 0.135
+      blend* counts + champion - champion: +0.392 ± 0.163
+      blend* r4 + champion - blend* r4 + site FM: +0.164 ± 0.124
+      blend* counts + champion - blend* counts + site FM: +0.175 ± 0.134
+ECL done [161s]
+=== TLA: 102793 drafts (101496 with games), 562924 games, vault True [3s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  lgbm seed 0: 939 trees, alpha 0.25 [17s]
+  lgbm seed 1: 932 trees, alpha 0.20 [19s]
+  lgbm seed 2: 829 trees, alpha 0.20 [17s]
+  counts LGBM seed 0: 1005 trees [15s]
+  counts LGBM seed 1: 1413 trees [19s]
+  counts LGBM seed 2: 1228 trees [17s]
+  scores ready [108s]
+  blend* r4 + site FM: alphas [0.55, 0.55, 0.55]
+  blend* counts + site FM: alphas [0.65, 0.65, 0.65]
+  blend* r4 + champion: alphas [0.6, 0.55, 0.6]
+  blend* counts + champion: alphas [0.65, 0.65, 0.65]
+  contexts + blends [120s]
+  experienced dl: site FM -660.788  site FM raw -660.800  champion -660.723  LGBM r4 -660.971  LGBM counts -661.418  blend* r4 + site FM -660.576  blend* counts + site FM -660.618  blend* r4 + champion -660.498  blend* counts + champion -660.560  blend counts + site FM @0.7 -660.617
+      site FM - champion: -0.065 ± 0.101
+      site FM raw - site FM: -0.012 ± 0.015
+      LGBM counts - site FM: -0.630 ± 0.214
+      LGBM r4 - site FM: -0.183 ± 0.139
+      blend* r4 + site FM - site FM: +0.212 ± 0.059
+      blend* counts + site FM - site FM: +0.170 ± 0.075
+      blend counts + site FM @0.7 - site FM: +0.171 ± 0.063
+      blend* r4 + site FM - blend* counts + site FM: +0.042 ± 0.047
+      blend* counts + site FM - blend counts + site FM @0.7: -0.001 ± 0.011
+      blend* r4 + champion - champion: +0.225 ± 0.052
+      blend* counts + champion - champion: +0.163 ± 0.067
+      blend* r4 + champion - blend* r4 + site FM: +0.077 ± 0.063
+      blend* counts + champion - blend* counts + site FM: +0.058 ± 0.072
+  match 1 pre: site FM -666.727  site FM raw -666.663  champion -666.932  LGBM r4 -667.059  LGBM counts -667.902  blend* r4 + site FM -666.570  blend* counts + site FM -666.740  blend* r4 + champion -666.657  blend* counts + champion -666.875  blend counts + site FM @0.7 -666.709
+      site FM - champion: +0.205 ± 0.236
+      site FM raw - site FM: +0.064 ± 0.025
+      LGBM counts - site FM: -1.175 ± 0.425
+      LGBM r4 - site FM: -0.332 ± 0.425
+      blend* r4 + site FM - site FM: +0.157 ± 0.195
+      blend* counts + site FM - site FM: -0.013 ± 0.153
+      blend counts + site FM @0.7 - site FM: +0.018 ± 0.131
+      blend* r4 + site FM - blend* counts + site FM: +0.170 ± 0.111
+      blend* counts + site FM - blend counts + site FM @0.7: -0.030 ± 0.023
+      blend* r4 + champion - champion: +0.274 ± 0.174
+      blend* counts + champion - champion: +0.057 ± 0.158
+      blend* r4 + champion - blend* r4 + site FM: -0.087 ± 0.151
+      blend* counts + champion - blend* counts + site FM: -0.136 ± 0.171
+TLA done [141s]
+=== WOE: 165792 drafts (163846 with games), 971869 games, vault True [5s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  lgbm seed 0: 1938 trees, alpha 0.35 [50s]
+  lgbm seed 1: 1522 trees, alpha 0.40 [40s]
+  lgbm seed 2: 1532 trees, alpha 0.40 [40s]
+  counts LGBM seed 0: 1919 trees [33s]
+  counts LGBM seed 1: 1538 trees [24s]
+  counts LGBM seed 2: 2128 trees [32s]
+  scores ready [227s]
+  blend* r4 + site FM: alphas [0.65, 0.65, 0.65]
+  blend* counts + site FM: alphas [0.65, 0.7, 0.65]
+  blend* r4 + champion: alphas [0.65, 0.65, 0.7]
+  blend* counts + champion: alphas [0.65, 0.7, 0.65]
+  contexts + blends [248s]
+  experienced dl: site FM -665.668  site FM raw -665.691  champion -665.728  LGBM r4 -665.713  LGBM counts -665.978  blend* r4 + site FM -665.372  blend* counts + site FM -665.441  blend* r4 + champion -665.443  blend* counts + champion -665.504  blend counts + site FM @0.7 -665.450
+      site FM - champion: +0.059 ± 0.059
+      site FM raw - site FM: -0.022 ± 0.009
+      LGBM counts - site FM: -0.309 ± 0.180
+      LGBM r4 - site FM: -0.045 ± 0.219
+      blend* r4 + site FM - site FM: +0.297 ± 0.068
+      blend* counts + site FM - site FM: +0.227 ± 0.051
+      blend counts + site FM @0.7 - site FM: +0.218 ± 0.044
+      blend* r4 + site FM - blend* counts + site FM: +0.069 ± 0.037
+      blend* counts + site FM - blend counts + site FM @0.7: +0.009 ± 0.007
+      blend* r4 + champion - champion: +0.284 ± 0.058
+      blend* counts + champion - champion: +0.224 ± 0.045
+      blend* r4 + champion - blend* r4 + site FM: -0.072 ± 0.032
+      blend* counts + champion - blend* counts + site FM: -0.063 ± 0.033
+  match 1 pre: site FM -668.860  site FM raw -668.896  champion -669.101  LGBM r4 -669.425  LGBM counts -669.590  blend* r4 + site FM -668.710  blend* counts + site FM -668.731  blend* r4 + champion -668.908  blend* counts + champion -668.924  blend counts + site FM @0.7 -668.730
+      site FM - champion: +0.241 ± 0.110
+      site FM raw - site FM: -0.036 ± 0.030
+      LGBM counts - site FM: -0.730 ± 0.277
+      LGBM r4 - site FM: -0.566 ± 0.276
+      blend* r4 + site FM - site FM: +0.150 ± 0.097
+      blend* counts + site FM - site FM: +0.129 ± 0.090
+      blend counts + site FM @0.7 - site FM: +0.130 ± 0.082
+      blend* r4 + site FM - blend* counts + site FM: +0.021 ± 0.067
+      blend* counts + site FM - blend counts + site FM @0.7: -0.001 ± 0.009
+      blend* r4 + champion - champion: +0.193 ± 0.077
+      blend* counts + champion - champion: +0.177 ± 0.089
+      blend* r4 + champion - blend* r4 + site FM: -0.197 ± 0.064
+      blend* counts + champion - blend* counts + site FM: -0.193 ± 0.068
+WOE done [284s]
+=== MOM: 205437 drafts (202983 with games), 1193555 games, vault True [6s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  lgbm seed 0: 1704 trees, alpha 0.20 [57s]
+  lgbm seed 1: 2153 trees, alpha 0.20 [69s]
+  lgbm seed 2: 1779 trees, alpha 0.25 [58s]
+  counts LGBM seed 0: 1318 trees [27s]
+  counts LGBM seed 1: 1365 trees [27s]
+  counts LGBM seed 2: 1508 trees [29s]
+  scores ready [276s]
+  blend* r4 + site FM: alphas [0.7, 0.65, 0.7]
+  blend* counts + site FM: alphas [0.7, 0.7, 0.7]
+  blend* r4 + champion: alphas [0.7, 0.7, 0.7]
+  blend* counts + champion: alphas [0.7, 0.7, 0.7]
+  contexts + blends [305s]
+  experienced dl: site FM -660.415  site FM raw -660.394  champion -660.419  LGBM r4 -660.676  LGBM counts -660.983  blend* r4 + site FM -660.218  blend* counts + site FM -660.320  blend* r4 + champion -660.201  blend* counts + champion -660.308  blend counts + site FM @0.7 -660.320
+      site FM - champion: +0.004 ± 0.030
+      site FM raw - site FM: +0.021 ± 0.010
+      LGBM counts - site FM: -0.568 ± 0.078
+      LGBM r4 - site FM: -0.261 ± 0.083
+      blend* r4 + site FM - site FM: +0.197 ± 0.029
+      blend* counts + site FM - site FM: +0.095 ± 0.021
+      blend counts + site FM @0.7 - site FM: +0.095 ± 0.021
+      blend* r4 + site FM - blend* counts + site FM: +0.102 ± 0.024
+      blend* counts + site FM - blend counts + site FM @0.7: +0.000 ± 0.000
+      blend* r4 + champion - champion: +0.217 ± 0.034
+      blend* counts + champion - champion: +0.111 ± 0.029
+      blend* r4 + champion - blend* r4 + site FM: +0.017 ± 0.017
+      blend* counts + champion - blend* counts + site FM: +0.012 ± 0.018
+  match 1 pre: site FM -666.537  site FM raw -666.559  champion -666.517  LGBM r4 -666.357  LGBM counts -666.754  blend* r4 + site FM -666.210  blend* counts + site FM -666.346  blend* r4 + champion -666.177  blend* counts + champion -666.308  blend counts + site FM @0.7 -666.346
+      site FM - champion: -0.021 ± 0.076
+      site FM raw - site FM: -0.022 ± 0.029
+      LGBM counts - site FM: -0.217 ± 0.223
+      LGBM r4 - site FM: +0.180 ± 0.334
+      blend* r4 + site FM - site FM: +0.327 ± 0.117
+      blend* counts + site FM - site FM: +0.192 ± 0.075
+      blend counts + site FM @0.7 - site FM: +0.192 ± 0.075
+      blend* r4 + site FM - blend* counts + site FM: +0.135 ± 0.083
+      blend* counts + site FM - blend counts + site FM @0.7: +0.000 ± 0.000
+      blend* r4 + champion - champion: +0.340 ± 0.115
+      blend* counts + champion - champion: +0.209 ± 0.083
+      blend* r4 + champion - blend* r4 + site FM: +0.033 ± 0.062
+      blend* counts + champion - blend* counts + site FM: +0.038 ± 0.054
+MOM done [348s]
+=== HOB: 57994 drafts (57401 with games), 323000 games, vault True [1s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  lgbm seed 0: 725 trees, alpha 0.35 [9s]
+  lgbm seed 1: 722 trees, alpha 0.40 [8s]
+  lgbm seed 2: 850 trees, alpha 0.40 [9s]
+  counts LGBM seed 0: 888 trees [10s]
+  counts LGBM seed 1: 783 trees [10s]
+  counts LGBM seed 2: 847 trees [8s]
+  scores ready [57s]
+  blend* r4 + site FM: alphas [0.55, 0.6, 0.6]
+  blend* counts + site FM: alphas [0.6, 0.6, 0.6]
+  blend* r4 + champion: alphas [0.6, 0.65, 0.65]
+  blend* counts + champion: alphas [0.65, 0.65, 0.6]
+  contexts + blends [63s]
+  experienced dl: site FM -659.829  site FM raw -659.806  champion -659.630  LGBM r4 -660.198  LGBM counts -659.733  blend* r4 + site FM -659.534  blend* counts + site FM -659.290  blend* r4 + champion -659.404  blend* counts + champion -659.199  blend counts + site FM @0.7 -659.370
+      site FM - champion: -0.200 ± 0.144
+      site FM raw - site FM: +0.023 ± 0.018
+      LGBM counts - site FM: +0.097 ± 0.293
+      LGBM r4 - site FM: -0.369 ± 0.228
+      blend* r4 + site FM - site FM: +0.295 ± 0.089
+      blend* counts + site FM - site FM: +0.539 ± 0.110
+      blend counts + site FM @0.7 - site FM: +0.459 ± 0.081
+      blend* r4 + site FM - blend* counts + site FM: -0.244 ± 0.053
+      blend* counts + site FM - blend counts + site FM @0.7: +0.080 ± 0.030
+      blend* r4 + champion - champion: +0.226 ± 0.119
+      blend* counts + champion - champion: +0.431 ± 0.138
+      blend* r4 + champion - blend* r4 + site FM: +0.130 ± 0.087
+      blend* counts + champion - blend* counts + site FM: +0.091 ± 0.089
+  match 1 pre: site FM -661.392  site FM raw -661.411  champion -661.219  LGBM r4 -661.154  LGBM counts -661.347  blend* r4 + site FM -660.813  blend* counts + site FM -660.867  blend* r4 + champion -660.765  blend* counts + champion -660.827  blend counts + site FM @0.7 -660.941
+      site FM - champion: -0.172 ± 0.288
+      site FM raw - site FM: -0.019 ± 0.033
+      LGBM counts - site FM: +0.045 ± 0.731
+      LGBM r4 - site FM: +0.238 ± 0.644
+      blend* r4 + site FM - site FM: +0.579 ± 0.268
+      blend* counts + site FM - site FM: +0.524 ± 0.293
+      blend counts + site FM @0.7 - site FM: +0.450 ± 0.216
+      blend* r4 + site FM - blend* counts + site FM: +0.055 ± 0.157
+      blend* counts + site FM - blend counts + site FM @0.7: +0.074 ± 0.078
+      blend* r4 + champion - champion: +0.455 ± 0.194
+      blend* counts + champion - champion: +0.393 ± 0.233
+      blend* r4 + champion - blend* r4 + site FM: +0.048 ± 0.178
+      blend* counts + champion - blend* counts + site FM: +0.040 ± 0.181
+HOB done [76s]
+=== TMT: 32151 drafts (31764 with games), 180204 games, vault True [1s]
+  split overlap: {'our val drafts the site trained on': 0.0, 'our test drafts the site trained on': 0.0}
+  lgbm seed 0: 459 trees, alpha 0.25 [4s]
+  lgbm seed 1: 388 trees, alpha 0.25 [3s]
+  lgbm seed 2: 617 trees, alpha 0.25 [9s]
+  counts LGBM seed 0: 458 trees [5s]
+  counts LGBM seed 1: 411 trees [5s]
+  counts LGBM seed 2: 508 trees [5s]
+  scores ready [31s]
+  blend* r4 + site FM: alphas [0.65, 0.55, 0.55]
+  blend* counts + site FM: alphas [0.45, 0.6, 0.5]
+  blend* r4 + champion: alphas [0.6, 0.5, 0.5]
+  blend* counts + champion: alphas [0.45, 0.55, 0.5]
+  contexts + blends [35s]
+  experienced dl: site FM -655.157  site FM raw -655.128  champion -656.090  LGBM r4 -656.510  LGBM counts -656.306  blend* r4 + site FM -655.285  blend* counts + site FM -655.265  blend* r4 + champion -655.811  blend* counts + champion -655.714  blend counts + site FM @0.7 -655.117
+      site FM - champion: +0.933 ± 0.261
+      site FM raw - site FM: +0.029 ± 0.037
+      LGBM counts - site FM: -1.149 ± 0.427
+      LGBM r4 - site FM: -1.354 ± 0.367
+      blend* r4 + site FM - site FM: -0.128 ± 0.180
+      blend* counts + site FM - site FM: -0.108 ± 0.234
+      blend counts + site FM @0.7 - site FM: +0.039 ± 0.148
+      blend* r4 + site FM - blend* counts + site FM: -0.020 ± 0.132
+      blend* counts + site FM - blend counts + site FM @0.7: -0.148 ± 0.097
+      blend* r4 + champion - champion: +0.279 ± 0.162
+      blend* counts + champion - champion: +0.376 ± 0.180
+      blend* r4 + champion - blend* r4 + site FM: -0.526 ± 0.178
+      blend* counts + champion - blend* counts + site FM: -0.449 ± 0.160
+  match 1 pre: site FM -657.513  site FM raw -657.402  champion -658.270  LGBM r4 -658.334  LGBM counts -658.469  blend* r4 + site FM -657.530  blend* counts + site FM -657.649  blend* r4 + champion -657.942  blend* counts + champion -658.013  blend counts + site FM @0.7 -657.525
+      site FM - champion: +0.757 ± 0.455
+      site FM raw - site FM: +0.111 ± 0.089
+      LGBM counts - site FM: -0.955 ± 0.663
+      LGBM r4 - site FM: -0.821 ± 0.465
+      blend* r4 + site FM - site FM: -0.017 ± 0.214
+      blend* counts + site FM - site FM: -0.136 ± 0.366
+      blend counts + site FM @0.7 - site FM: -0.012 ± 0.240
+      blend* r4 + site FM - blend* counts + site FM: +0.119 ± 0.277
+      blend* counts + site FM - blend counts + site FM @0.7: -0.124 ± 0.135
+      blend* r4 + champion - champion: +0.328 ± 0.317
+      blend* counts + champion - champion: +0.257 ± 0.379
+      blend* r4 + champion - blend* r4 + site FM: -0.412 ± 0.257
+      blend* counts + champion - blend* counts + site FM: -0.364 ± 0.239
+TMT done [43s]

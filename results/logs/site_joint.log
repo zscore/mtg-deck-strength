@@ -1,0 +1,738 @@
+start Wed Oct 14 11:30:03 CEST 2026
+=== MSH: 429845 games (52331 sealed), 339 cards, l2 (w, v) (0.0001, 0.001) [3s]
+  l2_dw 0.0001 ks 0: val sealed 0.63411 draft 0.65997 [11s]
+  l2_dw 0.001 ks 0: val sealed 0.63220 draft 0.65996 [10s]
+  l2_dw 0.01 ks 0: val sealed 0.63138 draft 0.65994 [10s]
+  l2_dw 0.0001 ks 2: val sealed 0.63411 draft 0.65997 [14s]
+  l2_dw 0.001 ks 2: val sealed 0.63220 draft 0.65996 [15s]
+  l2_dw 0.01 ks 2: val sealed 0.63138 draft 0.65994 [15s]
+  picked l2_dw 0.01 ks 0 [84s]
+  Sealed: 52331 games (train 36288), l2 (w, v) (0.0001, 0.01), val logloss 0.64896 [12s]
+MSH joint FM done [97s]
+=== MSH Sealed: 9040 events, 52331 games, test events 1356 [1s]
+MSH sealed: 9040 decks scored in 0.1s
+MSH draft: 9040 decks scored in 0.1s
+MSH sealed_refit: 9040 decks scored in 0.1s
+MSH sealed: 9040 decks scored in 0.1s
+MSH draft: 9040 decks scored in 0.1s
+MSH sealed: 25 decks scored in 0.0s
+MSH draft: 25 decks scored in 0.0s
+MSH sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 9.567369591453878e-05, 'draft': 0.00012493816933939472, 'sealed_refit': 4.161391444756912e-05}
+  joint LGBM: 53793 train events (6328 sealed), 1356 sealed val events
+  joint LGBM seed 0: 714 trees [11s]
+  joint LGBM seed 1: 849 trees [11s]
+  joint LGBM seed 2: 976 trees [13s]
+  blend* counts draft + site draft FM: alphas [0.55]
+  blend* LGBM joint + joint FM: alphas [0.0, 0.05, 0.1]
+  blend* LGBM joint + site draft FM: alphas [0.35, 0.35, 0.45]
+  blend* counts draft + joint FM: alphas [0.2]
+  experienced dl: site FM sealed -633.423  site draft FM -632.182  FM sealed refit -633.974  joint FM -632.462  joint FM draft head -632.265  LGBM counts draft -632.570  LGBM joint -632.553  blend* counts draft + site draft FM -631.987  blend* LGBM joint + joint FM -632.468  blend* LGBM joint + site draft FM -632.025  blend* counts draft + joint FM -632.274
+      FM sealed refit - site FM sealed: -0.551 ± 0.358
+      site draft FM - site FM sealed: +1.241 ± 0.680
+      joint FM - site FM sealed: +0.961 ± 0.573
+      joint FM - site draft FM: -0.280 ± 0.319
+      joint FM draft head - site FM sealed: +1.158 ± 0.596
+      joint FM - joint FM draft head: -0.197 ± 0.196
+      LGBM joint - site FM sealed: +0.870 ± 0.941
+      LGBM joint - LGBM counts draft: +0.016 ± 0.263
+      blend* counts draft + site draft FM - site FM sealed: +1.436 ± 0.802
+      blend* LGBM joint + joint FM - site FM sealed: +0.955 ± 0.925
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.482 ± 0.357
+      blend* LGBM joint + joint FM - joint FM: -0.007 ± 0.627
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.039 ± 0.200
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.287 ± 0.197
+  all dl: site FM sealed -644.921  site draft FM -642.715  FM sealed refit -645.402  joint FM -642.920  joint FM draft head -642.732  LGBM counts draft -643.378  LGBM joint -643.262  blend* counts draft + site draft FM -642.517  blend* LGBM joint + joint FM -643.142  blend* LGBM joint + site draft FM -642.537  blend* counts draft + joint FM -642.931
+      FM sealed refit - site FM sealed: -0.482 ± 0.218
+      site draft FM - site FM sealed: +2.205 ± 0.636
+      joint FM - site FM sealed: +2.001 ± 0.447
+      joint FM - site draft FM: -0.204 ± 0.335
+      joint FM draft head - site FM sealed: +2.189 ± 0.484
+      joint FM - joint FM draft head: -0.188 ± 0.196
+      LGBM joint - site FM sealed: +1.659 ± 0.782
+      LGBM joint - LGBM counts draft: +0.117 ± 0.275
+      blend* counts draft + site draft FM - site FM sealed: +2.404 ± 0.656
+      blend* LGBM joint + joint FM - site FM sealed: +1.779 ± 0.775
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.625 ± 0.215
+      blend* LGBM joint + joint FM - joint FM: -0.222 ± 0.604
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.020 ± 0.165
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.414 ± 0.208
+MSH joint sealed done [41s]
+=== BLB: 981888 games (50658 sealed), 276 cards, l2 (w, v) (1e-05, 0.001) [5s]
+  l2_dw 0.0001 ks 0: val sealed 0.63364 draft 0.65730 [18s]
+  l2_dw 0.001 ks 0: val sealed 0.63118 draft 0.65729 [17s]
+  l2_dw 0.01 ks 0: val sealed 0.63046 draft 0.65729 [16s]
+  l2_dw 0.0001 ks 2: val sealed 0.63364 draft 0.65730 [22s]
+  l2_dw 0.001 ks 2: val sealed 0.63118 draft 0.65729 [22s]
+  l2_dw 0.01 ks 2: val sealed 0.63046 draft 0.65729 [22s]
+  picked l2_dw 0.01 ks 2 [135s]
+  Sealed: 50658 games (train 35242), l2 (w, v) (0.0001, 0.01), val logloss 0.65334 [7s]
+BLB joint FM done [142s]
+=== BLB Sealed: 8816 events, 50658 games, test events 1323 [0s]
+BLB sealed: 8816 decks scored in 0.1s
+BLB draft: 8816 decks scored in 0.1s
+BLB sealed_refit: 8816 decks scored in 0.1s
+BLB sealed: 8816 decks scored in 0.1s
+BLB draft: 8816 decks scored in 0.1s
+BLB sealed: 25 decks scored in 0.0s
+BLB draft: 25 decks scored in 0.0s
+BLB sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 5.197808882495547e-05, 'draft': 8.475005440111705e-05, 'sealed_refit': 3.917427755423253e-05}
+  joint LGBM: 118276 train events (6171 sealed), 1322 sealed val events
+  joint LGBM seed 0: 1827 trees [39s]
+  joint LGBM seed 1: 2194 trees [47s]
+  joint LGBM seed 2: 1650 trees [36s]
+  blend* counts draft + site draft FM: alphas [0.75]
+  blend* LGBM joint + joint FM: alphas [0.15, 0.5, 0.4]
+  blend* LGBM joint + site draft FM: alphas [0.15, 0.5, 0.4]
+  blend* counts draft + joint FM: alphas [0.7]
+  experienced dl: site FM sealed -647.798  site draft FM -643.007  FM sealed refit -649.588  joint FM -643.814  joint FM draft head -643.616  LGBM counts draft -643.398  LGBM joint -643.335  blend* counts draft + site draft FM -642.613  blend* LGBM joint + joint FM -642.823  blend* LGBM joint + site draft FM -642.658  blend* counts draft + joint FM -643.011
+      FM sealed refit - site FM sealed: -1.789 ± 0.607
+      site draft FM - site FM sealed: +4.791 ± 1.212
+      joint FM - site FM sealed: +3.984 ± 0.817
+      joint FM - site draft FM: -0.807 ± 0.659
+      joint FM draft head - site FM sealed: +4.183 ± 1.015
+      joint FM - joint FM draft head: -0.198 ± 0.445
+      LGBM joint - site FM sealed: +4.463 ± 1.687
+      LGBM joint - LGBM counts draft: +0.063 ± 0.531
+      blend* counts draft + site draft FM - site FM sealed: +5.185 ± 1.485
+      blend* LGBM joint + joint FM - site FM sealed: +4.975 ± 1.416
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.210 ± 0.485
+      blend* LGBM joint + joint FM - joint FM: +0.991 ± 0.889
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.045 ± 0.433
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.398 ± 0.477
+  all dl: site FM sealed -654.642  site draft FM -650.505  FM sealed refit -656.148  joint FM -651.908  joint FM draft head -651.271  LGBM counts draft -651.444  LGBM joint -651.535  blend* counts draft + site draft FM -650.247  blend* LGBM joint + joint FM -651.042  blend* LGBM joint + site draft FM -650.654  blend* counts draft + joint FM -651.117
+      FM sealed refit - site FM sealed: -1.505 ± 0.283
+      site draft FM - site FM sealed: +4.138 ± 0.634
+      joint FM - site FM sealed: +2.735 ± 0.540
+      joint FM - site draft FM: -1.403 ± 0.399
+      joint FM draft head - site FM sealed: +3.372 ± 0.699
+      joint FM - joint FM draft head: -0.637 ± 0.338
+      LGBM joint - site FM sealed: +3.107 ± 0.890
+      LGBM joint - LGBM counts draft: -0.091 ± 0.294
+      blend* counts draft + site draft FM - site FM sealed: +4.395 ± 0.653
+      blend* LGBM joint + joint FM - site FM sealed: +3.600 ± 0.714
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.795 ± 0.359
+      blend* LGBM joint + joint FM - joint FM: +0.865 ± 0.507
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.407 ± 0.362
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.870 ± 0.292
+BLB joint sealed done [128s]
+=== DFT: 903042 games (45375 sealed), 286 cards, l2 (w, v) (0.0001, 0.001) [5s]
+  l2_dw 0.0001 ks 0: val sealed 0.62459 draft 0.66034 [21s]
+  l2_dw 0.001 ks 0: val sealed 0.62370 draft 0.66052 [18s]
+  l2_dw 0.01 ks 0: val sealed 0.62408 draft 0.66045 [16s]
+  l2_dw 0.0001 ks 2: val sealed 0.62459 draft 0.66034 [27s]
+  l2_dw 0.001 ks 2: val sealed 0.62369 draft 0.66052 [23s]
+  l2_dw 0.01 ks 2: val sealed 0.62407 draft 0.66044 [21s]
+  picked l2_dw 0.001 ks 2 [143s]
+  Sealed: 45375 games (train 31654), l2 (w, v) (0.0001, 0.01), val logloss 0.64733 [7s]
+DFT joint FM done [150s]
+=== DFT Sealed: 7690 events, 45375 games, test events 1154 [0s]
+DFT sealed: 7690 decks scored in 0.1s
+DFT draft: 7690 decks scored in 0.1s
+DFT sealed_refit: 7690 decks scored in 0.1s
+DFT sealed: 7690 decks scored in 0.1s
+DFT draft: 7690 decks scored in 0.1s
+DFT sealed: 25 decks scored in 0.0s
+DFT draft: 25 decks scored in 0.0s
+DFT sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 4.989739106842084e-05, 'draft': 0.00010521884034842, 'sealed_refit': 5.7914696807256916e-05}
+  joint LGBM: 108323 train events (5383 sealed), 1153 sealed val events
+  joint LGBM seed 0: 1121 trees [26s]
+  joint LGBM seed 1: 1205 trees [29s]
+  joint LGBM seed 2: 1462 trees [48s]
+  blend* counts draft + site draft FM: alphas [0.25]
+  blend* LGBM joint + joint FM: alphas [0.2, 0.2, 0.15]
+  blend* LGBM joint + site draft FM: alphas [0.25, 0.25, 0.1]
+  blend* counts draft + joint FM: alphas [0.25]
+  experienced dl: site FM sealed -643.720  site draft FM -641.842  FM sealed refit -644.178  joint FM -641.570  joint FM draft head -641.425  LGBM counts draft -641.675  LGBM joint -641.617  blend* counts draft + site draft FM -641.514  blend* LGBM joint + joint FM -641.370  blend* LGBM joint + site draft FM -641.490  blend* counts draft + joint FM -641.320
+      FM sealed refit - site FM sealed: -0.457 ± 0.580
+      site draft FM - site FM sealed: +1.879 ± 1.153
+      joint FM - site FM sealed: +2.151 ± 0.921
+      joint FM - site draft FM: +0.272 ± 0.658
+      joint FM draft head - site FM sealed: +2.296 ± 1.090
+      joint FM - joint FM draft head: -0.145 ± 0.408
+      LGBM joint - site FM sealed: +2.103 ± 1.498
+      LGBM joint - LGBM counts draft: +0.058 ± 0.465
+      blend* counts draft + site draft FM - site FM sealed: +2.206 ± 1.516
+      blend* LGBM joint + joint FM - site FM sealed: +2.350 ± 1.380
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: +0.144 ± 0.403
+      blend* LGBM joint + joint FM - joint FM: +0.199 ± 1.015
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: +0.024 ± 0.366
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: +0.194 ± 0.168
+  all dl: site FM sealed -652.105  site draft FM -650.634  FM sealed refit -652.658  joint FM -650.812  joint FM draft head -650.310  LGBM counts draft -650.357  LGBM joint -650.002  blend* counts draft + site draft FM -650.204  blend* LGBM joint + joint FM -649.855  blend* LGBM joint + site draft FM -649.909  blend* counts draft + joint FM -650.109
+      FM sealed refit - site FM sealed: -0.553 ± 0.419
+      site draft FM - site FM sealed: +1.471 ± 1.147
+      joint FM - site FM sealed: +1.293 ± 0.837
+      joint FM - site draft FM: -0.178 ± 0.743
+      joint FM draft head - site FM sealed: +1.795 ± 1.068
+      joint FM - joint FM draft head: -0.501 ± 0.472
+      LGBM joint - site FM sealed: +2.103 ± 1.119
+      LGBM joint - LGBM counts draft: +0.355 ± 0.371
+      blend* counts draft + site draft FM - site FM sealed: +1.901 ± 1.118
+      blend* LGBM joint + joint FM - site FM sealed: +2.250 ± 1.026
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: +0.349 ± 0.337
+      blend* LGBM joint + joint FM - joint FM: +0.957 ± 0.919
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: +0.295 ± 0.306
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: +0.095 ± 0.177
+DFT joint sealed done [109s]
+=== DSK: 1067028 games (55079 sealed), 286 cards, l2 (w, v) (1e-05, 0.001) [7s]
+  l2_dw 0.0001 ks 0: val sealed 0.63891 draft 0.66153 [23s]
+  l2_dw 0.001 ks 0: val sealed 0.63793 draft 0.66153 [22s]
+  l2_dw 0.01 ks 0: val sealed 0.63785 draft 0.66139 [34s]
+  l2_dw 0.0001 ks 2: val sealed 0.63891 draft 0.66153 [32s]
+  l2_dw 0.001 ks 2: val sealed 0.63793 draft 0.66153 [29s]
+  l2_dw 0.01 ks 2: val sealed 0.63784 draft 0.66139 [36s]
+  picked l2_dw 0.01 ks 2 [203s]
+  Sealed: 55079 games (train 38468), l2 (w, v) (0.0001, 0.03), val logloss 0.65457 [11s]
+DSK joint FM done [214s]
+=== DSK Sealed: 9421 events, 55079 games, test events 1414 [0s]
+DSK sealed: 9421 decks scored in 0.1s
+DSK draft: 9421 decks scored in 0.1s
+DSK sealed_refit: 9421 decks scored in 0.1s
+DSK sealed: 9421 decks scored in 0.1s
+DSK draft: 9421 decks scored in 0.1s
+DSK sealed: 25 decks scored in 0.0s
+DSK draft: 25 decks scored in 0.0s
+DSK sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 4.4389690110668845e-05, 'draft': 7.701641475915677e-05, 'sealed_refit': 6.121899002201059e-05}
+  joint LGBM: 128075 train events (6594 sealed), 1413 sealed val events
+  joint LGBM seed 0: 1198 trees [33s]
+  joint LGBM seed 1: 703 trees [20s]
+  joint LGBM seed 2: 1333 trees [33s]
+  blend* counts draft + site draft FM: alphas [1.0]
+  blend* LGBM joint + joint FM: alphas [0.95, 0.9, 0.9]
+  blend* LGBM joint + site draft FM: alphas [1.0, 0.9, 0.9]
+  blend* counts draft + joint FM: alphas [1.0]
+  experienced dl: site FM sealed -652.821  site draft FM -649.745  FM sealed refit -653.591  joint FM -650.568  joint FM draft head -649.809  LGBM counts draft -649.953  LGBM joint -650.358  blend* counts draft + site draft FM -649.745  blend* LGBM joint + joint FM -650.382  blend* LGBM joint + site draft FM -649.657  blend* counts draft + joint FM -650.568
+      FM sealed refit - site FM sealed: -0.771 ± 0.628
+      site draft FM - site FM sealed: +3.075 ± 0.887
+      joint FM - site FM sealed: +2.252 ± 0.692
+      joint FM - site draft FM: -0.823 ± 0.608
+      joint FM draft head - site FM sealed: +3.012 ± 0.789
+      joint FM - joint FM draft head: -0.759 ± 0.342
+      LGBM joint - site FM sealed: +2.463 ± 0.815
+      LGBM joint - LGBM counts draft: -0.405 ± 0.431
+      blend* counts draft + site draft FM - site FM sealed: +3.075 ± 0.887
+      blend* LGBM joint + joint FM - site FM sealed: +2.439 ± 0.675
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.637 ± 0.609
+      blend* LGBM joint + joint FM - joint FM: +0.186 ± 0.081
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: +0.088 ± 0.080
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.823 ± 0.608
+  all dl: site FM sealed -655.226  site draft FM -652.552  FM sealed refit -655.915  joint FM -653.169  joint FM draft head -652.639  LGBM counts draft -653.043  LGBM joint -653.092  blend* counts draft + site draft FM -652.552  blend* LGBM joint + joint FM -652.984  blend* LGBM joint + site draft FM -652.447  blend* counts draft + joint FM -653.169
+      FM sealed refit - site FM sealed: -0.689 ± 0.449
+      site draft FM - site FM sealed: +2.675 ± 0.705
+      joint FM - site FM sealed: +2.057 ± 0.598
+      joint FM - site draft FM: -0.617 ± 0.521
+      joint FM draft head - site FM sealed: +2.587 ± 0.627
+      joint FM - joint FM draft head: -0.530 ± 0.203
+      LGBM joint - site FM sealed: +2.134 ± 0.823
+      LGBM joint - LGBM counts draft: -0.049 ± 0.297
+      blend* counts draft + site draft FM - site FM sealed: +2.675 ± 0.705
+      blend* LGBM joint + joint FM - site FM sealed: +2.242 ± 0.593
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.432 ± 0.513
+      blend* LGBM joint + joint FM - joint FM: +0.185 ± 0.069
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: +0.105 ± 0.071
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.617 ± 0.521
+DSK joint sealed done [92s]
+=== EOE: 619674 games (56256 sealed), 321 cards, l2 (w, v) (0.0001, 0.001) [4s]
+  l2_dw 0.0001 ks 0: val sealed 0.63618 draft 0.65807 [14s]
+  l2_dw 0.001 ks 0: val sealed 0.63443 draft 0.65796 [16s]
+  l2_dw 0.01 ks 0: val sealed 0.63407 draft 0.65789 [15s]
+  l2_dw 0.0001 ks 2: val sealed 0.63618 draft 0.65807 [16s]
+  l2_dw 0.001 ks 2: val sealed 0.63443 draft 0.65796 [19s]
+  l2_dw 0.01 ks 2: val sealed 0.63386 draft 0.65800 [18s]
+  picked l2_dw 0.01 ks 2 [110s]
+  Sealed: 56256 games (train 39159), l2 (w, v) (0.0001, 0.01), val logloss 0.64944 [10s]
+EOE joint FM done [120s]
+=== EOE Sealed: 9765 events, 56256 games, test events 1465 [0s]
+EOE sealed: 9765 decks scored in 0.1s
+EOE draft: 9765 decks scored in 0.1s
+EOE sealed_refit: 9765 decks scored in 0.1s
+EOE sealed: 9765 decks scored in 0.1s
+EOE draft: 9765 decks scored in 0.1s
+EOE sealed: 25 decks scored in 0.0s
+EOE draft: 25 decks scored in 0.0s
+EOE sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 7.146490311610298e-05, 'draft': 7.500674460164669e-05, 'sealed_refit': 0.00010305375910824033}
+  joint LGBM: 78974 train events (6835 sealed), 1465 sealed val events
+  joint LGBM seed 0: 823 trees [14s]
+  joint LGBM seed 1: 756 trees [13s]
+  joint LGBM seed 2: 1095 trees [18s]
+  blend* counts draft + site draft FM: alphas [0.75]
+  blend* LGBM joint + joint FM: alphas [0.7, 0.75, 0.6]
+  blend* LGBM joint + site draft FM: alphas [0.85, 0.9, 0.7]
+  blend* counts draft + joint FM: alphas [0.6]
+  experienced dl: site FM sealed -640.131  site draft FM -638.006  FM sealed refit -641.628  joint FM -638.892  joint FM draft head -638.627  LGBM counts draft -638.474  LGBM joint -638.935  blend* counts draft + site draft FM -637.801  blend* LGBM joint + joint FM -638.469  blend* LGBM joint + site draft FM -637.917  blend* counts draft + joint FM -638.226
+      FM sealed refit - site FM sealed: -1.496 ± 0.198
+      site draft FM - site FM sealed: +2.126 ± 1.411
+      joint FM - site FM sealed: +1.240 ± 1.294
+      joint FM - site draft FM: -0.886 ± 0.620
+      joint FM draft head - site FM sealed: +1.505 ± 1.289
+      joint FM - joint FM draft head: -0.265 ± 0.580
+      LGBM joint - site FM sealed: +1.196 ± 0.986
+      LGBM joint - LGBM counts draft: -0.461 ± 0.486
+      blend* counts draft + site draft FM - site FM sealed: +2.330 ± 1.345
+      blend* LGBM joint + joint FM - site FM sealed: +1.662 ± 1.106
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.668 ± 0.497
+      blend* LGBM joint + joint FM - joint FM: +0.423 ± 0.434
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.115 ± 0.106
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.425 ± 0.367
+  all dl: site FM sealed -650.689  site draft FM -648.142  FM sealed refit -652.320  joint FM -648.928  joint FM draft head -648.561  LGBM counts draft -648.459  LGBM joint -648.601  blend* counts draft + site draft FM -647.814  blend* LGBM joint + joint FM -648.286  blend* LGBM joint + site draft FM -647.911  blend* counts draft + joint FM -648.091
+      FM sealed refit - site FM sealed: -1.631 ± 0.198
+      site draft FM - site FM sealed: +2.547 ± 0.909
+      joint FM - site FM sealed: +1.762 ± 0.843
+      joint FM - site draft FM: -0.785 ± 0.263
+      joint FM draft head - site FM sealed: +2.128 ± 0.815
+      joint FM - joint FM draft head: -0.367 ± 0.289
+      LGBM joint - site FM sealed: +2.088 ± 0.870
+      LGBM joint - LGBM counts draft: -0.142 ± 0.384
+      blend* counts draft + site draft FM - site FM sealed: +2.875 ± 0.924
+      blend* LGBM joint + joint FM - site FM sealed: +2.403 ± 0.823
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.471 ± 0.198
+      blend* LGBM joint + joint FM - joint FM: +0.642 ± 0.250
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.097 ± 0.085
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.277 ± 0.175
+EOE joint sealed done [50s]
+=== FDN: 834914 games (43755 sealed), 286 cards, l2 (w, v) (0.0001, 0.001) [4s]
+  l2_dw 0.0001 ks 0: val sealed 0.64756 draft 0.66077 [15s]
+  l2_dw 0.001 ks 0: val sealed 0.64518 draft 0.66085 [14s]
+  l2_dw 0.01 ks 0: val sealed 0.64421 draft 0.66066 [12s]
+  l2_dw 0.0001 ks 2: val sealed 0.64691 draft 0.66067 [16s]
+  l2_dw 0.001 ks 2: val sealed 0.64518 draft 0.66085 [19s]
+  l2_dw 0.01 ks 2: val sealed 0.64421 draft 0.66066 [17s]
+  picked l2_dw 0.01 ks 2 [109s]
+  Sealed: 43755 games (train 30289), l2 (w, v) (0.0001, 0.01), val logloss 0.66128 [6s]
+FDN joint FM done [115s]
+=== FDN Sealed: 7574 events, 43755 games, test events 1137 [0s]
+FDN sealed: 7574 decks scored in 0.1s
+FDN draft: 7574 decks scored in 0.1s
+FDN sealed_refit: 7574 decks scored in 0.1s
+FDN sealed: 7574 decks scored in 0.1s
+FDN draft: 7574 decks scored in 0.1s
+FDN sealed: 25 decks scored in 0.0s
+FDN draft: 25 decks scored in 0.0s
+FDN sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 0.00010419119578618588, 'draft': 4.951657053159364e-05, 'sealed_refit': 2.9223625930330233e-05}
+  joint LGBM: 100093 train events (5301 sealed), 1136 sealed val events
+  joint LGBM seed 0: 1138 trees [23s]
+  joint LGBM seed 1: 1195 trees [24s]
+  joint LGBM seed 2: 1166 trees [24s]
+  blend* counts draft + site draft FM: alphas [0.3]
+  blend* LGBM joint + joint FM: alphas [1.0, 0.3, 1.0]
+  blend* LGBM joint + site draft FM: alphas [1.0, 0.55, 1.0]
+  blend* counts draft + joint FM: alphas [0.2]
+  experienced dl: site FM sealed -648.523  site draft FM -645.732  FM sealed refit -649.410  joint FM -645.939  joint FM draft head -645.185  LGBM counts draft -645.628  LGBM joint -645.327  blend* counts draft + site draft FM -645.195  blend* LGBM joint + joint FM -645.580  blend* LGBM joint + site draft FM -645.466  blend* counts draft + joint FM -645.301
+      FM sealed refit - site FM sealed: -0.887 ± 0.470
+      site draft FM - site FM sealed: +2.791 ± 1.819
+      joint FM - site FM sealed: +2.584 ± 1.472
+      joint FM - site draft FM: -0.206 ± 0.752
+      joint FM draft head - site FM sealed: +3.339 ± 1.616
+      joint FM - joint FM draft head: -0.754 ± 0.425
+      LGBM joint - site FM sealed: +3.196 ± 0.953
+      LGBM joint - LGBM counts draft: +0.300 ± 0.592
+      blend* counts draft + site draft FM - site FM sealed: +3.328 ± 1.415
+      blend* LGBM joint + joint FM - site FM sealed: +2.943 ± 1.374
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.386 ± 0.608
+      blend* LGBM joint + joint FM - joint FM: +0.358 ± 0.435
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.271 ± 0.457
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.106 ± 0.219
+  all dl: site FM sealed -652.859  site draft FM -650.420  FM sealed refit -653.959  joint FM -650.745  joint FM draft head -650.511  LGBM counts draft -651.061  LGBM joint -650.669  blend* counts draft + site draft FM -650.449  blend* LGBM joint + joint FM -650.528  blend* LGBM joint + site draft FM -650.264  blend* counts draft + joint FM -650.646
+      FM sealed refit - site FM sealed: -1.101 ± 0.399
+      site draft FM - site FM sealed: +2.439 ± 1.199
+      joint FM - site FM sealed: +2.113 ± 0.931
+      joint FM - site draft FM: -0.326 ± 0.671
+      joint FM draft head - site FM sealed: +2.348 ± 1.169
+      joint FM - joint FM draft head: -0.234 ± 0.358
+      LGBM joint - site FM sealed: +2.189 ± 0.660
+      LGBM joint - LGBM counts draft: +0.392 ± 0.355
+      blend* counts draft + site draft FM - site FM sealed: +2.410 ± 0.904
+      blend* LGBM joint + joint FM - site FM sealed: +2.331 ± 0.864
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.078 ± 0.491
+      blend* LGBM joint + joint FM - joint FM: +0.218 ± 0.263
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: +0.185 ± 0.376
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.197 ± 0.198
+FDN joint sealed done [76s]
+=== FIN: 832109 games (62450 sealed), 363 cards, l2 (w, v) (0.0001, 0.001) [5s]
+  l2_dw 0.0001 ks 0: val sealed 0.63662 draft 0.65558 [18s]
+  l2_dw 0.001 ks 0: val sealed 0.63571 draft 0.65558 [16s]
+  l2_dw 0.01 ks 0: val sealed 0.63558 draft 0.65558 [17s]
+  l2_dw 0.0001 ks 2: val sealed 0.63662 draft 0.65558 [24s]
+  l2_dw 0.001 ks 2: val sealed 0.63571 draft 0.65558 [23s]
+  l2_dw 0.01 ks 2: val sealed 0.63558 draft 0.65558 [22s]
+  picked l2_dw 0.01 ks 0 [141s]
+  Sealed: 62450 games (train 43436), l2 (w, v) (0.0001, 0.03), val logloss 0.64913 [12s]
+FIN joint FM done [154s]
+=== FIN Sealed: 10770 events, 62450 games, test events 1616 [0s]
+FIN sealed: 10770 decks scored in 0.1s
+FIN draft: 10770 decks scored in 0.1s
+FIN sealed_refit: 10770 decks scored in 0.1s
+FIN sealed: 10770 decks scored in 0.1s
+FIN draft: 10770 decks scored in 0.1s
+FIN sealed: 25 decks scored in 0.0s
+FIN draft: 25 decks scored in 0.0s
+FIN sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 8.547142046064216e-05, 'draft': 0.00011088502509742915, 'sealed_refit': 9.895272817302472e-05}
+  joint LGBM: 104486 train events (7538 sealed), 1616 sealed val events
+  joint LGBM seed 0: 1533 trees [33s]
+  joint LGBM seed 1: 1399 trees [30s]
+  joint LGBM seed 2: 1006 trees [23s]
+  blend* counts draft + site draft FM: alphas [0.75]
+  blend* LGBM joint + joint FM: alphas [0.45, 0.35, 0.45]
+  blend* LGBM joint + site draft FM: alphas [0.6, 0.45, 0.6]
+  blend* counts draft + joint FM: alphas [0.55]
+  experienced dl: site FM sealed -646.057  site draft FM -645.780  FM sealed refit -647.588  joint FM -646.694  joint FM draft head -647.003  LGBM counts draft -646.455  LGBM joint -646.292  blend* counts draft + site draft FM -645.691  blend* LGBM joint + joint FM -646.030  blend* LGBM joint + site draft FM -645.610  blend* counts draft + joint FM -646.163
+      FM sealed refit - site FM sealed: -1.531 ± 0.550
+      site draft FM - site FM sealed: +0.277 ± 1.257
+      joint FM - site FM sealed: -0.637 ± 1.016
+      joint FM - site draft FM: -0.914 ± 0.510
+      joint FM draft head - site FM sealed: -0.946 ± 1.151
+      joint FM - joint FM draft head: +0.309 ± 0.280
+      LGBM joint - site FM sealed: -0.235 ± 0.782
+      LGBM joint - LGBM counts draft: +0.163 ± 0.509
+      blend* counts draft + site draft FM - site FM sealed: +0.366 ± 1.199
+      blend* LGBM joint + joint FM - site FM sealed: +0.027 ± 0.801
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.339 ± 0.608
+      blend* LGBM joint + joint FM - joint FM: +0.664 ± 0.455
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: +0.081 ± 0.312
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.471 ± 0.390
+  all dl: site FM sealed -651.830  site draft FM -652.519  FM sealed refit -652.681  joint FM -652.775  joint FM draft head -653.335  LGBM counts draft -652.473  LGBM joint -651.937  blend* counts draft + site draft FM -652.345  blend* LGBM joint + joint FM -651.968  blend* LGBM joint + site draft FM -651.993  blend* counts draft + joint FM -652.354
+      FM sealed refit - site FM sealed: -0.851 ± 0.478
+      site draft FM - site FM sealed: -0.689 ± 1.043
+      joint FM - site FM sealed: -0.945 ± 0.798
+      joint FM - site draft FM: -0.255 ± 0.499
+      joint FM draft head - site FM sealed: -1.505 ± 0.914
+      joint FM - joint FM draft head: +0.560 ± 0.228
+      LGBM joint - site FM sealed: -0.107 ± 0.630
+      LGBM joint - LGBM counts draft: +0.536 ± 0.476
+      blend* counts draft + site draft FM - site FM sealed: -0.515 ± 1.036
+      blend* LGBM joint + joint FM - site FM sealed: -0.138 ± 0.725
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: +0.377 ± 0.505
+      blend* LGBM joint + joint FM - joint FM: +0.807 ± 0.227
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: +0.352 ± 0.227
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.009 ± 0.368
+FIN joint sealed done [91s]
+=== LCI: 878223 games (54609 sealed), 291 cards, l2 (w, v) (0.0001, 0.001) [4s]
+  l2_dw 0.0001 ks 0: val sealed 0.62972 draft 0.65582 [19s]
+  l2_dw 0.001 ks 0: val sealed 0.62864 draft 0.65581 [18s]
+  l2_dw 0.01 ks 0: val sealed 0.62800 draft 0.65586 [17s]
+  l2_dw 0.0001 ks 2: val sealed 0.62973 draft 0.65582 [23s]
+  l2_dw 0.001 ks 2: val sealed 0.62864 draft 0.65581 [24s]
+  l2_dw 0.01 ks 2: val sealed 0.62801 draft 0.65586 [24s]
+  picked l2_dw 0.01 ks 0 [143s]
+  Sealed: 54609 games (train 38042), l2 (w, v) (0.0001, 0.01), val logloss 0.64361 [9s]
+LCI joint FM done [152s]
+=== LCI Sealed: 9463 events, 54609 games, test events 1420 [0s]
+LCI sealed: 9463 decks scored in 0.1s
+LCI draft: 9463 decks scored in 0.1s
+LCI sealed_refit: 9463 decks scored in 0.1s
+LCI sealed: 9463 decks scored in 0.1s
+LCI draft: 9463 decks scored in 0.1s
+LCI sealed: 25 decks scored in 0.0s
+LCI draft: 25 decks scored in 0.0s
+LCI sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 5.1241602594703783e-05, 'draft': 0.00013785690718082222, 'sealed_refit': 9.270999170657435e-05}
+  joint LGBM: 104878 train events (6624 sealed), 1419 sealed val events
+  joint LGBM seed 0: 1996 trees [42s]
+  joint LGBM seed 1: 1399 trees [30s]
+  joint LGBM seed 2: 1390 trees [29s]
+  blend* counts draft + site draft FM: alphas [0.3]
+  blend* LGBM joint + joint FM: alphas [0.05, 0.45, 0.3]
+  blend* LGBM joint + site draft FM: alphas [0.0, 0.1, 0.0]
+  blend* counts draft + joint FM: alphas [0.6]
+  experienced dl: site FM sealed -655.923  site draft FM -654.646  FM sealed refit -657.764  joint FM -654.934  joint FM draft head -654.758  LGBM counts draft -655.146  LGBM joint -654.892  blend* counts draft + site draft FM -654.601  blend* LGBM joint + joint FM -654.623  blend* LGBM joint + site draft FM -654.831  blend* counts draft + joint FM -654.612
+      FM sealed refit - site FM sealed: -1.841 ± 0.510
+      site draft FM - site FM sealed: +1.276 ± 1.049
+      joint FM - site FM sealed: +0.988 ± 1.150
+      joint FM - site draft FM: -0.288 ± 0.401
+      joint FM draft head - site FM sealed: +1.165 ± 1.172
+      joint FM - joint FM draft head: -0.177 ± 0.146
+      LGBM joint - site FM sealed: +1.030 ± 1.057
+      LGBM joint - LGBM counts draft: +0.254 ± 0.450
+      blend* counts draft + site draft FM - site FM sealed: +1.321 ± 1.022
+      blend* LGBM joint + joint FM - site FM sealed: +1.299 ± 0.985
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.022 ± 0.334
+      blend* LGBM joint + joint FM - joint FM: +0.311 ± 0.875
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.229 ± 0.460
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.011 ± 0.456
+  all dl: site FM sealed -658.551  site draft FM -657.056  FM sealed refit -660.821  joint FM -657.377  joint FM draft head -657.284  LGBM counts draft -658.098  LGBM joint -657.568  blend* counts draft + site draft FM -657.365  blend* LGBM joint + joint FM -657.225  blend* LGBM joint + site draft FM -657.503  blend* counts draft + joint FM -657.192
+      FM sealed refit - site FM sealed: -2.270 ± 0.525
+      site draft FM - site FM sealed: +1.495 ± 0.595
+      joint FM - site FM sealed: +1.174 ± 0.717
+      joint FM - site draft FM: -0.321 ± 0.469
+      joint FM draft head - site FM sealed: +1.267 ± 0.723
+      joint FM - joint FM draft head: -0.093 ± 0.151
+      LGBM joint - site FM sealed: +0.983 ± 1.058
+      LGBM joint - LGBM counts draft: +0.530 ± 0.458
+      blend* counts draft + site draft FM - site FM sealed: +1.186 ± 0.924
+      blend* LGBM joint + joint FM - site FM sealed: +1.326 ± 0.878
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: +0.140 ± 0.398
+      blend* LGBM joint + joint FM - joint FM: +0.152 ± 0.817
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.137 ± 0.435
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: +0.174 ± 0.465
+LCI joint sealed done [107s]
+=== MKM: 1017141 games (52764 sealed), 326 cards, l2 (w, v) (0.0001, 0.001) [5s]
+  l2_dw 0.0001 ks 0: val sealed 0.63587 draft 0.65886 [23s]
+  l2_dw 0.001 ks 0: val sealed 0.63424 draft 0.65885 [20s]
+  l2_dw 0.01 ks 0: val sealed 0.63399 draft 0.65884 [18s]
+  l2_dw 0.0001 ks 2: val sealed 0.63587 draft 0.65886 [27s]
+  l2_dw 0.001 ks 2: val sealed 0.63424 draft 0.65885 [27s]
+  l2_dw 0.01 ks 2: val sealed 0.63399 draft 0.65884 [25s]
+  picked l2_dw 0.01 ks 0 [165s]
+  Sealed: 52764 games (train 36412), l2 (w, v) (0.0001, 0.01), val logloss 0.65447 [8s]
+MKM joint FM done [173s]
+=== MKM Sealed: 9252 events, 52764 games, test events 1388 [0s]
+MKM sealed: 9252 decks scored in 0.1s
+MKM draft: 9252 decks scored in 0.1s
+MKM sealed_refit: 9252 decks scored in 0.1s
+MKM sealed: 9252 decks scored in 0.1s
+MKM draft: 9252 decks scored in 0.1s
+MKM sealed: 25 decks scored in 0.0s
+MKM draft: 25 decks scored in 0.0s
+MKM sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 5.484006405175046e-05, 'draft': 6.940031536362308e-05, 'sealed_refit': 5.43760699750484e-05}
+  joint LGBM: 122151 train events (6476 sealed), 1388 sealed val events
+  joint LGBM seed 0: 1003 trees [24s]
+  joint LGBM seed 1: 969 trees [24s]
+  joint LGBM seed 2: 1299 trees [30s]
+  blend* counts draft + site draft FM: alphas [0.6]
+  blend* LGBM joint + joint FM: alphas [0.6, 0.55, 0.5]
+  blend* LGBM joint + site draft FM: alphas [0.7, 0.65, 0.6]
+  blend* counts draft + joint FM: alphas [0.55]
+  experienced dl: site FM sealed -652.022  site draft FM -651.980  FM sealed refit -653.400  joint FM -652.060  joint FM draft head -651.815  LGBM counts draft -650.614  LGBM joint -651.397  blend* counts draft + site draft FM -651.012  blend* LGBM joint + joint FM -651.195  blend* LGBM joint + site draft FM -651.412  blend* counts draft + joint FM -650.793
+      FM sealed refit - site FM sealed: -1.379 ± 0.524
+      site draft FM - site FM sealed: +0.042 ± 0.828
+      joint FM - site FM sealed: -0.039 ± 1.054
+      joint FM - site draft FM: -0.080 ± 0.838
+      joint FM draft head - site FM sealed: +0.207 ± 1.031
+      joint FM - joint FM draft head: -0.246 ± 0.449
+      LGBM joint - site FM sealed: +0.625 ± 0.961
+      LGBM joint - LGBM counts draft: -0.783 ± 0.491
+      blend* counts draft + site draft FM - site FM sealed: +1.009 ± 0.783
+      blend* LGBM joint + joint FM - site FM sealed: +0.826 ± 0.771
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.183 ± 0.480
+      blend* LGBM joint + joint FM - joint FM: +0.865 ± 0.628
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.399 ± 0.194
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: +0.220 ± 0.502
+  all dl: site FM sealed -654.961  site draft FM -654.205  FM sealed refit -656.434  joint FM -654.737  joint FM draft head -654.568  LGBM counts draft -653.530  LGBM joint -653.935  blend* counts draft + site draft FM -653.438  blend* LGBM joint + joint FM -653.731  blend* LGBM joint + site draft FM -653.680  blend* counts draft + joint FM -653.499
+      FM sealed refit - site FM sealed: -1.473 ± 0.308
+      site draft FM - site FM sealed: +0.756 ± 0.612
+      joint FM - site FM sealed: +0.224 ± 0.484
+      joint FM - site draft FM: -0.532 ± 0.483
+      joint FM draft head - site FM sealed: +0.393 ± 0.522
+      joint FM - joint FM draft head: -0.169 ± 0.287
+      LGBM joint - site FM sealed: +1.026 ± 0.859
+      LGBM joint - LGBM counts draft: -0.405 ± 0.272
+      blend* counts draft + site draft FM - site FM sealed: +1.523 ± 0.615
+      blend* LGBM joint + joint FM - site FM sealed: +1.231 ± 0.636
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.292 ± 0.357
+      blend* LGBM joint + joint FM - joint FM: +1.007 ± 0.262
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.242 ± 0.117
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.061 ± 0.328
+MKM joint sealed done [83s]
+=== OTJ: 1227225 games (54832 sealed), 381 cards, l2 (w, v) (1e-05, 0.001) [7s]
+  l2_dw 0.0001 ks 0: val sealed 0.65099 draft 0.66220 [26s]
+  l2_dw 0.001 ks 0: val sealed 0.64945 draft 0.66233 [17s]
+  l2_dw 0.01 ks 0: val sealed 0.64920 draft 0.66230 [20s]
+  l2_dw 0.0001 ks 2: val sealed 0.65099 draft 0.66220 [34s]
+  l2_dw 0.001 ks 2: val sealed 0.64944 draft 0.66233 [24s]
+  l2_dw 0.01 ks 2: val sealed 0.64920 draft 0.66230 [26s]
+  picked l2_dw 0.01 ks 2 [176s]
+  Sealed: 54832 games (train 38053), l2 (w, v) (0.0001, 0.01), val logloss 0.66311 [9s]
+OTJ joint FM done [185s]
+=== OTJ Sealed: 9446 events, 54832 games, test events 1417 [0s]
+OTJ sealed: 9446 decks scored in 0.1s
+OTJ draft: 9446 decks scored in 0.1s
+OTJ sealed_refit: 9446 decks scored in 0.1s
+OTJ sealed: 9446 decks scored in 0.1s
+OTJ draft: 9446 decks scored in 0.1s
+OTJ sealed: 25 decks scored in 0.0s
+OTJ draft: 25 decks scored in 0.0s
+OTJ sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 6.592070250759433e-05, 'draft': 5.7493830795896095e-05, 'sealed_refit': 4.255879218614811e-05}
+  joint LGBM: 148174 train events (6612 sealed), 1417 sealed val events
+  joint LGBM seed 0: 1059 trees [33s]
+  joint LGBM seed 1: 1078 trees [34s]
+  joint LGBM seed 2: 1384 trees [42s]
+  blend* counts draft + site draft FM: alphas [0.1]
+  blend* LGBM joint + joint FM: alphas [0.4, 0.4, 0.1]
+  blend* LGBM joint + site draft FM: alphas [0.05, 0.0, 0.0]
+  blend* counts draft + joint FM: alphas [0.55]
+  experienced dl: site FM sealed -655.789  site draft FM -654.479  FM sealed refit -657.003  joint FM -654.755  joint FM draft head -654.772  LGBM counts draft -654.499  LGBM joint -654.354  blend* counts draft + site draft FM -654.402  blend* LGBM joint + joint FM -654.206  blend* LGBM joint + site draft FM -654.339  blend* counts draft + joint FM -654.281
+      FM sealed refit - site FM sealed: -1.214 ± 0.428
+      site draft FM - site FM sealed: +1.310 ± 0.539
+      joint FM - site FM sealed: +1.034 ± 0.532
+      joint FM - site draft FM: -0.276 ± 0.177
+      joint FM draft head - site FM sealed: +1.017 ± 0.537
+      joint FM - joint FM draft head: +0.017 ± 0.096
+      LGBM joint - site FM sealed: +1.435 ± 0.674
+      LGBM joint - LGBM counts draft: +0.144 ± 0.220
+      blend* counts draft + site draft FM - site FM sealed: +1.387 ± 0.673
+      blend* LGBM joint + joint FM - site FM sealed: +1.583 ± 0.614
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: +0.196 ± 0.209
+      blend* LGBM joint + joint FM - joint FM: +0.550 ± 0.271
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: +0.062 ± 0.203
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: +0.121 ± 0.199
+  all dl: site FM sealed -659.582  site draft FM -658.724  FM sealed refit -660.887  joint FM -658.678  joint FM draft head -658.777  LGBM counts draft -658.596  LGBM joint -658.419  blend* counts draft + site draft FM -658.483  blend* LGBM joint + joint FM -658.145  blend* LGBM joint + site draft FM -658.402  blend* counts draft + joint FM -658.166
+      FM sealed refit - site FM sealed: -1.305 ± 0.346
+      site draft FM - site FM sealed: +0.858 ± 0.521
+      joint FM - site FM sealed: +0.904 ± 0.559
+      joint FM - site draft FM: +0.046 ± 0.225
+      joint FM draft head - site FM sealed: +0.806 ± 0.533
+      joint FM - joint FM draft head: +0.099 ± 0.102
+      LGBM joint - site FM sealed: +1.163 ± 0.527
+      LGBM joint - LGBM counts draft: +0.176 ± 0.220
+      blend* counts draft + site draft FM - site FM sealed: +1.099 ± 0.508
+      blend* LGBM joint + joint FM - site FM sealed: +1.438 ± 0.464
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: +0.338 ± 0.246
+      blend* LGBM joint + joint FM - joint FM: +0.533 ± 0.315
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: +0.081 ± 0.201
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: +0.317 ± 0.290
+OTJ joint sealed done [115s]
+=== SOS: 625317 games (42403 sealed), 346 cards, l2 (w, v) (1e-05, 0.001) [4s]
+  l2_dw 0.0001 ks 0: val sealed 0.62127 draft 0.65601 [14s]
+  l2_dw 0.001 ks 0: val sealed 0.61876 draft 0.65600 [13s]
+  l2_dw 0.01 ks 0: val sealed 0.61760 draft 0.65595 [14s]
+  l2_dw 0.0001 ks 2: val sealed 0.62127 draft 0.65601 [18s]
+  l2_dw 0.001 ks 2: val sealed 0.61876 draft 0.65600 [19s]
+  l2_dw 0.01 ks 2: val sealed 0.61760 draft 0.65595 [20s]
+  picked l2_dw 0.01 ks 2 [112s]
+  Sealed: 42403 games (train 29623), l2 (w, v) (0.0001, 0.01), val logloss 0.64900 [7s]
+SOS joint FM done [120s]
+=== SOS Sealed: 7538 events, 42403 games, test events 1131 [0s]
+SOS sealed: 7538 decks scored in 0.1s
+SOS draft: 7538 decks scored in 0.1s
+SOS sealed_refit: 7538 decks scored in 0.1s
+SOS sealed: 7538 decks scored in 0.1s
+SOS draft: 7538 decks scored in 0.1s
+SOS sealed: 25 decks scored in 0.0s
+SOS draft: 25 decks scored in 0.0s
+SOS sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 6.712603815217655e-05, 'draft': 0.00014701386453173926, 'sealed_refit': 0.00010943912067634676}
+  joint LGBM: 79560 train events (5276 sealed), 1131 sealed val events
+  joint LGBM seed 0: 1201 trees [20s]
+  joint LGBM seed 1: 810 trees [14s]
+  joint LGBM seed 2: 977 trees [16s]
+  blend* counts draft + site draft FM: alphas [0.6]
+  blend* LGBM joint + joint FM: alphas [0.6, 0.55, 0.6]
+  blend* LGBM joint + site draft FM: alphas [0.25, 0.15, 0.25]
+  blend* counts draft + joint FM: alphas [0.8]
+  experienced dl: site FM sealed -652.005  site draft FM -649.535  FM sealed refit -652.716  joint FM -649.630  joint FM draft head -649.455  LGBM counts draft -650.179  LGBM joint -650.437  blend* counts draft + site draft FM -649.443  blend* LGBM joint + joint FM -649.607  blend* LGBM joint + site draft FM -650.034  blend* counts draft + joint FM -649.459
+      FM sealed refit - site FM sealed: -0.711 ± 0.615
+      site draft FM - site FM sealed: +2.470 ± 0.959
+      joint FM - site FM sealed: +2.375 ± 1.051
+      joint FM - site draft FM: -0.094 ± 0.610
+      joint FM draft head - site FM sealed: +2.550 ± 1.081
+      joint FM - joint FM draft head: -0.175 ± 0.493
+      LGBM joint - site FM sealed: +1.568 ± 1.070
+      LGBM joint - LGBM counts draft: -0.258 ± 0.504
+      blend* counts draft + site draft FM - site FM sealed: +2.562 ± 0.940
+      blend* LGBM joint + joint FM - site FM sealed: +2.398 ± 1.092
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.164 ± 0.468
+      blend* LGBM joint + joint FM - joint FM: +0.022 ± 0.489
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.591 ± 0.545
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.015 ± 0.453
+  all dl: site FM sealed -662.085  site draft FM -658.334  FM sealed refit -662.625  joint FM -658.967  joint FM draft head -658.413  LGBM counts draft -659.133  LGBM joint -659.009  blend* counts draft + site draft FM -658.099  blend* LGBM joint + joint FM -658.415  blend* LGBM joint + site draft FM -658.536  blend* counts draft + joint FM -658.579
+      FM sealed refit - site FM sealed: -0.540 ± 0.521
+      site draft FM - site FM sealed: +3.750 ± 1.303
+      joint FM - site FM sealed: +3.118 ± 1.182
+      joint FM - site draft FM: -0.633 ± 0.606
+      joint FM draft head - site FM sealed: +3.671 ± 1.352
+      joint FM - joint FM draft head: -0.554 ± 0.420
+      LGBM joint - site FM sealed: +3.076 ± 1.175
+      LGBM joint - LGBM counts draft: +0.124 ± 0.338
+      blend* counts draft + site draft FM - site FM sealed: +3.986 ± 1.282
+      blend* LGBM joint + joint FM - site FM sealed: +3.670 ± 1.205
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: -0.316 ± 0.407
+      blend* LGBM joint + joint FM - joint FM: +0.552 ± 0.326
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: -0.437 ± 0.397
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: -0.480 ± 0.477
+SOS joint sealed done [55s]
+=== TDM: 593536 games (41108 sealed), 286 cards, l2 (w, v) (0.0001, 0.001) [3s]
+  l2_dw 0.0001 ks 0: val sealed 0.62098 draft 0.65883 [13s]
+  l2_dw 0.001 ks 0: val sealed 0.61957 draft 0.65866 [11s]
+  l2_dw 0.01 ks 0: val sealed 0.61890 draft 0.65880 [12s]
+  l2_dw 0.0001 ks 2: val sealed 0.62119 draft 0.65867 [16s]
+  l2_dw 0.001 ks 2: val sealed 0.61957 draft 0.65866 [16s]
+  l2_dw 0.01 ks 2: val sealed 0.61894 draft 0.65880 [16s]
+  picked l2_dw 0.01 ks 0 [95s]
+  Sealed: 41108 games (train 28703), l2 (w, v) (0.0001, 0.01), val logloss 0.64579 [6s]
+TDM joint FM done [101s]
+=== TDM Sealed: 7246 events, 41108 games, test events 1087 [0s]
+TDM sealed: 7246 decks scored in 0.1s
+TDM draft: 7246 decks scored in 0.1s
+TDM sealed_refit: 7246 decks scored in 0.1s
+TDM sealed: 7246 decks scored in 0.1s
+TDM draft: 7246 decks scored in 0.1s
+TDM sealed: 25 decks scored in 0.0s
+TDM draft: 25 decks scored in 0.0s
+TDM sealed_refit: 25 decks scored in 0.0s
+  deck.js vs python, max |logit diff| on fixtures: {'sealed': 8.46954347863138e-05, 'draft': 6.203712597202538e-05, 'sealed_refit': 7.878153548579458e-05}
+  joint LGBM: 75125 train events (5072 sealed), 1087 sealed val events
+  joint LGBM seed 0: 1873 trees [29s]
+  joint LGBM seed 1: 1291 trees [20s]
+  joint LGBM seed 2: 1420 trees [22s]
+  blend* counts draft + site draft FM: alphas [1.0]
+  blend* LGBM joint + joint FM: alphas [0.8, 0.9, 0.8]
+  blend* LGBM joint + site draft FM: alphas [1.0, 1.0, 1.0]
+  blend* counts draft + joint FM: alphas [0.9]
+  experienced dl: site FM sealed -639.451  site draft FM -639.023  FM sealed refit -639.176  joint FM -637.862  joint FM draft head -638.708  LGBM counts draft -638.164  LGBM joint -638.232  blend* counts draft + site draft FM -639.023  blend* LGBM joint + joint FM -637.591  blend* LGBM joint + site draft FM -639.023  blend* counts draft + joint FM -637.643
+      FM sealed refit - site FM sealed: +0.275 ± 0.701
+      site draft FM - site FM sealed: +0.428 ± 1.334
+      joint FM - site FM sealed: +1.589 ± 1.349
+      joint FM - site draft FM: +1.161 ± 0.669
+      joint FM draft head - site FM sealed: +0.743 ± 1.706
+      joint FM - joint FM draft head: +0.846 ± 0.713
+      LGBM joint - site FM sealed: +1.219 ± 1.291
+      LGBM joint - LGBM counts draft: -0.068 ± 0.711
+      blend* counts draft + site draft FM - site FM sealed: +0.428 ± 1.334
+      blend* LGBM joint + joint FM - site FM sealed: +1.859 ± 1.315
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: +1.432 ± 0.623
+      blend* LGBM joint + joint FM - joint FM: +0.271 ± 0.222
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: +0.000 ± 0.000
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: +1.380 ± 0.627
+  all dl: site FM sealed -651.789  site draft FM -652.899  FM sealed refit -652.098  joint FM -652.113  joint FM draft head -652.743  LGBM counts draft -651.972  LGBM joint -651.818  blend* counts draft + site draft FM -652.899  blend* LGBM joint + joint FM -651.819  blend* LGBM joint + site draft FM -652.899  blend* counts draft + joint FM -651.924
+      FM sealed refit - site FM sealed: -0.309 ± 0.648
+      site draft FM - site FM sealed: -1.110 ± 0.840
+      joint FM - site FM sealed: -0.324 ± 0.851
+      joint FM - site draft FM: +0.786 ± 0.582
+      joint FM draft head - site FM sealed: -0.954 ± 1.029
+      joint FM - joint FM draft head: +0.630 ± 0.461
+      LGBM joint - site FM sealed: -0.029 ± 0.875
+      LGBM joint - LGBM counts draft: +0.154 ± 0.625
+      blend* counts draft + site draft FM - site FM sealed: -1.110 ± 0.840
+      blend* LGBM joint + joint FM - site FM sealed: -0.030 ± 0.790
+      blend* LGBM joint + joint FM - blend* counts draft + site draft FM: +1.080 ± 0.494
+      blend* LGBM joint + joint FM - joint FM: +0.294 ± 0.173
+      blend* LGBM joint + site draft FM - blend* counts draft + site draft FM: +0.000 ± 0.000
+      blend* counts draft + joint FM - blend* counts draft + site draft FM: +0.975 ± 0.537
+TDM joint sealed done [76s]
+##### sealed: 12 sets
+FM sealed refit - site FM sealed                        -1.109 [-1.470, -0.748] p1=1.0000 1/12 sigworse=6
+site draft FM - site FM sealed                          +1.684 [+0.876, +2.492] p1=0.0004 12/12 sigworse=0
+joint FM - site FM sealed                               +1.543 [+0.753, +2.334] p1=0.0006 10/12 sigworse=0
+joint FM - site draft FM                                -0.297 [-0.560, -0.034] p1=0.9849 2/12 sigworse=0
+joint FM draft head - site FM sealed                    +1.663 [+0.780, +2.546] p1=0.0008 11/12 sigworse=0
+joint FM - joint FM draft head                          -0.112 [-0.283, +0.058] p1=0.9126 3/12 sigworse=1
+LGBM joint - site FM sealed                             +1.464 [+0.749, +2.180] p1=0.0004 11/12 sigworse=0
+LGBM joint - LGBM counts draft                          -0.028 [-0.283, +0.227] p1=0.5927 7/12 sigworse=0
+blend* counts draft + site draft FM - site FM sealed    +1.862 [+1.121, +2.602] p1=0.0001 12/12 sigworse=0
+blend* LGBM joint + joint FM - site FM sealed           +1.686 [+0.983, +2.390] p1=0.0001 12/12 sigworse=0
+blend* LGBM joint + joint FM - blend* counts draft + site draft FM -0.066 [-0.343, +0.210] p1=0.6962 3/12 sigworse=0
+blend* LGBM joint + joint FM - joint FM                 +0.246 [+0.096, +0.395] p1=0.0020 11/12 sigworse=0
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:240: RuntimeWarning: divide by zero encountered in divide
+  w = 1 / s ** 2
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:241: RuntimeWarning: invalid value encountered in multiply
+  fe = float(np.sum(w * d) / w.sum())
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:244: RuntimeWarning: invalid value encountered in scalar divide
+  c = w.sum() - np.sum(w ** 2) / w.sum()
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:247: RuntimeWarning: divide by zero encountered in divide
+  ws = 1 / (s ** 2 + tau2)
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:248: RuntimeWarning: invalid value encountered in multiply
+  re = float(np.sum(ws * d) / ws.sum())
+/Users/zblanton/Documents/repos/mtg-deck-strength/results/methodology/eval_protocol.py:264: RuntimeWarning: invalid value encountered in divide
+  (re - pi_half, re + pi_half), npos, sign_p, wil, int(np.sum(d / s < -1.96)))
+blend* LGBM joint + site draft FM - blend* counts draft + site draft FM +nan [+nan, +nan] p1=nan 4/12 sigworse=1
+blend* counts draft + joint FM - blend* counts draft + site draft FM -0.056 [-0.286, +0.174] p1=0.6998 4/12 sigworse=0
+wrote /Users/zblanton/Documents/repos/mtg-deck-strength/results/meta/site_joint.json
+done Wed Oct 14 12:16:37 CEST 2026
